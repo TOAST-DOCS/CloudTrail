@@ -52,11 +52,12 @@ CloudTrailサービスを選択すると、次のような画面が現れます�
 該当組織内で記録されたユーザーイベントログを外部Object Storageへ保存/ダウンロードできます。
 **ログ保存/ダウンロード設定** ボタンを押した後、ダイアログボックスで使用するかどうかを選択します。
 
-![cloudtrail_05](https://static.toastoven.net/prod_cloudtrail/IMG05_JA.png)
+![cloudtrail_06](https://static.toastoven.net/prod_cloudtrail/IMG06_JA.png)
 
 * 以下では[NHN Cloud Object Storage](/Storage/Object%20Storage/ko/Overview/)を利用したログ保存/ダウンロード方法を説明します。
    * **アクセスキー**、**シークレットキー**は[AWS S3 API](/Storage/Object%20Storage/ko/s3-api-guide/#_1)を利用した**EC2資格証明登録および照会**で確認できます。
    * **バケット名**はログが保存されるObject Storageコンテナの名前です。
    * **エンドポイント**、**リージョン**はログを保存するObject Storageを管理する情報で、[Amazon S3互換APIガイド - AWS SDK](/Storage/Object%20Storage/ko/s3-api-guide#aws-sdk)で確認できます。
    * 設定が完了すると、設定したObject Storageにログが保存されます。
-   * 保存されたログは2時間～2時間半後、Object Storageにアップロードされてから確認可能です。 
+   * 保存されたログは2時間～2時間半後、Object Storageにアップロードされてから確認可能です。
+   * 업로드가 3회 이상 실패하는 경우 저장된 인증정보가 비활성화 처리 됩니다. **결과 수신**(이메일)이 등록되어 있다면 그 해당 메일로 통보됩니다.
