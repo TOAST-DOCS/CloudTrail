@@ -486,3 +486,23 @@
 |顔認識グループの削除|event_id.face_recognition.group.delete|Face Recognition|
 |フェイス名で顔検索|event_id.face_recognition.search_face.byfaceid|Face Recognition|
 |画像から顔検索|event_id.face_recognition.search_face.byimage|Face Recognition|
+|パイプラインの作成|event_id.pipeline.pipeline_manage.create|Pipeline|
+|パイプラインの修正|event_id.pipeline.pipeline_manage.update|Pipeline|
+|パイプラインの削除|event_id.pipeline.pipeline_manage.delete|Pipeline|
+|パイプラインの手動実行|event_id.pipeline.pipeline_manage.manual_execute|Pipeline|
+|パイプラインの実行キャンセル|event_id.pipeline.pipeline_manage.execute_cancel|Pipeline|
+|開発環境の作成|event_id.pipeline.dev_env_config.create|Pipeline|
+|開発環境の修正|event_id.pipeline.dev_env_config.update|Pipeline|
+|開発環境の削除|event_id.pipeline.dev_env_config.delete|Pipeline|
+|ソース保存場所の作成|event_id.pipeline.source_repository.create|Pipeline|
+|ソース保存場所の修正|event_id.pipeline.source_repository.update|Pipeline|
+|ソース保存場所の削除|event_id.pipeline.source_repository.delete|Pipeline|
+|イメージ保存場所の作成|event_id.pipeline.image_registry.create|Pipeline|
+|イメージ保存場所の修正|event_id.pipeline.image_registry.update|Pipeline|
+|イメージ保存場所の削除|event_id.pipeline.image_registry.delete|Pipeline|
+|ビルドツールの作成|event_id.pipeline.build_tool.create|Pipeline|
+|ビルドツールの修正|event_id.pipeline.build_tool.update|Pipeline|
+|ビルドツールの削除|event_id.pipeline.build_tool.delete|Pipeline|
+|デプロイ対象の作成|event_id.pipeline.deploy_target.create|Pipeline|
+|デプロイ対象の修正|event_id.pipeline.deploy_target.update|Pipeline|
+|デプロイ対象の削除|event_id.pipeline.deploy_target.delete|Pipeline|

@@ -1,5 +1,13 @@
 
 ## CloudTrail > 릴리스 노트
+### 2021. 05. 25.
+#### More Events
+* Pipeline 서비스 관련 이벤트가 추가되었습니다.
+
+### 2021. 04. 27.
+#### More Events
+* Face Recognition 서비스 관련 이벤트가 추가되었습니다.
+
 ### 2021. 03. 23.
 #### 이벤트 추가
 * EasyCache 서비스 관련 이벤트가 추가되었습니다.

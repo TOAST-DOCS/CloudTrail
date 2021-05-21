@@ -1,5 +1,14 @@
 
 ## CloudTrail > Release Notes
+
+### 2021. 05. 25.
+#### More Events
+* Added events related to Pipeline.
+
+### 2021. 04. 27.
+#### More Events
+* Added events related to Face Recognition.
+
 ### 2021. 03. 23.
 #### More Events
 * Added events related to EasyCache.

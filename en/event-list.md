@@ -412,3 +412,23 @@
 |Delete facial recognition group|event_id.face_recognition.group.delete|Face Recognition|
 |Search face by face ID|event_id.face_recognition.search_face.byfaceid|Face Recognition|
 |Search face by image|event_id.face_recognition.search_face.byimage|Face Recognition|
+|Create Pipeline|event_id.pipeline.pipeline_manage.create|Pipeline|
+|Modify Pipeline|event_id.pipeline.pipeline_manage.update|Pipeline|
+|Delete Pipeline|event_id.pipeline.pipeline_manage.delete|Pipeline|
+|Manually Run Pipeline|event_id.pipeline.pipeline_manage.manual_execute|Pipeline|
+|Undo Pipeline|event_id.pipeline.pipeline_manage.execute_cancel|Pipeline|
+|Create Development Environment|event_id.pipeline.dev_env_config.create|Pipeline|
+|Modify Development Environment|event_id.pipeline.dev_env_config.update|Pipeline|
+|Delete Development Environment|event_id.pipeline.dev_env_config.delete|Pipeline|
+|Create Source Repository|event_id.pipeline.source_repository.create|Pipeline|
+|Modify Source Repository|event_id.pipeline.source_repository.update|Pipeline|
+|Delete Source Repository|event_id.pipeline.source_repository.delete|Pipeline|
+|Create Image Registry|event_id.pipeline.image_registry.create|Pipeline|
+|Modify Image Registry|event_id.pipeline.image_registry.update|Pipeline|
+|Delete Image Registry|event_id.pipeline.image_registry.delete|Pipeline|
+|Create Build Tool|event_id.pipeline.build_tool.create|Pipeline|
+|Modify Build Tool|event_id.pipeline.build_tool.update|Pipeline|
+|Delete Build Tool|event_id.pipeline.build_tool.delete|Pipeline|
+|Create Deployment Target|event_id.pipeline.deploy_target.create|Pipeline|
+|Modify Deployment Target|event_id.pipeline.deploy_target.update|Pipeline|
+|Delete Deployment Target|event_id.pipeline.deploy_target.delete|Pipeline|

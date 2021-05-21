@@ -486,3 +486,23 @@
 |얼굴 인식 그룹 삭제|event_id.face_recognition.group.delete|Face Recognition|
 |페이스 아이디로 얼굴 검색|event_id.face_recognition.search_face.byfaceid|Face Recognition|
 |이미지로 얼굴 검색|event_id.face_recognition.search_face.byimage|Face Recognition|
+|파이프라인 생성|event_id.pipeline.pipeline_manage.create|Pipeline|
+|파이프라인 수정|event_id.pipeline.pipeline_manage.update|Pipeline|
+|파이프라인 삭제|event_id.pipeline.pipeline_manage.delete|Pipeline|
+|파이프라인 수동 실행|event_id.pipeline.pipeline_manage.manual_execute|Pipeline|
+|파이프라인 실행 취소|event_id.pipeline.pipeline_manage.execute_cancel|Pipeline|
+|개발 환경 생성|event_id.pipeline.dev_env_config.create|Pipeline|
+|개발 환경 수정|event_id.pipeline.dev_env_config.update|Pipeline|
+|개발 환경 삭제|event_id.pipeline.dev_env_config.delete|Pipeline|
+|소스 저장소 생성|event_id.pipeline.source_repository.create|Pipeline|
+|소스 저장소 수정|event_id.pipeline.source_repository.update|Pipeline|
+|소스 저장소 삭제|event_id.pipeline.source_repository.delete|Pipeline|
+|이미지 저장소 생성|event_id.pipeline.image_registry.create|Pipeline|
+|이미지 저장소 수정|event_id.pipeline.image_registry.update|Pipeline|
+|이미지 저장소 삭제|event_id.pipeline.image_registry.delete|Pipeline|
+|빌드 도구 생성|event_id.pipeline.build_tool.create|Pipeline|
+|빌드 도구 수정|event_id.pipeline.build_tool.update|Pipeline|
+|빌드 도구 삭제|event_id.pipeline.build_tool.delete|Pipeline|
+|배포 대상 생성|event_id.pipeline.deploy_target.create|Pipeline|
+|배포 대상 수정|event_id.pipeline.deploy_target.update|Pipeline|
+|배포 대상 삭제|event_id.pipeline.deploy_target.delete|Pipeline|

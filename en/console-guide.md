@@ -48,16 +48,16 @@ When a column is selected, the column is expanded and event details are displaye
 
 Shows requests and response results so that users can see the history of attempted requests.
 
-### 로그 저장/다운로드 설정
-해당 조직 내에서 기록된 사용자 이벤트 로그를 외부 Object Storage를 통해 저장/다운로드 할 수 있습니다.
-**로그 저장/다운로드 설정** 버튼을 클릭한 후 대화 상자에서 사용 여부를 선택합니다.
+### Log Save/Download Settings
+You can save/download user event logs written within the organization through an external object storage.
+Click the **Log Save/Download Settings** button and enable/disable it in the dialog box.
 
 ![cloudtrail_06](https://static.toastoven.net/prod_cloudtrail/IMG06_EN.png)
 
-* 아래부터는 [NHN Cloud Object Storage](/Storage/Object%20Storage/ko/Overview/)를 이용한 로그 저장/다운로드 방법을 설명합니다.
-   * **액세스 키**, **비밀 키**는 [AWS S3 API](/Storage/Object%20Storage/ko/s3-api-guide/#_1)를 이용한 **EC2 자격 증명 등록 및 조회**로 확인할 수 있습니다.
-   * **버킷이름**은 로그가 저장될 Object Storage 컨테이너의 이름입니다.
-   * **엔드포인트**, **리전**은 로그를 저장할 Object Storage를 관리할 정보이며, [Amazon S3 호환 API 가이드 - AWS SDK](/Storage/Object%20Storage/ko/s3-api-guide#aws-sdk)에서 확인할 수 있습니다.
-   * 설정이 완료되면 설정한 Object Storage에 로그가 저장됩니다.
-   * 저장된 로그는 2시간~2시간반 후 Object Storage에 업로드된 이후 확인 가능합니다. 
-   * 3회 이상 업로드에 실패하면 저장된 인증 정보가 비활성화됩니다. **결과 수신**(이메일)에 등록된 메일로 내용이 통보됩니다
+* The following describes how to save/download logs using [NHN Cloud Object Storage](/Storage/Object%20Storage/ko/Overview/)
+   * **Access key** and **Secret key** can be verified with **Register and View EC2 Credential** using [AWS S3 API](https://github.com/TOAST-DOCS/CloudTrail/blob/de2ee3d8ad32a2eb189d15d5b266d0eac6e3642f/Storage/Object Storage/ko/s3-api-guide/#_1).
+   * **Bucket name** is the name of the object storage container where logs will be saved.
+   * **Endpoint** and **Region** are information that manages the object storage where logs will be saved. For more information, see [Amazon S3 Compatibility API Guide - AWS SDK](/Storage/Object%20Storage/ko/s3-api-guide#aws-sdk)
+   * Once setup is complete, logs will begin to be saved in the object storage.
+   * Saved logs can be viewed two to two and a half hours after being uploaded in the object storage.
+   * After three or more failed upload attempts, the saved authentication information will be disabled. The details will be sent to the email address registered in the **Receive Result** (email) field.
