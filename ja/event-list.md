@@ -107,6 +107,15 @@
 |通知の削除|event_id.rds_for_mysql.notification.delete|RDS for MySQL|
 |通知の有効化|event_id.rds_for_mysql.notification.enable|RDS for MySQL|
 |通知の無効化|event_id.rds_for_mysql.notification.disable|RDS for MySQL|
+|通知グループを作成|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL|
+|通知グループを修正|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL|
+|通知グループを削除|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL|
+|ユーザーグループを作成|event_id.rds_for_mysql.createUserGroup|RDS for MySQL|
+|ユーザーグループを修正|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL|
+|ユーザーグループを削除|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL|
+|イベント購読を登録|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL|
+|イベント購読を修正|event_id.rds_for_mysql.modifyEventSubscription|RDS for MySQL|
+|イベント購読を削除|event_id.rds_for_mysql.deleteEventSubscription|RDS for MySQL|
 |受信グループの作成|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL|
 |受信グループの変更|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL|
 |受信グループの削除|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL|
