@@ -107,6 +107,15 @@
 |알림 삭제|event_id.rds_for_mysql.notification.delete|RDS for MySQL|
 |알림 활성화|event_id.rds_for_mysql.notification.enable|RDS for MySQL|
 |알림 비활성화|event_id.rds_for_mysql.notification.disable|RDS for MySQL|
+|알림 그룹 생성|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL|
+|알림 그룹 수정|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL|
+|알림 그룹 삭제|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL|
+|이벤트 구독 등록|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL|
+|이벤트 구독 수정|event_id.rds_for_mysql.modifyEventSubscription|RDS for MySQL|
+|이벤트 구독 삭제|event_id.rds_for_mysql.deleteEventSubscription|RDS for MySQL|
+|사용자 그룹 생성|event_id.rds_for_mysql.createUserGroup|RDS for MySQL|
+|사용자 그룹 수정|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL|
+|사용자 그룹 삭제|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL|
 |수신 그룹 생성|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL|
 |수신 그룹 변경|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL|
 |수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL|
