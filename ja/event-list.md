@@ -102,6 +102,9 @@
 |DBインスタンスのストレージを拡張|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL|
 |DBインスタンスの容量を確保|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL|
 |バックアップの削除|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL|
+|モニタリングチャートレイアウトを追加|event_id.rds_for_mysql.createChartLayout|RDS for MySQL|
+|モニタリングチャートレイアウトを削除|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL|
+|モニタリングチャートレイアウトを修正|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL|
 |通知の作成|event_id.rds_for_mysql.notification.create|RDS for MySQL|
 |通知の変更|event_id.rds_for_mysql.notification.update|RDS for MySQL|
 |通知の削除|event_id.rds_for_mysql.notification.delete|RDS for MySQL|
