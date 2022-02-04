@@ -1,6 +1,9 @@
 
 ## CloudTrail > Release Notes
 
+### 2022. 2. 22.
+* Added events related to MarketPlace.
+
 ### 2022. 1. 25.
 * Added events related to API Gateway.
 * Added events related to Deploy.

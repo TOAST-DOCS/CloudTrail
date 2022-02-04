@@ -648,3 +648,7 @@
 |Request action detection|event_id.cheating_detection_behavior.detect|Cheating Dectection|
 |Request voice detection|event_id.cheating_detection_voice.detect|Cheating Dectection|
 |Request Text to Speech conversion|event_id.speech.tts.convert|Text to Speech|
+|Apply for Marketplace|event_id.market_place.apply|market_place|
+|Cancel Applying for Marketplace|event_id.market_place.apply-cancel|market_place|
+|Apply for Marketplace Cancellation|event_id.market_place.termination-apply|market_place|
+|Cancel Applying for Marketplace Cancellation|event_id.market_place.termination-apply-cancel|market_place|

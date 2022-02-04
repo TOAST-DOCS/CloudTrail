@@ -695,3 +695,7 @@ API説明書掲示タイプ変更|event_id.apigw.document.update_publish_type|AP
 |行動検知リクエスト|event_id.cheating_detection_behavior.detect|Cheating Dectection|
 |音声検知リクエスト|event_id.cheating_detection_voice.detect|Cheating Dectection|
 |Text to Speech変換リクエスト|event_id.speech.tts.convert|Text to Speech|
+|マーケットプレイス申請|event_id.market_place.apply|market_place|
+|マーケットプレイス申請キャンセル|event_id.market_place.apply-cancel|market_place|
+|マーケットプレイス解約申請|event_id.market_place.termination-apply|market_place|
+|マーケットプレイス解約申請ャンセル|event_id.market_place.termination-apply-cancel|market_place|
