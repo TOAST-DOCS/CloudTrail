@@ -1,7 +1,12 @@
 ## CloudTrail > Release Notes
 
+### 2023. 06. 27.
+#### More Events
+* Added events related to Email.
+
 ### 2023. 05. 30.
 #### More Events
+* Added events related to RCS Bizmessage.
 * Added events related to Pipeline.
 * Added events related to GameTalk.
 * Added events related to Default Infrastructure Service.
