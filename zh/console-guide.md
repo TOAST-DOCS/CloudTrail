@@ -52,12 +52,17 @@ Shows requests and response results so that users can see the history of attempt
 You can save/download user event logs written within the organization through an external object storage.
 Click the **Log Save/Download Settings** button and enable/disable it in the dialog box.
 
-![cloudtrail_06](https://static.toastoven.net/prod_cloudtrail/IMG06_EN.png)
+![cloudtrail_07](https://static.toastoven.net/prod_cloudtrail/IMG07_EN.png)
 
-* The following describes how to save/download logs using [NHN Cloud Object Storage](/Storage/Object%20Storage/ko/Overview/)
-   * **Access key** and **Secret key** can be verified with **Register and View EC2 Credential** using [AWS S3 API](https://github.com/TOAST-DOCS/CloudTrail/blob/de2ee3d8ad32a2eb189d15d5b266d0eac6e3642f/Storage/Object Storage/ko/s3-api-guide/#_1).
-   * **Bucket name** is the name of the object storage container where logs will be saved.
-   * **Endpoint** and **Region** are information that manages the object storage where logs will be saved. For more information, see [Amazon S3 Compatibility API Guide - AWS SDK](/Storage/Object%20Storage/ko/s3-api-guide#aws-sdk)
-   * Once setup is complete, logs will begin to be saved in the object storage.
-   * Saved logs can be viewed two to two and a half hours after being uploaded in the object storage.
-   * After three or more failed upload attempts, the saved authentication information will be disabled. The details will be sent to the email address registered in the **Receive Result** (email) field.
+* The following describes how to save/download logs using [NHN Cloud Object Storage](/Storage/Object%20Storage/en/Overview/)
+    * **Access key** and **Secret key** can be verified with **Register and View EC2 Credential** using [AWS S3 API](https://github.com/TOAST-DOCS/CloudTrail/blob/de2ee3d8ad32a2eb189d15d5b266d0eac6e3642f/Storage/Object Storage/ko/s3-api-guide/#_1).
+    * **Bucket name** is the name of the object storage container where logs will be saved.
+    * **Endpoint** and **Region** are information that manages the object storage where logs will be saved. For more information, see [Amazon S3 Compatibility API Guide - AWS SDK](/Storage/Object%20Storage/en/s3-api-guide#aws-sdk).
+    * Once setup is complete, logs will begin to be saved in the object storage.
+    * Saved logs can be viewed two to two and a half hours after being uploaded in the object storage.
+    * After three or more failed upload attempts, the saved authentication information will be disabled. The details will be sent to the email address registered in the **Receive Result (email)** field.
+    * **Alert External Log Tampering** is a feature to notify users by email when the logs in Object Storage are arbitrarily modified or deleted.
+    * When external logs are tampered, the email in **Receive Results (Email)** is notified.
+    * **Alert External Log Teampering** is only available in Object Storage from NHN Cloud.
+        * **Tenant ID**, **Password** can be found in **Set API Endpoint** of Object Storage where logs are stored.
+        * For **User ID**, enter the email of the NHN Cloud user with permissions to the Object Storage.

@@ -52,12 +52,17 @@ CloudTrailサービスを選択すると、次のような画面が現れます�
 該当組織内で記録されたユーザーイベントログを外部Object Storageへ保存/ダウンロードできます。
 **ログ保存/ダウンロード設定** ボタンを押した後、ダイアログボックスで使用するかどうかを選択します。
 
-![cloudtrail_06](https://static.toastoven.net/prod_cloudtrail/IMG06_JA.png)
+![cloudtrail_07](https://static.toastoven.net/prod_cloudtrail/IMG07_JA.png)
 
 * 以下では[NHN Cloud Object Storage](/Storage/Object%20Storage/ko/Overview/)を利用したログ保存/ダウンロード方法を説明します。
-   * **アクセスキー**、**シークレットキー**は[AWS S3 API](/Storage/Object%20Storage/ko/s3-api-guide/#_1)を利用した**EC2資格証明登録および照会**で確認できます。
-   * **バケット名**はログが保存されるObject Storageコンテナの名前です。
-   * **エンドポイント**、**リージョン**はログを保存するObject Storageを管理する情報で、[Amazon S3互換APIガイド - AWS SDK](/Storage/Object%20Storage/ko/s3-api-guide#aws-sdk)で確認できます。
-   * 設定が完了すると、設定したObject Storageにログが保存されます。
-   * 保存されたログは2時間～2時間半後、Object Storageにアップロードされてから確認可能です。
-   * 3回以上アップロードに失敗すると、保存された認証情報が無効になります。**結果受信**(メール)に登録されたメールへ内容が配信されます
+    * **アクセスキー**、**シークレットキー**は[AWS S3 API](/Storage/Object%20Storage/ko/s3-api-guide/#_1)を利用した**EC2資格証明登録および照会**で確認できます。
+    * **バケット名**はログが保存されるObject Storageコンテナの名前です。
+    * **エンドポイント**、**リージョン**はログを保存するObject Storageを管理する情報で、[Amazon S3互換APIガイド - AWS SDK](/Storage/Object%20Storage/ko/s3-api-guide#aws-sdk)で確認できます。
+    * 設定が完了すると、設定したObject Storageにログが保存されます。
+    * 保存されたログは2時間～2時間半後、Object Storageにアップロードされてから確認可能です。
+    * 3回以上アップロードに失敗すると、保存された認証情報が無効になります。**結果受信(メール)**に登録されたメールへ内容が配信されます
+    * **外部ログ改ざん通知**は、Object Storage内のログが勝手に修正または削除されたとき、これをメールで通知する機能です。 
+    * 外部ログ改ざん時、**結果受信(メール)**に登録されたメールに内容が通知されます。
+    * **外部ログ改ざん通知**は、NHN CloudのObject Storageでのみ提供される機能です。
+        * **テナントID**、**パスワード**はログが保存されるObject Storageの**APIエンドポイント設定**で確認できます。
+        * **ユーザーID**の場合、該当Object Storageに権限があるNHN Cloudユーザーのメールを入力します。
