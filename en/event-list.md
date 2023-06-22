@@ -988,46 +988,46 @@
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
 |패킷 캡쳐 종료|event_id.native_firewall.pcap_end|Native Firewall|
-|Auto Inspection Completed|event_id.security_advisor.auto_scan_complete|Security Advisor|
 |롤백|event_id.native_firewall.rollback_create|Native Firewall|
-|카테고리 등록|event_id.email.add_category|Email|
-|도메인 등록|event_id.email.add_domain|Email|
-|도메인 삭제|event_id.email.remove_domain|Email|
 |캡쳐 패킷 삭제|event_id.native_firewall.pcap_delete|Native Firewall|
-|템플릿 삭제|event_id.email.remove_template|Email|
 |오브젝트 생성|event_id.native_firewall.object_create|Native Firewall|
-|수신거부 사용자 추가|event_id.email.add_block_receiver|Email|
-|카테고리 삭제|event_id.email.remove_category|Email|
-|발송 설정 수정|event_id.email.update_send_config|Email|
 |맴버 생성|event_id.native_firewall.member_create|Native Firewall|
-|대량 발송 요청|event_id.email.send_mass_mail|Email|
-|대량 발송 취소|event_id.email.cancel_mass_mail|Email|
-|태그 수신자 파일 다운로드 예약|event_id.email.reserve_download_tag_mail|Email|
 |방화벽 생성|event_id.native_firewall.config_iaas|Native Firewall|
 |백업 삭제|event_id.native_firewall.backup_delete|Native Firewall|
 |패킷 캡쳐 시작|event_id.native_firewall.pcap_start|Native Firewall|
+|acl 세션 설정 변경|event_id.native_firewall.acl_session_modified|Native Firewall|
+|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted_all|Native Firewall|
+|방화벽 인프라 생성|event_id.native_firewall.config_project|Native Firewall|
+|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted|Native Firewall|
+|맴버 삭제|event_id.native_firewall.member_delete|Native Firewall|
+|acl 그룹 조작|event_id.native_firewall.acl_policy_group_control|Native Firewall|
+|acl 정책 생성|event_id.native_firewall.acl_policy_create|Native Firewall|
+|오브젝트 삭제|event_id.native_firewall.object_delete|Native Firewall|
+|acl 정책 삭제|event_id.native_firewall.acl_policy_deleted|Native Firewall|
+|프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
+|RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
+|대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
+|Auto Inspection Completed|event_id.security_advisor.auto_scan_complete|Security Advisor|
+|Settings Changed|event_id.security_advisor.setting_change|Security Advisor|
+|Selected Inspection Requested|event_id.security_advisor.manual_scan_request|Security Advisor|
+|카테고리 등록|event_id.email.add_category|Email|
+|도메인 등록|event_id.email.add_domain|Email|
+|도메인 삭제|event_id.email.remove_domain|Email|
+|템플릿 삭제|event_id.email.remove_template|Email|
+|수신거부 사용자 추가|event_id.email.add_block_receiver|Email|
+|카테고리 삭제|event_id.email.remove_category|Email|
+|발송 설정 수정|event_id.email.update_send_config|Email|
+|대량 발송 요청|event_id.email.send_mass_mail|Email|
+|대량 발송 취소|event_id.email.cancel_mass_mail|Email|
+|태그 수신자 파일 다운로드 예약|event_id.email.reserve_download_tag_mail|Email|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|Email|
 |템플릿 등록|event_id.email.add_template|Email|
 |템플릿 수정|event_id.email.modify_template|Email|
 |대량 수신자 파일 다운로드 예약|event_id.email.reserve_download_mass_mail|Email|
 |일반 수신자 파일 다운로드 예약|event_id.email.reserve_download_normal_mail|Email|
 |파일 다운로드|event_id.email.download_reserved_file|Email|
-|Settings Changed|event_id.security_advisor.setting_change|Security Advisor|
 |Email 상품 비활성화|event_id.email.disble_email_product|Email|
-|acl 세션 설정 변경|event_id.native_firewall.acl_session_modified|Native Firewall|
-|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted_all|Native Firewall|
 |카테고리 수정|event_id.email.modify_category|Email|
 |수신거부 사용자 제거|event_id.email.remove_block_receiver|Email|
-|방화벽 인프라 생성|event_id.native_firewall.config_project|Native Firewall|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
-|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted|Native Firewall|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
-|맴버 삭제|event_id.native_firewall.member_delete|Native Firewall|
-|acl 그룹 조작|event_id.native_firewall.acl_policy_group_control|Native Firewall|
-|프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
-|acl 정책 생성|event_id.native_firewall.acl_policy_create|Native Firewall|
-|Selected Inspection Requested|event_id.security_advisor.manual_scan_request|Security Advisor|
-|오브젝트 삭제|event_id.native_firewall.object_delete|Native Firewall|
-|RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
-|acl 정책 삭제|event_id.native_firewall.acl_policy_deleted|Native Firewall|
-|대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|

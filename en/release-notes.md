@@ -258,7 +258,7 @@
 
 ### 2019. 09. 24.
 #### More Features
-* Restul API is provided for query of events.
+* Restful API is provided for query of events.
     * See manual for more details: [Link](/CloudTrail/en/api-guide/)
 #### Feature Updates
 * Search by name (ID) allows not only the search of existing organization members but user-defined IAM members.
