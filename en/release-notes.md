@@ -1,7 +1,8 @@
 ## CloudTrail > Release Notes
 
-### 2023. 06. 27
+### 2023. 06. 27.
 #### More Events
+* Added events related to Security Advisor.
 * Added events related to Email.
 #### More Features
 * Added a feature to set up external log tampering alert in the log save/download setting.
@@ -265,4 +266,4 @@
 ### 2019. 03. 12.
 #### More Features
 * CloudTrail allows you to check your cloud usage history.
-* The servise is provided on an organization unit, and available without activation of the service.
+* The service is provided on an organization unit, and available without activation of the service.

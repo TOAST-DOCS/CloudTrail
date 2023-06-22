@@ -1,11 +1,12 @@
 ## CloudTrail > リリースノート
 
 ### 2023. 06. 27.
+#### イベント追加
+* Security Advisor サービス関連イベントを追加しました。
+* Email サービス関連イベントを追加しました。
 #### 機能追加
 * ログ保存/ダウンロード設定で外部ログ改ざん通知を設定できる機能が追加されました。
-  * 詳細は、マニュアルを参照してください。 [リンク](/CloudTrail/ko/console-guide/)
-#### イベント追加
-* Email サービス関連イベントを追加しました。
+    * 詳細は、マニュアルを参照してください。 [リンク](/CloudTrail/ja/console-guide/)
 
 ### 2023. 05. 30.
 #### イベント追加
@@ -205,8 +206,8 @@
 * Certificate Manager サービス関連イベントを追加しました。
 * System Monitoring サービス関連イベントを追加しました。
 #### 機能追加
-* 로그 저장/다운로드 설정을 제공합니다.
-    * 자세한 사항은 매뉴얼을 참고합니다.: [링크](/CloudTrail/ko/console-guide/)
+* Added Log save/download setting.
+    * For more information, see the [Console User Guide](/CloudTrail/ja/console-guide/).
 #### 機能改善
 * 名前(ID)検索条件で **名前・IDで検索**が **名前検索**に変更されました。
 
