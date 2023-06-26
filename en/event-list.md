@@ -1004,3 +1004,30 @@
 |acl 정책 생성|event_id.native_firewall.acl_policy_create|Native Firewall|
 |오브젝트 삭제|event_id.native_firewall.object_delete|Native Firewall|
 |acl 정책 삭제|event_id.native_firewall.acl_policy_deleted|Native Firewall|
+|프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
+|RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
+|대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
+|Auto Inspection Completed|event_id.security_advisor.auto_scan_complete|Security Advisor|
+|Settings Changed|event_id.security_advisor.setting_change|Security Advisor|
+|Selected Inspection Requested|event_id.security_advisor.manual_scan_request|Security Advisor|
+|카테고리 등록|event_id.email.add_category|Email|
+|도메인 등록|event_id.email.add_domain|Email|
+|도메인 삭제|event_id.email.remove_domain|Email|
+|템플릿 삭제|event_id.email.remove_template|Email|
+|수신거부 사용자 추가|event_id.email.add_block_receiver|Email|
+|카테고리 삭제|event_id.email.remove_category|Email|
+|발송 설정 수정|event_id.email.update_send_config|Email|
+|대량 발송 요청|event_id.email.send_mass_mail|Email|
+|대량 발송 취소|event_id.email.cancel_mass_mail|Email|
+|태그 수신자 파일 다운로드 예약|event_id.email.reserve_download_tag_mail|Email|
+|대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|Email|
+|템플릿 등록|event_id.email.add_template|Email|
+|템플릿 수정|event_id.email.modify_template|Email|
+|대량 수신자 파일 다운로드 예약|event_id.email.reserve_download_mass_mail|Email|
+|일반 수신자 파일 다운로드 예약|event_id.email.reserve_download_normal_mail|Email|
+|파일 다운로드|event_id.email.download_reserved_file|Email|
+|Email 상품 비활성화|event_id.email.disble_email_product|Email|
+|카테고리 수정|event_id.email.modify_category|Email|
+|수신거부 사용자 제거|event_id.email.remove_block_receiver|Email|
+|Email 상품 활성화|event_id.email.enable_email_product|Email|
+|수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
