@@ -987,28 +987,31 @@
 |유효성 검사 실패 다운로드|event_id.file_crafter.downloadValidationFailResultFile|File-Crafter|
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
-|패킷 캡쳐 종료|event_id.native_firewall.pcap_end|Native Firewall|
-|롤백|event_id.native_firewall.rollback_create|Native Firewall|
-|캡쳐 패킷 삭제|event_id.native_firewall.pcap_delete|Native Firewall|
-|오브젝트 생성|event_id.native_firewall.object_create|Native Firewall|
-|맴버 생성|event_id.native_firewall.member_create|Native Firewall|
-|방화벽 생성|event_id.native_firewall.config_iaas|Native Firewall|
-|백업 삭제|event_id.native_firewall.backup_delete|Native Firewall|
-|패킷 캡쳐 시작|event_id.native_firewall.pcap_start|Native Firewall|
-|acl 세션 설정 변경|event_id.native_firewall.acl_session_modified|Native Firewall|
-|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted_all|Native Firewall|
-|방화벽 인프라 생성|event_id.native_firewall.config_project|Native Firewall|
-|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted|Native Firewall|
-|맴버 삭제|event_id.native_firewall.member_delete|Native Firewall|
-|acl 그룹 조작|event_id.native_firewall.acl_policy_group_control|Native Firewall|
-|acl 정책 생성|event_id.native_firewall.acl_policy_create|Native Firewall|
-|오브젝트 삭제|event_id.native_firewall.object_delete|Native Firewall|
-|acl 정책 삭제|event_id.native_firewall.acl_policy_deleted|Native Firewall|
+|정책 추가|event_id.network_firewall.group_create|Native Firewall|
+|방화벽 구성|event_id.network_firewall.config_iaas|Native Firewall|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Native Firewall|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|Native Firewall|
+|Nat 삭제|event_id.network_firewall.nat_delete|Native Firewall|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|Native Firewall|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Native Firewall|
+|정책 수정|event_id.network_firewall.group_modify|Native Firewall|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Native Firewall|
+|Nat 추가|event_id.network_firewall.nat_create|Native Firewall|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Native Firewall|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|Native Firewall|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|Native Firewall|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Native Firewall|
+|Port 객체 추가|event_id.network_firewall.port_object_create|Native Firewall|
+|인프라 구성|event_id.network_firewall.config_project|Native Firewall|
+|옵션 설정|event_id.network_firewall.option_create|Native Firewall|
+|정책 삭제|event_id.network_firewall.group_delete|Native Firewall|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|Native Firewall|
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
 |자동 점검 완료|event_id.security_advisor.auto_scan_complete|Security Advisor|
 |설정 변경|event_id.security_advisor.setting_change|Security Advisor|
+|엑셀 다운로드|event_id.security_advisor.excel_download|Security Advisor|
 |선택 점검 요청|event_id.security_advisor.manual_scan_request|Security Advisor|
 |카테고리 등록|event_id.email.add_category|Email|
 |도메인 등록|event_id.email.add_domain|Email|
@@ -1031,3 +1034,49 @@
 |수신거부 사용자 제거|event_id.email.remove_block_receiver|Email|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
+|앱 수정|event_id.gamebase.app_update|Gamebase|
+|테스트단말기 추가|event_id.gamebase.access_devices_create|Gamebase|
+|테스트단말기 수정|event_id.gamebase.access_devices_update|Gamebase|
+|테스트단말기 삭제|event_id.gamebase.access_devices_delete|Gamebase|
+|클라이언트 추가|event_id.gamebase.client_create|Gamebase|
+|클라이언트 수정|event_id.gamebase.client_update|Gamebase|
+|클라이언트 삭제|event_id.gamebase.client_delete|Gamebase|
+|약관 추가|event_id.gamebase.tos_create|Gamebase|
+|약관 삭제|event_id.gamebase.tos_delete|Gamebase|
+|약관 항목 추가|event_id.gamebase.tos_content_create|Gamebase|
+|약관 항목 삭제|event_id.gamebase.tos_content_delete|Gamebase|
+|약관 항목 저장|event_id.gamebase.tos_content_update|Gamebase|
+|약관 항목 순서 변경|event_id.gamebase.tos_content_order_update|Gamebase|
+|약관 상세 페이지 수정|event_id.gamebase.tos_content_html_update|Gamebase|
+|기본 약관 변경|event_id.gamebase.tos_default_update|Gamebase|
+|약관 배포|event_id.gamebase.tos_deploy_update|Gamebase|
+|약관 대상 국가 변경|event_id.gamebase.tos_country_update|Gamebase|
+|설치 URL 수정|event_id.gamebase.store_update|Gamebase|
+|단말기 이전 수정|event_id.gamebase.transfer_account_update|Gamebase|
+|단말기 이전 비활성|event_id.gamebase.transfer_account_delete|Gamebase|
+|전송 지표 수정|event_id.gamebase.analytics_indicator_update|Gamebase|
+|전송 지표 삭제|event_id.gamebase.analytics_indicator_delete|Gamebase|
+|점검 등록|event_id.gamebase.maintenance_create|Gamebase|
+|점검 수정|event_id.gamebase.maintenance_update|Gamebase|
+|점검 삭제|event_id.gamebase.maintenance_delete|Gamebase|
+|점검 설정/해제|event_id.gamebase.maintenance_apply_update|Gamebase|
+|공지 등록|event_id.gamebase.notice_create|Gamebase|
+|공지 수정|event_id.gamebase.notice_update|Gamebase|
+|공지 삭제|event_id.gamebase.notice_delete|Gamebase|
+|이미지 공지 등록|event_id.gamebase.image_notice_create|Gamebase|
+|이미지 공지 수정|event_id.gamebase.image_notice_update|Gamebase|
+|이미지 공지 삭제|event_id.gamebase.image_notice_delete|Gamebase|
+|킥아웃 등록|event_id.gamebase.kick_out_create|Gamebase|
+|푸시 등록|event_id.gamebase.push_create|Gamebase|
+|푸시 발송 취소|event_id.gamebase.push_delete|Gamebase|
+|푸시 태그 등록|event_id.gamebase.push_tag_create|Gamebase|
+|푸시 태그 수정|event_id.gamebase.push_tag_update|Gamebase|
+|푸시 태그 삭제|event_id.gamebase.push_tag_delete|Gamebase|
+|푸시 태그에 유저 등록|event_id.gamebase.push_tag_uid_create|Gamebase|
+|푸시 태그에서 유저 삭제|event_id.gamebase.push_tag_uid_delete|Gamebase|
+|푸시 이벤트키 등록|event_id.gamebase.push_event_key_create|Gamebase|
+|푸시 이벤트키 삭제|event_id.gamebase.push_event_key_delete|Gamebase|
+|푸시 인증서 등록|event_id.gamebase.push_cert_create|Gamebase|
+|푸시 인증서 수정|event_id.gamebase.push_cert_update|Gamebase|
+|푸시 인증서 삭제|event_id.gamebase.push_cert_delete|Gamebase|
+|푸시 설정|event_id.gamebase.push_set_update|Gamebase|

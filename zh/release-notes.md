@@ -1,7 +1,21 @@
 ## CloudTrail > Release Notes
 
+### 2023. 07. 25.
+#### More Events
+* Added events related to Security Advisor.
+
+### 2023. 07. 11.
+#### More Events
+* Added events related to Gamebase.
+* Added events related to Native Firewall.
+
+### 2023. 07. 07.
+#### More Events
+* Added events related to Native Firewall.
+
 ### 2023. 06. 27.
 #### More Events
+* Added events related to OCR.
 * Added events related to Security Advisor.
 * Added events related to Email.
 #### More Features
@@ -19,7 +33,6 @@
 #### More Events
 * Added events related to Face Recognition.
 * Added events related to OCR.
-* Added events related to Native Firewall.
 * Added events related to Default Infrastructure Service.
 * Added events related to SMS.
 
