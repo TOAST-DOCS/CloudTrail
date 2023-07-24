@@ -987,28 +987,31 @@
 |유효성 검사 실패 다운로드|event_id.file_crafter.downloadValidationFailResultFile|File-Crafter|
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
-|패킷 캡쳐 종료|event_id.native_firewall.pcap_end|Native Firewall|
-|롤백|event_id.native_firewall.rollback_create|Native Firewall|
-|캡쳐 패킷 삭제|event_id.native_firewall.pcap_delete|Native Firewall|
-|오브젝트 생성|event_id.native_firewall.object_create|Native Firewall|
-|맴버 생성|event_id.native_firewall.member_create|Native Firewall|
-|방화벽 생성|event_id.native_firewall.config_iaas|Native Firewall|
-|백업 삭제|event_id.native_firewall.backup_delete|Native Firewall|
-|패킷 캡쳐 시작|event_id.native_firewall.pcap_start|Native Firewall|
-|acl 세션 설정 변경|event_id.native_firewall.acl_session_modified|Native Firewall|
-|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted_all|Native Firewall|
-|방화벽 인프라 생성|event_id.native_firewall.config_project|Native Firewall|
-|acl 세션 플로우 삭제|event_id.native_firewall.acl_session_flow_deleted|Native Firewall|
-|맴버 삭제|event_id.native_firewall.member_delete|Native Firewall|
-|acl 그룹 조작|event_id.native_firewall.acl_policy_group_control|Native Firewall|
-|acl 정책 생성|event_id.native_firewall.acl_policy_create|Native Firewall|
-|오브젝트 삭제|event_id.native_firewall.object_delete|Native Firewall|
-|acl 정책 삭제|event_id.native_firewall.acl_policy_deleted|Native Firewall|
+|정책 추가|event_id.network_firewall.group_create|Native Firewall|
+|방화벽 구성|event_id.network_firewall.config_iaas|Native Firewall|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Native Firewall|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|Native Firewall|
+|Nat 삭제|event_id.network_firewall.nat_delete|Native Firewall|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|Native Firewall|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Native Firewall|
+|정책 수정|event_id.network_firewall.group_modify|Native Firewall|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Native Firewall|
+|Nat 추가|event_id.network_firewall.nat_create|Native Firewall|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Native Firewall|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|Native Firewall|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|Native Firewall|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Native Firewall|
+|Port 객체 추가|event_id.network_firewall.port_object_create|Native Firewall|
+|인프라 구성|event_id.network_firewall.config_project|Native Firewall|
+|옵션 설정|event_id.network_firewall.option_create|Native Firewall|
+|정책 삭제|event_id.network_firewall.group_delete|Native Firewall|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|Native Firewall|
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
 |自動点検完了|event_id.security_advisor.auto_scan_complete|Security Advisor|
 |設定変更|event_id.security_advisor.setting_change|Security Advisor|
+|Excelダウンロード|event_id.security_advisor.excel_download|Security Advisor|
 |選択点検リクエスト|event_id.security_advisor.manual_scan_request|Security Advisor|
 |카테고리 등록|event_id.email.add_category|Email|
 |도메인 등록|event_id.email.add_domain|Email|
@@ -1031,3 +1034,110 @@
 |수신거부 사용자 제거|event_id.email.remove_block_receiver|Email|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
+|앱 수정|event_id.gamebase.app_update|Gamebase|
+|테스트 단말기 추가|event_id.gamebase.access_devices_create|Gamebase|
+|테스트 단말기 수정|event_id.gamebase.access_devices_update|Gamebase|
+|Delete test device|event_id.gamebase.access_devices_delete|Gamebase|
+|클라이언트 추가|event_id.gamebase.client_create|Gamebase|
+|클라이언트 수정|event_id.gamebase.client_update|Gamebase|
+|클라이언트 삭제|event_id.gamebase.client_delete|Gamebase|
+|Add terms|event_id.gamebase.tos_create|Gamebase|
+|Delete terms|event_id.gamebase.tos_delete|Gamebase|
+|Add terms content|event_id.gamebase.tos_content_create|Gamebase|
+|Delete terms content|event_id.gamebase.tos_content_delete|Gamebase|
+|Save terms content|event_id.gamebase.tos_content_update|Gamebase|
+|Update terms detail page|event_id.gamebase.tos_content_html_update|Gamebase|
+|Update default terms|event_id.gamebase.tos_default_update|Gamebase|
+|Deploy terms|event_id.gamebase.tos_deploy_create|Gamebase|
+|Update terms target country|event_id.gamebase.tos_country_update|Gamebase|
+|Update install url|event_id.gamebase.store_update|Gamebase|
+|Update transfer device|event_id.gamebase.transfer_account_update|Gamebase|
+|Disable transfer device|event_id.gamebase.transfer_account_delete|Gamebase|
+|Update analytics indicator|event_id.gamebase.analytics_indicator_update|Gamebase|
+|Delete analytics indicator|event_id.gamebase.analytics_indicator_delete|Gamebase|
+|Add maintenance|event_id.gamebase.maintenance_create|Gamebase|
+|Update maintenance|event_id.gamebase.maintenance_update|Gamebase|
+|Delete maintenance|event_id.gamebase.maintenance_delete|Gamebase|
+|점검 설정/해제|event_id.gamebase.maintenance_status_update|Gamebase|
+|Add notice|event_id.gamebase.notice_create|Gamebase|
+|Update notice|event_id.gamebase.notice_update|Gamebase|
+|Delete notice|event_id.gamebase.notice_delete|Gamebase|
+|Add image notice|event_id.gamebase.image_notice_create|Gamebase|
+|Update image notice|event_id.gamebase.image_notice_update|Gamebase|
+|Delete image notice|event_id.gamebase.image_notice_delete|Gamebase|
+|Add kick-out|event_id.gamebase.kick_out_create|Gamebase|
+|Add push|event_id.gamebase.push_create|Gamebase|
+|Cancel push reservation|event_id.gamebase.push_delete|Gamebase|
+|Add push tag|event_id.gamebase.push_tag_create|Gamebase|
+|Update push tag|event_id.gamebase.push_tag_update|Gamebase|
+|Delete push tag|event_id.gamebase.push_tag_delete|Gamebase|
+|Add userId to push tag|event_id.gamebase.push_tag_uid_create|Gamebase|
+|Delete userId from push tag|event_id.gamebase.push_tag_uid_delete|Gamebase|
+|Add push event-key|event_id.gamebase.push_event_key_create|Gamebase|
+|푸시 이벤트키 수정|event_id.gamebase.push_event_key_update|Gamebase|
+|Delete push event-key|event_id.gamebase.push_event_key_delete|Gamebase|
+|Add push certification|event_id.gamebase.push_cert_create|Gamebase|
+|Update push certification|event_id.gamebase.push_cert_update|Gamebase|
+|Delete push certification|event_id.gamebase.push_cert_delete|Gamebase|
+|Update push settings|event_id.gamebase.push_set_update|Gamebase|
+|계정 탈퇴|event_id.gamebase.member_delete|Gamebase|
+|계정 매핑 추가|event_id.gamebase.member_mapping_create|Gamebase|
+|계정 매핑 해제|event_id.gamebase.member_mapping_delete|Gamebase|
+|계정 탈퇴 유예 취소|event_id.gamebase.member_withdraw_delete|Gamebase|
+|단말기 이전 키 발급|event_id.gamebase.transfer_account_key_update|Gamebase|
+|단말기 이전 차단 상태 해제|event_id.gamebase.transfer_account_block_update|Gamebase|
+|이용정지 등록|event_id.gamebase.ban_create|Gamebase|
+|이용정지 해제|event_id.gamebase.ban_delete|Gamebase|
+|이용정지 템플릿 등록|event_id.gamebase.ban_template_create|Gamebase|
+|이용정지 템플릿 수정|event_id.gamebase.ban_template_update|Gamebase|
+|이용정지 앱가드 설정|event_id.gamebase.ban_app_guard_update|Gamebase|
+|이용정지 유예|event_id.gamebase.ban_grace_period_create|Gamebase|
+|이용정지 유예 해제|event_id.gamebase.ban_grace_period_delete|Gamebase|
+|결제 스토어 등록|event_id.gamebase.iap_store_create|Gamebase|
+|결제 스토어 수정|event_id.gamebase.iap_store_update|Gamebase|
+|결제 스토어 삭제|event_id.gamebase.iap_store_delete|Gamebase|
+|결제 아이템 등록|event_id.gamebase.iap_item_create|Gamebase|
+|결제 아이템 수정|event_id.gamebase.iap_item_update|Gamebase|
+|결제 정보 수정|event_id.gamebase.iap_transaction_update|Gamebase|
+|결제 어뷰징 자동 제재 설정|event_id.gamebase.iap_abusing_update|Gamebase|
+|리더보드 데이터 수정|event_id.gamebase.leaderboard_data_update|Gamebase|
+|리더보드 데이터 삭제|event_id.gamebase.leaderboard_data_delete|Gamebase|
+|리더보드 팩터 추가|event_id.gamebase.leaderboard_factor_create|Gamebase|
+|리더보드 팩터 수정|event_id.gamebase.leaderboard_factor_update|Gamebase|
+|리더보드 팩터 삭제|event_id.gamebase.leaderboard_factor_delete|Gamebase|
+|리더보드 팩터 초기화|event_id.gamebase.leaderboard_factor_data_delete|Gamebase|
+|쿠폰 발급|event_id.gamebase.coupon_create|Gamebase|
+|쿠폰 수정|event_id.gamebase.coupon_update|Gamebase|
+|쿠폰 추가 발급|event_id.gamebase.coupon_add_update|Gamebase|
+|쿠폰 SMS 발송|event_id.gamebase.coupon_sms_create|Gamebase|
+|쿠폰 아이템 등록|event_id.gamebase.coupon_item_create|Gamebase|
+|쿠폰 아이템 수정|event_id.gamebase.coupon_item_update|Gamebase|
+|고객문의 답변|event_id.gamebase.oc_ticket_update|Gamebase|
+|고객문의 처리 완료|event_id.gamebase.oc_ticket_close_update|Gamebase|
+|고객문의 답변 PUSH 설정|event_id.gamebase.oc_ticket_push_update|Gamebase|
+|고객문의 유형 등록|event_id.gamebase.oc_ticket_category_create|Gamebase|
+|고객문의 유형 수정|event_id.gamebase.oc_ticket_category_update|Gamebase|
+|고객문의 유형 삭제|event_id.gamebase.oc_ticket_category_delete|Gamebase|
+|고객센터 FAQ 등록|event_id.gamebase.oc_faq_create|Gamebase|
+|고객센터 FAQ 수정|event_id.gamebase.oc_faq_update|Gamebase|
+|고객센터 FAQ 삭제|event_id.gamebase.oc_faq_delete|Gamebase|
+|고객센터 FAQ 유형 등록|event_id.gamebase.oc_faq_category_create|Gamebase|
+|고객센터 FAQ 유형 수정|event_id.gamebase.oc_faq_category_update|Gamebase|
+|고객센터 FAQ 유형 삭제|event_id.gamebase.oc_faq_category_delete|Gamebase|
+|고객센터 공지사항 등록|event_id.gamebase.oc_notice_create|Gamebase|
+|고객센터 공지사항 수정|event_id.gamebase.oc_notice_update|Gamebase|
+|고객센터 공지사항 삭제|event_id.gamebase.oc_notice_delete|Gamebase|
+|고객센터 공지사항 말머리 등록|event_id.gamebase.oc_notice_category_create|Gamebase|
+|고객센터 공지사항 말머리 수정|event_id.gamebase.oc_notice_category_update|Gamebase|
+|고객센터 공지사항 말머리 삭제|event_id.gamebase.oc_notice_category_delete|Gamebase|
+|고객문의 템플릿 등록|event_id.gamebase.oc_ticket_template_create|Gamebase|
+|고객문의 템플릿 수정|event_id.gamebase.oc_ticket_template_update|Gamebase|
+|고객문의 템플릿 삭제|event_id.gamebase.oc_ticket_template_delete|Gamebase|
+|고객문의 이메일 설정|event_id.gamebase.oc_email_update|Gamebase|
+|위클리 리포트 설정|event_id.gamebase.weekly_report_update|Gamebase|
+|알람 설정|event_id.gamebase.alarm_update|Gamebase|
+|알람 웹훅 등록|event_id.gamebase.alarm_recipient_create|Gamebase|
+|알람 웹훅 수정|event_id.gamebase.alarm_recipient_update|Gamebase|
+|알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|Gamebase|
+|알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|Gamebase|
+|Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
