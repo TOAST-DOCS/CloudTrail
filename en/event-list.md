@@ -1046,10 +1046,9 @@
 |약관 구성 추가|event_id.gamebase.tos_content_create|Gamebase|
 |약관 항목 삭제|event_id.gamebase.tos_content_delete|Gamebase|
 |약관 항목 저장|event_id.gamebase.tos_content_update|Gamebase|
-|약관 항목 순서 변경|event_id.gamebase.tos_content_order_update|Gamebase|
 |약관 상세 페이지 수정|event_id.gamebase.tos_content_html_update|Gamebase|
 |기본 약관 변경|event_id.gamebase.tos_default_update|Gamebase|
-|약관 배포|event_id.gamebase.tos_deploy_update|Gamebase|
+|약관 배포|event_id.gamebase.tos_deploy_create|Gamebase|
 |약관 대상 국가 변경|event_id.gamebase.tos_country_update|Gamebase|
 |설치 URL 수정|event_id.gamebase.store_update|Gamebase|
 |단말기 이전 수정|event_id.gamebase.transfer_account_update|Gamebase|
@@ -1059,7 +1058,7 @@
 |점검 등록|event_id.gamebase.maintenance_create|Gamebase|
 |점검 수정|event_id.gamebase.maintenance_update|Gamebase|
 |점검 삭제|event_id.gamebase.maintenance_delete|Gamebase|
-|점검 설정/해제|event_id.gamebase.maintenance_apply_update|Gamebase|
+|점검 설정/해제|event_id.gamebase.maintenance_status_update|Gamebase|
 |공지 등록|event_id.gamebase.notice_create|Gamebase|
 |공지 수정|event_id.gamebase.notice_update|Gamebase|
 |공지 삭제|event_id.gamebase.notice_delete|Gamebase|
@@ -1075,8 +1074,70 @@
 |푸시 태그에 유저 등록|event_id.gamebase.push_tag_uid_create|Gamebase|
 |푸시 태그에서 유저 삭제|event_id.gamebase.push_tag_uid_delete|Gamebase|
 |푸시 이벤트키 등록|event_id.gamebase.push_event_key_create|Gamebase|
+|푸시 이벤트키 수정|event_id.gamebase.push_event_key_update|Gamebase|
 |푸시 이벤트키 삭제|event_id.gamebase.push_event_key_delete|Gamebase|
 |푸시 인증서 등록|event_id.gamebase.push_cert_create|Gamebase|
 |푸시 인증서 수정|event_id.gamebase.push_cert_update|Gamebase|
 |푸시 인증서 삭제|event_id.gamebase.push_cert_delete|Gamebase|
 |푸시 설정|event_id.gamebase.push_set_update|Gamebase|
+|계정 탈퇴|event_id.gamebase.member_delete|Gamebase|
+|계정 매핑 추가|event_id.gamebase.member_mapping_create|Gamebase|
+|계정 매핑 해제|event_id.gamebase.member_mapping_delete|Gamebase|
+|계정 탈퇴 유예 취소|event_id.gamebase.member_withdraw_delete|Gamebase|
+|단말기 이전 키 발급|event_id.gamebase.transfer_account_key_update|Gamebase|
+|단말기 이전 차단 상태 해제|event_id.gamebase.transfer_account_block_update|Gamebase|
+|이용정지 등록|event_id.gamebase.ban_create|Gamebase|
+|Release ban|event_id.gamebase.ban_delete|Gamebase|
+|이용정지 템플릿 등록|event_id.gamebase.ban_template_create|Gamebase|
+|이용정지 템플릿 수정|event_id.gamebase.ban_template_update|Gamebase|
+|이용정지 앱가드 설정|event_id.gamebase.ban_app_guard_update|Gamebase|
+|이용정지 유예|event_id.gamebase.ban_grace_period_create|Gamebase|
+|이용정지 유예 해제|event_id.gamebase.ban_grace_period_delete|Gamebase|
+|결제 스토어 등록|event_id.gamebase.iap_store_create|Gamebase|
+|결제 스토어 수정|event_id.gamebase.iap_store_update|Gamebase|
+|결제 스토어 삭제|event_id.gamebase.iap_store_delete|Gamebase|
+|결제 아이템 등록|event_id.gamebase.iap_item_create|Gamebase|
+|결제 아이템 수정|event_id.gamebase.iap_item_update|Gamebase|
+|결제 정보 수정|event_id.gamebase.iap_transaction_update|Gamebase|
+|결제 어뷰징 자동 제재 설정|event_id.gamebase.iap_abusing_update|Gamebase|
+|리더보드 데이터 수정|event_id.gamebase.leaderboard_data_update|Gamebase|
+|리더보드 데이터 삭제|event_id.gamebase.leaderboard_data_delete|Gamebase|
+|리더보드 팩터 추가|event_id.gamebase.leaderboard_factor_create|Gamebase|
+|리더보드 팩터 수정|event_id.gamebase.leaderboard_factor_update|Gamebase|
+|리더보드 팩터 삭제|event_id.gamebase.leaderboard_factor_delete|Gamebase|
+|리더보드 팩터 초기화|event_id.gamebase.leaderboard_factor_data_delete|Gamebase|
+|쿠폰 발급|event_id.gamebase.coupon_create|Gamebase|
+|쿠폰 수정|event_id.gamebase.coupon_update|Gamebase|
+|쿠폰 추가 발급|event_id.gamebase.coupon_add_update|Gamebase|
+|쿠폰 SMS 발송|event_id.gamebase.coupon_sms_create|Gamebase|
+|쿠폰 아이템 등록|event_id.gamebase.coupon_item_create|Gamebase|
+|쿠폰 아이템 수정|event_id.gamebase.coupon_item_update|Gamebase|
+|고객문의 답변|event_id.gamebase.oc_ticket_update|Gamebase|
+|고객문의 처리 완료|event_id.gamebase.oc_ticket_close_update|Gamebase|
+|고객문의 답변 PUSH 설정|event_id.gamebase.oc_ticket_push_update|Gamebase|
+|고객문의 유형 등록|event_id.gamebase.oc_ticket_category_create|Gamebase|
+|고객문의 유형 수정|event_id.gamebase.oc_ticket_category_update|Gamebase|
+|고객문의 유형 삭제|event_id.gamebase.oc_ticket_category_delete|Gamebase|
+|고객센터 FAQ 등록|event_id.gamebase.oc_faq_create|Gamebase|
+|고객센터 FAQ 수정|event_id.gamebase.oc_faq_update|Gamebase|
+|고객센터 FAQ 삭제|event_id.gamebase.oc_faq_delete|Gamebase|
+|고객센터 FAQ 유형 등록|event_id.gamebase.oc_faq_category_create|Gamebase|
+|고객센터 FAQ 유형 수정|event_id.gamebase.oc_faq_category_update|Gamebase|
+|고객센터 FAQ 유형 삭제|event_id.gamebase.oc_faq_category_delete|Gamebase|
+|고객센터 공지사항 등록|event_id.gamebase.oc_notice_create|Gamebase|
+|고객센터 공지사항 수정|event_id.gamebase.oc_notice_update|Gamebase|
+|고객센터 공지사항 삭제|event_id.gamebase.oc_notice_delete|Gamebase|
+|고객센터 공지사항 말머리 등록|event_id.gamebase.oc_notice_category_create|Gamebase|
+|고객센터 공지사항 말머리 수정|event_id.gamebase.oc_notice_category_update|Gamebase|
+|고객센터 공지사항 말머리 삭제|event_id.gamebase.oc_notice_category_delete|Gamebase|
+|고객문의 템플릿 등록|event_id.gamebase.oc_ticket_template_create|Gamebase|
+|고객문의 템플릿 수정|event_id.gamebase.oc_ticket_template_update|Gamebase|
+|고객문의 템플릿 삭제|event_id.gamebase.oc_ticket_template_delete|Gamebase|
+|고객문의 이메일 설정|event_id.gamebase.oc_email_update|Gamebase|
+|위클리 리포트 설정|event_id.gamebase.weekly_report_update|Gamebase|
+|알람 설정|event_id.gamebase.alarm_update|Gamebase|
+|알람 웹훅 등록|event_id.gamebase.alarm_recipient_create|Gamebase|
+|알람 웹훅 수정|event_id.gamebase.alarm_recipient_update|Gamebase|
+|알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|Gamebase|
+|알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|Gamebase|
+|Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
