@@ -40,6 +40,12 @@
 |Create NAT Gateway|event_id.iaas.nat_gateway.create|Default Infrastructure Service|
 |Delete NAT Gateway|event_id.iaas.nat_gateway.delete|Default Infrastructure Service|
 |Change NAT Gateway|event_id.iaas.nat_gateway.update|Default Infrastructure Service|
+|Create VPNGW|event_id.iaas.vpngw.create|Default Infrastructure Service|
+|Delete VPNGW|event_id.iaas.vpngw.delete|Default Infrastructure Service|
+|Update VPNGW|event_id.iaas.vpngw.update|Default Infrastructure Service|
+|Create VPN Connection|event_id.iaas.vpn_connection.create|Default Infrastructure Service|
+|Delete VPN Connection|event_id.iaas.vpn_connection.delete|Default Infrastructure Service|
+|Update VPN Connection|event_id.iaas.vpn_connection.update|Default Infrastructure Service|
 |Create Keypair|event_id.iaas.keypair.create|Default Infrastructure Service|
 |Delete Keypair|event_id.iaas.keypair.delete|Default Infrastructure Service|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|Default Infrastructure Service|
@@ -136,6 +142,43 @@
 |Change Service Gateway|event_id.iaas.service_gateway.update|Default Infrastructure Service|
 |Delete Service Gateway|event_id.iaas.service_gateway.delete|Default Infrastructure Service|
 |Copy Volume|event_id.iaas.volume.copy|Default Infrastructure Service|
+|Create Private DNS Zone|event_id.iaas.privatedns.zone.create|Default Infrastructure Service|
+|Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|Default Infrastructure Service|
+|Delete Private DNS Zone|event_id.iaas.privatedns.zone.delete|Default Infrastructure Service|
+|Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create|Default Infrastructure Service|
+|Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|Default Infrastructure Service|
+|Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|Default Infrastructure Service|
+|Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|Default Infrastructure Service|
+|Create Transit Hub|event_id.iaas.transit_hub.create|Default Infrastructure Service|
+|Modify Transit Hub|event_id.iaas.transit_hub.update|Default Infrastructure Service|
+|Delete Transit Hub|event_id.iaas.transit_hub.delete|Default Infrastructure Service|
+|Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|Default Infrastructure Service|
+|Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|Default Infrastructure Service|
+|Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|Default Infrastructure Service|
+|Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|Default Infrastructure Service|
+|Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|Default Infrastructure Service|
+|Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.delete|Default Infrastructure Service|
+|Create Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.create|Default Infrastructure Service|
+|Modify Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.update|Default Infrastructure Service|
+|Delete Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.delete|Default Infrastructure Service|
+|Create Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.create|Default Infrastructure Service|
+|Modify Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.update|Default Infrastructure Service|
+|Delete Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.delete|Default Infrastructure Service|
+|Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|Default Infrastructure Service|
+|Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|Default Infrastructure Service|
+|Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|Default Infrastructure Service|
 |Register/Modify Account Metadata|event_id.object_storage.account.metadata.update|Object Storage|
 |Create Containers|event_id.object_storage.container.create|Object Storage|
 |Delete Containers|event_id.object_storage.container.delete|Object Storage|
@@ -725,6 +768,7 @@
 |RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
+|Request ID Card Analysis (only)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
 |Request analysis of car license plate|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -803,6 +847,17 @@
 |Create Resource Response|event_id.apigw.resource.create_response|API Gateway|
 |Connect Domain Alias to Stage|event_id.apigw.stage.connect_alias_domain|API Gateway|
 |Disconnect Domain Alias from Stage|event_id.apigw.stage.disconnect_alias_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결|event_id.apigw.stage.connect_custom_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결 해제|event_id.apigw.stage.disconnect_custom_domain|API Gateway|
+|API Key 가져오기|event_id.apigw.apikey.import|API Gateway|
+|사용자 지정 도메인 생성|event_id.apigw.custom_domain.create|API Gateway|
+|사용자 지정 도메인 삭제|event_id.apigw.custom_domain.delete|API Gateway|
+|요청 제한 정책 생성|event_id.apigw.request_policy.create|API Gateway|
+|요청 제한 정책 수정|event_id.apigw.request_policy.update|API Gateway|
+|요청 제한 정책 삭제|event_id.apigw.request_policy.delete|API Gateway|
+|요청 제한 정책 키 값 생성|event_id.apigw.request_policy.key.create|API Gateway|
+|요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|API Gateway|
+|요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|API Gateway|
 |Request action detection|event_id.cheating_detection_behavior.detect|Cheating Detection|
 |Request voice detection|event_id.cheating_detection_voice.detect|Cheating Detection|
 |Register Service Domain|event_id.gamestarter.service_domain.create|GameStarter|
@@ -987,25 +1042,25 @@
 |유효성 검사 실패 다운로드|event_id.file_crafter.downloadValidationFailResultFile|File-Crafter|
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
-|정책 추가|event_id.network_firewall.group_create|Native Firewall|
-|방화벽 구성|event_id.network_firewall.config_iaas|Native Firewall|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Native Firewall|
-|IP 객체 추가|event_id.network_firewall.ip_object_create|Native Firewall|
-|Nat 삭제|event_id.network_firewall.nat_delete|Native Firewall|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|Native Firewall|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Native Firewall|
-|정책 수정|event_id.network_firewall.group_modify|Native Firewall|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Native Firewall|
-|Nat 추가|event_id.network_firewall.nat_create|Native Firewall|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Native Firewall|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|Native Firewall|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|Native Firewall|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Native Firewall|
-|Port 객체 추가|event_id.network_firewall.port_object_create|Native Firewall|
-|인프라 구성|event_id.network_firewall.config_project|Native Firewall|
-|옵션 설정|event_id.network_firewall.option_create|Native Firewall|
-|정책 삭제|event_id.network_firewall.group_delete|Native Firewall|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|Native Firewall|
+|정책 추가|event_id.network_firewall.group_create|Network Firewall|
+|방화벽 구성|event_id.network_firewall.config_iaas|Network Firewall|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Network Firewall|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|Network Firewall|
+|Nat 삭제|event_id.network_firewall.nat_delete|Network Firewall|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|Network Firewall|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Network Firewall|
+|정책 수정|event_id.network_firewall.group_modify|Network Firewall|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Network Firewall|
+|Nat 추가|event_id.network_firewall.nat_create|Network Firewall|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Network Firewall|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|Network Firewall|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|Network Firewall|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Network Firewall|
+|Port 객체 추가|event_id.network_firewall.port_object_create|Network Firewall|
+|인프라 구성|event_id.network_firewall.config_project|Network Firewall|
+|옵션 설정|event_id.network_firewall.option_create|Network Firewall|
+|정책 삭제|event_id.network_firewall.group_delete|Network Firewall|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|Network Firewall|
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|

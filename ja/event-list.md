@@ -40,6 +40,12 @@
 |NATゲートウェイの作成|event_id.iaas.nat_gateway.create|基本インフラサービス|
 |NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|基本インフラサービス|
 |NATゲートウェイの変更|event_id.iaas.nat_gateway.update|基本インフラサービス|
+|VPNGW作成|event_id.iaas.vpngw.create|基本インフラサービス|
+|VPNGW削除|event_id.iaas.vpngw.delete|基本インフラサービス|
+|VPNGW修正|event_id.iaas.vpngw.update|基本インフラサービス|
+|VPN接続の作成|event_id.iaas.vpn_connection.create|基本インフラサービス|
+|VPN接続の削除|event_id.iaas.vpn_connection.delete|基本インフラサービス|
+|VPN接続の修正|event_id.iaas.vpn_connection.update|基本インフラサービス|
 |キーペアの作成|event_id.iaas.keypair.create|基本インフラサービス|
 |キーペアの削除|event_id.iaas.keypair.delete|基本インフラサービス|
 |ロードバランサーの作成|event_id.iaas.loadbalancer.create|基本インフラサービス|
@@ -136,6 +142,43 @@
 |サービスゲートウェイの変更|event_id.iaas.service_gateway.update|基本インフラサービス|
 |サービスゲートウェイの削除|event_id.iaas.service_gateway.delete|基本インフラサービス|
 |ボリュームのコピー|event_id.iaas.volume.copy|基本インフラサービス|
+|Private DNS Zone作成|event_id.iaas.privatedns.zone.create|基本インフラサービス|
+|Private DNS Zone修正|event_id.iaas.privatedns.zone.update|基本インフラサービス|
+|Private DNS Zone削除|event_id.iaas.privatedns.zone.delete|基本インフラサービス|
+|Private DNS レコードセット作成|event_id.iaas.privatedns.recordset.create|基本インフラサービス|
+|Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|基本インフラサービス|
+|Private DNS レコードセット削除|event_id.iaas.privatedns.recordset.delete|基本インフラサービス|
+|Private DNS レコードセットの大量作成|event_id.iaas.privatedns.recordset.create_list|基本インフラサービス|
+|トランジットハブの作成|event_id.iaas.transit_hub.create|基本インフラサービス|
+|トランジットハブの変更|event_id.iaas.transit_hub.update|基本インフラサービス|
+|トランジットハブの削除|event_id.iaas.transit_hub.delete|基本インフラサービス|
+|トランジットハブ接続の作成|event_id.iaas.transit_hub_attachment.create|基本インフラサービス|
+|トランジットハブ接続の変更|event_id.iaas.transit_hub_attachment.update|基本インフラサービス|
+|トランジットハブ接続の削除|event_id.iaas.transit_hub_attachment.delete|基本インフラサービス|
+|トランジットハブ許可リストの作成|event_id.iaas.transit_hub_allow_project.create|基本インフラサービス|
+|トランジットハブ許可リストの変更|event_id.iaas.transit_hub_allow_project.update|基本インフラサービス|
+|トランジットハブ許可リストの削除|event_id.iaas.transit_hub_allow_project.delete|基本インフラサービス|
+|トランジットハブルーティングテーブルの作成|event_id.iaas.transit_hub_routing_table.create|基本インフラサービス|
+|トランジットハブルーティングテーブルの変更|event_id.iaas.transit_hub_routing_table.update|基本インフラサービス|
+|トランジットハブルーティングテーブルの削除|event_id.iaas.transit_hub_routing_table.delete|基本インフラサービス|
+|トランジットハブルーティング接続の作成|event_id.iaas.transit_hub_routing_association.create|基本インフラサービス|
+|トランジットハブルーティング接続の変更|event_id.iaas.transit_hub_routing_association.update|基本インフラサービス|
+|トランジットハブルーティング接続の削除|event_id.iaas.transit_hub_routing_association.delete|基本インフラサービス|
+|トランジットハブルーティング配信の作成|event_id.iaas.transit_hub_routing_propagation.create|基本インフラサービス|
+|トランジットハブルーティング配信の変更|event_id.iaas.transit_hub_routing_propagation.update|基本インフラサービス|
+|トランジットハブルーティング配信の削除|event_id.iaas.transit_hub_routing_propagation.delete|基本インフラサービス|
+|トランジットハブルーティングルールの作成|event_id.iaas.transit_hub_routing_rule.create|基本インフラサービス|
+|トランジットハブルーティングルールの変更|event_id.iaas.transit_hub_routing_rule.update|基本インフラサービス|
+|トランジットハブルーティングルールの削除|event_id.iaas.transit_hub_routing_rule.delete|基本インフラサービス|
+|トランジットハブマルチキャストドメインの作成|event_id.iaas.transit_hub_multicast_domain.create|基本インフラサービス|
+|トランジットハブマルチキャストドメインの変更|event_id.iaas.transit_hub_multicast_domain.update|基本インフラサービス|
+|トランジットハブマルチキャストドメインの削除|event_id.iaas.transit_hub_multicast_domain.delete|基本インフラサービス|
+|トランジットハブマルチキャスト接続の作成|event_id.iaas.transit_hub_multicast_association.create|基本インフラサービス|
+|トランジットハブマルチキャスト接続の変更|event_id.iaas.transit_hub_multicast_association.update|基本インフラサービス|
+|トランジットハブマルチキャスト接続の削除|event_id.iaas.transit_hub_multicast_association.delete|基本インフラサービス|
+|トランジットハブマルチキャストグループの作成|event_id.iaas.transit_hub_multicast_group.create|基本インフラサービス|
+|トランジットハブマルチキャストグループの変更|event_id.iaas.transit_hub_multicast_group.update|基本インフラサービス|
+|トランジットハブマルチキャストグループの削除|event_id.iaas.transit_hub_multicast_group.delete|基本インフラサービス|
 |アカウントメタデータの登録/修正|event_id.object_storage.account.metadata.update|Object Storage|
 |コンテナの作成|event_id.object_storage.container.create|Object Storage|
 |コンテナの削除|event_id.object_storage.container.delete|Object Storage|
@@ -725,6 +768,7 @@
 |Document OCR身分証の分析リクエスト|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR ナンバープレート分析リクエスト|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
+|Document OCR 身分証明書分析リクエスト(単独)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
 |ナンバープレートの分析リクエスト|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -803,6 +847,17 @@
 |リソースレスポンス作成|event_id.apigw.resource.create_response|API Gateway|
 |ステージにドメインエイリアス接続|event_id.apigw.stage.connect_alias_domain|API Gateway|
 |ステージにドメインエイリアス接続解除|event_id.apigw.stage.disconnect_alias_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결|event_id.apigw.stage.connect_custom_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결 해제|event_id.apigw.stage.disconnect_custom_domain|API Gateway|
+|API Key 가져오기|event_id.apigw.apikey.import|API Gateway|
+|사용자 지정 도메인 생성|event_id.apigw.custom_domain.create|API Gateway|
+|사용자 지정 도메인 삭제|event_id.apigw.custom_domain.delete|API Gateway|
+|요청 제한 정책 생성|event_id.apigw.request_policy.create|API Gateway|
+|요청 제한 정책 수정|event_id.apigw.request_policy.update|API Gateway|
+|요청 제한 정책 삭제|event_id.apigw.request_policy.delete|API Gateway|
+|요청 제한 정책 키 값 생성|event_id.apigw.request_policy.key.create|API Gateway|
+|요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|API Gateway|
+|요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|API Gateway|
 |行動検知リクエスト|event_id.cheating_detection_behavior.detect|Cheating Detection|
 |音声検知リクエスト|event_id.cheating_detection_voice.detect|Cheating Detection|
 |サービスドメインの登録|event_id.gamestarter.service_domain.create|GameStarter|
@@ -987,25 +1042,25 @@
 |유효성 검사 실패 다운로드|event_id.file_crafter.downloadValidationFailResultFile|File-Crafter|
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
-|정책 추가|event_id.network_firewall.group_create|Native Firewall|
-|방화벽 구성|event_id.network_firewall.config_iaas|Native Firewall|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Native Firewall|
-|IP 객체 추가|event_id.network_firewall.ip_object_create|Native Firewall|
-|Nat 삭제|event_id.network_firewall.nat_delete|Native Firewall|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|Native Firewall|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Native Firewall|
-|정책 수정|event_id.network_firewall.group_modify|Native Firewall|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Native Firewall|
-|Nat 추가|event_id.network_firewall.nat_create|Native Firewall|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Native Firewall|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|Native Firewall|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|Native Firewall|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Native Firewall|
-|Port 객체 추가|event_id.network_firewall.port_object_create|Native Firewall|
-|인프라 구성|event_id.network_firewall.config_project|Native Firewall|
-|옵션 설정|event_id.network_firewall.option_create|Native Firewall|
-|정책 삭제|event_id.network_firewall.group_delete|Native Firewall|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|Native Firewall|
+|정책 추가|event_id.network_firewall.group_create|Network Firewall|
+|방화벽 구성|event_id.network_firewall.config_iaas|Network Firewall|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Network Firewall|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|Network Firewall|
+|Nat 삭제|event_id.network_firewall.nat_delete|Network Firewall|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|Network Firewall|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Network Firewall|
+|정책 수정|event_id.network_firewall.group_modify|Network Firewall|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Network Firewall|
+|Nat 추가|event_id.network_firewall.nat_create|Network Firewall|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Network Firewall|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|Network Firewall|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|Network Firewall|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Network Firewall|
+|Port 객체 추가|event_id.network_firewall.port_object_create|Network Firewall|
+|인프라 구성|event_id.network_firewall.config_project|Network Firewall|
+|옵션 설정|event_id.network_firewall.option_create|Network Firewall|
+|정책 삭제|event_id.network_firewall.group_delete|Network Firewall|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|Network Firewall|
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
