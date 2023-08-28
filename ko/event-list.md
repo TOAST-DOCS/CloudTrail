@@ -1052,6 +1052,7 @@
 |정책 수정|event_id.network_firewall.group_modify|Network Firewall|
 |정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Network Firewall|
 |Nat 추가|event_id.network_firewall.nat_create|Network Firewall|
+|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|Network Firewall|
 |IP 객체 삭제|event_id.network_firewall.ip_object_delete|Network Firewall|
 |Port 객체 삭제|event_id.network_firewall.port_object_delete|Network Firewall|
 |정책 엑셀 추가|event_id.network_firewall.group_create_template|Network Firewall|
@@ -1195,4 +1196,4 @@
 |알람 웹훅 수정|event_id.gamebase.alarm_recipient_update|Gamebase|
 |알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|Gamebase|
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|Gamebase|
-|Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
+|Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|

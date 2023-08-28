@@ -1052,6 +1052,7 @@
 |정책 수정|event_id.network_firewall.group_modify|Network Firewall|
 |정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Network Firewall|
 |Nat 추가|event_id.network_firewall.nat_create|Network Firewall|
+|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|Network Firewall|
 |IP 객체 삭제|event_id.network_firewall.ip_object_delete|Network Firewall|
 |Port 객체 삭제|event_id.network_firewall.port_object_delete|Network Firewall|
 |정책 엑셀 추가|event_id.network_firewall.group_create_template|Network Firewall|
@@ -1089,13 +1090,13 @@
 |수신거부 사용자 제거|event_id.email.remove_block_receiver|Email|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
-|앱 수정|event_id.gamebase.app_update|Gamebase|
-|테스트 단말기 추가|event_id.gamebase.access_devices_create|Gamebase|
-|테스트 단말기 수정|event_id.gamebase.access_devices_update|Gamebase|
+|Update App|event_id.gamebase.app_update|Gamebase|
+|Add test device|event_id.gamebase.access_devices_create|Gamebase|
+|Update test device|event_id.gamebase.access_devices_update|Gamebase|
 |Delete test device|event_id.gamebase.access_devices_delete|Gamebase|
-|클라이언트 추가|event_id.gamebase.client_create|Gamebase|
-|클라이언트 수정|event_id.gamebase.client_update|Gamebase|
-|클라이언트 삭제|event_id.gamebase.client_delete|Gamebase|
+|Add client|event_id.gamebase.client_create|Gamebase|
+|Update client|event_id.gamebase.client_update|Gamebase|
+|Delete client|event_id.gamebase.client_delete|Gamebase|
 |Add terms|event_id.gamebase.tos_create|Gamebase|
 |Delete terms|event_id.gamebase.tos_delete|Gamebase|
 |Add terms content|event_id.gamebase.tos_content_create|Gamebase|
@@ -1129,7 +1130,7 @@
 |Add userId to push tag|event_id.gamebase.push_tag_uid_create|Gamebase|
 |Delete userId from push tag|event_id.gamebase.push_tag_uid_delete|Gamebase|
 |Add push event-key|event_id.gamebase.push_event_key_create|Gamebase|
-|푸시 이벤트키 수정|event_id.gamebase.push_event_key_update|Gamebase|
+|Update push event-key|event_id.gamebase.push_event_key_update|Gamebase|
 |Delete push event-key|event_id.gamebase.push_event_key_delete|Gamebase|
 |Add push certification|event_id.gamebase.push_cert_create|Gamebase|
 |Update push certification|event_id.gamebase.push_cert_update|Gamebase|
@@ -1148,25 +1149,25 @@
 |이용정지 앱가드 설정|event_id.gamebase.ban_app_guard_update|Gamebase|
 |이용정지 유예|event_id.gamebase.ban_grace_period_create|Gamebase|
 |이용정지 유예 해제|event_id.gamebase.ban_grace_period_delete|Gamebase|
-|결제 스토어 등록|event_id.gamebase.iap_store_create|Gamebase|
-|결제 스토어 수정|event_id.gamebase.iap_store_update|Gamebase|
-|결제 스토어 삭제|event_id.gamebase.iap_store_delete|Gamebase|
-|결제 아이템 등록|event_id.gamebase.iap_item_create|Gamebase|
-|결제 아이템 수정|event_id.gamebase.iap_item_update|Gamebase|
-|결제 정보 수정|event_id.gamebase.iap_transaction_update|Gamebase|
+|Add IAP store|event_id.gamebase.iap_store_create|Gamebase|
+|Update IAP store|event_id.gamebase.iap_store_update|Gamebase|
+|Delete IAP store|event_id.gamebase.iap_store_delete|Gamebase|
+|Add IAP items|event_id.gamebase.iap_item_create|Gamebase|
+|Update IAP items|event_id.gamebase.iap_item_update|Gamebase|
+|Update IAP transaction|event_id.gamebase.iap_transaction_update|Gamebase|
 |결제 어뷰징 자동 제재 설정|event_id.gamebase.iap_abusing_update|Gamebase|
 |리더보드 데이터 수정|event_id.gamebase.leaderboard_data_update|Gamebase|
 |리더보드 데이터 삭제|event_id.gamebase.leaderboard_data_delete|Gamebase|
-|리더보드 팩터 추가|event_id.gamebase.leaderboard_factor_create|Gamebase|
-|리더보드 팩터 수정|event_id.gamebase.leaderboard_factor_update|Gamebase|
-|리더보드 팩터 삭제|event_id.gamebase.leaderboard_factor_delete|Gamebase|
+|Add leaderboard factor|event_id.gamebase.leaderboard_factor_create|Gamebase|
+|Update leaderboard factor|event_id.gamebase.leaderboard_factor_update|Gamebase|
+|Delete leaderboard factor|event_id.gamebase.leaderboard_factor_delete|Gamebase|
 |리더보드 팩터 초기화|event_id.gamebase.leaderboard_factor_data_delete|Gamebase|
 |쿠폰 발급|event_id.gamebase.coupon_create|Gamebase|
-|쿠폰 수정|event_id.gamebase.coupon_update|Gamebase|
+|Update coupon|event_id.gamebase.coupon_update|Gamebase|
 |쿠폰 추가 발급|event_id.gamebase.coupon_add_update|Gamebase|
-|쿠폰 SMS 발송|event_id.gamebase.coupon_sms_create|Gamebase|
-|쿠폰 아이템 등록|event_id.gamebase.coupon_item_create|Gamebase|
-|쿠폰 아이템 수정|event_id.gamebase.coupon_item_update|Gamebase|
+|Send coupon|event_id.gamebase.coupon_sms_create|Gamebase|
+|Add coupon items|event_id.gamebase.coupon_item_create|Gamebase|
+|Update coupon items|event_id.gamebase.coupon_item_update|Gamebase|
 |고객문의 답변|event_id.gamebase.oc_ticket_update|Gamebase|
 |고객문의 처리 완료|event_id.gamebase.oc_ticket_close_update|Gamebase|
 |고객문의 답변 PUSH 설정|event_id.gamebase.oc_ticket_push_update|Gamebase|
@@ -1195,4 +1196,4 @@
 |알람 웹훅 수정|event_id.gamebase.alarm_recipient_update|Gamebase|
 |알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|Gamebase|
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|Gamebase|
-|Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
+|Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
