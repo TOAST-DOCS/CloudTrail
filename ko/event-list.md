@@ -40,6 +40,12 @@
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|기본 인프라 서비스|
 |NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|기본 인프라 서비스|
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
+|VPNGW 생성|event_id.iaas.vpngw.create|기본 인프라 서비스|
+|VPNGW 삭제|event_id.iaas.vpngw.delete|기본 인프라 서비스|
+|VPNGW 수정|event_id.iaas.vpngw.update|기본 인프라 서비스|
+|VPN Connection 생성|event_id.iaas.vpn_connection.create|기본 인프라 서비스|
+|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|기본 인프라 서비스|
+|VPN Connection 수정|event_id.iaas.vpn_connection.update|기본 인프라 서비스|
 |키페어 생성|event_id.iaas.keypair.create|기본 인프라 서비스|
 |키페어 삭제|event_id.iaas.keypair.delete|기본 인프라 서비스|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|기본 인프라 서비스|
@@ -136,6 +142,43 @@
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|기본 인프라 서비스|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|기본 인프라 서비스|
 |볼륨 복제|event_id.iaas.volume.copy|기본 인프라 서비스|
+|Private DNS Zone 생성|event_id.iaas.privatedns.zone.create|기본 인프라 서비스|
+|Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|기본 인프라 서비스|
+|Private DNS Zone 삭제|event_id.iaas.privatedns.zone.delete|기본 인프라 서비스|
+|Private DNS 레코드 세트 생성|event_id.iaas.privatedns.recordset.create|기본 인프라 서비스|
+|Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|기본 인프라 서비스|
+|Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|기본 인프라 서비스|
+|Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|기본 인프라 서비스|
+|트랜짓 허브 생성|event_id.iaas.transit_hub.create|기본 인프라 서비스|
+|트랜짓 허브 수정|event_id.iaas.transit_hub.update|기본 인프라 서비스|
+|트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|기본 인프라 서비스|
+|트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|기본 인프라 서비스|
+|트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|기본 인프라 서비스|
+|트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 생성|event_id.iaas.transit_hub_routing_table.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 변경|event_id.iaas.transit_hub_routing_table.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 삭제|event_id.iaas.transit_hub_routing_table.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 생성|event_id.iaas.transit_hub_routing_association.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 변경|event_id.iaas.transit_hub_routing_association.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 삭제|event_id.iaas.transit_hub_routing_association.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 생성|event_id.iaas.transit_hub_routing_propagation.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 변경|event_id.iaas.transit_hub_routing_propagation.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 삭제|event_id.iaas.transit_hub_routing_propagation.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 생성|event_id.iaas.transit_hub_routing_rule.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 변경|event_id.iaas.transit_hub_routing_rule.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 삭제|event_id.iaas.transit_hub_routing_rule.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 생성|event_id.iaas.transit_hub_multicast_domain.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 변경|event_id.iaas.transit_hub_multicast_domain.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 삭제|event_id.iaas.transit_hub_multicast_domain.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 생성|event_id.iaas.transit_hub_multicast_association.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 변경|event_id.iaas.transit_hub_multicast_association.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 삭제|event_id.iaas.transit_hub_multicast_association.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|기본 인프라 서비스|
 |어카운트 메타데이터 등록/수정|event_id.object_storage.account.metadata.update|Object Storage|
 |컨테이너 생성|event_id.object_storage.container.create|Object Storage|
 |컨테이너 삭제|event_id.object_storage.container.delete|Object Storage|
@@ -725,6 +768,7 @@
 |Document OCR 신분증 분석 요청|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
+|Document OCR 신분증 분석 요청(단독)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
 |차량 번호판 분석 요청|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |발신 프로필 토큰 인증|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -803,6 +847,17 @@
 |리소스 응답 생성|event_id.apigw.resource.create_response|API Gateway|
 |스테이지에 도메인 별칭 연결|event_id.apigw.stage.connect_alias_domain|API Gateway|
 |스테이지에 도메인 별칭 연결 해제|event_id.apigw.stage.disconnect_alias_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결|event_id.apigw.stage.connect_custom_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결 해제|event_id.apigw.stage.disconnect_custom_domain|API Gateway|
+|API Key 가져오기|event_id.apigw.apikey.import|API Gateway|
+|사용자 지정 도메인 생성|event_id.apigw.custom_domain.create|API Gateway|
+|사용자 지정 도메인 삭제|event_id.apigw.custom_domain.delete|API Gateway|
+|요청 제한 정책 생성|event_id.apigw.request_policy.create|API Gateway|
+|요청 제한 정책 수정|event_id.apigw.request_policy.update|API Gateway|
+|요청 제한 정책 삭제|event_id.apigw.request_policy.delete|API Gateway|
+|요청 제한 정책 키 값 생성|event_id.apigw.request_policy.key.create|API Gateway|
+|요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|API Gateway|
+|요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|API Gateway|
 |행동 감지 요청|event_id.cheating_detection_behavior.detect|Cheating Detection|
 |음성 감지 요청|event_id.cheating_detection_voice.detect|Cheating Detection|
 |서비스 도메인 등록|event_id.gamestarter.service_domain.create|GameStarter|
@@ -987,25 +1042,26 @@
 |유효성 검사 실패 다운로드|event_id.file_crafter.downloadValidationFailResultFile|File-Crafter|
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
-|정책 추가|event_id.network_firewall.group_create|Native Firewall|
-|방화벽 구성|event_id.network_firewall.config_iaas|Native Firewall|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Native Firewall|
-|IP 객체 추가|event_id.network_firewall.ip_object_create|Native Firewall|
-|Nat 삭제|event_id.network_firewall.nat_delete|Native Firewall|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|Native Firewall|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Native Firewall|
-|정책 수정|event_id.network_firewall.group_modify|Native Firewall|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Native Firewall|
-|Nat 추가|event_id.network_firewall.nat_create|Native Firewall|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Native Firewall|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|Native Firewall|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|Native Firewall|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Native Firewall|
-|Port 객체 추가|event_id.network_firewall.port_object_create|Native Firewall|
-|인프라 구성|event_id.network_firewall.config_project|Native Firewall|
-|옵션 설정|event_id.network_firewall.option_create|Native Firewall|
-|정책 삭제|event_id.network_firewall.group_delete|Native Firewall|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|Native Firewall|
+|정책 추가|event_id.network_firewall.group_create|Network Firewall|
+|방화벽 구성|event_id.network_firewall.config_iaas|Network Firewall|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Network Firewall|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|Network Firewall|
+|Nat 삭제|event_id.network_firewall.nat_delete|Network Firewall|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|Network Firewall|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Network Firewall|
+|정책 수정|event_id.network_firewall.group_modify|Network Firewall|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Network Firewall|
+|Nat 추가|event_id.network_firewall.nat_create|Network Firewall|
+|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|Network Firewall|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Network Firewall|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|Network Firewall|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|Network Firewall|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Network Firewall|
+|Port 객체 추가|event_id.network_firewall.port_object_create|Network Firewall|
+|인프라 구성|event_id.network_firewall.config_project|Network Firewall|
+|옵션 설정|event_id.network_firewall.option_create|Network Firewall|
+|정책 삭제|event_id.network_firewall.group_delete|Network Firewall|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|Network Firewall|
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
@@ -1140,4 +1196,4 @@
 |알람 웹훅 수정|event_id.gamebase.alarm_recipient_update|Gamebase|
 |알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|Gamebase|
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|Gamebase|
-|Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
+|Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|

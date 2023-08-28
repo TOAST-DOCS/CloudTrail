@@ -40,6 +40,12 @@
 |Create NAT Gateway|event_id.iaas.nat_gateway.create|Default Infrastructure Service|
 |Delete NAT Gateway|event_id.iaas.nat_gateway.delete|Default Infrastructure Service|
 |Change NAT Gateway|event_id.iaas.nat_gateway.update|Default Infrastructure Service|
+|Create VPNGW|event_id.iaas.vpngw.create|Default Infrastructure Service|
+|Delete VPNGW|event_id.iaas.vpngw.delete|Default Infrastructure Service|
+|Update VPNGW|event_id.iaas.vpngw.update|Default Infrastructure Service|
+|Create VPN Connection|event_id.iaas.vpn_connection.create|Default Infrastructure Service|
+|Delete VPN Connection|event_id.iaas.vpn_connection.delete|Default Infrastructure Service|
+|Update VPN Connection|event_id.iaas.vpn_connection.update|Default Infrastructure Service|
 |Create Keypair|event_id.iaas.keypair.create|Default Infrastructure Service|
 |Delete Keypair|event_id.iaas.keypair.delete|Default Infrastructure Service|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|Default Infrastructure Service|
@@ -136,6 +142,43 @@
 |Change Service Gateway|event_id.iaas.service_gateway.update|Default Infrastructure Service|
 |Delete Service Gateway|event_id.iaas.service_gateway.delete|Default Infrastructure Service|
 |Copy Volume|event_id.iaas.volume.copy|Default Infrastructure Service|
+|Create Private DNS Zone|event_id.iaas.privatedns.zone.create|Default Infrastructure Service|
+|Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|Default Infrastructure Service|
+|Delete Private DNS Zone|event_id.iaas.privatedns.zone.delete|Default Infrastructure Service|
+|Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create|Default Infrastructure Service|
+|Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|Default Infrastructure Service|
+|Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|Default Infrastructure Service|
+|Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|Default Infrastructure Service|
+|Create Transit Hub|event_id.iaas.transit_hub.create|Default Infrastructure Service|
+|Modify Transit Hub|event_id.iaas.transit_hub.update|Default Infrastructure Service|
+|Delete Transit Hub|event_id.iaas.transit_hub.delete|Default Infrastructure Service|
+|Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|Default Infrastructure Service|
+|Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|Default Infrastructure Service|
+|Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|Default Infrastructure Service|
+|Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|Default Infrastructure Service|
+|Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|Default Infrastructure Service|
+|Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.delete|Default Infrastructure Service|
+|Create Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.create|Default Infrastructure Service|
+|Modify Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.update|Default Infrastructure Service|
+|Delete Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.delete|Default Infrastructure Service|
+|Create Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.create|Default Infrastructure Service|
+|Modify Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.update|Default Infrastructure Service|
+|Delete Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.delete|Default Infrastructure Service|
+|Create Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.create|Default Infrastructure Service|
+|Modify Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.update|Default Infrastructure Service|
+|Delete Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.delete|Default Infrastructure Service|
+|Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|Default Infrastructure Service|
+|Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|Default Infrastructure Service|
+|Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|Default Infrastructure Service|
 |Register/Modify Account Metadata|event_id.object_storage.account.metadata.update|Object Storage|
 |Create Containers|event_id.object_storage.container.create|Object Storage|
 |Delete Containers|event_id.object_storage.container.delete|Object Storage|
@@ -725,6 +768,7 @@
 |RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
+|Request ID Card Analysis (only)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
 |Request analysis of car license plate|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -803,6 +847,17 @@
 |Create Resource Response|event_id.apigw.resource.create_response|API Gateway|
 |Connect Domain Alias to Stage|event_id.apigw.stage.connect_alias_domain|API Gateway|
 |Disconnect Domain Alias from Stage|event_id.apigw.stage.disconnect_alias_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결|event_id.apigw.stage.connect_custom_domain|API Gateway|
+|스테이지에 사용자 지정 도메인 연결 해제|event_id.apigw.stage.disconnect_custom_domain|API Gateway|
+|API Key 가져오기|event_id.apigw.apikey.import|API Gateway|
+|사용자 지정 도메인 생성|event_id.apigw.custom_domain.create|API Gateway|
+|사용자 지정 도메인 삭제|event_id.apigw.custom_domain.delete|API Gateway|
+|요청 제한 정책 생성|event_id.apigw.request_policy.create|API Gateway|
+|요청 제한 정책 수정|event_id.apigw.request_policy.update|API Gateway|
+|요청 제한 정책 삭제|event_id.apigw.request_policy.delete|API Gateway|
+|요청 제한 정책 키 값 생성|event_id.apigw.request_policy.key.create|API Gateway|
+|요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|API Gateway|
+|요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|API Gateway|
 |Request action detection|event_id.cheating_detection_behavior.detect|Cheating Detection|
 |Request voice detection|event_id.cheating_detection_voice.detect|Cheating Detection|
 |Register Service Domain|event_id.gamestarter.service_domain.create|GameStarter|
@@ -987,25 +1042,26 @@
 |유효성 검사 실패 다운로드|event_id.file_crafter.downloadValidationFailResultFile|File-Crafter|
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|File-Crafter|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|File-Crafter|
-|정책 추가|event_id.network_firewall.group_create|Native Firewall|
-|방화벽 구성|event_id.network_firewall.config_iaas|Native Firewall|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Native Firewall|
-|IP 객체 추가|event_id.network_firewall.ip_object_create|Native Firewall|
-|Nat 삭제|event_id.network_firewall.nat_delete|Native Firewall|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|Native Firewall|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Native Firewall|
-|정책 수정|event_id.network_firewall.group_modify|Native Firewall|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Native Firewall|
-|Nat 추가|event_id.network_firewall.nat_create|Native Firewall|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Native Firewall|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|Native Firewall|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|Native Firewall|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Native Firewall|
-|Port 객체 추가|event_id.network_firewall.port_object_create|Native Firewall|
-|인프라 구성|event_id.network_firewall.config_project|Native Firewall|
-|옵션 설정|event_id.network_firewall.option_create|Native Firewall|
-|정책 삭제|event_id.network_firewall.group_delete|Native Firewall|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|Native Firewall|
+|정책 추가|event_id.network_firewall.group_create|Network Firewall|
+|방화벽 구성|event_id.network_firewall.config_iaas|Network Firewall|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|Network Firewall|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|Network Firewall|
+|Nat 삭제|event_id.network_firewall.nat_delete|Network Firewall|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|Network Firewall|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|Network Firewall|
+|정책 수정|event_id.network_firewall.group_modify|Network Firewall|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|Network Firewall|
+|Nat 추가|event_id.network_firewall.nat_create|Network Firewall|
+|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|Network Firewall|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|Network Firewall|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|Network Firewall|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|Network Firewall|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|Network Firewall|
+|Port 객체 추가|event_id.network_firewall.port_object_create|Network Firewall|
+|인프라 구성|event_id.network_firewall.config_project|Network Firewall|
+|옵션 설정|event_id.network_firewall.option_create|Network Firewall|
+|정책 삭제|event_id.network_firewall.group_delete|Network Firewall|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|Network Firewall|
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|RCS Bizmessage|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|RCS Bizmessage|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|RCS Bizmessage|
@@ -1034,52 +1090,52 @@
 |수신거부 사용자 제거|event_id.email.remove_block_receiver|Email|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
-|앱 수정|event_id.gamebase.app_update|Gamebase|
-|테스트단말기 추가|event_id.gamebase.access_devices_create|Gamebase|
-|테스트단말기 수정|event_id.gamebase.access_devices_update|Gamebase|
-|테스트단말기 삭제|event_id.gamebase.access_devices_delete|Gamebase|
-|클라이언트 추가|event_id.gamebase.client_create|Gamebase|
-|클라이언트 수정|event_id.gamebase.client_update|Gamebase|
-|클라이언트 삭제|event_id.gamebase.client_delete|Gamebase|
-|약관 추가|event_id.gamebase.tos_create|Gamebase|
-|약관 삭제|event_id.gamebase.tos_delete|Gamebase|
-|약관 구성 추가|event_id.gamebase.tos_content_create|Gamebase|
-|약관 항목 삭제|event_id.gamebase.tos_content_delete|Gamebase|
-|약관 항목 저장|event_id.gamebase.tos_content_update|Gamebase|
-|약관 상세 페이지 수정|event_id.gamebase.tos_content_html_update|Gamebase|
-|기본 약관 변경|event_id.gamebase.tos_default_update|Gamebase|
-|약관 배포|event_id.gamebase.tos_deploy_create|Gamebase|
-|약관 대상 국가 변경|event_id.gamebase.tos_country_update|Gamebase|
-|설치 URL 수정|event_id.gamebase.store_update|Gamebase|
-|단말기 이전 수정|event_id.gamebase.transfer_account_update|Gamebase|
-|단말기 이전 비활성|event_id.gamebase.transfer_account_delete|Gamebase|
-|전송 지표 수정|event_id.gamebase.analytics_indicator_update|Gamebase|
-|전송 지표 삭제|event_id.gamebase.analytics_indicator_delete|Gamebase|
-|점검 등록|event_id.gamebase.maintenance_create|Gamebase|
-|점검 수정|event_id.gamebase.maintenance_update|Gamebase|
-|점검 삭제|event_id.gamebase.maintenance_delete|Gamebase|
+|Update App|event_id.gamebase.app_update|Gamebase|
+|Add test device|event_id.gamebase.access_devices_create|Gamebase|
+|Update test device|event_id.gamebase.access_devices_update|Gamebase|
+|Delete test device|event_id.gamebase.access_devices_delete|Gamebase|
+|Add client|event_id.gamebase.client_create|Gamebase|
+|Update client|event_id.gamebase.client_update|Gamebase|
+|Delete client|event_id.gamebase.client_delete|Gamebase|
+|Add terms|event_id.gamebase.tos_create|Gamebase|
+|Delete terms|event_id.gamebase.tos_delete|Gamebase|
+|Add terms content|event_id.gamebase.tos_content_create|Gamebase|
+|Delete terms content|event_id.gamebase.tos_content_delete|Gamebase|
+|Save terms content|event_id.gamebase.tos_content_update|Gamebase|
+|Update terms detail page|event_id.gamebase.tos_content_html_update|Gamebase|
+|Update default terms|event_id.gamebase.tos_default_update|Gamebase|
+|Deploy terms|event_id.gamebase.tos_deploy_create|Gamebase|
+|Update terms target country|event_id.gamebase.tos_country_update|Gamebase|
+|Update install url|event_id.gamebase.store_update|Gamebase|
+|Update transfer device|event_id.gamebase.transfer_account_update|Gamebase|
+|Disable transfer device|event_id.gamebase.transfer_account_delete|Gamebase|
+|Update analytics indicator|event_id.gamebase.analytics_indicator_update|Gamebase|
+|Delete analytics indicator|event_id.gamebase.analytics_indicator_delete|Gamebase|
+|Add maintenance|event_id.gamebase.maintenance_create|Gamebase|
+|Update maintenance|event_id.gamebase.maintenance_update|Gamebase|
+|Delete maintenance|event_id.gamebase.maintenance_delete|Gamebase|
 |점검 설정/해제|event_id.gamebase.maintenance_status_update|Gamebase|
-|공지 등록|event_id.gamebase.notice_create|Gamebase|
-|공지 수정|event_id.gamebase.notice_update|Gamebase|
-|공지 삭제|event_id.gamebase.notice_delete|Gamebase|
-|이미지 공지 등록|event_id.gamebase.image_notice_create|Gamebase|
-|이미지 공지 수정|event_id.gamebase.image_notice_update|Gamebase|
-|이미지 공지 삭제|event_id.gamebase.image_notice_delete|Gamebase|
-|킥아웃 등록|event_id.gamebase.kick_out_create|Gamebase|
-|푸시 등록|event_id.gamebase.push_create|Gamebase|
-|푸시 발송 취소|event_id.gamebase.push_delete|Gamebase|
-|푸시 태그 등록|event_id.gamebase.push_tag_create|Gamebase|
-|푸시 태그 수정|event_id.gamebase.push_tag_update|Gamebase|
-|푸시 태그 삭제|event_id.gamebase.push_tag_delete|Gamebase|
-|푸시 태그에 유저 등록|event_id.gamebase.push_tag_uid_create|Gamebase|
-|푸시 태그에서 유저 삭제|event_id.gamebase.push_tag_uid_delete|Gamebase|
-|푸시 이벤트키 등록|event_id.gamebase.push_event_key_create|Gamebase|
-|푸시 이벤트키 수정|event_id.gamebase.push_event_key_update|Gamebase|
-|푸시 이벤트키 삭제|event_id.gamebase.push_event_key_delete|Gamebase|
-|푸시 인증서 등록|event_id.gamebase.push_cert_create|Gamebase|
-|푸시 인증서 수정|event_id.gamebase.push_cert_update|Gamebase|
-|푸시 인증서 삭제|event_id.gamebase.push_cert_delete|Gamebase|
-|푸시 설정|event_id.gamebase.push_set_update|Gamebase|
+|Add notice|event_id.gamebase.notice_create|Gamebase|
+|Update notice|event_id.gamebase.notice_update|Gamebase|
+|Delete notice|event_id.gamebase.notice_delete|Gamebase|
+|Add image notice|event_id.gamebase.image_notice_create|Gamebase|
+|Update image notice|event_id.gamebase.image_notice_update|Gamebase|
+|Delete image notice|event_id.gamebase.image_notice_delete|Gamebase|
+|Add kick-out|event_id.gamebase.kick_out_create|Gamebase|
+|Add push|event_id.gamebase.push_create|Gamebase|
+|Cancel push reservation|event_id.gamebase.push_delete|Gamebase|
+|Add push tag|event_id.gamebase.push_tag_create|Gamebase|
+|Update push tag|event_id.gamebase.push_tag_update|Gamebase|
+|Delete push tag|event_id.gamebase.push_tag_delete|Gamebase|
+|Add userId to push tag|event_id.gamebase.push_tag_uid_create|Gamebase|
+|Delete userId from push tag|event_id.gamebase.push_tag_uid_delete|Gamebase|
+|Add push event-key|event_id.gamebase.push_event_key_create|Gamebase|
+|Update push event-key|event_id.gamebase.push_event_key_update|Gamebase|
+|Delete push event-key|event_id.gamebase.push_event_key_delete|Gamebase|
+|Add push certification|event_id.gamebase.push_cert_create|Gamebase|
+|Update push certification|event_id.gamebase.push_cert_update|Gamebase|
+|Delete push certification|event_id.gamebase.push_cert_delete|Gamebase|
+|Update push settings|event_id.gamebase.push_set_update|Gamebase|
 |계정 탈퇴|event_id.gamebase.member_delete|Gamebase|
 |계정 매핑 추가|event_id.gamebase.member_mapping_create|Gamebase|
 |계정 매핑 해제|event_id.gamebase.member_mapping_delete|Gamebase|
@@ -1093,25 +1149,25 @@
 |이용정지 앱가드 설정|event_id.gamebase.ban_app_guard_update|Gamebase|
 |이용정지 유예|event_id.gamebase.ban_grace_period_create|Gamebase|
 |이용정지 유예 해제|event_id.gamebase.ban_grace_period_delete|Gamebase|
-|결제 스토어 등록|event_id.gamebase.iap_store_create|Gamebase|
-|결제 스토어 수정|event_id.gamebase.iap_store_update|Gamebase|
-|결제 스토어 삭제|event_id.gamebase.iap_store_delete|Gamebase|
-|결제 아이템 등록|event_id.gamebase.iap_item_create|Gamebase|
-|결제 아이템 수정|event_id.gamebase.iap_item_update|Gamebase|
-|결제 정보 수정|event_id.gamebase.iap_transaction_update|Gamebase|
+|Add IAP store|event_id.gamebase.iap_store_create|Gamebase|
+|Update IAP store|event_id.gamebase.iap_store_update|Gamebase|
+|Delete IAP store|event_id.gamebase.iap_store_delete|Gamebase|
+|Add IAP items|event_id.gamebase.iap_item_create|Gamebase|
+|Update IAP items|event_id.gamebase.iap_item_update|Gamebase|
+|Update IAP transaction|event_id.gamebase.iap_transaction_update|Gamebase|
 |결제 어뷰징 자동 제재 설정|event_id.gamebase.iap_abusing_update|Gamebase|
 |리더보드 데이터 수정|event_id.gamebase.leaderboard_data_update|Gamebase|
 |리더보드 데이터 삭제|event_id.gamebase.leaderboard_data_delete|Gamebase|
-|리더보드 팩터 추가|event_id.gamebase.leaderboard_factor_create|Gamebase|
-|리더보드 팩터 수정|event_id.gamebase.leaderboard_factor_update|Gamebase|
-|리더보드 팩터 삭제|event_id.gamebase.leaderboard_factor_delete|Gamebase|
+|Add leaderboard factor|event_id.gamebase.leaderboard_factor_create|Gamebase|
+|Update leaderboard factor|event_id.gamebase.leaderboard_factor_update|Gamebase|
+|Delete leaderboard factor|event_id.gamebase.leaderboard_factor_delete|Gamebase|
 |리더보드 팩터 초기화|event_id.gamebase.leaderboard_factor_data_delete|Gamebase|
 |쿠폰 발급|event_id.gamebase.coupon_create|Gamebase|
-|쿠폰 수정|event_id.gamebase.coupon_update|Gamebase|
+|Update coupon|event_id.gamebase.coupon_update|Gamebase|
 |쿠폰 추가 발급|event_id.gamebase.coupon_add_update|Gamebase|
-|쿠폰 SMS 발송|event_id.gamebase.coupon_sms_create|Gamebase|
-|쿠폰 아이템 등록|event_id.gamebase.coupon_item_create|Gamebase|
-|쿠폰 아이템 수정|event_id.gamebase.coupon_item_update|Gamebase|
+|Send coupon|event_id.gamebase.coupon_sms_create|Gamebase|
+|Add coupon items|event_id.gamebase.coupon_item_create|Gamebase|
+|Update coupon items|event_id.gamebase.coupon_item_update|Gamebase|
 |고객문의 답변|event_id.gamebase.oc_ticket_update|Gamebase|
 |고객문의 처리 완료|event_id.gamebase.oc_ticket_close_update|Gamebase|
 |고객문의 답변 PUSH 설정|event_id.gamebase.oc_ticket_push_update|Gamebase|
@@ -1140,4 +1196,4 @@
 |알람 웹훅 수정|event_id.gamebase.alarm_recipient_update|Gamebase|
 |알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|Gamebase|
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|Gamebase|
-|Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|
+|Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|Gamebase|

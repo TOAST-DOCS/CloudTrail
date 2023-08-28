@@ -136,6 +136,13 @@
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|기본 인프라 서비스|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|기본 인프라 서비스|
 |볼륨 복제|event_id.iaas.volume.copy|기본 인프라 서비스|
+|Private DNS Zone 생성|event_id.iaas.privatedns.zone.create|기본 인프라 서비스|
+|Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|기본 인프라 서비스|
+|Private DNS Zone 삭제|event_id.iaas.privatedns.zone.delete|기본 인프라 서비스|
+|Private DNS 레코드 세트 생성|event_id.iaas.privatedns.recordset.create|기본 인프라 서비스|
+|Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|기본 인프라 서비스|
+|Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|기본 인프라 서비스|
+|Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|기본 인프라 서비스|
 |어카운트 메타데이터 등록/수정|event_id.object_storage.account.metadata.update|Object Storage|
 |컨테이너 생성|event_id.object_storage.container.create|Object Storage|
 |컨테이너 삭제|event_id.object_storage.container.delete|Object Storage|
