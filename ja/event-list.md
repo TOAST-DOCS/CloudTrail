@@ -179,6 +179,11 @@
 |トランジットハブマルチキャストグループの作成|event_id.iaas.transit_hub_multicast_group.create|基本インフラサービス|
 |トランジットハブマルチキャストグループの変更|event_id.iaas.transit_hub_multicast_group.update|基本インフラサービス|
 |トランジットハブマルチキャストグループの削除|event_id.iaas.transit_hub_multicast_group.delete|基本インフラサービス|
+|NASボリュームの作成|event_id.iaas.nas.volume.create|基本インフラサービス|
+|NASボリュームの変更|event_id.iaas.nas.volume.update|基本インフラサービス|
+|NASボリュームの削除|event_id.iaas.nas.volume.delete|基本インフラサービス|
+|NASスナップショットの作成|event_id.iaas.nas.snapshot.create|基本インフラサービス|
+|NASスナップショットの削除|event_id.iaas.nas.snapshot.delete|基本インフラサービス|
 |アカウントメタデータの登録/修正|event_id.object_storage.account.metadata.update|Object Storage|
 |コンテナの作成|event_id.object_storage.container.create|Object Storage|
 |コンテナの削除|event_id.object_storage.container.delete|Object Storage|

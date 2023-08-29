@@ -179,6 +179,11 @@
 |트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|기본 인프라 서비스|
 |트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|기본 인프라 서비스|
 |트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|기본 인프라 서비스|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|기본 인프라 서비스|
+|NAS 볼륨 변경|event_id.iaas.nas.volume.update|기본 인프라 서비스|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|기본 인프라 서비스|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|기본 인프라 서비스|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|기본 인프라 서비스|
 |어카운트 메타데이터 등록/수정|event_id.object_storage.account.metadata.update|Object Storage|
 |컨테이너 생성|event_id.object_storage.container.create|Object Storage|
 |컨테이너 삭제|event_id.object_storage.container.delete|Object Storage|
