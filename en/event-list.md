@@ -179,6 +179,11 @@
 |Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|Default Infrastructure Service|
 |Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|Default Infrastructure Service|
 |Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|Default Infrastructure Service|
+|Create NAS Volume|event_id.iaas.nas.volume.create|Default Infrastructure Service|
+|Modify NAS Volume|event_id.iaas.nas.volume.update|Default Infrastructure Service|
+|Delete NAS Volume|event_id.iaas.nas.volume.delete|Default Infrastructure Service|
+|Create NAS Snapshot|event_id.iaas.nas.snapshot.create|Default Infrastructure Service|
+|Delete NAS Snapshot|event_id.iaas.nas.snapshot.delete|Default Infrastructure Service|
 |Register/Modify Account Metadata|event_id.object_storage.account.metadata.update|Object Storage|
 |Create Containers|event_id.object_storage.container.create|Object Storage|
 |Delete Containers|event_id.object_storage.container.delete|Object Storage|
