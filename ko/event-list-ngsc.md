@@ -27,9 +27,9 @@
 |인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|기본 인프라 서비스|
 |인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|기본 인프라 서비스|
 |인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|기본 인프라 서비스|
-|null|event_id.iaas.nat_gateway.create|기본 인프라 서비스|
-|null|event_id.iaas.nat_gateway.delete|기본 인프라 서비스|
-|null|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
+|NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|기본 인프라 서비스|
+|NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|기본 인프라 서비스|
+|NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
 |키페어 생성|event_id.iaas.keypair.create|기본 인프라 서비스|
 |키페어 삭제|event_id.iaas.keypair.delete|기본 인프라 서비스|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|기본 인프라 서비스|
@@ -208,6 +208,12 @@
 |마켓플레이스 신청 취소|event_id.market_place.apply-cancel|콘솔|
 |마켓플레이스 해지 신청|event_id.market_place.termination-apply|콘솔|
 |마켓플레이스 해지 신청 취소|event_id.market_place.termination-apply-cancel|콘솔|
+|조직 알림 수신 그룹 생성|event_id.org.alarm_group.create|콘솔|
+|조직 알림 수신 그룹 수정|event_id.org.alarm_group.update|콘솔|
+|조직 알림 수신 그룹 삭제|event_id.org.alarm_group.delete|콘솔|
+|프로젝트 알림 수신 그룹 생성|event_id.project.alarm_group.create|콘솔|
+|프로젝트 알림 수신 그룹 수정|event_id.project.alarm_group.update|콘솔|
+|프로젝트 알림 수신 그룹 삭제|event_id.project.alarm_group.delete|콘솔|
 |백업 서버 등록|event_id.backup.client.register|Backup|
 |백업 서버 삭제|event_id.backup.client.delete|Backup|
 |백업 경로 등록|event_id.backup.target.register|Backup|
@@ -215,6 +221,8 @@
 |백업 경로 삭제|event_id.backup.target.delete|Backup|
 |복구 신청|event_id.backup.restoration.apply|Backup|
 |백업 서버 정보 변경|event_id.backup.client.update|Backup|
+|로그 저장/다운로드 설정|event_id.cloud_trail.set_log_save_download_config|CloudTrail|
+|로그 저장/다운로드 설정 삭제|event_id.cloud_trail.delete_log_save_download_config|CloudTrail|
 |서버 대시보드 레이아웃 추가|event_id.system_monitoring.server_dashboard_layout_addition|System Monitoring|
 |서버 대시보드 레이아웃 변경|event_id.system_monitoring.server_dashboard_layout_updating|System Monitoring|
 |서버 대시보드 레이아웃 삭제|event_id.system_monitoring.server_dashboard_layout_deletion|System Monitoring|
@@ -242,5 +250,3 @@
 |알림 설정 변경|event_id.system_monitoring.alarm_config_updating|System Monitoring|
 |알림 설정 삭제|event_id.system_monitoring.alarm_config_deletion|System Monitoring|
 |이벤트 강제 종료|event_id.system_monitoring.event_force_close|System Monitoring|
-|로그 저장/다운로드 설정|event_id.cloud_trail.set_log_save_download_config|CloudTrail|
-|로그 저장/다운로드 설정 삭제|event_id.cloud_trail.delete_log_save_download_config|CloudTrail|
