@@ -75,7 +75,7 @@ RESTful API를 사용하려면 AppKey가 필요합니다.
 * NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다. 
 * 반대로 IAM memberType일 경우, userCode의 값은 필수이고, emailAddress의 값은 존재하지 않아야 합니다.
 * idNo 값이 있을 경우, memberType과 userCode, emailAddress 값과 관계없이 우선으로 적용됩니다.
-* 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/Governance%20&%20Audit/CloudTrail/ko/event-list-ngsc/)
+* 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/CloudTrail/ko/event-list-ngsc/)
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ RESTful API를 사용하려면 AppKey가 필요합니다.
 | member.emailAddress | String | X | 이벤트를 발생시킨 회원의 이메일 주소(NHN Cloud 회원일 경우)|
 | member.idNo | String | X | 이벤트를 발생시킨 회원 IdNo (uuid) |
 | eventId | String | O | 조회할 이벤트의 ID |
-| startDate | Date | O | 조회할 기간의 시작 날짜 |
+| startDate | Date | O | 조회할 기간의 시작 날짜 |정
 | endDate | Date |O  | 조회할 기간의 끝나는 날짜 |
 | page | Object | O | 조회 결과의 페이지 조건 |
 | page.sortBy | String | X | 조회 결과의 사이즈 정렬 조건 (ex. startDate:desc, idNo:asc)|

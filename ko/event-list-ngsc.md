@@ -27,9 +27,6 @@
 |인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|기본 인프라 서비스|
 |인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|기본 인프라 서비스|
 |인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|기본 인프라 서비스|
-|null|event_id.iaas.nat_gateway.create|기본 인프라 서비스|
-|null|event_id.iaas.nat_gateway.delete|기본 인프라 서비스|
-|null|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
 |키페어 생성|event_id.iaas.keypair.create|기본 인프라 서비스|
 |키페어 삭제|event_id.iaas.keypair.delete|기본 인프라 서비스|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|기본 인프라 서비스|
@@ -86,7 +83,6 @@
 |노드 그룹 생성|event_id.iaas.nodegroup.create|기본 인프라 서비스|
 |노드 그룹 삭제|event_id.iaas.nodegroup.delete|기본 인프라 서비스|
 |클러스터 업그레이드|event_id.iaas.nodegroup.upgrade|기본 인프라 서비스|
-|유저 스크립트 변경|event_id.iaas.nodegroup.update_userscript|기본 인프라 서비스|
 |이미지 복제|event_id.iaas.image.copy|기본 인프라 서비스|
 |이미지 빌드|event_id.iaas.image_template.build|기본 인프라 서비스|
 |이미지 빌드 취소|event_id.iaas.image_template.cancel_build|기본 인프라 서비스|
@@ -111,6 +107,83 @@
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|기본 인프라 서비스|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|기본 인프라 서비스|
 |볼륨 복제|event_id.iaas.volume.copy|기본 인프라 서비스|
+|유저 스크립트 변경|event_id.iaas.nodegroup.update_userscript|기본 인프라 서비스|
+|NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|기본 인프라 서비스|
+|NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|기본 인프라 서비스|
+|NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
+|인스턴스 생성 완료|event_id.iaas.instance.create_end|기본 인프라 서비스|
+|인스턴스 삭제 완료|event_id.iaas.instance.delete_end|기본 인프라 서비스|
+|인스턴스 재부팅 완료|event_id.iaas.instance_action.reboot_end|기본 인프라 서비스|
+|인스턴스 타입 변경 완료|event_id.iaas.instance_action.resize_end|기본 인프라 서비스|
+|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|기본 인프라 서비스|
+|인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|기본 인프라 서비스|
+|워커 노드 시작|event_id.iaas.nodegroup.start_node|기본 인프라 서비스|
+|워커 노드 중지|event_id.iaas.nodegroup.stop_node|기본 인프라 서비스|
+|스케일링 그룹 예약 작업 OWNER 변경|event_id.iaas.autoscale_schedule.handover|기본 인프라 서비스|
+|인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|기본 인프라 서비스|
+|스케일링 그룹 OWNER 변경|event_id.iaas.scaling_group.handover|기본 인프라 서비스|
+|클러스터 OWNER 변경|event_id.iaas.cluster.handover|기본 인프라 서비스|
+|CNI 변경|event_id.iaas.cluster.cni_update|기본 인프라 서비스|
+|노드 그룹 수정|event_id.iaas.nodegroup.update|기본 인프라 서비스|
+|트래픽 미러링 세션 생성|event_id.iaas.traffic_mirroring.session.create|기본 인프라 서비스|
+|트래픽 미러링 세션 변경|event_id.iaas.traffic_mirroring.session.update|기본 인프라 서비스|
+|트래픽 미러링 세션 삭제|event_id.iaas.traffic_mirroring.session.delete|기본 인프라 서비스|
+|트래픽 미러링 필터 그룹 생성|event_id.iaas.traffic_mirroring.filter_group.create|기본 인프라 서비스|
+|트래픽 미러링 필터 그룹 변경|event_id.iaas.traffic_mirroring.filter_group.update|기본 인프라 서비스|
+|트래픽 미러링 필터 그룹 삭제|event_id.iaas.traffic_mirroring.filter_group.delete|기본 인프라 서비스|
+|트래픽 미러링 필터 생성|event_id.iaas.traffic_mirroring.filter.create|기본 인프라 서비스|
+|트래픽 미러링 필터 변경|event_id.iaas.traffic_mirroring.filter.update|기본 인프라 서비스|
+|트래픽 미러링 필터 삭제|event_id.iaas.traffic_mirroring.filter.delete|기본 인프라 서비스|
+|이미지 아이디 생성|event_id.iaas.image.create_id|기본 인프라 서비스|
+|이미지 업로드|event_id.iaas.image.upload|기본 인프라 서비스|
+|VPNGW 생성|event_id.iaas.vpngw.create|기본 인프라 서비스|
+|VPNGW 삭제|event_id.iaas.vpngw.delete|기본 인프라 서비스|
+|VPNGW 수정|event_id.iaas.vpngw.update|기본 인프라 서비스|
+|VPN Connection 생성|event_id.iaas.vpn_connection.create|기본 인프라 서비스|
+|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|기본 인프라 서비스|
+|VPN Connection 수정|event_id.iaas.vpn_connection.update|기본 인프라 서비스|
+|Private DNS Zone 생성|event_id.iaas.privatedns.zone.create|기본 인프라 서비스|
+|Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|기본 인프라 서비스|
+|Private DNS Zone 삭제|event_id.iaas.privatedns.zone.delete|기본 인프라 서비스|
+|Private DNS 레코드 세트 생성|event_id.iaas.privatedns.recordset.create|기본 인프라 서비스|
+|Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|기본 인프라 서비스|
+|Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|기본 인프라 서비스|
+|Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|기본 인프라 서비스|
+|트랜짓 허브 생성|event_id.iaas.transit_hub.create|기본 인프라 서비스|
+|트랜짓 허브 수정|event_id.iaas.transit_hub.update|기본 인프라 서비스|
+|트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|기본 인프라 서비스|
+|트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|기본 인프라 서비스|
+|트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|기본 인프라 서비스|
+|트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 생성|event_id.iaas.transit_hub_routing_table.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 변경|event_id.iaas.transit_hub_routing_table.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 삭제|event_id.iaas.transit_hub_routing_table.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 생성|event_id.iaas.transit_hub_routing_association.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 변경|event_id.iaas.transit_hub_routing_association.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 삭제|event_id.iaas.transit_hub_routing_association.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 생성|event_id.iaas.transit_hub_routing_propagation.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 변경|event_id.iaas.transit_hub_routing_propagation.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 삭제|event_id.iaas.transit_hub_routing_propagation.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 생성|event_id.iaas.transit_hub_routing_rule.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 변경|event_id.iaas.transit_hub_routing_rule.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 삭제|event_id.iaas.transit_hub_routing_rule.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 생성|event_id.iaas.transit_hub_multicast_domain.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 변경|event_id.iaas.transit_hub_multicast_domain.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 삭제|event_id.iaas.transit_hub_multicast_domain.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 생성|event_id.iaas.transit_hub_multicast_association.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 변경|event_id.iaas.transit_hub_multicast_association.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 삭제|event_id.iaas.transit_hub_multicast_association.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|기본 인프라 서비스|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|기본 인프라 서비스|
+|NAS 볼륨 변경|event_id.iaas.nas.volume.update|기본 인프라 서비스|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|기본 인프라 서비스|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|기본 인프라 서비스|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|기본 인프라 서비스|
 |어카운트 메타데이터 등록/수정|event_id.object_storage.account.metadata.update|Object Storage|
 |컨테이너 생성|event_id.object_storage.container.create|Object Storage|
 |컨테이너 삭제|event_id.object_storage.container.delete|Object Storage|
@@ -208,6 +281,12 @@
 |마켓플레이스 신청 취소|event_id.market_place.apply-cancel|콘솔|
 |마켓플레이스 해지 신청|event_id.market_place.termination-apply|콘솔|
 |마켓플레이스 해지 신청 취소|event_id.market_place.termination-apply-cancel|콘솔|
+|조직 알림 수신 그룹 생성|event_id.org.alarm_group.create|콘솔|
+|조직 알림 수신 그룹 수정|event_id.org.alarm_group.update|콘솔|
+|조직 알림 수신 그룹 삭제|event_id.org.alarm_group.delete|콘솔|
+|프로젝트 알림 수신 그룹 생성|event_id.project.alarm_group.create|콘솔|
+|프로젝트 알림 수신 그룹 수정|event_id.project.alarm_group.update|콘솔|
+|프로젝트 알림 수신 그룹 삭제|event_id.project.alarm_group.delete|콘솔|
 |백업 서버 등록|event_id.backup.client.register|Backup|
 |백업 서버 삭제|event_id.backup.client.delete|Backup|
 |백업 경로 등록|event_id.backup.target.register|Backup|
@@ -215,6 +294,8 @@
 |백업 경로 삭제|event_id.backup.target.delete|Backup|
 |복구 신청|event_id.backup.restoration.apply|Backup|
 |백업 서버 정보 변경|event_id.backup.client.update|Backup|
+|로그 저장/다운로드 설정|event_id.cloud_trail.set_log_save_download_config|CloudTrail|
+|로그 저장/다운로드 설정 삭제|event_id.cloud_trail.delete_log_save_download_config|CloudTrail|
 |서버 대시보드 레이아웃 추가|event_id.system_monitoring.server_dashboard_layout_addition|System Monitoring|
 |서버 대시보드 레이아웃 변경|event_id.system_monitoring.server_dashboard_layout_updating|System Monitoring|
 |서버 대시보드 레이아웃 삭제|event_id.system_monitoring.server_dashboard_layout_deletion|System Monitoring|
@@ -242,5 +323,3 @@
 |알림 설정 변경|event_id.system_monitoring.alarm_config_updating|System Monitoring|
 |알림 설정 삭제|event_id.system_monitoring.alarm_config_deletion|System Monitoring|
 |이벤트 강제 종료|event_id.system_monitoring.event_force_close|System Monitoring|
-|로그 저장/다운로드 설정|event_id.cloud_trail.set_log_save_download_config|CloudTrail|
-|로그 저장/다운로드 설정 삭제|event_id.cloud_trail.delete_log_save_download_config|CloudTrail|
