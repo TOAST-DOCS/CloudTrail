@@ -42,10 +42,10 @@
 |NATゲートウェイの変更|event_id.iaas.nat_gateway.update|基本インフラサービス|
 |VPNGW作成|event_id.iaas.vpngw.create|基本インフラサービス|
 |VPNGW削除|event_id.iaas.vpngw.delete|基本インフラサービス|
+|VPN接続の修正|event_id.iaas.vpn_connection.update|基本インフラサービス|
 |VPNGW修正|event_id.iaas.vpngw.update|基本インフラサービス|
 |VPN接続の作成|event_id.iaas.vpn_connection.create|基本インフラサービス|
 |VPN接続の削除|event_id.iaas.vpn_connection.delete|基本インフラサービス|
-|VPN接続の修正|event_id.iaas.vpn_connection.update|基本インフラサービス|
 |キーペアの作成|event_id.iaas.keypair.create|基本インフラサービス|
 |キーペアの削除|event_id.iaas.keypair.delete|基本インフラサービス|
 |ロードバランサーの作成|event_id.iaas.loadbalancer.create|基本インフラサービス|
@@ -196,45 +196,75 @@
 |コンテナ複製設定の変更|event_id.object_storage.container.sync.update|Object Storage|
 |コンテナ複製設定の解除|event_id.object_storage.container.sync.disable|Object Storage|
 |オブジェクト複製アップロード|event_id.object_storage.object.sync.upload|Object Storage|
-|DBインスタンスの作成|event_id.rds_for_mysql.instance.create|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの削除|event_id.rds_for_mysql.instance.delete|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの詳細設定を変更|event_id.rds_for_mysql.instance.detail.update|RDS for MySQL, RDS for MariaDB|
-|DBインスタンス管理情報を変更|event_id.rds_for_mysql.instance.management.update|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの構成を変更|event_id.rds_for_mysql.instance.configuration.update|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスのバックアップ|event_id.rds_for_mysql.instance_action.backup|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの復元|event_id.rds_for_mysql.instance_action.restore|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスのコピー|event_id.rds_for_mysql.instance_action.replicate|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの再起動|event_id.rds_for_mysql.instance_action.restart|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの昇格|event_id.rds_for_mysql.instance_action.promote|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスのストレージを拡張|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスの容量を確保|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL, RDS for MariaDB|
+|パラメータグループ再設定|event_id.rds_for_mysql.resetParameterGroup|RDS for MySQL|
+|null|event_id.rds_for_mysql.get_last_query_to_restore|RDS for MySQL|
+|パラメータグループ修正|event_id.rds_for_mysql.modifyParameterGroup|RDS for MySQL|
+|パラメータグループ作成|event_id.rds_for_mysql.createParameterGroup|RDS for MySQL|
+|パラメータグループ削除|event_id.rds_for_mysql.deleteParameterGroup|RDS for MySQL|
+|パラメータグループのコピー|event_id.rds_for_mysql.copyParameterGroup|RDS for MySQL|
+|パラメータグループの変更事項を適用|event_id.rds_for_mysql.instance_apply_recent_parameter_group|RDS for MySQL|
+|フェイルオーバー完了後、一般DBインスタンスに変更|event_id.rds_for_mysql.instance_action.failover_split|RDS for MySQL|
+|フェイルオーバーが完了した高可用性の再構築|event_id.rds_for_mysql.instance.ha.rebuild|RDS for MySQL|
+|障害措置インスタンス高可用性機能を復旧|event_id.rds_for_mysql.instance.ha.repair|RDS for MySQL|
+|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|RDS for MySQL|
 |インスタンスの停止|event_id.rds_for_mysql.instance.stop|RDS for MySQL, RDS for MariaDB|
-|モニタリングチャートレイアウトを追加|event_id.rds_for_mysql.createChartLayout|RDS for MySQL, RDS for MariaDB|
-|モニタリングチャートレイアウトを削除|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL, RDS for MariaDB|
-|モニタリングチャートレイアウトを修正|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL, RDS for MariaDB|
-|バックアップの削除|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL, RDS for MariaDB|
-|通知の作成|event_id.rds_for_mysql.notification.create|RDS for MySQL, RDS for MariaDB|
-|通知の変更|event_id.rds_for_mysql.notification.update|RDS for MySQL, RDS for MariaDB|
-|通知の削除|event_id.rds_for_mysql.notification.delete|RDS for MySQL, RDS for MariaDB|
-|通知の有効化|event_id.rds_for_mysql.notification.enable|RDS for MySQL, RDS for MariaDB|
-|通知の無効化|event_id.rds_for_mysql.notification.disable|RDS for MySQL, RDS for MariaDB|
-|通知グループを作成|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|通知グループを修正|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|通知グループを削除|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|イベント購読を登録|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL, RDS for MariaDB|
 |イベント購読を修正|event_id.rds_for_mysql.modifyEventSubscription|RDS for MySQL, RDS for MariaDB|
 |イベント購読を削除|event_id.rds_for_mysql.deleteEventSubscription|RDS for MySQL, RDS for MariaDB|
-|ユーザーグループを作成|event_id.rds_for_mysql.createUserGroup|RDS for MySQL, RDS for MariaDB|
-|ユーザーグループを修正|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL, RDS for MariaDB|
-|ユーザーグループを削除|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL, RDS for MariaDB|
-|受信グループの作成|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL, RDS for MariaDB|
-|受信グループの変更|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL, RDS for MariaDB|
-|受信グループの削除|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
-|DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
-|Synchronize DB Schema|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
-|Synchronize DB User|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
-|DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
+|イベント購読を登録|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL, RDS for MariaDB|
 |オブジェクトストレージでバックアップをエクスポート|event_id.rds_for_mysql.backup.export|RDS for MySQL, RDS for MariaDB|
+|通知の有効化|event_id.rds_for_mysql.notification.enable|RDS for MySQL, RDS for MariaDB|
+|通知の作成|event_id.rds_for_mysql.notification.create|RDS for MySQL, RDS for MariaDB|
+|通知の削除|event_id.rds_for_mysql.notification.delete|RDS for MySQL, RDS for MariaDB|
+|通知の無効化|event_id.rds_for_mysql.notification.disable|RDS for MySQL, RDS for MariaDB|
+|通知の変更|event_id.rds_for_mysql.notification.update|RDS for MySQL, RDS for MariaDB|
+|通知グループを修正|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|通知グループを作成|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|通知グループを削除|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|受信グループの作成|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL, RDS for MariaDB|
+|受信グループの削除|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
+|受信グループの変更|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL, RDS for MariaDB|
+|ユーザーの追加|event_id.rds_for_mysql.instance.db_definition.user.create|RDS for MySQL|
+|ユーザーの削除|event_id.rds_for_mysql.instance.db_definition.user.delete|RDS for MySQL|
+|ユーザー変更|event_id.rds_for_mysql.instance.db_definition.user.update|RDS for MySQL|
+|ユーザーの同期|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
+|ユーザーグループを修正|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL, RDS for MariaDB|
+|ユーザーグループを作成|event_id.rds_for_mysql.createUserGroup|RDS for MySQL, RDS for MariaDB|
+|ユーザーグループを削除|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL, RDS for MariaDB|
+|複製再構築|event_id.rds_for_mysql.instance.repair_replication|RDS for MySQL|
+|バックアップの削除|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL, RDS for MariaDB|
+|モニタリングチャートレイアウトを追加|event_id.rds_for_mysql.createChartLayout|RDS for MySQL, RDS for MariaDB|
+|モニタリングチャートレイアウトを修正|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL, RDS for MariaDB|
+|モニタリングチャートレイアウトを削除|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL, RDS for MariaDB|
+|高可用性一時停止|event_id.rds_for_mysql.instance.ha.pause|RDS for MySQL|
+|高可用性再開|event_id.rds_for_mysql.instance.ha.resume|RDS for MySQL|
+|DB定義情報変更|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスの再起動|event_id.rds_for_mysql.instance_action.restart|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスの容量を確保|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスオブジェクトストレージから復元|event_id.rds_for_mysql.instance.restore_from_obs|RDS for MySQL|
+|DBインスタンスの起動|event_id.rds_for_mysql.instance_action.start|RDS for MySQL|
+|DBインスタンスの昇格|event_id.rds_for_mysql.instance_action.promote|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスのストレージを拡張|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスの作成|event_id.rds_for_mysql.instance.create|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスの詳細設定を変更|event_id.rds_for_mysql.instance.detail.update|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスの削除保護設定を変更|event_id.rds_for_mysql.instance.change_deletion_protection|RDS for MySQL|
+|DBインスタンスの削除|event_id.rds_for_mysql.instance.delete|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスのコピー|event_id.rds_for_mysql.instance_action.replicate|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスの復元|event_id.rds_for_mysql.instance_action.restore|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスのバックアップ|event_id.rds_for_mysql.instance_action.backup|RDS for MySQL, RDS for MariaDB|
+|DBインスタンスマイグレーション|event_id.rds_for_mysql.instance.migrate|RDS for MySQL|
+|DBインスタンス管理情報を変更|event_id.rds_for_mysql.instance.management.update|RDS for MySQL, RDS for MariaDB|
+|DBインスタンス強制再起動|event_id.rds_for_mysql.instance_action.force_restart|RDS for MySQL|
+|DBインスタンスの構成を変更|event_id.rds_for_mysql.instance.configuration.update|RDS for MySQL, RDS for MariaDB|
+|DBスキーマ作成|event_id.rds_for_mysql.instance.db_definition.schema.create|RDS for MySQL|
+|DBスキーマ削除|event_id.rds_for_mysql.instance.db_definition.schema.delete|RDS for MySQL|
+|DBスキーマの同期|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
+|DBセキュリティグループの修正|event_id.rds_for_mysql.modifyDbSecurityGroup|RDS for MySQL|
+|DBセキュリティグループの作成|event_id.rds_for_mysql.createDbSecurityGroup|RDS for MySQL|
+|DBセキュリティグループの削除|event_id.rds_for_mysql.deleteDbSecurityGroup|RDS for MySQL|
+|DBセキュリティグループルールの修正|event_id.rds_for_mysql.modifyDbSecurityGroupRule|RDS for MySQL|
+|DBセキュリティグループルールの作成|event_id.rds_for_mysql.createDbSecurityGroupRule|RDS for MySQL|
+|DBセキュリティグループルールの削除|event_id.rds_for_mysql.deleteDbSecurityGroupRule|RDS for MySQL|
 |キー保存場所 作成|event_id.skm.keystore.create|Secure Key Manager|
 |キー保存場所 削除|event_id.skm.keystore.delete|Secure Key Manager|
 |キー保存場所 変更|event_id.skm.keystore.update|Secure Key Manager|
@@ -418,6 +448,12 @@
 |レプリケーショングループHA設定更新|event_id.easycache.group.ha_update|EasyCache|
 |データエクスポート|event_id.easycache.group.export|EasyCache|
 |既存レプリケーショングループ復元|event_id.easycache.backup.migrate|EasyCache|
+|ログバックアップ無効化|event_id.rds_for_sqlserver.db_instance.deactivate_log_backup|RDS for MS-SQL|
+|DBインスタンスオブジェクトストレージに差分バックアップ|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|RDS for MS-SQL|
+|バックアップ無効化|event_id.rds_for_sqlserver.db_instance.deactivate_backup|RDS for MS-SQL|
+|DBインスタンスオブジェクトストレージから復元|event_id.rds_for_sqlserver.db_instance.restore_from_obs|RDS for MS-SQL|
+|バックアップ有効化|event_id.rds_for_sqlserver.db_instance.activate_backup|RDS for MS-SQL|
+|ログバックアップ有効化|event_id.rds_for_sqlserver.db_instance.activate_log_backup|RDS for MS-SQL|
 |DBインスタンスの作成|event_id.rds_for_sqlserver.db_instance.create|RDS for MS-SQL|
 |DBインスタンスの削除|event_id.rds_for_sqlserver.db_instance.delete|RDS for MS-SQL|
 |DBインスタンスのバックアップ|event_id.rds_for_sqlserver.db_instance.backup|RDS for MS-SQL|
@@ -490,6 +526,8 @@
 |バックアップパス変更|event_id.backup.target.update|Backup|
 |バックアップパス削除|event_id.backup.target.delete|Backup|
 |復旧申請|event_id.backup.restoration.apply|Backup|
+|백업 계획 중지|event_id.backup.target.suspend|Backup|
+|백업 계획 시작|event_id.backup.target.resume|Backup|
 |バックアップサーバー情報の変更|event_id.backup.client.update|Backup|
 |DNS Zone作成|event_id.dnsplus.zone.create|DNS Plus|
 |DNS Zone修正|event_id.dnsplus.zone.update|DNS Plus|
@@ -774,6 +812,7 @@
 |Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR ナンバープレート分析リクエスト|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
 |Document OCR 身分証明書分析リクエスト(単独)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
+|Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_recognizer.business.status|OCR|
 |ナンバープレートの分析リクエスト|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -901,14 +940,10 @@
 |プロジェクトの有効化|event_id.dataquery.project_activated|DataQuery|
 |プロジェクトの無効化|event_id.dataquery.project_deactivated|DataQuery|
 |データソースアップデートリクエスト|event_id.dataquery.deploy_requested|DataQuery|
-|データソースの追加|event_id.dataquery.datasource_added|DataQuery|
-|データソースの修正|event_id.dataquery.datasource_modified|DataQuery|
-|認証キーの発行|event_id.dataquery.auth_key_issued|DataQuery|
-|Trinoクラスタオン|event_id.dataquery.cluster_up|DataQuery|
 |Trinoクラスタオン|event_id.dataquery.cluster_on|DataQuery|
-|Trinoクラスタオフ|event_id.dataquery.cluster_down|DataQuery|
 |Trinoクラスタオフ|event_id.dataquery.cluster_off|DataQuery|
 |リソース利用停止|event_id.dataquery.resource.pause|DataQuery|
+|클러스터 재시작|event_id.dataquery.cluster_restart|DataQuery|
 |リソースグループ削除|event_id.resource_watcher.resource_group.delete|Resource Watcher|
 |リソースタグ修正|event_id.resource_watcher.resource_tag.update|Resource Watcher|
 |通知の削除|event_id.resource_watcher.alarm.delete|Resource Watcher|
@@ -949,33 +984,40 @@
 |유저 삭제|event_id.GameTalk.user_delete|GameTalk|
 |알림 메시지 생성|event_id.GameTalk.announcement_create|GameTalk|
 |알림 메시지 수정|event_id.GameTalk.announcement_update|GameTalk|
-|ノートパソコンの作成|event_id.easymaker.notebook.create|AI EasyMaker|
-|ノートパソコンの変更|event_id.easymaker.notebook.update|AI EasyMaker|
-|ノートパソコンの削除|event_id.easymaker.notebook.delete|AI EasyMaker|
-|ノートパソコンの停止|event_id.easymaker.notebook.stop|AI EasyMaker|
-|ノートパソコンの起動|event_id.easymaker.notebook.start|AI EasyMaker|
-|ノートパソコンインスタンスタイプの変更|event_id.easymaker.notebook.resize|AI EasyMaker|
-|学習の作成|event_id.easymaker.training.create|AI EasyMaker|
-|学習の変更|event_id.easymaker.training.update|AI EasyMaker|
-|学習の停止|event_id.easymaker.training.stop|AI EasyMaker|
-|学習の削除|event_id.easymaker.training.delete|AI EasyMaker|
+|API Gatewayサービスの有効化|event_id.easymaker.enable_apigateway|AI EasyMaker|
+|Log&Crash Searchサービスの有効化|event_id.easymaker.enable_logandcrash|AI EasyMaker|
+|エンドポイントの作成|event_id.easymaker.endpoint.create|AI EasyMaker|
+|エンドポイントの削除|event_id.easymaker.endpoint.delete|AI EasyMaker|
+|エンドポイントの変更|event_id.easymaker.endpoint.update|AI EasyMaker|
+|エンドポイントモデルの作成|event_id.easymaker.endpoint_model.create|AI EasyMaker|
+|エンドポイントモデルの削除|event_id.easymaker.endpoint_model.delete|AI EasyMaker|
+|エンドポイントモデルの変更|event_id.easymaker.endpoint_model.update|AI EasyMaker|
+|エンドポイントステージの作成|event_id.easymaker.endpoint_stage.create|AI EasyMaker|
+|エンドポイントステージの削除|event_id.easymaker.endpoint_stage.delete|AI EasyMaker|
+|エンドポイントステージの変更|event_id.easymaker.endpoint_stage.update|AI EasyMaker|
+|エンドポイント基本ステージの変更|event_id.easymaker.endpoint_stage.update_default_stage|AI EasyMaker|
 |実験の作成|event_id.easymaker.experiment.create|AI EasyMaker|
 |実験の削除|event_id.easymaker.experiment.delete|AI EasyMaker|
 |モデルの作成|event_id.easymaker.model.create|AI EasyMaker|
-|モデルの変更|event_id.easymaker.model.update|AI EasyMaker|
 |モデルの削除|event_id.easymaker.model.delete|AI EasyMaker|
-|API Gatewayサービスの有効化|event_id.easymaker.enable_apigateway|AI EasyMaker|
-|エンドポイントの作成|event_id.easymaker.endpoint.create|AI EasyMaker|
-|エンドポイントの変更|event_id.easymaker.endpoint.update|AI EasyMaker|
-|エンドポイントの削除|event_id.easymaker.endpoint.delete|AI EasyMaker|
-|エンドポイントステージの作成|event_id.easymaker.endpoint_stage.create|AI EasyMaker|
-|エンドポイントステージの変更|event_id.easymaker.endpoint_stage.update|AI EasyMaker|
-|エンドポイントステージの削除|event_id.easymaker.endpoint_stage.delete|AI EasyMaker|
-|エンドポイント基本ステージの変更|event_id.easymaker.endpoint_stage.update_default_stage|AI EasyMaker|
-|エンドポイントモデルの作成|event_id.easymaker.endpoint_model.create|AI EasyMaker|
-|エンドポイントモデルの変更|event_id.easymaker.endpoint_model.update|AI EasyMaker|
-|エンドポイントモデルの削除|event_id.easymaker.endpoint_model.delete|AI EasyMaker|
-|Log&Crash Searchサービスの有効化|event_id.easymaker.enable_logandcrash|AI EasyMaker|
+|モデルの変更|event_id.easymaker.model.update|AI EasyMaker|
+|ノートパソコンの作成|event_id.easymaker.notebook.create|AI EasyMaker|
+|ノートパソコンの削除|event_id.easymaker.notebook.delete|AI EasyMaker|
+|ノートパソコンインスタンスタイプの変更|event_id.easymaker.notebook.resize|AI EasyMaker|
+|ノートパソコンの起動|event_id.easymaker.notebook.start|AI EasyMaker|
+|ノートパソコンの停止|event_id.easymaker.notebook.stop|AI EasyMaker|
+|ノートパソコンの変更|event_id.easymaker.notebook.update|AI EasyMaker|
+|学習の作成|event_id.easymaker.training.create|AI EasyMaker|
+|学習の削除|event_id.easymaker.training.delete|AI EasyMaker|
+|学習の停止|event_id.easymaker.training.stop|AI EasyMaker|
+|学習の変更|event_id.easymaker.training.update|AI EasyMaker|
+|学習テンプレートの作成|event_id.easymaker.training_template.create|AI EasyMaker|
+|学習テンプレートの変更|event_id.easymaker.training_template.update|AI EasyMaker|
+|学習テンプレート削除|event_id.easymaker.training_template.delete|AI EasyMaker|
+|ハイパーパラメータチューニングの作成|event_id.easymaker.hyperparameter_tuning.create|AI EasyMaker|
+|ハイパーパラメータチューニングの変更|event_id.easymaker.hyperparameter_tuning.update|AI EasyMaker|
+|ハイパーパラメータチューニングの停止|event_id.easymaker.hyperparameter_tuning.stop|AI EasyMaker|
+|ハイパーパラメータチューニングの削除|event_id.easymaker.hyperparameter_tuning.delete|AI EasyMaker|
 |서버 생성|event_id.gameanvil.instance.create|GameAnvil|
 |서버 삭제|event_id.gameanvil.instance.delete|GameAnvil|
 |서버 복사|event_id.gameanvil.instance.copy|GameAnvil|
@@ -1096,6 +1138,7 @@
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
 |Update App|event_id.gamebase.app_update|Gamebase|
+|Pose Estimation分析要請|event_id.pose_estimation.pose|Pose Estimation|
 |Add test device|event_id.gamebase.access_devices_create|Gamebase|
 |Update test device|event_id.gamebase.access_devices_update|Gamebase|
 |Delete test device|event_id.gamebase.access_devices_delete|Gamebase|
