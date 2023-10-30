@@ -1,9 +1,24 @@
 ## CloudTrail > Release Notes
 
+### 2023. 10. 31.
+#### More Events
+* Added events related to AI EasyMaker.
+
+### 2023. 10. 11.
+#### More Events
+* Added events related to Backup.
+* Added events related to RDS for MySQL.
+
+### 2023. 10. 10.
+#### More Events
+* Added events related to RDS for MySQL.
+
 ### 2023. 08. 29.
 #### More Events
+* Added events related to Pose Estimation.
 * Added events related to API Gateway.
 * Added events related to Default Infrastructure Service.
+* Added events related to RDS for MySQL.
 
 ### 2023. 07. 25.
 #### More Events
@@ -14,6 +29,10 @@
 #### More Events
 * Added events related to Gamebase.
 * Added events related to Network Firewall.
+
+### 2023. 07. 10.
+#### More Events
+* Added events related to RDS for MySQL.
 
 ### 2023. 07. 07.
 #### More Events
@@ -41,6 +60,7 @@
 * Added events related to OCR.
 * Added events related to Default Infrastructure Service.
 * Added events related to SMS.
+* Added events related to RDS for MySQL.
 
 ### 2023. 02. 28.
 #### More Events
@@ -51,6 +71,7 @@
 #### More Events
 * Added events related to KakaoTalk Bizmessage.
 * Added events related to GameAnvil.
+* Added events related to RDS for MySQL.
 
 ### 2023. 01. 31.
 #### More Events
@@ -60,6 +81,7 @@
 ### 2022. 12. 27.
 #### More Events
 * Added events related to GameTalk.
+* Added events related to RDS for MS-SQL.
 * Added events related to NHN AppGuard.
 * Added events related to DataQuery.
 * Added events related to Word Suggestion.
@@ -74,6 +96,7 @@
 * Added events related to Console.
 * Added events related to Default Infrastructure Service.
 * Added events related to Object Storage.
+* Added events related to DataQuery.
 * Added events related to Word Suggestion.
 
 ### 2022. 11. 22.
@@ -84,6 +107,10 @@
 #### More Events
 * Added events related to DataQuery.
 * Added events related to Webshell Threat Detector.
+
+### 2022. 11. 15.
+#### More Events
+* Added events related to RDS for MS-SQL.
 
 ### 2022. 10. 04.
 #### More Events
@@ -113,6 +140,10 @@
 ### 2022. 04. 26.
 #### More Events
 * Added events related to Console.
+
+### 2022. 04. 12.
+#### More Events
+* Added events related to RDS for MySQL.
 
 ### 2022. 03. 15.
 #### More Events

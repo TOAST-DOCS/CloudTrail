@@ -42,10 +42,10 @@
 |Change NAT Gateway|event_id.iaas.nat_gateway.update|Default Infrastructure Service|
 |Create VPNGW|event_id.iaas.vpngw.create|Default Infrastructure Service|
 |Delete VPNGW|event_id.iaas.vpngw.delete|Default Infrastructure Service|
+|Update VPN Connection|event_id.iaas.vpn_connection.update|Default Infrastructure Service|
 |Update VPNGW|event_id.iaas.vpngw.update|Default Infrastructure Service|
 |Create VPN Connection|event_id.iaas.vpn_connection.create|Default Infrastructure Service|
 |Delete VPN Connection|event_id.iaas.vpn_connection.delete|Default Infrastructure Service|
-|Update VPN Connection|event_id.iaas.vpn_connection.update|Default Infrastructure Service|
 |Create Keypair|event_id.iaas.keypair.create|Default Infrastructure Service|
 |Delete Keypair|event_id.iaas.keypair.delete|Default Infrastructure Service|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|Default Infrastructure Service|
@@ -196,45 +196,75 @@
 |Change Container Replication Settings|event_id.object_storage.container.sync.update|Object Storage|
 |Unset Container Replication|event_id.object_storage.container.sync.disable|Object Storage|
 |Upload Object Replication|event_id.object_storage.object.sync.upload|Object Storage|
-|Create DB Instance|event_id.rds_for_mysql.instance.create|RDS for MySQL, RDS for MariaDB|
-|Delete DB Instance|event_id.rds_for_mysql.instance.delete|RDS for MySQL, RDS for MariaDB|
-|Change Detailed Setting For DB Instance|event_id.rds_for_mysql.instance.detail.update|RDS for MySQL, RDS for MariaDB|
-|Change Management Information for DB Instance|event_id.rds_for_mysql.instance.management.update|RDS for MySQL, RDS for MariaDB|
-|Change DB Instance Configuration|event_id.rds_for_mysql.instance.configuration.update|RDS for MySQL, RDS for MariaDB|
-|Back Up DB Instance|event_id.rds_for_mysql.instance_action.backup|RDS for MySQL, RDS for MariaDB|
-|Restore DB Instance|event_id.rds_for_mysql.instance_action.restore|RDS for MySQL, RDS for MariaDB|
-|Replicate DB Instance|event_id.rds_for_mysql.instance_action.replicate|RDS for MySQL, RDS for MariaDB|
-|Restart DB Instance|event_id.rds_for_mysql.instance_action.restart|RDS for MySQL, RDS for MariaDB|
-|Promote DB Instance|event_id.rds_for_mysql.instance_action.promote|RDS for MySQL, RDS for MariaDB|
-|Expand DB Instance Storage|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL, RDS for MariaDB|
-|Free Up DB Instance Space|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL, RDS for MariaDB|
+|Reset Parameter Group|event_id.rds_for_mysql.resetParameterGroup|RDS for MySQL|
+|null|event_id.rds_for_mysql.get_last_query_to_restore|RDS for MySQL|
+|Modify Parameter Group|event_id.rds_for_mysql.modifyParameterGroup|RDS for MySQL|
+|Create Parameter Group|event_id.rds_for_mysql.createParameterGroup|RDS for MySQL|
+|Delete Parameter Group|event_id.rds_for_mysql.deleteParameterGroup|RDS for MySQL|
+|Copy Parameter Group|event_id.rds_for_mysql.copyParameterGroup|RDS for MySQL|
+|Apply Parameter Group Changes|event_id.rds_for_mysql.instance_apply_recent_parameter_group|RDS for MySQL|
+|Change to DB Instance after Failover|event_id.rds_for_mysql.instance_action.failover_split|RDS for MySQL|
+|High Availability Rebuild after Failover|event_id.rds_for_mysql.instance.ha.rebuild|RDS for MySQL|
+|Restore High Availability of Failover Instance|event_id.rds_for_mysql.instance.ha.repair|RDS for MySQL|
+|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|RDS for MySQL|
 |Stop Instance|event_id.rds_for_mysql.instance.stop|RDS for MySQL, RDS for MariaDB|
-|Add Monitoring Chart Layout|event_id.rds_for_mysql.createChartLayout|RDS for MySQL, RDS for MariaDB|
-|Delete Monitoring Chart Layout|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL, RDS for MariaDB|
-|Modify Monitoring Chart Layout|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL, RDS for MariaDB|
-|Delete Backup|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL, RDS for MariaDB|
-|Create Notification|event_id.rds_for_mysql.notification.create|RDS for MySQL, RDS for MariaDB|
-|Change Notification|event_id.rds_for_mysql.notification.update|RDS for MySQL, RDS for MariaDB|
-|Delete Notification|event_id.rds_for_mysql.notification.delete|RDS for MySQL, RDS for MariaDB|
-|Enable Notification|event_id.rds_for_mysql.notification.enable|RDS for MySQL, RDS for MariaDB|
-|Disable Notification|event_id.rds_for_mysql.notification.disable|RDS for MySQL, RDS for MariaDB|
-|Create Notification Group|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|Modify Notification Group|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|Delete Notification Group|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|Register Event Subscription|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL, RDS for MariaDB|
 |Modify Event Group|event_id.rds_for_mysql.modifyEventSubscription|RDS for MySQL, RDS for MariaDB|
 |Delete Event Subscription|event_id.rds_for_mysql.deleteEventSubscription|RDS for MySQL, RDS for MariaDB|
-|Create User Group|event_id.rds_for_mysql.createUserGroup|RDS for MySQL, RDS for MariaDB|
-|Modify User Group|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL, RDS for MariaDB|
-|Delete User Group|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL, RDS for MariaDB|
-|Create Receiver Group|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL, RDS for MariaDB|
-|Change Receiver Group|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL, RDS for MariaDB|
-|Delete Receiver Group|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
-|DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
-|Synchronize DB Schema|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
-|Synchronize DB User|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
-|Make and export a DB instance backup|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
+|Register Event Subscription|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL, RDS for MariaDB|
 |Export backup to the object storage|event_id.rds_for_mysql.backup.export|RDS for MySQL, RDS for MariaDB|
+|Enable Notification|event_id.rds_for_mysql.notification.enable|RDS for MySQL, RDS for MariaDB|
+|Create Notification|event_id.rds_for_mysql.notification.create|RDS for MySQL, RDS for MariaDB|
+|Delete Notification|event_id.rds_for_mysql.notification.delete|RDS for MySQL, RDS for MariaDB|
+|Disable Notification|event_id.rds_for_mysql.notification.disable|RDS for MySQL, RDS for MariaDB|
+|Change Notification|event_id.rds_for_mysql.notification.update|RDS for MySQL, RDS for MariaDB|
+|Modify Notification Group|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|Create Notification Group|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|Delete Notification Group|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|Create Receiver Group|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL, RDS for MariaDB|
+|Delete Receiver Group|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
+|Change Receiver Group|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL, RDS for MariaDB|
+|Add User|event_id.rds_for_mysql.instance.db_definition.user.create|RDS for MySQL|
+|Delete User|event_id.rds_for_mysql.instance.db_definition.user.delete|RDS for MySQL|
+|Modify User|event_id.rds_for_mysql.instance.db_definition.user.update|RDS for MySQL|
+|Synchronize User|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
+|Modify User Group|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL, RDS for MariaDB|
+|Create User Group|event_id.rds_for_mysql.createUserGroup|RDS for MySQL, RDS for MariaDB|
+|Delete User Group|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL, RDS for MariaDB|
+|Rebuild Replication|event_id.rds_for_mysql.instance.repair_replication|RDS for MySQL|
+|Delete Backup|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL, RDS for MariaDB|
+|Add Monitoring Chart Layout|event_id.rds_for_mysql.createChartLayout|RDS for MySQL, RDS for MariaDB|
+|Modify Monitoring Chart Layout|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL, RDS for MariaDB|
+|Delete Monitoring Chart Layout|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL, RDS for MariaDB|
+|Pause High Availability|event_id.rds_for_mysql.instance.ha.pause|RDS for MySQL|
+|Resume High Availability|event_id.rds_for_mysql.instance.ha.resume|RDS for MySQL|
+|Updated DB definition information|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
+|Restart DB Instance|event_id.rds_for_mysql.instance_action.restart|RDS for MySQL, RDS for MariaDB|
+|Free Up DB Instance Space|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL, RDS for MariaDB|
+|Restoration from DB Instance Object Storage|event_id.rds_for_mysql.instance.restore_from_obs|RDS for MySQL|
+|DB instance started|event_id.rds_for_mysql.instance_action.start|RDS for MySQL|
+|Promote DB Instance|event_id.rds_for_mysql.instance_action.promote|RDS for MySQL, RDS for MariaDB|
+|Expand DB Instance Storage|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL, RDS for MariaDB|
+|Create DB Instance|event_id.rds_for_mysql.instance.create|RDS for MySQL, RDS for MariaDB|
+|Change Detailed Setting For DB Instance|event_id.rds_for_mysql.instance.detail.update|RDS for MySQL, RDS for MariaDB|
+|Change Deletion Protection Setting for DB instance|event_id.rds_for_mysql.instance.change_deletion_protection|RDS for MySQL|
+|Delete DB Instance|event_id.rds_for_mysql.instance.delete|RDS for MySQL, RDS for MariaDB|
+|Replicate DB Instance|event_id.rds_for_mysql.instance_action.replicate|RDS for MySQL, RDS for MariaDB|
+|Restore DB Instance|event_id.rds_for_mysql.instance_action.restore|RDS for MySQL, RDS for MariaDB|
+|Make and export a DB instance backup|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
+|Back Up DB Instance|event_id.rds_for_mysql.instance_action.backup|RDS for MySQL, RDS for MariaDB|
+|DB instance migration|event_id.rds_for_mysql.instance.migrate|RDS for MySQL|
+|Change Management Information for DB Instance|event_id.rds_for_mysql.instance.management.update|RDS for MySQL, RDS for MariaDB|
+|Force Restart DB Instance|event_id.rds_for_mysql.instance_action.force_restart|RDS for MySQL|
+|Change DB Instance Configuration|event_id.rds_for_mysql.instance.configuration.update|RDS for MySQL, RDS for MariaDB|
+|DB schema created|event_id.rds_for_mysql.instance.db_definition.schema.create|RDS for MySQL|
+|DB schema deleted|event_id.rds_for_mysql.instance.db_definition.schema.delete|RDS for MySQL|
+|Synchronize DB Schema|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
+|Modify DB Security Group|event_id.rds_for_mysql.modifyDbSecurityGroup|RDS for MySQL|
+|Create DB Security Group|event_id.rds_for_mysql.createDbSecurityGroup|RDS for MySQL|
+|Delete DB Security Group|event_id.rds_for_mysql.deleteDbSecurityGroup|RDS for MySQL|
+|Modify DB Security Group Rule|event_id.rds_for_mysql.modifyDbSecurityGroupRule|RDS for MySQL|
+|Create DB Security Group Rule|event_id.rds_for_mysql.createDbSecurityGroupRule|RDS for MySQL|
+|Delete DB Security Group Rule|event_id.rds_for_mysql.deleteDbSecurityGroupRule|RDS for MySQL|
 |Create Keystore|event_id.skm.keystore.create|Secure Key Manager|
 |Delete Keystore|event_id.skm.keystore.delete|Secure Key Manager|
 |Change Keystore Information|event_id.skm.keystore.update|Secure Key Manager|
@@ -418,6 +448,12 @@
 |Update HA for Replication Group|event_id.easycache.group.ha_update|EasyCache|
 |Export data|event_id.easycache.group.export|EasyCache|
 |Restore existing replication group|event_id.easycache.backup.migrate|EasyCache|
+|Deactivate Log Backup|event_id.rds_for_sqlserver.db_instance.deactivate_log_backup|RDS for MS-SQL|
+|Differential Backup to DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|RDS for MS-SQL|
+|Deactivate Backup|event_id.rds_for_sqlserver.db_instance.deactivate_backup|RDS for MS-SQL|
+|Restoration from DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.restore_from_obs|RDS for MS-SQL|
+|Activate backup|event_id.rds_for_sqlserver.db_instance.activate_backup|RDS for MS-SQL|
+|Activate Log Backup|event_id.rds_for_sqlserver.db_instance.activate_log_backup|RDS for MS-SQL|
 |Create Database Instance|event_id.rds_for_sqlserver.db_instance.create|RDS for MS-SQL|
 |Delete Database Instance|event_id.rds_for_sqlserver.db_instance.delete|RDS for MS-SQL|
 |Back Up Database Instance|event_id.rds_for_sqlserver.db_instance.backup|RDS for MS-SQL|
@@ -490,6 +526,8 @@
 |Change Backup Path|event_id.backup.target.update|Backup|
 |Delete Backup Path|event_id.backup.target.delete|Backup|
 |Apply for Restoration|event_id.backup.restoration.apply|Backup|
+|백업 계획 중지|event_id.backup.target.suspend|Backup|
+|백업 계획 시작|event_id.backup.target.resume|Backup|
 |Change Backup Server Data|event_id.backup.client.update|Backup|
 |Create DNS Zone|event_id.dnsplus.zone.create|DNS Plus|
 |Modify DNS Zone|event_id.dnsplus.zone.update|DNS Plus|
@@ -774,6 +812,7 @@
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
 |Request ID Card Analysis (only)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
+|Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_recognizer.business.status|OCR|
 |Request analysis of car license plate|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -901,14 +940,10 @@
 |Activate Project|event_id.dataquery.project_activated|DataQuery|
 |Deactivate Project|event_id.dataquery.project_deactivated|DataQuery|
 |Request Data Source Update|event_id.dataquery.deploy_requested|DataQuery|
-|Add Data Source|event_id.dataquery.datasource_added|DataQuery|
-|Modify Data Source|event_id.dataquery.datasource_modified|DataQuery|
-|Issue Authentication Key|event_id.dataquery.auth_key_issued|DataQuery|
-|클러스터 켜짐|event_id.dataquery.cluster_up|DataQuery|
 |Trino Cluster On|event_id.dataquery.cluster_on|DataQuery|
-|클러스터 꺼짐|event_id.dataquery.cluster_down|DataQuery|
 |Trino Cluster Off|event_id.dataquery.cluster_off|DataQuery|
 |Stop Resource Usage|event_id.dataquery.resource.pause|DataQuery|
+|클러스터 재시작|event_id.dataquery.cluster_restart|DataQuery|
 |Delete Resource Group|event_id.resource_watcher.resource_group.delete|Resource Watcher|
 |Modify Resource Tag|event_id.resource_watcher.resource_tag.update|Resource Watcher|
 |Delete Notification|event_id.resource_watcher.alarm.delete|Resource Watcher|
@@ -949,33 +984,40 @@
 |유저 삭제|event_id.GameTalk.user_delete|GameTalk|
 |알림 메시지 생성|event_id.GameTalk.announcement_create|GameTalk|
 |알림 메시지 수정|event_id.GameTalk.announcement_update|GameTalk|
-|Create Notebook|event_id.easymaker.notebook.create|AI EasyMaker|
-|Change Notebook|event_id.easymaker.notebook.update|AI EasyMaker|
-|Delete Notebook|event_id.easymaker.notebook.delete|AI EasyMaker|
-|Stop Notebook|event_id.easymaker.notebook.stop|AI EasyMaker|
-|Start Notebook|event_id.easymaker.notebook.start|AI EasyMaker|
-|Change Notebook Instance Flavor|event_id.easymaker.notebook.resize|AI EasyMaker|
-|Create Training|event_id.easymaker.training.create|AI EasyMaker|
-|Change Training|event_id.easymaker.training.update|AI EasyMaker|
-|Stop Training|event_id.easymaker.training.stop|AI EasyMaker|
-|Delete Training|event_id.easymaker.training.delete|AI EasyMaker|
+|Enable API Gateway Service|event_id.easymaker.enable_apigateway|AI EasyMaker|
+|Enable Log&Crash Search Service|event_id.easymaker.enable_logandcrash|AI EasyMaker|
+|Create Endpoint|event_id.easymaker.endpoint.create|AI EasyMaker|
+|Delete Endpoint|event_id.easymaker.endpoint.delete|AI EasyMaker|
+|Change Endpoint|event_id.easymaker.endpoint.update|AI EasyMaker|
+|Create Endpoint Model|event_id.easymaker.endpoint_model.create|AI EasyMaker|
+|Delete Endpoint Model|event_id.easymaker.endpoint_model.delete|AI EasyMaker|
+|Change Endpoint Model|event_id.easymaker.endpoint_model.update|AI EasyMaker|
+|Create Endpoint Stage|event_id.easymaker.endpoint_stage.create|AI EasyMaker|
+|Delete Endpoint Stage|event_id.easymaker.endpoint_stage.delete|AI EasyMaker|
+|Change Endpoint Stage|event_id.easymaker.endpoint_stage.update|AI EasyMaker|
+|Change Endpoint Default Stage|event_id.easymaker.endpoint_stage.update_default_stage|AI EasyMaker|
 |Create Experiment|event_id.easymaker.experiment.create|AI EasyMaker|
 |Delete Experiment|event_id.easymaker.experiment.delete|AI EasyMaker|
 |Create Model|event_id.easymaker.model.create|AI EasyMaker|
-|Change Model|event_id.easymaker.model.update|AI EasyMaker|
 |Delete Model|event_id.easymaker.model.delete|AI EasyMaker|
-|Enable API Gateway Service|event_id.easymaker.enable_apigateway|AI EasyMaker|
-|Create Endpoint|event_id.easymaker.endpoint.create|AI EasyMaker|
-|Change Endpoint|event_id.easymaker.endpoint.update|AI EasyMaker|
-|Delete Endpoint|event_id.easymaker.endpoint.delete|AI EasyMaker|
-|Create Endpoint Stage|event_id.easymaker.endpoint_stage.create|AI EasyMaker|
-|Change Endpoint Stage|event_id.easymaker.endpoint_stage.update|AI EasyMaker|
-|Delete Endpoint Stage|event_id.easymaker.endpoint_stage.delete|AI EasyMaker|
-|Change Endpoint Default Stage|event_id.easymaker.endpoint_stage.update_default_stage|AI EasyMaker|
-|Create Endpoint Model|event_id.easymaker.endpoint_model.create|AI EasyMaker|
-|Change Endpoint Model|event_id.easymaker.endpoint_model.update|AI EasyMaker|
-|Delete Endpoint Model|event_id.easymaker.endpoint_model.delete|AI EasyMaker|
-|Enable Log&Crash Search Service|event_id.easymaker.enable_logandcrash|AI EasyMaker|
+|Change Model|event_id.easymaker.model.update|AI EasyMaker|
+|Create Notebook|event_id.easymaker.notebook.create|AI EasyMaker|
+|Delete Notebook|event_id.easymaker.notebook.delete|AI EasyMaker|
+|Change Notebook Instance Flavor|event_id.easymaker.notebook.resize|AI EasyMaker|
+|Start Notebook|event_id.easymaker.notebook.start|AI EasyMaker|
+|Stop Notebook|event_id.easymaker.notebook.stop|AI EasyMaker|
+|Change Notebook|event_id.easymaker.notebook.update|AI EasyMaker|
+|Create Training|event_id.easymaker.training.create|AI EasyMaker|
+|Delete Training|event_id.easymaker.training.delete|AI EasyMaker|
+|Stop Training|event_id.easymaker.training.stop|AI EasyMaker|
+|Change Training|event_id.easymaker.training.update|AI EasyMaker|
+|Create Training Template|event_id.easymaker.training_template.create|AI EasyMaker|
+|Change Training Template|event_id.easymaker.training_template.update|AI EasyMaker|
+|Delete Training Template|event_id.easymaker.training_template.delete|AI EasyMaker|
+|Create Hyperparameter Tuning|event_id.easymaker.hyperparameter_tuning.create|AI EasyMaker|
+|Change Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.update|AI EasyMaker|
+|Stop Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.stop|AI EasyMaker|
+|Delete Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.delete|AI EasyMaker|
 |서버 생성|event_id.gameanvil.instance.create|GameAnvil|
 |서버 삭제|event_id.gameanvil.instance.delete|GameAnvil|
 |서버 복사|event_id.gameanvil.instance.copy|GameAnvil|
@@ -1096,6 +1138,7 @@
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
 |Update App|event_id.gamebase.app_update|Gamebase|
+|Request for Posture recognition|event_id.pose_estimation.pose|Pose Estimation|
 |Add test device|event_id.gamebase.access_devices_create|Gamebase|
 |Update test device|event_id.gamebase.access_devices_update|Gamebase|
 |Delete test device|event_id.gamebase.access_devices_delete|Gamebase|

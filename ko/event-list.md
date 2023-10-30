@@ -42,10 +42,10 @@
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
 |VPNGW 생성|event_id.iaas.vpngw.create|기본 인프라 서비스|
 |VPNGW 삭제|event_id.iaas.vpngw.delete|기본 인프라 서비스|
+|VPN Connection 수정|event_id.iaas.vpn_connection.update|기본 인프라 서비스|
 |VPNGW 수정|event_id.iaas.vpngw.update|기본 인프라 서비스|
 |VPN Connection 생성|event_id.iaas.vpn_connection.create|기본 인프라 서비스|
 |VPN Connection 삭제|event_id.iaas.vpn_connection.delete|기본 인프라 서비스|
-|VPN Connection 수정|event_id.iaas.vpn_connection.update|기본 인프라 서비스|
 |키페어 생성|event_id.iaas.keypair.create|기본 인프라 서비스|
 |키페어 삭제|event_id.iaas.keypair.delete|기본 인프라 서비스|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|기본 인프라 서비스|
@@ -196,45 +196,75 @@
 |컨테이너 복제 설정 변경|event_id.object_storage.container.sync.update|Object Storage|
 |컨테이너 복제 설정 해제|event_id.object_storage.container.sync.disable|Object Storage|
 |오브젝트 복제 업로드|event_id.object_storage.object.sync.upload|Object Storage|
-|DB 인스턴스 생성|event_id.rds_for_mysql.instance.create|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 삭제|event_id.rds_for_mysql.instance.delete|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 상세 설정 변경|event_id.rds_for_mysql.instance.detail.update|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 관리 정보 변경|event_id.rds_for_mysql.instance.management.update|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 Configuration 변경|event_id.rds_for_mysql.instance.configuration.update|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 백업|event_id.rds_for_mysql.instance_action.backup|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 복원|event_id.rds_for_mysql.instance_action.restore|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 복제|event_id.rds_for_mysql.instance_action.replicate|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 재시작|event_id.rds_for_mysql.instance_action.restart|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 승격|event_id.rds_for_mysql.instance_action.promote|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 스토리지 확장|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 용량 확보|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL, RDS for MariaDB|
+|파라미터 그룹 재설정|event_id.rds_for_mysql.resetParameterGroup|RDS for MySQL|
+|null|event_id.rds_for_mysql.get_last_query_to_restore|RDS for MySQL|
+|파라미터 그룹 수정|event_id.rds_for_mysql.modifyParameterGroup|RDS for MySQL|
+|파라미터 그룹 생성|event_id.rds_for_mysql.createParameterGroup|RDS for MySQL|
+|파라미터 그룹 삭제|event_id.rds_for_mysql.deleteParameterGroup|RDS for MySQL|
+|파라미터 그룹 복사|event_id.rds_for_mysql.copyParameterGroup|RDS for MySQL|
+|파라미터 그룹 변경 사항 적용|event_id.rds_for_mysql.instance_apply_recent_parameter_group|RDS for MySQL|
+|장애조치 완료후 일반 DB 인스턴스로 변경|event_id.rds_for_mysql.instance_action.failover_split|RDS for MySQL|
+|장애조치 완료된 고가용성 재구축|event_id.rds_for_mysql.instance.ha.rebuild|RDS for MySQL|
+|장애 조치 인스턴스 고가용성 기능 복구|event_id.rds_for_mysql.instance.ha.repair|RDS for MySQL|
+|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|RDS for MySQL|
 |인스턴스 중지|event_id.rds_for_mysql.instance.stop|RDS for MySQL, RDS for MariaDB|
-|모니터링 차트 레이아웃 추가|event_id.rds_for_mysql.createChartLayout|RDS for MySQL, RDS for MariaDB|
-|모니터링 차트 레이아웃 삭제|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL, RDS for MariaDB|
-|모니터링 차트 레이아웃 수정|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL, RDS for MariaDB|
-|백업 삭제|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL, RDS for MariaDB|
-|알림 생성|event_id.rds_for_mysql.notification.create|RDS for MySQL, RDS for MariaDB|
-|알림 변경|event_id.rds_for_mysql.notification.update|RDS for MySQL, RDS for MariaDB|
-|알림 삭제|event_id.rds_for_mysql.notification.delete|RDS for MySQL, RDS for MariaDB|
-|알림 활성화|event_id.rds_for_mysql.notification.enable|RDS for MySQL, RDS for MariaDB|
-|알림 비활성화|event_id.rds_for_mysql.notification.disable|RDS for MySQL, RDS for MariaDB|
-|알림 그룹 생성|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|알림 그룹 수정|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|알림 그룹 삭제|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL, RDS for MariaDB|
-|이벤트 구독 등록|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL, RDS for MariaDB|
 |이벤트 구독 수정|event_id.rds_for_mysql.modifyEventSubscription|RDS for MySQL, RDS for MariaDB|
 |이벤트 구독 삭제|event_id.rds_for_mysql.deleteEventSubscription|RDS for MySQL, RDS for MariaDB|
-|사용자 그룹 생성|event_id.rds_for_mysql.createUserGroup|RDS for MySQL, RDS for MariaDB|
-|사용자 그룹 수정|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL, RDS for MariaDB|
-|사용자 그룹 삭제|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL, RDS for MariaDB|
-|수신 그룹 생성|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL, RDS for MariaDB|
-|수신 그룹 변경|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL, RDS for MariaDB|
-|수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
-|DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
-|DB 스키마 동기화|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
-|DB User 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
-|DB 인스턴스 백업 및 내보내기|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
+|이벤트 구독 등록|event_id.rds_for_mysql.registerEventSubscription|RDS for MySQL, RDS for MariaDB|
 |오브젝트 스토리지로 백업 내보내기|event_id.rds_for_mysql.backup.export|RDS for MySQL, RDS for MariaDB|
+|알림 활성화|event_id.rds_for_mysql.notification.enable|RDS for MySQL, RDS for MariaDB|
+|알림 생성|event_id.rds_for_mysql.notification.create|RDS for MySQL, RDS for MariaDB|
+|알림 삭제|event_id.rds_for_mysql.notification.delete|RDS for MySQL, RDS for MariaDB|
+|알림 비활성화|event_id.rds_for_mysql.notification.disable|RDS for MySQL, RDS for MariaDB|
+|알림 변경|event_id.rds_for_mysql.notification.update|RDS for MySQL, RDS for MariaDB|
+|알림 그룹 수정|event_id.rds_for_mysql.modifyNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|알림 그룹 생성|event_id.rds_for_mysql.createNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|알림 그룹 삭제|event_id.rds_for_mysql.deleteNotificationGroup|RDS for MySQL, RDS for MariaDB|
+|수신 그룹 생성|event_id.rds_for_mysql.receiver_group.create|RDS for MySQL, RDS for MariaDB|
+|수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
+|수신 그룹 변경|event_id.rds_for_mysql.receiver_group.update|RDS for MySQL, RDS for MariaDB|
+|사용자 추가|event_id.rds_for_mysql.instance.db_definition.user.create|RDS for MySQL|
+|사용자 삭제|event_id.rds_for_mysql.instance.db_definition.user.delete|RDS for MySQL|
+|사용자 변경|event_id.rds_for_mysql.instance.db_definition.user.update|RDS for MySQL|
+|사용자 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
+|사용자 그룹 수정|event_id.rds_for_mysql.modifyUserGroup|RDS for MySQL, RDS for MariaDB|
+|사용자 그룹 생성|event_id.rds_for_mysql.createUserGroup|RDS for MySQL, RDS for MariaDB|
+|사용자 그룹 삭제|event_id.rds_for_mysql.deleteUserGroup|RDS for MySQL, RDS for MariaDB|
+|복제 재구축|event_id.rds_for_mysql.instance.repair_replication|RDS for MySQL|
+|백업 삭제|event_id.rds_for_mysql.instance.backup.delete|RDS for MySQL, RDS for MariaDB|
+|모니터링 차트 레이아웃 추가|event_id.rds_for_mysql.createChartLayout|RDS for MySQL, RDS for MariaDB|
+|모니터링 차트 레이아웃 수정|event_id.rds_for_mysql.modifyChartLayout|RDS for MySQL, RDS for MariaDB|
+|모니터링 차트 레이아웃 삭제|event_id.rds_for_mysql.deleteChartLayout|RDS for MySQL, RDS for MariaDB|
+|고가용성 일시 중지|event_id.rds_for_mysql.instance.ha.pause|RDS for MySQL|
+|고가용성 다시 시작|event_id.rds_for_mysql.instance.ha.resume|RDS for MySQL|
+|DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 재시작|event_id.rds_for_mysql.instance_action.restart|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 용량 확보|event_id.rds_for_mysql.instance.volume.secure|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 오브젝트 스토리지로부터 복원|event_id.rds_for_mysql.instance.restore_from_obs|RDS for MySQL|
+|DB 인스턴스 시작|event_id.rds_for_mysql.instance_action.start|RDS for MySQL|
+|DB 인스턴스 승격|event_id.rds_for_mysql.instance_action.promote|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 스토리지 확장|event_id.rds_for_mysql.instance.volume.extend|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 생성|event_id.rds_for_mysql.instance.create|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 상세 설정 변경|event_id.rds_for_mysql.instance.detail.update|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 삭제 보호 설정 변경|event_id.rds_for_mysql.instance.change_deletion_protection|RDS for MySQL|
+|DB 인스턴스 삭제|event_id.rds_for_mysql.instance.delete|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 복제|event_id.rds_for_mysql.instance_action.replicate|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 복원|event_id.rds_for_mysql.instance_action.restore|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 백업 및 내보내기|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 백업|event_id.rds_for_mysql.instance_action.backup|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 마이그레이션|event_id.rds_for_mysql.instance.migrate|RDS for MySQL|
+|DB 인스턴스 관리 정보 변경|event_id.rds_for_mysql.instance.management.update|RDS for MySQL, RDS for MariaDB|
+|DB 인스턴스 강제 재시작|event_id.rds_for_mysql.instance_action.force_restart|RDS for MySQL|
+|DB 인스턴스 Configuration 변경|event_id.rds_for_mysql.instance.configuration.update|RDS for MySQL, RDS for MariaDB|
+|DB 스키마 생성|event_id.rds_for_mysql.instance.db_definition.schema.create|RDS for MySQL|
+|DB 스키마 삭제|event_id.rds_for_mysql.instance.db_definition.schema.delete|RDS for MySQL|
+|DB 스키마 동기화|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
+|DB 보안그룹 수정|event_id.rds_for_mysql.modifyDbSecurityGroup|RDS for MySQL|
+|DB 보안그룹 생성|event_id.rds_for_mysql.createDbSecurityGroup|RDS for MySQL|
+|DB 보안그룹 삭제|event_id.rds_for_mysql.deleteDbSecurityGroup|RDS for MySQL|
+|DB 보안그룹 규칙 수정|event_id.rds_for_mysql.modifyDbSecurityGroupRule|RDS for MySQL|
+|DB 보안그룹 규칙 생성|event_id.rds_for_mysql.createDbSecurityGroupRule|RDS for MySQL|
+|DB 보안그룹 규칙 삭제|event_id.rds_for_mysql.deleteDbSecurityGroupRule|RDS for MySQL|
 |키 저장소 생성|event_id.skm.keystore.create|Secure Key Manager|
 |키 저장소 삭제|event_id.skm.keystore.delete|Secure Key Manager|
 |키 저장소 정보 변경|event_id.skm.keystore.update|Secure Key Manager|
@@ -418,6 +448,12 @@
 |복제 그룹 HA 설정 갱신|event_id.easycache.group.ha_update|EasyCache|
 |데이터 내보내기|event_id.easycache.group.export|EasyCache|
 |기존 복제 그룹 복원|event_id.easycache.backup.migrate|EasyCache|
+|로그 백업 비활성화|event_id.rds_for_sqlserver.db_instance.deactivate_log_backup|RDS for MS-SQL|
+|DB 인스턴스 오브젝트 스토리지로 차등 백업|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|RDS for MS-SQL|
+|백업 비활성화|event_id.rds_for_sqlserver.db_instance.deactivate_backup|RDS for MS-SQL|
+|DB 인스턴스 오브젝트 스토리지로부터 복원|event_id.rds_for_sqlserver.db_instance.restore_from_obs|RDS for MS-SQL|
+|백업 활성화|event_id.rds_for_sqlserver.db_instance.activate_backup|RDS for MS-SQL|
+|로그 백업 활성화|event_id.rds_for_sqlserver.db_instance.activate_log_backup|RDS for MS-SQL|
 |DB 인스턴스 생성|event_id.rds_for_sqlserver.db_instance.create|RDS for MS-SQL|
 |DB 인스턴스 삭제|event_id.rds_for_sqlserver.db_instance.delete|RDS for MS-SQL|
 |DB 인스턴스 백업|event_id.rds_for_sqlserver.db_instance.backup|RDS for MS-SQL|
@@ -490,6 +526,8 @@
 |백업 경로 변경|event_id.backup.target.update|Backup|
 |백업 경로 삭제|event_id.backup.target.delete|Backup|
 |복구 신청|event_id.backup.restoration.apply|Backup|
+|백업 계획 중지|event_id.backup.target.suspend|Backup|
+|백업 계획 시작|event_id.backup.target.resume|Backup|
 |백업 서버 정보 변경|event_id.backup.client.update|Backup|
 |DNS Zone 생성|event_id.dnsplus.zone.create|DNS Plus|
 |DNS Zone 수정|event_id.dnsplus.zone.update|DNS Plus|
@@ -774,6 +812,7 @@
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
 |Document OCR 신분증 분석 요청(단독)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
+|Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_recognizer.business.status|OCR|
 |차량 번호판 분석 요청|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |발신 프로필 토큰 인증|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -901,14 +940,10 @@
 |프로젝트 활성화|event_id.dataquery.project_activated|DataQuery|
 |프로젝트 비활성화|event_id.dataquery.project_deactivated|DataQuery|
 |데이터 소스 업데이트 요청|event_id.dataquery.deploy_requested|DataQuery|
-|데이터 소스 추가|event_id.dataquery.datasource_added|DataQuery|
-|데이터 소스 수정|event_id.dataquery.datasource_modified|DataQuery|
-|인증 키 발급|event_id.dataquery.auth_key_issued|DataQuery|
-|Trino 클러스터 켜짐|event_id.dataquery.cluster_up|DataQuery|
 |Trino 클러스터 켜짐|event_id.dataquery.cluster_on|DataQuery|
-|Trino 클러스터 꺼짐|event_id.dataquery.cluster_down|DataQuery|
 |Trino 클러스터 꺼짐|event_id.dataquery.cluster_off|DataQuery|
 |리소스 이용 정지|event_id.dataquery.resource.pause|DataQuery|
+|클러스터 재시작|event_id.dataquery.cluster_restart|DataQuery|
 |리소스 그룹 삭제|event_id.resource_watcher.resource_group.delete|Resource Watcher|
 |리소스 태그 수정|event_id.resource_watcher.resource_tag.update|Resource Watcher|
 |알림 삭제|event_id.resource_watcher.alarm.delete|Resource Watcher|
@@ -949,33 +984,40 @@
 |유저 삭제|event_id.GameTalk.user_delete|GameTalk|
 |알림 메시지 생성|event_id.GameTalk.announcement_create|GameTalk|
 |알림 메시지 수정|event_id.GameTalk.announcement_update|GameTalk|
-|노트북 생성|event_id.easymaker.notebook.create|AI EasyMaker|
-|노트북 변경|event_id.easymaker.notebook.update|AI EasyMaker|
-|노트북 삭제|event_id.easymaker.notebook.delete|AI EasyMaker|
-|노트북 중지|event_id.easymaker.notebook.stop|AI EasyMaker|
-|노트북 시작|event_id.easymaker.notebook.start|AI EasyMaker|
-|노트북 인스턴스 타입 변경|event_id.easymaker.notebook.resize|AI EasyMaker|
-|학습 생성|event_id.easymaker.training.create|AI EasyMaker|
-|학습 변경|event_id.easymaker.training.update|AI EasyMaker|
-|학습 중지|event_id.easymaker.training.stop|AI EasyMaker|
-|학습 삭제|event_id.easymaker.training.delete|AI EasyMaker|
+|API Gateway 서비스 활성화|event_id.easymaker.enable_apigateway|AI EasyMaker|
+|Log&Crash Search 서비스 활성화|event_id.easymaker.enable_logandcrash|AI EasyMaker|
+|엔드포인트 생성|event_id.easymaker.endpoint.create|AI EasyMaker|
+|엔드포인트 삭제|event_id.easymaker.endpoint.delete|AI EasyMaker|
+|엔드포인트 변경|event_id.easymaker.endpoint.update|AI EasyMaker|
+|엔드포인트 모델 생성|event_id.easymaker.endpoint_model.create|AI EasyMaker|
+|엔드포인트 모델 삭제|event_id.easymaker.endpoint_model.delete|AI EasyMaker|
+|엔드포인트 모델 변경|event_id.easymaker.endpoint_model.update|AI EasyMaker|
+|엔드포인트 스테이지 생성|event_id.easymaker.endpoint_stage.create|AI EasyMaker|
+|엔드포인트 스테이지 삭제|event_id.easymaker.endpoint_stage.delete|AI EasyMaker|
+|엔드포인트 스테이지 변경|event_id.easymaker.endpoint_stage.update|AI EasyMaker|
+|엔드포인트 기본 스테이지 변경|event_id.easymaker.endpoint_stage.update_default_stage|AI EasyMaker|
 |실험 생성|event_id.easymaker.experiment.create|AI EasyMaker|
 |실험 삭제|event_id.easymaker.experiment.delete|AI EasyMaker|
 |모델 생성|event_id.easymaker.model.create|AI EasyMaker|
-|모델 변경|event_id.easymaker.model.update|AI EasyMaker|
 |모델 삭제|event_id.easymaker.model.delete|AI EasyMaker|
-|API Gateway 서비스 활성화|event_id.easymaker.enable_apigateway|AI EasyMaker|
-|엔드포인트 생성|event_id.easymaker.endpoint.create|AI EasyMaker|
-|엔드포인트 변경|event_id.easymaker.endpoint.update|AI EasyMaker|
-|엔드포인트 삭제|event_id.easymaker.endpoint.delete|AI EasyMaker|
-|엔드포인트 스테이지 생성|event_id.easymaker.endpoint_stage.create|AI EasyMaker|
-|엔드포인트 스테이지 변경|event_id.easymaker.endpoint_stage.update|AI EasyMaker|
-|엔드포인트 스테이지 삭제|event_id.easymaker.endpoint_stage.delete|AI EasyMaker|
-|엔드포인트 기본 스테이지 변경|event_id.easymaker.endpoint_stage.update_default_stage|AI EasyMaker|
-|엔드포인트 모델 생성|event_id.easymaker.endpoint_model.create|AI EasyMaker|
-|엔드포인트 모델 변경|event_id.easymaker.endpoint_model.update|AI EasyMaker|
-|엔드포인트 모델 삭제|event_id.easymaker.endpoint_model.delete|AI EasyMaker|
-|Log&Crash Search 서비스 활성화|event_id.easymaker.enable_logandcrash|AI EasyMaker|
+|모델 변경|event_id.easymaker.model.update|AI EasyMaker|
+|노트북 생성|event_id.easymaker.notebook.create|AI EasyMaker|
+|노트북 삭제|event_id.easymaker.notebook.delete|AI EasyMaker|
+|노트북 인스턴스 타입 변경|event_id.easymaker.notebook.resize|AI EasyMaker|
+|노트북 시작|event_id.easymaker.notebook.start|AI EasyMaker|
+|노트북 중지|event_id.easymaker.notebook.stop|AI EasyMaker|
+|노트북 변경|event_id.easymaker.notebook.update|AI EasyMaker|
+|학습 생성|event_id.easymaker.training.create|AI EasyMaker|
+|학습 삭제|event_id.easymaker.training.delete|AI EasyMaker|
+|학습 중지|event_id.easymaker.training.stop|AI EasyMaker|
+|학습 변경|event_id.easymaker.training.update|AI EasyMaker|
+|학습 템플릿 생성|event_id.easymaker.training_template.create|AI EasyMaker|
+|학습 템플릿 변경|event_id.easymaker.training_template.update|AI EasyMaker|
+|학습 템플릿 삭제|event_id.easymaker.training_template.delete|AI EasyMaker|
+|하이퍼파라미터 튜닝 생성|event_id.easymaker.hyperparameter_tuning.create|AI EasyMaker|
+|하이퍼파라미터 튜닝 변경|event_id.easymaker.hyperparameter_tuning.update|AI EasyMaker|
+|하이퍼파라미터 튜닝 중지|event_id.easymaker.hyperparameter_tuning.stop|AI EasyMaker|
+|하이퍼파라미터 튜닝 삭제|event_id.easymaker.hyperparameter_tuning.delete|AI EasyMaker|
 |서버 생성|event_id.gameanvil.instance.create|GameAnvil|
 |서버 삭제|event_id.gameanvil.instance.delete|GameAnvil|
 |서버 복사|event_id.gameanvil.instance.copy|GameAnvil|
@@ -1096,6 +1138,7 @@
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
 |앱 수정|event_id.gamebase.app_update|Gamebase|
+|Pose Estimation 분석 요청|event_id.pose_estimation.pose|Pose Estimation|
 |테스트 단말기 추가|event_id.gamebase.access_devices_create|Gamebase|
 |테스트 단말기 수정|event_id.gamebase.access_devices_update|Gamebase|
 |테스트 단말기 삭제|event_id.gamebase.access_devices_delete|Gamebase|
