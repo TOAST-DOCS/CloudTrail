@@ -29,6 +29,10 @@
 |インスタンスの起動完了|event_id.iaas.instance_action.start_end|基本インフラサービス|
 |インスタンスの停止|event_id.iaas.instance_action.stop|基本インフラサービス|
 |インスタンスの停止完了|event_id.iaas.instance_action.stop_end|基本インフラサービス|
+|インスタンスの起動|event_id.iaas.instance_action.unshelve|基本インフラサービス|
+|インスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|基本インフラサービス|
+|インスタンス終了|event_id.iaas.instance_action.shelve|基本インフラサービス|
+|インスタンス終了完了|event_id.iaas.instance_action.shelve_end|基本インフラサービス|
 |インスタンステンプレートの作成|event_id.iaas.instance_template.create|基本インフラサービス|
 |インスタンステンプレートの削除|event_id.iaas.instance_template.delete|基本インフラサービス|
 |インスタンステンプレートの変更|event_id.iaas.instance_template.update|基本インフラサービス|
@@ -184,6 +188,19 @@
 |NASボリュームの削除|event_id.iaas.nas.volume.delete|基本インフラサービス|
 |NASスナップショットの作成|event_id.iaas.nas.snapshot.create|基本インフラサービス|
 |NASスナップショットの削除|event_id.iaas.nas.snapshot.delete|基本インフラサービス|
+|NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|基本インフラサービス|
+|NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|基本インフラサービス|
+|NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|基本インフラサービス|
+|NAS for AIスナップショットの作成|event_id.iaas.nas_for_ai.snapshot.create|基本インフラサービス|
+|NAS for AIスナップショットの削除|event_id.iaas.nas_for_ai.snapshot.delete|基本インフラサービス|
+|テンプレートの作成|event_id.iaas.ncs.template.create|基本インフラサービス|
+|テンプレートの削除|event_id.iaas.ncs.template.delete|基本インフラサービス|
+|テンプレートの削除|event_id.iaas.ncs.template.delete	|基本インフラサービス|
+|ワークロードの作成|event_id.iaas.ncs.workload.create|基本インフラサービス|
+|ワークロードの変更|event_id.iaas.ncs.workload.update|基本インフラサービス|
+|ワークロード再起動|event_id.iaas.ncs.workload.restart|基本インフラサービス|
+|ワークロード停止|event_id.iaas.ncs.workload.stop|基本インフラサービス|
+|ワークロードの削除|event_id.iaas.ncs.workload.delete|基本インフラサービス|
 |アカウントメタデータの登録/修正|event_id.object_storage.account.metadata.update|Object Storage|
 |コンテナの作成|event_id.object_storage.container.create|Object Storage|
 |コンテナの削除|event_id.object_storage.container.delete|Object Storage|
@@ -797,12 +814,8 @@
 |インデックスリクエスト状態の確認|event_id.ai_fashion.maker.index|AI Fashion|
 |サービス情報確認|event_id.ai_fashion.maker.serviceinfo|AI Fashion|
 |インデックスリクエスト状態の確認|event_id.ai_fashion.maker.indexstatus|AI Fashion|
-|事業者登録証の分析リクエスト|event_id.ai_document_recognizer.business.analyze|OCR|
-|クレジットカード分析リクエスト|event_id.ai_document_recognizer.credit_card.analyze|OCR|
 |サービス利用申請|event_id.ai_document_recognizer.service_use_request.submit|OCR|
 |サービス利用申請キャンセル|event_id.ai_document_recognizer.service_use_request.cancel|OCR|
-|身分証分析リクエスト	|event_id.ai_document_recognizer.id_card.analyze|OCR|
-|身分証真偽確認リクエスト|event_id.ai_document_recognizer.id_card.authenticity|OCR|
 |General OCRイメージ分析リクエスト|event_id.ocr.general_ocr.analyze|OCR|
 |Document OCRサービス利用申請|event_id.ocr.document_ocr.service_use_request.submit|OCR|
 |Document OCRサービス利用申請キャンセル|event_id.ocr.document_ocr.service_use_request.cancel|OCR|
@@ -812,7 +825,8 @@
 |Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR ナンバープレート分析リクエスト|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
 |Document OCR 身分証明書分析リクエスト(単独)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
-|Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_recognizer.business.status|OCR|
+|Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_ocr.business.authenticity|OCR|
+|General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |ナンバープレートの分析リクエスト|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -1051,6 +1065,14 @@
 |Safe Pause 강제 종료|event_id.gameanvil.safe_pause.force_stop|GameAnvil|
 |Standard 상품 선택|event_id.gameanvil.standard.select|GameAnvil|
 |Premium 상품 선택|event_id.gameanvil.premium.select|GameAnvil|
+|GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.force_stop|GameAnvil|
+|GAME 노드 강제 종료|event_id.gameanvil.game_node.force_stop|GameAnvil|
+|SUPPORT 노드 강제 종료|event_id.gameanvil.support_node.force_stop|GameAnvil|
+|MATCH 노드 강제 종료|event_id.gameanvil.match_node.force_stop|GameAnvil|
+|GATEWAY 노드 시작|event_id.gameanvil.gateway_node.start_up|GameAnvil|
+|GAME 노드 시작|event_id.gameanvil.game_node.start_up|GameAnvil|
+|SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|GameAnvil|
+|MATCH 노드 시작|event_id.gameanvil.match_node.start_up|GameAnvil|
 |수신거부 서비스 공유|event_id.sms.share_block_service|SMS|
 |파일 다운로드|event_id.sms.download_reserved_file|SMS|
 |대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|SMS|
