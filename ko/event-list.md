@@ -824,7 +824,7 @@
 |Document OCR 신분증 분석 요청|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Document OCR 신분증 분석 요청(단독)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
+|Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
 |Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_ocr.business.authenticity|OCR|
 |General OCR 이미지 분할 인식 요청|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |차량 번호판 분석 요청|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|

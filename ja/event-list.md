@@ -824,7 +824,7 @@
 |Document OCR身分証の分析リクエスト|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR ナンバープレート分析リクエスト|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Document OCR 身分証明書分析リクエスト(単独)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
+|Document OCR 身分証明書分析リクエスト(単独)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
 |Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_ocr.business.authenticity|OCR|
 |General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |ナンバープレートの分析リクエスト|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|

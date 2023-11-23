@@ -824,7 +824,7 @@
 |RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Request ID Card Analysis (only)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
+|Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
 |Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_ocr.business.authenticity|OCR|
 |Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |Request analysis of car license plate|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|

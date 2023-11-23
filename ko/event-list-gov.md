@@ -537,8 +537,8 @@
 |리소스 태그 수정|event_id.resource_watcher.resource_tag.update|Resource Watcher|
 |리소스 그룹 생성|event_id.resource_watcher.resource_group.create|Resource Watcher|
 |알림 삭제|event_id.resource_watcher.alarm.delete|Resource Watcher|
-|리소스 그룹 관계 삭제	|event_id.resource_watcher.resource_group_relation.delete|Resource Watcher|
 |리소스 수정|event_id.resource_watcher.resource.update|Resource Watcher|
+|리소스 그룹 관계 삭제	|event_id.resource_watcher.resource_group_relation.delete|Resource Watcher|
 |리소스 태그 관계 수정|event_id.resource_watcher.resource_tag_relation.update|Resource Watcher|
 |알림 상태 변경|event_id.resource_watcher.alarm.change_status|Resource Watcher|
 |리소스 생성|event_id.resource_watcher.resource.create|Resource Watcher|

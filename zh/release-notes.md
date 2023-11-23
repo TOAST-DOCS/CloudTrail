@@ -36,7 +36,6 @@
 
 ### 2023. 07. 25.
 #### More Events
-* Added events related to OCR.
 * Added events related to Security Advisor.
 
 ### 2023. 07. 11.
