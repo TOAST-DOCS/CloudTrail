@@ -29,6 +29,10 @@
 |인스턴스 시작 완료|event_id.iaas.instance_action.start_end|기본 인프라 서비스|
 |인스턴스 중지|event_id.iaas.instance_action.stop|기본 인프라 서비스|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|기본 인프라 서비스|
+|인스턴스 시작|event_id.iaas.instance_action.unshelve|기본 인프라 서비스|
+|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|기본 인프라 서비스|
+|인스턴스 종료|event_id.iaas.instance_action.shelve|기본 인프라 서비스|
+|인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|기본 인프라 서비스|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|기본 인프라 서비스|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|기본 인프라 서비스|
 |인스턴스 템플릿 변경|event_id.iaas.instance_template.update|기본 인프라 서비스|
@@ -40,6 +44,12 @@
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|기본 인프라 서비스|
 |NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|기본 인프라 서비스|
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|기본 인프라 서비스|
+|VPNGW 생성|event_id.iaas.vpngw.create|기본 인프라 서비스|
+|VPNGW 삭제|event_id.iaas.vpngw.delete|기본 인프라 서비스|
+|VPN Connection 수정|event_id.iaas.vpn_connection.update|기본 인프라 서비스|
+|VPNGW 수정|event_id.iaas.vpngw.update|기본 인프라 서비스|
+|VPN Connection 생성|event_id.iaas.vpn_connection.create|기본 인프라 서비스|
+|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|기본 인프라 서비스|
 |키페어 생성|event_id.iaas.keypair.create|기본 인프라 서비스|
 |키페어 삭제|event_id.iaas.keypair.delete|기본 인프라 서비스|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|기본 인프라 서비스|
@@ -143,6 +153,41 @@
 |Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|기본 인프라 서비스|
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|기본 인프라 서비스|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|기본 인프라 서비스|
+|트랜짓 허브 생성|event_id.iaas.transit_hub.create|기본 인프라 서비스|
+|트랜짓 허브 수정|event_id.iaas.transit_hub.update|기본 인프라 서비스|
+|트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|기본 인프라 서비스|
+|트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|기본 인프라 서비스|
+|트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|기본 인프라 서비스|
+|트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|기본 인프라 서비스|
+|트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 생성|event_id.iaas.transit_hub_routing_table.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 변경|event_id.iaas.transit_hub_routing_table.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 테이블 삭제|event_id.iaas.transit_hub_routing_table.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 생성|event_id.iaas.transit_hub_routing_association.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 변경|event_id.iaas.transit_hub_routing_association.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 연결 삭제|event_id.iaas.transit_hub_routing_association.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 생성|event_id.iaas.transit_hub_routing_propagation.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 변경|event_id.iaas.transit_hub_routing_propagation.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 전파 삭제|event_id.iaas.transit_hub_routing_propagation.delete|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 생성|event_id.iaas.transit_hub_routing_rule.create|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 변경|event_id.iaas.transit_hub_routing_rule.update|기본 인프라 서비스|
+|트랜짓 허브 라우팅 룰 삭제|event_id.iaas.transit_hub_routing_rule.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 생성|event_id.iaas.transit_hub_multicast_domain.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 변경|event_id.iaas.transit_hub_multicast_domain.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 도메인 삭제|event_id.iaas.transit_hub_multicast_domain.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 생성|event_id.iaas.transit_hub_multicast_association.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 변경|event_id.iaas.transit_hub_multicast_association.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 연결 삭제|event_id.iaas.transit_hub_multicast_association.delete|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|기본 인프라 서비스|
+|트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|기본 인프라 서비스|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|기본 인프라 서비스|
+|NAS 볼륨 변경|event_id.iaas.nas.volume.update|기본 인프라 서비스|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|기본 인프라 서비스|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|기본 인프라 서비스|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|기본 인프라 서비스|
 |어카운트 메타데이터 등록/수정|event_id.object_storage.account.metadata.update|Object Storage|
 |컨테이너 생성|event_id.object_storage.container.create|Object Storage|
 |컨테이너 삭제|event_id.object_storage.container.delete|Object Storage|
@@ -191,7 +236,7 @@
 |수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL, RDS for MariaDB|
 |DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL, RDS for MariaDB|
 |DB 스키마 동기화|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL, RDS for MariaDB|
-|DB User 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
+|사용자 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL, RDS for MariaDB|
 |DB 인스턴스 백업 및 내보내기|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL, RDS for MariaDB|
 |오브젝트 스토리지로 백업 내보내기|event_id.rds_for_mysql.backup.export|RDS for MySQL, RDS for MariaDB|
 |키 저장소 생성|event_id.skm.keystore.create|Secure Key Manager|
@@ -492,8 +537,8 @@
 |리소스 태그 수정|event_id.resource_watcher.resource_tag.update|Resource Watcher|
 |리소스 그룹 생성|event_id.resource_watcher.resource_group.create|Resource Watcher|
 |알림 삭제|event_id.resource_watcher.alarm.delete|Resource Watcher|
-|리소스 그룹 관계 삭제	|event_id.resource_watcher.resource_group_relation.delete|Resource Watcher|
 |리소스 수정|event_id.resource_watcher.resource.update|Resource Watcher|
+|리소스 그룹 관계 삭제	|event_id.resource_watcher.resource_group_relation.delete|Resource Watcher|
 |리소스 태그 관계 수정|event_id.resource_watcher.resource_tag_relation.update|Resource Watcher|
 |알림 상태 변경|event_id.resource_watcher.alarm.change_status|Resource Watcher|
 |리소스 생성|event_id.resource_watcher.resource.create|Resource Watcher|

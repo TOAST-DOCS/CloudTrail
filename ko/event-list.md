@@ -29,6 +29,10 @@
 |인스턴스 시작 완료|event_id.iaas.instance_action.start_end|기본 인프라 서비스|
 |인스턴스 중지|event_id.iaas.instance_action.stop|기본 인프라 서비스|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|기본 인프라 서비스|
+|인스턴스 시작|event_id.iaas.instance_action.unshelve|기본 인프라 서비스|
+|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|기본 인프라 서비스|
+|인스턴스 종료|event_id.iaas.instance_action.shelve|기본 인프라 서비스|
+|인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|기본 인프라 서비스|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|기본 인프라 서비스|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|기본 인프라 서비스|
 |인스턴스 템플릿 변경|event_id.iaas.instance_template.update|기본 인프라 서비스|
@@ -184,6 +188,19 @@
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|기본 인프라 서비스|
 |NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|기본 인프라 서비스|
 |NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|기본 인프라 서비스|
+|NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|기본 인프라 서비스|
+|NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|기본 인프라 서비스|
+|NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|기본 인프라 서비스|
+|NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|기본 인프라 서비스|
+|NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|기본 인프라 서비스|
+|템플릿 생성|event_id.iaas.ncs.template.create|기본 인프라 서비스|
+|템플릿 삭제|event_id.iaas.ncs.template.delete|기본 인프라 서비스|
+|템플릿 삭제|event_id.iaas.ncs.template.delete	|기본 인프라 서비스|
+|워크로드 생성|event_id.iaas.ncs.workload.create|기본 인프라 서비스|
+|워크로드 변경|event_id.iaas.ncs.workload.update|기본 인프라 서비스|
+|워크로드 재시작|event_id.iaas.ncs.workload.restart|기본 인프라 서비스|
+|워크로드 중지|event_id.iaas.ncs.workload.stop|기본 인프라 서비스|
+|워크로드 삭제|event_id.iaas.ncs.workload.delete|기본 인프라 서비스|
 |어카운트 메타데이터 등록/수정|event_id.object_storage.account.metadata.update|Object Storage|
 |컨테이너 생성|event_id.object_storage.container.create|Object Storage|
 |컨테이너 삭제|event_id.object_storage.container.delete|Object Storage|
@@ -797,12 +814,8 @@
 |색인 요청|event_id.ai_fashion.maker.index|AI Fashion|
 |서비스 정보 확인|event_id.ai_fashion.maker.serviceinfo|AI Fashion|
 |색인 요청 상태 확인|event_id.ai_fashion.maker.indexstatus|AI Fashion|
-|사업자 등록증 분석 요청|event_id.ai_document_recognizer.business.analyze|OCR|
-|신용카드 분석 요청|event_id.ai_document_recognizer.credit_card.analyze|OCR|
 |서비스 이용 신청|event_id.ai_document_recognizer.service_use_request.submit|OCR|
 |서비스 이용 신청 취소|event_id.ai_document_recognizer.service_use_request.cancel|OCR|
-|신분증 분석 요청|event_id.ai_document_recognizer.id_card.analyze|OCR|
-|신분증 진위 확인 요청|event_id.ai_document_recognizer.id_card.authenticity|OCR|
 |General OCR 이미지 분석 요청|event_id.ocr.general_ocr.analyze|OCR|
 |Document OCR 서비스 이용 신청|event_id.ocr.document_ocr.service_use_request.submit|OCR|
 |Document OCR 서비스 이용 신청 취소|event_id.ocr.document_ocr.service_use_request.cancel|OCR|
@@ -811,8 +824,9 @@
 |Document OCR 신분증 분석 요청|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Document OCR 신분증 분석 요청(단독)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
-|Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_recognizer.business.status|OCR|
+|Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
+|Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_ocr.business.authenticity|OCR|
+|General OCR 이미지 분할 인식 요청|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |차량 번호판 분석 요청|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |발신 프로필 토큰 인증|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -1051,6 +1065,14 @@
 |Safe Pause 강제 종료|event_id.gameanvil.safe_pause.force_stop|GameAnvil|
 |Standard 상품 선택|event_id.gameanvil.standard.select|GameAnvil|
 |Premium 상품 선택|event_id.gameanvil.premium.select|GameAnvil|
+|GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.force_stop|GameAnvil|
+|GAME 노드 강제 종료|event_id.gameanvil.game_node.force_stop|GameAnvil|
+|SUPPORT 노드 강제 종료|event_id.gameanvil.support_node.force_stop|GameAnvil|
+|MATCH 노드 강제 종료|event_id.gameanvil.match_node.force_stop|GameAnvil|
+|GATEWAY 노드 시작|event_id.gameanvil.gateway_node.start_up|GameAnvil|
+|GAME 노드 시작|event_id.gameanvil.game_node.start_up|GameAnvil|
+|SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|GameAnvil|
+|MATCH 노드 시작|event_id.gameanvil.match_node.start_up|GameAnvil|
 |수신거부 서비스 공유|event_id.sms.share_block_service|SMS|
 |파일 다운로드|event_id.sms.download_reserved_file|SMS|
 |대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|SMS|

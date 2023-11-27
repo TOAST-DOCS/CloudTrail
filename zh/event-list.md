@@ -29,6 +29,10 @@
 |Start Instance Completed|event_id.iaas.instance_action.start_end|Default Infrastructure Service|
 |Stop Instance|event_id.iaas.instance_action.stop|Default Infrastructure Service|
 |Stop Instance Completed|event_id.iaas.instance_action.stop_end|Default Infrastructure Service|
+|Start Instance|event_id.iaas.instance_action.unshelve|Default Infrastructure Service|
+|Start Instance Completed|event_id.iaas.instance_action.unshelve_end|Default Infrastructure Service|
+|Terminate Instance|event_id.iaas.instance_action.shelve|Default Infrastructure Service|
+|Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|Default Infrastructure Service|
 |Create Instance Template|event_id.iaas.instance_template.create|Default Infrastructure Service|
 |Delete Instance Template|event_id.iaas.instance_template.delete|Default Infrastructure Service|
 |Change Instance Template|event_id.iaas.instance_template.update|Default Infrastructure Service|
@@ -184,6 +188,19 @@
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|Default Infrastructure Service|
 |Create NAS Snapshot|event_id.iaas.nas.snapshot.create|Default Infrastructure Service|
 |Delete NAS Snapshot|event_id.iaas.nas.snapshot.delete|Default Infrastructure Service|
+|Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|Default Infrastructure Service|
+|Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|Default Infrastructure Service|
+|Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|Default Infrastructure Service|
+|Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|Default Infrastructure Service|
+|Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|Default Infrastructure Service|
+|Create Template|event_id.iaas.ncs.template.create|Default Infrastructure Service|
+|Delete Template|event_id.iaas.ncs.template.delete|Default Infrastructure Service|
+|Delete Template|event_id.iaas.ncs.template.delete	|Default Infrastructure Service|
+|Create Workload|event_id.iaas.ncs.workload.create|Default Infrastructure Service|
+|Change Workload|event_id.iaas.ncs.workload.update|Default Infrastructure Service|
+|Restart Workload|event_id.iaas.ncs.workload.restart|Default Infrastructure Service|
+|Stop Workload|event_id.iaas.ncs.workload.stop|Default Infrastructure Service|
+|Delete Workload|event_id.iaas.ncs.workload.delete|Default Infrastructure Service|
 |Register/Modify Account Metadata|event_id.object_storage.account.metadata.update|Object Storage|
 |Create Containers|event_id.object_storage.container.create|Object Storage|
 |Delete Containers|event_id.object_storage.container.delete|Object Storage|
@@ -797,12 +814,8 @@
 |Request indexing|event_id.ai_fashion.maker.index|AI Fashion|
 |Check service information|event_id.ai_fashion.maker.serviceinfo|AI Fashion|
 |Check indexing request status|event_id.ai_fashion.maker.indexstatus|AI Fashion|
-|Request analysis of business registration certificate|event_id.ai_document_recognizer.business.analyze|OCR|
-|Request analysis of credit card|event_id.ai_document_recognizer.credit_card.analyze|OCR|
 |Submit a service use request|event_id.ai_document_recognizer.service_use_request.submit|OCR|
 |Cancel a service use request|event_id.ai_document_recognizer.service_use_request.cancel|OCR|
-|Request for Analyzing ID Card|event_id.ai_document_recognizer.id_card.analyze|OCR|
-|Request for ID Verification|event_id.ai_document_recognizer.id_card.authenticity|OCR|
 |Request General OCR Image Analysis|event_id.ocr.general_ocr.analyze|OCR|
 |Apply for Document OCR Service|event_id.ocr.document_ocr.service_use_request.submit|OCR|
 |Cancel Application of Document OCR Service|event_id.ocr.document_ocr.service_use_request.cancel|OCR|
@@ -811,8 +824,9 @@
 |RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Request ID Card Analysis (only)|event_id.ai_document_recognizer.id_card.analyze_only|OCR|
-|Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_recognizer.business.status|OCR|
+|Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
+|Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_ocr.business.authenticity|OCR|
+|Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |Request analysis of car license plate|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|KakaoTalk Bizmessage|
 |Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|KakaoTalk Bizmessage|
@@ -1051,6 +1065,14 @@
 |Safe Pause 강제 종료|event_id.gameanvil.safe_pause.force_stop|GameAnvil|
 |Standard 상품 선택|event_id.gameanvil.standard.select|GameAnvil|
 |Premium 상품 선택|event_id.gameanvil.premium.select|GameAnvil|
+|GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.force_stop|GameAnvil|
+|GAME 노드 강제 종료|event_id.gameanvil.game_node.force_stop|GameAnvil|
+|SUPPORT 노드 강제 종료|event_id.gameanvil.support_node.force_stop|GameAnvil|
+|MATCH 노드 강제 종료|event_id.gameanvil.match_node.force_stop|GameAnvil|
+|GATEWAY 노드 시작|event_id.gameanvil.gateway_node.start_up|GameAnvil|
+|GAME 노드 시작|event_id.gameanvil.game_node.start_up|GameAnvil|
+|SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|GameAnvil|
+|MATCH 노드 시작|event_id.gameanvil.match_node.start_up|GameAnvil|
 |수신거부 서비스 공유|event_id.sms.share_block_service|SMS|
 |파일 다운로드|event_id.sms.download_reserved_file|SMS|
 |대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|SMS|
