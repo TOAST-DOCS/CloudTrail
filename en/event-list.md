@@ -824,7 +824,7 @@
 |RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
+|Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|OCR|
 |Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_ocr.business.authenticity|OCR|
 |Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |Request analysis of car license plate|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
@@ -1032,6 +1032,15 @@
 |Change Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.update|AI EasyMaker|
 |Stop Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.stop|AI EasyMaker|
 |Delete Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.delete|AI EasyMaker|
+|Create Registry Credential|event_id.easymaker.registry.credential.create|AI EasyMaker|
+|Change Registry Credential|event_id.easymaker.registry.credential.update_info|AI EasyMaker|
+|Change Registry Credential|event_id.easymaker.registry.credential.update|AI EasyMaker|
+|Delete Registry Credential|event_id.easymaker.registry.credential.delete|AI EasyMaker|
+|Create Image|event_id.easymaker.image_private.create|AI EasyMaker|
+|Change Image|event_id.easymaker.image_private.update|AI EasyMaker|
+|Delete Image|event_id.easymaker.image_private.delete|AI EasyMaker|
+|Change Auto Scaler Settings|event_id.easymaker.endpoint_stage.update_autoscale|AI EasyMaker|
+|Restart Notebook|event_id.easymaker.notebook.restart|AI EasyMaker|
 |서버 생성|event_id.gameanvil.instance.create|GameAnvil|
 |서버 삭제|event_id.gameanvil.instance.delete|GameAnvil|
 |서버 복사|event_id.gameanvil.instance.copy|GameAnvil|

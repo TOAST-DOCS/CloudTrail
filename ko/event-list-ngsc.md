@@ -179,6 +179,10 @@
 |트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|기본 인프라 서비스|
 |트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|기본 인프라 서비스|
 |트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|기본 인프라 서비스|
+|인스턴스 시작|event_id.iaas.instance_action.unshelve|기본 인프라 서비스|
+|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|기본 인프라 서비스|
+|인스턴스 종료|event_id.iaas.instance_action.shelve|기본 인프라 서비스|
+|인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|기본 인프라 서비스|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|기본 인프라 서비스|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|기본 인프라 서비스|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|기본 인프라 서비스|
@@ -228,7 +232,7 @@
 |수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|RDS for MySQL|
 |DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|RDS for MySQL|
 |DB 스키마 동기화|event_id.rds_for_mysql.instance.db_definition.schema.sync|RDS for MySQL|
-|DB User 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL|
+|사용자 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|RDS for MySQL|
 |DB 인스턴스 백업 및 내보내기|event_id.rds_for_mysql.instance.backup.export|RDS for MySQL|
 |오브젝트 스토리지로 백업 내보내기|event_id.rds_for_mysql.backup.export|RDS for MySQL|
 |IAM 로그인|event_id.iam.login|콘솔|

@@ -824,7 +824,7 @@
 |Document OCR身分証の分析リクエスト|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR ナンバープレート分析リクエスト|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Document OCR 身分証明書分析リクエスト(単独)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
+|Document OCR 身分証明書分析リクエスト(単独)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|OCR|
 |Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_ocr.business.authenticity|OCR|
 |General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |ナンバープレートの分析リクエスト|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
@@ -1032,6 +1032,15 @@
 |ハイパーパラメータチューニングの変更|event_id.easymaker.hyperparameter_tuning.update|AI EasyMaker|
 |ハイパーパラメータチューニングの停止|event_id.easymaker.hyperparameter_tuning.stop|AI EasyMaker|
 |ハイパーパラメータチューニングの削除|event_id.easymaker.hyperparameter_tuning.delete|AI EasyMaker|
+|レジストリアカウントの作成|event_id.easymaker.registry.credential.create|AI EasyMaker|
+|レジストリアカウントの修正|event_id.easymaker.registry.credential.update_info|AI EasyMaker|
+|レジストリアカウントの修正|event_id.easymaker.registry.credential.update|AI EasyMaker|
+|レジストリアカウントの削除|event_id.easymaker.registry.credential.delete|AI EasyMaker|
+|イメージ作成|event_id.easymaker.image_private.create|AI EasyMaker|
+|イメージの変更|event_id.easymaker.image_private.update|AI EasyMaker|
+|イメージの削除|event_id.easymaker.image_private.delete|AI EasyMaker|
+|オートスケーラー設定の変更|event_id.easymaker.endpoint_stage.update_autoscale|AI EasyMaker|
+|ノートパソコン再起動|event_id.easymaker.notebook.restart|AI EasyMaker|
 |서버 생성|event_id.gameanvil.instance.create|GameAnvil|
 |서버 삭제|event_id.gameanvil.instance.delete|GameAnvil|
 |서버 복사|event_id.gameanvil.instance.copy|GameAnvil|

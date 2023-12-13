@@ -1,5 +1,9 @@
 ## CloudTrail > Release Notes
 
+### 2023. 12. 19.
+#### More Events
+* Added events related to AI EasyMaker.
+
 ### 2023. 11. 28.
 #### More Events
 * Added events related to Default Infrastructure Service.
