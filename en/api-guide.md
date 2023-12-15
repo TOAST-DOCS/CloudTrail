@@ -85,8 +85,8 @@ Read the header at Response Body for more details of the response result.
 | startDate | Date | O | Start date of query period |
 | endDate | Date |O  | End date of query period |
 | page | Object | O | Page conditions of query result |
-| page.sortBy | String | X | Size sorting conditions of query result (ex. startDate:desc, idNo:asc)|
-| page.limit | Integer | O | Size conditions of query result |
+| page.sortBy | String | X | Size sorting conditions of query result (ex. eventTime:desc, idNo:asc) |
+| page.limit | Integer | O | Size conditions of query result (default: 20, max: 1000)) |
 | page.page | Integer | O | Page conditions to query among result pages |
 
 
