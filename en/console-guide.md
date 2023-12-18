@@ -32,7 +32,7 @@ User events are logged in the organization and users can view them.
     - Multiple events can be searched for.
 5. Searches for users.
 6. Searches for requests and response values.
-7. Specifies the scope of a search. The filter options are 24 hours, 1 week, 2 weeks, and 3 months. Users can enter a filter value as well.
+7. Specifies the scope of a search. The filter options are 24 hours, 1 week, 1 month, 2 months, and 3 months. Users can enter a filter value as well.
     - [Note] Events are retained up to 3 months.
 8. Specifies the list display unit. You can display 25, 50, or 100 items at once on the screen.
 

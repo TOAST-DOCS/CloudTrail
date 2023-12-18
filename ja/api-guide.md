@@ -89,8 +89,8 @@ RESTful APIを使用するにはAppKeyが必要です。
 | startDate | Date | O | 照会する期間の開始日 |
 | endDate | Date |O  | 照会する期間の終了日 |
 | page | Object | O | 照会結果のページ条件 |
-| page.sortBy | String | X | 照会結果のサイズソート条件 (ex. startDate:desc, idNo:asc)|
-| page.limit | Integer | O | 照会結果のサイズ条件 |
+| page.sortBy | String | X | 照会結果のサイズソート条件 (ex. eventTime:desc, idNo:asc) |
+| page.limit | Integer | O | 照会結果のサイズ条件 (基本： 20, 最大 : 1000) |
 | page.page | Integer | O | 照会結果のページのうち、照会するページの条件 |
 
 

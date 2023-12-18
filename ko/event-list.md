@@ -824,7 +824,7 @@
 |Document OCR 신분증 분석 요청|event_id.ocr.document_ocr.id_card.analyze|OCR|
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|OCR|
 |Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|OCR|
-|Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze.stand_alone|OCR|
+|Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|OCR|
 |Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_ocr.business.authenticity|OCR|
 |General OCR 이미지 분할 인식 요청|event_id.ocr.general_ocr.cropping_analyze|OCR|
 |차량 번호판 분석 요청|event_id.ai_vehicle_plate_recognizer.analyze|Vehicle Plate Recognizer|
@@ -1032,6 +1032,15 @@
 |하이퍼파라미터 튜닝 변경|event_id.easymaker.hyperparameter_tuning.update|AI EasyMaker|
 |하이퍼파라미터 튜닝 중지|event_id.easymaker.hyperparameter_tuning.stop|AI EasyMaker|
 |하이퍼파라미터 튜닝 삭제|event_id.easymaker.hyperparameter_tuning.delete|AI EasyMaker|
+|레지스트리 계정 생성|event_id.easymaker.registry.credential.create|AI EasyMaker|
+|레지스트리 계정 수정|event_id.easymaker.registry.credential.update_info|AI EasyMaker|
+|레지스트리 계정 수정|event_id.easymaker.registry.credential.update|AI EasyMaker|
+|레지스트리 계정 삭제|event_id.easymaker.registry.credential.delete|AI EasyMaker|
+|이미지 생성|event_id.easymaker.image_private.create|AI EasyMaker|
+|이미지 변경|event_id.easymaker.image_private.update|AI EasyMaker|
+|이미지 삭제|event_id.easymaker.image_private.delete|AI EasyMaker|
+|오토 스케일러 설정 변경|event_id.easymaker.endpoint_stage.update_autoscale|AI EasyMaker|
+|노트북 재시작|event_id.easymaker.notebook.restart|AI EasyMaker|
 |서버 생성|event_id.gameanvil.instance.create|GameAnvil|
 |서버 삭제|event_id.gameanvil.instance.delete|GameAnvil|
 |서버 복사|event_id.gameanvil.instance.copy|GameAnvil|
