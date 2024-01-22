@@ -1192,15 +1192,11 @@
 |발송 설정 수정|event_id.email.update_send_config|Email|
 |대량 발송 요청|event_id.email.send_mass_mail|Email|
 |대량 발송 취소|event_id.email.cancel_mass_mail|Email|
-|태그 수신자 파일 다운로드 예약|event_id.email.reserve_download_tag_mail|Email|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|Email|
 |UID 목록 조회|event_id.email.get_uid|Email|
 |템플릿 등록|event_id.email.add_template|Email|
 |파일 다운로드|email_id.email.file_download|Email|
 |템플릿 수정|event_id.email.modify_template|Email|
-|대량 수신자 파일 다운로드 예약|event_id.email.reserve_download_mass_mail|Email|
-|일반 수신자 파일 다운로드 예약|event_id.email.reserve_download_normal_mail|Email|
-|파일 다운로드|event_id.email.download_reserved_file|Email|
 |Email 상품 비활성화|event_id.email.disble_email_product|Email|
 |태그 발송 요청 목록 조회|event_id.email.get_tag_master_list|Email|
 |카테고리 수정|event_id.email.modify_category|Email|
@@ -1209,12 +1205,44 @@
 |수신 거부자 목록 조회|event_id.email.get_block_receiver_list|Email|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |UID 추가(파일)|event_id.email.add_uid|Email|
-|수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
 |태그 발송 요청 수신자 상세 조회|event_id.email.get_tag_receiver_detail|Email|
 |예약 발송 메일 수신자 상세 조회|event_id.email.get_reservation_detail|Email|
 |수신 거부자 등록(파일)|event_id.email.add_block_receiver_list_file|Email|
-|Update App|event_id.gamebase.app_update|Gamebase|
 |Request for Posture recognition|event_id.pose_estimation.pose|Pose Estimation|
+|Create Role|event_id.role.role.create|ROLE|
+|Modify Role|event_id.role.role.update|ROLE|
+|Delete Role|event_id.role.role.delete|ROLE|
+|Create Role Tag|event_id.role.role_tag.create|ROLE|
+|Delete Role Tag|event_id.role.role_tag.delete|ROLE|
+|Create User|event_id.role.user.create|ROLE|
+|Modify User|event_id.role.user.update|ROLE|
+|Delete User|event_id.role.user.delete|ROLE|
+|Create Scope|event_id.role.scope.create|ROLE|
+|Modify Scope|event_id.role.scope.update|ROLE|
+|Delete Scope|event_id.role.scope.delete|ROLE|
+|Create Resource|event_id.role.resource.create|ROLE|
+|Modify Resource|event_id.role.resource.update|ROLE|
+|Delete Resource|event_id.role.resource.delete|ROLE|
+|Create Resource-related Role|event_id.role.resource_authorization.create|ROLE|
+|Delete Resource-related Role|event_id.role.resource_authorization.delete|ROLE|
+|Create Operation|event_id.role.operation.create|ROLE|
+|Modify Operation|event_id.role.operation.update|ROLE|
+|Delete Operation|event_id.role.operation.delete|ROLE|
+|Create Related Role|event_id.role.role_relation.create|ROLE|
+|Delete Related Role|event_id.role.role_relation.delete|ROLE|
+|Create User-related Role|event_id.role.user_role_relation.create|ROLE|
+|Modify User-related Role|event_id.role.user_role_relation.update|ROLE|
+|Delete User-related Role|event_id.role.user_role_relation.delete|ROLE|
+|Delete Cache|event_id.role.cache_flushtime.update|ROLE|
+|Bulk Change|event_id.role.execute_behavior|ROLE|
+|Create Condition Attribute|event_id.role.attribute.create|ROLE|
+|Modify Condition Attribute|event_id.role.attribute.update|ROLE|
+|Delete Condition Attribute|event_id.role.attribute.delete|ROLE|
+|Create Condition Attribute-related Role|event_id.role.attribute_role_relation.create|ROLE|
+|Delete Condition Attribute-related Role|event_id.role.attribute_role_relation.delete|ROLE|
+|Create Condition Attribute Tag|event_id.role.attribute_tag.create|ROLE|
+|Delete Condition Attribute Tag|event_id.role.attribute_tag.delete|ROLE|
+|Update App|event_id.gamebase.app_update|Gamebase|
 |Add test device|event_id.gamebase.access_devices_create|Gamebase|
 |Update test device|event_id.gamebase.access_devices_update|Gamebase|
 |Delete test device|event_id.gamebase.access_devices_delete|Gamebase|

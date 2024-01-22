@@ -1,5 +1,9 @@
 ## CloudTrail > Release Notes
 
+### 2024. 01. 23.
+#### More Events
+* Added events related to ROLE.
+
 ### 2024. 01. 17.
 #### More Events
 * Added events related to KakaoTalk Bizmessage.

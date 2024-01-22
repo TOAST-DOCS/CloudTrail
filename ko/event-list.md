@@ -1192,15 +1192,11 @@
 |발송 설정 수정|event_id.email.update_send_config|Email|
 |대량 발송 요청|event_id.email.send_mass_mail|Email|
 |대량 발송 취소|event_id.email.cancel_mass_mail|Email|
-|태그 수신자 파일 다운로드 예약|event_id.email.reserve_download_tag_mail|Email|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|Email|
 |UID 목록 조회|event_id.email.get_uid|Email|
 |템플릿 등록|event_id.email.add_template|Email|
 |파일 다운로드|email_id.email.file_download|Email|
 |템플릿 수정|event_id.email.modify_template|Email|
-|대량 수신자 파일 다운로드 예약|event_id.email.reserve_download_mass_mail|Email|
-|일반 수신자 파일 다운로드 예약|event_id.email.reserve_download_normal_mail|Email|
-|파일 다운로드|event_id.email.download_reserved_file|Email|
 |Email 상품 비활성화|event_id.email.disble_email_product|Email|
 |태그 발송 요청 목록 조회|event_id.email.get_tag_master_list|Email|
 |카테고리 수정|event_id.email.modify_category|Email|
@@ -1209,12 +1205,44 @@
 |수신 거부자 목록 조회|event_id.email.get_block_receiver_list|Email|
 |Email 상품 활성화|event_id.email.enable_email_product|Email|
 |UID 추가(파일)|event_id.email.add_uid|Email|
-|수신 거부자 파일 다운로드 예약|event_id.email.reserve_download_block_recipient|Email|
 |태그 발송 요청 수신자 상세 조회|event_id.email.get_tag_receiver_detail|Email|
 |예약 발송 메일 수신자 상세 조회|event_id.email.get_reservation_detail|Email|
 |수신 거부자 등록(파일)|event_id.email.add_block_receiver_list_file|Email|
-|앱 수정|event_id.gamebase.app_update|Gamebase|
 |Pose Estimation 분석 요청|event_id.pose_estimation.pose|Pose Estimation|
+|역할 생성|event_id.role.role.create|ROLE|
+|역할 수정|event_id.role.role.update|ROLE|
+|역할 삭제|event_id.role.role.delete|ROLE|
+|역할 태그 생성|event_id.role.role_tag.create|ROLE|
+|역할 태그 삭제|event_id.role.role_tag.delete|ROLE|
+|사용자 생성|event_id.role.user.create|ROLE|
+|사용자 수정|event_id.role.user.update|ROLE|
+|사용자 삭제|event_id.role.user.delete|ROLE|
+|범위 생성|event_id.role.scope.create|ROLE|
+|범위 수정|event_id.role.scope.update|ROLE|
+|범위 삭제|event_id.role.scope.delete|ROLE|
+|리소스 생성|event_id.role.resource.create|ROLE|
+|리소스 수정|event_id.role.resource.update|ROLE|
+|리소스 삭제|event_id.role.resource.delete|ROLE|
+|리소스 연관 역할 생성|event_id.role.resource_authorization.create|ROLE|
+|리소스 연관 역할 삭제|event_id.role.resource_authorization.delete|ROLE|
+|오퍼레이션 생성|event_id.role.operation.create|ROLE|
+|오퍼레이션 수정|event_id.role.operation.update|ROLE|
+|오퍼레이션 삭제|event_id.role.operation.delete|ROLE|
+|연관 역할 생성|event_id.role.role_relation.create|ROLE|
+|연관 역할 삭제|event_id.role.role_relation.delete|ROLE|
+|사용자 연관 역할 생성|event_id.role.user_role_relation.create|ROLE|
+|사용자 연관 역할 수정|event_id.role.user_role_relation.update|ROLE|
+|사용자 연관 역할 삭제|event_id.role.user_role_relation.delete|ROLE|
+|캐시 삭제|event_id.role.cache_flushtime.update|ROLE|
+|일괄 변경|event_id.role.execute_behavior|ROLE|
+|조건 속성 생성|event_id.role.attribute.create|ROLE|
+|조건 속성 수정|event_id.role.attribute.update|ROLE|
+|조건 속성 삭제|event_id.role.attribute.delete|ROLE|
+|조건 속성 연관 역할 생성|event_id.role.attribute_role_relation.create|ROLE|
+|조건 속성 연관 역할 삭제|event_id.role.attribute_role_relation.delete|ROLE|
+|조건 속성 태그 생성|event_id.role.attribute_tag.create|ROLE|
+|조건 속성 태그 삭제|event_id.role.attribute_tag.delete|ROLE|
+|앱 수정|event_id.gamebase.app_update|Gamebase|
 |테스트 단말기 추가|event_id.gamebase.access_devices_create|Gamebase|
 |테스트 단말기 수정|event_id.gamebase.access_devices_update|Gamebase|
 |테스트 단말기 삭제|event_id.gamebase.access_devices_delete|Gamebase|
