@@ -1,8 +1,26 @@
 ## CloudTrail > Release Notes
 
-### 2024. 01. 23.
+### 2024. 02. 27.
 #### More Events
+* Added events related to Console.
 * Added events related to ROLE.
+* Added events related to NHN Container Registry(NCR).
+
+### 2024. 02. 18.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 02. 17.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 02. 16.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 02. 15.
+#### More Events
+* Added events related to Default Infrastructure Service.
 
 ### 2024. 01. 17.
 #### More Events
@@ -79,7 +97,6 @@
 #### More Events
 * Added events related to RCS Bizmessage.
 * Added events related to Pipeline.
-* Added events related to GameTalk.
 * Added events related to Default Infrastructure Service.
 
 ### 2023. 03. 28.
@@ -108,7 +125,6 @@
 
 ### 2022. 12. 27.
 #### More Events
-* Added events related to GameTalk.
 * Added events related to RDS for MS-SQL.
 * Added events related to NHN AppGuard.
 * Added events related to DataQuery.
@@ -152,7 +168,6 @@
 ### 2022. 07. 26.
 #### More Events
 * Added events related to API Gateway.
-* Added events related to Default Infrastructure Service.
 
 ### 2022. 06. 14.
 #### More Events
@@ -209,7 +224,6 @@
 ### 2021. 11. 23.
 #### More Events
 * Added events related to EasyCache.
-* Added events related to Vehicle Plate Recognizer.
 
 ### 2021. 11. 10.
 #### More Events
@@ -230,10 +244,6 @@
 * Added events related to Console.
 * Added events related to EasyCache.
 
-### 2021. 08. 19.
-#### More Events
-* Added events related to Default Infrastructure Service.
-
 ### 2021. 07. 27.
 #### More Events
 * Added events related to Face Recognition.
@@ -253,7 +263,6 @@
 * Added events related to Log & Crash Search.
 * Added events related to Pipeline.
 * Added events related to ShortURL.
-* Added events related to Cheating Detection.
 * Added events related to NHN AppGuard.
 #### More Features
 * Added the email field to receive information after three or more failed upload attempts in Log Save/Download Settings.
@@ -302,7 +311,6 @@
 
 ### 2020. 08. 19.
 #### More Events
-* Added events related to Default Infrastructure Service.
 * Added events related to Kubernetes.
 
 ### 2020. 07. 28.
