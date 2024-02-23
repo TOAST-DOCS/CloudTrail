@@ -350,6 +350,10 @@
 |프로젝트 알림 수신 그룹 생성|event_id.project.alarm_group.create|
 |프로젝트 알림 수신 그룹 수정|event_id.project.alarm_group.update|
 |프로젝트 알림 수신 그룹 삭제|event_id.project.alarm_group.delete|
+|조직 알림 수신 대상 수정|event_id.org.system_notification.receivers.update|
+|조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
+|프로젝트 알림 수신 대상 수정|event_id.project.system_notification.receivers.update|
+|프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
 
 ### Backup
 
