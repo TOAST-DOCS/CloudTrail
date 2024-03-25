@@ -1,5 +1,69 @@
 ## CloudTrail > List of Collected Events
 
+### Console
+
+| Event | Event ID |
+| --- | --- |
+|IAM 登入|event_id.iam.login|
+|Change Authority for IAM Members|event_id.iam.member.role.update|
+|Add Organization Domain |event_id.org.domain.add|
+|Modify Organization Domain|event_id.org.domain.update|
+|Add Organization Member|event_id.org.iam.member.add|
+|Send Notification Mail to Organization Members to Change Password |event_id.org.iam.member.send_mail|
+|Modify Organization Member Information |event_id.org.iam.member.update|
+|Add Organization Member |event_id.org.member.add|
+|Delete Organization Member|event_id.org.member.delete|
+|Invite Organization Member|event_id.org.member.invite|
+|Cancel Organization Member Invitation  |event_id.org.member.invite_cancel|
+|Modify Organization Member  |event_id.org.member.update|
+|Disable Organization Service|event_id.org.product.disable|
+|Enable Organization Service|event_id.org.product.enable|
+|Modify Organization Information|event_id.org.update|
+|Access IAM Organization|event_id.iam.org.selected|
+|Create Project|event_id.project.create|
+|Delete Project|event_id.project.delete|
+|Add Project Member |event_id.project.member.add|
+|Delete Project Member|event_id.project.member.delete|
+|Invite Project Member|event_id.project.member.invite|
+|Cancel Project Member Invitation|event_id.project.member.invite_cancel|
+|Modify Project Member Authority|event_id.project.member.update|
+|Delete Project Member|event_id.project.members.delete|
+|Disable Project Service|event_id.project.product.disable|
+|Enable Project Service|event_id.project.product.enable|
+|Modify Project|event_id.project.update|
+|Access Project|event_id.project.selected|
+|Add Project Common Role Group|event_id.org.role_group.create|
+|Modify Project Common Role Group|event_id.org.role_group.update|
+|Delete Project Common Role Group|event_id.org.role_group.delete|
+|Add Role to Project Common Role Group|event_id.org.role_group.assign.roles|
+|Delete Role from Project Common Role Group|event_id.org.role_group.remove.roles|
+|Add Role Group|event_id.project.role_group.create|
+|Modify Role Group|event_id.project.role_group.update|
+|Delete Role Group|event_id.project.role_group.delete|
+|Add Role to Role Group|event_id.project.role_group.assign.roles|
+|Delete Role from Role Group|event_id.project.role_group.remove.roles|
+|Access IAM Project|event_id.iam.project.selected|
+|Add Budget|event_id.budget.create|
+|Modify Budget|event_id.budget.modify|
+|Delete Budget|event_id.budget.delete|
+|Change governance setting|event_id.governance.change|
+|Delete the service support team|event_id.supporter.delete|
+|Invite service support team|event_id.supporter.add|
+|Apply for Marketplace|event_id.market_place.apply|
+|Cancel Applying for Marketplace|event_id.market_place.apply-cancel|
+|Apply for Marketplace Cancellation|event_id.market_place.termination-apply|
+|Cancel Applying for Marketplace Cancellation|event_id.market_place.termination-apply-cancel|
+|Create Notification Receiver Group in Organization|event_id.org.alarm_group.create|
+|Modify Notification Receiver Group in Organization|event_id.org.alarm_group.update|
+|Delete Notification Receiver Group in Organization|event_id.org.alarm_group.delete|
+|Create Notification Receiver Group in Project|event_id.project.alarm_group.create|
+|Modify Notification Receiver Group in Project|event_id.project.alarm_group.update|
+|Delete Notification Receiver Group in Project|event_id.project.alarm_group.delete|
+|조직 알림 수신 대상 수정|event_id.org.system_notification.receivers.update|
+|조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
+|프로젝트 알림 수신 대상 설정|event_id.project.system_notification.receivers.update|
+|프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
+
 ### Default Infrastructure Service
 
 | Event | Event ID |
@@ -47,8 +111,8 @@
 |Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
 |Change NAT Gateway|event_id.iaas.nat_gateway.update|
 |Create VPNGW|event_id.iaas.vpngw.create|
-|Delete VPNGW|event_id.iaas.vpngw.delete|
 |Update VPN Connection|event_id.iaas.vpn_connection.update|
+|Delete VPNGW|event_id.iaas.vpngw.delete|
 |Update VPNGW|event_id.iaas.vpngw.update|
 |Create VPN Connection|event_id.iaas.vpn_connection.create|
 |Delete VPN Connection|event_id.iaas.vpn_connection.delete|
@@ -184,7 +248,6 @@
 |Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
 |Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
 |Create Template|event_id.iaas.ncs.template.create|
-|Delete Template|event_id.iaas.ncs.template.delete&#9;|
 |Delete Template|event_id.iaas.ncs.template.delete|
 |Create Workload|event_id.iaas.ncs.workload.create|
 |Change Workload|event_id.iaas.ncs.workload.update|
@@ -423,6 +486,15 @@
 |审批流程审批|event_id.skm.approval.approve|
 |拒绝审批流程|event_id.skm.approval.deny|
 |审批流程 审批请求|event_id.skm.approval.approve_request|
+|API IPv4 주소 등록|event_id.skm.api.ipv4.create|
+|API IPv4 주소 삭제 예정|event_id.skm.api.ipv4.delete_request|
+|API IPv4 주소 즉시 삭제|event_id.skm.api.ipv4.delete|
+|API MAC 주소 등록|event_id.skm.api.mac.create|
+|API MAC 주소 삭제 예정|event_id.skm.api.mac.delete_request|
+|API MAC 주소 즉시 삭제|event_id.skm.api.mac.delete|
+|API 인증서 등록|event_id.skm.api.certificate.create|
+|API 인증서 리스트 삭제 예정|event_id.skm.api.certificate.delete_request|
+|API 인증서 리스트 즉시 삭제|event_id.skm.api.certificate.delete|
 
 ### Deploy
 
@@ -457,70 +529,6 @@
 |运行发布|event_id.deploy.deploy_execute|
 |Download deployment history|event_id.deploy.deploy_history_download|
 |Execute Autoscale Deployment|event_id.deploy.autoscale_deploy_execute|
-
-### Console
-
-| Event | Event ID |
-| --- | --- |
-|IAM 登入|event_id.iam.login|
-|Change Authority for IAM Members|event_id.iam.member.role.update|
-|Add Organization Domain |event_id.org.domain.add|
-|Modify Organization Domain|event_id.org.domain.update|
-|Add Organization Member|event_id.org.iam.member.add|
-|Send Notification Mail to Organization Members to Change Password |event_id.org.iam.member.send_mail|
-|Modify Organization Member Information |event_id.org.iam.member.update|
-|Add Organization Member |event_id.org.member.add|
-|Delete Organization Member|event_id.org.member.delete|
-|Invite Organization Member|event_id.org.member.invite|
-|Cancel Organization Member Invitation  |event_id.org.member.invite_cancel|
-|Modify Organization Member  |event_id.org.member.update|
-|Disable Organization Service|event_id.org.product.disable|
-|Enable Organization Service|event_id.org.product.enable|
-|Modify Organization Information|event_id.org.update|
-|Access IAM Organization|event_id.iam.org.selected|
-|Create Project|event_id.project.create|
-|Delete Project|event_id.project.delete|
-|Add Project Member |event_id.project.member.add|
-|Delete Project Member|event_id.project.member.delete|
-|Invite Project Member|event_id.project.member.invite|
-|Cancel Project Member Invitation|event_id.project.member.invite_cancel|
-|Modify Project Member Authority|event_id.project.member.update|
-|Delete Project Member|event_id.project.members.delete|
-|Disable Project Service|event_id.project.product.disable|
-|Enable Project Service|event_id.project.product.enable|
-|Modify Project|event_id.project.update|
-|Access Project|event_id.project.selected|
-|Add Project Common Role Group|event_id.org.role_group.create|
-|Modify Project Common Role Group|event_id.org.role_group.update|
-|Delete Project Common Role Group|event_id.org.role_group.delete|
-|Add Role to Project Common Role Group|event_id.org.role_group.assign.roles|
-|Delete Role from Project Common Role Group|event_id.org.role_group.remove.roles|
-|Add Role Group|event_id.project.role_group.create|
-|Modify Role Group|event_id.project.role_group.update|
-|Delete Role Group|event_id.project.role_group.delete|
-|Add Role to Role Group|event_id.project.role_group.assign.roles|
-|Delete Role from Role Group|event_id.project.role_group.remove.roles|
-|Access IAM Project|event_id.iam.project.selected|
-|Add Budget|event_id.budget.create|
-|Modify Budget|event_id.budget.modify|
-|Delete Budget|event_id.budget.delete|
-|Change governance setting|event_id.governance.change|
-|Delete the service support team|event_id.supporter.delete|
-|Invite service support team|event_id.supporter.add|
-|Apply for Marketplace|event_id.market_place.apply|
-|Cancel Applying for Marketplace|event_id.market_place.apply-cancel|
-|Apply for Marketplace Cancellation|event_id.market_place.termination-apply|
-|Cancel Applying for Marketplace Cancellation|event_id.market_place.termination-apply-cancel|
-|Create Notification Receiver Group in Organization|event_id.org.alarm_group.create|
-|Modify Notification Receiver Group in Organization|event_id.org.alarm_group.update|
-|Delete Notification Receiver Group in Organization|event_id.org.alarm_group.delete|
-|Create Notification Receiver Group in Project|event_id.project.alarm_group.create|
-|Modify Notification Receiver Group in Project|event_id.project.alarm_group.update|
-|Delete Notification Receiver Group in Project|event_id.project.alarm_group.delete|
-|조직 알림 수신 대상 수정|event_id.org.system_notification.receivers.update|
-|조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
-|프로젝트 알림 수신 대상 설정|event_id.project.system_notification.receivers.update|
-|프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
 
 ### Service Monitoring
 
@@ -585,12 +593,12 @@
 
 | Event | Event ID |
 | --- | --- |
-|Restoration from DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.restore_from_obs|
+|Activate backup|event_id.rds_for_sqlserver.db_instance.activate_backup|
 |Activate Log Backup|event_id.rds_for_sqlserver.db_instance.activate_log_backup|
 |Deactivate Backup|event_id.rds_for_sqlserver.db_instance.deactivate_backup|
-|Differential Backup to DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|
-|Activate backup|event_id.rds_for_sqlserver.db_instance.activate_backup|
 |Deactivate Log Backup|event_id.rds_for_sqlserver.db_instance.deactivate_log_backup|
+|Differential Backup to DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|
+|Restoration from DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.restore_from_obs|
 |Create Database Instance|event_id.rds_for_sqlserver.db_instance.create|
 |Delete Database Instance|event_id.rds_for_sqlserver.db_instance.delete|
 |Back Up Database Instance|event_id.rds_for_sqlserver.db_instance.backup|
@@ -673,8 +681,8 @@
 |Change Backup Path|event_id.backup.target.update|
 |Delete Backup Path|event_id.backup.target.delete|
 |Apply for Restoration|event_id.backup.restoration.apply|
-|백업 계획 중지|event_id.backup.target.suspend|
-|백업 계획 시작|event_id.backup.target.resume|
+|Pause Backup Plan|event_id.backup.target.suspend|
+|Resume Backup Plan|event_id.backup.target.resume|
 |Change Backup Server Data|event_id.backup.client.update|
 
 ### DNS Plus
@@ -1167,19 +1175,19 @@
 
 | Event | Event ID |
 | --- | --- |
-|플로우 메타 생성|event_id.dataflow.flow.meta.create|
-|플로우 메타 수정|event_id.dataflow.flow.meta.update|
-|플로우 메타 삭제|event_id.dataflow.flow.meta.delete|
-|플로우 그래프 수정|event_id.dataflow.flow.graph.update|
-|플로우 메타 복사|event_id.dataflow.flow.meta.copy|
-|플로우 시작|event_id.dataflow.flow.start|
-|플로우 중지|event_id.dataflow.flow.stop|
-|템플릿 메타 생성|event_id.dataflow.template.meta.create|
-|템플릿 메타 수정|event_id.dataflow.template.meta.update|
-|템플릿 메타 수정|event_id.dataflow.template.meta.delete|
-|템플릿 그래프 수정|event_id.dataflow.template.graph.update|
-|템플릿 그래프 복사|event_id.dataflow.template.graph.copy|
-|스케쥴러 저장|event_id.dataflow.scheduler.meta.save|
+|Create Flow Meta|event_id.dataflow.flow.meta.create|
+|Modify Flow Meta|event_id.dataflow.flow.meta.update|
+|Delete Flow Meta|event_id.dataflow.flow.meta.delete|
+|Modify Flow Graph|event_id.dataflow.flow.graph.update|
+|Copy Flow Meta|event_id.dataflow.flow.meta.copy|
+|Start Flow|event_id.dataflow.flow.start|
+|End Flow|event_id.dataflow.flow.stop|
+|Create Template Meta|event_id.dataflow.template.meta.create|
+|Modify Template Meta|event_id.dataflow.template.meta.update|
+|Delete Template Meta|event_id.dataflow.template.meta.delete|
+|Modify Template Graph|event_id.dataflow.template.graph.update|
+|Copy Template Graph|event_id.dataflow.template.graph.copy|
+|Save Scheduler|event_id.dataflow.scheduler.meta.save|
 
 ### DataQuery
 
@@ -1197,25 +1205,25 @@
 
 | Event | Event ID |
 | --- | --- |
-|Modify Notification|event_id.resource_watcher.alarm.update|
-|Delete Resource Group|event_id.resource_watcher.resource_group.delete|
-|Create Resource Tag|event_id.resource_watcher.resource_tag.create|
-|Modify Resource Group Relation|event_id.resource_watcher.resource_tag_relation.update|
-|Create Notification|event_id.resource_watcher.alarm.create|
-|Modify Resource|event_id.resource_watcher.resource.update|
-|Delete Resource Group Relation|event_id.resource_watcher.resource_group_relation.delete|
-|Add Resource Group Relation|event_id.resource_watcher.resource_tag_relation.create|
-|Create Resource|event_id.resource_watcher.resource.create|
-|Modify Resource Group|event_id.resource_watcher.resource_group.update|
-|Delete Resource Tag|event_id.resource_watcher.resource_tag.delete|
-|Delete Notification|event_id.resource_watcher.alarm.delete|
-|Create Resource Group|event_id.resource_watcher.resource_group.create|
-|Modify Resource Group Relation|event_id.resource_watcher.resource_group_relation.update|
-|Delete Resource Group Relation|event_id.resource_watcher.resource_tag_relation.delete|
 |Change Status of Notification|event_id.resource_watcher.alarm.change_status|
+|Create Notification|event_id.resource_watcher.alarm.create|
+|Delete Notification|event_id.resource_watcher.alarm.delete|
+|Modify Notification|event_id.resource_watcher.alarm.update|
+|Create Resource|event_id.resource_watcher.resource.create|
 |Delete Resource|event_id.resource_watcher.resource.delete|
+|Modify Resource|event_id.resource_watcher.resource.update|
+|Create Resource Group|event_id.resource_watcher.resource_group.create|
+|Delete Resource Group|event_id.resource_watcher.resource_group.delete|
+|Modify Resource Group|event_id.resource_watcher.resource_group.update|
 |Create Resource Group Relation|event_id.resource_watcher.resource_group_relation.create|
+|Delete Resource Group Relation|event_id.resource_watcher.resource_group_relation.delete|
+|Modify Resource Group Relation|event_id.resource_watcher.resource_group_relation.update|
+|Create Resource Tag|event_id.resource_watcher.resource_tag.create|
+|Delete Resource Tag|event_id.resource_watcher.resource_tag.delete|
 |Modify Resource Tag|event_id.resource_watcher.resource_tag.update|
+|Add Resource Group Relation|event_id.resource_watcher.resource_tag_relation.create|
+|Delete Resource Group Relation|event_id.resource_watcher.resource_tag_relation.delete|
+|Modify Resource Group Relation|event_id.resource_watcher.resource_tag_relation.update|
 
 ### AI EasyMaker
 
@@ -1315,45 +1323,45 @@
 
 | Event | Event ID |
 | --- | --- |
-|일반 수신자 파일 다운로드 예약|event_id.sms.reserve_download_normal_message|
 |수신 거부자 목록 추가|event_id.sms.add_block_recipient_list|
-|발송 설정 수정|event_id.sms.update_send_config|
-|예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
-|대량 발송 요청 목록 조회|event_id.sms.get_mass_message_master_list|
-|일반 발송 MMS 메시지 상세 조회|event_id.sms.get_normal_mms_message_detail|
-|예약 발송 메시지 목록 조회|event_id.sms.get_reservation_message_list|
-|수신거부 서비스 제거|event_id.sms.remove_block_service|
-|수신 거부자 파일 다운로드 예약|event_id.sms.reserve_download_block_recipient|
-|대량 발송 요청|event_id.sms.send_mass_message|
-|템플릿 등록|event_id.sms.add_template|
-|파일 다운로드|event_id.sms.download_reserved_file|
-|일반 발송 인증 메시지 상세 조회|event_id.sms.get_normal_auth_message_detail|
-|일반 발송 SMS 메시지 목록 조회|event_id.sms.get_normal_sms_message_list|
-|태그 발송 요청 수신자 상세 조회|event_id.sms.get_tag_message_recipient_detail|
-|본인 인증 요청|event_id.sms.request_self_verification|
-|태그 수신자 파일 다운로드 예약|event_id.sms.reserve_download_tag_message|
 |수신거부 서비스 추가|event_id.sms.add_block_service|
-|대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
-|수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
-|대량 발송 요청 수신자 상세 조회|event_id.sms.get_mass_message_recipient_detail|
-|일반 발송 MMS 메시지 목록 조회|event_id.sms.get_normal_mms_message_list|
-|예약 발송 메시지 검색하여 취소 목록 조회|event_id.sms.get_search_cancel_reservation_list|
-|카테고리 삭제|event_id.sms.remove_category|
-|대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|
-|수신거부 서비스 공유|event_id.sms.share_block_service|
-|대량 발송 취소|event_id.sms.cancel_mass_message|
-|수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
-|일반 발송 인증 메시지 목록 조회|event_id.sms.get_normal_auth_message_list|
-|예약 발송 메시지 상세 조회|event_id.sms.get_reservation_message_detail|
-|태그 발송 요청 수신자 목록 조회|event_id.sms.get_tag_message_recipient_list|
-|발신 번호 인증 요청|event_id.sms.request_sender_number_verification|
-|예약 발송 메시지 검색하여 취소|event_id.sms.search_cancel_reservation_message|
 |카테고리 등록|event_id.sms.add_category|
+|템플릿 등록|event_id.sms.add_template|
+|대량 발송 취소|event_id.sms.cancel_mass_message|
+|예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
+|수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
 |수신 거부자 목록 삭제|event_id.sms.delete_block_recipient_list|
+|파일 다운로드|event_id.sms.download_reserved_file|
+|수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
+|대량 발송 요청 목록 조회|event_id.sms.get_mass_message_master_list|
+|대량 발송 요청 수신자 상세 조회|event_id.sms.get_mass_message_recipient_detail|
 |대량 발송 요청 수신자 목록 조회|event_id.sms.get_mass_message_recipient_list|
+|일반 발송 인증 메시지 상세 조회|event_id.sms.get_normal_auth_message_detail|
+|일반 발송 인증 메시지 목록 조회|event_id.sms.get_normal_auth_message_list|
+|일반 발송 MMS 메시지 상세 조회|event_id.sms.get_normal_mms_message_detail|
+|일반 발송 MMS 메시지 목록 조회|event_id.sms.get_normal_mms_message_list|
 |일반 발송 SMS 메시지 상세 조회|event_id.sms.get_normal_sms_message_detail|
+|일반 발송 SMS 메시지 목록 조회|event_id.sms.get_normal_sms_message_list|
+|예약 발송 메시지 상세 조회|event_id.sms.get_reservation_message_detail|
+|예약 발송 메시지 목록 조회|event_id.sms.get_reservation_message_list|
+|예약 발송 메시지 검색하여 취소 목록 조회|event_id.sms.get_search_cancel_reservation_list|
 |태그 발송 요청 목록 조회|event_id.sms.get_tag_message_master_list|
+|태그 발송 요청 수신자 상세 조회|event_id.sms.get_tag_message_recipient_detail|
+|태그 발송 요청 수신자 목록 조회|event_id.sms.get_tag_message_recipient_list|
+|수신거부 서비스 제거|event_id.sms.remove_block_service|
+|카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
+|본인 인증 요청|event_id.sms.request_self_verification|
+|발신 번호 인증 요청|event_id.sms.request_sender_number_verification|
+|수신 거부자 파일 다운로드 예약|event_id.sms.reserve_download_block_recipient|
+|대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|
+|일반 수신자 파일 다운로드 예약|event_id.sms.reserve_download_normal_message|
+|태그 수신자 파일 다운로드 예약|event_id.sms.reserve_download_tag_message|
+|예약 발송 메시지 검색하여 취소|event_id.sms.search_cancel_reservation_message|
+|대량 발송 요청|event_id.sms.send_mass_message|
+|수신거부 서비스 공유|event_id.sms.share_block_service|
+|발송 설정 수정|event_id.sms.update_send_config|
+|대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
 
 ### File-Crafter
 
@@ -1383,26 +1391,26 @@
 
 | Event | Event ID |
 | --- | --- |
-|Nat 삭제|event_id.network_firewall.nat_delete|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|
-|인프라 구성|event_id.network_firewall.config_project|
-|정책 삭제|event_id.network_firewall.group_delete|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|
-|옵션 설정|event_id.network_firewall.option_create|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|
-|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
-|정책 수정|event_id.network_firewall.group_modify|
-|Nat 추가|event_id.network_firewall.nat_create|
-|Port 객체 추가|event_id.network_firewall.port_object_create|
 |방화벽 구성|event_id.network_firewall.config_iaas|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|
+|인프라 구성|event_id.network_firewall.config_project|
+|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
 |정책 추가|event_id.network_firewall.group_create|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
+|정책 삭제|event_id.network_firewall.group_delete|
+|정책 수정|event_id.network_firewall.group_modify|
 |IP 객체 추가|event_id.network_firewall.ip_object_create|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|
+|Nat 추가|event_id.network_firewall.nat_create|
+|Nat 삭제|event_id.network_firewall.nat_delete|
+|옵션 설정|event_id.network_firewall.option_create|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|
+|Port 객체 추가|event_id.network_firewall.port_object_create|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|
 
 ### RCS Bizmessage
 
@@ -1416,48 +1424,48 @@
 
 | Event | Event ID |
 | --- | --- |
-|Selected Inspection Requested|event_id.security_advisor.manual_scan_request|
 |Auto Inspection Completed|event_id.security_advisor.auto_scan_complete|
-|Settings Changed|event_id.security_advisor.setting_change|
 |Download Excel|event_id.security_advisor.excel_download|
+|Selected Inspection Requested|event_id.security_advisor.manual_scan_request|
+|Settings Changed|event_id.security_advisor.setting_change|
 
 ### Email
 
 | Event | Event ID |
 | --- | --- |
-|대량 발송 취소|event_id.email.cancel_mass_mail|
-|대량 발송 요청 수신자 상세 조회|event_id.email.get_mass_receiver_detail|
-|일반 발송 메일 수신자 목록 조회|event_id.email.get_send_list|
-|카테고리 수정|event_id.email.modify_category|
-|템플릿 삭제|event_id.email.remove_template|
 |파일 다운로드|email_id.email.file_download|
-|템플릿 등록|event_id.email.add_template|
-|수신 거부자 목록 조회|event_id.email.get_block_receiver_list|
-|예약 발송 메일 수신자 목록 조회|event_id.email.get_reservation_list|
-|태그 발송 요청 수신자 목록 조회|event_id.email.get_tag_receiver_list|
-|카테고리 삭제|event_id.email.remove_category|
-|발송 설정 수정|event_id.email.update_send_config|
-|카테고리 등록|event_id.email.add_category|
-|Email 상품 비활성화|event_id.email.disble_email_product|
-|대량 발송 요청 수신자 목록 조회|event_id.email.get_mass_receiver_list|
-|태그 발송 요청 목록 조회|event_id.email.get_tag_master_list|
-|템플릿 수정|event_id.email.modify_template|
-|UID 삭제|event_id.email.remove_uid|
-|수신거부 사용자 추가|event_id.email.add_block_receiver|
 |파일 다운로드 요청|email_id.email.file_download_request|
-|UID 추가(파일)|event_id.email.add_uid|
-|대량 발송 요청 목록 조회|event_id.email.get_mass_master_list|
-|일반 발송 메일 수신자 상세 조회|event_id.email.get_send_detail|
-|UID 목록 조회|event_id.email.get_uid|
-|도메인 삭제|event_id.email.remove_domain|
-|대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
-|도메인 등록|event_id.email.add_domain|
-|Email 상품 활성화|event_id.email.enable_email_product|
-|예약 발송 메일 수신자 상세 조회|event_id.email.get_reservation_detail|
-|태그 발송 요청 수신자 상세 조회|event_id.email.get_tag_receiver_detail|
-|수신거부 사용자 제거|event_id.email.remove_block_receiver|
-|대량 발송 요청|event_id.email.send_mass_mail|
+|수신거부 사용자 추가|event_id.email.add_block_receiver|
 |수신 거부자 등록(파일)|event_id.email.add_block_receiver_list_file|
+|카테고리 등록|event_id.email.add_category|
+|도메인 등록|event_id.email.add_domain|
+|템플릿 등록|event_id.email.add_template|
+|UID 추가(파일)|event_id.email.add_uid|
+|대량 발송 취소|event_id.email.cancel_mass_mail|
+|Email 상품 비활성화|event_id.email.disble_email_product|
+|Email 상품 활성화|event_id.email.enable_email_product|
+|수신 거부자 목록 조회|event_id.email.get_block_receiver_list|
+|대량 발송 요청 목록 조회|event_id.email.get_mass_master_list|
+|대량 발송 요청 수신자 상세 조회|event_id.email.get_mass_receiver_detail|
+|대량 발송 요청 수신자 목록 조회|event_id.email.get_mass_receiver_list|
+|예약 발송 메일 수신자 상세 조회|event_id.email.get_reservation_detail|
+|예약 발송 메일 수신자 목록 조회|event_id.email.get_reservation_list|
+|일반 발송 메일 수신자 상세 조회|event_id.email.get_send_detail|
+|일반 발송 메일 수신자 목록 조회|event_id.email.get_send_list|
+|태그 발송 요청 목록 조회|event_id.email.get_tag_master_list|
+|태그 발송 요청 수신자 상세 조회|event_id.email.get_tag_receiver_detail|
+|태그 발송 요청 수신자 목록 조회|event_id.email.get_tag_receiver_list|
+|UID 목록 조회|event_id.email.get_uid|
+|카테고리 수정|event_id.email.modify_category|
+|템플릿 수정|event_id.email.modify_template|
+|수신거부 사용자 제거|event_id.email.remove_block_receiver|
+|카테고리 삭제|event_id.email.remove_category|
+|도메인 삭제|event_id.email.remove_domain|
+|템플릿 삭제|event_id.email.remove_template|
+|UID 삭제|event_id.email.remove_uid|
+|대량 발송 요청|event_id.email.send_mass_mail|
+|발송 설정 수정|event_id.email.update_send_config|
+|대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
 ### Pose Estimation
 
