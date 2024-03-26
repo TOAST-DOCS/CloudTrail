@@ -1277,6 +1277,12 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
+|노드 강제 종료|event_id.gameanvil.node.force_stop|
+|노드 중지|event_id.gameanvil.node.pause|
+|노드 복구|event_id.gameanvil.node.restore|
+|노드 재개|event_id.gameanvil.node.resume|
+|노드 시작|event_id.gameanvil.node.start_up|
+|상품 선택|event_id.gameanvil.price.select|
 |서버 생성|event_id.gameanvil.instance.create|
 |서버 삭제|event_id.gameanvil.instance.delete|
 |서버 복사|event_id.gameanvil.instance.copy|

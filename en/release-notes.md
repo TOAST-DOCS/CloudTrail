@@ -4,6 +4,12 @@
 #### More Events
 * Added events related to Secure Key Manager.
 * Added events related to DataFlow.
+#### Feature Updates
+* 이벤트 로그의 request, response 내용 중 password, userAccessKey, userSecretKey, appKey, secretKey, accessKey 값들이 마스킹 처리되어 보여집니다.
+
+### 2024. 03. 21.
+#### More Events
+* Added events related to GameAnvil.
 
 ### 2024. 02. 27.
 #### More Events

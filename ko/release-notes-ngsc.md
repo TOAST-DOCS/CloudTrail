@@ -1,5 +1,9 @@
 ## CloudTrail > 릴리스 노트
 
+### 2024. 03. 26.
+#### 기능 추가
+* 이벤트 로그의 request, response 내용 중 password, userAccessKey, userSecretKey, appKey, secretKey, accessKey 값들이 마스킹 처리되어 보여집니다.
+
 ### 2024. 02. 27.
 #### 이벤트 추가
 * 콘솔 서비스 관련 이벤트가 추가되었습니다.

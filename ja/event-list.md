@@ -1277,6 +1277,12 @@
 
 | イベント | イベントID |
 | --- | --- |
+|노드 강제 종료|event_id.gameanvil.node.force_stop|
+|노드 중지|event_id.gameanvil.node.pause|
+|노드 복구|event_id.gameanvil.node.restore|
+|노드 재개|event_id.gameanvil.node.resume|
+|노드 시작|event_id.gameanvil.node.start_up|
+|상품 선택|event_id.gameanvil.price.select|
 |서버 생성|event_id.gameanvil.instance.create|
 |서버 삭제|event_id.gameanvil.instance.delete|
 |서버 복사|event_id.gameanvil.instance.copy|
@@ -1325,19 +1331,19 @@
 | --- | --- |
 |수신 거부자 목록 추가|event_id.sms.add_block_recipient_list|
 |수신거부 서비스 추가|event_id.sms.add_block_service|
-|카테고리 등록|event_id.sms.add_category|
-|템플릿 등록|event_id.sms.add_template|
+|カテゴリーの削除|event_id.sms.add_category|
+|テンプレートの登録|event_id.sms.add_template|
 |대량 발송 취소|event_id.sms.cancel_mass_message|
 |예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
 |수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
-|수신 거부자 목록 삭제|event_id.sms.delete_block_recipient_list|
-|파일 다운로드|event_id.sms.download_reserved_file|
+|受信拒否者リストの削除|event_id.sms.delete_block_recipient_list|
+|ファイルのダウンロード|event_id.sms.download_reserved_file|
 |수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
 |대량 발송 요청 목록 조회|event_id.sms.get_mass_message_master_list|
 |대량 발송 요청 수신자 상세 조회|event_id.sms.get_mass_message_recipient_detail|
-|대량 발송 요청 수신자 목록 조회|event_id.sms.get_mass_message_recipient_list|
+|大量送信リクエスト受信者 リスのト照会|event_id.sms.get_mass_message_recipient_list|
 |일반 발송 인증 메시지 상세 조회|event_id.sms.get_normal_auth_message_detail|
-|일반 발송 인증 메시지 목록 조회|event_id.sms.get_normal_auth_message_list|
+|一般送信認証メッセージリストの照会|event_id.sms.get_normal_auth_message_list|
 |일반 발송 MMS 메시지 상세 조회|event_id.sms.get_normal_mms_message_detail|
 |일반 발송 MMS 메시지 목록 조회|event_id.sms.get_normal_mms_message_list|
 |일반 발송 SMS 메시지 상세 조회|event_id.sms.get_normal_sms_message_detail|
@@ -1346,19 +1352,19 @@
 |예약 발송 메시지 목록 조회|event_id.sms.get_reservation_message_list|
 |예약 발송 메시지 검색하여 취소 목록 조회|event_id.sms.get_search_cancel_reservation_list|
 |태그 발송 요청 목록 조회|event_id.sms.get_tag_message_master_list|
-|태그 발송 요청 수신자 상세 조회|event_id.sms.get_tag_message_recipient_detail|
-|태그 발송 요청 수신자 목록 조회|event_id.sms.get_tag_message_recipient_list|
-|수신거부 서비스 제거|event_id.sms.remove_block_service|
+|タグ送信リクエスト受信者 詳細照会|event_id.sms.get_tag_message_recipient_detail|
+|タグ送信リクエスト受信者 リスト照会|event_id.sms.get_tag_message_recipient_list|
+|受信拒否サービスの削除|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
-|본인 인증 요청|event_id.sms.request_self_verification|
+|本人認証リクエスト|event_id.sms.request_self_verification|
 |발신 번호 인증 요청|event_id.sms.request_sender_number_verification|
 |수신 거부자 파일 다운로드 예약|event_id.sms.reserve_download_block_recipient|
-|대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|
+|大量受信者ファイルダウンロード予約|event_id.sms.reserve_download_mass_message|
 |일반 수신자 파일 다운로드 예약|event_id.sms.reserve_download_normal_message|
 |태그 수신자 파일 다운로드 예약|event_id.sms.reserve_download_tag_message|
 |예약 발송 메시지 검색하여 취소|event_id.sms.search_cancel_reservation_message|
-|대량 발송 요청|event_id.sms.send_mass_message|
+|大量送信リクエスト|event_id.sms.send_mass_message|
 |수신거부 서비스 공유|event_id.sms.share_block_service|
 |발송 설정 수정|event_id.sms.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
