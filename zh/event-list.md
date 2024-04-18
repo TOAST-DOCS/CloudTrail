@@ -167,6 +167,18 @@
 |Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
 |Disconnect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.detach_routingtable|
 |Change VPC Subnet|event_id.iaas.vpc_subnet.update|
+|Create Cluster|event_id.iaas.cluster.create|
+|Delete Cluster|event_id.iaas.cluster.delete|
+|Change Cluster OWNER|event_id.iaas.cluster.handover|
+|Change Autoscaler Settings|event_id.iaas.cluster.update_autoscale|
+|Change CNI|event_id.iaas.cluster.cni_update|
+|Create Node Group|event_id.iaas.nodegroup.create|
+|Modify Node Group|event_id.iaas.nodegroup.update|
+|Delete Node Group|event_id.iaas.nodegroup.delete|
+|Start Worker Node|event_id.iaas.nodegroup.start_node|
+|Stop Worker Node|event_id.iaas.nodegroup.stop_node|
+|Upgrade Cluster|event_id.iaas.nodegroup.upgrade|
+|Change User Script|event_id.iaas.nodegroup.update_userscript|
 |Copy Image|event_id.iaas.image.copy|
 |Build Image|event_id.iaas.image_template.build|
 |Cancel Image Build|event_id.iaas.image_template.cancel_build|
@@ -296,6 +308,17 @@
 |Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
 |Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
 |Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
+|SGW 변경 완료|event_id.iaas.cluster.update_sgw.end|
+|SGW 변경 실패|event_id.iaas.cluster.update_sgw.failed|
+|SGW 변경 시작|event_id.iaas.cluster.update_sgw.start|
+|오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
+|K8S APISERVER 문제 탐지|event_id.iaas.cluster.k8s_api_not_working.detected|
+|K8S APISERVER 문제 해결|event_id.iaas.cluster.k8s_api_not_working.resolved|
+|모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
+|모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
+|클러스터 동작 가능 전환 완료|event_id.iaas.cluster.resume.end|
+|클러스터 동작 가능 전환 실패|event_id.iaas.cluster.resume.failed|
+|클러스터 동작 가능 전환 시작|event_id.iaas.cluster.resume.start|
 
 ### Object Storage
 
@@ -965,6 +988,7 @@
 |블랙리스트 차단 해제|event_id.appguard.blacklist_delete|
 |정책 수정|event_id.appguard.policy_update|
 |Unity SDK download|event_id.appguard.sdk_download_unity|
+|React Native SDK download|event_id.appguard.sdk_download_react_native|
 
 ### ShortURL
 

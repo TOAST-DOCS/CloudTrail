@@ -1,8 +1,13 @@
 ## CloudTrail > Release Notes
 
+### 2024. 04. 13.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
 ### 2024. 03. 26.
 #### More Events
 * Added events related to Secure Key Manager.
+* Added events related to NHN AppGuard.
 * Added events related to DataFlow.
 #### Feature Updates
 * In the requests and responses of event logs, the values for password, userAccessKey, userSecretKey, appKey, secretKey, and accessKey appear as masked.
@@ -179,6 +184,7 @@
 ### 2022. 07. 26.
 #### More Events
 * Added events related to API Gateway.
+* Added events related to Default Infrastructure Service.
 
 ### 2022. 06. 14.
 #### More Events
@@ -255,6 +261,10 @@
 * Added events related to Console.
 * Added events related to EasyCache.
 
+### 2021. 08. 19.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
 ### 2021. 07. 27.
 #### More Events
 * Added events related to Face Recognition.
@@ -322,6 +332,7 @@
 
 ### 2020. 08. 19.
 #### More Events
+* Added events related to Default Infrastructure Service.
 * Added events related to Kubernetes.
 
 ### 2020. 07. 28.

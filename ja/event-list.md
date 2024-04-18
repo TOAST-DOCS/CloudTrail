@@ -167,6 +167,18 @@
 |VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
 |VPCサブネットルーティングテーブルの接続解除|event_id.iaas.vpc_subnet.detach_routingtable|
 |VPCサブネットの変更|event_id.iaas.vpc_subnet.update|
+|クラスター作成|event_id.iaas.cluster.create|
+|クラスター削除|event_id.iaas.cluster.delete|
+|クラスタOWNERの変更|event_id.iaas.cluster.handover|
+|オートスケーラーの設定を変更|event_id.iaas.cluster.update_autoscale|
+|CNI変更|event_id.iaas.cluster.cni_update|
+|ノードグループ作成|event_id.iaas.nodegroup.create|
+|ノードグループの修正|event_id.iaas.nodegroup.update|
+|ノードグループ削除|event_id.iaas.nodegroup.delete|
+|ワーカーノードの起動|event_id.iaas.nodegroup.start_node|
+|ワーカーノードの停止|event_id.iaas.nodegroup.stop_node|
+|クラスターのアップグレード|event_id.iaas.nodegroup.upgrade|
+|ユーザースクリプト変更|event_id.iaas.nodegroup.update_userscript|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージビルド|event_id.iaas.image_template.build|
 |イメージビルドのキャンセル|event_id.iaas.image_template.cancel_build|
@@ -296,6 +308,17 @@
 |クラスタAPIエンドポイントIPアクセス制御の変更の起動|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
 |クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
 |クラスタAPIエンドポイントIPアクセス制御の変更の失敗|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
+|SGW 변경 완료|event_id.iaas.cluster.update_sgw.end|
+|SGW 변경 실패|event_id.iaas.cluster.update_sgw.failed|
+|SGW 변경 시작|event_id.iaas.cluster.update_sgw.start|
+|오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
+|K8S APISERVER 문제 탐지|event_id.iaas.cluster.k8s_api_not_working.detected|
+|K8S APISERVER 문제 해결|event_id.iaas.cluster.k8s_api_not_working.resolved|
+|모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
+|모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
+|클러스터 동작 가능 전환 완료|event_id.iaas.cluster.resume.end|
+|클러스터 동작 가능 전환 실패|event_id.iaas.cluster.resume.failed|
+|클러스터 동작 가능 전환 시작|event_id.iaas.cluster.resume.start|
 
 ### Object Storage
 
@@ -965,6 +988,7 @@
 |ブラックリスト解除|event_id.appguard.blacklist_delete|
 |ポリシー修正|event_id.appguard.policy_update|
 |Unity SDKダウンロード|event_id.appguard.sdk_download_unity|
+|React Native SDK ダウンロード|event_id.appguard.sdk_download_react_native|
 
 ### ShortURL
 

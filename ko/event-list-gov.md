@@ -651,30 +651,30 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|로그 저장/다운로드 설정|event_id.cloud_trail.set_log_save_download_config|
 |로그 저장/다운로드 설정 삭제|event_id.cloud_trail.delete_log_save_download_config|
+|로그 저장/다운로드 설정|event_id.cloud_trail.set_log_save_download_config|
 
 ### Resource Watcher
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|리소스 그룹 삭제|event_id.resource_watcher.resource_group.delete|
-|리소스 수정|event_id.resource_watcher.resource.update|
-|리소스 생성|event_id.resource_watcher.resource.create|
-|알림 삭제|event_id.resource_watcher.alarm.delete|
-|리소스 태그 관계 삭제|event_id.resource_watcher.resource_tag_relation.delete|
 |알림 상태 변경|event_id.resource_watcher.alarm.change_status|
-|리소스 태그 수정|event_id.resource_watcher.resource_tag.update|
-|리소스 태그 생성|event_id.resource_watcher.resource_tag.create|
-|리소스 그룹 관계 삭제&#9;|event_id.resource_watcher.resource_group_relation.delete|
-|리소스 그룹 수정|event_id.resource_watcher.resource_group.update|
-|리소스 그룹 생성|event_id.resource_watcher.resource_group.create|
-|리소스 삭제|event_id.resource_watcher.resource.delete|
-|알림 수정|event_id.resource_watcher.alarm.update|
-|리소스 태그 관계 수정|event_id.resource_watcher.resource_tag_relation.update|
 |알림 생성|event_id.resource_watcher.alarm.create|
-|리소스 태그 관계 추가|event_id.resource_watcher.resource_tag_relation.create|
-|리소스 태그 삭제|event_id.resource_watcher.resource_tag.delete|
-|리소스 그룹 관계 수정|event_id.resource_watcher.resource_group_relation.update|
+|알림 삭제|event_id.resource_watcher.alarm.delete|
+|알림 수정|event_id.resource_watcher.alarm.update|
+|리소스 생성|event_id.resource_watcher.resource.create|
+|리소스 삭제|event_id.resource_watcher.resource.delete|
+|리소스 수정|event_id.resource_watcher.resource.update|
+|리소스 그룹 생성|event_id.resource_watcher.resource_group.create|
+|리소스 그룹 삭제|event_id.resource_watcher.resource_group.delete|
+|리소스 그룹 수정|event_id.resource_watcher.resource_group.update|
 |리소스 그룹 관계 추가|event_id.resource_watcher.resource_group_relation.create|
+|리소스 그룹 관계 삭제&#9;|event_id.resource_watcher.resource_group_relation.delete|
+|리소스 그룹 관계 수정|event_id.resource_watcher.resource_group_relation.update|
+|리소스 태그 생성|event_id.resource_watcher.resource_tag.create|
+|리소스 태그 삭제|event_id.resource_watcher.resource_tag.delete|
+|리소스 태그 수정|event_id.resource_watcher.resource_tag.update|
+|리소스 태그 관계 추가|event_id.resource_watcher.resource_tag_relation.create|
+|리소스 태그 관계 삭제|event_id.resource_watcher.resource_tag_relation.delete|
+|리소스 태그 관계 수정|event_id.resource_watcher.resource_tag_relation.update|
 
