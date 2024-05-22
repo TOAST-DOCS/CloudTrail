@@ -1,8 +1,15 @@
 ## CloudTrail > Release Notes
 
-### 2024. 04. 13.
+### 2024. 05. 28.
 #### More Events
+* Added events related to Console.
 * Added events related to Default Infrastructure Service.
+* Added events related to RDS for MySQL.
+* Added events related to Cloud Monitoring.
+
+### 2024. 05. 03.
+#### More Events
+* Added events related to GameAnvil.
 
 ### 2024. 03. 26.
 #### More Events
@@ -21,18 +28,6 @@
 * Added events related to Console.
 * Added events related to ROLE.
 * Added events related to NHN Container Registry(NCR).
-
-### 2024. 02. 18.
-#### More Events
-* Added events related to Default Infrastructure Service.
-
-### 2024. 02. 17.
-#### More Events
-* Added events related to Default Infrastructure Service.
-
-### 2024. 02. 16.
-#### More Events
-* Added events related to Default Infrastructure Service.
 
 ### 2024. 02. 15.
 #### More Events
@@ -184,7 +179,6 @@
 ### 2022. 07. 26.
 #### More Events
 * Added events related to API Gateway.
-* Added events related to Default Infrastructure Service.
 
 ### 2022. 06. 14.
 #### More Events
@@ -261,10 +255,6 @@
 * Added events related to Console.
 * Added events related to EasyCache.
 
-### 2021. 08. 19.
-#### More Events
-* Added events related to Default Infrastructure Service.
-
 ### 2021. 07. 27.
 #### More Events
 * Added events related to Face Recognition.
@@ -296,7 +286,7 @@
 ### 2021. 03. 23.
 #### More Events
 * Added events related to EasyCache.
-* Added events related to Kubernetes.
+* Added events related to Default Infrastructure Service.
 
 ### 2021. 02. 09.
 #### More Events
@@ -329,11 +319,6 @@
 #### More Events
 * Added events related to Backup.
 * Added events related to Default Infrastructure Service.
-
-### 2020. 08. 19.
-#### More Events
-* Added events related to Default Infrastructure Service.
-* Added events related to Kubernetes.
 
 ### 2020. 07. 28.
 #### More Features

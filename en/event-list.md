@@ -4,6 +4,16 @@
 
 | Event | Event ID |
 | --- | --- |
+|Enable Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_activate|
+|Create Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_create|
+|Delete Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_delete|
+|Modify Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_modify|
+|Copy Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_copy|
+|Create Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_create|
+|Delete Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_delete|
+|Display Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_exposure|
+|Modify Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_modify|
+|Enable Custom Dashboard Metrics Collection|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM Login|event_id.iam.login|
 |Change Authority for IAM Members|event_id.iam.member.role.update|
 |Add Organization Domain |event_id.org.domain.add|
@@ -167,18 +177,6 @@
 |Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
 |Disconnect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.detach_routingtable|
 |Change VPC Subnet|event_id.iaas.vpc_subnet.update|
-|Create Cluster|event_id.iaas.cluster.create|
-|Delete Cluster|event_id.iaas.cluster.delete|
-|Change Cluster OWNER|event_id.iaas.cluster.handover|
-|Change Autoscaler Settings|event_id.iaas.cluster.update_autoscale|
-|Change CNI|event_id.iaas.cluster.cni_update|
-|Create Node Group|event_id.iaas.nodegroup.create|
-|Modify Node Group|event_id.iaas.nodegroup.update|
-|Delete Node Group|event_id.iaas.nodegroup.delete|
-|Start Worker Node|event_id.iaas.nodegroup.start_node|
-|Stop Worker Node|event_id.iaas.nodegroup.stop_node|
-|Upgrade Cluster|event_id.iaas.nodegroup.upgrade|
-|Change User Script|event_id.iaas.nodegroup.update_userscript|
 |Copy Image|event_id.iaas.image.copy|
 |Build Image|event_id.iaas.image_template.build|
 |Cancel Image Build|event_id.iaas.image_template.cancel_build|
@@ -249,6 +247,15 @@
 |Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|
 |Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|
 |Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|
+|Change Block Storage Size|event_id.iaas.volume.extend|
+|Create NetworkACL|event_id.iaas.networkacl.create|
+|Delete NetworkACL|event_id.iaas.networkacl.delete|
+|Update NetworkACL|event_id.iaas.networkacl.update|
+|Create NetworkACL Rule|event_id.iaas.networkacl_rule.create|
+|Delete NetworkACL Rule|event_id.iaas.networkacl_rule.delete|
+|Update NetworkACL Rule|event_id.iaas.networkacl_rule.update|
+|Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
+|Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
 |Modify NAS Volume|event_id.iaas.nas.volume.update|
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|
@@ -259,66 +266,185 @@
 |Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
 |Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
 |Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
+|Create Cluster Completed|event_id.iaas.cluster.create.end|
+|Create Cluster Failed|event_id.iaas.cluster.create.failed|
+|Create Cluster Started|event_id.iaas.cluster.create.start|
+|Delete Cluster Completed|event_id.iaas.cluster.delete.end|
+|Delete Cluster Failed|event_id.iaas.cluster.delete.failed|
+|Delete Cluster Started|event_id.iaas.cluster.delete.start|
+|Change Cluster OWNER Completed|event_id.iaas.cluster.handover.end|
+|Change Cluster OWNER Failed|event_id.iaas.cluster.handover.failed|
+|Change Cluster OWNER Started|event_id.iaas.cluster.handover.start|
+|Resize Cluster Completed|event_id.iaas.cluster.resize.end|
+|Resize Cluster Failed|event_id.iaas.cluster.resize.failed|
+|Resize Cluster Started|event_id.iaas.cluster.resize.start|
+|Change operational state Completed|event_id.iaas.cluster.resume.end|
+|Change operational state Failed|event_id.iaas.cluster.resume.failed|
+|Change operational state Started|event_id.iaas.cluster.resume.start|
+|Change CNI Completed|event_id.iaas.cluster.cni_update.end|
+|Change CNI Failed|event_id.iaas.cluster.cni_update.failed|
+|Change CNI Started|event_id.iaas.cluster.cni_update.start|
+|Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
+|Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
+|Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
+|Change SGW Completed|event_id.iaas.cluster.update_sgw.end|
+|Change SGW Failed|event_id.iaas.cluster.update_sgw.failed|
+|Change SGW Started|event_id.iaas.cluster.update_sgw.start|
+|Rotate Certificate Completed|event_id.iaas.cluster.cluster_rotate_certificate.end|
+|Rotate Certificate Failed|event_id.iaas.cluster.cluster_rotate_certificate.failed|
+|Rotate Certificate Started|event_id.iaas.cluster.cluster_rotate_certificate.start|
+|Detected K8S APISERVER Issue|event_id.iaas.cluster.k8s_api_not_working.detected|
+|Resolved K8S APISERVER Issue|event_id.iaas.cluster.k8s_api_not_working.resolved|
+|Detected all node stop|event_id.iaas.cluster.all_nodes_not_ready.detected|
+|Resolved all node stop|event_id.iaas.cluster.all_nodes_not_ready.resolved|
+|Detected autohealing|event_id.iaas.cluster.auto_healing.detected|
+|Create Node Group Completed|event_id.iaas.nodegroup.create.end|
+|Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
+|Create Node Group Started|event_id.iaas.nodegroup.create.start|
+|Delete Node Group Completed|event_id.iaas.nodegroup.delete.end|
+|Delete Node Group Failed|event_id.iaas.nodegroup.delete.failed|
+|Delete Node Group Started|event_id.iaas.nodegroup.delete.start|
+|Start Worker Node Completed|event_id.iaas.nodegroup.node_action.start_node.end|
+|Start Worker Node Failed|event_id.iaas.nodegroup.node_action.start_node.failed|
+|Start Worker Node Started|event_id.iaas.nodegroup.node_action.start_node.start|
+|Stop Worker Node Completed|event_id.iaas.nodegroup.node_action.stop_node.end|
+|Stop Worker Node Failed|event_id.iaas.nodegroup.node_action.stop_node.failed|
+|Stop Worker Node Started|event_id.iaas.nodegroup.node_action.stop_node.start|
+|Change Autoscaler Settings Completed|event_id.iaas.nodegroup.set_cluster_autoscaler.end|
+|Change Autoscaler Settings Failed|event_id.iaas.nodegroup.set_cluster_autoscaler.failed|
+|Change Autoscaler Settings Started|event_id.iaas.nodegroup.set_cluster_autoscaler.start|
+|Change Instance Type Completed|event_id.iaas.nodegroup.update_flavor.end|
+|Change Instance Type Failed|event_id.iaas.nodegroup.update_flavor.failed|
+|Change Instance Type Started|event_id.iaas.nodegroup.update_flavor.start|
+|Change User Script Completed|event_id.iaas.nodegroup.update_userscript.end|
+|Change User Script Failed|event_id.iaas.nodegroup.update_userscript.failed|
+|Change User Script Started|event_id.iaas.nodegroup.update_userscript.start|
+|Upgrade Node Group Completed|event_id.iaas.nodegroup.upgrade.end|
+|Upgrade Node Group Failed|event_id.iaas.nodegroup.upgrade.failed|
+|Upgrade Node Group Started|event_id.iaas.nodegroup.upgrade.start|
+|Approve CSR|event_id.iaas.cluster.certificate_signing_request.approval|
+|Create CSR|event_id.iaas.cluster.certificate_signing_request.create|
+|Delete CSR|event_id.iaas.cluster.certificate_signing_request.delete|
+|Update CSR|event_id.iaas.cluster.certificate_signing_request.update|
+|Create Cluster Role|event_id.iaas.cluster.cluster_role.create|
+|Delete Cluster Role|event_id.iaas.cluster.cluster_role.delete|
+|Update Cluster Role|event_id.iaas.cluster.cluster_role.update|
+|Create Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.create|
+|Delete Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.delete|
+|Update Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.update|
+|Create Configmap|event_id.iaas.cluster.configmap.create|
+|Delete Configmap|event_id.iaas.cluster.configmap.delete|
+|Update Configmap|event_id.iaas.cluster.configmap.update|
+|Create Cron Job|event_id.iaas.cluster.cronjob.create|
+|Delete Cron Job|event_id.iaas.cluster.cronjob.delete|
+|Update Cron Job|event_id.iaas.cluster.cronjob.update|
+|Create Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.create|
+|Delete Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.delete|
+|Update Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.update|
+|Create Daemon Set|event_id.iaas.cluster.daemon_set.create|
+|Delete Daemon Set|event_id.iaas.cluster.daemon_set.delete|
+|Update Daemon Set|event_id.iaas.cluster.daemon_set.update|
+|Create Deployment|event_id.iaas.cluster.deployment.create|
+|Delete Deployment|event_id.iaas.cluster.deployment.delete|
+|Update Deployment|event_id.iaas.cluster.deployment.update|
+|Scale Up Deployment|event_id.iaas.cluster.deployment.update_scale|
+|Create Endpoint|event_id.iaas.cluster.endpoint.create|
+|Delete Endpoint|event_id.iaas.cluster.endpoint.delete|
+|Update Endpoint|event_id.iaas.cluster.endpoint.update|
+|Create Endpoint Slice|event_id.iaas.cluster.endpoint_slice.create|
+|Delete Endpoint Slice|event_id.iaas.cluster.endpoint_slice.delete|
+|Update Endpoint Slice|event_id.iaas.cluster.endpoint_slice.update|
+|Create Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.create|
+|Delete Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.delete|
+|Update Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.update|
+|Create Ingress|event_id.iaas.cluster.ingress.create|
+|Delete Ingress|event_id.iaas.cluster.ingress.delete|
+|Update Ingress|event_id.iaas.cluster.ingress.update|
+|Create Job|event_id.iaas.cluster.job.create|
+|Delete Job|event_id.iaas.cluster.job.delete|
+|Update Job|event_id.iaas.cluster.job.update|
+|Create Limit Range|event_id.iaas.cluster.limit_range.create|
+|Delete Limit Range|event_id.iaas.cluster.limit_range.delete|
+|Update Limit Range|event_id.iaas.cluster.limit_range.update|
+|Create Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.create|
+|Delete Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.delete|
+|Update Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.update|
+|Create Namespace|event_id.iaas.cluster.namespace.create|
+|Delete Namespace|event_id.iaas.cluster.namespace.delete|
+|Update Namespace|event_id.iaas.cluster.namespace.update|
+|Create Network Policy|event_id.iaas.cluster.network_policy.create|
+|Delete Network Policy|event_id.iaas.cluster.network_policy.delete|
+|Update Network Policy|event_id.iaas.cluster.network_policy.update|
+|Create Persistent Volume|event_id.iaas.cluster.persistent_volume.create|
+|Delete Persistent Volume|event_id.iaas.cluster.persistent_volume.delete|
+|Update Persistent Volume|event_id.iaas.cluster.persistent_volume.update|
+|Create Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.create|
+|Delete Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.delete|
+|Update Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.update|
+|Attach Pod|event_id.iaas.cluster.pod.attach|
+|Create Pod|event_id.iaas.cluster.pod.create|
+|Delete Pod|event_id.iaas.cluster.pod.delete|
+|Evict Pod|event_id.iaas.cluster.pod.evict|
+|Exec Pod|event_id.iaas.cluster.pod.exec|
+|Set Pod&#39;s Port Forwarding|event_id.iaas.cluster.pod.port_forward|
+|Update Pod|event_id.iaas.cluster.pod.update|
+|Create Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.create|
+|Delete Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.delete|
+|Update Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.update|
+|Create Pod Security Policy|event_id.iaas.cluster.pod_security_policy.create|
+|Delete Pod Security Policy|event_id.iaas.cluster.pod_security_policy.delete|
+|Update Pod Security Policy|event_id.iaas.cluster.pod_security_policy.update|
+|Create Pod Template|event_id.iaas.cluster.pod_template.create|
+|Delete Pod Template|event_id.iaas.cluster.pod_template.delete|
+|Update Pod Template|event_id.iaas.cluster.pod_template.update|
+|Create Priority Class|event_id.iaas.cluster.priority_class.create|
+|Delete Priority Class|event_id.iaas.cluster.priority_class.delete|
+|Update Priority Class|event_id.iaas.cluster.priority_class.update|
+|Create Replication Controller|event_id.iaas.cluster.replication_controller.create|
+|Delete Replication Controller|event_id.iaas.cluster.replication_controller.delete|
+|Update Replication Controller|event_id.iaas.cluster.replication_controller.update|
+|Update Replication Controller&#39;s Scale|event_id.iaas.cluster.replication_controller.update_scale|
+|Create Replica Set|event_id.iaas.cluster.replica_set.create|
+|Delete Replica Set|event_id.iaas.cluster.replica_set.delete|
+|Update Replica Set|event_id.iaas.cluster.replica_set.update|
+|Update Replica Set&#39;s Scale|event_id.iaas.cluster.replica_set.update_scale|
+|Create Resource Quota|event_id.iaas.cluster.resource_quota.create|
+|Delete Resource Quota|event_id.iaas.cluster.resource_quota.delete|
+|Update Resource Quota|event_id.iaas.cluster.resource_quota.update|
+|Create Role|event_id.iaas.cluster.role.create|
+|Delete Role|event_id.iaas.cluster.role.delete|
+|Update Role|event_id.iaas.cluster.role.update|
+|Create Role Binding|event_id.iaas.cluster.role_binding.create|
+|Delete Role Binding|event_id.iaas.cluster.role_binding.delete|
+|Update Role Binding|event_id.iaas.cluster.role_binding.update|
+|Create Secret|event_id.iaas.cluster.secret.create|
+|Delete Secret|event_id.iaas.cluster.secret.delete|
+|Update Secret|event_id.iaas.cluster.secret.update|
+|Create Service|event_id.iaas.cluster.service.create|
+|Delete Service|event_id.iaas.cluster.service.delete|
+|Update Service|event_id.iaas.cluster.service.update|
+|Create Service Account|event_id.iaas.cluster.service_account.create|
+|Delete Service Account|event_id.iaas.cluster.service_account.delete|
+|Update Service Account|event_id.iaas.cluster.service_account.update|
+|Create Stateful Set|event_id.iaas.cluster.stateful_set.create|
+|Delete Stateful Set|event_id.iaas.cluster.stateful_set.delete|
+|Update Stateful Set|event_id.iaas.cluster.stateful_set.update|
+|Update Stateful Set&#39;s Scale|event_id.iaas.cluster.stateful_set.update_scale|
+|Create Storage Class|event_id.iaas.cluster.storage_class.create|
+|Delete Storage Class|event_id.iaas.cluster.storage_class.delete|
+|Update Storage Class|event_id.iaas.cluster.storage_class.update|
+|Create Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.create|
+|Delete Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.delete|
+|Update Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.update|
 |Create Template|event_id.iaas.ncs.template.create|
 |Delete Template|event_id.iaas.ncs.template.delete|
 |Create Workload|event_id.iaas.ncs.workload.create|
-|Change Workload|event_id.iaas.ncs.workload.update|
+|Delete Workload|event_id.iaas.ncs.workload.delete|
 |Restart Workload|event_id.iaas.ncs.workload.restart|
 |Stop Workload|event_id.iaas.ncs.workload.stop|
-|Delete Workload|event_id.iaas.ncs.workload.delete|
-|Create Cluster Started|event_id.iaas.cluster.create.start|
-|Create Cluster Completed|event_id.iaas.cluster.create.end|
-|Create Cluster Failed|event_id.iaas.cluster.create.failed|
-|Delete Cluster Started|event_id.iaas.cluster.delete.start|
-|Delete Cluster Completed|event_id.iaas.cluster.delete.end|
-|Delete Cluster Failed|event_id.iaas.cluster.delete.failed|
-|Change Cluster OWNER Started|event_id.iaas.cluster.handover.start|
-|Change Cluster OWNER Completed|event_id.iaas.cluster.handover.end|
-|Change Cluster OWNER Failed|event_id.iaas.cluster.handover.failed|
-|Create Node Group Started|event_id.iaas.nodegroup.create.start|
-|Create Node Group Completed|event_id.iaas.nodegroup.create.end|
-|Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
-|Delete Node Group Started|event_id.iaas.nodegroup.delete.start|
-|Delete Node Group Completed|event_id.iaas.nodegroup.delete.end|
-|Delete Node Group Failed|event_id.iaas.nodegroup.delete.failed|
-|Resize Cluster Started|event_id.iaas.cluster.resize.start|
-|Resize Cluster Completed|event_id.iaas.cluster.resize.end|
-|Resize Cluster Failed|event_id.iaas.cluster.resize.failed|
-|Change Instance Type Started|event_id.iaas.nodegroup.update_flavor.start|
-|Change Instance Type Completed|event_id.iaas.nodegroup.update_flavor.end|
-|Change Instance Type Failed|event_id.iaas.nodegroup.update_flavor.failed|
-|Change CNI Started|event_id.iaas.cluster.cni_update.start|
-|Change CNI Completed|event_id.iaas.cluster.cni_update.end|
-|Change CNI Failed|event_id.iaas.cluster.cni_update.failed|
-|Upgrade Node Group Started|event_id.iaas.nodegroup.upgrade.start|
-|Upgrade Node Group Completed|event_id.iaas.nodegroup.upgrade.end|
-|Upgrade Node Group Failed|event_id.iaas.nodegroup.upgrade.failed|
-|Change User Script Started|event_id.iaas.nodegroup.update_userscript.start|
-|Change User Script Completed|event_id.iaas.nodegroup.update_userscript.end|
-|Change User Script Failed|event_id.iaas.nodegroup.update_userscript.failed|
-|Start Worker Node Started|event_id.iaas.nodegroup.node_action.start_node.start|
-|Start Worker Node Completed|event_id.iaas.nodegroup.node_action.start_node.end|
-|Start Worker Node Failed|event_id.iaas.nodegroup.node_action.start_node.failed|
-|Stop Worker Node Started|event_id.iaas.nodegroup.node_action.stop_node.start|
-|Stop Worker Node Completed|event_id.iaas.nodegroup.node_action.stop_node.end|
-|Stop Worker Node Failed|event_id.iaas.nodegroup.node_action.stop_node.failed|
-|Change Autoscaler Settings Started|event_id.iaas.nodegroup.set_cluster_autoscaler.start|
-|Change Autoscaler Settings Completed|event_id.iaas.nodegroup.set_cluster_autoscaler.end|
-|Change Autoscaler Settings Failed|event_id.iaas.nodegroup.set_cluster_autoscaler.failed|
-|Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
-|Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
-|Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
-|SGW 변경 완료|event_id.iaas.cluster.update_sgw.end|
-|SGW 변경 실패|event_id.iaas.cluster.update_sgw.failed|
-|SGW 변경 시작|event_id.iaas.cluster.update_sgw.start|
-|오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
-|K8S APISERVER 문제 탐지|event_id.iaas.cluster.k8s_api_not_working.detected|
-|K8S APISERVER 문제 해결|event_id.iaas.cluster.k8s_api_not_working.resolved|
-|모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
-|모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
-|클러스터 동작 가능 전환 완료|event_id.iaas.cluster.resume.end|
-|클러스터 동작 가능 전환 실패|event_id.iaas.cluster.resume.failed|
-|클러스터 동작 가능 전환 시작|event_id.iaas.cluster.resume.start|
+|Change Workload|event_id.iaas.ncs.workload.update|
+|Create Template Version|event_id.iaas.ncs.template_version.create|
+|Delete Template Version|event_id.iaas.ncs.template_version.delete|
 
 ### Object Storage
 
@@ -410,6 +536,7 @@
 |Modify DB Security Group Rule|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
 |Create DB Security Group Rule|event_id.rds_for_mysql.createDbSecurityGroupRule|
 |Delete DB Security Group Rule|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
+|DB 인스턴스 운영체제 업그레이드|event_id.rds_for_mysql.instance.os.upgrade|
 
 ### RDS for MariaDB
 
@@ -803,127 +930,6 @@
 |Delete User Data|event_id.certificate_manager.user_data.delete|
 |Edit User Data|event_id.certificate_manager.user_data.update|
 
-### Kubernetes
-
-| Event | Event ID |
-| --- | --- |
-|Create CSR|event_id.iaas.cluster.certificate_signing_request.create|
-|Delete CSR|event_id.iaas.cluster.certificate_signing_request.delete|
-|Update CSR|event_id.iaas.cluster.certificate_signing_request.update|
-|Approve CSR|event_id.iaas.cluster.certificate_signing_request.approval|
-|Create Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.create|
-|Delete Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.delete|
-|Update Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.update|
-|Create Cluster Role|event_id.iaas.cluster.cluster_role.create|
-|Delete Cluster Role|event_id.iaas.cluster.cluster_role.delete|
-|Update Cluster Role|event_id.iaas.cluster.cluster_role.update|
-|Create Configmap|event_id.iaas.cluster.configmap.create|
-|Delete Configmap|event_id.iaas.cluster.configmap.delete|
-|Update Configmap|event_id.iaas.cluster.configmap.update|
-|Create Cron Job|event_id.iaas.cluster.cronjob.create|
-|Delete Cron Job|event_id.iaas.cluster.cronjob.delete|
-|Update Cron Job|event_id.iaas.cluster.cronjob.update|
-|Create Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.create|
-|Delete Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.delete|
-|Update Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.update|
-|Create Daemon Set|event_id.iaas.cluster.daemon_set.create|
-|Delete Daemon Set|event_id.iaas.cluster.daemon_set.delete|
-|Update Daemon Set|event_id.iaas.cluster.daemon_set.update|
-|Create Deployment|event_id.iaas.cluster.deployment.create|
-|Delete Deployment|event_id.iaas.cluster.deployment.delete|
-|Update Deployment|event_id.iaas.cluster.deployment.update|
-|Scale Up Deployment|event_id.iaas.cluster.deployment.update_scale|
-|Create Endpoint|event_id.iaas.cluster.endpoint.create|
-|Delete Endpoint|event_id.iaas.cluster.endpoint.delete|
-|Update Endpoint|event_id.iaas.cluster.endpoint.update|
-|Create Endpoint Slice|event_id.iaas.cluster.endpoint_slice.create|
-|Delete Endpoint Slice|event_id.iaas.cluster.endpoint_slice.delete|
-|Update Endpoint Slice|event_id.iaas.cluster.endpoint_slice.update|
-|Create Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.create|
-|Delete Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.delete|
-|Update Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.update|
-|Create Ingress|event_id.iaas.cluster.ingress.create|
-|Delete Ingress|event_id.iaas.cluster.ingress.delete|
-|Update Ingress|event_id.iaas.cluster.ingress.update|
-|Create Job|event_id.iaas.cluster.job.create|
-|Delete Job|event_id.iaas.cluster.job.delete|
-|Update Job|event_id.iaas.cluster.job.update|
-|Create Limit Range|event_id.iaas.cluster.limit_range.create|
-|Delete Limit Range|event_id.iaas.cluster.limit_range.delete|
-|Update Limit Range|event_id.iaas.cluster.limit_range.update|
-|Create Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.create|
-|Delete Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.delete|
-|Update Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.update|
-|Create Namespace|event_id.iaas.cluster.namespace.create|
-|Delete Namespace|event_id.iaas.cluster.namespace.delete|
-|Update Namespace|event_id.iaas.cluster.namespace.update|
-|Create Network Policy|event_id.iaas.cluster.network_policy.create|
-|Delete Network Policy|event_id.iaas.cluster.network_policy.delete|
-|Update Network Policy|event_id.iaas.cluster.network_policy.update|
-|Create Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.create|
-|Delete Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.delete|
-|Update Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.update|
-|Create Persistent Volume|event_id.iaas.cluster.persistent_volume.create|
-|Delete Persistent Volume|event_id.iaas.cluster.persistent_volume.delete|
-|Update Persistent Volume|event_id.iaas.cluster.persistent_volume.update|
-|Create Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.create|
-|Delete Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.delete|
-|Update Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.update|
-|Create Pod|event_id.iaas.cluster.pod.create|
-|Delete Pod|event_id.iaas.cluster.pod.delete|
-|Update Pod|event_id.iaas.cluster.pod.update|
-|Attach Pod|event_id.iaas.cluster.pod.attach|
-|Evict Pod|event_id.iaas.cluster.pod.evict|
-|Exec Pod|event_id.iaas.cluster.pod.exec|
-|Set Pod&#39;s Port Forwarding|event_id.iaas.cluster.pod.port_forward|
-|Create Pod Security Policy|event_id.iaas.cluster.pod_security_policy.create|
-|Delete Pod Security Policy|event_id.iaas.cluster.pod_security_policy.delete|
-|Update Pod Security Policy|event_id.iaas.cluster.pod_security_policy.update|
-|Create Pod Template|event_id.iaas.cluster.pod_template.create|
-|Delete Pod Template|event_id.iaas.cluster.pod_template.delete|
-|Update Pod Template|event_id.iaas.cluster.pod_template.update|
-|Create Priority Class|event_id.iaas.cluster.priority_class.create|
-|Delete Priority Class|event_id.iaas.cluster.priority_class.delete|
-|Update Priority Class|event_id.iaas.cluster.priority_class.update|
-|Create Replica Set|event_id.iaas.cluster.replica_set.create|
-|Delete Replica Set|event_id.iaas.cluster.replica_set.delete|
-|Update Replica Set|event_id.iaas.cluster.replica_set.update|
-|Update Replica Set&#39;s Scale|event_id.iaas.cluster.replica_set.update_scale|
-|Create Replication Controller|event_id.iaas.cluster.replication_controller.create|
-|Delete Replication Controller|event_id.iaas.cluster.replication_controller.delete|
-|Update Replication Controller|event_id.iaas.cluster.replication_controller.update|
-|Update Replication Controller&#39;s Scale|event_id.iaas.cluster.replication_controller.update_scale|
-|Create Resource Quota|event_id.iaas.cluster.resource_quota.create|
-|Delete Resource Quota|event_id.iaas.cluster.resource_quota.delete|
-|Update Resource Quota|event_id.iaas.cluster.resource_quota.update|
-|Create Role Binding|event_id.iaas.cluster.role_binding.create|
-|Delete Role Binding|event_id.iaas.cluster.role_binding.delete|
-|Update Role Binding|event_id.iaas.cluster.role_binding.update|
-|Create Role|event_id.iaas.cluster.role.create|
-|Delete Role|event_id.iaas.cluster.role.delete|
-|Update Role|event_id.iaas.cluster.role.update|
-|Create Secret|event_id.iaas.cluster.secret.create|
-|Delete Secret|event_id.iaas.cluster.secret.delete|
-|Update Secret|event_id.iaas.cluster.secret.update|
-|Create Service Account|event_id.iaas.cluster.service_account.create|
-|Delete Service Account|event_id.iaas.cluster.service_account.delete|
-|Update Service Account|event_id.iaas.cluster.service_account.update|
-|Create Service|event_id.iaas.cluster.service.create|
-|Delete Service|event_id.iaas.cluster.service.delete|
-|Update Service|event_id.iaas.cluster.service.update|
-|Create Stateful Set|event_id.iaas.cluster.stateful_set.create|
-|Delete Stateful Set|event_id.iaas.cluster.stateful_set.delete|
-|Update Stateful Set|event_id.iaas.cluster.stateful_set.update|
-|Update Stateful Set&#39;s Scale|event_id.iaas.cluster.stateful_set.update_scale|
-|Create Storage Class|event_id.iaas.cluster.storage_class.create|
-|Delete Storage Class|event_id.iaas.cluster.storage_class.delete|
-|Update Storage Class|event_id.iaas.cluster.storage_class.update|
-|Create Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.create|
-|Delete Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.delete|
-|Update Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.update|
-|Update Cluster|event_id.iaas.cluster.update|
-|Upgrade Cluster|event_id.iaas.cluster.upgrade|
-
 ### Face Recognition
 
 | Event | Event ID |
@@ -1084,7 +1090,7 @@
 |Export Friendtalk Message Results|event_id.friendtalk.message.results.export|
 |Retrieve Friendtalk Mass Recipient List|event_id.friendtalk.mass.recipients.searching|
 |Export Friendtalk Mass Message Results|event_id.friendtalk.mass.message.results.export|
-|Confirm Sending &#8;FriendTalk Mass Messages|event_id.friendtalk.mass.message.confirm-send-request|
+|Confirm Sending ?FriendTalk Mass Messages|event_id.friendtalk.mass.message.confirm-send-request|
 |Upload Friendtalk Image|event_id.friendtalk.image.uploading|
 |Delete Friendtalk Image|event_id.friendtalk.image.deletion|
 |Upload Friendtalk bizFormId|event_id.friendtalk.upload.biz-form-id|
@@ -1301,6 +1307,10 @@
 
 | Event | Event ID |
 | --- | --- |
+|오토스케일링 그룹 복구|event_id.gameanvil.autoscale.restore|
+|GameAnvil Config 생성|event_id.gameanvil.config.create|
+|GameAnvil Config 삭제|event_id.gameanvil.config.delete|
+|GameAnvil Config 수정|event_id.gameanvil.config.update|
 |노드 강제 종료|event_id.gameanvil.node.force_stop|
 |노드 중지|event_id.gameanvil.node.pause|
 |노드 복구|event_id.gameanvil.node.restore|
@@ -1689,4 +1699,19 @@
 |Create Image Cache|event_id.ncr.image_cache.create|
 |Delete Image Cache|event_id.ncr.image_cache.delete|
 |Modify Image Cache|event_id.ncr.image_cache.update|
+
+### Cloud Monitoring
+
+| Event | Event ID |
+| --- | --- |
+|Enable Notification|event_id.cloud_monitoring_project.alarm_activate|
+|Create Notification|event_id.cloud_monitoring_project.alarm_create|
+|Delete Notification|event_id.cloud_monitoring_project.alarm_delete|
+|Modify Notification|event_id.cloud_monitoring_project.alarm_modify|
+|Copy Dashboard|event_id.cloud_monitoring_project.dashboard_copy|
+|Create Dashboard|event_id.cloud_monitoring_project.dashboard_create|
+|Delete Dashboard|event_id.cloud_monitoring_project.dashboard_delete|
+|Display Dashboard|event_id.cloud_monitoring_project.dashboard_exposure|
+|Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
+|Enable Metrics Collection |event_id.cloud_monitoring_project.service_management|
 
