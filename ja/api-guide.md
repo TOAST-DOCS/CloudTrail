@@ -11,9 +11,9 @@ RESTful APIを使用するにはAppKeyが必要です。
 
 ## User Access Key ID & Secret Access Key
 
-2.0 버전의 API부터는 사용자 인증이 추가되어 사용자의 권한에 따라 인가를 체크합니다.
-따라서 User Access Key ID와 Secret Access Key를 추가해야 합니다. User Access Key ID와 Secret Access Key는 콘솔 우측 상단의 계정 영역을 클릭한 뒤 드롭다운 메뉴에서 <b>API 보안 설정</b>을 선택하고, + <b>User Access Key ID 생성</b>을 클릭해 생성할 수 있으며,
-API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
+2.0バージョンのAPIからユーザー認証が追加され、ユーザーの権限に応じて認可をチェックします。
+したがって、User Access Key IDとSecret Access Keyを追加する必要があります。User Access Key IDとSecret Access Keyは、コンソール右上のアカウントエリアをクリックした後、ドロップダウンメニューで<b>APIセキュリティ設定</b>を選択し、+ <b>User Access Key ID作成</b>をクリックして作成でき、
+APIを呼び出す時、HTTP HEADERに下記のように追加する必要があります。
 
 ```
     X-TC-AUTHENTICATION-ID : User Access Key ID
@@ -166,7 +166,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 | appKey | String | イベントが発生したアプリケーションキー |
 | tenantId | String | イベントが発生したテナントID |
 | eventId | String | イベントID |
-| eventLogUuid | String | 이벤트 로그 일련 번호(식별 키) |
+| eventLogUuid | String | イベントログのシリアル番号(識別キー) |
 | request | String | 発生したイベントのリクエスト内容 |
 | response | String | 発生したイベントのレスポンス内容 |
 | eventTarget | Object | 発生したイベントの対象 |
@@ -181,7 +181,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 * イベント照会時、ユーザーが設定した検索条件で照会されます。
 * Request Bodyにこの検索条件を含める必要があります。
 
-**[필요한 권한]**
+**[必要な権限]**
 * `CloudTrail:EventLog.List`
 
 **[Method, URL]**
@@ -194,8 +194,8 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 
 |Key|	Value|
 |---|---|
-|X-TC-AUTHENTICATION-ID|	콘솔에서 발급 받은 User Access Key ID|
-|X-TC-AUTHENTICATION-SECRET|	콘솔에서 발급 받은 Secret Access Key |
+|X-TC-AUTHENTICATION-ID|	コンソールで発行されたUser Access Key ID|
+|X-TC-AUTHENTICATION-SECRET|	コンソールで発行されたSecret Access Key |
 
 **[Path Variable]**
 
@@ -232,12 +232,12 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
-| idNo | String | X | イベントを発生させた会員IdNo (uuid) |
+| idNo | String | X | イベントを発生させた会員IdNo (UUID) |
 | member | Object | X | イベントを発生させた会員 |
 | member.memberType | String | X | イベントを発生させた会員のタイプ(NHN Cloud、IAM) |
-| member.userCode | String | X | イベントを発生させた会員のuserCode (IAM会員の場合) |
+| member.userCode | String | X | イベントを発生させた会員のuserCode (IAMメンバーの場合) |
 | member.emailAddress | String | X | イベントを発生させた会員のemail address (NHN Cloud会員の場合)|
-| member.idNo | String | X | イベントを発生させた会員IdNo (uuid) |
+| member.idNo | String | X | イベントを発生させた会員IdNo (UUID) |
 | eventId | String | O | 照会するイベントのID |
 | startDate | Date | O | 照会する期間の開始日 |
 | endDate | Date |O  | 照会する期間の終了日 |
@@ -294,9 +294,9 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 | Key | Type | Description |
 | --- | --- | --- |
 | eventTime | Date | イベント発生時間 |
-| userIdNo | Object | イベントを発生させた会員のuuid |
+| userIdNo | Object | イベントを発生させた会員のUUID |
 | userName | String | イベントを発生させた会員の名前|
-| UserId | String | イベントを発生させた会員のID (NHN Cloudアカウントの場合、メール形式) |
+| UserId | String | イベントを発生させた会員のID (NHN Cloud会員アカウントの場合、メール形式) |
 | userIp | String | イベントを発生させた会員のIP |
 | userAgent | String | イベントを発生させた会員のAgent |
 | eventSourceType | String | イベントを発生させた主体のタイプ |
@@ -308,12 +308,12 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 | appKey | String | イベントが発生したアプリケーションキー |
 | tenantId | String | イベントが発生したテナントID |
 | eventId | String | イベントID |
-| eventLogUuid | String | 이벤트 로그 일련 번호(식별 키) |
+| eventLogUuid | String | イベントログのシリアル番号(識別キー) |
 | request | String | 発生したイベントのリクエスト内容 |
 | response | String | 発生したイベントのレスポンス内容 |
 | eventTarget | Object | 発生したイベントの対象 |
 | eventTarget.targetMembers | Object | 発生したイベントの対象会員 |
-| targetMembers.idNo | String | 発生したイベントの対象会員のuuid |
+| targetMembers.idNo | String | 発生したイベントの対象会員のUUID |
 | targetMembers.name | String | 発生したイベントの対象会員の名前 |
-| targetMembers.userCode | Integer | 発生したイベントの対象会員のID (IAM会員の場合) |
+| targetMembers.userCode | Integer | 発生したイベントの対象会員のID (IAMメンバーの場合) |
 | targetMembers.emailAddress | String | 発生したイベントの対象会員のメールアドレス(NHN Cloud会員の場合) |
