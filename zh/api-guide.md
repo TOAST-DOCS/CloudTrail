@@ -12,9 +12,9 @@ Check your key information on top right of the [CONSOLE].
 
 ## User Access Key ID & Secret Access Key
 
-2.0 버전의 API부터는 사용자 인증이 추가되어 사용자의 권한에 따라 인가를 체크합니다.
-따라서 User Access Key ID와 Secret Access Key를 추가해야 합니다. User Access Key ID와 Secret Access Key는 콘솔 우측 상단의 계정 영역을 클릭한 뒤 드롭다운 메뉴에서 <b>API 보안 설정</b>을 선택하고, + <b>User Access Key ID 생성</b>을 클릭해 생성할 수 있으며,
-API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
+Starting with the 2.0 version of the API, user authentication is added to check authorization based on the user's permissions.
+Therefore, you need to add a User Access Key ID and Secret Access Key. You can create a User Access Key ID and Secret Access Key by clicking the Account area on the top right of the console, selecting <b>API Security Settings</b>from the drop-down menu, and clicking + <b>Create User Access Key ID</b>,
+When making API calls, you need to add them to the HTTP HEADER as shown below.
 
 ```
     X-TC-AUTHENTICATION-ID : User Access Key ID
@@ -177,7 +177,7 @@ Read the header at Response Body for more details of the response result.
 | appKey | String | Appkey in which event is incurred |
 | tenantId | String | ID of tenant where event is incurred |
 | eventId | String | ID of event |
-| eventLogUuid | String | 이벤트 로그 일련 번호(식별 키) |
+| eventLogUuid | String | Event log serial number (identification key) |
 | request | String | Request of incurred event |
 | response | String | Response of incurred event |
 | eventTarget | Object | Target of incurred event |
@@ -192,7 +192,7 @@ Read the header at Response Body for more details of the response result.
 * Query events by user-defined search conditions.
 * Request Body must include the search conditions. 
 
-**[필요한 권한]**
+**[Required Permissions]**
 * `CloudTrail:EventLog.List`
 
 
@@ -206,8 +206,8 @@ Read the header at Response Body for more details of the response result.
 
 |Key|	Value|
 |---|---|
-|X-TC-AUTHENTICATION-ID|	콘솔에서 발급 받은 User Access Key ID|
-|X-TC-AUTHENTICATION-SECRET|	콘솔에서 발급 받은 Secret Access Key |
+|X-TC-AUTHENTICATION-ID|	User Access Key ID issued by the console|
+|X-TC-AUTHENTICATION-SECRET|   Secret Access Key issued by the console|
 
 **[Path Variable]**
 
@@ -329,7 +329,7 @@ Read the header at Response Body for more details of the response result.
 | appKey | String | Appkey in which event is incurred |
 | tenantId | String | ID of tenant where event is incurred |
 | eventId | String | ID of event |
-| eventLogUuid | String | 이벤트 로그 일련 번호(식별 키) |
+| eventLogUuid | String | Event log serial number (identification key)|
 | request | String | Request of incurred event |
 | response | String | Response of incurred event |
 | eventTarget | Object | Target of incurred event |
