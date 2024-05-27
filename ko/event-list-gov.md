@@ -103,18 +103,6 @@
 |VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
 |VPC 서브넷 라우팅 테이블 연결 해제|event_id.iaas.vpc_subnet.detach_routingtable|
 |VPC 서브넷 변경|event_id.iaas.vpc_subnet.update|
-|클러스터 생성|event_id.iaas.cluster.create|
-|클러스터 삭제|event_id.iaas.cluster.delete|
-|클러스터 OWNER 변경|event_id.iaas.cluster.handover|
-|오토 스케일러 설정 변경|event_id.iaas.cluster.update_autoscale|
-|CNI 변경|event_id.iaas.cluster.cni_update|
-|노드 그룹 생성|event_id.iaas.nodegroup.create|
-|노드 그룹 수정|event_id.iaas.nodegroup.update|
-|노드 그룹 삭제|event_id.iaas.nodegroup.delete|
-|워커 노드 시작|event_id.iaas.nodegroup.start_node|
-|워커 노드 중지|event_id.iaas.nodegroup.stop_node|
-|클러스터 업그레이드|event_id.iaas.nodegroup.upgrade|
-|유저 스크립트 변경|event_id.iaas.nodegroup.update_userscript|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 빌드|event_id.iaas.image_template.build|
 |이미지 빌드 취소|event_id.iaas.image_template.cancel_build|
@@ -190,6 +178,185 @@
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
 |NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|클러스터 생성 완료|event_id.iaas.cluster.create.end|
+|클러스터 생성 실패|event_id.iaas.cluster.create.failed|
+|클러스터 생성 시작|event_id.iaas.cluster.create.start|
+|클러스터 삭제 완료|event_id.iaas.cluster.delete.end|
+|클러스터 삭제 실패|event_id.iaas.cluster.delete.failed|
+|클러스터 삭제 시작|event_id.iaas.cluster.delete.start|
+|클러스터 OWNER 변경 완료|event_id.iaas.cluster.handover.end|
+|클러스터 OWNER 변경 실패|event_id.iaas.cluster.handover.failed|
+|클러스터 OWNER 변경 시작|event_id.iaas.cluster.handover.start|
+|클러스터 크기 조정 완료|event_id.iaas.cluster.resize.end|
+|클러스터 크기 조정 실패|event_id.iaas.cluster.resize.failed|
+|클러스터 크기 조정 시작|event_id.iaas.cluster.resize.start|
+|클러스터 동작 가능 전환 완료|event_id.iaas.cluster.resume.end|
+|클러스터 동작 가능 전환 실패|event_id.iaas.cluster.resume.failed|
+|클러스터 동작 가능 전환 시작|event_id.iaas.cluster.resume.start|
+|CNI 변경 완료|event_id.iaas.cluster.cni_update.end|
+|CNI 변경 실패|event_id.iaas.cluster.cni_update.failed|
+|CNI 변경 시작|event_id.iaas.cluster.cni_update.start|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 완료|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 실패|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 시작|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
+|SGW 변경 완료|event_id.iaas.cluster.update_sgw.end|
+|SGW 변경 실패|event_id.iaas.cluster.update_sgw.failed|
+|SGW 변경 시작|event_id.iaas.cluster.update_sgw.start|
+|인증서 갱신 완료|event_id.iaas.cluster.cluster_rotate_certificate.end|
+|인증서 갱신 실패|event_id.iaas.cluster.cluster_rotate_certificate.failed|
+|인증서 갱신 시작|event_id.iaas.cluster.cluster_rotate_certificate.start|
+|K8S APISERVER 문제 탐지|event_id.iaas.cluster.k8s_api_not_working.detected|
+|K8S APISERVER 문제 해결|event_id.iaas.cluster.k8s_api_not_working.resolved|
+|모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
+|모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
+|오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
+|노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
+|노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
+|노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
+|노드 그룹 삭제 완료|event_id.iaas.nodegroup.delete.end|
+|노드 그룹 삭제 실패|event_id.iaas.nodegroup.delete.failed|
+|노드 그룹 삭제 시작|event_id.iaas.nodegroup.delete.start|
+|워커 노드 시작 완료|event_id.iaas.nodegroup.node_action.start_node.end|
+|워커 노드 시작 실패|event_id.iaas.nodegroup.node_action.start_node.failed|
+|워커 노드 시작|event_id.iaas.nodegroup.node_action.start_node.start|
+|워커 노드 중지 완료|event_id.iaas.nodegroup.node_action.stop_node.end|
+|워커 노드 중지 실패|event_id.iaas.nodegroup.node_action.stop_node.failed|
+|워커 노드 중지 시작|event_id.iaas.nodegroup.node_action.stop_node.start|
+|오토 스케일러 설정 변경 완료|event_id.iaas.nodegroup.set_cluster_autoscaler.end|
+|오토 스케일러 설정 변경 실패|event_id.iaas.nodegroup.set_cluster_autoscaler.failed|
+|오토 스케일러 설정 변경 시작|event_id.iaas.nodegroup.set_cluster_autoscaler.start|
+|인스턴스 타입 변경 완료|event_id.iaas.nodegroup.update_flavor.end|
+|인스턴스 타입 변경 실패|event_id.iaas.nodegroup.update_flavor.failed|
+|인스턴스 타입 변경 시작|event_id.iaas.nodegroup.update_flavor.start|
+|유저 스크립트 변경 완료|event_id.iaas.nodegroup.update_userscript.end|
+|유저 스크립트 변경 실패|event_id.iaas.nodegroup.update_userscript.failed|
+|유저 스크립트 변경 시작|event_id.iaas.nodegroup.update_userscript.start|
+|노드 그룹 업그레이드 완료|event_id.iaas.nodegroup.upgrade.end|
+|노드 그룹 업그레이드 실패|event_id.iaas.nodegroup.upgrade.failed|
+|노드 그룹 업그레이드 시작|event_id.iaas.nodegroup.upgrade.start|
+|CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
+|CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
+|CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
+|CSR 수정|event_id.iaas.cluster.certificate_signing_request.update|
+|클러스터롤 생성|event_id.iaas.cluster.cluster_role.create|
+|클러스터롤 삭제|event_id.iaas.cluster.cluster_role.delete|
+|클러스터롤 수정|event_id.iaas.cluster.cluster_role.update|
+|클러스터롤바인딩 생성|event_id.iaas.cluster.cluster_role_binding.create|
+|클러스터롤바인딩 삭제|event_id.iaas.cluster.cluster_role_binding.delete|
+|클러스터롤바인딩 수정|event_id.iaas.cluster.cluster_role_binding.update|
+|컨피그맵 생성|event_id.iaas.cluster.configmap.create|
+|컨피그맵 삭제|event_id.iaas.cluster.configmap.delete|
+|컨피그맵 수정|event_id.iaas.cluster.configmap.update|
+|크론잡 생성|event_id.iaas.cluster.cronjob.create|
+|크론잡 삭제|event_id.iaas.cluster.cronjob.delete|
+|크론잡 수정|event_id.iaas.cluster.cronjob.update|
+|사용자리소스정의 생성|event_id.iaas.cluster.custom_resource_definition.create|
+|사용자리소스정의 삭제|event_id.iaas.cluster.custom_resource_definition.delete|
+|사용자리소스정의 수정|event_id.iaas.cluster.custom_resource_definition.update|
+|데몬셋 생성|event_id.iaas.cluster.daemon_set.create|
+|데몬셋 삭제|event_id.iaas.cluster.daemon_set.delete|
+|데몬셋 수정|event_id.iaas.cluster.daemon_set.update|
+|디플로이먼트 생성|event_id.iaas.cluster.deployment.create|
+|디플로이먼트 삭제|event_id.iaas.cluster.deployment.delete|
+|디플로이먼트 수정|event_id.iaas.cluster.deployment.update|
+|디플로이먼트 스케일 조정|event_id.iaas.cluster.deployment.update_scale|
+|엔드포인트 생성|event_id.iaas.cluster.endpoint.create|
+|엔드포인트 삭제|event_id.iaas.cluster.endpoint.delete|
+|엔드포인트 수정|event_id.iaas.cluster.endpoint.update|
+|엔드포인트슬라이스 생성|event_id.iaas.cluster.endpoint_slice.create|
+|엔드포인트슬라이스 삭제|event_id.iaas.cluster.endpoint_slice.delete|
+|엔드포인트슬라이스 수정|event_id.iaas.cluster.endpoint_slice.update|
+|Horizontal Pod Autoscaler 생성|event_id.iaas.cluster.horizontal_pod_autoscaler.create|
+|Horizontal Pod Autoscaler 삭제|event_id.iaas.cluster.horizontal_pod_autoscaler.delete|
+|Horizontal Pod Autoscaler 수정|event_id.iaas.cluster.horizontal_pod_autoscaler.update|
+|인그레스 생성|event_id.iaas.cluster.ingress.create|
+|인그레스 삭제|event_id.iaas.cluster.ingress.delete|
+|인그레스 수정|event_id.iaas.cluster.ingress.update|
+|잡 생성|event_id.iaas.cluster.job.create|
+|잡 삭제|event_id.iaas.cluster.job.delete|
+|잡 수정|event_id.iaas.cluster.job.update|
+|리밋레인지 생성|event_id.iaas.cluster.limit_range.create|
+|리밋레인지 삭제|event_id.iaas.cluster.limit_range.delete|
+|리밋레인지 수정|event_id.iaas.cluster.limit_range.update|
+|Mutating Webhook Configuration 생성|event_id.iaas.cluster.mutating_webhook_configuration.create|
+|Mutating Webhook Configuration 삭제|event_id.iaas.cluster.mutating_webhook_configuration.delete|
+|Mutating Webhook Configuration 수정|event_id.iaas.cluster.mutating_webhook_configuration.update|
+|네임스페이스 생성|event_id.iaas.cluster.namespace.create|
+|네임스페이스 삭제|event_id.iaas.cluster.namespace.delete|
+|네임스페이스 수정|event_id.iaas.cluster.namespace.update|
+|네트워크폴리시 생성|event_id.iaas.cluster.network_policy.create|
+|네트워크폴리시 삭제|event_id.iaas.cluster.network_policy.delete|
+|네트워크폴리시 수정|event_id.iaas.cluster.network_policy.update|
+|퍼시스턴트볼륨 생성|event_id.iaas.cluster.persistent_volume.create|
+|퍼시스턴트볼륨 삭제|event_id.iaas.cluster.persistent_volume.delete|
+|퍼시스턴트볼륨 수정|event_id.iaas.cluster.persistent_volume.update|
+|퍼시스턴트볼륨클레임 생성|event_id.iaas.cluster.persistent_volume_claim.create|
+|퍼시스턴트볼륨클레임 삭제|event_id.iaas.cluster.persistent_volume_claim.delete|
+|퍼시스턴트볼륨클레임 수정|event_id.iaas.cluster.persistent_volume_claim.update|
+|파드 연결|event_id.iaas.cluster.pod.attach|
+|파드 생성|event_id.iaas.cluster.pod.create|
+|파드 삭제|event_id.iaas.cluster.pod.delete|
+|파드 축출|event_id.iaas.cluster.pod.evict|
+|파드 실행|event_id.iaas.cluster.pod.exec|
+|파드 포트포워딩 설정|event_id.iaas.cluster.pod.port_forward|
+|파드 수정|event_id.iaas.cluster.pod.update|
+|파드 Disruption Budget 생성|event_id.iaas.cluster.pod_disruption_budget.create|
+|파드 Disruption Budget 삭제|event_id.iaas.cluster.pod_disruption_budget.delete|
+|파드 Disruption Budget 수정|event_id.iaas.cluster.pod_disruption_budget.update|
+|파드시큐리티폴리시 생성|event_id.iaas.cluster.pod_security_policy.create|
+|파드시큐리티폴리시 삭제|event_id.iaas.cluster.pod_security_policy.delete|
+|파드시큐리티폴리시 수정|event_id.iaas.cluster.pod_security_policy.update|
+|파드템플릿 생성|event_id.iaas.cluster.pod_template.create|
+|파드템플릿 삭제|event_id.iaas.cluster.pod_template.delete|
+|파드템플릿 수정|event_id.iaas.cluster.pod_template.update|
+|프라이어리티클래스 생성|event_id.iaas.cluster.priority_class.create|
+|프라이어리티클래스 삭제|event_id.iaas.cluster.priority_class.delete|
+|프라이어리티클래스 수정|event_id.iaas.cluster.priority_class.update|
+|레플리케이션컨트롤러 생성|event_id.iaas.cluster.replication_controller.create|
+|레플리케이션컨트롤러 삭제|event_id.iaas.cluster.replication_controller.delete|
+|레플리케이션컨트롤러 수정|event_id.iaas.cluster.replication_controller.update|
+|레플리케이션컨트롤러 스케일 조정|event_id.iaas.cluster.replication_controller.update_scale|
+|레플리카셋 생성|event_id.iaas.cluster.replica_set.create|
+|레플리카셋 삭제|event_id.iaas.cluster.replica_set.delete|
+|레플리카셋 수정|event_id.iaas.cluster.replica_set.update|
+|레플리카셋 스케일 조정|event_id.iaas.cluster.replica_set.update_scale|
+|리소스쿼터 생성|event_id.iaas.cluster.resource_quota.create|
+|리소스쿼터 삭제|event_id.iaas.cluster.resource_quota.delete|
+|리소스쿼터 수정|event_id.iaas.cluster.resource_quota.update|
+|롤 생성|event_id.iaas.cluster.role.create|
+|롤 삭제|event_id.iaas.cluster.role.delete|
+|롤 수정|event_id.iaas.cluster.role.update|
+|롤바인딩 생성|event_id.iaas.cluster.role_binding.create|
+|롤바인딩 삭제|event_id.iaas.cluster.role_binding.delete|
+|롤바인딩 수정|event_id.iaas.cluster.role_binding.update|
+|시크릿 생성|event_id.iaas.cluster.secret.create|
+|시크릿 삭제|event_id.iaas.cluster.secret.delete|
+|시크릿 수정|event_id.iaas.cluster.secret.update|
+|서비스 생성|event_id.iaas.cluster.service.create|
+|서비스 삭제|event_id.iaas.cluster.service.delete|
+|서비스 수정|event_id.iaas.cluster.service.update|
+|서비스어카운트 생성|event_id.iaas.cluster.service_account.create|
+|서비스어카운트 삭제|event_id.iaas.cluster.service_account.delete|
+|서비스어카운트 수정|event_id.iaas.cluster.service_account.update|
+|스테이트풀셋 생성|event_id.iaas.cluster.stateful_set.create|
+|스테이트풀셋 삭제|event_id.iaas.cluster.stateful_set.delete|
+|스테이트풀셋 수정|event_id.iaas.cluster.stateful_set.update|
+|스테이트풀셋 스케일 조정|event_id.iaas.cluster.stateful_set.update_scale|
+|스토리지클래스 생성|event_id.iaas.cluster.storage_class.create|
+|스토리지클래스 삭제|event_id.iaas.cluster.storage_class.delete|
+|스토리지클래스 수정|event_id.iaas.cluster.storage_class.update|
+|Validating Webhook Configuration 생성|event_id.iaas.cluster.validating_webhook_configuration.create|
+|Validating Webhook Configuration 삭제|event_id.iaas.cluster.validating_webhook_configuration.delete|
+|Validating Webhook Configuration 수정|event_id.iaas.cluster.validating_webhook_configuration.update|
+|템플릿 생성|event_id.iaas.ncs.template.create|
+|템플릿 삭제|event_id.iaas.ncs.template.delete|
+|워크로드 생성|event_id.iaas.ncs.workload.create|
+|워크로드 삭제|event_id.iaas.ncs.workload.delete|
+|워크로드 재시작|event_id.iaas.ncs.workload.restart|
+|워크로드 중지|event_id.iaas.ncs.workload.stop|
+|워크로드 변경|event_id.iaas.ncs.workload.update|
+|템플릿 버전 생성|event_id.iaas.ncs.template_version.create|
+|템플릿 버전 삭제|event_id.iaas.ncs.template_version.delete|
 
 ### Object Storage
 
