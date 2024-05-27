@@ -137,6 +137,12 @@
 |ロードバランサーインスタンスの接続追加|event_id.iaas.loadbalancer_member.create|
 |ロードバランサーインスタンスの接続解除|event_id.iaas.loadbalancer_member.delete|
 |ロードバランサーインスタンスの有効状態を変更|event_id.iaas.loadbalancer_member.update|
+|ロードバランサーL7ポリシーの作成|event_id.iaas.loadbalancer_l7policy.create|
+|ロードバランサーL7ポリシーの変更|event_id.iaas.loadbalancer_l7policy.update|
+|ロードバランサーL7ポリシーの削除|event_id.iaas.loadbalancer_l7policy.delete|
+|ロードバランサーL7ルールの作成|event_id.iaas.loadbalancer_l7rule.create|
+|ロードバランサーL7ルールの変更|event_id.iaas.loadbalancer_l7rule.update|
+|ロードバランサーL7ルールの削除|event_id.iaas.loadbalancer_l7rule.delete|
 |インスタンスメタデータの作成|event_id.iaas.metadata.create|
 |インスタンスメタデータの削除|event_id.iaas.metadata.delete|
 |インスタンスメタデータの変更|event_id.iaas.metadata.update|
@@ -247,6 +253,9 @@
 |トランジットハブマルチキャストグループの作成|event_id.iaas.transit_hub_multicast_group.create|
 |トランジットハブマルチキャストグループの変更|event_id.iaas.transit_hub_multicast_group.update|
 |トランジットハブマルチキャストグループの削除|event_id.iaas.transit_hub_multicast_group.delete|
+|トランジットハブマルチキャストドメイン許可リストの作成|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|トランジットハブマルチキャストドメイン許可リストの変更|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|トランジットハブマルチキャストドメイン許可リストの削除|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
 |NetworkACL作成|event_id.iaas.networkacl.create|
 |NetworkACL削除|event_id.iaas.networkacl.delete|
@@ -256,16 +265,6 @@
 |NetworkACL Rule修正|event_id.iaas.networkacl_rule.update|
 |NetworkACL Binding作成|event_id.iaas.networkacl_binding.create|
 |NetworkACL Binding削除|event_id.iaas.networkacl_binding.delete|
-|NASボリュームの作成|event_id.iaas.nas.volume.create|
-|NASボリュームの変更|event_id.iaas.nas.volume.update|
-|NASボリュームの削除|event_id.iaas.nas.volume.delete|
-|NASスナップショットの作成|event_id.iaas.nas.snapshot.create|
-|NASスナップショットの削除|event_id.iaas.nas.snapshot.delete|
-|NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
-|NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
-|NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
-|NAS for AIスナップショットの作成|event_id.iaas.nas_for_ai.snapshot.create|
-|NAS for AIスナップショットの削除|event_id.iaas.nas_for_ai.snapshot.delete|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -284,9 +283,10 @@
 |CNI変更完了|event_id.iaas.cluster.cni_update.end|
 |CNI変更失敗|event_id.iaas.cluster.cni_update.failed|
 |CNI変更起動|event_id.iaas.cluster.cni_update.start|
-|クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
-|クラスタAPIエンドポイントIPアクセス制御の変更の失敗|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
-|クラスタAPIエンドポイントIPアクセス制御の変更の起動|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
+|クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas|
+|クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas.cluster.api_ep_ipacl_update.end|
+|クラスタAPIエンドポイントIPアクセス制御の変更の失敗|event_id.iaas.cluster.api_ep_ipacl_update.failed|
+|クラスタAPIエンドポイントIPアクセス制御の変更の起動|event_id.iaas.cluster.api_ep_ipacl_update.start|
 |SGW 変更完了|event_id.iaas.cluster.update_sgw.end|
 |SGW 変更失敗|event_id.iaas.cluster.update_sgw.failed|
 |SGW 変更|event_id.iaas.cluster.update_sgw.start|
@@ -445,6 +445,20 @@
 |ワークロードの変更|event_id.iaas.ncs.workload.update|
 |テンプレートバージョンの作成|event_id.iaas.ncs.template_version.create|
 |テンプレートバージョンの削除|event_id.iaas.ncs.template_version.delete|
+|NASボリュームの作成|event_id.iaas.nas.volume.create|
+|NASボリュームの削除|event_id.iaas.nas.volume.delete|
+|NASボリュームの変更|event_id.iaas.nas.volume.update|
+|NASスナップショットの作成|event_id.iaas.nas.snapshot.create|
+|NASスナップショットの削除|event_id.iaas.nas.snapshot.delete|
+|NASスナップショット復元|event_id.iaas.nas.snapshot.restore|
+|CIFS認証情報の作成|event_id.iaas.nas.cifs_credential.create|
+|CIFS認証情報の削除|event_id.iaas.nas.cifs_credential.delete|
+|CIFS認証情報の変更|event_id.iaas.nas.cifs_credential.update|
+|NAS for AIスナップショットの作成|event_id.iaas.nas_for_ai.snapshot.create|
+|NAS for AIスナップショットの削除|event_id.iaas.nas_for_ai.snapshot.delete|
+|NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
+|NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
+|NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
 
 ### Object Storage
 
