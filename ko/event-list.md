@@ -142,7 +142,7 @@
 |로드 밸런서 L7 정책 삭제|event_id.iaas.loadbalancer_l7policy.delete|
 |로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
 |로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
-|로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.delete|
+|로드 밸런서 L7 룰 삭제|event_id.iaas.loadbalancer_l7rule.delete|
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
