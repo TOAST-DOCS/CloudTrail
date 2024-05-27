@@ -173,11 +173,6 @@
 |트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|
 |트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|
 |트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|
-|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
-|NAS 볼륨 변경|event_id.iaas.nas.volume.update|
-|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
-|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
-|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -357,6 +352,15 @@
 |워크로드 변경|event_id.iaas.ncs.workload.update|
 |템플릿 버전 생성|event_id.iaas.ncs.template_version.create|
 |템플릿 버전 삭제|event_id.iaas.ncs.template_version.delete|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
+|NAS 볼륨 변경|event_id.iaas.nas.volume.update|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|NAS 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
+|CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
+|CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
+|CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
 
 ### Object Storage
 
