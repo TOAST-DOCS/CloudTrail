@@ -137,6 +137,12 @@
 |Attach Load Balancer Instance|event_id.iaas.loadbalancer_member.create|
 |Detach Load Balancer Instance|event_id.iaas.loadbalancer_member.delete|
 |Change Status of Load Balancer Instance|event_id.iaas.loadbalancer_member.update|
+|Create Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.create|
+|Modify Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.update|
+|Delete Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.delete|
+|Create Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.create|
+|Modify Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.update|
+|Delete Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.delete|
 |Create Instance Metadata|event_id.iaas.metadata.create|
 |Delete Instance Metadata|event_id.iaas.metadata.delete|
 |Change Instance Metadata|event_id.iaas.metadata.update|
@@ -247,6 +253,9 @@
 |Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|
 |Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|
 |Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|
+|Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |Change Block Storage Size|event_id.iaas.volume.extend|
 |Create NetworkACL|event_id.iaas.networkacl.create|
 |Delete NetworkACL|event_id.iaas.networkacl.delete|
@@ -256,16 +265,6 @@
 |Update NetworkACL Rule|event_id.iaas.networkacl_rule.update|
 |Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
 |Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
-|Create NAS Volume|event_id.iaas.nas.volume.create|
-|Modify NAS Volume|event_id.iaas.nas.volume.update|
-|Delete NAS Volume|event_id.iaas.nas.volume.delete|
-|Create NAS Snapshot|event_id.iaas.nas.snapshot.create|
-|Delete NAS Snapshot|event_id.iaas.nas.snapshot.delete|
-|Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
-|Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
-|Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
-|Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
-|Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -284,9 +283,10 @@
 |Change CNI Completed|event_id.iaas.cluster.cni_update.end|
 |Change CNI Failed|event_id.iaas.cluster.cni_update.failed|
 |Change CNI Started|event_id.iaas.cluster.cni_update.start|
-|Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
-|Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
-|Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
+|Update Cluster API endpoint IP ACL Completed|event_id.iaas|
+|Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.api_ep_ipacl_update.end|
+|Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.api_ep_ipacl_update.failed|
+|Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.api_ep_ipacl_update.start|
 |Change SGW Completed|event_id.iaas.cluster.update_sgw.end|
 |Change SGW Failed|event_id.iaas.cluster.update_sgw.failed|
 |Change SGW Started|event_id.iaas.cluster.update_sgw.start|
@@ -445,6 +445,20 @@
 |Change Workload|event_id.iaas.ncs.workload.update|
 |Create Template Version|event_id.iaas.ncs.template_version.create|
 |Delete Template Version|event_id.iaas.ncs.template_version.delete|
+|Create NAS Volume|event_id.iaas.nas.volume.create|
+|Delete NAS Volume|event_id.iaas.nas.volume.delete|
+|Modify NAS Volume|event_id.iaas.nas.volume.update|
+|Create NAS Snapshot|event_id.iaas.nas.snapshot.create|
+|Delete NAS Snapshot|event_id.iaas.nas.snapshot.delete|
+|Restore NAS Snapshot|event_id.iaas.nas.snapshot.restore|
+|Create CIFS Credentials|event_id.iaas.nas.cifs_credential.create|
+|Delete CIFS Credentials|event_id.iaas.nas.cifs_credential.delete|
+|Modify CIFS Credentials|event_id.iaas.nas.cifs_credential.update|
+|Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
+|Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
+|Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
+|Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
+|Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
 
 ### Object Storage
 
