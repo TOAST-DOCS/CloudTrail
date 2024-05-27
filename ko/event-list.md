@@ -137,6 +137,12 @@
 |로드 밸런서 인스턴스 연결 추가|event_id.iaas.loadbalancer_member.create|
 |로드 밸런서 인스턴스 연결 해제|event_id.iaas.loadbalancer_member.delete|
 |로드 밸런서 인스턴스 활성 상태 변경|event_id.iaas.loadbalancer_member.update|
+|로드 밸런서 L7 정책 생성|event_id.iaas.loadbalancer_l7policy.create|
+|로드 밸런서 L7 정책 변경|event_id.iaas.loadbalancer_l7policy.update|
+|로드 밸런서 L7 정책 삭제|event_id.iaas.loadbalancer_l7policy.delete|
+|로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
+|로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
+|로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.delete|
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
@@ -247,6 +253,9 @@
 |트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|
 |트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|
 |트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
 |NetworkACL생성|event_id.iaas.networkacl.create|
 |NetworkACL삭제|event_id.iaas.networkacl.delete|
@@ -256,16 +265,6 @@
 |NetworkACL Rule수정|event_id.iaas.networkacl_rule.update|
 |NetworkACL Binding생성|event_id.iaas.networkacl_binding.create|
 |NetworkACL Binding삭제|event_id.iaas.networkacl_binding.delete|
-|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
-|NAS 볼륨 변경|event_id.iaas.nas.volume.update|
-|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
-|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
-|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
-|NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
-|NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
-|NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
-|NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|
-|NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -284,9 +283,10 @@
 |CNI 변경 완료|event_id.iaas.cluster.cni_update.end|
 |CNI 변경 실패|event_id.iaas.cluster.cni_update.failed|
 |CNI 변경 시작|event_id.iaas.cluster.cni_update.start|
-|클러스터 API 엔드포인트 IP 접근 제어 변경 완료|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
-|클러스터 API 엔드포인트 IP 접근 제어 변경 실패|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
-|클러스터 API 엔드포인트 IP 접근 제어 변경 시작|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 완료|event_id.iaas|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 완료|event_id.iaas.cluster.api_ep_ipacl_update.end|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 실패|event_id.iaas.cluster.api_ep_ipacl_update.failed|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 시작|event_id.iaas.cluster.api_ep_ipacl_update.start|
 |SGW 변경 완료|event_id.iaas.cluster.update_sgw.end|
 |SGW 변경 실패|event_id.iaas.cluster.update_sgw.failed|
 |SGW 변경 시작|event_id.iaas.cluster.update_sgw.start|
@@ -445,6 +445,20 @@
 |워크로드 변경|event_id.iaas.ncs.workload.update|
 |템플릿 버전 생성|event_id.iaas.ncs.template_version.create|
 |템플릿 버전 삭제|event_id.iaas.ncs.template_version.delete|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
+|NAS 볼륨 변경|event_id.iaas.nas.volume.update|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|NAS 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
+|CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
+|CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
+|CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
+|NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|
+|NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|
+|NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
+|NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
+|NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
 
 ### Object Storage
 
