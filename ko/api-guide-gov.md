@@ -48,7 +48,7 @@ RESTful API를 사용하려면 AppKey가 필요합니다.
 
 |Key|	Value|
 |---|---|
-|appKey|	[CONSOLE]에서 발급받은 AppKey|
+|appKey|	콘솔에서 발급 받은 AppKey|
 
 **[Request Body]**
 
@@ -79,18 +79,18 @@ RESTful API를 사용하려면 AppKey가 필요합니다.
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
-| idNo | String | X | 이벤트를 발생시킨 회원 아이디 번호(uuid) |
+| idNo | String | X | 이벤트를 발생시킨 회원 아이디 번호(UUID) |
 | member | Object | X | 이벤트를 발생시킨 회원 |
 | member.memberType | String | X | 이벤트를 발생시킨 회원의 타입(NHN Cloud, IAM) |
-| member.userCode | String | X | 이벤트를 발생시킨 회원의 userCode(IAM 회원일 경우) |
+| member.userCode | String | X | 이벤트를 발생시킨 회원의 userCode(IAM 멤버일 경우) |
 | member.emailAddress | String | X | 이벤트를 발생시킨 회원의 이메일 주소(NHN Cloud 회원일 경우)|
-| member.idNo | String | X | 이벤트를 발생시킨 회원 IdNo (uuid) |
+| member.idNo | String | X | 이벤트를 발생시킨 회원 IdNo(UUID) |
 | eventId | String | O | 조회할 이벤트의 ID |
 | startDate | Date | O | 조회할 기간의 시작 날짜 |
 | endDate | Date |O  | 조회할 기간의 끝나는 날짜 |
 | page | Object | O | 조회 결과의 페이지 조건 |
-| page.sortBy | String | X | 조회 결과의 사이즈 정렬 조건 (ex. eventTime:desc, idNo:asc) |
-| page.limit | Integer | O | 조회 결과의 사이즈 조건 (기본: 20, 최대 1000) |
+| page.sortBy | String | X | 조회 결과의 사이즈 정렬 조건(ex. eventTime:desc, idNo:asc) |
+| page.limit | Integer | O | 조회 결과의 사이즈 조건(기본: 20, 최대 1000) |
 | page.page | Integer | O | 조회 결과의 페이지 중 조회할 페이지 조건 |
 
 
@@ -140,9 +140,9 @@ RESTful API를 사용하려면 AppKey가 필요합니다.
 | Key | Type | Description |
 | --- | --- | --- |
 | eventTime | Date | 이벤트 발생 시간 |
-| userIdNo | Object | 이벤트를 발생시킨 회원의 uuid |
+| userIdNo | Object | 이벤트를 발생시킨 회원의 UUID |
 | userName | String |  이벤트를 발생시킨 회원의 이름|
-| UserId | String | 이벤트를 발생시킨 회원의 ID (NHN Cloud 계정일 경우, 이메일 형식) |
+| UserId | String | 이벤트를 발생시킨 회원의 ID(NHN Cloud 회원 계정일 경우 이메일 형식) |
 | userIp | String | 이벤트를 발생시킨 회원의 IP |
 | userAgent | String | 이벤트를 발생시킨 회원의 에이전트 |
 | eventSourceType | String | 이벤트를 발생시킨 주체의 타입 |
@@ -158,7 +158,7 @@ RESTful API를 사용하려면 AppKey가 필요합니다.
 | response | String | 발생한 이벤트의 응답 내용 |
 | eventTarget | Object | 발생한 이벤트의 대상 |
 | eventTarget.targetMembers | Object | 발생한 이벤트의 대상 회원 |
-| targetMembers.idNo | String | 발생한 이벤트의 대상 회원의 uuid |
+| targetMembers.idNo | String | 발생한 이벤트의 대상 회원의 UUID |
 | targetMembers.name | String | 발생한 이벤트의 대상 회원의 이름 |
-| targetMembers.userCode | Integer | 발생한 이벤트의 대상 회원의 ID (IAM 회원일 경우) |
-| targetMembers.emailAddress | String | 발생한 이벤트의 대상 회원의 이메일 주소 (NHN Cloud 회원일 경우) |
+| targetMembers.userCode | Integer | 발생한 이벤트의 대상 회원의 ID(IAM 멤버일 경우) |
+| targetMembers.emailAddress | String | 발생한 이벤트의 대상 회원의 이메일 주소(NHN Cloud 회원일 경우) |
