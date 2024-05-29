@@ -183,6 +183,14 @@
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|Network ACL 생성|event_id.iaas.networkacl.create|
+|Network ACL 삭제|event_id.iaas.networkacl.delete|
+|Network ACL 수정|event_id.iaas.networkacl.update|
+|Network ACL rule 생성|event_id.iaas.networkacl_rule.create|
+|Network ACL rule 삭제|event_id.iaas.networkacl_rule.delete|
+|Network ACL rule 수정|event_id.iaas.networkacl_rule.update|
+|Network ACL Binding 생성|event_id.iaas.networkacl_binding.create|
+|Network ACL Binding 삭제|event_id.iaas.networkacl_binding.delete|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
