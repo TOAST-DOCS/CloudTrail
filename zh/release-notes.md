@@ -1,11 +1,20 @@
 ## CloudTrail > Release Notes
 
+### 2024. 06. 11.
+#### Added Features
+* Added the event log search API 2.0.
+#### Feature Updates
+* Added the eventLogUuid field to the response of the event log search API.
+* Changed the event log search result to mask some fields via Organization Governance > Privacy settings.
+* Refined roles and permissions.
+
 ### 2024. 05. 28.
 #### More Events
 * Added events related to Console.
 * Added events related to Default Infrastructure Service.
 * Added events related to RDS for MySQL.
 * Added events related to Cloud Monitoring.
+
 
 ### 2024. 05. 03.
 #### More Events
@@ -102,7 +111,7 @@
 * Added events related to Email.
 #### More Features
 * Added a feature to set up external log tampering alert in the log save/download setting.
-    * For more information, see the [Console User Guide](/CloudTrail/zh/console-guide/).
+    * For more information, see the [Console User Guide](/CloudTrail/en/console-guide/).
 
 ### 2023. 05. 30.
 #### More Events
@@ -277,7 +286,7 @@
 * Added events related to NHN AppGuard.
 #### More Features
 * Added the email field to receive information after three or more failed upload attempts in Log Save/Download Settings.
-    * See details: [Link](/CloudTrail/zh/console-guide/)
+    * See details: [Link](/CloudTrail/en/console-guide/)
 
 ### 2021. 04. 27.
 #### More Events
@@ -303,7 +312,7 @@
 * Added events related to System Monitoring.
 #### More Features
 * Added Log save/download setting.
-    * For more information, see the [Console User Guide](/CloudTrail/zh/console-guide/).
+    * For more information, see the [Console User Guide](/CloudTrail/en/console-guide/).
 #### Feature Updates
 * In the name (ID) search conditions, **Search name or ID** has been changed to **Search name**.
 
@@ -345,12 +354,12 @@
 ### 2019. 10. 29.
 #### Feature Updates
 * Updated, for the query of CloudTrail events, the search conditions of users who occurred events.
-    * See manual for more details: [Link](/CloudTrail/zh/api-guide/)
+    * See manual for more details: [Link](/CloudTrail/en/api-guide/)
 
 ### 2019. 09. 24.
 #### More Features
 * Restful API is provided for query of events.
-    * See manual for more details: [Link](/CloudTrail/zh/api-guide/)
+    * See manual for more details: [Link](/CloudTrail/en/api-guide/)
 #### Feature Updates
 * Search by name (ID) allows not only the search of existing organization members but user-defined IAM members.
 

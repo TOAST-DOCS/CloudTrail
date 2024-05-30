@@ -63,6 +63,12 @@
 |로드 밸런서 인스턴스 연결 추가|event_id.iaas.loadbalancer_member.create|
 |로드 밸런서 인스턴스 연결 해제|event_id.iaas.loadbalancer_member.delete|
 |로드 밸런서 인스턴스 활성 상태 변경|event_id.iaas.loadbalancer_member.update|
+|로드 밸런서 L7 정책 생성|event_id.iaas.loadbalancer_l7policy.create|
+|로드 밸런서 L7 정책 변경|event_id.iaas.loadbalancer_l7policy.update|
+|로드 밸런서 L7 정책 삭제|event_id.iaas.loadbalancer_l7policy.delete|
+|로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
+|로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
+|로드 밸런서 L7 룰 삭제|event_id.iaas.loadbalancer_l7rule.delete|
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
@@ -173,6 +179,18 @@
 |트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|
 |트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|
 |트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
+|블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|Network ACL 생성|event_id.iaas.networkacl.create|
+|Network ACL 삭제|event_id.iaas.networkacl.delete|
+|Network ACL 수정|event_id.iaas.networkacl.update|
+|Network ACL rule 생성|event_id.iaas.networkacl_rule.create|
+|Network ACL rule 삭제|event_id.iaas.networkacl_rule.delete|
+|Network ACL rule 수정|event_id.iaas.networkacl_rule.update|
+|Network ACL Binding 생성|event_id.iaas.networkacl_binding.create|
+|Network ACL Binding 삭제|event_id.iaas.networkacl_binding.delete|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
