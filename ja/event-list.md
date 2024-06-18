@@ -29,6 +29,7 @@
 |組織サービスの無効化|event_id.org.product.disable|
 |組織サービスの有効化|event_id.org.product.enable|
 |組織情報の修正|event_id.org.update|
+|組織 アクセス|event_id.org.selected|
 |IAM組織 アクセス|event_id.iam.org.selected|
 |プロジェクトの作成|event_id.project.create|
 |プロジェクトの削除|event_id.project.delete|
@@ -78,20 +79,6 @@
 
 | イベント | イベントID |
 | --- | --- |
-|スケーリンググループの予約作業の作成|event_id.iaas.autoscale_schedule.create|
-|スケーリンググループの予約作業の削除|event_id.iaas.autoscale_schedule.delete|
-|スケーリンググループ予約タスクOWNERの変更|event_id.iaas.autoscale_schedule.handover|
-|インスタンスFloating IPの接続|event_id.iaas.floating_ip.attach|
-|Floating IPの作成|event_id.iaas.floating_ip.create|
-|Floating IPの削除|event_id.iaas.floating_ip.delete|
-|インスタンスFloating IPの接続解除|event_id.iaas.floating_ip.detach|
-|イメージの作成|event_id.iaas.image.create|
-|イメージID作成|event_id.iaas.image.create_id|
-|イメージのアップロード|event_id.iaas.image.upload|
-|イメージの削除|event_id.iaas.image.delete|
-|イメージ情報の変更|event_id.iaas.image.update|
-|イメージ共有の作成|event_id.iaas.image_member.create|
-|イメージ共有の削除|event_id.iaas.image_member.delete|
 |インスタンスの作成|event_id.iaas.instance.create|
 |インスタンスの作成完了|event_id.iaas.instance.create_end|
 |インスタンスの削除|event_id.iaas.instance.delete|
@@ -101,33 +88,95 @@
 |インスタンスの再起動完了|event_id.iaas.instance_action.reboot_end|
 |インスタンスタイプの変更|event_id.iaas.instance_action.resize|
 |インスタンスタイプの変更完了|event_id.iaas.instance_action.resize_end|
+|コンソールスクリーンショットの作成|event_id.iaas.instance_action.screenshot|
+|インスタンス終了|event_id.iaas.instance_action.shelve|
+|インスタンス終了完了|event_id.iaas.instance_action.shelve_end|
 |インスタンスの起動|event_id.iaas.instance_action.start|
 |インスタンスの起動完了|event_id.iaas.instance_action.start_end|
 |インスタンスの停止|event_id.iaas.instance_action.stop|
 |インスタンスの停止完了|event_id.iaas.instance_action.stop_end|
 |インスタンスの起動|event_id.iaas.instance_action.unshelve|
 |インスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
-|インスタンス終了|event_id.iaas.instance_action.shelve|
-|インスタンス終了完了|event_id.iaas.instance_action.shelve_end|
 |インスタンステンプレートの作成|event_id.iaas.instance_template.create|
 |インスタンステンプレートの削除|event_id.iaas.instance_template.delete|
-|インスタンステンプレートの変更|event_id.iaas.instance_template.update|
 |インスタンステンプレートOWNERの変更|event_id.iaas.instance_template.handover|
+|インスタンステンプレートの変更|event_id.iaas.instance_template.update|
+|インスタンスメタデータの作成|event_id.iaas.metadata.create|
+|インスタンスメタデータの削除|event_id.iaas.metadata.delete|
+|インスタンスメタデータの変更|event_id.iaas.metadata.update|
 |インスタンスインターフェイスの作成|event_id.iaas.interface.create|
 |インスタンスインターフェイスの削除|event_id.iaas.interface.delete|
-|インターネットゲートウェイの作成|event_id.iaas.internet_gateway.create|
-|インターネットゲートウェイの削除|event_id.iaas.internet_gateway.delete|
-|NATゲートウェイの作成|event_id.iaas.nat_gateway.create|
-|NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
-|NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
-|VPNGW作成|event_id.iaas.vpngw.create|
-|VPN接続の修正|event_id.iaas.vpn_connection.update|
-|VPNGW削除|event_id.iaas.vpngw.delete|
-|VPNGW修正|event_id.iaas.vpngw.update|
-|VPN接続の作成|event_id.iaas.vpn_connection.create|
-|VPN接続の削除|event_id.iaas.vpn_connection.delete|
 |キーペアの作成|event_id.iaas.keypair.create|
 |キーペアの削除|event_id.iaas.keypair.delete|
+|イメージのコピー|event_id.iaas.image.copy|
+|イメージの作成|event_id.iaas.image.create|
+|イメージID作成|event_id.iaas.image.create_id|
+|イメージの削除|event_id.iaas.image.delete|
+|イメージ情報の変更|event_id.iaas.image.update|
+|イメージのアップロード|event_id.iaas.image.upload|
+|イメージ共有の作成|event_id.iaas.image_member.create|
+|イメージ共有の削除|event_id.iaas.image_member.delete|
+|イメージビルド|event_id.iaas.image_template.build|
+|イメージビルドのキャンセル|event_id.iaas.image_template.cancel_build|
+|イメージテンプレートの作成|event_id.iaas.image_template.create|
+|イメージテンプレートの削除|event_id.iaas.image_template.delete|
+|イメージテンプレートの修正|event_id.iaas.image_template.update|
+|インスタンスボリュームの接続|event_id.iaas.volume.attach|
+|ボリュームのコピー|event_id.iaas.volume.copy|
+|ブロックストレージの作成|event_id.iaas.volume.create|
+|ブロックストレージの削除|event_id.iaas.volume.delete|
+|インスタンスボリュームの接続解除|event_id.iaas.volume.detach|
+|ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
+|ブロックストレージの情報変更|event_id.iaas.volume.update|
+|ブロックストレージスナップショットの作成|event_id.iaas.snapshot.create|
+|ブロックストレージスナップショットの削除|event_id.iaas.snapshot.delete|
+|スケーリンググループの予約作業の作成|event_id.iaas.autoscale_schedule.create|
+|スケーリンググループの予約作業の削除|event_id.iaas.autoscale_schedule.delete|
+|スケーリンググループ予約タスクOWNERの変更|event_id.iaas.autoscale_schedule.handover|
+|スケーリンググループの作成|event_id.iaas.scaling_group.create|
+|スケーリンググループの削除|event_id.iaas.scaling_group.delete|
+|スケーリンググループOWNERの変更|event_id.iaas.scaling_group.handover|
+|スケーリンググループの変更|event_id.iaas.scaling_group.update|
+|S3 API認証情報の作成|event_id.iaas.s3credential.create|
+|S3 API認証情報の削除|event_id.iaas.s3credential.delete|
+|VPCの作成|event_id.iaas.vpc.create|
+|VPCの削除|event_id.iaas.vpc.delete|
+|VPCの情報変更|event_id.iaas.vpc.update|
+|VPCサブネットの作成|event_id.iaas.vpc_subnet.create|
+|VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
+|VPCサブネットの変更|event_id.iaas.vpc_subnet.update|
+|VPCサブネットルーティングテーブルの接続|event_id.iaas.vpc_subnet.attach_routingtable|
+|VPCサブネットルーティングテーブルの接続解除|event_id.iaas.vpc_subnet.detach_routingtable|
+|サブネット静的ルートの作成|event_id.iaas.vpc_subnet_route.create|
+|サブネット静的ルートの削除|event_id.iaas.vpc_subnet_route.delete|
+|ポートの作成|event_id.iaas.port.create|
+|ポートの削除|event_id.iaas.port.delete|
+|ポートの変更|event_id.iaas.port.update|
+|ルーティングテーブルの作成|event_id.iaas.routing_table.create|
+|ルーティングテーブルの削除|event_id.iaas.routing_table.delete|
+|ルーティングテーブルの変更|event_id.iaas.routing_table.update|
+|ルーティングテーブルインターネットゲートウェイの接続|event_id.iaas.routing_table.attach_gateway|
+|ルーティングテーブルインターネットゲートウェイの接続解除|event_id.iaas.routing_table.detach_gateway|
+|ルーティングテーブルの基本指定|event_id.iaas.routing_table.set_as_default|
+|ルーティングテーブルルートの作成|event_id.iaas.route.create|
+|ルーティングテーブルルートの削除|event_id.iaas.route.delete|
+|Floating IPの作成|event_id.iaas.floating_ip.create|
+|Floating IPの削除|event_id.iaas.floating_ip.delete|
+|インスタンスFloating IPの接続|event_id.iaas.floating_ip.attach|
+|インスタンスFloating IPの接続解除|event_id.iaas.floating_ip.detach|
+|NetworkACL 作成|event_id.iaas.networkacl.create|
+|NetworkACL 削除|event_id.iaas.networkacl.delete|
+|NetworkACL 修正|event_id.iaas.networkacl.update|
+|NetworkACL Rule 作成|event_id.iaas.networkacl_rule.create|
+|NetworkACL Rule 削除|event_id.iaas.networkacl_rule.delete|
+|NetworkACL Rule 修正|event_id.iaas.networkacl_rule.update|
+|NetworkACL Binding 作成|event_id.iaas.networkacl_binding.create|
+|NetworkACL Binding 削除|event_id.iaas.networkacl_binding.delete|
+|セキュリティーグループの作成|event_id.iaas.security_group.create|
+|セキュリティーグループの削除|event_id.iaas.security_group.delete|
+|セキュリティーグループの変更|event_id.iaas.security_group.update|
+|セキュリティルールの作成|event_id.iaas.security_group_rule.create|
+|セキュリティルールの削除|event_id.iaas.security_group_rule.delete|
 |ロードバランサーの作成|event_id.iaas.loadbalancer.create|
 |ロードバランサーの削除|event_id.iaas.loadbalancer.delete|
 |ロードバランサー情報の変更|event_id.iaas.loadbalancer.update|
@@ -138,133 +187,85 @@
 |ロードバランサーインスタンスの接続解除|event_id.iaas.loadbalancer_member.delete|
 |ロードバランサーインスタンスの有効状態を変更|event_id.iaas.loadbalancer_member.update|
 |ロードバランサーL7ポリシーの作成|event_id.iaas.loadbalancer_l7policy.create|
-|ロードバランサーL7ポリシーの変更|event_id.iaas.loadbalancer_l7policy.update|
 |ロードバランサーL7ポリシーの削除|event_id.iaas.loadbalancer_l7policy.delete|
+|ロードバランサーL7ポリシーの変更|event_id.iaas.loadbalancer_l7policy.update|
 |ロードバランサーL7ルールの作成|event_id.iaas.loadbalancer_l7rule.create|
-|ロードバランサーL7ルールの変更|event_id.iaas.loadbalancer_l7rule.update|
 |ロードバランサーL7ルールの削除|event_id.iaas.loadbalancer_l7rule.delete|
-|インスタンスメタデータの作成|event_id.iaas.metadata.create|
-|インスタンスメタデータの削除|event_id.iaas.metadata.delete|
-|インスタンスメタデータの変更|event_id.iaas.metadata.update|
+|ロードバランサーL7ルールの変更|event_id.iaas.loadbalancer_l7rule.update|
+|トランジットハブの作成|event_id.iaas.transit_hub.create|
+|トランジットハブの削除|event_id.iaas.transit_hub.delete|
+|トランジットハブの変更|event_id.iaas.transit_hub.update|
+|トランジットハブ接続の作成|event_id.iaas.transit_hub_attachment.create|
+|トランジットハブ接続の削除|event_id.iaas.transit_hub_attachment.delete|
+|トランジットハブ接続の変更|event_id.iaas.transit_hub_attachment.update|
+|トランジットハブ許可リストの作成|event_id.iaas.transit_hub_allow_project.create|
+|トランジットハブ許可リストの削除|event_id.iaas.transit_hub_allow_project.delete|
+|トランジットハブ許可リストの変更|event_id.iaas.transit_hub_allow_project.update|
+|トランジットハブルーティングテーブルの作成|event_id.iaas.transit_hub_routing_table.create|
+|トランジットハブルーティングテーブルの削除|event_id.iaas.transit_hub_routing_table.delete|
+|トランジットハブルーティングテーブルの変更|event_id.iaas.transit_hub_routing_table.update|
+|トランジットハブルーティング接続の作成|event_id.iaas.transit_hub_routing_association.create|
+|トランジットハブルーティング接続の削除|event_id.iaas.transit_hub_routing_association.delete|
+|トランジットハブルーティング接続の変更|event_id.iaas.transit_hub_routing_association.update|
+|トランジットハブルーティング配信の作成|event_id.iaas.transit_hub_routing_propagation.create|
+|トランジットハブルーティング配信の削除|event_id.iaas.transit_hub_routing_propagation.delete|
+|トランジットハブルーティング配信の変更|event_id.iaas.transit_hub_routing_propagation.update|
+|トランジットハブルーティングルールの作成|event_id.iaas.transit_hub_routing_rule.create|
+|トランジットハブルーティングルールの削除|event_id.iaas.transit_hub_routing_rule.delete|
+|トランジットハブルーティングルールの変更|event_id.iaas.transit_hub_routing_rule.update|
+|トランジットハブマルチキャストドメインの作成|event_id.iaas.transit_hub_multicast_domain.create|
+|トランジットハブマルチキャストドメインの削除|event_id.iaas.transit_hub_multicast_domain.delete|
+|トランジットハブマルチキャストドメインの変更|event_id.iaas.transit_hub_multicast_domain.update|
+|トランジットハブマルチキャスト接続の作成|event_id.iaas.transit_hub_multicast_association.create|
+|トランジットハブマルチキャスト接続の削除|event_id.iaas.transit_hub_multicast_association.delete|
+|トランジットハブマルチキャスト接続の変更|event_id.iaas.transit_hub_multicast_association.update|
+|トランジットハブマルチキャストグループの作成|event_id.iaas.transit_hub_multicast_group.create|
+|トランジットハブマルチキャストグループの削除|event_id.iaas.transit_hub_multicast_group.delete|
+|トランジットハブマルチキャストグループの変更|event_id.iaas.transit_hub_multicast_group.update|
+|トランジットハブマルチキャストドメイン許可リストの作成|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|トランジットハブマルチキャストドメイン許可リストの削除|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
+|トランジットハブマルチキャストドメイン許可リストの変更|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|インターネットゲートウェイの作成|event_id.iaas.internet_gateway.create|
+|インターネットゲートウェイの削除|event_id.iaas.internet_gateway.delete|
 |VPCピアリングの作成|event_id.iaas.peering.create|
 |VPCピアリングの削除|event_id.iaas.peering.delete|
-|ポートの作成|event_id.iaas.port.create|
-|ポートの削除|event_id.iaas.port.delete|
-|ポートの変更|event_id.iaas.port.update|
-|ルーティングテーブルルートの作成|event_id.iaas.route.create|
-|ルーティングテーブルルートの削除|event_id.iaas.route.delete|
-|ルーティングテーブルインターネットゲートウェイの接続|event_id.iaas.routing_table.attach_gateway|
-|ルーティングテーブルの作成|event_id.iaas.routing_table.create|
-|ルーティングテーブルの削除|event_id.iaas.routing_table.delete|
-|ルーティングテーブルインターネットゲートウェイの接続解除|event_id.iaas.routing_table.detach_gateway|
-|ルーティングテーブルの基本指定|event_id.iaas.routing_table.set_as_default|
-|ルーティングテーブルの変更|event_id.iaas.routing_table.update|
-|スケーリンググループの作成|event_id.iaas.scaling_group.create|
-|スケーリンググループの削除|event_id.iaas.scaling_group.delete|
-|スケーリンググループの変更|event_id.iaas.scaling_group.update|
-|スケーリンググループOWNERの変更|event_id.iaas.scaling_group.handover|
-|セキュリティーグループの作成|event_id.iaas.security_group.create|
-|セキュリティーグループの削除|event_id.iaas.security_group.delete|
-|セキュリティーグループの変更|event_id.iaas.security_group.update|
-|セキュリティルールの作成|event_id.iaas.security_group_rule.create|
-|セキュリティルールの削除|event_id.iaas.security_group_rule.delete|
-|ブロックストレージスナップショットの作成|event_id.iaas.snapshot.create|
-|ブロックストレージスナップショットの削除|event_id.iaas.snapshot.delete|
-|インスタンスボリュームの接続|event_id.iaas.volume.attach|
-|ブロックストレージの作成|event_id.iaas.volume.create|
-|ブロックストレージの削除|event_id.iaas.volume.delete|
-|インスタンスボリュームの接続解除|event_id.iaas.volume.detach|
-|ブロックストレージの情報変更|event_id.iaas.volume.update|
-|VPCの作成|event_id.iaas.vpc.create|
-|VPCの削除|event_id.iaas.vpc.delete|
-|VPCの情報変更|event_id.iaas.vpc.update|
-|VPCサブネットルーティングテーブルの接続|event_id.iaas.vpc_subnet.attach_routingtable|
-|VPCサブネットの作成|event_id.iaas.vpc_subnet.create|
-|VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
-|VPCサブネットルーティングテーブルの接続解除|event_id.iaas.vpc_subnet.detach_routingtable|
-|VPCサブネットの変更|event_id.iaas.vpc_subnet.update|
-|イメージのコピー|event_id.iaas.image.copy|
-|イメージビルド|event_id.iaas.image_template.build|
-|イメージビルドのキャンセル|event_id.iaas.image_template.cancel_build|
-|イメージテンプレートの作成|event_id.iaas.image_template.create|
-|イメージテンプレートの削除|event_id.iaas.image_template.delete|
-|イメージテンプレートの修正|event_id.iaas.image_template.update|
-|コンソールスクリーンショットの作成|event_id.iaas.instance_action.screenshot|
 |リージョンピアリングの作成|event_id.iaas.region_peering.create|
 |リージョンピアリングの削除|event_id.iaas.region_peering.delete|
 |リージョンピアリングの変更|event_id.iaas.region_peering.update|
 |プロジェクトピアリングを作成|event_id.iaas.project_peering.create|
-|プロジェクトピアリングを変更|event_id.iaas.project_peering.update|
 |プロジェクトピアリングを削除|event_id.iaas.project_peering.delete|
+|プロジェクトピアリングを変更|event_id.iaas.project_peering.update|
 |許可するプロジェクトを作成|event_id.iaas.peering_allow_project.create|
-|許可するプロジェクトを変更|event_id.iaas.peering_allow_project.update|
 |許可するプロジェクトを削除|event_id.iaas.peering_allow_project.delete|
-|トラフィックミラーリングセッションの作成|event_id.iaas.traffic_mirroring.session.create|
-|トラフィックミラーリングセッションの変更|event_id.iaas.traffic_mirroring.session.update|
-|トラフィックミラーリングセッションの削除|event_id.iaas.traffic_mirroring.session.delete|
-|トラフィックミラーリングフィルタグループの作成|event_id.iaas.traffic_mirroring.filter_group.create|
-|トラフィックミラーリングフィルタグループの変更|event_id.iaas.traffic_mirroring.filter_group.update|
-|トラフィックミラーリングフィルタグループの削除|event_id.iaas.traffic_mirroring.filter_group.delete|
-|トラフィックミラーリングフィルタの作成|event_id.iaas.traffic_mirroring.filter.create|
-|トラフィックミラーリングフィルタの変更|event_id.iaas.traffic_mirroring.filter.update|
-|トラフィックミラーリングフィルタの削除|event_id.iaas.traffic_mirroring.filter.delete|
-|S3 API認証情報の作成|event_id.iaas.s3credential.create|
-|S3 API認証情報の削除|event_id.iaas.s3credential.delete|
-|サブネット静的ルートの作成|event_id.iaas.vpc_subnet_route.create|
-|サブネット静的ルートの削除|event_id.iaas.vpc_subnet_route.delete|
+|許可するプロジェクトを変更|event_id.iaas.peering_allow_project.update|
+|NATゲートウェイの作成|event_id.iaas.nat_gateway.create|
+|NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
+|NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
+|VPNGW作成|event_id.iaas.vpngw.create|
+|VPNGW削除|event_id.iaas.vpngw.delete|
+|VPNGW修正|event_id.iaas.vpngw.update|
+|VPN接続の作成|event_id.iaas.vpn_connection.create|
+|VPN接続の削除|event_id.iaas.vpn_connection.delete|
+|VPN接続の修正|event_id.iaas.vpn_connection.update|
 |サービスゲートウェイの作成|event_id.iaas.service_gateway.create|
-|サービスゲートウェイの変更|event_id.iaas.service_gateway.update|
 |サービスゲートウェイの削除|event_id.iaas.service_gateway.delete|
-|ボリュームのコピー|event_id.iaas.volume.copy|
+|サービスゲートウェイの変更|event_id.iaas.service_gateway.update|
+|トラフィックミラーリングセッションの作成|event_id.iaas.traffic_mirroring.session.create|
+|トラフィックミラーリングセッションの削除|event_id.iaas.traffic_mirroring.session.delete|
+|トラフィックミラーリングセッションの変更|event_id.iaas.traffic_mirroring.session.update|
+|トラフィックミラーリングフィルタグループの作成|event_id.iaas.traffic_mirroring.filter_group.create|
+|トラフィックミラーリングフィルタグループの削除|event_id.iaas.traffic_mirroring.filter_group.delete|
+|トラフィックミラーリングフィルタグループの変更|event_id.iaas.traffic_mirroring.filter_group.update|
+|トラフィックミラーリングフィルタの作成|event_id.iaas.traffic_mirroring.filter.create|
+|トラフィックミラーリングフィルタの削除|event_id.iaas.traffic_mirroring.filter.delete|
+|トラフィックミラーリングフィルタの変更|event_id.iaas.traffic_mirroring.filter.update|
 |Private DNS Zone作成|event_id.iaas.privatedns.zone.create|
-|Private DNS Zone修正|event_id.iaas.privatedns.zone.update|
 |Private DNS Zone削除|event_id.iaas.privatedns.zone.delete|
+|Private DNS Zone修正|event_id.iaas.privatedns.zone.update|
 |Private DNS レコードセット作成|event_id.iaas.privatedns.recordset.create|
-|Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|
 |Private DNS レコードセット削除|event_id.iaas.privatedns.recordset.delete|
+|Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|
 |Private DNS レコードセットの大量作成|event_id.iaas.privatedns.recordset.create_list|
-|トランジットハブの作成|event_id.iaas.transit_hub.create|
-|トランジットハブの変更|event_id.iaas.transit_hub.update|
-|トランジットハブの削除|event_id.iaas.transit_hub.delete|
-|トランジットハブ接続の作成|event_id.iaas.transit_hub_attachment.create|
-|トランジットハブ接続の変更|event_id.iaas.transit_hub_attachment.update|
-|トランジットハブ接続の削除|event_id.iaas.transit_hub_attachment.delete|
-|トランジットハブ許可リストの作成|event_id.iaas.transit_hub_allow_project.create|
-|トランジットハブ許可リストの変更|event_id.iaas.transit_hub_allow_project.update|
-|トランジットハブ許可リストの削除|event_id.iaas.transit_hub_allow_project.delete|
-|トランジットハブルーティングテーブルの作成|event_id.iaas.transit_hub_routing_table.create|
-|トランジットハブルーティングテーブルの変更|event_id.iaas.transit_hub_routing_table.update|
-|トランジットハブルーティングテーブルの削除|event_id.iaas.transit_hub_routing_table.delete|
-|トランジットハブルーティング接続の作成|event_id.iaas.transit_hub_routing_association.create|
-|トランジットハブルーティング接続の変更|event_id.iaas.transit_hub_routing_association.update|
-|トランジットハブルーティング接続の削除|event_id.iaas.transit_hub_routing_association.delete|
-|トランジットハブルーティング配信の作成|event_id.iaas.transit_hub_routing_propagation.create|
-|トランジットハブルーティング配信の変更|event_id.iaas.transit_hub_routing_propagation.update|
-|トランジットハブルーティング配信の削除|event_id.iaas.transit_hub_routing_propagation.delete|
-|トランジットハブルーティングルールの作成|event_id.iaas.transit_hub_routing_rule.create|
-|トランジットハブルーティングルールの変更|event_id.iaas.transit_hub_routing_rule.update|
-|トランジットハブルーティングルールの削除|event_id.iaas.transit_hub_routing_rule.delete|
-|トランジットハブマルチキャストドメインの作成|event_id.iaas.transit_hub_multicast_domain.create|
-|トランジットハブマルチキャストドメインの変更|event_id.iaas.transit_hub_multicast_domain.update|
-|トランジットハブマルチキャストドメインの削除|event_id.iaas.transit_hub_multicast_domain.delete|
-|トランジットハブマルチキャスト接続の作成|event_id.iaas.transit_hub_multicast_association.create|
-|トランジットハブマルチキャスト接続の変更|event_id.iaas.transit_hub_multicast_association.update|
-|トランジットハブマルチキャスト接続の削除|event_id.iaas.transit_hub_multicast_association.delete|
-|トランジットハブマルチキャストグループの作成|event_id.iaas.transit_hub_multicast_group.create|
-|トランジットハブマルチキャストグループの変更|event_id.iaas.transit_hub_multicast_group.update|
-|トランジットハブマルチキャストグループの削除|event_id.iaas.transit_hub_multicast_group.delete|
-|トランジットハブマルチキャストドメイン許可リストの作成|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
-|トランジットハブマルチキャストドメイン許可リストの変更|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|トランジットハブマルチキャストドメイン許可リストの削除|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
-|ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
-|NetworkACL作成|event_id.iaas.networkacl.create|
-|NetworkACL削除|event_id.iaas.networkacl.delete|
-|NetworkACL修正|event_id.iaas.networkacl.update|
-|NetworkACL Rule作成|event_id.iaas.networkacl_rule.create|
-|NetworkACL Rule削除|event_id.iaas.networkacl_rule.delete|
-|NetworkACL Rule修正|event_id.iaas.networkacl_rule.update|
-|NetworkACL Binding作成|event_id.iaas.networkacl_binding.create|
-|NetworkACL Binding削除|event_id.iaas.networkacl_binding.delete|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -283,7 +284,6 @@
 |CNI変更完了|event_id.iaas.cluster.cni_update.end|
 |CNI変更失敗|event_id.iaas.cluster.cni_update.failed|
 |CNI変更起動|event_id.iaas.cluster.cni_update.start|
-|クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas|
 |クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas.cluster.api_ep_ipacl_update.end|
 |クラスタAPIエンドポイントIPアクセス制御の変更の失敗|event_id.iaas.cluster.api_ep_ipacl_update.failed|
 |クラスタAPIエンドポイントIPアクセス制御の変更の起動|event_id.iaas.cluster.api_ep_ipacl_update.start|
@@ -1232,6 +1232,12 @@
 |テンプレートグラフの修正|event_id.dataflow.template.graph.update|
 |テンプレートグラフのコピー|event_id.dataflow.template.graph.copy|
 |スケジューラの保存|event_id.dataflow.scheduler.meta.save|
+|Log &amp; Crash Search保存設定|event_id.dataflow.settings.lncs|
+|有効性検査の有効化|event_id.dataflow.settings.accessibility-checker.enable|
+|有効性検査の無効化|event_id.dataflow.settings.accessibility-checker.disable|
+|ドレイン後に終了|event_id.dataflow.flow.drain|
+|Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
+|Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
