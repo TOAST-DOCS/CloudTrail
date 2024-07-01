@@ -1,5 +1,14 @@
 ## CloudTrail > Release Notes
 
+### 2024. 07. 09.
+#### More Events
+* Added events related to Gamebase.
+* Added events related to Console.
+
+### 2024. 07. 01.
+#### More Events
+* Added events related to DataFlow.
+
 ### 2024. 06. 11.
 #### Added Features
 * Added the event log search API 2.0.
