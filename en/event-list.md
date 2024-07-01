@@ -29,6 +29,7 @@
 |Disable Organization Service |event_id.org.product.disable|
 |Enable Organization Service|event_id.org.product.enable|
 |Modify Organization Information|event_id.org.update|
+|Access Organization|event_id.org.selected|
 |Access IAM Organization|event_id.iam.org.selected|
 |Create Project|event_id.project.create|
 |Delete Project|event_id.project.delete|
@@ -46,11 +47,13 @@
 |Modify Project Common Role Group|event_id.org.role_group.update|
 |Delete Project Common Role Group|event_id.org.role_group.delete|
 |Add Role to Project Common Role Group|event_id.org.role_group.assign.roles|
+|Modify Roles in Project Common Role Group|event_id.org.role_group.modify.roles|
 |Delete Role from Project Common Role Group|event_id.org.role_group.remove.roles|
 |Add Role Group|event_id.project.role_group.create|
 |Modify Role Group|event_id.project.role_group.update|
 |Delete Role Group|event_id.project.role_group.delete|
 |Add Role to Role Group|event_id.project.role_group.assign.roles|
+|Modify Roles in Role Group|event_id.project.role_group.modify.roles|
 |Delete Role from Role Group|event_id.project.role_group.remove.roles|
 |Access IAM Project|event_id.iam.project.selected|
 |Add Budget|event_id.budget.create|
@@ -78,20 +81,6 @@
 
 | Event | Event ID |
 | --- | --- |
-|Create Schedule for Scaling Group|event_id.iaas.autoscale_schedule.create|
-|Delete Schedule for Scaling Group|event_id.iaas.autoscale_schedule.delete|
-|Change Scheduled Task OWNER Of Scaling Group|event_id.iaas.autoscale_schedule.handover|
-|Associate Instance Floating IP|event_id.iaas.floating_ip.attach|
-|Create Floating IP|event_id.iaas.floating_ip.create|
-|Delete Floating IP|event_id.iaas.floating_ip.delete|
-|Disassociate Instance Floating IP|event_id.iaas.floating_ip.detach|
-|Create Image|event_id.iaas.image.create|
-|Create Image ID|event_id.iaas.image.create_id|
-|Upload Image|event_id.iaas.image.upload|
-|Delete Image|event_id.iaas.image.delete|
-|Change Image Information|event_id.iaas.image.update|
-|Create Image Sharing|event_id.iaas.image_member.create|
-|Delete Image Sharing|event_id.iaas.image_member.delete|
 |Create Instance|event_id.iaas.instance.create|
 |Create Instance Completed|event_id.iaas.instance.create_end|
 |Delete Instance|event_id.iaas.instance.delete|
@@ -101,33 +90,95 @@
 |Reboot Instance Completed|event_id.iaas.instance_action.reboot_end|
 |Change Instance Type|event_id.iaas.instance_action.resize|
 |Change Instance Type Completed|event_id.iaas.instance_action.resize_end|
+|Take Console Screenshot|event_id.iaas.instance_action.screenshot|
+|Terminate Instance|event_id.iaas.instance_action.shelve|
+|Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|
 |Start Instance|event_id.iaas.instance_action.start|
 |Start Instance Completed|event_id.iaas.instance_action.start_end|
 |Stop Instance|event_id.iaas.instance_action.stop|
 |Stop Instance Completed|event_id.iaas.instance_action.stop_end|
 |Start Instance|event_id.iaas.instance_action.unshelve|
 |Start Instance Completed|event_id.iaas.instance_action.unshelve_end|
-|Terminate Instance|event_id.iaas.instance_action.shelve|
-|Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|
 |Create Instance Template|event_id.iaas.instance_template.create|
 |Delete Instance Template|event_id.iaas.instance_template.delete|
-|Change Instance Template|event_id.iaas.instance_template.update|
 |Change Instance Template OWNER|event_id.iaas.instance_template.handover|
+|Change Instance Template|event_id.iaas.instance_template.update|
+|Create Instance Metadata|event_id.iaas.metadata.create|
+|Delete Instance Metadata|event_id.iaas.metadata.delete|
+|Change Instance Metadata|event_id.iaas.metadata.update|
 |Create Instance Interface|event_id.iaas.interface.create|
 |Delete Instance Interface|event_id.iaas.interface.delete|
-|Create Internet Gateway|event_id.iaas.internet_gateway.create|
-|Delete Internet Gateway|event_id.iaas.internet_gateway.delete|
-|Create NAT Gateway|event_id.iaas.nat_gateway.create|
-|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
-|Change NAT Gateway|event_id.iaas.nat_gateway.update|
-|Create VPNGW|event_id.iaas.vpngw.create|
-|Update VPN Connection|event_id.iaas.vpn_connection.update|
-|Delete VPNGW|event_id.iaas.vpngw.delete|
-|Update VPNGW|event_id.iaas.vpngw.update|
-|Create VPN Connection|event_id.iaas.vpn_connection.create|
-|Delete VPN Connection|event_id.iaas.vpn_connection.delete|
 |Create Keypair|event_id.iaas.keypair.create|
 |Delete Keypair|event_id.iaas.keypair.delete|
+|Copy Image|event_id.iaas.image.copy|
+|Create Image|event_id.iaas.image.create|
+|Create Image ID|event_id.iaas.image.create_id|
+|Delete Image|event_id.iaas.image.delete|
+|Change Image Information|event_id.iaas.image.update|
+|Upload Image|event_id.iaas.image.upload|
+|Create Image Sharing|event_id.iaas.image_member.create|
+|Delete Image Sharing|event_id.iaas.image_member.delete|
+|Build Image|event_id.iaas.image_template.build|
+|Cancel Image Build|event_id.iaas.image_template.cancel_build|
+|Create Image Template|event_id.iaas.image_template.create|
+|Delete Image Template|event_id.iaas.image_template.delete|
+|Modify Image Template|event_id.iaas.image_template.update|
+|Connect Instance Volume|event_id.iaas.volume.attach|
+|Copy Volume|event_id.iaas.volume.copy|
+|Create Block Storage|event_id.iaas.volume.create|
+|Delete Block Storage|event_id.iaas.volume.delete|
+|Disconnect Instance Volume|event_id.iaas.volume.detach|
+|Change Block Storage Size|event_id.iaas.volume.extend|
+|Change Block Storage Information|event_id.iaas.volume.update|
+|Create Block Storage Snapshot|event_id.iaas.snapshot.create|
+|Delete Block Storage Snapshot|event_id.iaas.snapshot.delete|
+|Create Schedule for Scaling Group|event_id.iaas.autoscale_schedule.create|
+|Delete Schedule for Scaling Group|event_id.iaas.autoscale_schedule.delete|
+|Change Scheduled Task OWNER Of Scaling Group|event_id.iaas.autoscale_schedule.handover|
+|Create Scaling Group|event_id.iaas.scaling_group.create|
+|Delete Scaling Group|event_id.iaas.scaling_group.delete|
+|Change Scaling Group OWNER|event_id.iaas.scaling_group.handover|
+|Change Scaling Group|event_id.iaas.scaling_group.update|
+|Create S3 API Credentials|event_id.iaas.s3credential.create|
+|Delete S3 API Credentials|event_id.iaas.s3credential.delete|
+|Create VPC|event_id.iaas.vpc.create|
+|Delete VPC|event_id.iaas.vpc.delete|
+|Change VPC Information|event_id.iaas.vpc.update|
+|Create VPC Subnet|event_id.iaas.vpc_subnet.create|
+|Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
+|Change VPC Subnet|event_id.iaas.vpc_subnet.update|
+|Connect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.attach_routingtable|
+|Disconnect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.detach_routingtable|
+|Create Subnet Static Route|event_id.iaas.vpc_subnet_route.create|
+|Delete Subnet Static Route|event_id.iaas.vpc_subnet_route.delete|
+|Create Port|event_id.iaas.port.create|
+|Delete Port|event_id.iaas.port.delete|
+|Change Port|event_id.iaas.port.update|
+|Create Routing Table|event_id.iaas.routing_table.create|
+|Delete Routing Table|event_id.iaas.routing_table.delete|
+|Change Routing Table|event_id.iaas.routing_table.update|
+|Connect Routing Table over Internet Gateway|event_id.iaas.routing_table.attach_gateway|
+|Disconnect Routing Table over Internet Gateway|event_id.iaas.routing_table.detach_gateway|
+|Set Default Routing Table|event_id.iaas.routing_table.set_as_default|
+|Create Route in Routing Table|event_id.iaas.route.create|
+|Delete Route in Routing Table|event_id.iaas.route.delete|
+|Create Floating IP|event_id.iaas.floating_ip.create|
+|Delete Floating IP|event_id.iaas.floating_ip.delete|
+|Associate Instance Floating IP|event_id.iaas.floating_ip.attach|
+|Disassociate Instance Floating IP|event_id.iaas.floating_ip.detach|
+|Create NetworkACL|event_id.iaas.networkacl.create|
+|Delete NetworkACL|event_id.iaas.networkacl.delete|
+|Update NetworkACL|event_id.iaas.networkacl.update|
+|Create NetworkACL Rule|event_id.iaas.networkacl_rule.create|
+|Delete NetworkACL Rule|event_id.iaas.networkacl_rule.delete|
+|Update NetworkACL Rule|event_id.iaas.networkacl_rule.update|
+|Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
+|Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
+|Create Security Group|event_id.iaas.security_group.create|
+|Delete Security Group|event_id.iaas.security_group.delete|
+|Change Security Group|event_id.iaas.security_group.update|
+|Create Security Rule|event_id.iaas.security_group_rule.create|
+|Delete Security Rule|event_id.iaas.security_group_rule.delete|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|
 |Delete Load Balancer|event_id.iaas.loadbalancer.delete|
 |Change Load Balancer Information|event_id.iaas.loadbalancer.update|
@@ -138,133 +189,85 @@
 |Detach Load Balancer Instance|event_id.iaas.loadbalancer_member.delete|
 |Change Status of Load Balancer Instance|event_id.iaas.loadbalancer_member.update|
 |Create Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.create|
-|Modify Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.update|
 |Delete Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.delete|
+|Modify Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.update|
 |Create Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.create|
-|Modify Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.update|
 |Delete Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.delete|
-|Create Instance Metadata|event_id.iaas.metadata.create|
-|Delete Instance Metadata|event_id.iaas.metadata.delete|
-|Change Instance Metadata|event_id.iaas.metadata.update|
+|Modify Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.update|
+|Create Transit Hub|event_id.iaas.transit_hub.create|
+|Delete Transit Hub|event_id.iaas.transit_hub.delete|
+|Modify Transit Hub|event_id.iaas.transit_hub.update|
+|Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|
+|Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|
+|Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|
+|Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|
+|Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|
+|Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|
+|Create Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.create|
+|Delete Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.delete|
+|Modify Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.update|
+|Create Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.create|
+|Delete Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.delete|
+|Modify Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.update|
+|Create Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.create|
+|Delete Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.delete|
+|Modify Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.update|
+|Create Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.create|
+|Delete Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.delete|
+|Modify Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.update|
+|Create Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.create|
+|Delete Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.delete|
+|Modify Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.update|
+|Create Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.create|
+|Delete Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.delete|
+|Modify Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.update|
+|Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|
+|Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|
+|Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|
+|Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
+|Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|Create Internet Gateway|event_id.iaas.internet_gateway.create|
+|Delete Internet Gateway|event_id.iaas.internet_gateway.delete|
 |Create VPC Peering|event_id.iaas.peering.create|
 |Delete VPC Peering|event_id.iaas.peering.delete|
-|Create Port|event_id.iaas.port.create|
-|Delete Port|event_id.iaas.port.delete|
-|Change Port|event_id.iaas.port.update|
-|Create Route in Routing Table|event_id.iaas.route.create|
-|Delete Route in Routing Table|event_id.iaas.route.delete|
-|Connect Routing Table over Internet Gateway|event_id.iaas.routing_table.attach_gateway|
-|Create Routing Table|event_id.iaas.routing_table.create|
-|Delete Routing Table|event_id.iaas.routing_table.delete|
-|Disconnect Routing Table over Internet Gateway|event_id.iaas.routing_table.detach_gateway|
-|Set Default Routing Table|event_id.iaas.routing_table.set_as_default|
-|Change Routing Table|event_id.iaas.routing_table.update|
-|Create Scaling Group|event_id.iaas.scaling_group.create|
-|Delete Scaling Group|event_id.iaas.scaling_group.delete|
-|Change Scaling Group|event_id.iaas.scaling_group.update|
-|Change Scaling Group OWNER|event_id.iaas.scaling_group.handover|
-|Create Security Group|event_id.iaas.security_group.create|
-|Delete Security Group|event_id.iaas.security_group.delete|
-|Change Security Group|event_id.iaas.security_group.update|
-|Create Security Rule|event_id.iaas.security_group_rule.create|
-|Delete Security Rule|event_id.iaas.security_group_rule.delete|
-|Create Block Storage Snapshot|event_id.iaas.snapshot.create|
-|Delete Block Storage Snapshot|event_id.iaas.snapshot.delete|
-|Connect Instance Volume|event_id.iaas.volume.attach|
-|Create Block Storage|event_id.iaas.volume.create|
-|Delete Block Storage|event_id.iaas.volume.delete|
-|Disconnect Instance Volume|event_id.iaas.volume.detach|
-|Change Block Storage Information|event_id.iaas.volume.update|
-|Create VPC|event_id.iaas.vpc.create|
-|Delete VPC|event_id.iaas.vpc.delete|
-|Change VPC Information|event_id.iaas.vpc.update|
-|Connect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.attach_routingtable|
-|Create VPC Subnet|event_id.iaas.vpc_subnet.create|
-|Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
-|Disconnect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.detach_routingtable|
-|Change VPC Subnet|event_id.iaas.vpc_subnet.update|
-|Copy Image|event_id.iaas.image.copy|
-|Build Image|event_id.iaas.image_template.build|
-|Cancel Image Build|event_id.iaas.image_template.cancel_build|
-|Create Image Template|event_id.iaas.image_template.create|
-|Delete Image Template|event_id.iaas.image_template.delete|
-|Modify Image Template|event_id.iaas.image_template.update|
-|Take Console Screenshot|event_id.iaas.instance_action.screenshot|
 |Create Region Peering|event_id.iaas.region_peering.create|
 |Delete Region Peering|event_id.iaas.region_peering.delete|
 |Change Region Peering|event_id.iaas.region_peering.update|
 |Create Project Peering|event_id.iaas.project_peering.create|
-|Change Project Peering|event_id.iaas.project_peering.update|
 |Delete Project Peering|event_id.iaas.project_peering.delete|
+|Change Project Peering|event_id.iaas.project_peering.update|
 |Create Project to Allow|event_id.iaas.peering_allow_project.create|
-|Change Project to Allow|event_id.iaas.peering_allow_project.update|
 |Delete Project to Allow|event_id.iaas.peering_allow_project.delete|
-|Create Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.create|
-|Change Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.update|
-|Delete Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.delete|
-|Create Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.create|
-|Change Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.update|
-|Delete Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.delete|
-|Create Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.create|
-|Change Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.update|
-|Delete Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.delete|
-|Create S3 API Credentials|event_id.iaas.s3credential.create|
-|Delete S3 API Credentials|event_id.iaas.s3credential.delete|
-|Create Subnet Static Route|event_id.iaas.vpc_subnet_route.create|
-|Delete Subnet Static Route|event_id.iaas.vpc_subnet_route.delete|
+|Change Project to Allow|event_id.iaas.peering_allow_project.update|
+|Create NAT Gateway|event_id.iaas.nat_gateway.create|
+|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
+|Change NAT Gateway|event_id.iaas.nat_gateway.update|
+|Create VPNGW|event_id.iaas.vpngw.create|
+|Delete VPNGW|event_id.iaas.vpngw.delete|
+|Update VPNGW|event_id.iaas.vpngw.update|
+|Create VPN Connection|event_id.iaas.vpn_connection.create|
+|Delete VPN Connection|event_id.iaas.vpn_connection.delete|
+|Update VPN Connection|event_id.iaas.vpn_connection.update|
 |Create Service Gateway|event_id.iaas.service_gateway.create|
-|Change Service Gateway|event_id.iaas.service_gateway.update|
 |Delete Service Gateway|event_id.iaas.service_gateway.delete|
-|Copy Volume|event_id.iaas.volume.copy|
+|Change Service Gateway|event_id.iaas.service_gateway.update|
+|Create Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.create|
+|Delete Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.delete|
+|Change Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.update|
+|Create Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.create|
+|Delete Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.delete|
+|Change Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.update|
+|Create Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.create|
+|Delete Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.delete|
+|Change Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.update|
 |Create Private DNS Zone|event_id.iaas.privatedns.zone.create|
-|Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|
 |Delete Private DNS Zone|event_id.iaas.privatedns.zone.delete|
+|Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|
 |Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create|
-|Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
 |Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|
+|Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
 |Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|
-|Create Transit Hub|event_id.iaas.transit_hub.create|
-|Modify Transit Hub|event_id.iaas.transit_hub.update|
-|Delete Transit Hub|event_id.iaas.transit_hub.delete|
-|Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|
-|Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|
-|Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|
-|Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|
-|Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|
-|Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|
-|Create Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.create|
-|Modify Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.update|
-|Delete Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.delete|
-|Create Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.create|
-|Modify Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.update|
-|Delete Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.delete|
-|Create Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.create|
-|Modify Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.update|
-|Delete Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.delete|
-|Create Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.create|
-|Modify Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.update|
-|Delete Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.delete|
-|Create Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.create|
-|Modify Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.update|
-|Delete Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.delete|
-|Create Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.create|
-|Modify Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.update|
-|Delete Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.delete|
-|Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|
-|Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|
-|Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|
-|Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
-|Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
-|Change Block Storage Size|event_id.iaas.volume.extend|
-|Create NetworkACL|event_id.iaas.networkacl.create|
-|Delete NetworkACL|event_id.iaas.networkacl.delete|
-|Update NetworkACL|event_id.iaas.networkacl.update|
-|Create NetworkACL Rule|event_id.iaas.networkacl_rule.create|
-|Delete NetworkACL Rule|event_id.iaas.networkacl_rule.delete|
-|Update NetworkACL Rule|event_id.iaas.networkacl_rule.update|
-|Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
-|Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -283,7 +286,6 @@
 |Change CNI Completed|event_id.iaas.cluster.cni_update.end|
 |Change CNI Failed|event_id.iaas.cluster.cni_update.failed|
 |Change CNI Started|event_id.iaas.cluster.cni_update.start|
-|Update Cluster API endpoint IP ACL Completed|event_id.iaas|
 |Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.api_ep_ipacl_update.end|
 |Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.api_ep_ipacl_update.failed|
 |Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.api_ep_ipacl_update.start|
@@ -1232,6 +1234,10 @@
 |Modify Template Graph|event_id.dataflow.template.graph.update|
 |Copy Template Graph|event_id.dataflow.template.graph.copy|
 |Save Scheduler|event_id.dataflow.scheduler.meta.save|
+|Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs|
+|Enable Validation|event_id.dataflow.settings.accessibility-checker.enable|
+|Disable Validation|event_id.dataflow.settings.accessibility-checker.disable|
+|End After Draining|event_id.dataflow.flow.drain|
 
 ### DataQuery
 
@@ -1599,6 +1605,7 @@
 |Update notice|event_id.gamebase.notice_update|
 |Delete notice|event_id.gamebase.notice_delete|
 |Add image notice|event_id.gamebase.image_notice_create|
+|Update image notice app|event_id.gamebase.image_notice_app_update|
 |Update image notice|event_id.gamebase.image_notice_update|
 |Delete image notice|event_id.gamebase.image_notice_delete|
 |Add kick-out|event_id.gamebase.kick_out_create|
