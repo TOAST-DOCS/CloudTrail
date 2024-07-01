@@ -47,11 +47,13 @@
 |プロジェクト共通ロールグループ修正|event_id.org.role_group.update|
 |プロジェクト共通ロールグループ削除|event_id.org.role_group.delete|
 |プロジェクト共通ロールグループロール追加|event_id.org.role_group.assign.roles|
+|プロジェクト共通ロールグループのロールを修正|event_id.org.role_group.modify.roles|
 |プロジェクト共通ロールグループロール削除|event_id.org.role_group.remove.roles|
 |ロールグループ追加|event_id.project.role_group.create|
 |ロールグループ修正|event_id.project.role_group.update|
 |ロールグループ削除|event_id.project.role_group.delete|
 |ロールグループロール追加|event_id.project.role_group.assign.roles|
+|ロールグループのロールを修正|event_id.project.role_group.modify.roles|
 |ロールグループロール削除|event_id.project.role_group.remove.roles|
 |IAMプロジェクト アクセス|event_id.iam.project.selected|
 |予算追加|event_id.budget.create|
@@ -1236,8 +1238,6 @@
 |有効性検査の有効化|event_id.dataflow.settings.accessibility-checker.enable|
 |有効性検査の無効化|event_id.dataflow.settings.accessibility-checker.disable|
 |ドレイン後に終了|event_id.dataflow.flow.drain|
-|Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
-|Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
@@ -1605,6 +1605,7 @@
 |Update notice|event_id.gamebase.notice_update|
 |Delete notice|event_id.gamebase.notice_delete|
 |Add image notice|event_id.gamebase.image_notice_create|
+|Update image notice app|event_id.gamebase.image_notice_app_update|
 |Update image notice|event_id.gamebase.image_notice_update|
 |Delete image notice|event_id.gamebase.image_notice_delete|
 |Add kick-out|event_id.gamebase.kick_out_create|
