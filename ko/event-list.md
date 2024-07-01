@@ -47,11 +47,13 @@
 |프로젝트 공통 역할 그룹 수정|event_id.org.role_group.update|
 |프로젝트 공통 역할 그룹 삭제|event_id.org.role_group.delete|
 |프로젝트 공통 역할 그룹 역할 추가|event_id.org.role_group.assign.roles|
+|프로젝트 공통 역할 그룹 역할 수정|event_id.org.role_group.modify.roles|
 |프로젝트 공통 역할 그룹 역할 삭제|event_id.org.role_group.remove.roles|
 |역할 그룹 추가|event_id.project.role_group.create|
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
+|역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
 |예산 추가|event_id.budget.create|
@@ -1236,8 +1238,6 @@
 |유효성 검사 활성화|event_id.dataflow.settings.accessibility-checker.enable|
 |유효성 검사 비활성화|event_id.dataflow.settings.accessibility-checker.disable|
 |드레이닝 후 종료|event_id.dataflow.flow.drain|
-|Log &amp; Crash Search 저장 설정 저장|event_id.dataflow.settings.lncs.save|
-|Log &amp; Crash Search 저장 설정 삭제|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
@@ -1605,6 +1605,7 @@
 |공지 수정|event_id.gamebase.notice_update|
 |공지 삭제|event_id.gamebase.notice_delete|
 |이미지 공지 등록|event_id.gamebase.image_notice_create|
+|이미지 공지 앱 수정|event_id.gamebase.image_notice_app_update|
 |이미지 공지 수정|event_id.gamebase.image_notice_update|
 |이미지 공지 삭제|event_id.gamebase.image_notice_delete|
 |킥아웃 등록|event_id.gamebase.kick_out_create|
