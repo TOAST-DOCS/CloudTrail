@@ -47,11 +47,13 @@
 |Modify Project Common Role Group|event_id.org.role_group.update|
 |Delete Project Common Role Group|event_id.org.role_group.delete|
 |Add Role to Project Common Role Group|event_id.org.role_group.assign.roles|
+|Modify Roles in Project Common Role Group|event_id.org.role_group.modify.roles|
 |Delete Role from Project Common Role Group|event_id.org.role_group.remove.roles|
 |Add Role Group|event_id.project.role_group.create|
 |Modify Role Group|event_id.project.role_group.update|
 |Delete Role Group|event_id.project.role_group.delete|
 |Add Role to Role Group|event_id.project.role_group.assign.roles|
+|Modify Roles in Role Group|event_id.project.role_group.modify.roles|
 |Delete Role from Role Group|event_id.project.role_group.remove.roles|
 |Access IAM Project|event_id.iam.project.selected|
 |Add Budget|event_id.budget.create|
@@ -1236,8 +1238,6 @@
 |Enable Validation|event_id.dataflow.settings.accessibility-checker.enable|
 |Disable Validation|event_id.dataflow.settings.accessibility-checker.disable|
 |End After Draining|event_id.dataflow.flow.drain|
-|Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
-|Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
@@ -1605,6 +1605,7 @@
 |Update notice|event_id.gamebase.notice_update|
 |Delete notice|event_id.gamebase.notice_delete|
 |Add image notice|event_id.gamebase.image_notice_create|
+|Update image notice app|event_id.gamebase.image_notice_app_update|
 |Update image notice|event_id.gamebase.image_notice_update|
 |Delete image notice|event_id.gamebase.image_notice_delete|
 |Add kick-out|event_id.gamebase.kick_out_create|
