@@ -4,20 +4,6 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
-|스케일링 그룹 예약 작업 삭제|event_id.iaas.autoscale_schedule.delete|
-|스케일링 그룹 예약 작업 OWNER 변경|event_id.iaas.autoscale_schedule.handover|
-|인스턴스 플로팅 IP 연결|event_id.iaas.floating_ip.attach|
-|플로팅 IP 생성|event_id.iaas.floating_ip.create|
-|플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
-|인스턴스 플로팅 IP 연결 해제|event_id.iaas.floating_ip.detach|
-|이미지 생성|event_id.iaas.image.create|
-|이미지 아이디 생성|event_id.iaas.image.create_id|
-|이미지 업로드|event_id.iaas.image.upload|
-|이미지 삭제|event_id.iaas.image.delete|
-|이미지 정보 변경|event_id.iaas.image.update|
-|이미지 공유 추가|event_id.iaas.image_member.create|
-|이미지 공유 삭제|event_id.iaas.image_member.delete|
 |인스턴스 생성|event_id.iaas.instance.create|
 |인스턴스 생성 완료|event_id.iaas.instance.create_end|
 |인스턴스 삭제|event_id.iaas.instance.delete|
@@ -27,33 +13,95 @@
 |인스턴스 재부팅 완료|event_id.iaas.instance_action.reboot_end|
 |인스턴스 타입 변경|event_id.iaas.instance_action.resize|
 |인스턴스 타입 변경 완료|event_id.iaas.instance_action.resize_end|
+|콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
+|인스턴스 종료|event_id.iaas.instance_action.shelve|
+|인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
 |인스턴스 시작|event_id.iaas.instance_action.start|
 |인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
 |인스턴스 시작|event_id.iaas.instance_action.unshelve|
 |인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
-|인스턴스 종료|event_id.iaas.instance_action.shelve|
-|인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
-|인스턴스 템플릿 변경|event_id.iaas.instance_template.update|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
+|인스턴스 템플릿 변경|event_id.iaas.instance_template.update|
+|인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
+|인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
+|인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
 |인스턴스 인터페이스 추가|event_id.iaas.interface.create|
 |인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|
-|인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|
-|인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|
-|NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
-|NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
-|NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
-|VPNGW 생성|event_id.iaas.vpngw.create|
-|VPN Connection 수정|event_id.iaas.vpn_connection.update|
-|VPNGW 삭제|event_id.iaas.vpngw.delete|
-|VPNGW 수정|event_id.iaas.vpngw.update|
-|VPN Connection 생성|event_id.iaas.vpn_connection.create|
-|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
+|이미지 복제|event_id.iaas.image.copy|
+|이미지 생성|event_id.iaas.image.create|
+|이미지 아이디 생성|event_id.iaas.image.create_id|
+|이미지 삭제|event_id.iaas.image.delete|
+|이미지 정보 변경|event_id.iaas.image.update|
+|이미지 업로드|event_id.iaas.image.upload|
+|이미지 공유 추가|event_id.iaas.image_member.create|
+|이미지 공유 삭제|event_id.iaas.image_member.delete|
+|이미지 빌드|event_id.iaas.image_template.build|
+|이미지 빌드 취소|event_id.iaas.image_template.cancel_build|
+|이미지 템플릿 생성|event_id.iaas.image_template.create|
+|이미지 템플릿 삭제|event_id.iaas.image_template.delete|
+|이미지 템플릿 수정|event_id.iaas.image_template.update|
+|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
+|볼륨 복제|event_id.iaas.volume.copy|
+|블록 스토리지 생성|event_id.iaas.volume.create|
+|블록 스토리지 삭제|event_id.iaas.volume.delete|
+|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
+|블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|블록 스토리지 정보 변경|event_id.iaas.volume.update|
+|블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
+|블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
+|스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
+|스케일링 그룹 예약 작업 삭제|event_id.iaas.autoscale_schedule.delete|
+|스케일링 그룹 예약 작업 OWNER 변경|event_id.iaas.autoscale_schedule.handover|
+|스케일링 그룹 생성|event_id.iaas.scaling_group.create|
+|스케일링 그룹 삭제|event_id.iaas.scaling_group.delete|
+|스케일링 그룹 OWNER 변경|event_id.iaas.scaling_group.handover|
+|스케일링 그룹 변경|event_id.iaas.scaling_group.update|
+|S3 API 자격 증명 생성|event_id.iaas.s3credential.create|
+|S3 API 자격 증명 삭제|event_id.iaas.s3credential.delete|
+|VPC 생성|event_id.iaas.vpc.create|
+|VPC 삭제|event_id.iaas.vpc.delete|
+|VPC 정보 변경|event_id.iaas.vpc.update|
+|VPC 서브넷 생성|event_id.iaas.vpc_subnet.create|
+|VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
+|VPC 서브넷 변경|event_id.iaas.vpc_subnet.update|
+|VPC 서브넷 라우팅 테이블 연결|event_id.iaas.vpc_subnet.attach_routingtable|
+|VPC 서브넷 라우팅 테이블 연결 해제|event_id.iaas.vpc_subnet.detach_routingtable|
+|서브넷 정적 라우트 생성|event_id.iaas.vpc_subnet_route.create|
+|서브넷 정적 라우트 삭제|event_id.iaas.vpc_subnet_route.delete|
+|포트 생성|event_id.iaas.port.create|
+|포트 삭제|event_id.iaas.port.delete|
+|포트 변경|event_id.iaas.port.update|
+|라우팅 테이블 생성|event_id.iaas.routing_table.create|
+|라우팅 테이블 삭제|event_id.iaas.routing_table.delete|
+|라우팅 테이블 변경|event_id.iaas.routing_table.update|
+|라우팅 테이블 인터넷 게이트웨이 연결|event_id.iaas.routing_table.attach_gateway|
+|라우팅 테이블 인터넷 게이트웨이 연결 해제|event_id.iaas.routing_table.detach_gateway|
+|라우팅 테이블 기본 지정|event_id.iaas.routing_table.set_as_default|
+|라우팅 테이블 라우트 생성|event_id.iaas.route.create|
+|라우팅 테이블 라우트 삭제|event_id.iaas.route.delete|
+|플로팅 IP 생성|event_id.iaas.floating_ip.create|
+|플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
+|인스턴스 플로팅 IP 연결|event_id.iaas.floating_ip.attach|
+|인스턴스 플로팅 IP 연결 해제|event_id.iaas.floating_ip.detach|
+|NetworkACL 생성|event_id.iaas.networkacl.create|
+|NetworkACL 삭제|event_id.iaas.networkacl.delete|
+|NetworkACL 수정|event_id.iaas.networkacl.update|
+|NetworkACL Rule 생성|event_id.iaas.networkacl_rule.create|
+|NetworkACL Rule 삭제|event_id.iaas.networkacl_rule.delete|
+|NetworkACL Rule 수정|event_id.iaas.networkacl_rule.update|
+|NetworkACL Binding 생성|event_id.iaas.networkacl_binding.create|
+|NetworkACL Binding 삭제|event_id.iaas.networkacl_binding.delete|
+|보안 그룹 생성|event_id.iaas.security_group.create|
+|보안 그룹 삭제|event_id.iaas.security_group.delete|
+|보안 그룹 변경|event_id.iaas.security_group.update|
+|보안 규칙 생성|event_id.iaas.security_group_rule.create|
+|보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|
 |로드 밸런서 삭제|event_id.iaas.loadbalancer.delete|
 |로드 밸런서 정보 변경|event_id.iaas.loadbalancer.update|
@@ -64,133 +112,85 @@
 |로드 밸런서 인스턴스 연결 해제|event_id.iaas.loadbalancer_member.delete|
 |로드 밸런서 인스턴스 활성 상태 변경|event_id.iaas.loadbalancer_member.update|
 |로드 밸런서 L7 정책 생성|event_id.iaas.loadbalancer_l7policy.create|
-|로드 밸런서 L7 정책 변경|event_id.iaas.loadbalancer_l7policy.update|
 |로드 밸런서 L7 정책 삭제|event_id.iaas.loadbalancer_l7policy.delete|
+|로드 밸런서 L7 정책 변경|event_id.iaas.loadbalancer_l7policy.update|
 |로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
-|로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
 |로드 밸런서 L7 룰 삭제|event_id.iaas.loadbalancer_l7rule.delete|
-|인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
-|인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
-|인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
+|로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
+|트랜짓 허브 생성|event_id.iaas.transit_hub.create|
+|트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
+|트랜짓 허브 수정|event_id.iaas.transit_hub.update|
+|트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|
+|트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|
+|트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|
+|트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|
+|트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|
+|트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|
+|트랜짓 허브 라우팅 테이블 생성|event_id.iaas.transit_hub_routing_table.create|
+|트랜짓 허브 라우팅 테이블 삭제|event_id.iaas.transit_hub_routing_table.delete|
+|트랜짓 허브 라우팅 테이블 변경|event_id.iaas.transit_hub_routing_table.update|
+|트랜짓 허브 라우팅 연결 생성|event_id.iaas.transit_hub_routing_association.create|
+|트랜짓 허브 라우팅 연결 삭제|event_id.iaas.transit_hub_routing_association.delete|
+|트랜짓 허브 라우팅 연결 변경|event_id.iaas.transit_hub_routing_association.update|
+|트랜짓 허브 라우팅 전파 생성|event_id.iaas.transit_hub_routing_propagation.create|
+|트랜짓 허브 라우팅 전파 삭제|event_id.iaas.transit_hub_routing_propagation.delete|
+|트랜짓 허브 라우팅 전파 변경|event_id.iaas.transit_hub_routing_propagation.update|
+|트랜짓 허브 라우팅 룰 생성|event_id.iaas.transit_hub_routing_rule.create|
+|트랜짓 허브 라우팅 룰 삭제|event_id.iaas.transit_hub_routing_rule.delete|
+|트랜짓 허브 라우팅 룰 변경|event_id.iaas.transit_hub_routing_rule.update|
+|트랜짓 허브 멀티캐스트 도메인 생성|event_id.iaas.transit_hub_multicast_domain.create|
+|트랜짓 허브 멀티캐스트 도메인 삭제|event_id.iaas.transit_hub_multicast_domain.delete|
+|트랜짓 허브 멀티캐스트 도메인 변경|event_id.iaas.transit_hub_multicast_domain.update|
+|트랜짓 허브 멀티캐스트 연결 생성|event_id.iaas.transit_hub_multicast_association.create|
+|트랜짓 허브 멀티캐스트 연결 삭제|event_id.iaas.transit_hub_multicast_association.delete|
+|트랜짓 허브 멀티캐스트 연결 변경|event_id.iaas.transit_hub_multicast_association.update|
+|트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|
+|트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|
+|트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
+|트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|
+|인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|
 |VPC 피어링 생성|event_id.iaas.peering.create|
 |VPC 피어링 삭제|event_id.iaas.peering.delete|
-|포트 생성|event_id.iaas.port.create|
-|포트 삭제|event_id.iaas.port.delete|
-|포트 변경|event_id.iaas.port.update|
-|라우팅 테이블 라우트 생성|event_id.iaas.route.create|
-|라우팅 테이블 라우트 삭제|event_id.iaas.route.delete|
-|라우팅 테이블 인터넷 게이트웨이 연결|event_id.iaas.routing_table.attach_gateway|
-|라우팅 테이블 생성|event_id.iaas.routing_table.create|
-|라우팅 테이블 삭제|event_id.iaas.routing_table.delete|
-|라우팅 테이블 인터넷 게이트웨이 연결 해제|event_id.iaas.routing_table.detach_gateway|
-|라우팅 테이블 기본 지정|event_id.iaas.routing_table.set_as_default|
-|라우팅 테이블 변경|event_id.iaas.routing_table.update|
-|스케일링 그룹 생성|event_id.iaas.scaling_group.create|
-|스케일링 그룹 삭제|event_id.iaas.scaling_group.delete|
-|스케일링 그룹 변경|event_id.iaas.scaling_group.update|
-|스케일링 그룹 OWNER 변경|event_id.iaas.scaling_group.handover|
-|보안 그룹 생성|event_id.iaas.security_group.create|
-|보안 그룹 삭제|event_id.iaas.security_group.delete|
-|보안 그룹 변경|event_id.iaas.security_group.update|
-|보안 규칙 생성|event_id.iaas.security_group_rule.create|
-|보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
-|블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
-|블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
-|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
-|블록 스토리지 생성|event_id.iaas.volume.create|
-|블록 스토리지 삭제|event_id.iaas.volume.delete|
-|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
-|블록 스토리지 정보 변경|event_id.iaas.volume.update|
-|VPC 생성|event_id.iaas.vpc.create|
-|VPC 삭제|event_id.iaas.vpc.delete|
-|VPC 정보 변경|event_id.iaas.vpc.update|
-|VPC 서브넷 라우팅 테이블 연결|event_id.iaas.vpc_subnet.attach_routingtable|
-|VPC 서브넷 생성|event_id.iaas.vpc_subnet.create|
-|VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
-|VPC 서브넷 라우팅 테이블 연결 해제|event_id.iaas.vpc_subnet.detach_routingtable|
-|VPC 서브넷 변경|event_id.iaas.vpc_subnet.update|
-|이미지 복제|event_id.iaas.image.copy|
-|이미지 빌드|event_id.iaas.image_template.build|
-|이미지 빌드 취소|event_id.iaas.image_template.cancel_build|
-|이미지 템플릿 생성|event_id.iaas.image_template.create|
-|이미지 템플릿 삭제|event_id.iaas.image_template.delete|
-|이미지 템플릿 수정|event_id.iaas.image_template.update|
-|콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |리전 피어링 생성|event_id.iaas.region_peering.create|
 |리전 피어링 삭제|event_id.iaas.region_peering.delete|
 |리전 피어링 변경|event_id.iaas.region_peering.update|
 |프로젝트 피어링 생성|event_id.iaas.project_peering.create|
-|프로젝트 피어링 변경|event_id.iaas.project_peering.update|
 |프로젝트 피어링 삭제|event_id.iaas.project_peering.delete|
-|허용할 프로젝트 생성|event_id.iaas.peering_allow_project.create|
-|허용할 프로젝트 변경|event_id.iaas.peering_allow_project.update|
-|허용할 프로젝트 삭제|event_id.iaas.peering_allow_project.delete|
-|트래픽 미러링 세션 생성|event_id.iaas.traffic_mirroring.session.create|
-|트래픽 미러링 세션 변경|event_id.iaas.traffic_mirroring.session.update|
-|트래픽 미러링 세션 삭제|event_id.iaas.traffic_mirroring.session.delete|
-|트래픽 미러링 필터 그룹 생성|event_id.iaas.traffic_mirroring.filter_group.create|
-|트래픽 미러링 필터 그룹 변경|event_id.iaas.traffic_mirroring.filter_group.update|
-|트래픽 미러링 필터 그룹 삭제|event_id.iaas.traffic_mirroring.filter_group.delete|
-|트래픽 미러링 필터 생성|event_id.iaas.traffic_mirroring.filter.create|
-|트래픽 미러링 필터 변경|event_id.iaas.traffic_mirroring.filter.update|
-|트래픽 미러링 필터 삭제|event_id.iaas.traffic_mirroring.filter.delete|
-|S3 API 자격 증명 생성|event_id.iaas.s3credential.create|
-|S3 API 자격 증명 삭제|event_id.iaas.s3credential.delete|
-|서브넷 정적 라우트 생성|event_id.iaas.vpc_subnet_route.create|
-|서브넷 정적 라우트 삭제|event_id.iaas.vpc_subnet_route.delete|
+|프로젝트 피어링 변경|event_id.iaas.project_peering.update|
+|피어링 허용 목록 생성|event_id.iaas.peering_allow_project.create|
+|피어링 허용 목록 삭제|event_id.iaas.peering_allow_project.delete|
+|피어링 허용 목록 변경|event_id.iaas.peering_allow_project.update|
+|NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
+|NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
+|NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
+|VPNGW 생성|event_id.iaas.vpngw.create|
+|VPNGW 삭제|event_id.iaas.vpngw.delete|
+|VPNGW 수정|event_id.iaas.vpngw.update|
+|VPN Connection 생성|event_id.iaas.vpn_connection.create|
+|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|
+|VPN Connection 수정|event_id.iaas.vpn_connection.update|
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
-|서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
-|볼륨 복제|event_id.iaas.volume.copy|
+|서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
+|트래픽 미러링 세션 생성|event_id.iaas.traffic_mirroring.session.create|
+|트래픽 미러링 세션 삭제|event_id.iaas.traffic_mirroring.session.delete|
+|트래픽 미러링 세션 변경|event_id.iaas.traffic_mirroring.session.update|
+|트래픽 미러링 필터 그룹 생성|event_id.iaas.traffic_mirroring.filter_group.create|
+|트래픽 미러링 필터 그룹 삭제|event_id.iaas.traffic_mirroring.filter_group.delete|
+|트래픽 미러링 필터 그룹 변경|event_id.iaas.traffic_mirroring.filter_group.update|
+|트래픽 미러링 필터 생성|event_id.iaas.traffic_mirroring.filter.create|
+|트래픽 미러링 필터 삭제|event_id.iaas.traffic_mirroring.filter.delete|
+|트래픽 미러링 필터 변경|event_id.iaas.traffic_mirroring.filter.update|
 |Private DNS Zone 생성|event_id.iaas.privatedns.zone.create|
-|Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|
 |Private DNS Zone 삭제|event_id.iaas.privatedns.zone.delete|
+|Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|
 |Private DNS 레코드 세트 생성|event_id.iaas.privatedns.recordset.create|
-|Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
+|Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
-|트랜짓 허브 생성|event_id.iaas.transit_hub.create|
-|트랜짓 허브 수정|event_id.iaas.transit_hub.update|
-|트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
-|트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|
-|트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|
-|트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|
-|트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|
-|트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|
-|트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|
-|트랜짓 허브 라우팅 테이블 생성|event_id.iaas.transit_hub_routing_table.create|
-|트랜짓 허브 라우팅 테이블 변경|event_id.iaas.transit_hub_routing_table.update|
-|트랜짓 허브 라우팅 테이블 삭제|event_id.iaas.transit_hub_routing_table.delete|
-|트랜짓 허브 라우팅 연결 생성|event_id.iaas.transit_hub_routing_association.create|
-|트랜짓 허브 라우팅 연결 변경|event_id.iaas.transit_hub_routing_association.update|
-|트랜짓 허브 라우팅 연결 삭제|event_id.iaas.transit_hub_routing_association.delete|
-|트랜짓 허브 라우팅 전파 생성|event_id.iaas.transit_hub_routing_propagation.create|
-|트랜짓 허브 라우팅 전파 변경|event_id.iaas.transit_hub_routing_propagation.update|
-|트랜짓 허브 라우팅 전파 삭제|event_id.iaas.transit_hub_routing_propagation.delete|
-|트랜짓 허브 라우팅 룰 생성|event_id.iaas.transit_hub_routing_rule.create|
-|트랜짓 허브 라우팅 룰 변경|event_id.iaas.transit_hub_routing_rule.update|
-|트랜짓 허브 라우팅 룰 삭제|event_id.iaas.transit_hub_routing_rule.delete|
-|트랜짓 허브 멀티캐스트 도메인 생성|event_id.iaas.transit_hub_multicast_domain.create|
-|트랜짓 허브 멀티캐스트 도메인 변경|event_id.iaas.transit_hub_multicast_domain.update|
-|트랜짓 허브 멀티캐스트 도메인 삭제|event_id.iaas.transit_hub_multicast_domain.delete|
-|트랜짓 허브 멀티캐스트 연결 생성|event_id.iaas.transit_hub_multicast_association.create|
-|트랜짓 허브 멀티캐스트 연결 변경|event_id.iaas.transit_hub_multicast_association.update|
-|트랜짓 허브 멀티캐스트 연결 삭제|event_id.iaas.transit_hub_multicast_association.delete|
-|트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|
-|트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|
-|트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|
-|트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
-|트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
-|블록 스토리지 크기 변경|event_id.iaas.volume.extend|
-|Network ACL 생성|event_id.iaas.networkacl.create|
-|Network ACL 삭제|event_id.iaas.networkacl.delete|
-|Network ACL 수정|event_id.iaas.networkacl.update|
-|Network ACL rule 생성|event_id.iaas.networkacl_rule.create|
-|Network ACL rule 삭제|event_id.iaas.networkacl_rule.delete|
-|Network ACL rule 수정|event_id.iaas.networkacl_rule.update|
-|Network ACL Binding 생성|event_id.iaas.networkacl_binding.create|
-|Network ACL Binding 삭제|event_id.iaas.networkacl_binding.delete|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -209,9 +209,9 @@
 |CNI 변경 완료|event_id.iaas.cluster.cni_update.end|
 |CNI 변경 실패|event_id.iaas.cluster.cni_update.failed|
 |CNI 변경 시작|event_id.iaas.cluster.cni_update.start|
-|클러스터 API 엔드포인트 IP 접근 제어 변경 완료|event_id.iaas.cluster.cluster_api_ep_ipacl_update.end|
-|클러스터 API 엔드포인트 IP 접근 제어 변경 실패|event_id.iaas.cluster.cluster_api_ep_ipacl_update.failed|
-|클러스터 API 엔드포인트 IP 접근 제어 변경 시작|event_id.iaas.cluster.cluster_api_ep_ipacl_update.start|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 완료|event_id.iaas.cluster.api_ep_ipacl_update.end|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 실패|event_id.iaas.cluster.api_ep_ipacl_update.failed|
+|클러스터 API 엔드포인트 IP 접근 제어 변경 시작|event_id.iaas.cluster.api_ep_ipacl_update.start|
 |SGW 변경 완료|event_id.iaas.cluster.update_sgw.end|
 |SGW 변경 실패|event_id.iaas.cluster.update_sgw.failed|
 |SGW 변경 시작|event_id.iaas.cluster.update_sgw.start|
@@ -608,11 +608,13 @@
 |프로젝트 공통 역할 그룹 수정|event_id.org.role_group.update|
 |프로젝트 공통 역할 그룹 삭제|event_id.org.role_group.delete|
 |프로젝트 공통 역할 그룹 역할 추가|event_id.org.role_group.assign.roles|
+|프로젝트 공통 역할 그룹 역할 수정|event_id.org.role_group.modify.roles|
 |프로젝트 공통 역할 그룹 역할 삭제|event_id.org.role_group.remove.roles|
 |역할 그룹 추가|event_id.project.role_group.create|
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
+|역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
 |예산 추가|event_id.budget.create|

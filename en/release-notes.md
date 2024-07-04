@@ -1,7 +1,16 @@
 ## CloudTrail > Release Notes
 
+### 2024. 07. 09.
+#### More Events
+* Added events related to Gamebase.
+* Added events related to Console.
+
+### 2024. 07. 01.
+#### More Events
+* Added events related to DataFlow.
+
 ### 2024. 06. 11.
-#### Added Features
+#### More Features
 * Added the event log search API 2.0.
 #### Feature Updates
 * Added the eventLogUuid field to the response of the event log search API.
@@ -15,6 +24,9 @@
 * Added events related to RDS for MySQL.
 * Added events related to Cloud Monitoring.
 
+### 2024. 05. 23.
+#### More Events
+* Added events related to Default Infrastructure Service.
 
 ### 2024. 05. 03.
 #### More Events
