@@ -1654,6 +1654,8 @@
 |쿠폰 추가 발급|event_id.gamebase.coupon_add_update|
 |Send coupon|event_id.gamebase.coupon_sms_create|
 |Add coupon items|event_id.gamebase.coupon_item_create|
+|Download coupon code|event_id.gamebase.coupon_code_download|
+|Download coupon history|event_id.gamebase.coupon_history_download|
 |Update coupon items|event_id.gamebase.coupon_item_update|
 |고객문의 답변|event_id.gamebase.oc_ticket_update|
 |고객문의 처리 완료|event_id.gamebase.oc_ticket_close_update|
