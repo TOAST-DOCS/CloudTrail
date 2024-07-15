@@ -1238,6 +1238,8 @@
 |有効性検査の有効化|event_id.dataflow.settings.accessibility-checker.enable|
 |有効性検査の無効化|event_id.dataflow.settings.accessibility-checker.disable|
 |ドレイン後に終了|event_id.dataflow.flow.drain|
+|Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
+|Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
@@ -1605,7 +1607,6 @@
 |Update notice|event_id.gamebase.notice_update|
 |Delete notice|event_id.gamebase.notice_delete|
 |Add image notice|event_id.gamebase.image_notice_create|
-|Update image notice app|event_id.gamebase.image_notice_app_update|
 |Update image notice|event_id.gamebase.image_notice_update|
 |Delete image notice|event_id.gamebase.image_notice_delete|
 |Add kick-out|event_id.gamebase.kick_out_create|
@@ -1686,6 +1687,7 @@
 |알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|
 |Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|
+|Update image notice app|event_id.gamebase.image_notice_app_update|
 
 ### NHN Container Registry(NCR)
 
@@ -1722,6 +1724,49 @@
 |イメージキャッシュの作成|event_id.ncr.image_cache.create|
 |イメージキャッシュの削除|event_id.ncr.image_cache.delete|
 |イメージキャッシュの修正|event_id.ncr.image_cache.update|
+
+### NHN Bastion
+
+| イベント | イベントID |
+| --- | --- |
+|실시간 세션 차단|event_id.bastion.session_block|
+|명령어 등록|event_id.bastion.logging_command_modify|
+|정책 생성|event_id.bastion.access_policy_add|
+|정책 수정|event_id.bastion.access_policy_modify|
+|정책 순서 변경|event_id.bastion.access_policy_move|
+|정책 복사|event_id.bastion.access_policy_copy|
+|정책 삭제|event_id.bastion.access_policy_delete|
+|명령어 통제 정책 추가|event_id.bastion.command_policy_add|
+|명령어 통제 정책 수정|event_id.bastion.command_policy_modify|
+|명령어 통제 정책 복사|event_id.bastion.command_policy_copy|
+|명령어 통제 정책 삭제|event_id.bastion.command_policy_delete|
+|인스턴스 연결|event_id.bastion.instance_connect|
+|자원관리|event_id.bastion.instance_modify|
+|인스턴스 자동등록|event_id.bastion.instance_modify_register_auto|
+|인스턴스 삭제|event_id.bastion.instance_delete|
+|인스턴스 전체 삭제|event_id.bastion.instance_delete_all|
+|인스턴스 등록|event_id.bastion.instance_register|
+|인스턴스 새로고침|event_id.bastion.instance_sync|
+|자원 그룹 생성|event_id.bastion.instance_group_add|
+|자원 그룹 수정|event_id.bastion.instance_group_modify|
+|자원 그룹 삭제|event_id.bastion.instance_group_delete|
+|자원 그룹 복사|event_id.bastion.instance_group_copy|
+|환경 설정 수정|event_id.bastion.preference_modify|
+|OBS 유효성 검증|event_id.bastion.preference_obs_validation|
+|NHN Bastion 삭제|event_id.bastion.preference_region_delete|
+|사용자 새로고침|event_id.bastion.user_sync|
+|사용자 그룹 추가|event_id.bastion.user_group_add|
+|사용자 그룹 수정|event_id.bastion.user_group_modify|
+|사용자 그룹 삭제|event_id.bastion.user_group_delete|
+|사용자 그룹 복사|event_id.bastion.user_group_copy|
+|시스템 테넌트 생성|event_id.bastion.infra_add|
+|웹터미널 과 시스템 테넌트 생성|event_id.bastion.web_terminal_infra_add|
+|웹터미널 생성|event_id.bastion.web_terminal_add|
+|웹터미널 재생성|event_id.bastion.web_terminal_re_create|
+|웹터미널 삭제|event_id.bastion.web_terminal_delete|
+|웹터미널 플로팅 IP 변경|event_id.bastion.web_terminal_fip_set|
+|웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
+|웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 
 ### Cloud Monitoring
 
