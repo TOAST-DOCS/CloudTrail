@@ -4,8 +4,8 @@
 #### More Events
 * Added events related to DataFlow.
 #### Feature Updates
-* [CONSOLE] 서비스 필터에서 서비스를 선택 시 해당 서비스에 존재하는 이벤트만 이벤트 필터에 표시되도록 변경하었습니다.
-* [CONSOLE] 이벤트 필터의 이벤트명을 "[서비스명]이벤트명" 형식으로 변경하었습니다.
+* [CONSOLE] When selecting a service in the service filter, only events for that service are displayed in the event filter
+* [CONSOLE] Event names in the event filter have been changed to "[service name] event name" format.
 
 ### 2024. 07. 09.
 #### More Events
