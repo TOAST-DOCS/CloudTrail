@@ -114,7 +114,7 @@
 |이미지 생성|event_id.iaas.image.create|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
 |이미지 삭제|event_id.iaas.image.delete|
-|이미지 정보 변경|event_id.iaas.image.update|
+|이미지 수정|event_id.iaas.image.update|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -123,13 +123,13 @@
 |이미지 템플릿 생성|event_id.iaas.image_template.create|
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
-|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
-|볼륨 복제|event_id.iaas.volume.copy|
 |블록 스토리지 생성|event_id.iaas.volume.create|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
-|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
+|블록 스토리지 수정|event_id.iaas.volume.update|
+|블록 스토리지 복제|event_id.iaas.volume.copy|
+|인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
+|인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
-|블록 스토리지 정보 변경|event_id.iaas.volume.update|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
 |스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
@@ -440,13 +440,13 @@
 |Validating Webhook Configuration 수정|event_id.iaas.cluster.validating_webhook_configuration.update|
 |템플릿 생성|event_id.iaas.ncs.template.create|
 |템플릿 삭제|event_id.iaas.ncs.template.delete|
-|워크로드 생성|event_id.iaas.ncs.workload.create|
-|워크로드 삭제|event_id.iaas.ncs.workload.delete|
-|워크로드 재시작|event_id.iaas.ncs.workload.restart|
-|워크로드 중지|event_id.iaas.ncs.workload.stop|
-|워크로드 변경|event_id.iaas.ncs.workload.update|
 |템플릿 버전 생성|event_id.iaas.ncs.template_version.create|
 |템플릿 버전 삭제|event_id.iaas.ncs.template_version.delete|
+|워크로드 삭제|event_id.iaas.ncs.workload.delete|
+|워크로드 중지|event_id.iaas.ncs.workload.stop|
+|워크로드 생성|event_id.iaas.ncs.workload.create|
+|워크로드 재시작|event_id.iaas.ncs.workload.restart|
+|워크로드 변경|event_id.iaas.ncs.workload.update|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
@@ -1238,6 +1238,8 @@
 |유효성 검사 활성화|event_id.dataflow.settings.accessibility-checker.enable|
 |유효성 검사 비활성화|event_id.dataflow.settings.accessibility-checker.disable|
 |드레이닝 후 종료|event_id.dataflow.flow.drain|
+|Log &amp; Crash Search 저장 설정 저장|event_id.dataflow.settings.lncs.save|
+|Log &amp; Crash Search 저장 설정 삭제|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
@@ -1605,7 +1607,6 @@
 |공지 수정|event_id.gamebase.notice_update|
 |공지 삭제|event_id.gamebase.notice_delete|
 |이미지 공지 등록|event_id.gamebase.image_notice_create|
-|이미지 공지 앱 수정|event_id.gamebase.image_notice_app_update|
 |이미지 공지 수정|event_id.gamebase.image_notice_update|
 |이미지 공지 삭제|event_id.gamebase.image_notice_delete|
 |킥아웃 등록|event_id.gamebase.kick_out_create|
@@ -1686,6 +1687,7 @@
 |알람 웹훅 삭제|event_id.gamebase.alarm_recipient_delete|
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|
 |Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|
+|이미지 공지 앱 수정|event_id.gamebase.image_notice_app_update|
 
 ### NHN Container Registry(NCR)
 
@@ -1722,6 +1724,49 @@
 |이미지 캐시 생성|event_id.ncr.image_cache.create|
 |이미지 캐시 삭제|event_id.ncr.image_cache.delete|
 |이미지 캐시 수정|event_id.ncr.image_cache.update|
+
+### NHN Bastion
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|실시간 세션 차단|event_id.bastion.session_block|
+|명령어 등록|event_id.bastion.logging_command_modify|
+|정책 생성|event_id.bastion.access_policy_add|
+|정책 수정|event_id.bastion.access_policy_modify|
+|정책 순서 변경|event_id.bastion.access_policy_move|
+|정책 복사|event_id.bastion.access_policy_copy|
+|정책 삭제|event_id.bastion.access_policy_delete|
+|명령어 통제 정책 추가|event_id.bastion.command_policy_add|
+|명령어 통제 정책 수정|event_id.bastion.command_policy_modify|
+|명령어 통제 정책 복사|event_id.bastion.command_policy_copy|
+|명령어 통제 정책 삭제|event_id.bastion.command_policy_delete|
+|인스턴스 연결|event_id.bastion.instance_connect|
+|인스턴스 자원관리|event_id.bastion.instance_modify|
+|인스턴스 자동등록|event_id.bastion.instance_modify_register_auto|
+|인스턴스 삭제|event_id.bastion.instance_delete|
+|인스턴스 전체 삭제|event_id.bastion.instance_delete_all|
+|인스턴스 등록|event_id.bastion.instance_register|
+|인스턴스 새로고침|event_id.bastion.instance_sync|
+|자원 그룹 생성|event_id.bastion.instance_group_add|
+|자원 그룹 수정|event_id.bastion.instance_group_modify|
+|자원 그룹 삭제|event_id.bastion.instance_group_delete|
+|자원 그룹 복사|event_id.bastion.instance_group_copy|
+|환경 설정 수정|event_id.bastion.preference_modify|
+|OBS 유효성 검증|event_id.bastion.preference_obs_validation|
+|NHN Bastion 삭제|event_id.bastion.preference_region_delete|
+|사용자 새로고침|event_id.bastion.user_sync|
+|사용자 그룹 추가|event_id.bastion.user_group_add|
+|사용자 그룹 수정|event_id.bastion.user_group_modify|
+|사용자 그룹 삭제|event_id.bastion.user_group_delete|
+|사용자 그룹 복사|event_id.bastion.user_group_copy|
+|시스템 테넌트 생성|event_id.bastion.infra_add|
+|웹터미널 과 시스템 테넌트 생성|event_id.bastion.web_terminal_infra_add|
+|웹터미널 생성|event_id.bastion.web_terminal_add|
+|웹터미널 재생성|event_id.bastion.web_terminal_re_create|
+|웹터미널 삭제|event_id.bastion.web_terminal_delete|
+|웹터미널 플로팅 IP 변경|event_id.bastion.web_terminal_fip_set|
+|웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
+|웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 
 ### Cloud Monitoring
 

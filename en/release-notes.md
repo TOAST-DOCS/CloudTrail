@@ -1,5 +1,12 @@
 ## CloudTrail > Release Notes
 
+### 2024. 07. 23.
+#### More Events
+* Added events related to DataFlow.
+#### Feature Updates
+* [CONSOLE] When selecting a service in the service filter, only events for that service are displayed in the event filter
+* [CONSOLE] Event names in the event filter have been changed to "[service name] event name" format.
+
 ### 2024. 07. 09.
 #### More Events
 * Added events related to Gamebase.
@@ -7,6 +14,7 @@
 
 ### 2024. 07. 01.
 #### More Events
+* Added events related to NHN Bastion.
 * Added events related to DataFlow.
 
 ### 2024. 06. 11.

@@ -37,7 +37,7 @@
 |이미지 생성|event_id.iaas.image.create|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
 |이미지 삭제|event_id.iaas.image.delete|
-|이미지 정보 변경|event_id.iaas.image.update|
+|이미지 수정|event_id.iaas.image.update|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -46,13 +46,13 @@
 |이미지 템플릿 생성|event_id.iaas.image_template.create|
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
-|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
-|볼륨 복제|event_id.iaas.volume.copy|
 |블록 스토리지 생성|event_id.iaas.volume.create|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
-|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
+|블록 스토리지 수정|event_id.iaas.volume.update|
+|블록 스토리지 복제|event_id.iaas.volume.copy|
+|인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
+|인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
-|블록 스토리지 정보 변경|event_id.iaas.volume.update|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
 |스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
