@@ -37,7 +37,7 @@
 |이미지 생성|event_id.iaas.image.create|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
 |이미지 삭제|event_id.iaas.image.delete|
-|이미지 정보 변경|event_id.iaas.image.update|
+|이미지 수정|event_id.iaas.image.update|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -46,13 +46,13 @@
 |이미지 템플릿 생성|event_id.iaas.image_template.create|
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
-|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
-|볼륨 복제|event_id.iaas.volume.copy|
 |블록 스토리지 생성|event_id.iaas.volume.create|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
-|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
+|블록 스토리지 수정|event_id.iaas.volume.update|
+|블록 스토리지 복제|event_id.iaas.volume.copy|
+|인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
+|인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
-|블록 스토리지 정보 변경|event_id.iaas.volume.update|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
 |스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
@@ -575,6 +575,16 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
+|커스텀 대시보드 알림 사용 여부 설정|event_id.cloud_monitoring_organization.alarm_activate|
+|커스텀 대시보드 알림 생성|event_id.cloud_monitoring_organization.alarm_create|
+|커스텀 대시보드 알림 삭제|event_id.cloud_monitoring_organization.alarm_delete|
+|커스텀 대시보드 알림 수정|event_id.cloud_monitoring_organization.alarm_modify|
+|커스텀 대시보드 복제|event_id.cloud_monitoring_organization.dashboard_copy|
+|커스텀 대시보드 생성|event_id.cloud_monitoring_organization.dashboard_create|
+|커스텀 대시보드 삭제|event_id.cloud_monitoring_organization.dashboard_delete|
+|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure|
+|커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
+|커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
 |IAM 멤버 권한 변경|event_id.iam.member.role.update|
 |조직 도메인 추가|event_id.org.domain.add|
@@ -868,4 +878,19 @@
 |리소스 태그 관계 추가|event_id.resource_watcher.resource_tag_relation.create|
 |리소스 태그 관계 삭제|event_id.resource_watcher.resource_tag_relation.delete|
 |리소스 태그 관계 수정|event_id.resource_watcher.resource_tag_relation.update|
+
+### Cloud Monitoring
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|알림 사용 여부 설정|event_id.cloud_monitoring_project.alarm_activate|
+|알림 생성|event_id.cloud_monitoring_project.alarm_create|
+|알림 삭제|event_id.cloud_monitoring_project.alarm_delete|
+|알림 수정|event_id.cloud_monitoring_project.alarm_modify|
+|대시보드 복제|event_id.cloud_monitoring_project.dashboard_copy|
+|대시보드 생성|event_id.cloud_monitoring_project.dashboard_create|
+|대시보드 삭제|event_id.cloud_monitoring_project.dashboard_delete|
+|대시보드 노출 설정|event_id.cloud_monitoring_project.dashboard_exposure|
+|대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
+|지표 수집 설정|event_id.cloud_monitoring_project.service_management|
 

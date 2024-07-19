@@ -114,7 +114,7 @@
 |イメージの作成|event_id.iaas.image.create|
 |イメージID作成|event_id.iaas.image.create_id|
 |イメージの削除|event_id.iaas.image.delete|
-|イメージ情報の変更|event_id.iaas.image.update|
+|イメージ修正|event_id.iaas.image.update|
 |イメージのアップロード|event_id.iaas.image.upload|
 |イメージ共有の作成|event_id.iaas.image_member.create|
 |イメージ共有の削除|event_id.iaas.image_member.delete|
@@ -123,13 +123,13 @@
 |イメージテンプレートの作成|event_id.iaas.image_template.create|
 |イメージテンプレートの削除|event_id.iaas.image_template.delete|
 |イメージテンプレートの修正|event_id.iaas.image_template.update|
-|インスタンスボリュームの接続|event_id.iaas.volume.attach|
-|ボリュームのコピー|event_id.iaas.volume.copy|
 |ブロックストレージの作成|event_id.iaas.volume.create|
 |ブロックストレージの削除|event_id.iaas.volume.delete|
-|インスタンスボリュームの接続解除|event_id.iaas.volume.detach|
+|ブロックストレージ修正|event_id.iaas.volume.update|
+|ブロックストレージ複製|event_id.iaas.volume.copy|
+|インスタンスブロックストレージ接続|event_id.iaas.volume.attach|
+|インスタンスブロックストレージ接続解除|event_id.iaas.volume.detach|
 |ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
-|ブロックストレージの情報変更|event_id.iaas.volume.update|
 |ブロックストレージスナップショットの作成|event_id.iaas.snapshot.create|
 |ブロックストレージスナップショットの削除|event_id.iaas.snapshot.delete|
 |スケーリンググループの予約作業の作成|event_id.iaas.autoscale_schedule.create|
@@ -440,13 +440,13 @@
 |Validating Webhook Configuration 修正|event_id.iaas.cluster.validating_webhook_configuration.update|
 |テンプレートの作成|event_id.iaas.ncs.template.create|
 |テンプレートの削除|event_id.iaas.ncs.template.delete|
-|ワークロードの作成|event_id.iaas.ncs.workload.create|
-|ワークロードの削除|event_id.iaas.ncs.workload.delete|
-|ワークロード再起動|event_id.iaas.ncs.workload.restart|
-|ワークロード停止|event_id.iaas.ncs.workload.stop|
-|ワークロードの変更|event_id.iaas.ncs.workload.update|
 |テンプレートバージョンの作成|event_id.iaas.ncs.template_version.create|
 |テンプレートバージョンの削除|event_id.iaas.ncs.template_version.delete|
+|ワークロードの削除|event_id.iaas.ncs.workload.delete|
+|ワークロード停止|event_id.iaas.ncs.workload.stop|
+|ワークロードの作成|event_id.iaas.ncs.workload.create|
+|ワークロード再起動|event_id.iaas.ncs.workload.restart|
+|ワークロードの変更|event_id.iaas.ncs.workload.update|
 |NASボリュームの作成|event_id.iaas.nas.volume.create|
 |NASボリュームの削除|event_id.iaas.nas.volume.delete|
 |NASボリュームの変更|event_id.iaas.nas.volume.update|

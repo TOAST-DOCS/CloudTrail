@@ -114,7 +114,7 @@
 |Create Image|event_id.iaas.image.create|
 |Create Image ID|event_id.iaas.image.create_id|
 |Delete Image|event_id.iaas.image.delete|
-|Change Image Information|event_id.iaas.image.update|
+|Modify Image|event_id.iaas.image.update|
 |Upload Image|event_id.iaas.image.upload|
 |Create Image Sharing|event_id.iaas.image_member.create|
 |Delete Image Sharing|event_id.iaas.image_member.delete|
@@ -123,13 +123,13 @@
 |Create Image Template|event_id.iaas.image_template.create|
 |Delete Image Template|event_id.iaas.image_template.delete|
 |Modify Image Template|event_id.iaas.image_template.update|
-|Connect Instance Volume|event_id.iaas.volume.attach|
-|Copy Volume|event_id.iaas.volume.copy|
 |Create Block Storage|event_id.iaas.volume.create|
 |Delete Block Storage|event_id.iaas.volume.delete|
-|Disconnect Instance Volume|event_id.iaas.volume.detach|
+|Modify Block Storage|event_id.iaas.volume.update|
+|Replicate Block Storage|event_id.iaas.volume.copy|
+|Attach Instance Block Storage|event_id.iaas.volume.attach|
+|Detach Instance Block Storage|event_id.iaas.volume.detach|
 |Change Block Storage Size|event_id.iaas.volume.extend|
-|Change Block Storage Information|event_id.iaas.volume.update|
 |Create Block Storage Snapshot|event_id.iaas.snapshot.create|
 |Delete Block Storage Snapshot|event_id.iaas.snapshot.delete|
 |Create Schedule for Scaling Group|event_id.iaas.autoscale_schedule.create|
@@ -440,13 +440,13 @@
 |Update Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.update|
 |Create Template|event_id.iaas.ncs.template.create|
 |Delete Template|event_id.iaas.ncs.template.delete|
-|Create Workload|event_id.iaas.ncs.workload.create|
-|Delete Workload|event_id.iaas.ncs.workload.delete|
-|Restart Workload|event_id.iaas.ncs.workload.restart|
-|Stop Workload|event_id.iaas.ncs.workload.stop|
-|Change Workload|event_id.iaas.ncs.workload.update|
 |Create Template Version|event_id.iaas.ncs.template_version.create|
 |Delete Template Version|event_id.iaas.ncs.template_version.delete|
+|Delete Workload|event_id.iaas.ncs.workload.delete|
+|Stop Workload|event_id.iaas.ncs.workload.stop|
+|Create Workload|event_id.iaas.ncs.workload.create|
+|Restart Workload|event_id.iaas.ncs.workload.restart|
+|Change Workload|event_id.iaas.ncs.workload.update|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|
 |Modify NAS Volume|event_id.iaas.nas.volume.update|
