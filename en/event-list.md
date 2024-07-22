@@ -652,15 +652,6 @@
 |Approval Process Approve|event_id.skm.approval.approve|
 |Approval Process Deny|event_id.skm.approval.deny|
 |Approval Process Approve Request|event_id.skm.approval.approve_request|
-|API IPv4 주소 등록|event_id.skm.api.ipv4.create|
-|API IPv4 주소 삭제 예정|event_id.skm.api.ipv4.delete_request|
-|API IPv4 주소 즉시 삭제|event_id.skm.api.ipv4.delete|
-|API MAC 주소 등록|event_id.skm.api.mac.create|
-|API MAC 주소 삭제 예정|event_id.skm.api.mac.delete_request|
-|API MAC 주소 즉시 삭제|event_id.skm.api.mac.delete|
-|API 인증서 등록|event_id.skm.api.certificate.create|
-|API 인증서 리스트 삭제 예정|event_id.skm.api.certificate.delete_request|
-|API 인증서 리스트 즉시 삭제|event_id.skm.api.certificate.delete|
 
 ### Deploy
 
@@ -849,6 +840,7 @@
 |Apply for Restoration|event_id.backup.restoration.apply|
 |Pause Backup Plan|event_id.backup.target.suspend|
 |Resume Backup Plan|event_id.backup.target.resume|
+|Create Backup Result File|event_id.backup.result.file|
 |Change Backup Server Data|event_id.backup.client.update|
 
 ### DNS Plus
@@ -1688,6 +1680,7 @@
 |알람 수신자 설정|event_id.gamebase.alarm_recpipent_update|
 |Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|
 |Update image notice app|event_id.gamebase.image_notice_app_update|
+|Download ban history|event_id.gamebase.ban_history_download|
 
 ### NHN Container Registry(NCR)
 
