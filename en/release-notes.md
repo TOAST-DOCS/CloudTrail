@@ -2,6 +2,7 @@
 
 ### 2024. 07. 23.
 #### More Events
+* Added events related to Gamebase.
 * Added events related to DataFlow.
 #### Feature Updates
 * [CONSOLE] When selecting a service in the service filter, only events for that service are displayed in the event filter
@@ -11,6 +12,7 @@
 #### More Events
 * Added events related to Gamebase.
 * Added events related to Console.
+* Added events related to Backup.
 
 ### 2024. 07. 01.
 #### More Events
@@ -42,7 +44,6 @@
 
 ### 2024. 03. 26.
 #### More Events
-* Added events related to Secure Key Manager.
 * Added events related to NHN AppGuard.
 * Added events related to DataFlow.
 #### Feature Updates
