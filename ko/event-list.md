@@ -93,12 +93,13 @@
 |콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |인스턴스 종료|event_id.iaas.instance_action.shelve|
 |인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
-|인스턴스 시작|event_id.iaas.instance_action.start|
-|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
+|중지된 인스턴스 시작|event_id.iaas.instance_action.start|
+|중지된 인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
-|인스턴스 시작|event_id.iaas.instance_action.unshelve|
-|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
+|종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|인스턴스 키페어 변경|event_id.iaas.instance_action.reset_keypair|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
@@ -112,9 +113,14 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
+|이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
 |이미지 삭제|event_id.iaas.image.delete|
+|이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
+|이미지 수정 완료|event_id.iaas.image.update_end|
+|이미지 이동 완료 (대상)|event_id.iaas.image.transfer_accept|
+|이미지 이동 완료 (소스)|event_id.iaas.image.transfer_create|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -124,14 +130,25 @@
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
 |블록 스토리지 생성|event_id.iaas.volume.create|
+|블록 스토리지 생성 완료|event_id.iaas.volume.create_end|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
+|블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
 |블록 스토리지 수정|event_id.iaas.volume.update|
+|블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
+|블록 스토리지 이동|event_id.iaas.volume.transfer|
+|블록 스토리지 이동 완료 (대상)|event_id.iaas.volume.transfer_accept|
+|블록 스토리지 이동 완료 (소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 복제|event_id.iaas.volume.copy|
+|블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
 |인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
+|인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
+|인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
+|블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
+|블록 스토리지 스냅숏 삭제 완료|event_id.iaas.snapshot.delete_end|
 |스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
 |스케일링 그룹 예약 작업 삭제|event_id.iaas.autoscale_schedule.delete|
 |스케일링 그룹 예약 작업 OWNER 변경|event_id.iaas.autoscale_schedule.handover|
@@ -185,6 +202,12 @@
 |로드 밸런서 리스너 생성|event_id.iaas.loadbalancer_listener.create|
 |로드 밸런서 리스너 삭제|event_id.iaas.loadbalancer_listener.delete|
 |로드 밸런서 리스너 변경|event_id.iaas.loadbalancer_listener.update|
+|로드 밸런서 멤버 그룹(풀) 생성|event_id.iaas.loadbalancer_pool.create|
+|로드 밸런서 멤버 그룹(풀) 삭제|event_id.iaas.loadbalancer_pool.delete|
+|로드 밸런서 멤버 그룹(풀) 변경|event_id.iaas.loadbalancer_pool.update|
+|로드 밸런서 헬스 모니터 생성|event_id.iaas.loadbalancer_healthmonitor.create|
+|로드 밸런서 헬스 모니터 변경|event_id.iaas.loadbalancer_healthmonitor.update|
+|로드 밸런서 헬스 모니터 삭제|event_id.iaas.loadbalancer_healthmonitor.delete|
 |로드 밸런서 인스턴스 연결 추가|event_id.iaas.loadbalancer_member.create|
 |로드 밸런서 인스턴스 연결 해제|event_id.iaas.loadbalancer_member.delete|
 |로드 밸런서 인스턴스 활성 상태 변경|event_id.iaas.loadbalancer_member.update|
@@ -194,6 +217,13 @@
 |로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
 |로드 밸런서 L7 룰 삭제|event_id.iaas.loadbalancer_l7rule.delete|
 |로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
+|로드 밸런서 IP ACL 그룹 생성|event_id.iaas.loadbalancer_ipacl_group.create|
+|로드 밸런서 IP ACL 그룹 삭제|event_id.iaas.loadbalancer_ipacl_group.delete|
+|로드 밸런서 IP ACL 그룹 수정|event_id.iaas.loadbalancer_ipacl_group.update|
+|로드 밸런서 IP ACL 타깃 생성|event_id.iaas.loadbalancer_ipacl_target.create|
+|로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
+|로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
+|로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
 |트랜짓 허브 생성|event_id.iaas.transit_hub.create|
 |트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
 |트랜짓 허브 수정|event_id.iaas.transit_hub.update|
@@ -268,6 +298,9 @@
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
 |Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
+|플로우 로그 로거 생성|event_id.iaas.flowlog_logger.create|
+|플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
+|플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -442,8 +475,29 @@
 |템플릿 삭제|event_id.iaas.ncs.template.delete|
 |템플릿 버전 생성|event_id.iaas.ncs.template_version.create|
 |템플릿 버전 삭제|event_id.iaas.ncs.template_version.delete|
+|워크로드 생성 시작|event_id.iaas.ncs.workload_create.start|
+|워크로드 생성 완료|event_id.iaas.ncs.workload_create.end|
+|워크로드 생성 실패|event_id.iaas.ncs.workload_create.failed|
 |워크로드 삭제|event_id.iaas.ncs.workload.delete|
 |워크로드 중지|event_id.iaas.ncs.workload.stop|
+|워크로드 재시작 시작|event_id.iaas.ncs.workload_restart.start|
+|워크로드 재시작 완료|event_id.iaas.ncs.workload_restart.end|
+|워크로드 재시작  실패|event_id.iaas.ncs.workload_restart.failed|
+|워크로드 설명 변경|event_id.iaas.ncs.workload_description.update|
+|워크로드 템플릿 변경 시작|event_id.iaas.ncs.workload_template_update.start|
+|워크로드 템플릿 변경 완료|event_id.iaas.ncs.workload_template_update.end|
+|워크로드 템플릿 변경 실패|event_id.iaas.ncs.workload_template_update.failed|
+|워크로드 작업 요청 수 변경 시작|event_id.iaas.ncs.workload_desired_update.start|
+|워크로드 작업 요청 수 변경 완료|event_id.iaas.ncs.workload_desired_update.end|
+|워크로드 작업 요청 수 변경 실패|event_id.iaas.ncs.workload_desired_update.failed|
+|워크로드 종료 예약 변경|event_id.iaas.ncs.workload_active_deadline.update|
+|워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
+|워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.workload_loadbalancer_update.start|
+|워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
+|워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
+|워크로드 예약 실행 변경|event_id.iaas.ncs.schedule_workload.update|
+|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
+|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
 |워크로드 생성|event_id.iaas.ncs.workload.create|
 |워크로드 재시작|event_id.iaas.ncs.workload.restart|
 |워크로드 변경|event_id.iaas.ncs.workload.update|
@@ -652,6 +706,27 @@
 |승인프로세스 승인|event_id.skm.approval.approve|
 |승인프로세스 거절|event_id.skm.approval.deny|
 |승인프로세스 승인 요청|event_id.skm.approval.approve_request|
+|기밀 데이터 조회|event_id.skm.api.secrets.get|
+|대칭키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
+|대칭키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
+|로컬키 생성|event_id.skm.api.symmetric.create_local_key|
+|비대칭키를 통한 서명|event_id.skm.api.asymmetric.sign|
+|비대칭키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
+|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
+|대칭키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
+|비대칭키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|대칭키 조회|event_id.skm.api.symmetric.get|
+|개인키 조회|event_id.skm.api.asymmetric.get.privateKey|
+|공개키 조회|event_id.skm.api.asymmetric.get.publicKey|
+|기밀 데이터 생성|event_id.skm.api.secrets.create|
+|대칭키 생성|event_id.skm.api.symmetric.create|
+|비대칭키 생성|event_id.skm.api.asymmetric.create|
+|기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
+|대칭키 삭제 요청|event_id.skm.api.symmetric.delete_request|
+|비대칭키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
+|기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
+|대칭키 즉시 삭제|event_id.skm.api.symmetric.delete|
+|비대칭키 즉시 삭제|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
