@@ -93,12 +93,13 @@
 |コンソールスクリーンショットの作成|event_id.iaas.instance_action.screenshot|
 |インスタンス終了|event_id.iaas.instance_action.shelve|
 |インスタンス終了完了|event_id.iaas.instance_action.shelve_end|
-|インスタンスの起動|event_id.iaas.instance_action.start|
-|インスタンスの起動完了|event_id.iaas.instance_action.start_end|
+|停止したインスタンスの起動|event_id.iaas.instance_action.start|
+|停止したインスタンスの起動完了|event_id.iaas.instance_action.start_end|
 |インスタンスの停止|event_id.iaas.instance_action.stop|
 |インスタンスの停止完了|event_id.iaas.instance_action.stop_end|
-|インスタンスの起動|event_id.iaas.instance_action.unshelve|
-|インスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
+|終了したインスタンスの起動|event_id.iaas.instance_action.unshelve|
+|終了したインスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
+|インスタンスキーペア変更|event_id.iaas.instance_action.reset_keypair|
 |インスタンステンプレートの作成|event_id.iaas.instance_template.create|
 |インスタンステンプレートの削除|event_id.iaas.instance_template.delete|
 |インスタンステンプレートOWNERの変更|event_id.iaas.instance_template.handover|
@@ -112,9 +113,14 @@
 |キーペアの削除|event_id.iaas.keypair.delete|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージの作成|event_id.iaas.image.create|
+|イメージ作成完了|event_id.iaas.image.create_end|
 |イメージID作成|event_id.iaas.image.create_id|
 |イメージの削除|event_id.iaas.image.delete|
+|イメージ削除完了|event_id.iaas.image.delete_end|
 |イメージ修正|event_id.iaas.image.update|
+|イメージ修正完了|event_id.iaas.image.update_end|
+|イメージ移動完了 (対象)|event_id.iaas.image.transfer_accept|
+|イメージ移動完了 (ソース)|event_id.iaas.image.transfer_create|
 |イメージのアップロード|event_id.iaas.image.upload|
 |イメージ共有の作成|event_id.iaas.image_member.create|
 |イメージ共有の削除|event_id.iaas.image_member.delete|
@@ -124,14 +130,25 @@
 |イメージテンプレートの削除|event_id.iaas.image_template.delete|
 |イメージテンプレートの修正|event_id.iaas.image_template.update|
 |ブロックストレージの作成|event_id.iaas.volume.create|
+|ブロックストレージ作成完了|event_id.iaas.volume.create_end|
 |ブロックストレージの削除|event_id.iaas.volume.delete|
+|ブロックストレージ削除完了|event_id.iaas.volume.delete_end|
 |ブロックストレージ修正|event_id.iaas.volume.update|
+|ブロックストレージ修正完了|event_id.iaas.volume.update_end|
+|ブロックストレージ移動|event_id.iaas.volume.transfer|
+|ブロックストレージ移動完了 (対象)|event_id.iaas.volume.transfer_accept|
+|ブロックストレージ移動完了 (ソース)|event_id.iaas.volume.transfer_create|
 |ブロックストレージ複製|event_id.iaas.volume.copy|
+|ブロックストレージ複製完了|event_id.iaas.volume.copy_end|
 |インスタンスブロックストレージ接続|event_id.iaas.volume.attach|
+|インスタンスブロックストレージ接続完了|event_id.iaas.volume.attach_end|
 |インスタンスブロックストレージ接続解除|event_id.iaas.volume.detach|
+|インスタンスブロックストレージ接続解除完了|event_id.iaas.volume.detach_end|
 |ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
 |ブロックストレージスナップショットの作成|event_id.iaas.snapshot.create|
+|ブロックストレージスナップショット作成完了|event_id.iaas.snapshot.create_end|
 |ブロックストレージスナップショットの削除|event_id.iaas.snapshot.delete|
+|ブロックストレージスナップショット削除完了|event_id.iaas.snapshot.delete_end|
 |スケーリンググループの予約作業の作成|event_id.iaas.autoscale_schedule.create|
 |スケーリンググループの予約作業の削除|event_id.iaas.autoscale_schedule.delete|
 |スケーリンググループ予約タスクOWNERの変更|event_id.iaas.autoscale_schedule.handover|
@@ -185,6 +202,12 @@
 |ロードバランサーリスナーの作成|event_id.iaas.loadbalancer_listener.create|
 |ロードバランサーリスナーの削除|event_id.iaas.loadbalancer_listener.delete|
 |ロードバランサーリスナーの変更|event_id.iaas.loadbalancer_listener.update|
+|ロードバランサーメンバーグループ(プール)作成|event_id.iaas.loadbalancer_pool.create|
+|ロードバランサーメンバーグループ(プール)削除|event_id.iaas.loadbalancer_pool.delete|
+|ロードバランサーメンバーグループ(プール)変更|event_id.iaas.loadbalancer_pool.update|
+|ロードバランサーヘルスモニター作成|event_id.iaas.loadbalancer_healthmonitor.create|
+|ロードバランサーヘルスモニター変更|event_id.iaas.loadbalancer_healthmonitor.update|
+|ロードバランサーヘルスモニター削除|event_id.iaas.loadbalancer_healthmonitor.delete|
 |ロードバランサーインスタンスの接続追加|event_id.iaas.loadbalancer_member.create|
 |ロードバランサーインスタンスの接続解除|event_id.iaas.loadbalancer_member.delete|
 |ロードバランサーインスタンスの有効状態を変更|event_id.iaas.loadbalancer_member.update|
@@ -194,6 +217,13 @@
 |ロードバランサーL7ルールの作成|event_id.iaas.loadbalancer_l7rule.create|
 |ロードバランサーL7ルールの削除|event_id.iaas.loadbalancer_l7rule.delete|
 |ロードバランサーL7ルールの変更|event_id.iaas.loadbalancer_l7rule.update|
+|ロードバランサーIP ACLグループ作成|event_id.iaas.loadbalancer_ipacl_group.create|
+|ロードバランサーIP ACLグループ削除|event_id.iaas.loadbalancer_ipacl_group.delete|
+|ロードバランサーIP ACLグループ修正|event_id.iaas.loadbalancer_ipacl_group.update|
+|ロードバランサーIP ACLターゲット作成|event_id.iaas.loadbalancer_ipacl_target.create|
+|ロードバランサーIP ACLターゲット削除|event_id.iaas.loadbalancer_ipacl_target.delete|
+|ロードバランサーIP ACLターゲット修正|event_id.iaas.loadbalancer_ipacl_target.update|
+|ロードバランサーにIP ACLグループ適用|event_id.iaas.loadbalancer_ipacl_group.bind|
 |トランジットハブの作成|event_id.iaas.transit_hub.create|
 |トランジットハブの削除|event_id.iaas.transit_hub.delete|
 |トランジットハブの変更|event_id.iaas.transit_hub.update|
@@ -237,9 +267,9 @@
 |プロジェクトピアリングを作成|event_id.iaas.project_peering.create|
 |プロジェクトピアリングを削除|event_id.iaas.project_peering.delete|
 |プロジェクトピアリングを変更|event_id.iaas.project_peering.update|
-|許可するプロジェクトを作成|event_id.iaas.peering_allow_project.create|
-|許可するプロジェクトを削除|event_id.iaas.peering_allow_project.delete|
-|許可するプロジェクトを変更|event_id.iaas.peering_allow_project.update|
+|ピアリング許可リスト作成|event_id.iaas.peering_allow_project.create|
+|ピアリング許可リスト削除|event_id.iaas.peering_allow_project.delete|
+|ピアリング許可リスト変更|event_id.iaas.peering_allow_project.update|
 |NATゲートウェイの作成|event_id.iaas.nat_gateway.create|
 |NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
 |NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
@@ -268,6 +298,9 @@
 |Private DNS レコードセット削除|event_id.iaas.privatedns.recordset.delete|
 |Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|
 |Private DNS レコードセットの大量作成|event_id.iaas.privatedns.recordset.create_list|
+|フローログロガーの作成|event_id.iaas.flowlog_logger.create|
+|フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
+|フローログロガーの修正|event_id.iaas.flowlog_logger.update|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -442,8 +475,29 @@
 |テンプレートの削除|event_id.iaas.ncs.template.delete|
 |テンプレートバージョンの作成|event_id.iaas.ncs.template_version.create|
 |テンプレートバージョンの削除|event_id.iaas.ncs.template_version.delete|
+|ワークロードの作成|event_id.iaas.ncs.workload_create.start|
+|ワークロードの作成完|event_id.iaas.ncs.workload_create.end|
+|ワークロードの作成失敗|event_id.iaas.ncs.workload_create.failed|
 |ワークロードの削除|event_id.iaas.ncs.workload.delete|
 |ワークロード停止|event_id.iaas.ncs.workload.stop|
+|ワークロード再起動|event_id.iaas.ncs.workload_restart.start|
+|ワークロード再起動完了|event_id.iaas.ncs.workload_restart.end|
+|ワークロード再起動失敗|event_id.iaas.ncs.workload_restart.failed|
+|ワークロード説明の変更|event_id.iaas.ncs.workload_description.update|
+|ワークロードのテンプレート変更|event_id.iaas.ncs.workload_template_update.start|
+|ワークロードのテンプレート変更完了|event_id.iaas.ncs.workload_template_update.end|
+|ワークロードのテンプレート変更失敗|event_id.iaas.ncs.workload_template_update.failed|
+|ワークロード作業リクエスト数の変更|event_id.iaas.ncs.workload_desired_update.start|
+|ワークロード作業リクエスト数の変更完了|event_id.iaas.ncs.workload_desired_update.end|
+|ワークロード作業リクエスト数の変更失敗|event_id.iaas.ncs.workload_desired_update.failed|
+|ワークロードの終了予約設定を変更|event_id.iaas.ncs.workload_active_deadline.update|
+|ワークロードロードバランサーの変更|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
+|ワークロードロードバランサーの変更|event_id.iaas.workload_loadbalancer_update.start|
+|ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
+|ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
+|ワークロードの予約実行変更|event_id.iaas.ncs.schedule_workload.update|
+|コンテナターミナル接続|event_id.iaas.ncs.container_terminal.exec|
+|コンテナターミナル接続終了|event_id.iaas.ncs.container_terminal.exit|
 |ワークロードの作成|event_id.iaas.ncs.workload.create|
 |ワークロード再起動|event_id.iaas.ncs.workload.restart|
 |ワークロードの変更|event_id.iaas.ncs.workload.update|
@@ -652,6 +706,27 @@
 |承認プロセスを承認|event_id.skm.approval.approve|
 |承認プロセスを拒否|event_id.skm.approval.deny|
 |承認プロセスの承認依頼|event_id.skm.approval.approve_request|
+|機密データ 照会|event_id.skm.api.secrets.get|
+|대칭키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
+|대칭키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
+|로컬키 생성|event_id.skm.api.symmetric.create_local_key|
+|비대칭키를 통한 서명|event_id.skm.api.asymmetric.sign|
+|비대칭키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
+|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
+|대칭키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
+|비대칭키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|機密データ 照会|event_id.skm.api.symmetric.get|
+|対称鍵 照会|event_id.skm.api.asymmetric.get.privateKey|
+|非対称鍵 照会|event_id.skm.api.asymmetric.get.publicKey|
+|機密データ 作成|event_id.skm.api.secrets.create|
+|対称鍵 作成|event_id.skm.api.symmetric.create|
+|非対称鍵 作成|event_id.skm.api.asymmetric.create|
+|機密データ 削除リクエスト|event_id.skm.api.secrets.delete_request|
+|対称鍵 削除リクエスト|event_id.skm.api.symmetric.delete_request|
+|非対称鍵 削除リクエスト|event_id.skm.api.asymmetric.delete_request|
+|機密データ 削除 -&gt; 機密データの即時削除|event_id.skm.api.secrets.delete|
+|対称鍵 即時削除|event_id.skm.api.symmetric.delete|
+|非対称鍵 即時削除|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
