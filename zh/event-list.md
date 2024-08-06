@@ -119,8 +119,6 @@
 |Delete Image Completed|event_id.iaas.image.delete_end|
 |Modify Image|event_id.iaas.image.update|
 |Modify Image Completed|event_id.iaas.image.update_end|
-|Move Image Completed (Target)|event_id.iaas.image.transfer_accept|
-|Move Image Completed (Source)|event_id.iaas.image.transfer_create|
 |Upload Image|event_id.iaas.image.upload|
 |Create Image Sharing|event_id.iaas.image_member.create|
 |Delete Image Sharing|event_id.iaas.image_member.delete|
@@ -135,9 +133,6 @@
 |Delete Block Storage Completed|event_id.iaas.volume.delete_end|
 |Modify Block Storage|event_id.iaas.volume.update|
 |Modify Block Storage Completed|event_id.iaas.volume.update_end|
-|Move Block Storage|event_id.iaas.volume.transfer|
-|Move Block Storage Completed (Target)|event_id.iaas.volume.transfer_accept|
-|Move Block Storage Completed (Source)|event_id.iaas.volume.transfer_create|
 |Replicate Block Storage|event_id.iaas.volume.copy|
 |Replicate Block Storage Completed|event_id.iaas.volume.copy_end|
 |Attach Instance Block Storage|event_id.iaas.volume.attach|
@@ -537,7 +532,6 @@
 
 | Event | Event ID |
 | --- | --- |
-||event_id.rds_for_mysql.get_last_query_to_restore|
 |Reset Parameter Group|event_id.rds_for_mysql.resetParameterGroup|
 |Modify Parameter Group|event_id.rds_for_mysql.modifyParameterGroup|
 |Create Parameter Group|event_id.rds_for_mysql.createParameterGroup|
