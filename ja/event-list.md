@@ -119,8 +119,6 @@
 |イメージ削除完了|event_id.iaas.image.delete_end|
 |イメージ修正|event_id.iaas.image.update|
 |イメージ修正完了|event_id.iaas.image.update_end|
-|イメージ移動完了 (対象)|event_id.iaas.image.transfer_accept|
-|イメージ移動完了 (ソース)|event_id.iaas.image.transfer_create|
 |イメージのアップロード|event_id.iaas.image.upload|
 |イメージ共有の作成|event_id.iaas.image_member.create|
 |イメージ共有の削除|event_id.iaas.image_member.delete|
@@ -135,9 +133,6 @@
 |ブロックストレージ削除完了|event_id.iaas.volume.delete_end|
 |ブロックストレージ修正|event_id.iaas.volume.update|
 |ブロックストレージ修正完了|event_id.iaas.volume.update_end|
-|ブロックストレージ移動|event_id.iaas.volume.transfer|
-|ブロックストレージ移動完了 (対象)|event_id.iaas.volume.transfer_accept|
-|ブロックストレージ移動完了 (ソース)|event_id.iaas.volume.transfer_create|
 |ブロックストレージ複製|event_id.iaas.volume.copy|
 |ブロックストレージ複製完了|event_id.iaas.volume.copy_end|
 |インスタンスブロックストレージ接続|event_id.iaas.volume.attach|
@@ -537,7 +532,6 @@
 
 | イベント | イベントID |
 | --- | --- |
-||event_id.rds_for_mysql.get_last_query_to_restore|
 |パラメータグループ再設定|event_id.rds_for_mysql.resetParameterGroup|
 |パラメータグループ修正|event_id.rds_for_mysql.modifyParameterGroup|
 |パラメータグループ作成|event_id.rds_for_mysql.createParameterGroup|
