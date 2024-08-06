@@ -119,8 +119,6 @@
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
 |이미지 수정 완료|event_id.iaas.image.update_end|
-|이미지 이동 완료 (대상)|event_id.iaas.image.transfer_accept|
-|이미지 이동 완료 (소스)|event_id.iaas.image.transfer_create|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -135,9 +133,6 @@
 |블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
 |블록 스토리지 수정|event_id.iaas.volume.update|
 |블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
-|블록 스토리지 이동|event_id.iaas.volume.transfer|
-|블록 스토리지 이동 완료 (대상)|event_id.iaas.volume.transfer_accept|
-|블록 스토리지 이동 완료 (소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 복제|event_id.iaas.volume.copy|
 |블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
 |인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
@@ -537,7 +532,6 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-||event_id.rds_for_mysql.get_last_query_to_restore|
 |파라미터 그룹 재설정|event_id.rds_for_mysql.resetParameterGroup|
 |파라미터 그룹 수정|event_id.rds_for_mysql.modifyParameterGroup|
 |파라미터 그룹 생성|event_id.rds_for_mysql.createParameterGroup|
