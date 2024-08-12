@@ -16,12 +16,12 @@
 |콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |인스턴스 종료|event_id.iaas.instance_action.shelve|
 |인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
-|인스턴스 시작|event_id.iaas.instance_action.start|
-|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
+|중지된 인스턴스 시작|event_id.iaas.instance_action.start|
+|중지된 인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
-|인스턴스 시작|event_id.iaas.instance_action.unshelve|
-|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
+|종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
