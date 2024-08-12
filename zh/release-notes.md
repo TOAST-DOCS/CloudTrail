@@ -103,7 +103,6 @@
 ### 2023. 10. 11.
 #### More Events
 * Added events related to Backup.
-* Added events related to RDS for MySQL.
 
 ### 2023. 10. 10.
 #### More Events
