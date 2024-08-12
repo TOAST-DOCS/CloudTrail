@@ -491,11 +491,6 @@
 |Change Workload Load Balancer Failed|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |Change Scheduled Run|event_id.iaas.ncs.schedule_workload.update|
-|Container Terminal Exec|event_id.iaas.ncs.container_terminal.exec|
-|Container Terminal Exit|event_id.iaas.ncs.container_terminal.exit|
-|Create Workload|event_id.iaas.ncs.workload.create|
-|Restart Workload|event_id.iaas.ncs.workload.restart|
-|Change Workload|event_id.iaas.ncs.workload.update|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|
 |Modify NAS Volume|event_id.iaas.nas.volume.update|
@@ -701,14 +696,14 @@
 |Approval Process Deny|event_id.skm.approval.deny|
 |Approval Process Approve Request|event_id.skm.approval.approve_request|
 |Query Confidential Data|event_id.skm.api.secrets.get|
-|대칭키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
-|대칭키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
-|로컬키 생성|event_id.skm.api.symmetric.create_local_key|
-|비대칭키를 통한 서명|event_id.skm.api.asymmetric.sign|
-|비대칭키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
-|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
-|대칭키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
-|비대칭키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|Encrypt with Symmetric Key|event_id.skm.api.symmetric.encrypt|
+|Decrypt with Symmetric Key|event_id.skm.api.symmetric.decrypt|
+|Create Local Key|event_id.skm.api.symmetric.create_local_key|
+|Sign with Asymmetric Key|event_id.skm.api.asymmetric.sign|
+|Verify Signature with Asymmetric Key|event_id.skm.api.asymmetric.verify|
+|Auto Delete Confidential Data|event_id.skm.secrets.scheduled_delete|
+|Auto Delete Symmetric Key|event_id.skm.symmetric.scheduled_delete|
+|Auto Delete Asymmetric Key|event_id.skm.asymmetric.scheduled_delete|
 |Query Symmectric Key|event_id.skm.api.symmetric.get|
 |Query Private Key|event_id.skm.api.asymmetric.get.privateKey|
 |Query Public Key|event_id.skm.api.asymmetric.get.publicKey|
