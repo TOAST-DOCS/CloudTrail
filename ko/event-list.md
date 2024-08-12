@@ -491,11 +491,6 @@
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.schedule_workload.update|
-|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
-|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
-|워크로드 생성|event_id.iaas.ncs.workload.create|
-|워크로드 재시작|event_id.iaas.ncs.workload.restart|
-|워크로드 변경|event_id.iaas.ncs.workload.update|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
@@ -659,24 +654,24 @@
 |기밀 데이터 삭제 요청 취소|event_id.skm.secret.delete_request_cancel|
 |기밀 데이터 정보 변경|event_id.skm.secret.update|
 |기밀 데이터 조회|event_id.skm.secret.get|
-|대칭키 생성|event_id.skm.symmetric.create|
-|대칭키 즉시 삭제|event_id.skm.symmetric.delete|
-|대칭키 삭제 요청|event_id.skm.symmetric.delete_request|
-|대칭키 삭제 요청 취소|event_id.skm.symmetric.delete_request_cancel|
-|대칭키 정보 변경|event_id.skm.symmetric.update|
-|대칭키 즉시 회전|event_id.skm.symmetric.rotate|
-|대칭키 버전 삭제 요청|event_id.skm.symmetric_version.delete_request|
-|대칭키 버전 삭제 요청 취소|event_id.skm.symmetric_version.delete_request_cancel|
-|대칭키 버전 즉시 삭제|event_id.skm.symmetric_version.delete|
-|비대칭키 생성|event_id.skm.asymmetric.create|
-|비대칭키 즉시 삭제|event_id.skm.asymmetric.delete|
-|비대칭키 삭제 요청|event_id.skm.asymmetric.delete_request|
-|비대칭키 삭제 요청 취소|event_id.skm.asymmetric.delete_request_cancel|
-|비대칭키 정보 변경|event_id.skm.asymmetric.update|
-|비대칭키 즉시 회전|event_id.skm.asymmetric.rotate|
-|비대칭키 버전 삭제 요청|event_id.skm.asymmetric_version.delete_request|
-|비대칭키 버전 삭제 요청 취소|event_id.skm.asymmetric_version.delete_request_cancel|
-|비대칭키 버전 즉시 삭제|event_id.skm.asymmetric_version.delete|
+|대칭 키 생성|event_id.skm.symmetric.create|
+|대칭 키 즉시 삭제|event_id.skm.symmetric.delete|
+|대칭 키 삭제 요청|event_id.skm.symmetric.delete_request|
+|대칭 키 삭제 요청 취소|event_id.skm.symmetric.delete_request_cancel|
+|대칭 키 정보 변경|event_id.skm.symmetric.update|
+|대칭 키 즉시 회전|event_id.skm.symmetric.rotate|
+|대칭 키 버전 삭제 요청|event_id.skm.symmetric_version.delete_request|
+|대칭 키 버전 삭제 요청 취소|event_id.skm.symmetric_version.delete_request_cancel|
+|대칭 키 버전 즉시 삭제|event_id.skm.symmetric_version.delete|
+|비대칭 키 생성|event_id.skm.asymmetric.create|
+|비대칭 키 즉시 삭제|event_id.skm.asymmetric.delete|
+|비대칭 키 삭제 요청|event_id.skm.asymmetric.delete_request|
+|비대칭 키 삭제 요청 취소|event_id.skm.asymmetric.delete_request_cancel|
+|비대칭 키 정보 변경|event_id.skm.asymmetric.update|
+|비대칭 키 즉시 회전|event_id.skm.asymmetric.rotate|
+|비대칭 키 버전 삭제 요청|event_id.skm.asymmetric_version.delete_request|
+|비대칭 키 버전 삭제 요청 취소|event_id.skm.asymmetric_version.delete_request_cancel|
+|비대칭 키 버전 즉시 삭제|event_id.skm.asymmetric_version.delete|
 |IPv4 주소 등록|event_id.skm.ipv4.create|
 |IPv4 주소 삭제 요청|event_id.skm.ipv4.delete_request|
 |IPv4 주소 삭제 요청 취소|event_id.skm.ipv4.delete_request_cancel|
@@ -701,26 +696,26 @@
 |승인프로세스 거절|event_id.skm.approval.deny|
 |승인프로세스 승인 요청|event_id.skm.approval.approve_request|
 |기밀 데이터 조회|event_id.skm.api.secrets.get|
-|대칭키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
-|대칭키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
-|로컬키 생성|event_id.skm.api.symmetric.create_local_key|
-|비대칭키를 통한 서명|event_id.skm.api.asymmetric.sign|
-|비대칭키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
+|대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
+|대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
+|로컬 키 생성|event_id.skm.api.symmetric.create_local_key|
+|비대칭 키를 통한 서명|event_id.skm.api.asymmetric.sign|
+|비대칭 키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
 |기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
-|대칭키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
-|비대칭키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
-|대칭키 조회|event_id.skm.api.symmetric.get|
-|개인키 조회|event_id.skm.api.asymmetric.get.privateKey|
-|공개키 조회|event_id.skm.api.asymmetric.get.publicKey|
+|대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
+|비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|대칭 키 조회|event_id.skm.api.symmetric.get|
+|개인 키 조회|event_id.skm.api.asymmetric.get.privateKey|
+|공개 키 조회|event_id.skm.api.asymmetric.get.publicKey|
 |기밀 데이터 생성|event_id.skm.api.secrets.create|
-|대칭키 생성|event_id.skm.api.symmetric.create|
-|비대칭키 생성|event_id.skm.api.asymmetric.create|
+|대칭 키 생성|event_id.skm.api.symmetric.create|
+|비대칭 키 생성|event_id.skm.api.asymmetric.create|
 |기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
-|대칭키 삭제 요청|event_id.skm.api.symmetric.delete_request|
-|비대칭키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
+|대칭 키 삭제 요청|event_id.skm.api.symmetric.delete_request|
+|비대칭 키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
 |기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
-|대칭키 즉시 삭제|event_id.skm.api.symmetric.delete|
-|비대칭키 즉시 삭제|event_id.skm.api.asymmetric.delete|
+|대칭 키 즉시 삭제|event_id.skm.api.symmetric.delete|
+|비대칭 키 즉시 삭제|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
