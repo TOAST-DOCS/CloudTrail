@@ -491,11 +491,6 @@
 |ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |ワークロードの予約実行変更|event_id.iaas.ncs.schedule_workload.update|
-|コンテナターミナル接続|event_id.iaas.ncs.container_terminal.exec|
-|コンテナターミナル接続終了|event_id.iaas.ncs.container_terminal.exit|
-|ワークロードの作成|event_id.iaas.ncs.workload.create|
-|ワークロード再起動|event_id.iaas.ncs.workload.restart|
-|ワークロードの変更|event_id.iaas.ncs.workload.update|
 |NASボリュームの作成|event_id.iaas.nas.volume.create|
 |NASボリュームの削除|event_id.iaas.nas.volume.delete|
 |NASボリュームの変更|event_id.iaas.nas.volume.update|
@@ -701,14 +696,14 @@
 |承認プロセスを拒否|event_id.skm.approval.deny|
 |承認プロセスの承認依頼|event_id.skm.approval.approve_request|
 |機密データ 照会|event_id.skm.api.secrets.get|
-|대칭키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
-|대칭키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
-|로컬키 생성|event_id.skm.api.symmetric.create_local_key|
-|비대칭키를 통한 서명|event_id.skm.api.asymmetric.sign|
-|비대칭키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
-|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
-|대칭키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
-|비대칭키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|対称鍵による暗号化|event_id.skm.api.symmetric.encrypt|
+|対称鍵による復号|event_id.skm.api.symmetric.decrypt|
+|ローカルキーの作成|event_id.skm.api.symmetric.create_local_key|
+|非対称鍵による署名|event_id.skm.api.asymmetric.sign|
+|非対称鍵による署名検証|event_id.skm.api.asymmetric.verify|
+|機密データの自動削除|event_id.skm.secrets.scheduled_delete|
+|対称鍵の自動削除|event_id.skm.symmetric.scheduled_delete|
+|非対称鍵の自動削除|event_id.skm.asymmetric.scheduled_delete|
 |機密データ 照会|event_id.skm.api.symmetric.get|
 |対称鍵 照会|event_id.skm.api.asymmetric.get.privateKey|
 |非対称鍵 照会|event_id.skm.api.asymmetric.get.publicKey|
