@@ -93,12 +93,13 @@
 |Take Console Screenshot|event_id.iaas.instance_action.screenshot|
 |Terminate Instance|event_id.iaas.instance_action.shelve|
 |Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|
-|Start Instance|event_id.iaas.instance_action.start|
-|Start Instance Completed|event_id.iaas.instance_action.start_end|
+|Start Stopped Instance|event_id.iaas.instance_action.start|
+|Start Stopped Instance Completed|event_id.iaas.instance_action.start_end|
 |Stop Instance|event_id.iaas.instance_action.stop|
 |Stop Instance Completed|event_id.iaas.instance_action.stop_end|
-|Start Instance|event_id.iaas.instance_action.unshelve|
-|Start Instance Completed|event_id.iaas.instance_action.unshelve_end|
+|Start Terminated Instance|event_id.iaas.instance_action.unshelve|
+|Start Terminated Instance Completed|event_id.iaas.instance_action.unshelve_end|
+|Change Instance Key Pair|event_id.iaas.instance_action.reset_keypair|
 |Create Instance Template|event_id.iaas.instance_template.create|
 |Delete Instance Template|event_id.iaas.instance_template.delete|
 |Change Instance Template OWNER|event_id.iaas.instance_template.handover|
@@ -112,9 +113,12 @@
 |Delete Keypair|event_id.iaas.keypair.delete|
 |Copy Image|event_id.iaas.image.copy|
 |Create Image|event_id.iaas.image.create|
+|Create Image Completed|event_id.iaas.image.create_end|
 |Create Image ID|event_id.iaas.image.create_id|
 |Delete Image|event_id.iaas.image.delete|
+|Delete Image Completed|event_id.iaas.image.delete_end|
 |Modify Image|event_id.iaas.image.update|
+|Modify Image Completed|event_id.iaas.image.update_end|
 |Upload Image|event_id.iaas.image.upload|
 |Create Image Sharing|event_id.iaas.image_member.create|
 |Delete Image Sharing|event_id.iaas.image_member.delete|
@@ -124,14 +128,22 @@
 |Delete Image Template|event_id.iaas.image_template.delete|
 |Modify Image Template|event_id.iaas.image_template.update|
 |Create Block Storage|event_id.iaas.volume.create|
+|Create Block Storage Completed|event_id.iaas.volume.create_end|
 |Delete Block Storage|event_id.iaas.volume.delete|
+|Delete Block Storage Completed|event_id.iaas.volume.delete_end|
 |Modify Block Storage|event_id.iaas.volume.update|
+|Modify Block Storage Completed|event_id.iaas.volume.update_end|
 |Replicate Block Storage|event_id.iaas.volume.copy|
+|Replicate Block Storage Completed|event_id.iaas.volume.copy_end|
 |Attach Instance Block Storage|event_id.iaas.volume.attach|
+|Attach Instance Block Storage Completed|event_id.iaas.volume.attach_end|
 |Detach Instance Block Storage|event_id.iaas.volume.detach|
+|Detach Instance Block Storage Completed|event_id.iaas.volume.detach_end|
 |Change Block Storage Size|event_id.iaas.volume.extend|
 |Create Block Storage Snapshot|event_id.iaas.snapshot.create|
+|Create Block Storage Snapshot Completed|event_id.iaas.snapshot.create_end|
 |Delete Block Storage Snapshot|event_id.iaas.snapshot.delete|
+|Delete Block Storage Snapshot Completed|event_id.iaas.snapshot.delete_end|
 |Create Schedule for Scaling Group|event_id.iaas.autoscale_schedule.create|
 |Delete Schedule for Scaling Group|event_id.iaas.autoscale_schedule.delete|
 |Change Scheduled Task OWNER Of Scaling Group|event_id.iaas.autoscale_schedule.handover|
@@ -185,6 +197,12 @@
 |Create Load Balancer Listener|event_id.iaas.loadbalancer_listener.create|
 |Delete Load Balancer Listener|event_id.iaas.loadbalancer_listener.delete|
 |Change Load Balancer Listener|event_id.iaas.loadbalancer_listener.update|
+|Create Load Balancer Member Group (Pool)|event_id.iaas.loadbalancer_pool.create|
+|Delete Load Balancer Member Group (Pool)|event_id.iaas.loadbalancer_pool.delete|
+|Change Load Balancer Member Group (Pool)|event_id.iaas.loadbalancer_pool.update|
+|Create Load Balancer Health Monitor|event_id.iaas.loadbalancer_healthmonitor.create|
+|Change Load Balancer Health Monitor|event_id.iaas.loadbalancer_healthmonitor.update|
+|Delete Load Balancer Health Monitor|event_id.iaas.loadbalancer_healthmonitor.delete|
 |Attach Load Balancer Instance|event_id.iaas.loadbalancer_member.create|
 |Detach Load Balancer Instance|event_id.iaas.loadbalancer_member.delete|
 |Change Status of Load Balancer Instance|event_id.iaas.loadbalancer_member.update|
@@ -194,6 +212,13 @@
 |Create Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.create|
 |Delete Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.delete|
 |Modify Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.update|
+|Create Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.create|
+|Delete Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.delete|
+|Modify Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.update|
+|Create Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.create|
+|Delete Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.delete|
+|Modify Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.update|
+|Apply Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.bind|
 |Create Transit Hub|event_id.iaas.transit_hub.create|
 |Delete Transit Hub|event_id.iaas.transit_hub.delete|
 |Modify Transit Hub|event_id.iaas.transit_hub.update|
@@ -237,9 +262,9 @@
 |Create Project Peering|event_id.iaas.project_peering.create|
 |Delete Project Peering|event_id.iaas.project_peering.delete|
 |Change Project Peering|event_id.iaas.project_peering.update|
-|Create Project to Allow|event_id.iaas.peering_allow_project.create|
-|Delete Project to Allow|event_id.iaas.peering_allow_project.delete|
-|Change Project to Allow|event_id.iaas.peering_allow_project.update|
+|Create Peering Allow List|event_id.iaas.peering_allow_project.create|
+|Delete Peering Allow List|event_id.iaas.peering_allow_project.delete|
+|Change Peering Allow List|event_id.iaas.peering_allow_project.update|
 |Create NAT Gateway|event_id.iaas.nat_gateway.create|
 |Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
 |Change NAT Gateway|event_id.iaas.nat_gateway.update|
@@ -268,6 +293,9 @@
 |Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|
 |Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
 |Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|
+|Create Flow Log Logger|event_id.iaas.flowlog_logger.create|
+|Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
+|Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -442,11 +470,27 @@
 |Delete Template|event_id.iaas.ncs.template.delete|
 |Create Template Version|event_id.iaas.ncs.template_version.create|
 |Delete Template Version|event_id.iaas.ncs.template_version.delete|
+|Create Workload Started|event_id.iaas.ncs.workload_create.start|
+|Create Workload Completed|event_id.iaas.ncs.workload_create.end|
+|Create Workload Failed|event_id.iaas.ncs.workload_create.failed|
 |Delete Workload|event_id.iaas.ncs.workload.delete|
 |Stop Workload|event_id.iaas.ncs.workload.stop|
-|Create Workload|event_id.iaas.ncs.workload.create|
-|Restart Workload|event_id.iaas.ncs.workload.restart|
-|Change Workload|event_id.iaas.ncs.workload.update|
+|Restart Workload Started|event_id.iaas.ncs.workload_restart.start|
+|Restart Workload Completed|event_id.iaas.ncs.workload_restart.end|
+|Restart Workload Failed|event_id.iaas.ncs.workload_restart.failed|
+|Change Workload Description|event_id.iaas.ncs.workload_description.update|
+|Change Workload Template Started|event_id.iaas.ncs.workload_template_update.start|
+|Change Workload Template Completed|event_id.iaas.ncs.workload_template_update.end|
+|Change Workload Template Failed|event_id.iaas.ncs.workload_template_update.failed|
+|Change Number of Workload Task Requests Start|event_id.iaas.ncs.workload_desired_update.start|
+|Change Number of Workload Task Requests Completed|event_id.iaas.ncs.workload_desired_update.end|
+|Change Number of Workload Task Requests Failed|event_id.iaas.ncs.workload_desired_update.failed|
+|Change Schedule Termination|event_id.iaas.ncs.workload_active_deadline.update|
+|Change Workload Load Balancer Start|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
+|Change Workload Load Balancer Start|event_id.iaas.workload_loadbalancer_update.start|
+|Change Workload Load Balancer Failed|event_id.iaas.ncs.workload_loadbalancer_update.end|
+|Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
+|Change Scheduled Run|event_id.iaas.ncs.schedule_workload.update|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|
 |Modify NAS Volume|event_id.iaas.nas.volume.update|
@@ -483,7 +527,6 @@
 
 | Event | Event ID |
 | --- | --- |
-||event_id.rds_for_mysql.get_last_query_to_restore|
 |Reset Parameter Group|event_id.rds_for_mysql.resetParameterGroup|
 |Modify Parameter Group|event_id.rds_for_mysql.modifyParameterGroup|
 |Create Parameter Group|event_id.rds_for_mysql.createParameterGroup|
@@ -652,6 +695,27 @@
 |Approval Process Approve|event_id.skm.approval.approve|
 |Approval Process Deny|event_id.skm.approval.deny|
 |Approval Process Approve Request|event_id.skm.approval.approve_request|
+|Query Confidential Data|event_id.skm.api.secrets.get|
+|Encrypt with Symmetric Key|event_id.skm.api.symmetric.encrypt|
+|Decrypt with Symmetric Key|event_id.skm.api.symmetric.decrypt|
+|Create Local Key|event_id.skm.api.symmetric.create_local_key|
+|Sign with Asymmetric Key|event_id.skm.api.asymmetric.sign|
+|Verify Signature with Asymmetric Key|event_id.skm.api.asymmetric.verify|
+|Auto Delete Confidential Data|event_id.skm.secrets.scheduled_delete|
+|Auto Delete Symmetric Key|event_id.skm.symmetric.scheduled_delete|
+|Auto Delete Asymmetric Key|event_id.skm.asymmetric.scheduled_delete|
+|Query Symmectric Key|event_id.skm.api.symmetric.get|
+|Query Private Key|event_id.skm.api.asymmetric.get.privateKey|
+|Query Public Key|event_id.skm.api.asymmetric.get.publicKey|
+|Create Confidential Data|event_id.skm.api.secrets.create|
+|Create Symmectric Keys|event_id.skm.api.symmetric.create|
+|Create Asymmetric Keys|event_id.skm.api.asymmetric.create|
+|Request for Deleting Confidential Data|event_id.skm.api.secrets.delete_request|
+|Request for Deleting Symmetric Keys|event_id.skm.api.symmetric.delete_request|
+|Request for Deleting Asymmetric Keys|event_id.skm.api.asymmetric.delete_request|
+|Immediately Delete Confidential Data|event_id.skm.api.secrets.delete|
+|Immediately Delete Symmetric Keys|event_id.skm.api.symmetric.delete|
+|Immediately Delete Asymmetric Keys|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 

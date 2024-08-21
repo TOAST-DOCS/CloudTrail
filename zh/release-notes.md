@@ -1,5 +1,9 @@
 ## CloudTrail > Release Notes
 
+### 2024. 08. 27.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
 ### 2024. 07. 23.
 #### More Events
 * Added events related to Gamebase.
@@ -7,6 +11,10 @@
 #### Feature Updates
 * [CONSOLE] When selecting a service in the service filter, only events for that service are displayed in the event filter
 * [CONSOLE] Event names in the event filter have been changed to "[service name] event name" format.
+
+### 2024. 07. 22.
+#### More Events
+* Added events related to Secure Key Manager.
 
 ### 2024. 07. 09.
 #### More Events
@@ -95,7 +103,6 @@
 ### 2023. 10. 11.
 #### More Events
 * Added events related to Backup.
-* Added events related to RDS for MySQL.
 
 ### 2023. 10. 10.
 #### More Events
