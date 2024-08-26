@@ -16,12 +16,12 @@
 |콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |인스턴스 종료|event_id.iaas.instance_action.shelve|
 |인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
-|인스턴스 시작|event_id.iaas.instance_action.start|
-|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
+|중지된 인스턴스 시작|event_id.iaas.instance_action.start|
+|중지된 인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
-|인스턴스 시작|event_id.iaas.instance_action.unshelve|
-|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
+|종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
@@ -92,9 +92,9 @@
 |NetworkACL 생성|event_id.iaas.networkacl.create|
 |NetworkACL 삭제|event_id.iaas.networkacl.delete|
 |NetworkACL 수정|event_id.iaas.networkacl.update|
-|NetworkACL rule 생성|event_id.iaas.networkacl_rule.create|
-|NetworkACL rule 삭제|event_id.iaas.networkacl_rule.delete|
-|NetworkACL rule 수정|event_id.iaas.networkacl_rule.update|
+|NetworkACL Rule 생성|event_id.iaas.networkacl_rule.create|
+|NetworkACL Rule 삭제|event_id.iaas.networkacl_rule.delete|
+|NetworkACL Rule 수정|event_id.iaas.networkacl_rule.update|
 |NetworkACL Binding 생성|event_id.iaas.networkacl_binding.create|
 |NetworkACL Binding 삭제|event_id.iaas.networkacl_binding.delete|
 |보안 그룹 생성|event_id.iaas.security_group.create|
@@ -108,6 +108,12 @@
 |로드 밸런서 리스너 생성|event_id.iaas.loadbalancer_listener.create|
 |로드 밸런서 리스너 삭제|event_id.iaas.loadbalancer_listener.delete|
 |로드 밸런서 리스너 변경|event_id.iaas.loadbalancer_listener.update|
+|로드 밸런서 멤버 그룹(풀) 생성|event_id.iaas.loadbalancer_pool.create|
+|로드 밸런서 멤버 그룹(풀) 삭제|event_id.iaas.loadbalancer_pool.delete|
+|로드 밸런서 멤버 그룹(풀) 변경|event_id.iaas.loadbalancer_pool.update|
+|로드 밸런서 헬스 모니터 생성|event_id.iaas.loadbalancer_healthmonitor.create|
+|로드 밸런서 헬스 모니터 변경|event_id.iaas.loadbalancer_healthmonitor.update|
+|로드 밸런서 헬스 모니터 삭제|event_id.iaas.loadbalancer_healthmonitor.delete|
 |로드 밸런서 인스턴스 연결 추가|event_id.iaas.loadbalancer_member.create|
 |로드 밸런서 인스턴스 연결 해제|event_id.iaas.loadbalancer_member.delete|
 |로드 밸런서 인스턴스 활성 상태 변경|event_id.iaas.loadbalancer_member.update|
@@ -117,6 +123,13 @@
 |로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
 |로드 밸런서 L7 룰 삭제|event_id.iaas.loadbalancer_l7rule.delete|
 |로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
+|로드 밸런서 IP ACL 그룹 생성|event_id.iaas.loadbalancer_ipacl_group.create|
+|로드 밸런서 IP ACL 그룹 삭제|event_id.iaas.loadbalancer_ipacl_group.delete|
+|로드 밸런서 IP ACL 그룹 수정|event_id.iaas.loadbalancer_ipacl_group.update|
+|로드 밸런서 IP ACL 타깃 생성|event_id.iaas.loadbalancer_ipacl_target.create|
+|로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
+|로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
+|로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
 |트랜짓 허브 생성|event_id.iaas.transit_hub.create|
 |트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
 |트랜짓 허브 수정|event_id.iaas.transit_hub.update|
@@ -157,9 +170,9 @@
 |리전 피어링 생성|event_id.iaas.region_peering.create|
 |리전 피어링 삭제|event_id.iaas.region_peering.delete|
 |리전 피어링 변경|event_id.iaas.region_peering.update|
-|프로젝트 피어링 생성|event_id.iaas.project_peering.create|
-|프로젝트 피어링 삭제|event_id.iaas.project_peering.delete|
-|프로젝트 피어링 변경|event_id.iaas.project_peering.update|
+|피어링 허용 목록 생성|event_id.iaas.project_peering.create|
+|피어링 허용 목록 변경|event_id.iaas.project_peering.update|
+|피어링 허용 목록 삭제|event_id.iaas.project_peering.delete|
 |피어링 허용 목록 생성|event_id.iaas.peering_allow_project.create|
 |피어링 허용 목록 삭제|event_id.iaas.peering_allow_project.delete|
 |피어링 허용 목록 변경|event_id.iaas.peering_allow_project.update|
@@ -223,6 +236,9 @@
 |모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
 |모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
 |오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
+|NKS 레지스트리 업데이트 완료|event_id.iaas.cluster.update_nks_registry.end|
+|NKS 레지스트리 업데이트 실패|event_id.iaas.cluster.update_nks_registry.fail|
+|NKS 레지스트리 업데이트 시작|event_id.iaas.cluster.update_nks_registry.start|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -247,6 +263,12 @@
 |노드 그룹 업그레이드 완료|event_id.iaas.nodegroup.upgrade.end|
 |노드 그룹 업그레이드 실패|event_id.iaas.nodegroup.upgrade.failed|
 |노드 그룹 업그레이드 시작|event_id.iaas.nodegroup.upgrade.start|
+|추가 블록 스토리지 업데이트 완료|event_id.iaas.nodegroup.update_extra_volume.end|
+|추가 블록 스토리지 업데이트 실패|event_id.iaas.nodegroup.update_extra_volume.fail|
+|추가 블록 스토리지 업데이트 시작|event_id.iaas.nodegroup.update_extra_volume.start|
+|추가 보안 그룹 업데이트 완료|event_id.iaas.nodegroup.update_extra_security_group.end|
+|추가 보안 그룹 업데이트 실패|event_id.iaas.nodegroup.update_extra_security_group.fail|
+|추가 보안 그룹 업데이트 시작|event_id.iaas.nodegroup.update_extra_security_group.start|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
