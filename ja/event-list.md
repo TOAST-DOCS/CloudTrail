@@ -328,6 +328,9 @@
 |すべてのノード停止問題の検出|event_id.iaas.cluster.all_nodes_not_ready.detected|
 |すべてのノード停止のトラブルシューティング|event_id.iaas.cluster.all_nodes_not_ready.resolved|
 |オートヒーリング検出|event_id.iaas.cluster.auto_healing.detected|
+|NKSレジストリ更新の完了|event_id.iaas.cluster.update_nks_registry.end|
+|NKSレジストリ更新に失敗しました|event_id.iaas.cluster.update_nks_registry.fail|
+|NKSレジストリ更新の開始|event_id.iaas.cluster.update_nks_registry.start|
 |ノードグループ作成完了|event_id.iaas.nodegroup.create.end|
 |ノードグループ作成失敗|event_id.iaas.nodegroup.create.failed|
 |ノードグループ作成起動|event_id.iaas.nodegroup.create.start|
@@ -352,6 +355,12 @@
 |ノードグループーのアップグレード完了|event_id.iaas.nodegroup.upgrade.end|
 |ノードグループーのアップグレード失敗|event_id.iaas.nodegroup.upgrade.failed|
 |ノードグループーのアップグレード起動|event_id.iaas.nodegroup.upgrade.start|
+|追加ブロックストレージアップデートの完了|event_id.iaas.nodegroup.update_extra_volume.end|
+|追加ブロックストレージの更新に失敗しました|event_id.iaas.nodegroup.update_extra_volume.fail|
+|追加ブロックストレージアップデートの開始|event_id.iaas.nodegroup.update_extra_volume.start|
+|追加セキュリティグループの更新が完了しました|event_id.iaas.nodegroup.update_extra_security_group.end|
+|追加のセキュリティグループの更新に失敗しました|event_id.iaas.nodegroup.update_extra_security_group.fail|
+|追加のセキュリティグループの更新を開始|event_id.iaas.nodegroup.update_extra_security_group.start|
 |CSR 承認|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 作成|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 削除|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -487,10 +496,9 @@
 |ワークロード作業リクエスト数の変更失敗|event_id.iaas.ncs.workload_desired_update.failed|
 |ワークロードの終了予約設定を変更|event_id.iaas.ncs.workload_active_deadline.update|
 |ワークロードロードバランサーの変更|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
-|ワークロードロードバランサーの変更|event_id.iaas.workload_loadbalancer_update.start|
 |ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
-|ワークロードの予約実行変更|event_id.iaas.ncs.schedule_workload.update|
+|ワークロードの予約実行変更|event_id.iaas.ncs.workload_schedule.update|
 |NASボリュームの作成|event_id.iaas.nas.volume.create|
 |NASボリュームの削除|event_id.iaas.nas.volume.delete|
 |NASボリュームの変更|event_id.iaas.nas.volume.update|
@@ -649,7 +657,7 @@
 |キー保存場所 削除|event_id.skm.keystore.delete|
 |キー保存場所 変更|event_id.skm.keystore.update|
 |機密データ 作成|event_id.skm.secret.create|
-|機密データ 削除 -&gt; 機密データの即時削除|event_id.skm.secret.delete|
+|機密データの即時削除|event_id.skm.secret.delete|
 |機密データ 削除リクエスト|event_id.skm.secret.delete_request|
 |機密データ 削除キャンセル|event_id.skm.secret.delete_request_cancel|
 |機密データ 変更|event_id.skm.secret.update|
@@ -713,7 +721,7 @@
 |機密データ 削除リクエスト|event_id.skm.api.secrets.delete_request|
 |対称鍵 削除リクエスト|event_id.skm.api.symmetric.delete_request|
 |非対称鍵 削除リクエスト|event_id.skm.api.asymmetric.delete_request|
-|機密データ 削除 -&gt; 機密データの即時削除|event_id.skm.api.secrets.delete|
+|機密データの即時削除|event_id.skm.api.secrets.delete|
 |対称鍵 即時削除|event_id.skm.api.symmetric.delete|
 |非対称鍵 即時削除|event_id.skm.api.asymmetric.delete|
 
@@ -1839,4 +1847,10 @@
 |ダッシュボードの表示設定|event_id.cloud_monitoring_project.dashboard_exposure|
 |ダッシュボードの修正|event_id.cloud_monitoring_project.dashboard_modify|
 |指標収集の設定|event_id.cloud_monitoring_project.service_management|
+
+### Face Liveness
+
+| イベント | イベントID |
+| --- | --- |
+|スプーフィング検出|event_id.face_liveness.spoofing|
 
