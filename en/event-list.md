@@ -328,6 +328,9 @@
 |Detected all node stop|event_id.iaas.cluster.all_nodes_not_ready.detected|
 |Resolved all node stop|event_id.iaas.cluster.all_nodes_not_ready.resolved|
 |Detected autohealing|event_id.iaas.cluster.auto_healing.detected|
+|NKS registry update completed|event_id.iaas.cluster.update_nks_registry.end|
+|NKS registry update failed|event_id.iaas.cluster.update_nks_registry.fail|
+|NKS registry update started|event_id.iaas.cluster.update_nks_registry.start|
 |Create Node Group Completed|event_id.iaas.nodegroup.create.end|
 |Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
 |Create Node Group Started|event_id.iaas.nodegroup.create.start|
@@ -352,6 +355,12 @@
 |Upgrade Node Group Completed|event_id.iaas.nodegroup.upgrade.end|
 |Upgrade Node Group Failed|event_id.iaas.nodegroup.upgrade.failed|
 |Upgrade Node Group Started|event_id.iaas.nodegroup.upgrade.start|
+|Additional block storage update completed|event_id.iaas.nodegroup.update_extra_volume.end|
+|Additional block storage update failed|event_id.iaas.nodegroup.update_extra_volume.fail|
+|Additional block storage update started|event_id.iaas.nodegroup.update_extra_volume.start|
+|Additional security group update completed|event_id.iaas.nodegroup.update_extra_security_group.end|
+|Additional security group update failed|event_id.iaas.nodegroup.update_extra_security_group.fail|
+|Additional security group update started|event_id.iaas.nodegroup.update_extra_security_group.start|
 |Approve CSR|event_id.iaas.cluster.certificate_signing_request.approval|
 |Create CSR|event_id.iaas.cluster.certificate_signing_request.create|
 |Delete CSR|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -487,10 +496,9 @@
 |Change Number of Workload Task Requests Failed|event_id.iaas.ncs.workload_desired_update.failed|
 |Change Schedule Termination|event_id.iaas.ncs.workload_active_deadline.update|
 |Change Workload Load Balancer Start|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
-|Change Workload Load Balancer Start|event_id.iaas.workload_loadbalancer_update.start|
 |Change Workload Load Balancer Failed|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
-|Change Scheduled Run|event_id.iaas.ncs.schedule_workload.update|
+|Change Scheduled Run|event_id.iaas.ncs.workload_schedule.update|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|
 |Modify NAS Volume|event_id.iaas.nas.volume.update|
@@ -654,24 +662,24 @@
 |Cancel Request for Deleting Confidential Data|event_id.skm.secret.delete_request_cancel|
 |Change Confidential Data Information|event_id.skm.secret.update|
 |Query Confidential Data|event_id.skm.secret.get|
-|Create Symmectric Keys|event_id.skm.symmetric.create|
-|Immediately Delete Symmetric Keys|event_id.skm.symmetric.delete|
-|Request for Deleting Symmetric Keys|event_id.skm.symmetric.delete_request|
-|Cancel Request for Deleting Symmetric Keys|event_id.skm.symmetric.delete_request_cancel|
+|Create Symmectric Key|event_id.skm.symmetric.create|
+|Immediately Delete Symmetric Key|event_id.skm.symmetric.delete|
+|Request for Deleting Symmetric Key|event_id.skm.symmetric.delete_request|
+|Cancel Request for Deleting Symmetric Key|event_id.skm.symmetric.delete_request_cancel|
 |Change Symmectric Key Information|event_id.skm.symmetric.update|
-|Immediately Rotate Symmetric Keys|event_id.skm.symmetric.rotate|
+|Immediately Rotate Symmetric Key|event_id.skm.symmetric.rotate|
 |Request for Deleting Symmectric Key Version|event_id.skm.symmetric_version.delete_request|
 |Cancel Request for Deleting Symmetric Key Version|event_id.skm.symmetric_version.delete_request_cancel|
 |Immediately Delete Symmetric Key Version|event_id.skm.symmetric_version.delete|
-|Create Asymmetric Keys|event_id.skm.asymmetric.create|
-|Immediately Delete Asymmetric Keys|event_id.skm.asymmetric.delete|
-|Request for Deleting Asymmetric Keys|event_id.skm.asymmetric.delete_request|
-|Cancel Request for Deleting Asymmetric Keys|event_id.skm.asymmetric.delete_request_cancel|
-|Change Asymmetric Keys Information|event_id.skm.asymmetric.update|
-|Immediately Rotate Asymmetric Keys|event_id.skm.asymmetric.rotate|
+|Create Asymmetric Key|event_id.skm.asymmetric.create|
+|Immediately Delete Asymmetric Key|event_id.skm.asymmetric.delete|
+|Request for Deleting Asymmetric Key|event_id.skm.asymmetric.delete_request|
+|Cancel Request for Deleting Asymmetric Key|event_id.skm.asymmetric.delete_request_cancel|
+|Change Asymmetric Key Information|event_id.skm.asymmetric.update|
+|Immediately Rotate Asymmetric Key|event_id.skm.asymmetric.rotate|
 |Request for Deleting Asymmetric Key Version|event_id.skm.asymmetric_version.delete_request|
 |Cancel Request for Deleting Asymmetric Key Version|event_id.skm.asymmetric_version.delete_request_cancel|
-|Immediately Delete Asymmetric Keys Version|event_id.skm.asymmetric_version.delete|
+|Immediately Delete Asymmetric Key Version|event_id.skm.asymmetric_version.delete|
 |Register IPv4 Address|event_id.skm.ipv4.create|
 |Request for Deleting IPv4 Address|event_id.skm.ipv4.delete_request|
 |Cancel Request for IPv4 Address|event_id.skm.ipv4.delete_request_cancel|
@@ -708,14 +716,14 @@
 |Query Private Key|event_id.skm.api.asymmetric.get.privateKey|
 |Query Public Key|event_id.skm.api.asymmetric.get.publicKey|
 |Create Confidential Data|event_id.skm.api.secrets.create|
-|Create Symmectric Keys|event_id.skm.api.symmetric.create|
-|Create Asymmetric Keys|event_id.skm.api.asymmetric.create|
+|Create Symmectric Key|event_id.skm.api.symmetric.create|
+|Create Asymmetric Key|event_id.skm.api.asymmetric.create|
 |Request for Deleting Confidential Data|event_id.skm.api.secrets.delete_request|
-|Request for Deleting Symmetric Keys|event_id.skm.api.symmetric.delete_request|
-|Request for Deleting Asymmetric Keys|event_id.skm.api.asymmetric.delete_request|
+|Request for Deleting Symmetric Key|event_id.skm.api.symmetric.delete_request|
+|Request for Deleting Asymmetric Key|event_id.skm.api.asymmetric.delete_request|
 |Immediately Delete Confidential Data|event_id.skm.api.secrets.delete|
-|Immediately Delete Symmetric Keys|event_id.skm.api.symmetric.delete|
-|Immediately Delete Asymmetric Keys|event_id.skm.api.asymmetric.delete|
+|Immediately Delete Symmetric Key|event_id.skm.api.symmetric.delete|
+|Immediately Delete Asymmetric Key|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -1839,4 +1847,10 @@
 |Display Dashboard|event_id.cloud_monitoring_project.dashboard_exposure|
 |Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
 |Enable Metrics Collection |event_id.cloud_monitoring_project.service_management|
+
+### Face Liveness
+
+| Event | Event ID |
+| --- | --- |
+|Spoofing detection|event_id.face_liveness.spoofing|
 
