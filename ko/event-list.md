@@ -328,6 +328,9 @@
 |모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
 |모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
 |오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
+|NKS 레지스트리 업데이트 완료|event_id.iaas.cluster.update_nks_registry.end|
+|NKS 레지스트리 업데이트 실패|event_id.iaas.cluster.update_nks_registry.fail|
+|NKS 레지스트리 업데이트 시작|event_id.iaas.cluster.update_nks_registry.start|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -352,6 +355,12 @@
 |노드 그룹 업그레이드 완료|event_id.iaas.nodegroup.upgrade.end|
 |노드 그룹 업그레이드 실패|event_id.iaas.nodegroup.upgrade.failed|
 |노드 그룹 업그레이드 시작|event_id.iaas.nodegroup.upgrade.start|
+|추가 블록 스토리지 업데이트 완료|event_id.iaas.nodegroup.update_extra_volume.end|
+|추가 블록 스토리지 업데이트 실패|event_id.iaas.nodegroup.update_extra_volume.fail|
+|추가 블록 스토리지 업데이트 시작|event_id.iaas.nodegroup.update_extra_volume.start|
+|추가 보안 그룹 업데이트 완료|event_id.iaas.nodegroup.update_extra_security_group.end|
+|추가 보안 그룹 업데이트 실패|event_id.iaas.nodegroup.update_extra_security_group.fail|
+|추가 보안 그룹 업데이트 시작|event_id.iaas.nodegroup.update_extra_security_group.start|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -477,7 +486,7 @@
 |워크로드 중지|event_id.iaas.ncs.workload.stop|
 |워크로드 재시작 시작|event_id.iaas.ncs.workload_restart.start|
 |워크로드 재시작 완료|event_id.iaas.ncs.workload_restart.end|
-|워크로드 재시작  실패|event_id.iaas.ncs.workload_restart.failed|
+|워크로드 재시작 실패|event_id.iaas.ncs.workload_restart.failed|
 |워크로드 설명 변경|event_id.iaas.ncs.workload_description.update|
 |워크로드 템플릿 변경 시작|event_id.iaas.ncs.workload_template_update.start|
 |워크로드 템플릿 변경 완료|event_id.iaas.ncs.workload_template_update.end|
@@ -487,10 +496,9 @@
 |워크로드 작업 요청 수 변경 실패|event_id.iaas.ncs.workload_desired_update.failed|
 |워크로드 종료 예약 변경|event_id.iaas.ncs.workload_active_deadline.update|
 |워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
-|워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.workload_loadbalancer_update.start|
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
-|워크로드 예약 실행 변경|event_id.iaas.ncs.schedule_workload.update|
+|워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
@@ -692,9 +700,9 @@
 |인증서 정보 변경|event_id.skm.cert.update|
 |인증서 즉시 삭제|event_id.skm.cert.delete|
 |인증서 다운로드|event_id.skm.cert.download|
-|승인프로세스 승인|event_id.skm.approval.approve|
-|승인프로세스 거절|event_id.skm.approval.deny|
-|승인프로세스 승인 요청|event_id.skm.approval.approve_request|
+|승인 프로세스 승인|event_id.skm.approval.approve|
+|승인 프로세스 거절|event_id.skm.approval.deny|
+|승인 프로세스 승인 요청|event_id.skm.approval.approve_request|
 |기밀 데이터 조회|event_id.skm.api.secrets.get|
 |대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
 |대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
@@ -1839,4 +1847,10 @@
 |대시보드 노출 설정|event_id.cloud_monitoring_project.dashboard_exposure|
 |대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
 |지표 수집 설정|event_id.cloud_monitoring_project.service_management|
+
+### Face Liveness
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|스푸핑 감지|event_id.face_liveness.spoofing|
 
