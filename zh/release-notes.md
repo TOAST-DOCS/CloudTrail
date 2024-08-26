@@ -3,6 +3,11 @@
 ### 2024. 08. 27.
 #### More Events
 * Added events related to Default Infrastructure Service.
+* Added events related to Face Liveness.
+
+### 2024. 08. 22.
+#### More Events
+* Added events related to Default Infrastructure Service.
 
 ### 2024. 07. 23.
 #### More Events
