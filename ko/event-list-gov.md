@@ -16,12 +16,12 @@
 |콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |인스턴스 종료|event_id.iaas.instance_action.shelve|
 |인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
-|인스턴스 시작|event_id.iaas.instance_action.start|
-|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
+|중지된 인스턴스 시작|event_id.iaas.instance_action.start|
+|중지된 인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
-|인스턴스 시작|event_id.iaas.instance_action.unshelve|
-|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
+|종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
@@ -108,6 +108,12 @@
 |로드 밸런서 리스너 생성|event_id.iaas.loadbalancer_listener.create|
 |로드 밸런서 리스너 삭제|event_id.iaas.loadbalancer_listener.delete|
 |로드 밸런서 리스너 변경|event_id.iaas.loadbalancer_listener.update|
+|로드 밸런서 멤버 그룹(풀) 생성|event_id.iaas.loadbalancer_pool.create|
+|로드 밸런서 멤버 그룹(풀) 삭제|event_id.iaas.loadbalancer_pool.delete|
+|로드 밸런서 멤버 그룹(풀) 변경|event_id.iaas.loadbalancer_pool.update|
+|로드 밸런서 헬스 모니터 생성|event_id.iaas.loadbalancer_healthmonitor.create|
+|로드 밸런서 헬스 모니터 변경|event_id.iaas.loadbalancer_healthmonitor.update|
+|로드 밸런서 헬스 모니터 삭제|event_id.iaas.loadbalancer_healthmonitor.delete|
 |로드 밸런서 인스턴스 연결 추가|event_id.iaas.loadbalancer_member.create|
 |로드 밸런서 인스턴스 연결 해제|event_id.iaas.loadbalancer_member.delete|
 |로드 밸런서 인스턴스 활성 상태 변경|event_id.iaas.loadbalancer_member.update|
@@ -117,6 +123,13 @@
 |로드 밸런서 L7 룰 생성|event_id.iaas.loadbalancer_l7rule.create|
 |로드 밸런서 L7 룰 삭제|event_id.iaas.loadbalancer_l7rule.delete|
 |로드 밸런서 L7 룰 변경|event_id.iaas.loadbalancer_l7rule.update|
+|로드 밸런서 IP ACL 그룹 생성|event_id.iaas.loadbalancer_ipacl_group.create|
+|로드 밸런서 IP ACL 그룹 삭제|event_id.iaas.loadbalancer_ipacl_group.delete|
+|로드 밸런서 IP ACL 그룹 수정|event_id.iaas.loadbalancer_ipacl_group.update|
+|로드 밸런서 IP ACL 타깃 생성|event_id.iaas.loadbalancer_ipacl_target.create|
+|로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
+|로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
+|로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
 |트랜짓 허브 생성|event_id.iaas.transit_hub.create|
 |트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
 |트랜짓 허브 수정|event_id.iaas.transit_hub.update|
@@ -157,21 +170,15 @@
 |리전 피어링 생성|event_id.iaas.region_peering.create|
 |리전 피어링 삭제|event_id.iaas.region_peering.delete|
 |리전 피어링 변경|event_id.iaas.region_peering.update|
-|프로젝트 피어링 생성|event_id.iaas.project_peering.create|
-|프로젝트 피어링 삭제|event_id.iaas.project_peering.delete|
-|프로젝트 피어링 변경|event_id.iaas.project_peering.update|
+|피어링 허용 목록 생성|event_id.iaas.project_peering.create|
+|피어링 허용 목록 변경|event_id.iaas.project_peering.update|
+|피어링 허용 목록 삭제|event_id.iaas.project_peering.delete|
 |피어링 허용 목록 생성|event_id.iaas.peering_allow_project.create|
 |피어링 허용 목록 삭제|event_id.iaas.peering_allow_project.delete|
 |피어링 허용 목록 변경|event_id.iaas.peering_allow_project.update|
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
 |NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
-|VPNGW 생성|event_id.iaas.vpngw.create|
-|VPNGW 삭제|event_id.iaas.vpngw.delete|
-|VPNGW 수정|event_id.iaas.vpngw.update|
-|VPN Connection 생성|event_id.iaas.vpn_connection.create|
-|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|
-|VPN Connection 수정|event_id.iaas.vpn_connection.update|
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
@@ -223,6 +230,9 @@
 |모든 노드 정지 문제 탐지|event_id.iaas.cluster.all_nodes_not_ready.detected|
 |모든 노드 정지 문제 해결|event_id.iaas.cluster.all_nodes_not_ready.resolved|
 |오토힐링 탐지|event_id.iaas.cluster.auto_healing.detected|
+|NKS 레지스트리 업데이트 완료|event_id.iaas.cluster.update_nks_registry.end|
+|NKS 레지스트리 업데이트 실패|event_id.iaas.cluster.update_nks_registry.fail|
+|NKS 레지스트리 업데이트 시작|event_id.iaas.cluster.update_nks_registry.start|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -247,6 +257,12 @@
 |노드 그룹 업그레이드 완료|event_id.iaas.nodegroup.upgrade.end|
 |노드 그룹 업그레이드 실패|event_id.iaas.nodegroup.upgrade.failed|
 |노드 그룹 업그레이드 시작|event_id.iaas.nodegroup.upgrade.start|
+|추가 블록 스토리지 업데이트 완료|event_id.iaas.nodegroup.update_extra_volume.end|
+|추가 블록 스토리지 업데이트 실패|event_id.iaas.nodegroup.update_extra_volume.fail|
+|추가 블록 스토리지 업데이트 시작|event_id.iaas.nodegroup.update_extra_volume.start|
+|추가 보안 그룹 업데이트 완료|event_id.iaas.nodegroup.update_extra_security_group.end|
+|추가 보안 그룹 업데이트 실패|event_id.iaas.nodegroup.update_extra_security_group.fail|
+|추가 보안 그룹 업데이트 시작|event_id.iaas.nodegroup.update_extra_security_group.start|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -498,24 +514,24 @@
 |기밀 데이터 삭제 요청 취소|event_id.skm.secret.delete_request_cancel|
 |기밀 데이터 정보 변경|event_id.skm.secret.update|
 |기밀 데이터 조회|event_id.skm.secret.get|
-|대칭키 생성|event_id.skm.symmetric.create|
-|대칭키 즉시 삭제|event_id.skm.symmetric.delete|
-|대칭키 삭제 요청|event_id.skm.symmetric.delete_request|
-|대칭키 삭제 요청 취소|event_id.skm.symmetric.delete_request_cancel|
-|대칭키 정보 변경|event_id.skm.symmetric.update|
-|대칭키 즉시 회전|event_id.skm.symmetric.rotate|
-|대칭키 버전 삭제 요청|event_id.skm.symmetric_version.delete_request|
-|대칭키 버전 삭제 요청 취소|event_id.skm.symmetric_version.delete_request_cancel|
-|대칭키 버전 즉시 삭제|event_id.skm.symmetric_version.delete|
-|비대칭키 생성|event_id.skm.asymmetric.create|
-|비대칭키 즉시 삭제|event_id.skm.asymmetric.delete|
-|비대칭키 삭제 요청|event_id.skm.asymmetric.delete_request|
-|비대칭키 삭제 요청 취소|event_id.skm.asymmetric.delete_request_cancel|
-|비대칭키 정보 변경|event_id.skm.asymmetric.update|
-|비대칭키 즉시 회전|event_id.skm.asymmetric.rotate|
-|비대칭키 버전 삭제 요청|event_id.skm.asymmetric_version.delete_request|
-|비대칭키 버전 삭제 요청 취소|event_id.skm.asymmetric_version.delete_request_cancel|
-|비대칭키 버전 즉시 삭제|event_id.skm.asymmetric_version.delete|
+|대칭 키 생성|event_id.skm.symmetric.create|
+|대칭 키 즉시 삭제|event_id.skm.symmetric.delete|
+|대칭 키 삭제 요청|event_id.skm.symmetric.delete_request|
+|대칭 키 삭제 요청 취소|event_id.skm.symmetric.delete_request_cancel|
+|대칭 키 정보 변경|event_id.skm.symmetric.update|
+|대칭 키 즉시 회전|event_id.skm.symmetric.rotate|
+|대칭 키 버전 삭제 요청|event_id.skm.symmetric_version.delete_request|
+|대칭 키 버전 삭제 요청 취소|event_id.skm.symmetric_version.delete_request_cancel|
+|대칭 키 버전 즉시 삭제|event_id.skm.symmetric_version.delete|
+|비대칭 키 생성|event_id.skm.asymmetric.create|
+|비대칭 키 즉시 삭제|event_id.skm.asymmetric.delete|
+|비대칭 키 삭제 요청|event_id.skm.asymmetric.delete_request|
+|비대칭 키 삭제 요청 취소|event_id.skm.asymmetric.delete_request_cancel|
+|비대칭 키 정보 변경|event_id.skm.asymmetric.update|
+|비대칭 키 즉시 회전|event_id.skm.asymmetric.rotate|
+|비대칭 키 버전 삭제 요청|event_id.skm.asymmetric_version.delete_request|
+|비대칭 키 버전 삭제 요청 취소|event_id.skm.asymmetric_version.delete_request_cancel|
+|비대칭 키 버전 즉시 삭제|event_id.skm.asymmetric_version.delete|
 |IPv4 주소 등록|event_id.skm.ipv4.create|
 |IPv4 주소 삭제 요청|event_id.skm.ipv4.delete_request|
 |IPv4 주소 삭제 요청 취소|event_id.skm.ipv4.delete_request_cancel|
@@ -536,6 +552,30 @@
 |인증서 정보 변경|event_id.skm.cert.update|
 |인증서 즉시 삭제|event_id.skm.cert.delete|
 |인증서 다운로드|event_id.skm.cert.download|
+|승인 프로세스 승인|event_id.skm.approval.approve|
+|승인 프로세스 거절|event_id.skm.approval.deny|
+|승인 프로세스 승인 요청|event_id.skm.approval.approve_request|
+|기밀 데이터 조회|event_id.skm.api.secrets.get|
+|대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
+|대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
+|로컬 키 생성|event_id.skm.api.symmetric.create_local_key|
+|비대칭 키를 통한 서명|event_id.skm.api.asymmetric.sign|
+|비대칭 키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
+|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
+|대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
+|비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|대칭 키 조회|event_id.skm.api.symmetric.get|
+|개인 키 조회|event_id.skm.api.asymmetric.get.privateKey|
+|공개 키 조회|event_id.skm.api.asymmetric.get.publicKey|
+|기밀 데이터 생성|event_id.skm.api.secrets.create|
+|대칭 키 생성|event_id.skm.api.symmetric.create|
+|비대칭 키 생성|event_id.skm.api.asymmetric.create|
+|기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
+|대칭 키 삭제 요청|event_id.skm.api.symmetric.delete_request|
+|비대칭 키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
+|기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
+|대칭 키 즉시 삭제|event_id.skm.api.symmetric.delete|
+|비대칭 키 즉시 삭제|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
