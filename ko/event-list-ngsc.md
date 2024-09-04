@@ -130,61 +130,19 @@
 |로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
 |로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
 |로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
-|트랜짓 허브 생성|event_id.iaas.transit_hub.create|
-|트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
-|트랜짓 허브 수정|event_id.iaas.transit_hub.update|
-|트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|
-|트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|
-|트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|
-|트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|
-|트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|
-|트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|
-|트랜짓 허브 라우팅 테이블 생성|event_id.iaas.transit_hub_routing_table.create|
-|트랜짓 허브 라우팅 테이블 삭제|event_id.iaas.transit_hub_routing_table.delete|
-|트랜짓 허브 라우팅 테이블 변경|event_id.iaas.transit_hub_routing_table.update|
-|트랜짓 허브 라우팅 연결 생성|event_id.iaas.transit_hub_routing_association.create|
-|트랜짓 허브 라우팅 연결 삭제|event_id.iaas.transit_hub_routing_association.delete|
-|트랜짓 허브 라우팅 연결 변경|event_id.iaas.transit_hub_routing_association.update|
-|트랜짓 허브 라우팅 전파 생성|event_id.iaas.transit_hub_routing_propagation.create|
-|트랜짓 허브 라우팅 전파 삭제|event_id.iaas.transit_hub_routing_propagation.delete|
-|트랜짓 허브 라우팅 전파 변경|event_id.iaas.transit_hub_routing_propagation.update|
-|트랜짓 허브 라우팅 룰 생성|event_id.iaas.transit_hub_routing_rule.create|
-|트랜짓 허브 라우팅 룰 삭제|event_id.iaas.transit_hub_routing_rule.delete|
-|트랜짓 허브 라우팅 룰 변경|event_id.iaas.transit_hub_routing_rule.update|
-|트랜짓 허브 멀티캐스트 도메인 생성|event_id.iaas.transit_hub_multicast_domain.create|
-|트랜짓 허브 멀티캐스트 도메인 삭제|event_id.iaas.transit_hub_multicast_domain.delete|
-|트랜짓 허브 멀티캐스트 도메인 변경|event_id.iaas.transit_hub_multicast_domain.update|
-|트랜짓 허브 멀티캐스트 연결 생성|event_id.iaas.transit_hub_multicast_association.create|
-|트랜짓 허브 멀티캐스트 연결 삭제|event_id.iaas.transit_hub_multicast_association.delete|
-|트랜짓 허브 멀티캐스트 연결 변경|event_id.iaas.transit_hub_multicast_association.update|
-|트랜짓 허브 멀티캐스트 그룹 생성|event_id.iaas.transit_hub_multicast_group.create|
-|트랜짓 허브 멀티캐스트 그룹 삭제|event_id.iaas.transit_hub_multicast_group.delete|
-|트랜짓 허브 멀티캐스트 그룹 변경|event_id.iaas.transit_hub_multicast_group.update|
-|트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
-|트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
-|트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
 |인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|
 |인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|
 |VPC 피어링 생성|event_id.iaas.peering.create|
 |VPC 피어링 삭제|event_id.iaas.peering.delete|
-|리전 피어링 생성|event_id.iaas.region_peering.create|
-|리전 피어링 삭제|event_id.iaas.region_peering.delete|
-|리전 피어링 변경|event_id.iaas.region_peering.update|
-|피어링 허용 목록 생성|event_id.iaas.project_peering.create|
-|피어링 허용 목록 변경|event_id.iaas.project_peering.update|
-|피어링 허용 목록 삭제|event_id.iaas.project_peering.delete|
+|프로젝트 피어링 생성|event_id.iaas.project_peering.create|
+|프로젝트 피어링 삭제|event_id.iaas.project_peering.delete|
+|프로젝트 피어링 변경|event_id.iaas.project_peering.update|
 |피어링 허용 목록 생성|event_id.iaas.peering_allow_project.create|
 |피어링 허용 목록 삭제|event_id.iaas.peering_allow_project.delete|
 |피어링 허용 목록 변경|event_id.iaas.peering_allow_project.update|
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
 |NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
-|VPNGW 생성|event_id.iaas.vpngw.create|
-|VPNGW 삭제|event_id.iaas.vpngw.delete|
-|VPNGW 수정|event_id.iaas.vpngw.update|
-|VPN Connection 생성|event_id.iaas.vpn_connection.create|
-|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|
-|VPN Connection 수정|event_id.iaas.vpn_connection.update|
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
@@ -197,13 +155,6 @@
 |트래픽 미러링 필터 생성|event_id.iaas.traffic_mirroring.filter.create|
 |트래픽 미러링 필터 삭제|event_id.iaas.traffic_mirroring.filter.delete|
 |트래픽 미러링 필터 변경|event_id.iaas.traffic_mirroring.filter.update|
-|Private DNS Zone 생성|event_id.iaas.privatedns.zone.create|
-|Private DNS Zone 삭제|event_id.iaas.privatedns.zone.delete|
-|Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|
-|Private DNS 레코드 세트 생성|event_id.iaas.privatedns.recordset.create|
-|Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
-|Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
-|Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
