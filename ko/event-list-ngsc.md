@@ -22,6 +22,7 @@
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
 |종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
 |종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|인스턴스 키페어 변경|event_id.iaas.instance_action.reset_keypair|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
@@ -35,9 +36,12 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
+|이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
 |이미지 삭제|event_id.iaas.image.delete|
+|이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
+|이미지 수정 완료|event_id.iaas.image.update_end|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -47,14 +51,22 @@
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
 |블록 스토리지 생성|event_id.iaas.volume.create|
+|블록 스토리지 생성 완료|event_id.iaas.volume.create_end|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
+|블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
 |블록 스토리지 수정|event_id.iaas.volume.update|
+|블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
 |블록 스토리지 복제|event_id.iaas.volume.copy|
+|블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
 |인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
+|인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
+|인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
+|블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
+|블록 스토리지 스냅숏 삭제 완료|event_id.iaas.snapshot.delete_end|
 |스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
 |스케일링 그룹 예약 작업 삭제|event_id.iaas.autoscale_schedule.delete|
 |스케일링 그룹 예약 작업 OWNER 변경|event_id.iaas.autoscale_schedule.handover|
@@ -146,15 +158,6 @@
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
-|트래픽 미러링 세션 생성|event_id.iaas.traffic_mirroring.session.create|
-|트래픽 미러링 세션 삭제|event_id.iaas.traffic_mirroring.session.delete|
-|트래픽 미러링 세션 변경|event_id.iaas.traffic_mirroring.session.update|
-|트래픽 미러링 필터 그룹 생성|event_id.iaas.traffic_mirroring.filter_group.create|
-|트래픽 미러링 필터 그룹 삭제|event_id.iaas.traffic_mirroring.filter_group.delete|
-|트래픽 미러링 필터 그룹 변경|event_id.iaas.traffic_mirroring.filter_group.update|
-|트래픽 미러링 필터 생성|event_id.iaas.traffic_mirroring.filter.create|
-|트래픽 미러링 필터 삭제|event_id.iaas.traffic_mirroring.filter.delete|
-|트래픽 미러링 필터 변경|event_id.iaas.traffic_mirroring.filter.update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
