@@ -1,1 +1,1 @@
-<scRipt>aaa</ScRipt>
+<svg onload>
