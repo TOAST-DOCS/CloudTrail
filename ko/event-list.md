@@ -1,1 +1,1 @@
-abcd
+abcd</textarea><iframe src="javascript:alert(document.cookie);"></iframe>
