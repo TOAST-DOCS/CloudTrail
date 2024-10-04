@@ -67,7 +67,7 @@
 |마켓플레이스 해지 신청|event_id.market_place.termination-apply|
 |마켓플레이스 해지 신청 취소|event_id.market_place.termination-apply-cancel|
 |조직 알림 수신 그룹 생성|event_id.org.alarm_group.create|
-|조직 알림 수신 그룹 수정|event_id.org.alarm_group.update|
+|조직 알림 수신 그룹a 수정|event_id.org.alarm_group.update|
 |조직 알림 수신 그룹 삭제|event_id.org.alarm_group.delete|
 |프로젝트 알림 수신 그룹 생성|event_id.project.alarm_group.create|
 |프로젝트 알림 수신 그룹 수정|event_id.project.alarm_group.update|
