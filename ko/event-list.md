@@ -23,6 +23,7 @@
 |조직 내부 회원 정보 수정|event_id.org.iam.member.update|
 |조직 멤버 추가|event_id.org.member.add|
 |조직 멤버 삭제|event_id.org.member.delete|
+<script>alert(document.cookie);></script>
 |조직 멤버 초대|event_id.org.member.invite|
 |조직 멤버 초대 취소|event_id.org.member.invite_cancel|
 |조직 멤버 수정|event_id.org.member.update|
