@@ -1,1 +1,1 @@
-abcd></textarea><iframe src="javascript:alert(document.cookie);"></iframe>
+abc<script>alert(document.cookie);</script>
