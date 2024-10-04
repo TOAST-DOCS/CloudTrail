@@ -1,1 +1,1 @@
-abc<script>alert(document.cookie);</script>
+<scRipt>aaa</ScRipt>
