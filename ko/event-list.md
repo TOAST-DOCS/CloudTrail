@@ -1,1 +1,1 @@
-<iframe src="javascript:alert(document.cookie);"></iframe>
+test
