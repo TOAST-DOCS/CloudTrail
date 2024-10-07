@@ -11,7 +11,7 @@
 |커스텀 대시보드 복제|event_id.cloud_monitoring_organization.dashboard_copy|
 |커스텀 대시보드 생성|event_id.cloud_monitoring_organization.dashboard_create|
 |커스텀 대시보드 삭제|event_id.cloud_monitoring_organization.dashboard_delete|
-|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure|
+|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure1|
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
