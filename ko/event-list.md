@@ -23,7 +23,6 @@
 |조직 내부 회원 정보 수정|event_id.org.iam.member.update|
 |조직 멤버 추가|event_id.org.member.add|
 |조직 멤버 삭제|event_id.org.member.delete|
-<script>alert(document.cookie);></script>
 |조직 멤버 초대|event_id.org.member.invite|
 |조직 멤버 초대 취소|event_id.org.member.invite_cancel|
 |조직 멤버 수정|event_id.org.member.update|
@@ -500,6 +499,11 @@
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
+|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
+|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
+|워크로드 생성|event_id.iaas.ncs.workload.create|
+|워크로드 재시작|event_id.iaas.ncs.workload.restart|
+|워크로드 변경|event_id.iaas.ncs.workload.update|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
