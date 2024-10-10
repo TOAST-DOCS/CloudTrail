@@ -11,7 +11,6 @@
 |カスタムダッシュボードの複製|event_id.cloud_monitoring_organization.dashboard_copy|
 |カスタムダッシュボードの作成|event_id.cloud_monitoring_organization.dashboard_create|
 |カスタムダッシュボードの削除|event_id.cloud_monitoring_organization.dashboard_delete|
-|カスタムダッシュボード表示設定|event_id.cloud_monitoring_organization.dashboard_exposure|
 |カスタムダッシュボードの修正|event_id.cloud_monitoring_organization.dashboard_modify|
 |カスタムダッシュボードの指標収集設定|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM ログイン|event_id.iam.login|
@@ -495,7 +494,7 @@
 |ワークロード作業リクエスト数の変更完了|event_id.iaas.ncs.workload_desired_update.end|
 |ワークロード作業リクエスト数の変更失敗|event_id.iaas.ncs.workload_desired_update.failed|
 |ワークロードの終了予約設定を変更|event_id.iaas.ncs.workload_active_deadline.update|
-|ワークロードロードバランサーの変更|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
+|null|event_id.iaas.ncs.workload_loadbalancer_update.start|
 |ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |ワークロードの予約実行変更|event_id.iaas.ncs.workload_schedule.update|
@@ -653,77 +652,77 @@
 
 | イベント | イベントID |
 | --- | --- |
-|キー保存場所 作成|event_id.skm.keystore.create|
-|キー保存場所 削除|event_id.skm.keystore.delete|
-|キー保存場所 変更|event_id.skm.keystore.update|
-|機密データ 作成|event_id.skm.secret.create|
+|キーストアの作成|event_id.skm.keystore.create|
+|キーストアの削除|event_id.skm.keystore.delete|
+|キーストア情報の変更|event_id.skm.keystore.update|
+|機密データの作成|event_id.skm.secret.create|
 |機密データの即時削除|event_id.skm.secret.delete|
-|機密データ 削除リクエスト|event_id.skm.secret.delete_request|
-|機密データ 削除キャンセル|event_id.skm.secret.delete_request_cancel|
-|機密データ 変更|event_id.skm.secret.update|
-|機密データ 照会|event_id.skm.secret.get|
-|対称鍵 作成|event_id.skm.symmetric.create|
-|対称鍵 即時削除|event_id.skm.symmetric.delete|
-|対称鍵 削除リクエスト|event_id.skm.symmetric.delete_request|
-|対称鍵 削除キャンセル|event_id.skm.symmetric.delete_request_cancel|
-|対称鍵 情報変更|event_id.skm.symmetric.update|
-|対称鍵 即時ローテーション|event_id.skm.symmetric.rotate|
-|対称鍵 バージョン 削除リクエスト|event_id.skm.symmetric_version.delete_request|
-|対称鍵 バージョン 削除リクエストキャンセル|event_id.skm.symmetric_version.delete_request_cancel|
-|対称鍵 バージョン 即時削除|event_id.skm.symmetric_version.delete|
-|非対称鍵 作成|event_id.skm.asymmetric.create|
-|非対称鍵 即時削除|event_id.skm.asymmetric.delete|
-|非対称鍵 削除リクエスト|event_id.skm.asymmetric.delete_request|
-|非対称鍵 削除リクエストキャンセル|event_id.skm.asymmetric.delete_request_cancel|
-|非対称鍵 変更|event_id.skm.asymmetric.update|
-|非対称鍵 即時ローテーション|event_id.skm.asymmetric.rotate|
-|非対称鍵 バージョン 削除リクエスト|event_id.skm.asymmetric_version.delete_request|
-|非対称鍵 バージョン 削除リクエストキャンセル|event_id.skm.asymmetric_version.delete_request_cancel|
-|非対称鍵 バージョン 即時削除|event_id.skm.asymmetric_version.delete|
-|IPv4アドレス 登録|event_id.skm.ipv4.create|
-|IPv4アドレス 削除リクエスト|event_id.skm.ipv4.delete_request|
-|IPv4アドレス 削除リクエストキャンセル|event_id.skm.ipv4.delete_request_cancel|
-|IPv4アドレス 変更|event_id.skm.ipv4.update|
-|IPv4アドレス 即時削除|event_id.skm.ipv4.delete|
-|IPv4アドレス リストダウンロード|event_id.skm.ipv4.download_list|
-|IPv4アドレス 一括登録|event_id.skm.ipv4.create_multi|
-|MACアドレス 登録|event_id.skm.mac.create|
-|MACアドレス 削除リクエスト|event_id.skm.mac.delete_request|
-|MACアドレス 削除リクエストキャンセル|event_id.skm.mac.delete_request_cancel|
-|MACアドレス 変更|event_id.skm.mac.update|
-|MACアドレス 即時削除|event_id.skm.mac.delete|
-|MACアドレス リストダウンロード|event_id.skm.mac.download_list|
-|MACアドレス 一括登録|event_id.skm.mac.create_multi|
-|認証書 登録|event_id.skm.cert.create|
-|認証書 削除リクエスト|event_id.skm.cert.delete_request|
-|認証書 削除リクエストキャンセル|event_id.skm.cert.delete_request_cancel|
-|認証書 変更|event_id.skm.cert.update|
-|認証書 即時削除|event_id.skm.cert.delete|
-|認証書 ダウンロード|event_id.skm.cert.download|
+|機密データの削除リクエスト|event_id.skm.secret.delete_request|
+|機密データ削除リクエストキャンセル|event_id.skm.secret.delete_request_cancel|
+|機密データ情報の変更|event_id.skm.secret.update|
+|機密データの照会|event_id.skm.secret.get|
+|対称鍵の作成|event_id.skm.symmetric.create|
+|対称鍵の即時削除|event_id.skm.symmetric.delete|
+|対称鍵の削除リクエスト|event_id.skm.symmetric.delete_request|
+|対称鍵削除リクエストキャンセル|event_id.skm.symmetric.delete_request_cancel|
+|対称鍵情報の変更|event_id.skm.symmetric.update|
+|対称鍵の即時ローテーション|event_id.skm.symmetric.rotate|
+|対称鍵バージョンの削除リクエスト|event_id.skm.symmetric_version.delete_request|
+|対称鍵バージョン削除リクエストキャンセル|event_id.skm.symmetric_version.delete_request_cancel|
+|対称鍵バージョンの即時削除|event_id.skm.symmetric_version.delete|
+|非対称鍵の作成|event_id.skm.asymmetric.create|
+|非対称鍵の即時削除|event_id.skm.asymmetric.delete|
+|非対称鍵の削除リクエスト|event_id.skm.asymmetric.delete_request|
+|非対称鍵削除リクエストのキャンセル|event_id.skm.asymmetric.delete_request_cancel|
+|非対称鍵情報の変更|event_id.skm.asymmetric.update|
+|非対称鍵の即時ローテーション|event_id.skm.asymmetric.rotate|
+|非対称鍵バージョン削除リクエスト|event_id.skm.asymmetric_version.delete_request|
+|非対称鍵バージョン削除リクエストのキャンセル|event_id.skm.asymmetric_version.delete_request_cancel|
+|非対称鍵バージョンの即時削除|event_id.skm.asymmetric_version.delete|
+|IPv4アドレスの登録|event_id.skm.ipv4.create|
+|IPv4アドレスの削除リクエスト|event_id.skm.ipv4.delete_request|
+|IPv4アドレスの削除リクエストキャンセル|event_id.skm.ipv4.delete_request_cancel|
+|IPv4アドレス情報の変更|event_id.skm.ipv4.update|
+|IPv4アドレスの即時削除|event_id.skm.ipv4.delete|
+|IPv4アドレスリストのダウンロード|event_id.skm.ipv4.download_list|
+|IPv4アドレスの一括登録|event_id.skm.ipv4.create_multi|
+|MACアドレスの登録|event_id.skm.mac.create|
+|MACアドレスの削除リクエスト|event_id.skm.mac.delete_request|
+|MACアドレス削除リクエストキャンセル|event_id.skm.mac.delete_request_cancel|
+|MACアドレス情報の変更|event_id.skm.mac.update|
+|MACアドレスの即時削除|event_id.skm.mac.delete|
+|MACアドレスリストのダウンロード|event_id.skm.mac.download_list|
+|MACアドレスの一括登録|event_id.skm.mac.create_multi|
+|証明書の登録|event_id.skm.cert.create|
+|証明書の削除リクエスト|event_id.skm.cert.delete_request|
+|証明書の削除リクエストキャンセル|event_id.skm.cert.delete_request_cancel|
+|証明書情報の変更|event_id.skm.cert.update|
+|証明書の即時削除|event_id.skm.cert.delete|
+|証明書のダウンロード|event_id.skm.cert.download|
 |承認プロセスを承認|event_id.skm.approval.approve|
 |承認プロセスを拒否|event_id.skm.approval.deny|
-|承認プロセスの承認依頼|event_id.skm.approval.approve_request|
-|機密データ 照会|event_id.skm.api.secrets.get|
+|承認プロセスの承認リクエスト|event_id.skm.approval.approve_request|
+|機密データの照会|event_id.skm.api.secrets.get|
 |対称鍵による暗号化|event_id.skm.api.symmetric.encrypt|
-|対称鍵による復号|event_id.skm.api.symmetric.decrypt|
-|ローカルキーの作成|event_id.skm.api.symmetric.create_local_key|
+|対称による復号|event_id.skm.api.symmetric.decrypt|
+|ローカルキー作成|event_id.skm.api.symmetric.create_local_key|
 |非対称鍵による署名|event_id.skm.api.asymmetric.sign|
 |非対称鍵による署名検証|event_id.skm.api.asymmetric.verify|
 |機密データの自動削除|event_id.skm.secrets.scheduled_delete|
 |対称鍵の自動削除|event_id.skm.symmetric.scheduled_delete|
 |非対称鍵の自動削除|event_id.skm.asymmetric.scheduled_delete|
-|機密データ 照会|event_id.skm.api.symmetric.get|
-|対称鍵 照会|event_id.skm.api.asymmetric.get.privateKey|
-|非対称鍵 照会|event_id.skm.api.asymmetric.get.publicKey|
-|機密データ 作成|event_id.skm.api.secrets.create|
-|対称鍵 作成|event_id.skm.api.symmetric.create|
-|非対称鍵 作成|event_id.skm.api.asymmetric.create|
-|機密データ 削除リクエスト|event_id.skm.api.secrets.delete_request|
-|対称鍵 削除リクエスト|event_id.skm.api.symmetric.delete_request|
-|非対称鍵 削除リクエスト|event_id.skm.api.asymmetric.delete_request|
+|対称鍵の照会|event_id.skm.api.symmetric.get|
+|秘密鍵の照会|event_id.skm.api.asymmetric.get.privateKey|
+|公開鍵の照会|event_id.skm.api.asymmetric.get.publicKey|
+|機密データの作成|event_id.skm.api.secrets.create|
+|対称鍵の作成|event_id.skm.api.symmetric.create|
+|非対称鍵の作成|event_id.skm.api.asymmetric.create|
+|機密データの削除リクエスト|event_id.skm.api.secrets.delete_request|
+|対称鍵の削除リクエスト|event_id.skm.api.symmetric.delete_request|
+|非対称鍵の削除リクエスト|event_id.skm.api.asymmetric.delete_request|
 |機密データの即時削除|event_id.skm.api.secrets.delete|
-|対称鍵 即時削除|event_id.skm.api.symmetric.delete|
-|非対称鍵 即時削除|event_id.skm.api.asymmetric.delete|
+|対称鍵の即時削除|event_id.skm.api.symmetric.delete|
+|非対称鍵の即時削除|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -994,6 +993,7 @@
 | イベント | イベントID |
 | --- | --- |
 |通知グループの追加|event_id.certificate_manager.alarm_group.create|
+|カスタムダッシュボード表示設定|event_id.cloud_monitoring_organization.dashboard_exposure|
 |通知グループの削除|event_id.certificate_manager.alarm_group.delete|
 |通知グループの修正|event_id.certificate_manager.alarm_group.update|
 |受信グループの修正|event_id.certificate_manager.alarm_group_user.update|
@@ -1116,8 +1116,6 @@
 
 | イベント | イベントID |
 | --- | --- |
-|サービス利用申請|event_id.ai_document_recognizer.service_use_request.submit|
-|サービス利用申請キャンセル|event_id.ai_document_recognizer.service_use_request.cancel|
 |General OCRイメージ分析リクエスト|event_id.ocr.general_ocr.analyze|
 |Document OCRサービス利用申請|event_id.ocr.document_ocr.service_use_request.submit|
 |Document OCRサービス利用申請キャンセル|event_id.ocr.document_ocr.service_use_request.cancel|
@@ -1236,6 +1234,12 @@
 |요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
 |요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
 
+### Text to Speech
+
+| イベント | イベントID |
+| --- | --- |
+|Text to Speech変換リクエスト|event_id.speech.tts.convert|
+
 ### GameStarter
 
 | イベント | イベントID |
@@ -1246,6 +1250,7 @@
 |ゲーム設定のコピー|event_id.gamestarter.game_config.copy|
 |配布ゾーンの登録|event_id.gamestarter.deploy_zone.create|
 |配布ゾーンの修正|event_id.gamestarter.deploy_zone.modify|
+|即時配布の実行|event_id.gamestarter.deploy.immediately|
 |配布予約の登録|event_id.gamestarter.deploy.reservation_create|
 |配布予約の変更|event_id.gamestarter.deploy.reservation_change|
 |配布予約のキャンセル|event_id.gamestarter.deploy.reservation_cancel|
@@ -1437,10 +1442,12 @@
 |Standard 상품 선택|event_id.gameanvil.standard.select|
 |Premium 상품 선택|event_id.gameanvil.premium.select|
 |GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.&#8;force_stop|
+|GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.?force_stop|
 |GAME 노드 강제 종료|event_id.gameanvil.game_node.force_stop|
 |SUPPORT 노드 강제 종료|event_id.gameanvil.support_node.force_stop|
 |MATCH 노드 강제 종료|event_id.gameanvil.match_node.force_stop|
 |GATEWAY 노드 시작|event_id.gameanvil.gateway_node.&#8;start_up|
+|GATEWAY 노드 시작|event_id.gameanvil.gateway_node.?start_up|
 |GAME 노드 시작|event_id.gameanvil.game_node.start_up|
 |SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|
 |MATCH 노드 시작|event_id.gameanvil.match_node.start_up|
