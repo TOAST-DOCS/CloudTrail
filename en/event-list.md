@@ -11,29 +11,28 @@
 |Copy Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_copy|
 |Create Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_create|
 |Delete Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_delete|
-|Display Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_exposure|
 |Modify Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_modify|
 |Enable Custom Dashboard Metrics Collection|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM Login|event_id.iam.login|
 |Change Authority for IAM Members|event_id.iam.member.role.update|
-|Add Organization Domain |event_id.org.domain.add|
+|Add Organization Domain|event_id.org.domain.add|
 |Modify Organization Domain|event_id.org.domain.update|
 |Add Organization Member|event_id.org.iam.member.add|
-|Send Notification Mail to Organization Members to Change Password |event_id.org.iam.member.send_mail|
-|Modify Organization Member Information |event_id.org.iam.member.update|
-|Add Organization Member |event_id.org.member.add|
+|Send Notification Mail to Organization Members to Change Password|event_id.org.iam.member.send_mail|
+|Modify Organization Member Information|event_id.org.iam.member.update|
+|Add Organization Member|event_id.org.member.add|
 |Delete Organization Member|event_id.org.member.delete|
 |Invite Organization Member|event_id.org.member.invite|
-|Cancel Organization Member Invitation  |event_id.org.member.invite_cancel|
-|Modify Organization Member  |event_id.org.member.update|
-|Disable Organization Service |event_id.org.product.disable|
+|Cancel Organization Member Invitation|event_id.org.member.invite_cancel|
+|Modify Organization Member|event_id.org.member.update|
+|Disable Organization Service|event_id.org.product.disable|
 |Enable Organization Service|event_id.org.product.enable|
 |Modify Organization Information|event_id.org.update|
 |Access Organization|event_id.org.selected|
 |Access IAM Organization|event_id.iam.org.selected|
 |Create Project|event_id.project.create|
 |Delete Project|event_id.project.delete|
-|Add Project Member |event_id.project.member.add|
+|Add Project Member|event_id.project.member.add|
 |Delete Project Member|event_id.project.member.delete|
 |Invite Project Member|event_id.project.member.invite|
 |Cancel Project Member Invitation|event_id.project.member.invite_cancel|
@@ -495,8 +494,8 @@
 |Change Number of Workload Task Requests Completed|event_id.iaas.ncs.workload_desired_update.end|
 |Change Number of Workload Task Requests Failed|event_id.iaas.ncs.workload_desired_update.failed|
 |Change Schedule Termination|event_id.iaas.ncs.workload_active_deadline.update|
-|Change Workload Load Balancer Start|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
-|Change Workload Load Balancer Failed|event_id.iaas.ncs.workload_loadbalancer_update.end|
+|null|event_id.iaas.ncs.workload_loadbalancer_update.start|
+|Change Workload Load Balancer Completed|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |Change Scheduled Run|event_id.iaas.ncs.workload_schedule.update|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
@@ -945,13 +944,13 @@
 | --- | --- |
 |Issue New Certificates|event_id.cdn.certificate.create|
 |Delete Certificate|event_id.cdn.certificate.delete|
-|Cancel in the Certificate Verification Step&#9;|event_id.cdn.certificate.validation_cancel|
+|Cancel in the Certificate Verification Step|event_id.cdn.certificate.validation_cancel|
 |Create CDN Service|event_id.cdn.distribution.create|
 |Delete CDN Service|event_id.cdn.distribution.delete|
 |Delete All CDN Service|event_id.cdn.distribution.delete_all|
 |Resume CDN Service|event_id.cdn.distribution.resume|
 |Suspend CDN Service|event_id.cdn.distribution.suspend|
-|Modify CDN Service Setting&#9;|event_id.cdn.distribution.modify|
+|Modify CDN Service Setting|event_id.cdn.distribution.modify|
 |Purge Cache|event_id.cdn.cache_purge.common|
 |Purge Cache - Item|event_id.cdn.cache_purge.item_type|
 |Purge Cache - All|event_id.cdn.cache_purge.all_type|
@@ -994,6 +993,7 @@
 | Event | Event ID |
 | --- | --- |
 |Add Alarm Group|event_id.certificate_manager.alarm_group.create|
+|Display Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_exposure|
 |Delete Alarm Group|event_id.certificate_manager.alarm_group.delete|
 |Edit Alarm Group|event_id.certificate_manager.alarm_group.update|
 |Edit Receiving Group|event_id.certificate_manager.alarm_group_user.update|
@@ -1116,8 +1116,6 @@
 
 | Event | Event ID |
 | --- | --- |
-|Submit a service use request|event_id.ai_document_recognizer.service_use_request.submit|
-|Cancel a service use request|event_id.ai_document_recognizer.service_use_request.cancel|
 |Request General OCR Image Analysis|event_id.ocr.general_ocr.analyze|
 |Apply for Document OCR Service|event_id.ocr.document_ocr.service_use_request.submit|
 |Cancel Application of Document OCR Service|event_id.ocr.document_ocr.service_use_request.cancel|
@@ -1236,6 +1234,12 @@
 |요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
 |요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
 
+### Text to Speech
+
+| Event | Event ID |
+| --- | --- |
+|Request Text to Speech conversion|event_id.speech.tts.convert|
+
 ### GameStarter
 
 | Event | Event ID |
@@ -1246,6 +1250,7 @@
 |Copy Game Configuration|event_id.gamestarter.game_config.copy|
 |Register Deployment Zone|event_id.gamestarter.deploy_zone.create|
 |Modify Deployment Zone|event_id.gamestarter.deploy_zone.modify|
+|Run Deployment Immediately|event_id.gamestarter.deploy.immediately|
 |Register Deployment Reservation|event_id.gamestarter.deploy.reservation_create|
 |Change Deployment Reservation|event_id.gamestarter.deploy.reservation_change|
 |Cancel Deployment Reservation|event_id.gamestarter.deploy.reservation_cancel|
@@ -1437,10 +1442,12 @@
 |Standard 상품 선택|event_id.gameanvil.standard.select|
 |Premium 상품 선택|event_id.gameanvil.premium.select|
 |GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.&#8;force_stop|
+|GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.?force_stop|
 |GAME 노드 강제 종료|event_id.gameanvil.game_node.force_stop|
 |SUPPORT 노드 강제 종료|event_id.gameanvil.support_node.force_stop|
 |MATCH 노드 강제 종료|event_id.gameanvil.match_node.force_stop|
 |GATEWAY 노드 시작|event_id.gameanvil.gateway_node.&#8;start_up|
+|GATEWAY 노드 시작|event_id.gameanvil.gateway_node.?start_up|
 |GAME 노드 시작|event_id.gameanvil.game_node.start_up|
 |SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|
 |MATCH 노드 시작|event_id.gameanvil.match_node.start_up|
@@ -1846,7 +1853,7 @@
 |Delete Dashboard|event_id.cloud_monitoring_project.dashboard_delete|
 |Display Dashboard|event_id.cloud_monitoring_project.dashboard_exposure|
 |Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
-|Enable Metrics Collection |event_id.cloud_monitoring_project.service_management|
+|Enable Metrics Collection|event_id.cloud_monitoring_project.service_management|
 
 ### Face Liveness
 
