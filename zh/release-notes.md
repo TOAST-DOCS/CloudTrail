@@ -2,6 +2,7 @@
 
 ### 2024. 08. 27.
 #### More Events
+* Added events related to Secure Key Manager.
 * Added events related to Default Infrastructure Service.
 * Added events related to Face Liveness.
 
@@ -16,10 +17,6 @@
 #### Feature Updates
 * [CONSOLE] When selecting a service in the service filter, only events for that service are displayed in the event filter
 * [CONSOLE] Event names in the event filter have been changed to "[service name] event name" format.
-
-### 2024. 07. 22.
-#### More Events
-* Added events related to Secure Key Manager.
 
 ### 2024. 07. 09.
 #### More Events
@@ -44,12 +41,17 @@
 #### More Events
 * Added events related to Console.
 * Added events related to Default Infrastructure Service.
+* Added events related to Certificate Manager.
 * Added events related to RDS for MySQL.
 * Added events related to Cloud Monitoring.
 
 ### 2024. 05. 23.
 #### More Events
 * Added events related to Default Infrastructure Service.
+#### More Features
+* aa
+* aa
+* aa
 
 ### 2024. 05. 03.
 #### More Events
@@ -265,10 +267,6 @@
 ### 2022. 01. 11.
 #### More Events
 * Added events related to KakaoTalk Bizmessage.
-
-### 2021. 12. 28.
-#### More Events
-* Added events related to OCR.
 
 ### 2021. 12. 14.
 #### More Events
