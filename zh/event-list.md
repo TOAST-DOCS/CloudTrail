@@ -295,6 +295,7 @@
 |Create Flow Log Logger|event_id.iaas.flowlog_logger.create|
 |Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
 |Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
+|flowlog_test|event_id.iaas.flowlog_test_update|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -494,7 +495,7 @@
 |Change Number of Workload Task Requests Completed|event_id.iaas.ncs.workload_desired_update.end|
 |Change Number of Workload Task Requests Failed|event_id.iaas.ncs.workload_desired_update.failed|
 |Change Schedule Termination|event_id.iaas.ncs.workload_active_deadline.update|
-|null|event_id.iaas.ncs.workload_loadbalancer_update.start|
+|Change Workload Load Balancer Start|event_id.iaas.ncs.workload_loadbalancer_update.start|
 |Change Workload Load Balancer Completed|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |Change Scheduled Run|event_id.iaas.ncs.workload_schedule.update|
@@ -1854,6 +1855,16 @@
 |Display Dashboard|event_id.cloud_monitoring_project.dashboard_exposure|
 |Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
 |Enable Metrics Collection|event_id.cloud_monitoring_project.service_management|
+
+### Cloud Scheduler
+
+| Event | Event ID |
+| --- | --- |
+|일정 생성|event_id.cloud_scheduler.schedule.create|
+|일정 변경|event_id.cloud_scheduler.schedule.update|
+|일정 삭제|event_id.cloud_scheduler.schedule.delete|
+|일정 활성화|event_id.cloud_scheduler.schedule.enable|
+|일정 비활성화|event_id.cloud_scheduler.schedule.disable|
 
 ### Face Liveness
 
