@@ -295,6 +295,7 @@
 |フローログロガーの作成|event_id.iaas.flowlog_logger.create|
 |フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
 |フローログロガーの修正|event_id.iaas.flowlog_logger.update|
+|フローログロガーの作成|event_id.iaas.flowlog_test_update|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -494,7 +495,7 @@
 |ワークロード作業リクエスト数の変更完了|event_id.iaas.ncs.workload_desired_update.end|
 |ワークロード作業リクエスト数の変更失敗|event_id.iaas.ncs.workload_desired_update.failed|
 |ワークロードの終了予約設定を変更|event_id.iaas.ncs.workload_active_deadline.update|
-|null|event_id.iaas.ncs.workload_loadbalancer_update.start|
+|ワークロードロードバランサーの変更|event_id.iaas.ncs.workload_loadbalancer_update.start|
 |ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |ワークロードの予約実行変更|event_id.iaas.ncs.workload_schedule.update|
@@ -1854,6 +1855,16 @@
 |ダッシュボードの表示設定|event_id.cloud_monitoring_project.dashboard_exposure|
 |ダッシュボードの修正|event_id.cloud_monitoring_project.dashboard_modify|
 |指標収集の設定|event_id.cloud_monitoring_project.service_management|
+
+### Cloud Scheduler
+
+| イベント | イベントID |
+| --- | --- |
+|일정 생성|event_id.cloud_scheduler.schedule.create|
+|일정 변경|event_id.cloud_scheduler.schedule.update|
+|일정 삭제|event_id.cloud_scheduler.schedule.delete|
+|일정 활성화|event_id.cloud_scheduler.schedule.enable|
+|일정 비활성화|event_id.cloud_scheduler.schedule.disable|
 
 ### Face Liveness
 
