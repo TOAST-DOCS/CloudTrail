@@ -1,5 +1,13 @@
 ## CloudTrail > Release Notes
 
+### 2024. 10. 29.
+#### More Events
+* Added events related to Cloud Scheduler.
+
+### 2024. 08. 29.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
 ### 2024. 08. 27.
 #### More Events
 * Added events related to Secure Key Manager.
