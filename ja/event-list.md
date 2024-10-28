@@ -1860,11 +1860,11 @@
 
 | イベント | イベントID |
 | --- | --- |
-|일정 생성|event_id.cloud_scheduler.schedule.create|
-|일정 변경|event_id.cloud_scheduler.schedule.update|
-|일정 삭제|event_id.cloud_scheduler.schedule.delete|
-|일정 활성화|event_id.cloud_scheduler.schedule.enable|
-|일정 비활성화|event_id.cloud_scheduler.schedule.disable|
+|スケジュールの作成|event_id.cloud_scheduler.schedule.create|
+|スケジュールの変更|event_id.cloud_scheduler.schedule.update|
+|スケジュールの削除|event_id.cloud_scheduler.schedule.delete|
+|スケジュールの有効化|event_id.cloud_scheduler.schedule.enable|
+|スケジュールの無効化|event_id.cloud_scheduler.schedule.disable|
 
 ### Face Liveness
 
