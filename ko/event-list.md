@@ -11,7 +11,6 @@
 |커스텀 대시보드 복제|event_id.cloud_monitoring_organization.dashboard_copy|
 |커스텀 대시보드 생성|event_id.cloud_monitoring_organization.dashboard_create|
 |커스텀 대시보드 삭제|event_id.cloud_monitoring_organization.dashboard_delete|
-|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure|
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
@@ -296,6 +295,7 @@
 |플로우 로그 로거 생성|event_id.iaas.flowlog_logger.create|
 |플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
 |플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
+|플로우로그테스트|event_id.iaas.flowlog_test_update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -495,7 +495,7 @@
 |워크로드 작업 요청 수 변경 완료|event_id.iaas.ncs.workload_desired_update.end|
 |워크로드 작업 요청 수 변경 실패|event_id.iaas.ncs.workload_desired_update.failed|
 |워크로드 종료 예약 변경|event_id.iaas.ncs.workload_active_deadline.update|
-|워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.ncs.workload_loadbalancer_update.start&#9;|
+|워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.ncs.workload_loadbalancer_update.start|
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
@@ -994,6 +994,7 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |알림 그룹 추가|event_id.certificate_manager.alarm_group.create|
+|하|event_id.cloud_monitoring_organization.dashboard_exposure|
 |알림 그룹 삭제|event_id.certificate_manager.alarm_group.delete|
 |알림 그룹 수정|event_id.certificate_manager.alarm_group.update|
 |수신 그룹 수정|event_id.certificate_manager.alarm_group_user.update|
@@ -1116,8 +1117,6 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|서비스 이용 신청|event_id.ai_document_recognizer.service_use_request.submit|
-|서비스 이용 신청 취소|event_id.ai_document_recognizer.service_use_request.cancel|
 |General OCR 이미지 분석 요청|event_id.ocr.general_ocr.analyze|
 |Document OCR 서비스 이용 신청|event_id.ocr.document_ocr.service_use_request.submit|
 |Document OCR 서비스 이용 신청 취소|event_id.ocr.document_ocr.service_use_request.cancel|
@@ -1236,6 +1235,12 @@
 |요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
 |요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
 
+### Text to Speech
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|Text to Speech 변환 요청|event_id.speech.tts.convert|
+
 ### GameStarter
 
 | 이벤트 | 이벤트 ID |
@@ -1246,6 +1251,7 @@
 |게임 설정 복사|event_id.gamestarter.game_config.copy|
 |배포 존 등록|event_id.gamestarter.deploy_zone.create|
 |배포 존 수정|event_id.gamestarter.deploy_zone.modify|
+|즉시 배포 실행|event_id.gamestarter.deploy.immediately|
 |배포 예약 등록|event_id.gamestarter.deploy.reservation_create|
 |배포 예약 변경|event_id.gamestarter.deploy.reservation_change|
 |배포 예약 취소|event_id.gamestarter.deploy.reservation_cancel|
@@ -1332,7 +1338,7 @@
 |리소스 그룹 삭제|event_id.resource_watcher.resource_group.delete|
 |리소스 그룹 수정|event_id.resource_watcher.resource_group.update|
 |리소스 그룹 관계 추가|event_id.resource_watcher.resource_group_relation.create|
-|리소스 그룹 관계 삭제&#9;|event_id.resource_watcher.resource_group_relation.delete|
+|리소스 그룹 관계 삭제|event_id.resource_watcher.resource_group_relation.delete|
 |리소스 그룹 관계 수정|event_id.resource_watcher.resource_group_relation.update|
 |리소스 태그 생성|event_id.resource_watcher.resource_tag.create|
 |리소스 태그 삭제|event_id.resource_watcher.resource_tag.delete|
@@ -1437,10 +1443,12 @@
 |Standard 상품 선택|event_id.gameanvil.standard.select|
 |Premium 상품 선택|event_id.gameanvil.premium.select|
 |GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.&#8;force_stop|
+|GATEWAY 노드 강제 종료|event_id.gameanvil.gateway_node.?force_stop|
 |GAME 노드 강제 종료|event_id.gameanvil.game_node.force_stop|
 |SUPPORT 노드 강제 종료|event_id.gameanvil.support_node.force_stop|
 |MATCH 노드 강제 종료|event_id.gameanvil.match_node.force_stop|
 |GATEWAY 노드 시작|event_id.gameanvil.gateway_node.&#8;start_up|
+|GATEWAY 노드 시작|event_id.gameanvil.gateway_node.?start_up|
 |GAME 노드 시작|event_id.gameanvil.game_node.start_up|
 |SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|
 |MATCH 노드 시작|event_id.gameanvil.match_node.start_up|
@@ -1847,6 +1855,16 @@
 |대시보드 노출 설정|event_id.cloud_monitoring_project.dashboard_exposure|
 |대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
 |지표 수집 설정|event_id.cloud_monitoring_project.service_management|
+
+### Cloud Scheduler
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|일정 생성|event_id.cloud_scheduler.schedule.create|
+|일정 변경|event_id.cloud_scheduler.schedule.update|
+|일정 삭제|event_id.cloud_scheduler.schedule.delete|
+|일정 활성화|event_id.cloud_scheduler.schedule.enable|
+|일정 비활성화|event_id.cloud_scheduler.schedule.disable|
 
 ### Face Liveness
 
