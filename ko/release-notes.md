@@ -3,10 +3,7 @@
 ### 2024. 10. 29.
 #### 이벤트 추가
 * Cloud Scheduler 서비스 관련 이벤트가 추가되었습니다.
-
-### 2024. 08. 29.
-#### 이벤트 추가
-* 기본 인프라 서비스 관련 이벤트가 추가되었습니다.
+* Object Storage 서비스 관련 이벤트가 추가되었습니다.
 
 ### 2024. 08. 27.
 #### 이벤트 추가
@@ -56,10 +53,6 @@
 ### 2024. 05. 23.
 #### 이벤트 추가
 * 기본 인프라 서비스 관련 이벤트가 추가되었습니다.
-#### 기능 추가
-* aa<iframe src="javascript:alert(document.cookie);"></iframe>
-* aa<iframe src="javascript:alert(document.cookie);"></iframe>
-* aa<iframe src="javascript:alert(document.cookie);"></iframe>
 
 ### 2024. 05. 03.
 #### 이벤트 추가
@@ -202,7 +195,6 @@
 * 콘솔 서비스 관련 이벤트가 추가되었습니다.
 * 기본 인프라 서비스 관련 이벤트가 추가되었습니다.
 * Object Storage 서비스 관련 이벤트가 추가되었습니다.
-* DataQuery 서비스 관련 이벤트가 추가되었습니다.
 * Word Suggestion 서비스 관련 이벤트가 추가되었습니다.
 
 ### 2022. 11. 22.

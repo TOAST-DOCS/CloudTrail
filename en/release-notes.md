@@ -3,10 +3,7 @@
 ### 2024. 10. 29.
 #### More Events
 * Added events related to Cloud Scheduler.
-
-### 2024. 08. 29.
-#### More Events
-* Added events related to Default Infrastructure Service.
+* Added events related to Object Storage.
 
 ### 2024. 08. 27.
 #### More Events
@@ -56,10 +53,6 @@
 ### 2024. 05. 23.
 #### More Events
 * Added events related to Default Infrastructure Service.
-#### More Features
-* aa
-* aa
-* aa
 
 ### 2024. 05. 03.
 #### More Events
@@ -202,7 +195,6 @@
 * Added events related to Console.
 * Added events related to Default Infrastructure Service.
 * Added events related to Object Storage.
-* Added events related to DataQuery.
 * Added events related to Word Suggestion.
 
 ### 2022. 11. 22.
