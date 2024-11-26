@@ -1,5 +1,21 @@
 ## CloudTrail > Release Notes
 
+### 2024. 11. 26.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 11. 21.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 11. 12.
+#### More Events
+* Added events related to OCR.
+
+### 2024. 11. 07.
+#### More Events
+* Added events related to SMS.
+
 ### 2024. 10. 29.
 #### More Events
 * Added events related to Cloud Scheduler.

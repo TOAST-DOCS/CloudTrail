@@ -22,6 +22,7 @@
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
 |종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
 |종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|인스턴스 키페어 변경|event_id.iaas.instance_action.reset_keypair|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
 |인스턴스 템플릿 OWNER 변경|event_id.iaas.instance_template.handover|
@@ -35,9 +36,14 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
+|이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
 |이미지 삭제|event_id.iaas.image.delete|
+|이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
+|이미지 수정 완료|event_id.iaas.image.update_end|
+|이미지 이동 완료 (대상)|event_id.iaas.image.transfer_accept|
+|이미지 이동 완료 (소스)|event_id.iaas.image.transfer_create|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -47,14 +53,25 @@
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
 |블록 스토리지 생성|event_id.iaas.volume.create|
+|블록 스토리지 생성 완료|event_id.iaas.volume.create_end|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
+|블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
 |블록 스토리지 수정|event_id.iaas.volume.update|
+|블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
+|블록 스토리지 이동|event_id.iaas.volume.transfer|
+|블록 스토리지 이동 완료 (대상)|event_id.iaas.volume.transfer_accept|
+|블록 스토리지 이동 완료 (소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 복제|event_id.iaas.volume.copy|
+|블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
 |인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
+|인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
+|인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
+|블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
+|블록 스토리지 스냅숏 삭제 완료|event_id.iaas.snapshot.delete_end|
 |스케일링 그룹 예약 작업 생성|event_id.iaas.autoscale_schedule.create|
 |스케일링 그룹 예약 작업 삭제|event_id.iaas.autoscale_schedule.delete|
 |스케일링 그룹 예약 작업 OWNER 변경|event_id.iaas.autoscale_schedule.handover|
@@ -170,9 +187,9 @@
 |리전 피어링 생성|event_id.iaas.region_peering.create|
 |리전 피어링 삭제|event_id.iaas.region_peering.delete|
 |리전 피어링 변경|event_id.iaas.region_peering.update|
-|피어링 허용 목록 생성|event_id.iaas.project_peering.create|
-|피어링 허용 목록 변경|event_id.iaas.project_peering.update|
-|피어링 허용 목록 삭제|event_id.iaas.project_peering.delete|
+|프로젝트 피어링 생성|event_id.iaas.project_peering.create|
+|프로젝트 피어링 삭제|event_id.iaas.project_peering.delete|
+|프로젝트 피어링 변경|event_id.iaas.project_peering.update|
 |피어링 허용 목록 생성|event_id.iaas.peering_allow_project.create|
 |피어링 허용 목록 삭제|event_id.iaas.peering_allow_project.delete|
 |피어링 허용 목록 변경|event_id.iaas.peering_allow_project.update|
@@ -233,6 +250,9 @@
 |NKS 레지스트리 업데이트 완료|event_id.iaas.cluster.update_nks_registry.end|
 |NKS 레지스트리 업데이트 실패|event_id.iaas.cluster.update_nks_registry.fail|
 |NKS 레지스트리 업데이트 시작|event_id.iaas.cluster.update_nks_registry.start|
+|k8s 아규먼트 업데이트 시작|event_id.iaas.cluster.update_k8s_args.start|
+|k8s 아규먼트 업데이트 완료|event_id.iaas.cluster.update_k8s_args.end|
+|k8s 아규먼트 업데이트 실패|event_id.iaas.cluster.update_k8s_args.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -379,13 +399,28 @@
 |Validating Webhook Configuration 수정|event_id.iaas.cluster.validating_webhook_configuration.update|
 |템플릿 생성|event_id.iaas.ncs.template.create|
 |템플릿 삭제|event_id.iaas.ncs.template.delete|
-|워크로드 생성|event_id.iaas.ncs.workload.create|
-|워크로드 삭제|event_id.iaas.ncs.workload.delete|
-|워크로드 재시작|event_id.iaas.ncs.workload.restart|
-|워크로드 중지|event_id.iaas.ncs.workload.stop|
-|워크로드 변경|event_id.iaas.ncs.workload.update|
 |템플릿 버전 생성|event_id.iaas.ncs.template_version.create|
 |템플릿 버전 삭제|event_id.iaas.ncs.template_version.delete|
+|워크로드 생성 시작|event_id.iaas.ncs.workload_create.start|
+|워크로드 생성 완료|event_id.iaas.ncs.workload_create.end|
+|워크로드 생성 실패|event_id.iaas.ncs.workload_create.failed|
+|워크로드 삭제|event_id.iaas.ncs.workload.delete|
+|워크로드 중지|event_id.iaas.ncs.workload.stop|
+|워크로드 재시작 시작|event_id.iaas.ncs.workload_restart.start|
+|워크로드 재시작 완료|event_id.iaas.ncs.workload_restart.end|
+|워크로드 재시작 실패|event_id.iaas.ncs.workload_restart.failed|
+|워크로드 설명 변경|event_id.iaas.ncs.workload_description.update|
+|워크로드 템플릿 변경 시작|event_id.iaas.ncs.workload_template_update.start|
+|워크로드 템플릿 변경 완료|event_id.iaas.ncs.workload_template_update.end|
+|워크로드 템플릿 변경 실패|event_id.iaas.ncs.workload_template_update.failed|
+|워크로드 작업 요청 수 변경 시작|event_id.iaas.ncs.workload_desired_update.start|
+|워크로드 작업 요청 수 변경 완료|event_id.iaas.ncs.workload_desired_update.end|
+|워크로드 작업 요청 수 변경 실패|event_id.iaas.ncs.workload_desired_update.failed|
+|워크로드 종료 예약 변경|event_id.iaas.ncs.workload_active_deadline.update|
+|워크로드 로드 밸런서 설정 변경 시작|event_id.iaas.ncs.workload_loadbalancer_update.start|
+|워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
+|워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
+|워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
@@ -622,7 +657,7 @@
 |커스텀 대시보드 복제|event_id.cloud_monitoring_organization.dashboard_copy|
 |커스텀 대시보드 생성|event_id.cloud_monitoring_organization.dashboard_create|
 |커스텀 대시보드 삭제|event_id.cloud_monitoring_organization.dashboard_delete|
-|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure|
+|하|event_id.cloud_monitoring_organization.dashboard_exposure|
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
@@ -910,7 +945,7 @@
 |리소스 그룹 삭제|event_id.resource_watcher.resource_group.delete|
 |리소스 그룹 수정|event_id.resource_watcher.resource_group.update|
 |리소스 그룹 관계 추가|event_id.resource_watcher.resource_group_relation.create|
-|리소스 그룹 관계 삭제&#9;|event_id.resource_watcher.resource_group_relation.delete|
+|리소스 그룹 관계 삭제|event_id.resource_watcher.resource_group_relation.delete|
 |리소스 그룹 관계 수정|event_id.resource_watcher.resource_group_relation.update|
 |리소스 태그 생성|event_id.resource_watcher.resource_tag.create|
 |리소스 태그 삭제|event_id.resource_watcher.resource_tag.delete|

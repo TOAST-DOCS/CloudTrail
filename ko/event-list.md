@@ -80,6 +80,7 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
+||event_id.iaas.private_dns.zone.create.end|
 |인스턴스 생성|event_id.iaas.instance.create|
 |인스턴스 생성 완료|event_id.iaas.instance.create_end|
 |인스턴스 삭제|event_id.iaas.instance.delete|
@@ -155,6 +156,10 @@
 |VPC 생성|event_id.iaas.vpc.create|
 |VPC 삭제|event_id.iaas.vpc.delete|
 |VPC 정보 변경|event_id.iaas.vpc.update|
+|VPC 생성 완료|event_id.iaas.vpc.create_end|
+|VPC 삭제 완료|event_id.iaas.vpc.delete_end|
+|VPC 정보 변경 완료|event_id.iaas.vpc.update_end|
+|VPC 생성 완료|event_id.iaas|
 |VPC 서브넷 생성|event_id.iaas.vpc_subnet.create|
 |VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
 |VPC 서브넷 변경|event_id.iaas.vpc_subnet.update|
@@ -177,6 +182,9 @@
 |플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
 |인스턴스 플로팅 IP 연결|event_id.iaas.floating_ip.attach|
 |인스턴스 플로팅 IP 연결 해제|event_id.iaas.floating_ip.detach|
+|플로팅 IP 생성 완료|event_id.iaas.floating_ip.create_end|
+|플로팅 IP 변경 완료|event_id.iaas.floating_ip.update_end|
+|플로팅 IP 삭제 완료|event_id.iaas.floating_ip.delete_end|
 |NetworkACL 생성|event_id.iaas.networkacl.create|
 |NetworkACL 삭제|event_id.iaas.networkacl.delete|
 |NetworkACL 수정|event_id.iaas.networkacl.update|
@@ -251,6 +259,12 @@
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|트랜짓 허브 생성 완료|event_id.iaas.transit_hub.create_end|
+|트랜짓 허브 삭제 완료|event_id.iaas.transit_hub.delete_end|
+|트랜짓 허브 수정 완료|event_id.iaas.transit_hub.update_end|
+|트랜짓 허브 연결 생성 완료|event_id.iaas.transit_hub_attachment.create_end|
+|트랜짓 허브 연결 삭제 완료|event_id.iaas.transit_hub_attachment.delete_end|
+|트랜짓 허브 연결 변경 완료|event_id.iaas.transit_hub_attachment.update_end|
 |인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|
 |인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|
 |VPC 피어링 생성|event_id.iaas.peering.create|
@@ -267,6 +281,9 @@
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
 |NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
+|NAT 게이트웨이 생성 완료|event_id.iaas.nat_gateway.create_end|
+|NAT 게이트웨이 삭제 완료|event_id.iaas.nat_gateway.delete_end|
+|NAT 게이트웨이 변경 완료|event_id.iaas.nat_gateway.update_end|
 |VPNGW 생성|event_id.iaas.vpngw.create|
 |VPNGW 삭제|event_id.iaas.vpngw.delete|
 |VPNGW 수정|event_id.iaas.vpngw.update|
@@ -292,10 +309,13 @@
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
 |Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
+|Private DNS Zone 생성 완료|event_id.iaas.private_dns.zone.create_end|
+|Private DNS Zone 삭제 완료|event_id.iaas.private_dns.zone.delete_end|
+|Private DNS Zone 수정 완료|event_id.iaas.private_dns.zone.update_end|
 |플로우 로그 로거 생성|event_id.iaas.flowlog_logger.create|
 |플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
 |플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
-|플로우로그테스트|event_id.iaas.flowlog_test_update|
+|플로우 로그 로거 생성 완료|event_id.iaas.flowlog_logger.create_end|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -331,6 +351,9 @@
 |NKS 레지스트리 업데이트 완료|event_id.iaas.cluster.update_nks_registry.end|
 |NKS 레지스트리 업데이트 실패|event_id.iaas.cluster.update_nks_registry.fail|
 |NKS 레지스트리 업데이트 시작|event_id.iaas.cluster.update_nks_registry.start|
+|k8s 아규먼트 업데이트 시작|event_id.iaas.cluster.update_k8s_args.start|
+|k8s 아규먼트 업데이트 완료|event_id.iaas.cluster.update_k8s_args.end|
+|k8s 아규먼트 업데이트 실패|event_id.iaas.cluster.update_k8s_args.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -499,6 +522,13 @@
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
+|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
+|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
+|워크로드 작업 재시작|event_id.iaas.ncs.workload_task.restart|
+|워크로드 오토스케일러 변경|event_id.iaas.ncs.workload_autoscaler.update|
+|워크로드 작업 수 자동 조정 시작|event_id.iaas.ncs.workload_task_resize.start|
+|워크로드 작업 수 자동 조정 종료|event_id.iaas.ncs.workload_task_resize.end|
+|워크로드 작업 수 자동 조정 실패|event_id.iaas.ncs.workload_task_resize.failed|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
@@ -530,6 +560,9 @@
 |컨테이너 복제 설정 변경|event_id.object_storage.container.sync.update|
 |컨테이너 복제 설정 해제|event_id.object_storage.container.sync.disable|
 |오브젝트 복제 업로드|event_id.object_storage.object.sync.upload|
+|오브젝트 다운로드|event_id.object_storage.object.download|
+|오브젝트 목록 조회|event_id.object_storage.object.list_lookup|
+|컨테이너 목록 조회|event_id.object_storage.container.list_lookup|
 
 ### RDS for MySQL
 
@@ -1128,6 +1161,7 @@
 |Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_ocr.business.authenticity|
 |General OCR 이미지 분할 인식 요청|event_id.ocr.general_ocr.cropping_analyze|
+|Document AI 분석 요청|event_id.ocr.document_ai.analyze|
 
 ### KakaoTalk Bizmessage
 
@@ -1317,9 +1351,8 @@
 | --- | --- |
 |프로젝트 활성화|event_id.dataquery.project_activated|
 |프로젝트 비활성화|event_id.dataquery.project_deactivated|
-|데이터 소스 업데이트 요청|event_id.dataquery.deploy_requested|
-|Trino 클러스터 켜짐|event_id.dataquery.cluster_on|
-|Trino 클러스터 꺼짐|event_id.dataquery.cluster_off|
+|클러스터 켜짐|event_id.dataquery.cluster_on|
+|클러스터 꺼짐|event_id.dataquery.cluster_off|
 |리소스 이용 정지|event_id.dataquery.resource.pause|
 |클러스터 재시작|event_id.dataquery.cluster_restart|
 
@@ -1464,6 +1497,7 @@
 |대량 발송 취소|event_id.sms.cancel_mass_message|
 |예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
 |수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
+|전환율 기반 발송 차단 국가 발생|event_id.sms.conversion_block|
 |수신 거부자 목록 삭제|event_id.sms.delete_block_recipient_list|
 |파일 다운로드|event_id.sms.download_reserved_file|
 |수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
