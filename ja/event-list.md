@@ -80,6 +80,7 @@
 
 | イベント | イベントID |
 | --- | --- |
+||event_id.iaas.private_dns.zone.create.end|
 |インスタンスの作成|event_id.iaas.instance.create|
 |インスタンスの作成完了|event_id.iaas.instance.create_end|
 |インスタンスの削除|event_id.iaas.instance.delete|
@@ -155,6 +156,10 @@
 |VPCの作成|event_id.iaas.vpc.create|
 |VPCの削除|event_id.iaas.vpc.delete|
 |VPCの情報変更|event_id.iaas.vpc.update|
+|VPCの作成完了|event_id.iaas.vpc.create_end|
+|VPCの削除完了|event_id.iaas.vpc.delete_end|
+|VPCの情報変更完了|event_id.iaas.vpc.update_end|
+|VPCの作成完了|event_id.iaas|
 |VPCサブネットの作成|event_id.iaas.vpc_subnet.create|
 |VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
 |VPCサブネットの変更|event_id.iaas.vpc_subnet.update|
@@ -177,6 +182,9 @@
 |Floating IPの削除|event_id.iaas.floating_ip.delete|
 |インスタンスFloating IPの接続|event_id.iaas.floating_ip.attach|
 |インスタンスFloating IPの接続解除|event_id.iaas.floating_ip.detach|
+|Floating IPの作成完了|event_id.iaas.floating_ip.create_end|
+|Floating IPの変更完了|event_id.iaas.floating_ip.update_end|
+|Floating IPの削除完了|event_id.iaas.floating_ip.delete_end|
 |NetworkACL 作成|event_id.iaas.networkacl.create|
 |NetworkACL 削除|event_id.iaas.networkacl.delete|
 |NetworkACL 修正|event_id.iaas.networkacl.update|
@@ -251,6 +259,12 @@
 |トランジットハブマルチキャストドメイン許可リストの作成|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |トランジットハブマルチキャストドメイン許可リストの削除|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |トランジットハブマルチキャストドメイン許可リストの変更|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|トランジットハブの作成完了|event_id.iaas.transit_hub.create_end|
+|トランジットハブの削除完了|event_id.iaas.transit_hub.delete_end|
+|トランジットハブの変更完了|event_id.iaas.transit_hub.update_end|
+|トランジットハブ接続の作成完了|event_id.iaas.transit_hub_attachment.create_end|
+|トランジットハブ接続の削除完了|event_id.iaas.transit_hub_attachment.delete_end|
+|トランジットハブ接続の変更完了|event_id.iaas.transit_hub_attachment.update_end|
 |インターネットゲートウェイの作成|event_id.iaas.internet_gateway.create|
 |インターネットゲートウェイの削除|event_id.iaas.internet_gateway.delete|
 |VPCピアリングの作成|event_id.iaas.peering.create|
@@ -267,6 +281,9 @@
 |NATゲートウェイの作成|event_id.iaas.nat_gateway.create|
 |NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
 |NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
+|NATゲートウェイの作成完了|event_id.iaas.nat_gateway.create_end|
+|NATゲートウェイの削除完了|event_id.iaas.nat_gateway.delete_end|
+|NATゲートウェイの変更完了|event_id.iaas.nat_gateway.update_end|
 |VPNGW作成|event_id.iaas.vpngw.create|
 |VPNGW削除|event_id.iaas.vpngw.delete|
 |VPNGW修正|event_id.iaas.vpngw.update|
@@ -292,10 +309,13 @@
 |Private DNS レコードセット削除|event_id.iaas.privatedns.recordset.delete|
 |Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|
 |Private DNS レコードセットの大量作成|event_id.iaas.privatedns.recordset.create_list|
+|Private DNS Zone作成完了|event_id.iaas.private_dns.zone.create_end|
+|Private DNS Zone削除完了|event_id.iaas.private_dns.zone.delete_end|
+|Private DNS Zone修正完了|event_id.iaas.private_dns.zone.update_end|
 |フローログロガーの作成|event_id.iaas.flowlog_logger.create|
 |フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
 |フローログロガーの修正|event_id.iaas.flowlog_logger.update|
-|フローログロガーの作成|event_id.iaas.flowlog_test_update|
+|フローログロガーの作成完了|event_id.iaas.flowlog_logger.create_end|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -331,6 +351,9 @@
 |NKSレジストリ更新の完了|event_id.iaas.cluster.update_nks_registry.end|
 |NKSレジストリ更新に失敗しました|event_id.iaas.cluster.update_nks_registry.fail|
 |NKSレジストリ更新の開始|event_id.iaas.cluster.update_nks_registry.start|
+|K8Sオーデントアップデート開始|event_id.iaas.cluster.update_k8s_args.start|
+|K8S集約更新が完了しました|event_id.iaas.cluster.update_k8s_args.end|
+|K8Sオーデントアップデートは失敗しました|event_id.iaas.cluster.update_k8s_args.failed|
 |ノードグループ作成完了|event_id.iaas.nodegroup.create.end|
 |ノードグループ作成失敗|event_id.iaas.nodegroup.create.failed|
 |ノードグループ作成起動|event_id.iaas.nodegroup.create.start|
@@ -499,6 +522,13 @@
 |ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |ワークロードの予約実行変更|event_id.iaas.ncs.workload_schedule.update|
+|コンテナターミナル接続|event_id.iaas.ncs.container_terminal.exec|
+|コンテナターミナル接続終了|event_id.iaas.ncs.container_terminal.exit|
+|ワークロード作業の再起動|event_id.iaas.ncs.workload_task.restart|
+|ワークロードオートスケーラの変更|event_id.iaas.ncs.workload_autoscaler.update|
+|ワークロード作業数の自動調整開始|event_id.iaas.ncs.workload_task_resize.start|
+|ワークロード作業数の自動調整終了|event_id.iaas.ncs.workload_task_resize.end|
+|ワークロード作業数の自動調整失敗|event_id.iaas.ncs.workload_task_resize.failed|
 |NASボリュームの作成|event_id.iaas.nas.volume.create|
 |NASボリュームの削除|event_id.iaas.nas.volume.delete|
 |NASボリュームの変更|event_id.iaas.nas.volume.update|
@@ -530,6 +560,9 @@
 |コンテナ複製設定の変更|event_id.object_storage.container.sync.update|
 |コンテナ複製設定の解除|event_id.object_storage.container.sync.disable|
 |オブジェクト複製アップロード|event_id.object_storage.object.sync.upload|
+|オブジェクトのダウンロード|event_id.object_storage.object.download|
+|オブジェクトリストの照会|event_id.object_storage.object.list_lookup|
+|コンテナリストの照会|event_id.object_storage.container.list_lookup|
 
 ### RDS for MySQL
 
@@ -1128,6 +1161,7 @@
 |Document OCR 身分証明書分析リクエスト(単独)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_ocr.business.authenticity|
 |General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|
+|Document AI分析リクエスト|event_id.ocr.document_ai.analyze|
 
 ### KakaoTalk Bizmessage
 
@@ -1317,11 +1351,10 @@
 | --- | --- |
 |プロジェクトの有効化|event_id.dataquery.project_activated|
 |プロジェクトの無効化|event_id.dataquery.project_deactivated|
-|データソースアップデートリクエスト|event_id.dataquery.deploy_requested|
-|Trinoクラスタオン|event_id.dataquery.cluster_on|
-|Trinoクラスタオフ|event_id.dataquery.cluster_off|
+|クラスタオン|event_id.dataquery.cluster_on|
+|クラスタオフ|event_id.dataquery.cluster_off|
 |リソース利用停止|event_id.dataquery.resource.pause|
-|클러스터 재시작|event_id.dataquery.cluster_restart|
+|クラスタの再起動|event_id.dataquery.cluster_restart|
 
 ### Resource Watcher
 
@@ -1464,6 +1497,7 @@
 |대량 발송 취소|event_id.sms.cancel_mass_message|
 |예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
 |수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
+|コンバージョン率に基づくブロック国発生|event_id.sms.conversion_block|
 |受信拒否者リストの削除|event_id.sms.delete_block_recipient_list|
 |ファイルのダウンロード|event_id.sms.download_reserved_file|
 |수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
