@@ -80,6 +80,7 @@
 
 | Event | Event ID |
 | --- | --- |
+||event_id.iaas.private_dns.zone.create.end|
 |Create Instance|event_id.iaas.instance.create|
 |Create Instance Completed|event_id.iaas.instance.create_end|
 |Delete Instance|event_id.iaas.instance.delete|
@@ -155,6 +156,10 @@
 |Create VPC|event_id.iaas.vpc.create|
 |Delete VPC|event_id.iaas.vpc.delete|
 |Change VPC Information|event_id.iaas.vpc.update|
+|Create VPC Completed|event_id.iaas.vpc.create_end|
+|Delete VPC Completed|event_id.iaas.vpc.delete_end|
+|Change VPC Information Completed|event_id.iaas.vpc.update_end|
+|Create VPC Completed|event_id.iaas|
 |Create VPC Subnet|event_id.iaas.vpc_subnet.create|
 |Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
 |Change VPC Subnet|event_id.iaas.vpc_subnet.update|
@@ -177,6 +182,9 @@
 |Delete Floating IP|event_id.iaas.floating_ip.delete|
 |Associate Instance Floating IP|event_id.iaas.floating_ip.attach|
 |Disassociate Instance Floating IP|event_id.iaas.floating_ip.detach|
+|Create Floating IP Completed|event_id.iaas.floating_ip.create_end|
+|Update Floating IP Completed|event_id.iaas.floating_ip.update_end|
+|Delete Floating IP Completed|event_id.iaas.floating_ip.delete_end|
 |Create NetworkACL|event_id.iaas.networkacl.create|
 |Delete NetworkACL|event_id.iaas.networkacl.delete|
 |Update NetworkACL|event_id.iaas.networkacl.update|
@@ -251,6 +259,12 @@
 |Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|Create Transit Hub Completed|event_id.iaas.transit_hub.create_end|
+|Delete Transit Hub Completed|event_id.iaas.transit_hub.delete_end|
+|Modify Transit Hub Completed|event_id.iaas.transit_hub.update_end|
+|Create Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.create_end|
+|Delete Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.delete_end|
+|Modify Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.update_end|
 |Create Internet Gateway|event_id.iaas.internet_gateway.create|
 |Delete Internet Gateway|event_id.iaas.internet_gateway.delete|
 |Create VPC Peering|event_id.iaas.peering.create|
@@ -267,6 +281,9 @@
 |Create NAT Gateway|event_id.iaas.nat_gateway.create|
 |Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
 |Change NAT Gateway|event_id.iaas.nat_gateway.update|
+|Create NAT Gateway Completed|event_id.iaas.nat_gateway.create_end|
+|Delete NAT Gateway Completed|event_id.iaas.nat_gateway.delete_end|
+|Change NAT Gateway Completed|event_id.iaas.nat_gateway.update_end|
 |Create VPNGW|event_id.iaas.vpngw.create|
 |Delete VPNGW|event_id.iaas.vpngw.delete|
 |Update VPNGW|event_id.iaas.vpngw.update|
@@ -292,10 +309,13 @@
 |Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|
 |Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
 |Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|
+|Create Private DNS Zone Completed|event_id.iaas.private_dns.zone.create_end|
+|Delete Private DNS Zone Completed|event_id.iaas.private_dns.zone.delete_end|
+|Modify Private DNS Zone Completed|event_id.iaas.private_dns.zone.update_end|
 |Create Flow Log Logger|event_id.iaas.flowlog_logger.create|
 |Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
 |Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
-|flowlog_test|event_id.iaas.flowlog_test_update|
+|Create Flow Log Logger Completed|event_id.iaas.flowlog_logger.create_end|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -331,6 +351,9 @@
 |NKS registry update completed|event_id.iaas.cluster.update_nks_registry.end|
 |NKS registry update failed|event_id.iaas.cluster.update_nks_registry.fail|
 |NKS registry update started|event_id.iaas.cluster.update_nks_registry.start|
+|K8S Audent Update Started|event_id.iaas.cluster.update_k8s_args.start|
+|K8S Audent Update Completed|event_id.iaas.cluster.update_k8s_args.end|
+|K8S Audent Update Failed|event_id.iaas.cluster.update_k8s_args.failed|
 |Create Node Group Completed|event_id.iaas.nodegroup.create.end|
 |Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
 |Create Node Group Started|event_id.iaas.nodegroup.create.start|
@@ -499,6 +522,13 @@
 |Change Workload Load Balancer Completed|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |Change Scheduled Run|event_id.iaas.ncs.workload_schedule.update|
+|Access Container Terminal|event_id.iaas.ncs.container_terminal.exec|
+|Access Container Terminal Ended|event_id.iaas.ncs.container_terminal.exit|
+|Restart Workload|event_id.iaas.ncs.workload_task.restart|
+|Change Workload Autoscaler|event_id.iaas.ncs.workload_autoscaler.update|
+|Resize Workload Tasks Started|event_id.iaas.ncs.workload_task_resize.start|
+|Resize Workload Tasks Ended|event_id.iaas.ncs.workload_task_resize.end|
+|Resize Workload Tasks Failed|event_id.iaas.ncs.workload_task_resize.failed|
 |Create NAS Volume|event_id.iaas.nas.volume.create|
 |Delete NAS Volume|event_id.iaas.nas.volume.delete|
 |Modify NAS Volume|event_id.iaas.nas.volume.update|
@@ -530,6 +560,9 @@
 |Change Container Replication Settings|event_id.object_storage.container.sync.update|
 |Unset Container Replication|event_id.object_storage.container.sync.disable|
 |Upload Object Replication|event_id.object_storage.object.sync.upload|
+|Download objects|event_id.object_storage.object.download|
+|List Objects|event_id.object_storage.object.list_lookup|
+|List Containers|event_id.object_storage.container.list_lookup|
 
 ### RDS for MySQL
 
@@ -1128,6 +1161,7 @@
 |Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_ocr.business.authenticity|
 |Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|
+|Request Document AI Analysis|event_id.ocr.document_ai.analyze|
 
 ### KakaoTalk Bizmessage
 
@@ -1317,11 +1351,10 @@
 | --- | --- |
 |Activate Project|event_id.dataquery.project_activated|
 |Deactivate Project|event_id.dataquery.project_deactivated|
-|Request Data Source Update|event_id.dataquery.deploy_requested|
-|Trino Cluster On|event_id.dataquery.cluster_on|
-|Trino Cluster Off|event_id.dataquery.cluster_off|
+|Cluster On|event_id.dataquery.cluster_on|
+|Cluster Off|event_id.dataquery.cluster_off|
 |Stop Resource Usage|event_id.dataquery.resource.pause|
-|클러스터 재시작|event_id.dataquery.cluster_restart|
+|Cluster Restart|event_id.dataquery.cluster_restart|
 
 ### Resource Watcher
 
@@ -1464,6 +1497,7 @@
 |대량 발송 취소|event_id.sms.cancel_mass_message|
 |예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
 |수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
+|Send blocking on a country occurred due to conversion rate|event_id.sms.conversion_block|
 |Delete Opt-Out List|event_id.sms.delete_block_recipient_list|
 |Download Files|event_id.sms.download_reserved_file|
 |수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
