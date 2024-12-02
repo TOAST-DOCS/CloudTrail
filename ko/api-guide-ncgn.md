@@ -86,7 +86,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 * NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다. 
 * 반대로 IAM memberType일 경우, userCode의 값은 필수이고, emailAddress의 값은 존재하지 않아야 합니다.
 * idNo 값이 있을 경우, memberType과 userCode, emailAddress 값과 관계없이 우선으로 적용됩니다.
-* 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/Governance%20&%20Audit/CloudTrail/ko/event-list-gov/)
+* 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/CloudTrail/ko/event-list-ppp/)
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
@@ -229,7 +229,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 * NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다. 
 * 반대로 IAM memberType일 경우, userCode의 값은 필수이고, emailAddress의 값은 존재하지 않아야 합니다.
 * idNo 값이 있을 경우, memberType과 userCode, emailAddress 값과 관계없이 우선으로 적용됩니다.
-* 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/Governance%20&%20Audit/CloudTrail/ko/event-list-gov/)
+* 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/CloudTrail/ko/event-list-ppp/)
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
