@@ -11,6 +11,7 @@
 |커스텀 대시보드 복제|event_id.cloud_monitoring_organization.dashboard_copy|
 |커스텀 대시보드 생성|event_id.cloud_monitoring_organization.dashboard_create|
 |커스텀 대시보드 삭제|event_id.cloud_monitoring_organization.dashboard_delete|
+|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure|
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
@@ -33,11 +34,11 @@
 |프로젝트 생성|event_id.project.create|
 |프로젝트 삭제|event_id.project.delete|
 |프로젝트 멤버 추가|event_id.project.member.add|
-|프로젝트 멤버 삭제|event_id.project.member.delete|
+|프로젝트 멤버 삭제(단건)|event_id.project.member.delete|
 |프로젝트 멤버 초대|event_id.project.member.invite|
 |프로젝트 멤버 초대 취소|event_id.project.member.invite_cancel|
 |프로젝트 멤버 권한 수정|event_id.project.member.update|
-|프로젝트 멤버 삭제|event_id.project.members.delete|
+|프로젝트 멤버 삭제(다건)|event_id.project.members.delete|
 |프로젝트 서비스 비활성화|event_id.project.product.disable|
 |프로젝트 서비스 활성화|event_id.project.product.enable|
 |프로젝트 수정|event_id.project.update|
@@ -80,7 +81,6 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-||event_id.iaas.private_dns.zone.create.end|
 |인스턴스 생성|event_id.iaas.instance.create|
 |인스턴스 생성 완료|event_id.iaas.instance.create_end|
 |인스턴스 삭제|event_id.iaas.instance.delete|
@@ -226,6 +226,9 @@
 |로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
 |로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
 |로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
+|로드 밸런서 생성 완료|event_id.iaas.loadbalancer.create_end|
+|로드 밸런서 삭제 완료|event_id.iaas.loadbalancer.delete_end|
+|로드 밸런서 정보 변경 완료|event_id.iaas.loadbalancer.update_end|
 |트랜짓 허브 생성|event_id.iaas.transit_hub.create|
 |트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
 |트랜짓 허브 수정|event_id.iaas.transit_hub.update|
@@ -316,6 +319,8 @@
 |플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
 |플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
 |플로우 로그 로거 생성 완료|event_id.iaas.flowlog_logger.create_end|
+|플로우 로그 로거 삭제 완료|event_id.iaas.flowlog_logger.delete_end|
+|플로우 로그 로거 수정 완료|event_id.iaas.flowlog_logger.update_end|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -736,27 +741,27 @@
 |승인 프로세스 승인|event_id.skm.approval.approve|
 |승인 프로세스 거절|event_id.skm.approval.deny|
 |승인 프로세스 승인 요청|event_id.skm.approval.approve_request|
-|기밀 데이터 조회|event_id.skm.api.secrets.get|
-|대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
-|대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
-|로컬 키 생성|event_id.skm.api.symmetric.create_local_key|
-|비대칭 키를 통한 서명|event_id.skm.api.asymmetric.sign|
-|비대칭 키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
-|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
-|대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
-|비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
-|대칭 키 조회|event_id.skm.api.symmetric.get|
-|개인 키 조회|event_id.skm.api.asymmetric.get.privateKey|
-|공개 키 조회|event_id.skm.api.asymmetric.get.publicKey|
-|기밀 데이터 생성|event_id.skm.api.secrets.create|
-|대칭 키 생성|event_id.skm.api.symmetric.create|
-|비대칭 키 생성|event_id.skm.api.asymmetric.create|
-|기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
-|대칭 키 삭제 요청|event_id.skm.api.symmetric.delete_request|
-|비대칭 키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
-|기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
-|대칭 키 즉시 삭제|event_id.skm.api.symmetric.delete|
-|비대칭 키 즉시 삭제|event_id.skm.api.asymmetric.delete|
+|기밀 데이터 조회|event_id.skm.api.secrets.get|
+|대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
+|대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
+|로컬 키 생성|event_id.skm.api.symmetric.create_local_key|
+|비대칭 키를 통한 서명|event_id.skm.api.asymmetric.sign|
+|비대칭 키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
+|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
+|대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
+|비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|대칭 키 조회|event_id.skm.api.symmetric.get|
+|개인 키 조회|event_id.skm.api.asymmetric.get.privateKey|
+|공개 키 조회|event_id.skm.api.asymmetric.get.publicKey|
+|기밀 데이터 생성|event_id.skm.api.secrets.create|
+|대칭 키 생성|event_id.skm.api.symmetric.create|
+|비대칭 키 생성|event_id.skm.api.asymmetric.create|
+|기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
+|대칭 키 삭제 요청|event_id.skm.api.symmetric.delete_request|
+|비대칭 키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
+|기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
+|대칭 키 즉시 삭제|event_id.skm.api.symmetric.delete|
+|비대칭 키 즉시 삭제|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -1027,7 +1032,6 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |알림 그룹 추가|event_id.certificate_manager.alarm_group.create|
-|하|event_id.cloud_monitoring_organization.dashboard_exposure|
 |알림 그룹 삭제|event_id.certificate_manager.alarm_group.delete|
 |알림 그룹 수정|event_id.certificate_manager.alarm_group.update|
 |수신 그룹 수정|event_id.certificate_manager.alarm_group_user.update|
@@ -1899,6 +1903,9 @@
 |일정 삭제|event_id.cloud_scheduler.schedule.delete|
 |일정 활성화|event_id.cloud_scheduler.schedule.enable|
 |일정 비활성화|event_id.cloud_scheduler.schedule.disable|
+|템플릿 생성|event_id.cloud_scheduler.schedule_template.create|
+|템플릿 변경|event_id.cloud_scheduler.schedule_template.update|
+|템플릿 삭제|event_id.cloud_scheduler.schedule_template.delete|
 
 ### Face Liveness
 
