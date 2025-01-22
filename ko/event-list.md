@@ -741,27 +741,27 @@
 |승인 프로세스 승인|event_id.skm.approval.approve|
 |승인 프로세스 거절|event_id.skm.approval.deny|
 |승인 프로세스 승인 요청|event_id.skm.approval.approve_request|
-|기밀 데이터 조회|event_id.skm.api.secrets.get|
-|대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
-|대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
-|로컬 키 생성|event_id.skm.api.symmetric.create_local_key|
-|비대칭 키를 통한 서명|event_id.skm.api.asymmetric.sign|
-|비대칭 키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
+|기밀 데이터 조회 (API)|event_id.skm.api.secrets.get|
+|대칭 키를 통한 암호화 (API)|event_id.skm.api.symmetric.encrypt|
+|대칭 키를 통한 복호화 (API)|event_id.skm.api.symmetric.decrypt|
+|로컬 키 생성 (API)|event_id.skm.api.symmetric.create_local_key|
+|비대칭 키를 통한 서명 (API)|event_id.skm.api.asymmetric.sign|
+|비대칭 키를 통한 서명 검증 (API)|event_id.skm.api.asymmetric.verify|
 |기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
 |대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
 |비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
-|대칭 키 조회|event_id.skm.api.symmetric.get|
-|개인 키 조회|event_id.skm.api.asymmetric.get.privateKey|
-|공개 키 조회|event_id.skm.api.asymmetric.get.publicKey|
-|기밀 데이터 생성|event_id.skm.api.secrets.create|
-|대칭 키 생성|event_id.skm.api.symmetric.create|
-|비대칭 키 생성|event_id.skm.api.asymmetric.create|
-|기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
-|대칭 키 삭제 요청|event_id.skm.api.symmetric.delete_request|
-|비대칭 키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
-|기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
-|대칭 키 즉시 삭제|event_id.skm.api.symmetric.delete|
-|비대칭 키 즉시 삭제|event_id.skm.api.asymmetric.delete|
+|대칭 키 조회 (API)|event_id.skm.api.symmetric.get|
+|개인 키 조회 (API)|event_id.skm.api.asymmetric.get.privateKey|
+|공개 키 조회 (API)|event_id.skm.api.asymmetric.get.publicKey|
+|기밀 데이터 생성 (API)|event_id.skm.api.secrets.create|
+|대칭 키 생성 (API)|event_id.skm.api.symmetric.create|
+|비대칭 키 생성 (API)|event_id.skm.api.asymmetric.create|
+|기밀 데이터 삭제 요청 (API)|event_id.skm.api.secrets.delete_request|
+|대칭 키 삭제 요청 (API)|event_id.skm.api.symmetric.delete_request|
+|비대칭 키 삭제 요청 (API)|event_id.skm.api.asymmetric.delete_request|
+|기밀 데이터 즉시 삭제 (API)|event_id.skm.api.secrets.delete|
+|대칭 키 즉시 삭제 (API)|event_id.skm.api.symmetric.delete|
+|비대칭 키 즉시 삭제 (API)|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -1161,7 +1161,6 @@
 |Document OCR 신용카드 분석 요청|event_id.ocr.document_ocr.credit_card.analyze|
 |Document OCR 신분증 분석 요청|event_id.ocr.document_ocr.id_card.analyze|
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|
-|Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|
 |Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_ocr.business.authenticity|
 |General OCR 이미지 분할 인식 요청|event_id.ocr.general_ocr.cropping_analyze|
@@ -1314,17 +1313,6 @@
 |웹 셸 메일 수신 활성화|event_id.webshell_treat_detector.mail_send_activated|
 |웹 셸 메일 수신 비활성화|event_id.webshell_treat_detector.mail_send_deactivated|
 
-### Word Suggestion
-
-| 이벤트 | 이벤트 ID |
-| --- | --- |
-|서비스 이용 신청|event_id.ai_word_suggestion.service_use_request.submit|
-|서비스 이용 신청 취소|event_id.ai_word_suggestion.service_use_request.cancel|
-|검색어 교정 요청|event_id.ai_word_suggestion.correct|
-|사전 단어 등록|event_id.ai_word_suggestion.dictionary.add|
-|사전 단어 삭제|event_id.ai_word_suggestion.dictionary.delete|
-|사전 단어 수정|event_id.ai_word_suggestion.dictionary.update|
-
 ### DataFlow
 
 | 이벤트 | 이벤트 ID |
@@ -1342,7 +1330,6 @@
 |템플릿 그래프 수정|event_id.dataflow.template.graph.update|
 |템플릿 그래프 복사|event_id.dataflow.template.graph.copy|
 |스케쥴러 저장|event_id.dataflow.scheduler.meta.save|
-|Log &amp; Crash Search 저장 설정|event_id.dataflow.settings.lncs|
 |유효성 검사 활성화|event_id.dataflow.settings.accessibility-checker.enable|
 |유효성 검사 비활성화|event_id.dataflow.settings.accessibility-checker.disable|
 |드레이닝 후 종료|event_id.dataflow.flow.drain|
@@ -1639,12 +1626,6 @@
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
-### Pose Estimation
-
-| 이벤트 | 이벤트 ID |
-| --- | --- |
-|Pose Estimation 분석 요청|event_id.pose_estimation.pose|
-
 ### ROLE
 
 | 이벤트 | 이벤트 ID |
@@ -1906,10 +1887,4 @@
 |템플릿 생성|event_id.cloud_scheduler.schedule_template.create|
 |템플릿 변경|event_id.cloud_scheduler.schedule_template.update|
 |템플릿 삭제|event_id.cloud_scheduler.schedule_template.delete|
-
-### Face Liveness
-
-| 이벤트 | 이벤트 ID |
-| --- | --- |
-|스푸핑 감지|event_id.face_liveness.spoofing|
 

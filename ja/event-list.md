@@ -11,6 +11,7 @@
 |カスタムダッシュボードの複製|event_id.cloud_monitoring_organization.dashboard_copy|
 |カスタムダッシュボードの作成|event_id.cloud_monitoring_organization.dashboard_create|
 |カスタムダッシュボードの削除|event_id.cloud_monitoring_organization.dashboard_delete|
+|カスタムダッシュボード表示設定|event_id.cloud_monitoring_organization.dashboard_exposure|
 |カスタムダッシュボードの修正|event_id.cloud_monitoring_organization.dashboard_modify|
 |カスタムダッシュボードの指標収集設定|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM ログイン|event_id.iam.login|
@@ -33,11 +34,11 @@
 |プロジェクトの作成|event_id.project.create|
 |プロジェクトの削除|event_id.project.delete|
 |プロジェクトメンバーの追加|event_id.project.member.add|
-|プロジェクトメンバーの削除|event_id.project.member.delete|
+|プロジェクトメンバーの削除(1件)|event_id.project.member.delete|
 |プロジェクトメンバーの招待|event_id.project.member.invite|
 |プロジェクトメンバーの招待キャンセル|event_id.project.member.invite_cancel|
 |プロジェクトメンバーの権限修正|event_id.project.member.update|
-|プロジェクトメンバーの削除|event_id.project.members.delete|
+|プロジェクトメンバーの削除(複数件)|event_id.project.members.delete|
 |プロジェクトサービスの無効化|event_id.project.product.disable|
 |プロジェクトサービスの有効化|event_id.project.product.enable|
 |プロジェクトの修正|event_id.project.update|
@@ -80,7 +81,6 @@
 
 | イベント | イベントID |
 | --- | --- |
-||event_id.iaas.private_dns.zone.create.end|
 |インスタンスの作成|event_id.iaas.instance.create|
 |インスタンスの作成完了|event_id.iaas.instance.create_end|
 |インスタンスの削除|event_id.iaas.instance.delete|
@@ -226,6 +226,9 @@
 |ロードバランサーIP ACLターゲット削除|event_id.iaas.loadbalancer_ipacl_target.delete|
 |ロードバランサーIP ACLターゲット修正|event_id.iaas.loadbalancer_ipacl_target.update|
 |ロードバランサーにIP ACLグループ適用|event_id.iaas.loadbalancer_ipacl_group.bind|
+|ロードバランサーの作成完了|event_id.iaas.loadbalancer.create_end|
+|ロードバランサーの削除完了|event_id.iaas.loadbalancer.delete_end|
+|ロードバランサー情報の変更完了|event_id.iaas.loadbalancer.update_end|
 |トランジットハブの作成|event_id.iaas.transit_hub.create|
 |トランジットハブの削除|event_id.iaas.transit_hub.delete|
 |トランジットハブの変更|event_id.iaas.transit_hub.update|
@@ -316,6 +319,8 @@
 |フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
 |フローログロガーの修正|event_id.iaas.flowlog_logger.update|
 |フローログロガーの作成完了|event_id.iaas.flowlog_logger.create_end|
+|フローログロガーの削除完了|event_id.iaas.flowlog_logger.delete_end|
+|フローログロガーの修正完了|event_id.iaas.flowlog_logger.update_end|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -736,27 +741,27 @@
 |承認プロセスを承認|event_id.skm.approval.approve|
 |承認プロセスを拒否|event_id.skm.approval.deny|
 |承認プロセスの承認リクエスト|event_id.skm.approval.approve_request|
-|機密データの照会|event_id.skm.api.secrets.get|
-|対称鍵による暗号化|event_id.skm.api.symmetric.encrypt|
-|対称による復号|event_id.skm.api.symmetric.decrypt|
-|ローカルキー作成|event_id.skm.api.symmetric.create_local_key|
-|非対称鍵による署名|event_id.skm.api.asymmetric.sign|
-|非対称鍵による署名検証|event_id.skm.api.asymmetric.verify|
+|機密データの照会 (API)|event_id.skm.api.secrets.get|
+|対称鍵による暗号化 (API)|event_id.skm.api.symmetric.encrypt|
+|対称による復号 (API)|event_id.skm.api.symmetric.decrypt|
+|ローカルキー作成 (API)|event_id.skm.api.symmetric.create_local_key|
+|非対称鍵による署名 (API)|event_id.skm.api.asymmetric.sign|
+|非対称鍵による署名検証 (API)|event_id.skm.api.asymmetric.verify|
 |機密データの自動削除|event_id.skm.secrets.scheduled_delete|
 |対称鍵の自動削除|event_id.skm.symmetric.scheduled_delete|
 |非対称鍵の自動削除|event_id.skm.asymmetric.scheduled_delete|
-|対称鍵の照会|event_id.skm.api.symmetric.get|
-|秘密鍵の照会|event_id.skm.api.asymmetric.get.privateKey|
-|公開鍵の照会|event_id.skm.api.asymmetric.get.publicKey|
-|機密データの作成|event_id.skm.api.secrets.create|
-|対称鍵の作成|event_id.skm.api.symmetric.create|
-|非対称鍵の作成|event_id.skm.api.asymmetric.create|
-|機密データの削除リクエスト|event_id.skm.api.secrets.delete_request|
-|対称鍵の削除リクエスト|event_id.skm.api.symmetric.delete_request|
-|非対称鍵の削除リクエスト|event_id.skm.api.asymmetric.delete_request|
-|機密データの即時削除|event_id.skm.api.secrets.delete|
-|対称鍵の即時削除|event_id.skm.api.symmetric.delete|
-|非対称鍵の即時削除|event_id.skm.api.asymmetric.delete|
+|対称鍵の照会 (API)|event_id.skm.api.symmetric.get|
+|秘密鍵の照会 (API)|event_id.skm.api.asymmetric.get.privateKey|
+|公開鍵の照会 (API)|event_id.skm.api.asymmetric.get.publicKey|
+|機密データの作成 (API)|event_id.skm.api.secrets.create|
+|対称鍵の作成 (API)|event_id.skm.api.symmetric.create|
+|非対称鍵の作成 (API)|event_id.skm.api.asymmetric.create|
+|機密データの削除リクエスト (API)|event_id.skm.api.secrets.delete_request|
+|対称鍵の削除リクエスト (API)|event_id.skm.api.symmetric.delete_request|
+|非対称鍵の削除リクエスト (API)|event_id.skm.api.asymmetric.delete_request|
+|機密データの即時削除 (API)|event_id.skm.api.secrets.delete|
+|対称鍵の即時削除 (API)|event_id.skm.api.symmetric.delete|
+|非対称鍵の即時削除 (API)|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -1027,7 +1032,6 @@
 | イベント | イベントID |
 | --- | --- |
 |通知グループの追加|event_id.certificate_manager.alarm_group.create|
-|カスタムダッシュボード表示設定|event_id.cloud_monitoring_organization.dashboard_exposure|
 |通知グループの削除|event_id.certificate_manager.alarm_group.delete|
 |通知グループの修正|event_id.certificate_manager.alarm_group.update|
 |受信グループの修正|event_id.certificate_manager.alarm_group_user.update|
@@ -1157,7 +1161,6 @@
 |Document OCRクレジットカード分析リクエスト|event_id.ocr.document_ocr.credit_card.analyze|
 |Document OCR身分証の分析リクエスト|event_id.ocr.document_ocr.id_card.analyze|
 |Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|
-|Vehicle Plate OCR ナンバープレート分析リクエスト|event_id.ocr.vehicle_plate_ocr.analyze|
 |Document OCR 身分証明書分析リクエスト(単独)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_ocr.business.authenticity|
 |General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|
@@ -1310,17 +1313,6 @@
 |Webシェルメール受信の有効化|event_id.webshell_treat_detector.mail_send_activated|
 |Webシェルメール受信の無効化|event_id.webshell_treat_detector.mail_send_deactivated|
 
-### Word Suggestion
-
-| イベント | イベントID |
-| --- | --- |
-|サービス利用申請|event_id.ai_word_suggestion.service_use_request.submit|
-|サービス利用申請キャンセル|event_id.ai_word_suggestion.service_use_request.cancel|
-|検索ワード修正リクエスト|event_id.ai_word_suggestion.correct|
-|辞書に単語を登録|event_id.ai_word_suggestion.dictionary.add|
-|辞書の単語を削除|event_id.ai_word_suggestion.dictionary.delete|
-|辞書の単語を編集|event_id.ai_word_suggestion.dictionary.update|
-
 ### DataFlow
 
 | イベント | イベントID |
@@ -1338,7 +1330,6 @@
 |テンプレートグラフの修正|event_id.dataflow.template.graph.update|
 |テンプレートグラフのコピー|event_id.dataflow.template.graph.copy|
 |スケジューラの保存|event_id.dataflow.scheduler.meta.save|
-|Log &amp; Crash Search保存設定|event_id.dataflow.settings.lncs|
 |有効性検査の有効化|event_id.dataflow.settings.accessibility-checker.enable|
 |有効性検査の無効化|event_id.dataflow.settings.accessibility-checker.disable|
 |ドレイン後に終了|event_id.dataflow.flow.drain|
@@ -1635,12 +1626,6 @@
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
-### Pose Estimation
-
-| イベント | イベントID |
-| --- | --- |
-|Pose Estimation分析要請|event_id.pose_estimation.pose|
-
 ### ROLE
 
 | イベント | イベントID |
@@ -1899,10 +1884,7 @@
 |スケジュールの削除|event_id.cloud_scheduler.schedule.delete|
 |スケジュールの有効化|event_id.cloud_scheduler.schedule.enable|
 |スケジュールの無効化|event_id.cloud_scheduler.schedule.disable|
-
-### Face Liveness
-
-| イベント | イベントID |
-| --- | --- |
-|スプーフィング検出|event_id.face_liveness.spoofing|
+|テンプレート作成|event_id.cloud_scheduler.schedule_template.create|
+|テンプレート変更|event_id.cloud_scheduler.schedule_template.update|
+|テンプレート削除|event_id.cloud_scheduler.schedule_template.delete|
 
