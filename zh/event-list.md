@@ -11,6 +11,7 @@
 |Copy Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_copy|
 |Create Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_create|
 |Delete Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_delete|
+|Display Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_exposure|
 |Modify Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_modify|
 |Enable Custom Dashboard Metrics Collection|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 登入|event_id.iam.login|
@@ -33,11 +34,11 @@
 |Create Project|event_id.project.create|
 |Delete Project|event_id.project.delete|
 |Add Project Member|event_id.project.member.add|
-|Delete Project Member|event_id.project.member.delete|
+|Delete Project Member (single)|event_id.project.member.delete|
 |Invite Project Member|event_id.project.member.invite|
 |Cancel Project Member Invitation|event_id.project.member.invite_cancel|
 |Modify Project Member Authority|event_id.project.member.update|
-|Delete Project Member|event_id.project.members.delete|
+|Delete Project Member (multiple)|event_id.project.members.delete|
 |Disable Project Service|event_id.project.product.disable|
 |Enable Project Service|event_id.project.product.enable|
 |Modify Project|event_id.project.update|
@@ -80,7 +81,6 @@
 
 | Event | Event ID |
 | --- | --- |
-||event_id.iaas.private_dns.zone.create.end|
 |Create Instance|event_id.iaas.instance.create|
 |Create Instance Completed|event_id.iaas.instance.create_end|
 |Delete Instance|event_id.iaas.instance.delete|
@@ -226,6 +226,9 @@
 |Delete Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.delete|
 |Modify Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.update|
 |Apply Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.bind|
+|Create Load Balancer Completed|event_id.iaas.loadbalancer.create_end|
+|Delete Load Balancer Completed|event_id.iaas.loadbalancer.delete_end|
+|Change Load Balancer Information Completed|event_id.iaas.loadbalancer.update_end|
 |Create Transit Hub|event_id.iaas.transit_hub.create|
 |Delete Transit Hub|event_id.iaas.transit_hub.delete|
 |Modify Transit Hub|event_id.iaas.transit_hub.update|
@@ -316,6 +319,8 @@
 |Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
 |Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Create Flow Log Logger Completed|event_id.iaas.flowlog_logger.create_end|
+|Delete Flow Log Logger Completed|event_id.iaas.flowlog_logger.delete_end|
+|Modify Flow Log Logger Completed|event_id.iaas.flowlog_logger.update_end|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -695,13 +700,13 @@
 |Cancel Request for Deleting Confidential Data|event_id.skm.secret.delete_request_cancel|
 |Change Confidential Data Information|event_id.skm.secret.update|
 |Query Confidential Data|event_id.skm.secret.get|
-|Create Symmectric Key|event_id.skm.symmetric.create|
+|Create Symmetric Key|event_id.skm.symmetric.create|
 |Immediately Delete Symmetric Key|event_id.skm.symmetric.delete|
 |Request for Deleting Symmetric Key|event_id.skm.symmetric.delete_request|
 |Cancel Request for Deleting Symmetric Key|event_id.skm.symmetric.delete_request_cancel|
-|Change Symmectric Key Information|event_id.skm.symmetric.update|
+|Change Symmetric Key Information|event_id.skm.symmetric.update|
 |Immediately Rotate Symmetric Key|event_id.skm.symmetric.rotate|
-|Request for Deleting Symmectric Key Version|event_id.skm.symmetric_version.delete_request|
+|Request for Deleting Symmetric Key Version|event_id.skm.symmetric_version.delete_request|
 |Cancel Request for Deleting Symmetric Key Version|event_id.skm.symmetric_version.delete_request_cancel|
 |Immediately Delete Symmetric Key Version|event_id.skm.symmetric_version.delete|
 |Create Asymmetric Key|event_id.skm.asymmetric.create|
@@ -736,27 +741,27 @@
 |Approval Process Approve|event_id.skm.approval.approve|
 |Approval Process Deny|event_id.skm.approval.deny|
 |Approval Process Approve Request|event_id.skm.approval.approve_request|
-|Query Confidential Data|event_id.skm.api.secrets.get|
-|Encrypt with Symmetric Key|event_id.skm.api.symmetric.encrypt|
-|Decrypt with Symmetric Key|event_id.skm.api.symmetric.decrypt|
-|Create Local Key|event_id.skm.api.symmetric.create_local_key|
-|Sign with Asymmetric Key|event_id.skm.api.asymmetric.sign|
-|Verify Signature with Asymmetric Key|event_id.skm.api.asymmetric.verify|
+|Query Confidential Data (API)|event_id.skm.api.secrets.get|
+|Encrypt with Symmetric Key (API)|event_id.skm.api.symmetric.encrypt|
+|Decrypt with Symmetric Key (API)|event_id.skm.api.symmetric.decrypt|
+|Create Local Key (API)|event_id.skm.api.symmetric.create_local_key|
+|Sign with Asymmetric Key (API)|event_id.skm.api.asymmetric.sign|
+|Verify Signature with Asymmetric Key (API)|event_id.skm.api.asymmetric.verify|
 |Auto Delete Confidential Data|event_id.skm.secrets.scheduled_delete|
 |Auto Delete Symmetric Key|event_id.skm.symmetric.scheduled_delete|
 |Auto Delete Asymmetric Key|event_id.skm.asymmetric.scheduled_delete|
-|Query Symmectric Key|event_id.skm.api.symmetric.get|
-|Query Private Key|event_id.skm.api.asymmetric.get.privateKey|
-|Query Public Key|event_id.skm.api.asymmetric.get.publicKey|
-|Create Confidential Data|event_id.skm.api.secrets.create|
-|Create Symmectric Key|event_id.skm.api.symmetric.create|
-|Create Asymmetric Key|event_id.skm.api.asymmetric.create|
-|Request for Deleting Confidential Data|event_id.skm.api.secrets.delete_request|
-|Request for Deleting Symmetric Key|event_id.skm.api.symmetric.delete_request|
-|Request for Deleting Asymmetric Key|event_id.skm.api.asymmetric.delete_request|
-|Immediately Delete Confidential Data|event_id.skm.api.secrets.delete|
-|Immediately Delete Symmetric Key|event_id.skm.api.symmetric.delete|
-|Immediately Delete Asymmetric Key|event_id.skm.api.asymmetric.delete|
+|Query Symmetric Key (API)|event_id.skm.api.symmetric.get|
+|Query Private Key (API)|event_id.skm.api.asymmetric.get.privateKey|
+|Query Public Key (API)|event_id.skm.api.asymmetric.get.publicKey|
+|Create Confidential Data (API)|event_id.skm.api.secrets.create|
+|Create Symmetric Key (API)|event_id.skm.api.symmetric.create|
+|Create Asymmetric Key (API)|event_id.skm.api.asymmetric.create|
+|Request for Deleting Confidential Data (API)|event_id.skm.api.secrets.delete_request|
+|Request for Deleting Symmetric Key (API)|event_id.skm.api.symmetric.delete_request|
+|Request for Deleting Asymmetric Key (API)|event_id.skm.api.asymmetric.delete_request|
+|Immediately Delete Confidential Data (API)|event_id.skm.api.secrets.delete|
+|Immediately Delete Symmetric Key (API)|event_id.skm.api.symmetric.delete|
+|Immediately Delete Asymmetric Key (API)|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -1027,7 +1032,6 @@
 | Event | Event ID |
 | --- | --- |
 |Add Alarm Group|event_id.certificate_manager.alarm_group.create|
-|Display Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_exposure|
 |Delete Alarm Group|event_id.certificate_manager.alarm_group.delete|
 |Edit Alarm Group|event_id.certificate_manager.alarm_group.update|
 |Edit Receiving Group|event_id.certificate_manager.alarm_group_user.update|
@@ -1157,7 +1161,6 @@
 |Request Analysis of Document OCR Credit Card|event_id.ocr.document_ocr.credit_card.analyze|
 |RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|
 |Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|
-|Request Analysis of Vehicle Plate OCR License Plate|event_id.ocr.vehicle_plate_ocr.analyze|
 |Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_ocr.business.authenticity|
 |Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|
@@ -1310,17 +1313,6 @@
 |Activate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_activated|
 |Deactivate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_deactivated|
 
-### Word Suggestion
-
-| Event | Event ID |
-| --- | --- |
-|Submit a service use request|event_id.ai_word_suggestion.service_use_request.submit|
-|Cancel a service use request|event_id.ai_word_suggestion.service_use_request.cancel|
-|Request Keyword Correction|event_id.ai_word_suggestion.correct|
-|Register Dictionary Word|event_id.ai_word_suggestion.dictionary.add|
-|Delete Dictionary Word|event_id.ai_word_suggestion.dictionary.delete|
-|Update Dictionary Word|event_id.ai_word_suggestion.dictionary.update|
-
 ### DataFlow
 
 | Event | Event ID |
@@ -1338,7 +1330,6 @@
 |Modify Template Graph|event_id.dataflow.template.graph.update|
 |Copy Template Graph|event_id.dataflow.template.graph.copy|
 |Save Scheduler|event_id.dataflow.scheduler.meta.save|
-|Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs|
 |Enable Validation|event_id.dataflow.settings.accessibility-checker.enable|
 |Disable Validation|event_id.dataflow.settings.accessibility-checker.disable|
 |End After Draining|event_id.dataflow.flow.drain|
@@ -1635,12 +1626,6 @@
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
-### Pose Estimation
-
-| Event | Event ID |
-| --- | --- |
-|Request for Posture recognition|event_id.pose_estimation.pose|
-
 ### ROLE
 
 | Event | Event ID |
@@ -1899,10 +1884,7 @@
 |Delete Schedule|event_id.cloud_scheduler.schedule.delete|
 |&#8;Activate Schedule|event_id.cloud_scheduler.schedule.enable|
 |Deactivate Schedule|event_id.cloud_scheduler.schedule.disable|
-
-### Face Liveness
-
-| Event | Event ID |
-| --- | --- |
-|Spoofing detection|event_id.face_liveness.spoofing|
+|Create Template|event_id.cloud_scheduler.schedule_template.create|
+|Modify Template|event_id.cloud_scheduler.schedule_template.update|
+|Delete Template|event_id.cloud_scheduler.schedule_template.delete|
 
