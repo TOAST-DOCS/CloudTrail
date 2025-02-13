@@ -153,6 +153,7 @@
 |Change Scaling Group|event_id.iaas.scaling_group.update|
 |Create S3 API Credentials|event_id.iaas.s3credential.create|
 |Delete S3 API Credentials|event_id.iaas.s3credential.delete|
+|Change API Password|event_id.iaas.identity.password_change|
 |Create VPC|event_id.iaas.vpc.create|
 |Delete VPC|event_id.iaas.vpc.delete|
 |Change VPC Information|event_id.iaas.vpc.update|
@@ -177,6 +178,7 @@
 |Disconnect Routing Table over Internet Gateway|event_id.iaas.routing_table.detach_gateway|
 |Set Default Routing Table|event_id.iaas.routing_table.set_as_default|
 |Create Route in Routing Table|event_id.iaas.route.create|
+|Change Route in Routing Table|event_id.iaas.route.update|
 |Delete Route in Routing Table|event_id.iaas.route.delete|
 |Create Floating IP|event_id.iaas.floating_ip.create|
 |Delete Floating IP|event_id.iaas.floating_ip.delete|
@@ -359,6 +361,12 @@
 |K8S Audent Update Started|event_id.iaas.cluster.update_k8s_args.start|
 |K8S Audent Update Completed|event_id.iaas.cluster.update_k8s_args.end|
 |K8S Audent Update Failed|event_id.iaas.cluster.update_k8s_args.failed|
+|OIDC Audent Update Started|event_id.iaas.cluster.update_oidc_args.start|
+|OIDC Audent Update Completed|event_id.iaas.cluster.update_oidc_args.end|
+|OIDC Audent Update Failed|event_id.iaas.cluster.update_oidc_args.failed|
+|Keypair Update Started|event_id.iaas.cluster.update_vm_auth_key.start|
+|Keypair Update Completed|event_id.iaas.cluster.update_vm_auth_key.end|
+|Keypair Update Failed|event_id.iaas.cluster.update_vm_auth_key.failed|
 |Create Node Group Completed|event_id.iaas.nodegroup.create.end|
 |Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
 |Create Node Group Started|event_id.iaas.nodegroup.create.start|
