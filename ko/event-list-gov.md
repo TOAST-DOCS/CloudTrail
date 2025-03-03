@@ -81,6 +81,7 @@
 |스케일링 그룹 변경|event_id.iaas.scaling_group.update|
 |S3 API 자격 증명 생성|event_id.iaas.s3credential.create|
 |S3 API 자격 증명 삭제|event_id.iaas.s3credential.delete|
+|API 비밀번호 변경|event_id.iaas.identity.password_change|
 |VPC 생성|event_id.iaas.vpc.create|
 |VPC 삭제|event_id.iaas.vpc.delete|
 |VPC 정보 변경|event_id.iaas.vpc.update|
@@ -253,6 +254,12 @@
 |k8s 아규먼트 업데이트 시작|event_id.iaas.cluster.update_k8s_args.start|
 |k8s 아규먼트 업데이트 완료|event_id.iaas.cluster.update_k8s_args.end|
 |k8s 아규먼트 업데이트 실패|event_id.iaas.cluster.update_k8s_args.failed|
+|OIDC 아규먼트 업데이트 시작|event_id.iaas.cluster.update_oidc_args.start|
+|OIDC 아규먼트 업데이트 완료|event_id.iaas.cluster.update_oidc_args.end|
+|OIDC 아규먼트 업데이트 실패|event_id.iaas.cluster.update_oidc_args.failed|
+|키페어 업데이트 시작|event_id.iaas.cluster.update_vm_auth_key.start|
+|키페어 업데이트 완료|event_id.iaas.cluster.update_vm_auth_key.end|
+|키페어 업데이트 실패|event_id.iaas.cluster.update_vm_auth_key.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -421,6 +428,13 @@
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
+|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
+|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
+|워크로드 작업 재시작|event_id.iaas.ncs.workload_task.restart|
+|워크로드 오토스케일러 변경|event_id.iaas.ncs.workload_autoscaler.update|
+|워크로드 작업 수 자동 조정 시작|event_id.iaas.ncs.workload_task_resize.start|
+|워크로드 작업 수 자동 조정 종료|event_id.iaas.ncs.workload_task_resize.end|
+|워크로드 작업 수 자동 조정 실패|event_id.iaas.ncs.workload_task_resize.failed|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 변경|event_id.iaas.nas.volume.update|
@@ -680,11 +694,11 @@
 |프로젝트 생성|event_id.project.create|
 |프로젝트 삭제|event_id.project.delete|
 |프로젝트 멤버 추가|event_id.project.member.add|
-|프로젝트 멤버 삭제|event_id.project.member.delete|
+|프로젝트 멤버 삭제(단건)|event_id.project.member.delete|
 |프로젝트 멤버 초대|event_id.project.member.invite|
 |프로젝트 멤버 초대 취소|event_id.project.member.invite_cancel|
 |프로젝트 멤버 권한 수정|event_id.project.member.update|
-|프로젝트 멤버 삭제|event_id.project.members.delete|
+|프로젝트 멤버 삭제(다건)|event_id.project.members.delete|
 |프로젝트 서비스 비활성화|event_id.project.product.disable|
 |프로젝트 서비스 활성화|event_id.project.product.enable|
 |프로젝트 수정|event_id.project.update|
@@ -953,6 +967,15 @@
 |리소스 태그 관계 추가|event_id.resource_watcher.resource_tag_relation.create|
 |리소스 태그 관계 삭제|event_id.resource_watcher.resource_tag_relation.delete|
 |리소스 태그 관계 수정|event_id.resource_watcher.resource_tag_relation.update|
+
+### Security Advisor
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|자동 점검 완료|event_id.security_advisor.auto_scan_complete|
+|엑셀 다운로드|event_id.security_advisor.excel_download|
+|선택 점검 요청|event_id.security_advisor.manual_scan_request|
+|설정 변경|event_id.security_advisor.setting_change|
 
 ### Cloud Monitoring
 
