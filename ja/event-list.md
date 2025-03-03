@@ -153,6 +153,7 @@
 |スケーリンググループの変更|event_id.iaas.scaling_group.update|
 |S3 API認証情報の作成|event_id.iaas.s3credential.create|
 |S3 API認証情報の削除|event_id.iaas.s3credential.delete|
+|APIパスワードの変更|event_id.iaas.identity.password_change|
 |VPCの作成|event_id.iaas.vpc.create|
 |VPCの削除|event_id.iaas.vpc.delete|
 |VPCの情報変更|event_id.iaas.vpc.update|
@@ -177,6 +178,7 @@
 |ルーティングテーブルインターネットゲートウェイの接続解除|event_id.iaas.routing_table.detach_gateway|
 |ルーティングテーブルの基本指定|event_id.iaas.routing_table.set_as_default|
 |ルーティングテーブルルートの作成|event_id.iaas.route.create|
+|ルーティングテーブルルートの変更|event_id.iaas.route.update|
 |ルーティングテーブルルートの削除|event_id.iaas.route.delete|
 |Floating IPの作成|event_id.iaas.floating_ip.create|
 |Floating IPの削除|event_id.iaas.floating_ip.delete|
@@ -359,6 +361,12 @@
 |K8Sオーデントアップデート開始|event_id.iaas.cluster.update_k8s_args.start|
 |K8S集約更新が完了しました|event_id.iaas.cluster.update_k8s_args.end|
 |K8Sオーデントアップデートは失敗しました|event_id.iaas.cluster.update_k8s_args.failed|
+|OIDCオーデントアップデート開始|event_id.iaas.cluster.update_oidc_args.start|
+|OIDC集約更新が完了しました|event_id.iaas.cluster.update_oidc_args.end|
+|OIDCオーデントアップデートは失敗しました|event_id.iaas.cluster.update_oidc_args.failed|
+|キーペアアップデートを開始|event_id.iaas.cluster.update_vm_auth_key.start|
+|キーペア更新完了|event_id.iaas.cluster.update_vm_auth_key.end|
+|キーペアの更新に失敗しました|event_id.iaas.cluster.update_vm_auth_key.failed|
 |ノードグループ作成完了|event_id.iaas.nodegroup.create.end|
 |ノードグループ作成失敗|event_id.iaas.nodegroup.create.failed|
 |ノードグループ作成起動|event_id.iaas.nodegroup.create.start|

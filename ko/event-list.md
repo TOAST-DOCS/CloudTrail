@@ -153,6 +153,7 @@
 |스케일링 그룹 변경|event_id.iaas.scaling_group.update|
 |S3 API 자격 증명 생성|event_id.iaas.s3credential.create|
 |S3 API 자격 증명 삭제|event_id.iaas.s3credential.delete|
+|API 비밀번호 변경|event_id.iaas.identity.password_change|
 |VPC 생성|event_id.iaas.vpc.create|
 |VPC 삭제|event_id.iaas.vpc.delete|
 |VPC 정보 변경|event_id.iaas.vpc.update|
@@ -177,6 +178,7 @@
 |라우팅 테이블 인터넷 게이트웨이 연결 해제|event_id.iaas.routing_table.detach_gateway|
 |라우팅 테이블 기본 지정|event_id.iaas.routing_table.set_as_default|
 |라우팅 테이블 라우트 생성|event_id.iaas.route.create|
+|라우팅 테이블 라우트 변경|event_id.iaas.route.update|
 |라우팅 테이블 라우트 삭제|event_id.iaas.route.delete|
 |플로팅 IP 생성|event_id.iaas.floating_ip.create|
 |플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
@@ -359,6 +361,12 @@
 |k8s 아규먼트 업데이트 시작|event_id.iaas.cluster.update_k8s_args.start|
 |k8s 아규먼트 업데이트 완료|event_id.iaas.cluster.update_k8s_args.end|
 |k8s 아규먼트 업데이트 실패|event_id.iaas.cluster.update_k8s_args.failed|
+|OIDC 아규먼트 업데이트 시작|event_id.iaas.cluster.update_oidc_args.start|
+|OIDC 아규먼트 업데이트 완료|event_id.iaas.cluster.update_oidc_args.end|
+|OIDC 아규먼트 업데이트 실패|event_id.iaas.cluster.update_oidc_args.failed|
+|키페어 업데이트 시작|event_id.iaas.cluster.update_vm_auth_key.start|
+|키페어 업데이트 완료|event_id.iaas.cluster.update_vm_auth_key.end|
+|키페어 업데이트 실패|event_id.iaas.cluster.update_vm_auth_key.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
