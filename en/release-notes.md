@@ -1,5 +1,30 @@
 ## CloudTrail > Release Notes
 
+### 2025. 03. 04.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 12. 24.
+#### More Events
+* Added events related to Console.
+* Added events related to Cloud Scheduler.
+
+### 2024. 11. 30.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 11. 29.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 11. 28.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2024. 11. 27.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
 ### 2024. 11. 26.
 #### More Events
 * Added events related to Default Infrastructure Service.
@@ -25,7 +50,6 @@
 #### More Events
 * Added events related to Secure Key Manager.
 * Added events related to Default Infrastructure Service.
-* Added events related to Face Liveness.
 
 ### 2024. 08. 22.
 #### More Events
@@ -62,7 +86,6 @@
 #### More Events
 * Added events related to Console.
 * Added events related to Default Infrastructure Service.
-* Added events related to Certificate Manager.
 * Added events related to RDS for MySQL.
 * Added events related to Cloud Monitoring.
 
@@ -134,7 +157,6 @@
 
 ### 2023. 08. 29.
 #### More Events
-* Added events related to Pose Estimation.
 * Added events related to API Gateway.
 * Added events related to Default Infrastructure Service.
 * Added events related to RDS for MySQL.
@@ -200,7 +222,6 @@
 * Added events related to RDS for MS-SQL.
 * Added events related to NHN AppGuard.
 * Added events related to DataQuery.
-* Added events related to Word Suggestion.
 
 ### 2022. 12. 13.
 #### More Events
@@ -211,11 +232,6 @@
 * Added events related to Console.
 * Added events related to Default Infrastructure Service.
 * Added events related to Object Storage.
-* Added events related to Word Suggestion.
-
-### 2022. 11. 22.
-#### More Events
-* Added events related to Word Suggestion.
 
 ### 2022. 11. 16.
 #### More Events

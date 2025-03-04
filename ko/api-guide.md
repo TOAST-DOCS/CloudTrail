@@ -17,7 +17,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 
 ```
     X-TC-AUTHENTICATION-ID : User Access Key ID
-    X-TC-AUTHENTICATION-SECRET : Secret Access Key 
+    X-TC-AUTHENTICATION-SECRET : Secret Access Key
 ```
 
 ## RESTful API 가이드
@@ -45,7 +45,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 |header.resultMessage|	String|	응답 메시지. 성공 시 "SUCCESS", 실패 시 오류 메시지 반환|
 
 ### 1. Event 조회(1.0)
-* 발생한 이벤트를 조회합니다. 
+* 발생한 이벤트를 조회합니다.
 * 이벤트 조회 시, 사용자가 설정한 검색 조건으로 조회됩니다.
 * Request Body에 이 검색 조건을 포함해야 합니다.
 
@@ -70,7 +70,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
       "memberType" : "string",    /* TOAST, IAM 중 선택 */
       "userCode" : "string",      /* IAM member type일 경우 작성 */
       "emailAddress" : "string",   /* TOAST member type일 경우 작성 */
-      "idNo" : "string" 
+      "idNo" : "string"
     },
     "eventId" : "string",
     "startDate": "2019-09-01T02:00:00.000Z",
@@ -80,10 +80,10 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
        "limit": 20,
        "page": 0
     }
-} 
+}
 ```
 * member에 값을 지정하지 않으면 전체 이벤트 목록을 조회할 수 있습니다.
-* NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다. 
+* NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다.
 * 반대로 IAM memberType일 경우, userCode의 값은 필수이고, emailAddress의 값은 존재하지 않아야 합니다.
 * idNo 값이 있을 경우, memberType과 userCode, emailAddress 값과 관계없이 우선으로 적용됩니다.
 * 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/Governance%20&%20Audit/CloudTrail/ko/event-list/)
@@ -178,7 +178,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 
 
 ### 2. Event 조회(2.0)
-* 발생한 이벤트를 조회합니다. 
+* 발생한 이벤트를 조회합니다.
 * 이벤트 조회 시, 사용자가 설정한 검색 조건으로 조회됩니다.
 * Request Body에 이 검색 조건을 포함해야 합니다.
 
@@ -213,7 +213,7 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
       "memberType" : "string",    /* TOAST, IAM 중 선택 */
       "userCode" : "string",      /* IAM member type일 경우 작성 */
       "emailAddress" : "string",   /* TOAST member type일 경우 작성 */
-      "idNo" : "string" 
+      "idNo" : "string"
     },
     "eventId" : "string",
     "startDate": "2019-09-01T02:00:00.000Z",
@@ -223,10 +223,10 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
        "limit": 20,
        "page": 0
     }
-} 
+}
 ```
 * member에 값을 지정하지 않으면 전체 이벤트 목록을 조회할 수 있습니다.
-* NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다. 
+* NHN Cloud memberType일 경우, emailAddress의 값은 필수이고, userCode의 값은 존재하지 않아야 합니다.
 * 반대로 IAM memberType일 경우, userCode의 값은 필수이고, emailAddress의 값은 존재하지 않아야 합니다.
 * idNo 값이 있을 경우, memberType과 userCode, emailAddress 값과 관계없이 우선으로 적용됩니다.
 * 이벤트 ID에 대한 자세한 정보는 매뉴얼을 참고합니다 : [링크](/Governance%20&%20Audit/CloudTrail/ko/event-list/)
@@ -288,7 +288,32 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
                     ]
                 }
             }
-        ]
+        ],
+        "pageable": {
+            "pageNumber": 0,
+            "pageSize": 20,
+            "sort": {
+                "empty": true,
+                "sorted": false,
+                "unsorted": true
+            },
+            "offset": 0,
+            "paged": true,
+            "unpaged": false
+        },
+        "last": true,
+        "totalElements": 1,
+        "totalPages": 1,
+        "first": true,
+        "size": 20,
+        "number": 0,
+        "sort": {
+            "empty": true,
+            "sorted": false,
+            "unsorted": true
+        },
+        "numberOfElements": 1,
+        "empty": false
     }
 }
 ```
@@ -318,3 +343,22 @@ API 호출 시 HTTP HEADER에 아래처럼 추가해야 합니다.
 | targetMembers.name | String | 발생한 이벤트의 대상 회원의 이름 |
 | targetMembers.userCode | Integer | 발생한 이벤트의 대상 회원의 ID(IAM 멤버일 경우) |
 | targetMembers.emailAddress | String | 발생한 이벤트의 대상 회원의 이메일 주소(NHN Cloud 회원일 경우) |
+| pageable.pageNumber | Integer | 이벤트 조회시 현재 페이지 |
+| pageable.pageSize | Integer | 한 페이지의 크기 |
+| pageable.sort.empty | Boolean | 이벤트 정렬 기준 비존재 여부 |
+| pageable.sort.sorted | Boolean | 정렬된 이벤트 여부|
+| pageable.sort.unsorted | Boolean | 정렬되지 않은 이벤트 여부 |
+| pageable.offset | Integer | 이벤트 조회의 현재 페이지 시작 offset |
+| pageable.paged | Boolean | 페이징된 결과 여부 |
+| pageable.unpaged | Boolean | 페이징되지 않은 결과 여부 |
+| last | Boolean | 마지막 페이지 여부 |
+| totalElements | Integer | 조회된 총 이벤트 갯수 |
+| totalPages | Integer | 조회된 총 페이지 갯수 |
+| first | Boolean | 첫번째 페이지 여부 |
+| size | Integer | 페이지 사이즈 |
+| number | Integer | 현재 페이지 번호 |
+| sort.emtpy | Boolean | 이벤트 정렬 기준 비존재 여부 |
+| sort.sorted | Boolean | 정렬된 이벤트 여부 |
+| sort.unsorted | Boolean | 정렬되지 않은 이벤트 여부 |
+| numberOfElements | Integer | 현재 페이지의 이벤트 로그 갯수 |
+| empty | Boolean | 현재 페이지 이벤트 공백 여부 |
