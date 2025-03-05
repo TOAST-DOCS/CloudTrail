@@ -992,3 +992,15 @@
 |대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
 |지표 수집 설정|event_id.cloud_monitoring_project.service_management|
 
+### DDoS Guard
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|Zone 생성|event_id.ddos_guard.zone_create|
+|Zone 수정|event_id.ddos_guard.zone_modify|
+|Zone 해제|event_id.ddos_guard.zone_cancel|
+|보고서 설정|event_id.ddos_guard.report_usage_set|
+|모의 훈련 생성|event_id.ddos_guard.mock_training_create|
+|모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
+|모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
+
