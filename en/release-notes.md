@@ -3,6 +3,7 @@
 ### 2025. 03. 04.
 #### More Events
 * Added events related to Default Infrastructure Service.
+* Added events related to DDoS Guard.
 
 ### 2024. 12. 24.
 #### More Events
