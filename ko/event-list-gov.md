@@ -102,6 +102,7 @@
 |라우팅 테이블 인터넷 게이트웨이 연결 해제|event_id.iaas.routing_table.detach_gateway|
 |라우팅 테이블 기본 지정|event_id.iaas.routing_table.set_as_default|
 |라우팅 테이블 라우트 생성|event_id.iaas.route.create|
+|라우팅 테이블 라우트 변경|event_id. event_id.iaas.route.update|
 |라우팅 테이블 라우트 삭제|event_id.iaas.route.delete|
 |플로팅 IP 생성|event_id.iaas.floating_ip.create|
 |플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
@@ -991,4 +992,16 @@
 |대시보드 노출 설정|event_id.cloud_monitoring_project.dashboard_exposure|
 |대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
 |지표 수집 설정|event_id.cloud_monitoring_project.service_management|
+
+### DDoS Guard
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|Zone 생성|event_id.ddos_guard.zone_create|
+|Zone 수정|event_id.ddos_guard.zone_modify|
+|Zone 해제|event_id.ddos_guard.zone_cancel|
+|보고서 설정|event_id.ddos_guard.report_usage_set|
+|모의 훈련 생성|event_id.ddos_guard.mock_training_create|
+|모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
+|모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
 
