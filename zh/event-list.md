@@ -1003,7 +1003,7 @@
 |Purge Cache - All|event_id.cdn.cache_purge.all_type|
 |Create an Auth Token|event_id.cdn.auth_token|
 
-### System Monitoring
+### System Monitoring(CloudTrail)
 
 | Event | Event ID |
 | --- | --- |
@@ -1527,6 +1527,7 @@
 |예약 발송 메시지 검색하여 취소|event_id.sms.search_cancel_reservation_message|
 |Request Mass Delivery|event_id.sms.send_mass_message|
 |수신거부 서비스 공유|event_id.sms.share_block_service|
+|국제 발송 설정 수정|event_id.sms.update_international_send_config|
 |발송 설정 수정|event_id.sms.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
 
@@ -1900,11 +1901,11 @@
 
 | Event | Event ID |
 | --- | --- |
-|Zone 생성|event_id.ddos_guard.zone_create|
-|Zone 수정|event_id.ddos_guard.zone_modify|
-|Zone 해제|event_id.ddos_guard.zone_cancel|
-|보고서 설정|event_id.ddos_guard.report_usage_set|
-|모의 훈련 생성|event_id.ddos_guard.mock_training_create|
-|모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
-|모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
+|Create Zone|event_id.ddos_guard.zone_create|
+|Modify Zone|event_id.ddos_guard.zone_modify|
+|Deactivate Zone|event_id.ddos_guard.zone_cancel|
+|Set Report|event_id.ddos_guard.report_usage_set|
+|Create Mock Training|event_id.ddos_guard.mock_training_create|
+|Modify Mock Training|event_id.ddos_guard.mock_training_modify|
+|Delete Mock Training|event_id.ddos_guard.mock_training_delete|
 
