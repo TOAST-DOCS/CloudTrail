@@ -1,5 +1,9 @@
 ## CloudTrail > Release Notes
 
+### 2025. 03. 25.
+#### More Events
+* Added events related to SMS.
+
 ### 2025. 03. 04.
 #### More Events
 * Added events related to Default Infrastructure Service.
@@ -373,7 +377,7 @@
 #### More Events
 * Added events related to CloudTrail.
 * Added events related to Certificate Manager.
-* Added events related to System Monitoring.
+* Added events related to System Monitoring(CloudTrail).
 #### More Features
 * Added Log save/download setting.
     * For more information, see the [Console User Guide](/CloudTrail/zh/console-guide/).
