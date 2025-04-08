@@ -1003,7 +1003,7 @@
 |전체 파일 캐시 재배포|event_id.cdn.cache_purge.all_type|
 |AUTH Token 생성|event_id.cdn.auth_token|
 
-### System Monitoring
+### System Monitoring(CloudTrail)
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
@@ -1527,6 +1527,7 @@
 |예약 발송 메시지 검색하여 취소|event_id.sms.search_cancel_reservation_message|
 |대량 발송 요청|event_id.sms.send_mass_message|
 |수신거부 서비스 공유|event_id.sms.share_block_service|
+|국제 발송 설정 수정|event_id.sms.update_international_send_config|
 |발송 설정 수정|event_id.sms.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
 
