@@ -1,5 +1,9 @@
 ## CloudTrail > リリースノート
 
+### 2025. 03. 25.
+#### イベント追加
+* SMS サービス関連イベントを追加しました。
+
 ### 2025. 03. 04.
 #### イベント追加
 * 基本インフラ サービス関連イベントを追加しました。
@@ -373,7 +377,7 @@
 #### イベント追加
 * CloudTrail サービス関連イベントを追加しました。
 * Certificate Manager サービス関連イベントを追加しました。
-* System Monitoring サービス関連イベントを追加しました。
+* System Monitoring(CloudTrail) サービス関連イベントを追加しました。
 #### 機能追加
 * Added Log save/download setting.
     * For more information, see the [Console User Guide](/CloudTrail/ja/console-guide/).
