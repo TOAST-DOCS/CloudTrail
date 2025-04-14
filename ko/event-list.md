@@ -1515,8 +1515,6 @@
 |수신거부 서비스 제거|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
-|본인 인증 요청|event_id.sms.request_self_verification|
-|발신 번호 인증 요청|event_id.sms.request_sender_number_verification|
 |수신 거부자 파일 다운로드 예약|event_id.sms.reserve_download_block_recipient|
 |대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|
 |일반 수신자 파일 다운로드 예약|event_id.sms.reserve_download_normal_message|
@@ -1902,14 +1900,14 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|주소록 수신자 목록 파일 다운로드|event_id.notification_hub.addressbook.export_recipients|
-|주소록 그룹 수신자 목록 파일 다운로드|event_id.notification_hub.addressbook.export_group_recipients|
-|수신거부한 휴대폰 번호 목록 파일 다운로드|event_id.notification_hub.unsubscription.export_phone_numbers|
-|수신거부한 이메일 주소 목록 파일 다운로드|event_id.notification_hub.unsubscription.export_email_address|
-|수신거부한 푸시 토큰 목록 파일 다운로드|event_id.notification_hub.unsubscription.export_tokens|
-|수신자별 수신 결과 목록 파일 다운로드|event_id.notification_hub.contact_delivery_result.export|
+|주소록 수신자 목록 파일 다운로드 요청|event_id.notification_hub.addressbook.export_recipients|
+|주소록 그룹 수신자 목록 파일 다운로드 요청|event_id.notification_hub.addressbook.export_group_recipients|
+|수신거부한 휴대폰 번호 목록 파일 다운로드 요청|event_id.notification_hub.unsubscription.export_phone_numbers|
+|수신거부한 이메일 주소 목록 파일 다운로드 요청|event_id.notification_hub.unsubscription.export_email_address|
+|수신거부한 푸시 토큰 목록 파일 다운로드 요청|event_id.notification_hub.unsubscription.export_tokens|
+|수신자별 수신 결과 목록 파일 다운로드 요청|event_id.notification_hub.contact_delivery_result_export|
+|요청 파일 다운로드|event_id.notification_hub.download_export_file|
 |SMS 발신 번호 삭제|event_id.notification_hub.sender.delete_sender_phone_number|
-|SMS 개인 휴대폰 번호 인증을 통해 발신 번호 등록|event_id.notification_hub.sender.register_sender_phone_number_by_individual_phone|
 |SMS 서류 등록을 통해 발신 번호 등록|event_id.notification_hub.sender.register_sender_phone_number_by_documents|
 |RCS 브랜드 연동|event_id.notification_hub.sender.sync_rcs_brand|
 |Push 인증서 등록|event_id.notification_hub.sender.register_push_certificate|
@@ -1925,24 +1923,23 @@
 |카카오 발신 프로필 그룹 등록|event_id.notification_hub.sender.register_kakao_sender_profile_group|
 |카카오 발신 프로필 그룹에 발신 프로필 등록|event_id.notification_hub.sender.register_kakao_sender_profile_to_group|
 |카카오 발신 프로필 그룹에서 발신 프로필 삭제|event_id.notification_hub.sender.delete_kakao_sender_profile_from_group|
-|본인 인증 심사 요청|event_id.notification_hub.identity_verification.request_verification|
+|본인 인증 심사 요청|event_id.notification_hub.identity_verification_request_verification|
 |080 수신거부 번호 개통 요청|event_id.notification_hub.unsubscribed_phone_number_request|
 |080 수신거부 번호 해지|event_id.notification_hub.unsubscribed_phone_number_delete|
 |080 수신거부 번호 해지 취소|event_id.notification_hub.unsubscribed_phone_number_cancel_deletion|
-|080 수신거부 번호 공유 해제|event_id.notification_hub.unsubscribed_phone_number_delete_shared|
 |플로우 수정|event_id.notification_hub.flow_modify|
 |플로우 삭제|event_id.notification_hub.flow_delete|
 |템플릿 수정|event_id.notification_hub.template_modify|
 |템플릿 삭제|event_id.notification_hub.template_delete|
 |통계 키 수정|event_id.notification_hub.stats_key_modify|
 |통계 키 삭제|event_id.notification_hub.stats_key_delete|
-|국제 SMS 설정 수정|event_id.notification_hub.detail_configuration.SMS.modify_international_config|
-|SMS 대체 문자 설정|event_id.notification_hub.detail_configuration.SMS.modify_character_replacement_substitutions|
-|SMS 중복 발송 차단 시간 설정|event_id.notification_hub.detail_configuration.SMS.modify_duplicate_sending|
-|SMS 광고성 메시지 발송 시간 제한 설정|event_id.notification_hub.detail_configuration.SMS.modify_ad|
-|친구톡 발신프로필과 비즈니스 폼 아이디 등록|event_id.notification_hub.detail_configuration.FRIENDTALK.register_sender_key_and_biz_form_id|
-|Push 광고 표시 문시 위치 설정|event_id.notification_hub.detail_configuration.PUSH.modify_ad_message_position|
-|Push 광고 수신 동의 확인 메시지 자동 발송 설정|event_id.notification_hub.detail_configuration.PUSH.modify_ad_re_agreement_notice_auto_sending|
+|국제 SMS 설정 수정|event_id.notification_hub.detail_configuration_SMS_modify_international_config|
+|SMS 대체 문자 설정|event_id.notification_hub.detail_configuration_SMS_modify_character_replacement_substitutions|
+|중복 발송 차단 시간 설정|event_id.notification_hub.detail_configuration_modify_duplicate_sending|
+|광고성 메시지 발송 시간 제한 설정|event_id.notification_hub.detail_configuration_modify_ad|
+|친구톡 발신프로필과 비즈니스 폼 아이디 등록|event_id.notification_hub.detail_configuration_FRIENDTALK_register_sender_key_and_biz_form_id|
+|Push 광고 표시 문구 위치 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_message_position|
+|Push 광고 수신 동의 확인 메시지 자동 발송 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_re_agreement_notice_auto_sending|
 
 ### DDoS Guard
 
