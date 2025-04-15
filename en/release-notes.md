@@ -1,5 +1,10 @@
 ## CloudTrail > Release Notes
 
+### 2025. 04. 15.
+#### More Events
+* Added events related to Gamebase.
+* Added events related to Notification Hub.
+
 ### 2025. 03. 25.
 #### More Events
 * Added events related to SMS.
