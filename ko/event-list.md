@@ -1088,9 +1088,6 @@
 |파이프라인 삭제|event_id.pipeline.pipeline_manage.delete|
 |파이프라인 수동 실행|event_id.pipeline.pipeline_manage.manual_execute|
 |파이프라인 실행 취소|event_id.pipeline.pipeline_manage.execute_cancel|
-|개발 환경 생성|event_id.pipeline.dev_env_config.create|
-|개발 환경 수정|event_id.pipeline.dev_env_config.update|
-|개발 환경 삭제|event_id.pipeline.dev_env_config.delete|
 |소스 저장소 생성|event_id.pipeline.source_repository.create|
 |소스 저장소 수정|event_id.pipeline.source_repository.update|
 |소스 저장소 삭제|event_id.pipeline.source_repository.delete|
@@ -1518,8 +1515,6 @@
 |수신거부 서비스 제거|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
-|본인 인증 요청|event_id.sms.request_self_verification|
-|발신 번호 인증 요청|event_id.sms.request_sender_number_verification|
 |수신 거부자 파일 다운로드 예약|event_id.sms.reserve_download_block_recipient|
 |대량 수신자 파일 다운로드 예약|event_id.sms.reserve_download_mass_message|
 |일반 수신자 파일 다운로드 예약|event_id.sms.reserve_download_normal_message|
@@ -1789,6 +1784,10 @@
 |Cloud Launching 설정|event_id.gamebase.cloud_lnc_update|
 |이미지 공지 앱 수정|event_id.gamebase.image_notice_app_update|
 |이용 정지 목록 다운로드|event_id.gamebase.ban_history_download|
+|게임 공지 등록|event_id.gamebase.game_notice_create|
+|게임 공지 수정|event_id.gamebase.game_notice_update|
+|게임 공지 삭제|event_id.gamebase.game_notice_delete|
+|게임 공지 설정 수정|event_id.gamebase.game_notice_app_update|
 
 ### NHN Container Registry(NCR)
 
@@ -1896,6 +1895,51 @@
 |템플릿 생성|event_id.cloud_scheduler.schedule_template.create|
 |템플릿 변경|event_id.cloud_scheduler.schedule_template.update|
 |템플릿 삭제|event_id.cloud_scheduler.schedule_template.delete|
+
+### Notification Hub
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|주소록 수신자 목록 파일 다운로드 요청|event_id.notification_hub.addressbook.export_recipients|
+|주소록 그룹 수신자 목록 파일 다운로드 요청|event_id.notification_hub.addressbook.export_group_recipients|
+|수신거부한 휴대폰 번호 목록 파일 다운로드 요청|event_id.notification_hub.unsubscription.export_phone_numbers|
+|수신거부한 이메일 주소 목록 파일 다운로드 요청|event_id.notification_hub.unsubscription.export_email_address|
+|수신거부한 푸시 토큰 목록 파일 다운로드 요청|event_id.notification_hub.unsubscription.export_tokens|
+|수신자별 수신 결과 목록 파일 다운로드 요청|event_id.notification_hub.contact_delivery_result_export|
+|요청 파일 다운로드|event_id.notification_hub.download_export_file|
+|SMS 발신 번호 삭제|event_id.notification_hub.sender.delete_sender_phone_number|
+|SMS 서류 등록을 통해 발신 번호 등록|event_id.notification_hub.sender.register_sender_phone_number_by_documents|
+|RCS 브랜드 연동|event_id.notification_hub.sender.sync_rcs_brand|
+|Push 인증서 등록|event_id.notification_hub.sender.register_push_certificate|
+|Push 인증서 삭제|event_id.notification_hub.sender.delete_push_certificate|
+|Email 도메인 등록|event_id.notification_hub.sender.register_email_domain|
+|Email 도메인 삭제|event_id.notification_hub.sender.delete_email_domain|
+|Email 도메인 소유권 인증|event_id.notification_hub.sender.verify_email_domain_ownership|
+|Email 도메인 보호 활성화|event_id.notification_hub.sender.protect_email_domain|
+|Email 도메인 보호 해제|event_id.notification_hub.sender.unprotect_email_domain|
+|카카오 발신 프로필 등록|event_id.notification_hub.sender.register_kakao_sender_profile|
+|카카오 발신 프로필 삭제|event_id.notification_hub.sender.delete_kakao_sender_profile|
+|카카오 발신 프로필 토큰 등록|event_id.notification_hub.sender.register_kakao_sender_profile_token|
+|카카오 발신 프로필 그룹 등록|event_id.notification_hub.sender.register_kakao_sender_profile_group|
+|카카오 발신 프로필 그룹에 발신 프로필 등록|event_id.notification_hub.sender.register_kakao_sender_profile_to_group|
+|카카오 발신 프로필 그룹에서 발신 프로필 삭제|event_id.notification_hub.sender.delete_kakao_sender_profile_from_group|
+|본인 인증 심사 요청|event_id.notification_hub.identity_verification_request_verification|
+|080 수신거부 번호 개통 요청|event_id.notification_hub.unsubscribed_phone_number_request|
+|080 수신거부 번호 해지|event_id.notification_hub.unsubscribed_phone_number_delete|
+|080 수신거부 번호 해지 취소|event_id.notification_hub.unsubscribed_phone_number_cancel_deletion|
+|플로우 수정|event_id.notification_hub.flow_modify|
+|플로우 삭제|event_id.notification_hub.flow_delete|
+|템플릿 수정|event_id.notification_hub.template_modify|
+|템플릿 삭제|event_id.notification_hub.template_delete|
+|통계 키 수정|event_id.notification_hub.stats_key_modify|
+|통계 키 삭제|event_id.notification_hub.stats_key_delete|
+|국제 SMS 설정 수정|event_id.notification_hub.detail_configuration_SMS_modify_international_config|
+|SMS 대체 문자 설정|event_id.notification_hub.detail_configuration_SMS_modify_character_replacement_substitutions|
+|중복 발송 차단 시간 설정|event_id.notification_hub.detail_configuration_modify_duplicate_sending|
+|광고성 메시지 발송 시간 제한 설정|event_id.notification_hub.detail_configuration_modify_ad|
+|친구톡 발신프로필과 비즈니스 폼 아이디 등록|event_id.notification_hub.detail_configuration_FRIENDTALK_register_sender_key_and_biz_form_id|
+|Push 광고 표시 문구 위치 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_message_position|
+|Push 광고 수신 동의 확인 메시지 자동 발송 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_re_agreement_notice_auto_sending|
 
 ### DDoS Guard
 
