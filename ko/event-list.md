@@ -107,14 +107,17 @@
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
-|인스턴스 인터페이스 추가|event_id.iaas.interface.create|
-|인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|
+|인스턴스 네트워크 인터페이스 연결 추가|event_id.iaas.interface.create|
+|인스턴스 네트워크 인터페이스 연결 해제|event_id.iaas.interface.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
+|배치 정책 생성|event_id.iaas.servergroup.create|
+|배치 정책 삭제|event_id.iaas.servergroup.delete|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
+|이미지 생성 실패|event_id.iaas.image.create_failed|
 |이미지 삭제|event_id.iaas.image.delete|
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
@@ -140,6 +143,9 @@
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|블록 스토리지 이동|event_id.iaas.volume.transfer|
+|블록 스토리지 이동 완료(대상)|event_id.iaas.volume.transfer_accept|
+|블록 스토리지 이동 완료(소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
@@ -169,8 +175,10 @@
 |서브넷 정적 라우트 생성|event_id.iaas.vpc_subnet_route.create|
 |서브넷 정적 라우트 삭제|event_id.iaas.vpc_subnet_route.delete|
 |포트 생성|event_id.iaas.port.create|
+|네트워크 인터페이스 생성 완료|event_id.iaas.port.create_end|
 |포트 삭제|event_id.iaas.port.delete|
 |포트 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 삭제 완료|event_id.iaas.port.delete_end|
 |라우팅 테이블 생성|event_id.iaas.routing_table.create|
 |라우팅 테이블 삭제|event_id.iaas.routing_table.delete|
 |라우팅 테이블 변경|event_id.iaas.routing_table.update|
@@ -321,8 +329,11 @@
 |플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
 |플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
 |플로우 로그 로거 생성 완료|event_id.iaas.flowlog_logger.create_end|
+|플로우 로그 스토리지 생성|event_id.iaas.flowlog_storage.create|
 |플로우 로그 로거 삭제 완료|event_id.iaas.flowlog_logger.delete_end|
+|플로우 로그 스토리지 삭제|event_id.iaas.flowlog_storage.delete|
 |플로우 로그 로거 수정 완료|event_id.iaas.flowlog_logger.update_end|
+|플로우 로그 스토리지 수정|event_id.iaas.flowlog_storage.update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -542,20 +553,43 @@
 |워크로드 작업 수 자동 조정 시작|event_id.iaas.ncs.workload_task_resize.start|
 |워크로드 작업 수 자동 조정 종료|event_id.iaas.ncs.workload_task_resize.end|
 |워크로드 작업 수 자동 조정 실패|event_id.iaas.ncs.workload_task_resize.failed|
-|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
-|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
-|NAS 볼륨 변경|event_id.iaas.nas.volume.update|
-|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
-|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
-|NAS 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
-|CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
-|CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
-|CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
+|NAS CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
+|NAS CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
+|NAS CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
+|NAS 암호화 키 저장소 설정|event_id.iaas.nas.encryption_key_store.set|
+|NAS 스토리지 생성|event_id.iaas.nas.volume.create|
+|NAS 스토리지 삭제|event_id.iaas.nas.volume.delete|
+|NAS 스토리지 설정 변경|event_id.iaas.nas.volume.update|
+|NAS 스토리지 생성 완료|event_id.iaas.nas.volume.create_end|
+|NAS 스토리지 삭제 완료|event_id.iaas.nas.volume.delete_end|
+|NAS 스토리지 설정 변경 완료|event_id.iaas.nas.volume.update_end|
+|NAS 스토리지 스냅숏 생성|event_id.iaas.nas.snapshot.create|
+|NAS 스토리지 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|NAS 스토리지 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
+|NAS 스토리지 복제 설정|event_id.iaas.nas.replication.set|
+|NAS 스토리지 복제 설정 해제|event_id.iaas.nas.replication.unset|
+|NAS 스토리지 복제 시작|event_id.iaas.nas.replication.start|
+|NAS 스토리지 복제 중지|event_id.iaas.nas.replication.stop|
+|NAS 스토리지 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
+|NAS 스토리지 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
+|NAS 스토리지 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
 |NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|
 |NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|
 |NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
 |NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
 |NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
+|게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
+|게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
+|게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
+|게이트웨이 생성 완료|event_id.iaas.storage_gateway.gateway.create_end|
+|게이트웨이 설정 변경 완료|event_id.iaas.storage_gateway.gateway.update_end|
+|게이트웨이 삭제 완료|event_id.iaas.storage_gateway.gateway.delete_end|
+|공유 생성|event_id.iaas.storage_gateway.share.create|
+|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|공유 삭제|event_id.iaas.storage_gateway.share.delete|
+|공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
+|공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
+|공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
