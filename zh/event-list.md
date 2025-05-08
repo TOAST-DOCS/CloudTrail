@@ -107,14 +107,17 @@
 |Create Instance Metadata|event_id.iaas.metadata.create|
 |Delete Instance Metadata|event_id.iaas.metadata.delete|
 |Change Instance Metadata|event_id.iaas.metadata.update|
-|Create Instance Interface|event_id.iaas.interface.create|
-|Delete Instance Interface|event_id.iaas.interface.delete|
+|Attach Instance Network Interface|event_id.iaas.interface.create|
+|Detach Instance Network Interface|event_id.iaas.interface.delete|
 |Create Keypair|event_id.iaas.keypair.create|
 |Delete Keypair|event_id.iaas.keypair.delete|
+|Create Batch Policy|event_id.iaas.servergroup.create|
+|Delete Batch Policy|event_id.iaas.servergroup.delete|
 |Copy Image|event_id.iaas.image.copy|
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
 |Create Image ID|event_id.iaas.image.create_id|
+|Create Image Failed|event_id.iaas.image.create_failed|
 |Delete Image|event_id.iaas.image.delete|
 |Delete Image Completed|event_id.iaas.image.delete_end|
 |Modify Image|event_id.iaas.image.update|
@@ -140,6 +143,9 @@
 |Detach Instance Block Storage|event_id.iaas.volume.detach|
 |Detach Instance Block Storage Completed|event_id.iaas.volume.detach_end|
 |Change Block Storage Size|event_id.iaas.volume.extend|
+|Move Block Storage|event_id.iaas.volume.transfer|
+|Move Block Storage Completed (Target)|event_id.iaas.volume.transfer_accept|
+|Move Block Storage Completed (Source)|event_id.iaas.volume.transfer_create|
 |Create Block Storage Snapshot|event_id.iaas.snapshot.create|
 |Create Block Storage Snapshot Completed|event_id.iaas.snapshot.create_end|
 |Delete Block Storage Snapshot|event_id.iaas.snapshot.delete|
@@ -168,9 +174,11 @@
 |Disconnect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.detach_routingtable|
 |Create Subnet Static Route|event_id.iaas.vpc_subnet_route.create|
 |Delete Subnet Static Route|event_id.iaas.vpc_subnet_route.delete|
-|Create Port|event_id.iaas.port.create|
-|Delete Port|event_id.iaas.port.delete|
-|Change Port|event_id.iaas.port.update|
+|Create Network Interface|event_id.iaas.port.create|
+|Create Network Interface Completed|event_id.iaas.port.create_end|
+|Change Network Interface|event_id.iaas.port.update|
+|Delete Network Interface|event_id.iaas.port.delete|
+|Delete Network Interface Completed|event_id.iaas.port.delete_end|
 |Create Routing Table|event_id.iaas.routing_table.create|
 |Delete Routing Table|event_id.iaas.routing_table.delete|
 |Change Routing Table|event_id.iaas.routing_table.update|
@@ -321,8 +329,11 @@
 |Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
 |Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Create Flow Log Logger Completed|event_id.iaas.flowlog_logger.create_end|
+|Create Flow Log Storage|event_id.iaas.flowlog_storage.create|
 |Delete Flow Log Logger Completed|event_id.iaas.flowlog_logger.delete_end|
+|Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
 |Modify Flow Log Logger Completed|event_id.iaas.flowlog_logger.update_end|
+|Modify Flow Log Storage|event_id.iaas.flowlog_storage.update|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -367,6 +378,18 @@
 |Keypair Update Started|event_id.iaas.cluster.update_vm_auth_key.start|
 |Keypair Update Completed|event_id.iaas.cluster.update_vm_auth_key.end|
 |Keypair Update Failed|event_id.iaas.cluster.update_vm_auth_key.failed|
+|Control plane log collection update Started|event_id.iaas.cluster.update_control_plane_log.start|
+|Control plane log collection update Completed|event_id.iaas.cluster.update_control_plane_log.end|
+|Control plane log collection update Failed|event_id.iaas.cluster.update_control_plane_log.failed|
+|Addon removal Started|event_id.iaas.cluster.uninstall_addon.start|
+|Addon removal Completed|event_id.iaas.cluster.uninstall_addon.end|
+|Addon removal Failed|event_id.iaas.cluster.uninstall_addon.failed|
+|Addon installation Started|event_id.iaas.cluster.install_addon.start|
+|Addon installation Completed|event_id.iaas.cluster.install_addon.end|
+|Addon installation Failed|event_id.iaas.cluster.install_addon.failed|
+|Addon update Started|event_id.iaas.cluster.update_addon.start|
+|Addon update Completed|event_id.iaas.cluster.update_addon.end|
+|Addon update Failed|event_id.iaas.cluster.update_addon.failed|
 |Create Node Group Completed|event_id.iaas.nodegroup.create.end|
 |Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
 |Create Node Group Started|event_id.iaas.nodegroup.create.start|
@@ -397,6 +420,27 @@
 |Additional security group update completed|event_id.iaas.nodegroup.update_extra_security_group.end|
 |Additional security group update failed|event_id.iaas.nodegroup.update_extra_security_group.fail|
 |Additional security group update started|event_id.iaas.nodegroup.update_extra_security_group.start|
+|Metric-based autoscaler configuration for node group Started|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
+|Metric-based autoscaler configuration for node group Completed|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
+|Metric-based autoscaler configuration for node group Failed|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
+|Node group scale-out by metric-based autoscaler Started|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
+|Node group scale-out by metric-based autoscaler Completed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
+|Node group scale-out by metric-based autoscaler Failed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
+|Node group scale-in by metric-based autoscaler Started|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
+|Node group scale-in by metric-based autoscaler Completed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
+|Node group scale-in by metric-based autoscaler Failed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
+|Kubernetes node label change in node group Started|event_id.iaas.nodegroup.update_k8s_node_labels.start|
+|Kubernetes node label change in node group Completed|event_id.iaas.nodegroup.update_k8s_node_labels.end|
+|Kubernetes node label change in node group Failed|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
+|Floating IP auto-assignment change Started|event_id.iaas.nodegroup.update_fip_auto_bind.start|
+|Floating IP auto-assignment change Completed|event_id.iaas.nodegroup.update_fip_auto_bind.end|
+|Floating IP auto-assignment change Failed|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
+|Node scale-in Started|event_id.iaas.nodegroup.scale_in.start|
+|Node scale-in Completed|event_id.iaas.nodegroup.scale_in.end|
+|Node scale-in Failed|event_id.iaas.nodegroup.scale_in.failed|
+|Node scale-out Started|event_id.iaas.nodegroup.scale_out.start|
+|Node scale-out Completed|event_id.iaas.nodegroup.scale_out.end|
+|Node scale-out Failed|event_id.iaas.nodegroup.scale_out.failed|
 |Approve CSR|event_id.iaas.cluster.certificate_signing_request.approval|
 |Create CSR|event_id.iaas.cluster.certificate_signing_request.create|
 |Delete CSR|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -542,20 +586,43 @@
 |Resize Workload Tasks Started|event_id.iaas.ncs.workload_task_resize.start|
 |Resize Workload Tasks Ended|event_id.iaas.ncs.workload_task_resize.end|
 |Resize Workload Tasks Failed|event_id.iaas.ncs.workload_task_resize.failed|
-|Create NAS Volume|event_id.iaas.nas.volume.create|
-|Delete NAS Volume|event_id.iaas.nas.volume.delete|
-|Modify NAS Volume|event_id.iaas.nas.volume.update|
-|Create NAS Snapshot|event_id.iaas.nas.snapshot.create|
-|Delete NAS Snapshot|event_id.iaas.nas.snapshot.delete|
-|Restore NAS Snapshot|event_id.iaas.nas.snapshot.restore|
-|Create CIFS Credentials|event_id.iaas.nas.cifs_credential.create|
-|Delete CIFS Credentials|event_id.iaas.nas.cifs_credential.delete|
-|Modify CIFS Credentials|event_id.iaas.nas.cifs_credential.update|
+|Create NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.create|
+|Delete NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.delete|
+|Change NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.update|
+|Set NAS Encryption Key Store|event_id.iaas.nas.encryption_key_store.set|
+|Create NAS Storage|event_id.iaas.nas.volume.create|
+|Delete NAS Storage|event_id.iaas.nas.volume.delete|
+|Modify NAS Storage Settings|event_id.iaas.nas.volume.update|
+|NAS Storage Creation Completed|event_id.iaas.nas.volume.create_end|
+|NAS Storage Deletion Completed|event_id.iaas.nas.volume.delete_end|
+|NAS Storage Settings Modification Completed|event_id.iaas.nas.volume.update_end|
+|Create NAS Storage Snapshot|event_id.iaas.nas.snapshot.create|
+|Delete NAS Storage Snapshot|event_id.iaas.nas.snapshot.delete|
+|Restore NAS Storage Snapshot|event_id.iaas.nas.snapshot.restore|
+|Set NAS Storage Replication|event_id.iaas.nas.replication.set|
+|Turn off NAS Storage Replication|event_id.iaas.nas.replication.unset|
+|Start NAS Storage Replication|event_id.iaas.nas.replication.start|
+|Stop NAS Storage Replication|event_id.iaas.nas.replication.stop|
+|Change NAS Storage Replication Direction|event_id.iaas.nas.replication.change_direction|
+|Add NAS Storage Subnet Association|event_id.iaas.nas.subnet.attach|
+|Disassociate NAS Storage Subnet|event_id.iaas.nas.subnet.detach|
 |Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
 |Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
 |Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
 |Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
 |Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
+|Create Gateway|event_id.iaas.storage_gateway.gateway.create|
+|Change Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
+|Delete Gateway|event_id.iaas.storage_gateway.gateway.delete|
+|Create Gateway Completed|event_id.iaas.storage_gateway.gateway.create_end|
+|Change Gateway Settings Completed|event_id.iaas.storage_gateway.gateway.update_end|
+|Delete Gateway Completed|event_id.iaas.storage_gateway.gateway.delete_end|
+|Create Share|event_id.iaas.storage_gateway.share.create|
+|Change Share Settings|event_id.iaas.storage_gateway.share.update|
+|Delete Share|event_id.iaas.storage_gateway.share.delete|
+|Create Share Comleted|event_id.iaas.storage_gateway.share.create_end|
+|Change Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
+|Delete Share Completed|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
@@ -1554,26 +1621,47 @@
 
 | Event | Event ID |
 | --- | --- |
-|방화벽 구성|event_id.network_firewall.config_iaas|
-|인프라 구성|event_id.network_firewall.config_project|
-|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
-|정책 추가|event_id.network_firewall.group_create|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
-|정책 삭제|event_id.network_firewall.group_delete|
-|정책 수정|event_id.network_firewall.group_modify|
-|IP 객체 추가|event_id.network_firewall.ip_object_create|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|
-|Nat 추가|event_id.network_firewall.nat_create|
-|Nat 삭제|event_id.network_firewall.nat_delete|
-|옵션 설정|event_id.network_firewall.option_create|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|
-|Port 객체 추가|event_id.network_firewall.port_object_create|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|
+|Firewall configuration|event_id.network_firewall.config_iaas|
+|Add Mirroring Filter Group|event_id.network_firewall.mirroring_filter_group_create|
+|Delete Mirroring Filter Group|event_id.network_firewall.mirroring_filter_group_delete|
+|Modify Mirroring Filter Group|event_id.network_firewall.mirroring_filter_group_modify|
+|Add Mirroring Rule|event_id.network_firewall.mirroring_rule_create|
+|Delete Mirroring Rule|event_id.network_firewall.mirroring_rule_delete|
+|Modify Mirroring Rule|event_id.network_firewall.mirroring_rule_modify|
+|Infrastructure configuration|event_id.network_firewall.config_project|
+|Infrastructure and firewall configuration|event_id.network_firewall.config_project_iaas|
+|Download VPN Event Logs|event_id.network_firewall.event_log_download|
+|Modify VPN Gateway|event_id.network_firewall.gateway_modify|
+|Add Policy|event_id.network_firewall.group_create|
+|Add Policy as Excel|event_id.network_firewall.group_create_template|
+|Validate Policy as Excel|event_id.network_firewall.group_create_template_verify|
+|Delete Policy|event_id.network_firewall.group_delete|
+|Modify Policy|event_id.network_firewall.group_modify|
+|Add IP Object|event_id.network_firewall.ip_object_create|
+|Delete IP Object|event_id.network_firewall.ip_object_delete|
+|Add IP Instance Object|event_id.network_firewall.ip_object_instance_create|
+|Modify IP Object|event_id.network_firewall.ip_object_modify|
+|Add NAT|event_id.network_firewall.nat_create|
+|Delete NAT|event_id.network_firewall.nat_delete|
+|Edit NAT|event_id.network_firewall.nat_edit|
+|Option Settings|event_id.network_firewall.option_create|
+|Validate LNCS Info|event_id.network_firewall.option_lncs_valid|
+|Validate OBS Info|event_id.network_firewall.option_obs_valid|
+|Add Port Object|event_id.network_firewall.port_object_create|
+|Delete Port Object|event_id.network_firewall.port_object_delete|
+|Modify Port Object|event_id.network_firewall.port_object_modify|
+|Delete Network Firewall|event_id.network_firewall.region_delete|
+|Add Routing|event_id.network_firewall.route_create|
+|Delete Routing|event_id.network_firewall.route_delete|
+|Modify Routing|event_id.network_firewall.route_modify|
+|VPN Event|event_id.network_firewall.vpn|
+|Create VPN Gateway|event_id.network_firewall.vpn_gateway_create|
+|Delete VPN Gateway|event_id.network_firewall.vpn_gateway_delete|
+|Associate Floating IP with VPN Gateway|event_id.network_firewall.vpn_gateway_floatingip|
+|Create VPN Tunnel|event_id.network_firewall.vpn_tunnel_create|
+|Delete VPN Tunnel|event_id.network_firewall.vpn_tunnel_delete|
+|Attach/Detach VPN Tunnel|event_id.network_firewall.vpn_tunnel_initiate_terminate|
+|Modify VPN Tunnel|event_id.network_firewall.vpn_tunnel_modify|
 
 ### RCS Bizmessage
 
