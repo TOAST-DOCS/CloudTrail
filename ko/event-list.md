@@ -174,10 +174,10 @@
 |VPC 서브넷 라우팅 테이블 연결 해제|event_id.iaas.vpc_subnet.detach_routingtable|
 |서브넷 정적 라우트 생성|event_id.iaas.vpc_subnet_route.create|
 |서브넷 정적 라우트 삭제|event_id.iaas.vpc_subnet_route.delete|
-|포트 생성|event_id.iaas.port.create|
+|네트워크 인터페이스 생성|event_id.iaas.port.create|
 |네트워크 인터페이스 생성 완료|event_id.iaas.port.create_end|
-|포트 삭제|event_id.iaas.port.delete|
-|포트 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 삭제|event_id.iaas.port.delete|
 |네트워크 인터페이스 삭제 완료|event_id.iaas.port.delete_end|
 |라우팅 테이블 생성|event_id.iaas.routing_table.create|
 |라우팅 테이블 삭제|event_id.iaas.routing_table.delete|
@@ -378,6 +378,18 @@
 |키페어 업데이트 시작|event_id.iaas.cluster.update_vm_auth_key.start|
 |키페어 업데이트 완료|event_id.iaas.cluster.update_vm_auth_key.end|
 |키페어 업데이트 실패|event_id.iaas.cluster.update_vm_auth_key.failed|
+|컨트롤 플레인 로그 수집 업데이트 시작|event_id.iaas.cluster.update_control_plane_log.start|
+|컨트롤 플레인 로그 수집 업데이트 완료|event_id.iaas.cluster.update_control_plane_log.end|
+|컨트롤 플레인 로그 수집 업데이트 실패|event_id.iaas.cluster.update_control_plane_log.failed|
+|Addon 제거 시작|event_id.iaas.cluster.uninstall_addon.start|
+|Addon 제거 완료|event_id.iaas.cluster.uninstall_addon.end|
+|Addon 제거 실패|event_id.iaas.cluster.uninstall_addon.failed|
+|Addon 설치 시작|event_id.iaas.cluster.install_addon.start|
+|Addon 설치 완료|event_id.iaas.cluster.install_addon.end|
+|Addon 설치 실패|event_id.iaas.cluster.install_addon.failed|
+|Addon 업데이트 시작|event_id.iaas.cluster.update_addon.start|
+|Addon 업데이트 완료|event_id.iaas.cluster.update_addon.end|
+|Addon 업데이트 실패|event_id.iaas.cluster.update_addon.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -408,6 +420,27 @@
 |추가 보안 그룹 업데이트 완료|event_id.iaas.nodegroup.update_extra_security_group.end|
 |추가 보안 그룹 업데이트 실패|event_id.iaas.nodegroup.update_extra_security_group.fail|
 |추가 보안 그룹 업데이트 시작|event_id.iaas.nodegroup.update_extra_security_group.start|
+|노드 그룹 지표 기반 오토스케일러 설정 시작|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
+|노드 그룹 지표 기반 오토스케일러 설정 완료|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
+|노드 그룹 지표 기반 오토스케일러 설정 실패|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 시작|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 완료|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 실패|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 시작|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 완료|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 실패|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
+|노드 그룹 쿠버네티스 노드 레이블 변경 시작|event_id.iaas.nodegroup.update_k8s_node_labels.start|
+|노드 그룹 쿠버네티스 노드 레이블 변경 완료|event_id.iaas.nodegroup.update_k8s_node_labels.end|
+|노드 그룹 쿠버네티스 노드 레이블 변경 실패|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
+|플로팅 IP 자동 할당 변경 시작|event_id.iaas.nodegroup.update_fip_auto_bind.start|
+|플로팅 IP 자동 할당 변경 완료|event_id.iaas.nodegroup.update_fip_auto_bind.end|
+|플로팅 IP 자동 할당 변경 실패|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
+|노드 감축 시작|event_id.iaas.nodegroup.scale_in.start|
+|노드 감축 완료|event_id.iaas.nodegroup.scale_in.end|
+|노드 감축 실패|event_id.iaas.nodegroup.scale_in.failed|
+|노드 증설 시작|event_id.iaas.nodegroup.scale_out.start|
+|노드 증설 완료|event_id.iaas.nodegroup.scale_out.end|
+|노드 증설 실패|event_id.iaas.nodegroup.scale_out.failed|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -1589,8 +1622,16 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |방화벽 구성|event_id.network_firewall.config_iaas|
+|미러링 필터 그룹 추가|event_id.network_firewall.mirroring_filter_group_create|
+|미러링 필터 그룹 삭제|event_id.network_firewall.mirroring_filter_group_delete|
+|미러링 필터 그룹 수정|event_id.network_firewall.mirroring_filter_group_modify|
+|미러링 룰 추가|event_id.network_firewall.mirroring_rule_create|
+|미러링 룰 삭제|event_id.network_firewall.mirroring_rule_delete|
+|미러링 룰 수정|event_id.network_firewall.mirroring_rule_modify|
 |인프라 구성|event_id.network_firewall.config_project|
 |인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
+|VPN 이벤트 로그 다운로드|event_id.network_firewall.event_log_download|
+|VPN 게이트웨이 수정|event_id.network_firewall.gateway_modify|
 |정책 추가|event_id.network_firewall.group_create|
 |정책 엑셀 추가|event_id.network_firewall.group_create_template|
 |정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
@@ -1602,12 +1643,25 @@
 |IP 객체 수정|event_id.network_firewall.ip_object_modify|
 |Nat 추가|event_id.network_firewall.nat_create|
 |Nat 삭제|event_id.network_firewall.nat_delete|
+|Nat 수정|event_id.network_firewall.nat_edit|
 |옵션 설정|event_id.network_firewall.option_create|
 |LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|
 |OBS 정보 검증|event_id.network_firewall.option_obs_valid|
 |Port 객체 추가|event_id.network_firewall.port_object_create|
 |Port 객체 삭제|event_id.network_firewall.port_object_delete|
 |Port 객체 수정|event_id.network_firewall.port_object_modify|
+|Network Firewall 삭제|event_id.network_firewall.region_delete|
+|라우팅 추가|event_id.network_firewall.route_create|
+|라우팅 삭제|event_id.network_firewall.route_delete|
+|라우팅 수정|event_id.network_firewall.route_modify|
+|VPN 이벤트|event_id.network_firewall.vpn|
+|VPN 게이트웨이 생성|event_id.network_firewall.vpn_gateway_create|
+|VPN 게이트웨이 삭제|event_id.network_firewall.vpn_gateway_delete|
+|VPN 게이트웨이에 플로팅 IP 연결|event_id.network_firewall.vpn_gateway_floatingip|
+|VPN 터널 생성|event_id.network_firewall.vpn_tunnel_create|
+|VPN 터널 삭제|event_id.network_firewall.vpn_tunnel_delete|
+|VPN 터널 연결/연결 해제|event_id.network_firewall.vpn_tunnel_initiate_terminate|
+|VPN 터널 수정|event_id.network_firewall.vpn_tunnel_modify|
 
 ### RCS Bizmessage
 
