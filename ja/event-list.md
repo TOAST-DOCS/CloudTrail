@@ -111,8 +111,8 @@
 |インスタンスのネットワークインターフェイス接続の解除|event_id.iaas.interface.delete|
 |キーペアの作成|event_id.iaas.keypair.create|
 |キーペアの削除|event_id.iaas.keypair.delete|
-|バッチポリシー作成|event_id.iaas.servergroup.create|
-|バッチポリシー削除|event_id.iaas.servergroup.delete|
+|配置ポリシー作成|event_id.iaas.servergroup.create|
+|配置ポリシー削除|event_id.iaas.servergroup.delete|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
