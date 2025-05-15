@@ -107,14 +107,17 @@
 |インスタンスメタデータの作成|event_id.iaas.metadata.create|
 |インスタンスメタデータの削除|event_id.iaas.metadata.delete|
 |インスタンスメタデータの変更|event_id.iaas.metadata.update|
-|インスタンスインターフェイスの作成|event_id.iaas.interface.create|
-|インスタンスインターフェイスの削除|event_id.iaas.interface.delete|
+|インスタンスのネットワークインターフェイス接続の追加|event_id.iaas.interface.create|
+|インスタンスのネットワークインターフェイス接続の解除|event_id.iaas.interface.delete|
 |キーペアの作成|event_id.iaas.keypair.create|
 |キーペアの削除|event_id.iaas.keypair.delete|
+|配置ポリシー作成|event_id.iaas.servergroup.create|
+|配置ポリシー削除|event_id.iaas.servergroup.delete|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
 |イメージID作成|event_id.iaas.image.create_id|
+|イメージ作成失敗|event_id.iaas.image.create_failed|
 |イメージの削除|event_id.iaas.image.delete|
 |イメージ削除完了|event_id.iaas.image.delete_end|
 |イメージ修正|event_id.iaas.image.update|
@@ -140,6 +143,9 @@
 |インスタンスブロックストレージ接続解除|event_id.iaas.volume.detach|
 |インスタンスブロックストレージ接続解除完了|event_id.iaas.volume.detach_end|
 |ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
+|ブロックストレージ移動|event_id.iaas.volume.transfer|
+|ブロックストレージ移動完了(対象)|event_id.iaas.volume.transfer_accept|
+|ブロックストレージ移動完了(ソース)|event_id.iaas.volume.transfer_create|
 |ブロックストレージスナップショットの作成|event_id.iaas.snapshot.create|
 |ブロックストレージスナップショット作成完了|event_id.iaas.snapshot.create_end|
 |ブロックストレージスナップショットの削除|event_id.iaas.snapshot.delete|
@@ -168,9 +174,11 @@
 |VPCサブネットルーティングテーブルの接続解除|event_id.iaas.vpc_subnet.detach_routingtable|
 |サブネット静的ルートの作成|event_id.iaas.vpc_subnet_route.create|
 |サブネット静的ルートの削除|event_id.iaas.vpc_subnet_route.delete|
-|ポートの作成|event_id.iaas.port.create|
-|ポートの削除|event_id.iaas.port.delete|
-|ポートの変更|event_id.iaas.port.update|
+|ネットワークインターフェイスの作成|event_id.iaas.port.create|
+|ネットワークインターフェイスの作成完了|event_id.iaas.port.create_end|
+|ネットワークインターフェイスの変更|event_id.iaas.port.update|
+|ネットワークインターフェイスの削除|event_id.iaas.port.delete|
+|ネットワークインターフェイスの削除完了|event_id.iaas.port.delete_end|
 |ルーティングテーブルの作成|event_id.iaas.routing_table.create|
 |ルーティングテーブルの削除|event_id.iaas.routing_table.delete|
 |ルーティングテーブルの変更|event_id.iaas.routing_table.update|
@@ -321,8 +329,11 @@
 |フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
 |フローログロガーの修正|event_id.iaas.flowlog_logger.update|
 |フローログロガーの作成完了|event_id.iaas.flowlog_logger.create_end|
+|フローログストレージの作成|event_id.iaas.flowlog_storage.create|
 |フローログロガーの削除完了|event_id.iaas.flowlog_logger.delete_end|
+|フローログストレージの削除|event_id.iaas.flowlog_storage.delete|
 |フローログロガーの修正完了|event_id.iaas.flowlog_logger.update_end|
+|フローログストレージの修正|event_id.iaas.flowlog_storage.update|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -367,6 +378,18 @@
 |キーペアアップデートを開始|event_id.iaas.cluster.update_vm_auth_key.start|
 |キーペア更新完了|event_id.iaas.cluster.update_vm_auth_key.end|
 |キーペアの更新に失敗しました|event_id.iaas.cluster.update_vm_auth_key.failed|
+|コントロールプレーンのログ収集の更新開始|event_id.iaas.cluster.update_control_plane_log.start|
+|コントロールプレーンのログ収集の更新完了|event_id.iaas.cluster.update_control_plane_log.end|
+|コントロールプレーンのログ収集の更新失敗|event_id.iaas.cluster.update_control_plane_log.failed|
+|Addonの削除開始|event_id.iaas.cluster.uninstall_addon.start|
+|Addonの削除完了|event_id.iaas.cluster.uninstall_addon.end|
+|Addonの削除失敗|event_id.iaas.cluster.uninstall_addon.failed|
+|Addonのインストール開始|event_id.iaas.cluster.install_addon.start|
+|Addonのインストール完了|event_id.iaas.cluster.install_addon.end|
+|Addonのインストール失敗|event_id.iaas.cluster.install_addon.failed|
+|Addonの更新開始|event_id.iaas.cluster.update_addon.start|
+|Addonの更新完了|event_id.iaas.cluster.update_addon.end|
+|Addonの更新失敗|event_id.iaas.cluster.update_addon.failed|
 |ノードグループ作成完了|event_id.iaas.nodegroup.create.end|
 |ノードグループ作成失敗|event_id.iaas.nodegroup.create.failed|
 |ノードグループ作成起動|event_id.iaas.nodegroup.create.start|
@@ -397,6 +420,27 @@
 |追加セキュリティグループの更新が完了しました|event_id.iaas.nodegroup.update_extra_security_group.end|
 |追加のセキュリティグループの更新に失敗しました|event_id.iaas.nodegroup.update_extra_security_group.fail|
 |追加のセキュリティグループの更新を開始|event_id.iaas.nodegroup.update_extra_security_group.start|
+|ノードグループのメトリクスベースオートスケーラー設定開始|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
+|ノードグループのメトリクスベースオートスケーラー設定完了|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
+|ノードグループのメトリクスベースオートスケーラー設定失敗|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
+|メトリクスベースオートスケーラーによるノードグループのノード増設開始|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
+|メトリクスベースオートスケーラーによるノードグループのノード増設完了|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
+|メトリクスベースオートスケーラーによるノードグループのノード増設失敗|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
+|メトリクスベースオートスケーラーによるノードグループのノード削減開始|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
+|メトリクスベースオートスケーラーによるノードグループのノード削減完了|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
+|メトリクスベースオートスケーラーによるノードグループのノード削減失敗|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
+|ノードグループのKubernetesノードラベル変更開始|event_id.iaas.nodegroup.update_k8s_node_labels.start|
+|ノードグループのKubernetesノードラベル変更完了|event_id.iaas.nodegroup.update_k8s_node_labels.end|
+|ノードグループのKubernetesノードラベル変更失敗|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
+|フローティングIPの自動割り当て変更開始|event_id.iaas.nodegroup.update_fip_auto_bind.start|
+|フローティングIPの自動割り当て変更完了|event_id.iaas.nodegroup.update_fip_auto_bind.end|
+|フローティングIPの自動割り当て変更失敗|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
+|ノード削減開始|event_id.iaas.nodegroup.scale_in.start|
+|ノード削減完了|event_id.iaas.nodegroup.scale_in.end|
+|ノード削減失敗|event_id.iaas.nodegroup.scale_in.failed|
+|ノード増設開始|event_id.iaas.nodegroup.scale_out.start|
+|ノード増設完了|event_id.iaas.nodegroup.scale_out.end|
+|ノード増設失敗|event_id.iaas.nodegroup.scale_out.failed|
 |CSR 承認|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 作成|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 削除|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -542,20 +586,43 @@
 |ワークロード作業数の自動調整開始|event_id.iaas.ncs.workload_task_resize.start|
 |ワークロード作業数の自動調整終了|event_id.iaas.ncs.workload_task_resize.end|
 |ワークロード作業数の自動調整失敗|event_id.iaas.ncs.workload_task_resize.failed|
-|NASボリュームの作成|event_id.iaas.nas.volume.create|
-|NASボリュームの削除|event_id.iaas.nas.volume.delete|
-|NASボリュームの変更|event_id.iaas.nas.volume.update|
-|NASスナップショットの作成|event_id.iaas.nas.snapshot.create|
-|NASスナップショットの削除|event_id.iaas.nas.snapshot.delete|
-|NASスナップショット復元|event_id.iaas.nas.snapshot.restore|
-|CIFS認証情報の作成|event_id.iaas.nas.cifs_credential.create|
-|CIFS認証情報の削除|event_id.iaas.nas.cifs_credential.delete|
-|CIFS認証情報の変更|event_id.iaas.nas.cifs_credential.update|
+|NAS CIFS認証情報の作成|event_id.iaas.nas.cifs_credential.create|
+|NAS CIFS認証情報の削除|event_id.iaas.nas.cifs_credential.delete|
+|NAS CIFS認証情報の変更|event_id.iaas.nas.cifs_credential.update|
+|NAS暗号化キーストア設定&#61;|event_id.iaas.nas.encryption_key_store.set|
+|NASストレージ作成|event_id.iaas.nas.volume.create|
+|NASストレージ削除|event_id.iaas.nas.volume.delete|
+|NASストレージ設定の変更|event_id.iaas.nas.volume.update|
+|NASストレージ作成完了|event_id.iaas.nas.volume.create_end|
+|NASストレージ削除完了|event_id.iaas.nas.volume.delete_end|
+|NASストレージ設定の変更完了|event_id.iaas.nas.volume.update_end|
+|NASストレージスナップショット作成|event_id.iaas.nas.snapshot.create|
+|NASストレージスナップショット削除|event_id.iaas.nas.snapshot.delete|
+|NASストレージスナップショット復元|event_id.iaas.nas.snapshot.restore|
+|NASストレージ複製設定|event_id.iaas.nas.replication.set|
+|NASストレージ複製設定の解除|event_id.iaas.nas.replication.unset|
+|NASストレージ複製開始|event_id.iaas.nas.replication.start|
+|NASストレージ複製停止|event_id.iaas.nas.replication.stop|
+|NASストレージ複製方向の変更|event_id.iaas.nas.replication.change_direction|
+|NASサブネット接続の追加|event_id.iaas.nas.subnet.attach|
+|NASサブネット接続解除|event_id.iaas.nas.subnet.detach|
 |NAS for AIスナップショットの作成|event_id.iaas.nas_for_ai.snapshot.create|
 |NAS for AIスナップショットの削除|event_id.iaas.nas_for_ai.snapshot.delete|
 |NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
 |NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
 |NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
+|ゲートウェイ作成|event_id.iaas.storage_gateway.gateway.create|
+|ゲートウェイ設定変更|event_id.iaas.storage_gateway.gateway.update|
+|ゲートウェイ削除|event_id.iaas.storage_gateway.gateway.delete|
+|ゲートウェイ作成完了|event_id.iaas.storage_gateway.gateway.create_end|
+|ゲートウェイ設定変更完了|event_id.iaas.storage_gateway.gateway.update_end|
+|ゲートウェイ削除完了|event_id.iaas.storage_gateway.gateway.delete_end|
+|共有作成|event_id.iaas.storage_gateway.share.create|
+|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|共有削除|event_id.iaas.storage_gateway.share.delete|
+|共有作成完了|event_id.iaas.storage_gateway.share.create_end|
+|共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
+|共有削除完了|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
@@ -1554,26 +1621,47 @@
 
 | イベント | イベントID |
 | --- | --- |
-|방화벽 구성|event_id.network_firewall.config_iaas|
-|인프라 구성|event_id.network_firewall.config_project|
-|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
-|정책 추가|event_id.network_firewall.group_create|
-|정책 엑셀 추가|event_id.network_firewall.group_create_template|
-|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
-|정책 삭제|event_id.network_firewall.group_delete|
-|정책 수정|event_id.network_firewall.group_modify|
-|IP 객체 추가|event_id.network_firewall.ip_object_create|
-|IP 객체 삭제|event_id.network_firewall.ip_object_delete|
-|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|
-|IP 객체 수정|event_id.network_firewall.ip_object_modify|
-|Nat 추가|event_id.network_firewall.nat_create|
-|Nat 삭제|event_id.network_firewall.nat_delete|
-|옵션 설정|event_id.network_firewall.option_create|
-|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|
-|OBS 정보 검증|event_id.network_firewall.option_obs_valid|
-|Port 객체 추가|event_id.network_firewall.port_object_create|
-|Port 객체 삭제|event_id.network_firewall.port_object_delete|
-|Port 객체 수정|event_id.network_firewall.port_object_modify|
+|ファイアウォール構成|event_id.network_firewall.config_iaas|
+|ミラーリングフィルタの追加|event_id.network_firewall.mirroring_filter_group_create|
+|ミラーリングフィルタの削除|event_id.network_firewall.mirroring_filter_group_delete|
+|ミラーリングフィルタの修正|event_id.network_firewall.mirroring_filter_group_modify|
+|ミラーリングルールの追加|event_id.network_firewall.mirroring_rule_create|
+|ミラーリングルールの削除|event_id.network_firewall.mirroring_rule_delete|
+|ミラーリングルールの修正|event_id.network_firewall.mirroring_rule_modify|
+|インフラ構成|event_id.network_firewall.config_project|
+|インフラおよびファイアウォール構成|event_id.network_firewall.config_project_iaas|
+|VPNイベントログのダウンロード|event_id.network_firewall.event_log_download|
+|VPNゲートウェイの修正|event_id.network_firewall.gateway_modify|
+|ポリシーの追加|event_id.network_firewall.group_create|
+|ポリシーExcel追加|event_id.network_firewall.group_create_template|
+|ポリシーExcel検証|event_id.network_firewall.group_create_template_verify|
+|ポリシーの削除|event_id.network_firewall.group_delete|
+|ポリシーの修正|event_id.network_firewall.group_modify|
+|IPオブジェクトの追加|event_id.network_firewall.ip_object_create|
+|IPオブジェクトの削除|event_id.network_firewall.ip_object_delete|
+|IPインスタンスオブジェクトの追加|event_id.network_firewall.ip_object_instance_create|
+|IPオブジェクトの修正|event_id.network_firewall.ip_object_modify|
+|NATの追加|event_id.network_firewall.nat_create|
+|NATの削除|event_id.network_firewall.nat_delete|
+|NATの修正|event_id.network_firewall.nat_edit|
+|オプション設定|event_id.network_firewall.option_create|
+|LNCS情報検証|event_id.network_firewall.option_lncs_valid|
+|OBS情報検証|event_id.network_firewall.option_obs_valid|
+|Portオブジェクトの追加|event_id.network_firewall.port_object_create|
+|Portオブジェクトの削除|event_id.network_firewall.port_object_delete|
+|Portオブジェクトの修正|event_id.network_firewall.port_object_modify|
+|NetworkFirewall削除|event_id.network_firewall.region_delete|
+|ルーティングの追加|event_id.network_firewall.route_create|
+|ルーティングの削除|event_id.network_firewall.route_delete|
+|ルーティングの修正|event_id.network_firewall.route_modify|
+|VPNイベント|event_id.network_firewall.vpn|
+|VPNゲートウェイの作成|event_id.network_firewall.vpn_gateway_create|
+|VPNゲートウェイの削除|event_id.network_firewall.vpn_gateway_delete|
+|VPNゲートウェイにFloating IP接続|event_id.network_firewall.vpn_gateway_floatingip|
+|VPNトンネルの作成|event_id.network_firewall.vpn_tunnel_create|
+|VPNトンネルの削除|event_id.network_firewall.vpn_tunnel_delete|
+|VPNトンネル接続/接続解除|event_id.network_firewall.vpn_tunnel_initiate_terminate|
+|VPNトンネルの修正|event_id.network_firewall.vpn_tunnel_modify|
 
 ### RCS Bizmessage
 
