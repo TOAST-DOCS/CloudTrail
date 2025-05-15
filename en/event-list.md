@@ -111,8 +111,8 @@
 |Detach Instance Network Interface|event_id.iaas.interface.delete|
 |Create Keypair|event_id.iaas.keypair.create|
 |Delete Keypair|event_id.iaas.keypair.delete|
-|Create Batch Policy|event_id.iaas.servergroup.create|
-|Delete Batch Policy|event_id.iaas.servergroup.delete|
+|Create Placement Policy|event_id.iaas.servergroup.create|
+|Delete Placement Policy|event_id.iaas.servergroup.delete|
 |Copy Image|event_id.iaas.image.copy|
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
