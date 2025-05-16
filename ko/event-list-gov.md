@@ -30,8 +30,8 @@
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
-|인스턴스 인터페이스 추가|event_id.iaas.interface.create|
-|인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|
+|인스턴스 네트워크 인터페이스 연결 추가|event_id.iaas.interface.create|
+|인스턴스 네트워크 인터페이스 연결 해제|event_id.iaas.interface.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
 |이미지 복제|event_id.iaas.image.copy|
@@ -41,8 +41,8 @@
 |이미지 삭제|event_id.iaas.image.delete|
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
-|이미지 수정 완료|event_id.iaas.image.update_end|
 |이미지 이동 완료 (대상)|event_id.iaas.image.transfer_accept|
+|이미지 수정 완료|event_id.iaas.image.update_end|
 |이미지 이동 완료 (소스)|event_id.iaas.image.transfer_create|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
@@ -58,9 +58,6 @@
 |블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
 |블록 스토리지 수정|event_id.iaas.volume.update|
 |블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
-|블록 스토리지 이동|event_id.iaas.volume.transfer|
-|블록 스토리지 이동 완료 (대상)|event_id.iaas.volume.transfer_accept|
-|블록 스토리지 이동 완료 (소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 복제|event_id.iaas.volume.copy|
 |블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
 |인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
@@ -978,6 +975,52 @@
 |선택 점검 요청|event_id.security_advisor.manual_scan_request|
 |설정 변경|event_id.security_advisor.setting_change|
 
+### Network Firewall
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|방화벽 구성|event_id.network_firewall.config_iaas|
+|미러링 필터 그룹 추가|event_id.network_firewall.mirroring_filter_group_create|
+|미러링 필터 그룹 삭제|event_id.network_firewall.mirroring_filter_group_delete|
+|미러링 필터 그룹 수정|event_id.network_firewall.mirroring_filter_group_modify|
+|미러링 룰 추가|event_id.network_firewall.mirroring_rule_create|
+|미러링 룰 삭제|event_id.network_firewall.mirroring_rule_delete|
+|미러링 룰 수정|event_id.network_firewall.mirroring_rule_modify|
+|인프라 구성|event_id.network_firewall.config_project|
+|인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
+|VPN 이벤트 로그 다운로드|event_id.network_firewall.event_log_download|
+|VPN 게이트웨이 수정|event_id.network_firewall.gateway_modify|
+|정책 추가|event_id.network_firewall.group_create|
+|정책 엑셀 추가|event_id.network_firewall.group_create_template|
+|정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
+|정책 삭제|event_id.network_firewall.group_delete|
+|정책 수정|event_id.network_firewall.group_modify|
+|IP 객체 추가|event_id.network_firewall.ip_object_create|
+|IP 객체 삭제|event_id.network_firewall.ip_object_delete|
+|IP 인스턴스 객체 추가|event_id.network_firewall.ip_object_instance_create|
+|IP 객체 수정|event_id.network_firewall.ip_object_modify|
+|Nat 추가|event_id.network_firewall.nat_create|
+|Nat 삭제|event_id.network_firewall.nat_delete|
+|Nat 수정|event_id.network_firewall.nat_edit|
+|옵션 설정|event_id.network_firewall.option_create|
+|LNCS 정보 검증|event_id.network_firewall.option_lncs_valid|
+|OBS 정보 검증|event_id.network_firewall.option_obs_valid|
+|Port 객체 추가|event_id.network_firewall.port_object_create|
+|Port 객체 삭제|event_id.network_firewall.port_object_delete|
+|Port 객체 수정|event_id.network_firewall.port_object_modify|
+|Network Firewall 삭제|event_id.network_firewall.region_delete|
+|라우팅 추가|event_id.network_firewall.route_create|
+|라우팅 삭제|event_id.network_firewall.route_delete|
+|라우팅 수정|event_id.network_firewall.route_modify|
+|VPN 이벤트|event_id.network_firewall.vpn|
+|VPN 게이트웨이 생성|event_id.network_firewall.vpn_gateway_create|
+|VPN 게이트웨이 삭제|event_id.network_firewall.vpn_gateway_delete|
+|VPN 게이트웨이에 플로팅 IP 연결|event_id.network_firewall.vpn_gateway_floatingip|
+|VPN 터널 생성|event_id.network_firewall.vpn_tunnel_create|
+|VPN 터널 삭제|event_id.network_firewall.vpn_tunnel_delete|
+|VPN 터널 연결/연결 해제|event_id.network_firewall.vpn_tunnel_initiate_terminate|
+|VPN 터널 수정|event_id.network_firewall.vpn_tunnel_modify|
+
 ### Cloud Monitoring
 
 | 이벤트 | 이벤트 ID |
@@ -1004,4 +1047,40 @@
 |모의 훈련 생성|event_id.ddos_guard.mock_training_create|
 |모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
 |모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
+
+### NHN Container Registry(NCR)
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|NCR 활성화|event_id.ncr.enable|
+|NCR 비활성화|event_id.ncr.disable|
+|레지스트리 생성|event_id.ncr.registry.create|
+|레지스트리 삭제|event_id.ncr.registry.delete|
+|레지스트리 변경|event_id.ncr.registry.update|
+|이미지 보호 정책 추가|event_id.ncr.immutable_tag_rule.create|
+|이미지 보호 정책 삭제|event_id.ncr.immutable_tag_rule.delete|
+|이미지 보호 정책 변경|event_id.ncr.immutable_tag_rule.update|
+|이미지 정리 정책 추가|event_id.ncr.retention_rule.create|
+|이미지 정리 정책 삭제|event_id.ncr.retention_rule.delete|
+|이미지 정리 정책 실행|event_id.ncr.retention_rule.execute|
+|이미지 정리 정책 변경|event_id.ncr.retention_rule.update|
+|이미지 정리 주기 설정|event_id.ncr.retention_schedule.update|
+|웹훅 생성|event_id.ncr.webhook.create|
+|웹훅 삭제|event_id.ncr.webhook.delete|
+|웹훅 수정|event_id.ncr.webhook.update|
+|이미지 삭제|event_id.ncr.image.delete|
+|아티팩트 삭제|event_id.ncr.artifact.delete|
+|아티팩트 스캔|event_id.ncr.artifact.scan|
+|아티팩트 스캔 중지|event_id.ncr.artifact.scan_stop|
+|태그 생성|event_id.ncr.tag.create|
+|태그 삭제|event_id.ncr.tag.delete|
+|복제 생성|event_id.ncr.replication_policy.create|
+|복제 삭제|event_id.ncr.replication_policy.delete|
+|복제 수정|event_id.ncr.replication_policy.update|
+|복제 실행|event_id.ncr.replication_policy.execute|
+|CVE 허용 목록 설정|event_id.ncr.cve_allowlist.update|
+|자동 스캔 주기 설정|event_id.ncr.scan_all_schedule.update|
+|이미지 캐시 생성|event_id.ncr.image_cache.create|
+|이미지 캐시 삭제|event_id.ncr.image_cache.delete|
+|이미지 캐시 수정|event_id.ncr.image_cache.update|
 
