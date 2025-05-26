@@ -611,18 +611,18 @@
 |NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
 |NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
 |NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
-|ゲートウェイ作成|event_id.iaas.storage_gateway.gateway.create|
-|ゲートウェイ設定変更|event_id.iaas.storage_gateway.gateway.update|
-|ゲートウェイ削除|event_id.iaas.storage_gateway.gateway.delete|
-|ゲートウェイ作成完了|event_id.iaas.storage_gateway.gateway.create_end|
-|ゲートウェイ設定変更完了|event_id.iaas.storage_gateway.gateway.update_end|
-|ゲートウェイ削除完了|event_id.iaas.storage_gateway.gateway.delete_end|
-|共有作成|event_id.iaas.storage_gateway.share.create|
-|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
-|共有削除|event_id.iaas.storage_gateway.share.delete|
-|共有作成完了|event_id.iaas.storage_gateway.share.create_end|
-|共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
-|共有削除完了|event_id.iaas.storage_gateway.share.delete_end|
+|ストレージゲートウェイの作成|event_id.iaas.storage_gateway.gateway.create|
+|ストレージゲートウェイ設定の変更|event_id.iaas.storage_gateway.gateway.update|
+|ストレージゲートウェイの削除|event_id.iaas.storage_gateway.gateway.delete|
+|ストレージゲートウェイ作成完了|event_id.iaas.storage_gateway.gateway.create_end|
+|ストレージゲートウェイ設定変更完了|event_id.iaas.storage_gateway.gateway.update_end|
+|ストレージゲートウェイ削除完了|event_id.iaas.storage_gateway.gateway.delete_end|
+|ストレージゲートウェイ共有の作成|event_id.iaas.storage_gateway.share.create|
+|ストレージゲートウェイ共有設定変更|event_id.iaas.storage_gateway.share.update|
+|ストレージゲートウェイ共有の削除|event_id.iaas.storage_gateway.share.delete|
+|ストレージゲートウェイ共有作成完了|event_id.iaas.storage_gateway.share.create_end|
+|ストレージゲートウェイ共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
+|ストレージゲートウェイ共有の削除完了|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
@@ -2040,4 +2040,69 @@
 |模擬訓練の作成|event_id.ddos_guard.mock_training_create|
 |模擬訓練の修正|event_id.ddos_guard.mock_training_modify|
 |模擬訓練の削除|event_id.ddos_guard.mock_training_delete|
+
+### RDS for PostgreSQL
+
+| イベント | イベントID |
+| --- | --- |
+|オブジェクトストレージでバックアップをエクスポート|event_id.rds_for_postgresql.BACKUP_EXPORT|
+|サーバーモニタリングチャートレイアウトを追加|event_id.rds_for_postgresql.CHART_LAYOUT_CREATE|
+|サーバーモニタリングチャートレイアウトを削除|event_id.rds_for_postgresql.CHART_LAYOUT_DELETE|
+|サーバーモニタリングチャートレイアウトを修正|event_id.rds_for_postgresql.CHART_LAYOUT_MODIFY|
+|DBインスタンスのバックアップ|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_BACKUP|
+|DBインスタンス強制昇格|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_PROMOTE|
+|DBインスタンス強制再起動|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_RESTART|
+|高可用性一時停止|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PAUSE_HA|
+|DBインスタンスの昇格|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PROMOTE|
+|フェイルオーバーが完了した高可用性の再構築|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_HA|
+|複製再構築|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_REPLICATION|
+|障害措置インスタンス高可用性機能を復旧|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPAIR_HA|
+|DBインスタンスのコピー|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPLICATE|
+|DBインスタンスの再起動|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTART|
+|DBインスタンスの復元|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTORE|
+|高可用性再開|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESUME_HA|
+|フェイルオーバー完了後、一般DBインスタンスに変更|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_SPLIT_AFTER_FAILOVER_COMPLETION|
+|DBインスタンスの起動|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_START|
+|DBインスタンスの停止|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_STOP|
+|アクセス制御ルールの変更を適用|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_HBA_RULE|
+|パラメータグループの変更事項を適用|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_RECENT_PARAMETER_GROUP|
+|バックアップの削除|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_DELETE|
+|DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_EXPORT|
+|DBインスタンスの削除保護設定を変更|event_id.rds_for_postgresql.DB_INSTANCE_CHANGE_DELETION_PROTECTION|
+|DBインスタンスの作成|event_id.rds_for_postgresql.DB_INSTANCE_CREATE|
+|データベースの作成|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_CREATE|
+|データベースの削除|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_DELETE|
+|データベースの修正|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_MODIFY|
+|ユーザーの追加|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_CREATE|
+|ユーザーの削除|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_DELETE|
+|ユーザー変更|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_MODIFY|
+|ユーザーの同期|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_SYNC|
+|DBインスタンスの削除|event_id.rds_for_postgresql.DB_INSTANCE_DELETE|
+|DBインスタンスの容量を確保|event_id.rds_for_postgresql.DB_INSTANCE_DELETE_WAL_LOG|
+|拡張機能変更事項適用|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_APPLY|
+|拡張機能の同期|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_SYNC|
+|DBインスタンスマイグレーション|event_id.rds_for_postgresql.DB_INSTANCE_MIGRATION|
+|DBインスタンスの詳細設定を変更|event_id.rds_for_postgresql.DB_INSTANCE_MODIFY|
+|DBインスタンスオブジェクトストレージから復元|event_id.rds_for_postgresql.DB_INSTANCE_RESTORE_FROM_OBS|
+|DBインスタンスのストレージを拡張|event_id.rds_for_postgresql.DB_INSTANCE_VOLUME_EXTEND|
+|DBセキュリティグループの作成|event_id.rds_for_postgresql.DB_SECURITY_GROUP_CREATE|
+|DBセキュリティグループの削除|event_id.rds_for_postgresql.DB_SECURITY_GROUP_DELETE|
+|DBセキュリティグループの修正|event_id.rds_for_postgresql.DB_SECURITY_GROUP_MODIFY|
+|DBセキュリティグループルールの作成|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_CREATE|
+|DBセキュリティグループルールの削除|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_DELETE|
+|DBセキュリティグループルールの修正|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_MODIFY|
+|イベント購読を削除|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_DELETE|
+|イベント購読を修正|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_MODIFY|
+|イベント購読を登録|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_REGISTER|
+|通知グループを作成|event_id.rds_for_postgresql.NOTIFICATION_GROUP_CREATE|
+|通知グループを削除|event_id.rds_for_postgresql.NOTIFICATION_GROUP_DELETE|
+|通知グループを修正|event_id.rds_for_postgresql.NOTIFICATION_GROUP_MODIFY|
+|パラメータグループのコピー|event_id.rds_for_postgresql.PARAMETER_GROUP_COPY|
+|パラメータグループ作成|event_id.rds_for_postgresql.PARAMETER_GROUP_CREATE|
+|パラメータグループ削除|event_id.rds_for_postgresql.PARAMETER_GROUP_DELETE|
+|パラメータグループ修正|event_id.rds_for_postgresql.PARAMETER_GROUP_MODIFY_PARAMETERS|
+|パラメータグループ再設定|event_id.rds_for_postgresql.PARAMETER_GROUP_RESET|
+|ユーザーグループを作成|event_id.rds_for_postgresql.USER_GROUP_CREATE|
+|ユーザーグループを削除|event_id.rds_for_postgresql.USER_GROUP_DELETE|
+|ユーザーグループを修正|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
