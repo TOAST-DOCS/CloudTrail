@@ -30,14 +30,17 @@
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
-|인스턴스 인터페이스 추가|event_id.iaas.interface.create|
-|인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|
+|인스턴스 네트워크 인터페이스 연결 추가|event_id.iaas.interface.create|
+|인스턴스 네트워크 인터페이스 연결 해제|event_id.iaas.interface.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
+|배치 정책 생성|event_id.iaas.servergroup.create|
+|배치 정책 삭제|event_id.iaas.servergroup.delete|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
+|이미지 생성 실패|event_id.iaas.image.create_failed|
 |이미지 삭제|event_id.iaas.image.delete|
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
@@ -63,6 +66,9 @@
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|블록 스토리지 이동|event_id.iaas.volume.transfer|
+|블록 스토리지 이동 완료(대상)|event_id.iaas.volume.transfer_accept|
+|블록 스토리지 이동 완료(소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
@@ -87,9 +93,11 @@
 |VPC 서브넷 라우팅 테이블 연결 해제|event_id.iaas.vpc_subnet.detach_routingtable|
 |서브넷 정적 라우트 생성|event_id.iaas.vpc_subnet_route.create|
 |서브넷 정적 라우트 삭제|event_id.iaas.vpc_subnet_route.delete|
-|포트 생성|event_id.iaas.port.create|
-|포트 삭제|event_id.iaas.port.delete|
-|포트 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 생성|event_id.iaas.port.create|
+|네트워크 인터페이스 생성 완료|event_id.iaas.port.create_end|
+|네트워크 인터페이스 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 삭제|event_id.iaas.port.delete|
+|네트워크 인터페이스 삭제 완료|event_id.iaas.port.delete_end|
 |라우팅 테이블 생성|event_id.iaas.routing_table.create|
 |라우팅 테이블 삭제|event_id.iaas.routing_table.delete|
 |라우팅 테이블 변경|event_id.iaas.routing_table.update|
@@ -204,6 +212,18 @@
 |키페어 업데이트 시작|event_id.iaas.cluster.update_vm_auth_key.start|
 |키페어 업데이트 완료|event_id.iaas.cluster.update_vm_auth_key.end|
 |키페어 업데이트 실패|event_id.iaas.cluster.update_vm_auth_key.failed|
+|컨트롤 플레인 로그 수집 업데이트 시작|event_id.iaas.cluster.update_control_plane_log.start|
+|컨트롤 플레인 로그 수집 업데이트 완료|event_id.iaas.cluster.update_control_plane_log.end|
+|컨트롤 플레인 로그 수집 업데이트 실패|event_id.iaas.cluster.update_control_plane_log.failed|
+|Addon 제거 시작|event_id.iaas.cluster.uninstall_addon.start|
+|Addon 제거 완료|event_id.iaas.cluster.uninstall_addon.end|
+|Addon 제거 실패|event_id.iaas.cluster.uninstall_addon.failed|
+|Addon 설치 시작|event_id.iaas.cluster.install_addon.start|
+|Addon 설치 완료|event_id.iaas.cluster.install_addon.end|
+|Addon 설치 실패|event_id.iaas.cluster.install_addon.failed|
+|Addon 업데이트 시작|event_id.iaas.cluster.update_addon.start|
+|Addon 업데이트 완료|event_id.iaas.cluster.update_addon.end|
+|Addon 업데이트 실패|event_id.iaas.cluster.update_addon.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -234,6 +254,27 @@
 |추가 보안 그룹 업데이트 완료|event_id.iaas.nodegroup.update_extra_security_group.end|
 |추가 보안 그룹 업데이트 실패|event_id.iaas.nodegroup.update_extra_security_group.fail|
 |추가 보안 그룹 업데이트 시작|event_id.iaas.nodegroup.update_extra_security_group.start|
+|노드 그룹 지표 기반 오토스케일러 설정 시작|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
+|노드 그룹 지표 기반 오토스케일러 설정 완료|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
+|노드 그룹 지표 기반 오토스케일러 설정 실패|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 시작|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 완료|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 실패|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 시작|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 완료|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 실패|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
+|노드 그룹 쿠버네티스 노드 레이블 변경 시작|event_id.iaas.nodegroup.update_k8s_node_labels.start|
+|노드 그룹 쿠버네티스 노드 레이블 변경 완료|event_id.iaas.nodegroup.update_k8s_node_labels.end|
+|노드 그룹 쿠버네티스 노드 레이블 변경 실패|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
+|플로팅 IP 자동 할당 변경 시작|event_id.iaas.nodegroup.update_fip_auto_bind.start|
+|플로팅 IP 자동 할당 변경 완료|event_id.iaas.nodegroup.update_fip_auto_bind.end|
+|플로팅 IP 자동 할당 변경 실패|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
+|노드 감축 시작|event_id.iaas.nodegroup.scale_in.start|
+|노드 감축 완료|event_id.iaas.nodegroup.scale_in.end|
+|노드 감축 실패|event_id.iaas.nodegroup.scale_in.failed|
+|노드 증설 시작|event_id.iaas.nodegroup.scale_out.start|
+|노드 증설 완료|event_id.iaas.nodegroup.scale_out.end|
+|노드 증설 실패|event_id.iaas.nodegroup.scale_out.failed|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|

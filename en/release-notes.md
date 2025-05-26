@@ -1,8 +1,20 @@
 ## CloudTrail > Release Notes
 
+### 2025. 05. 27.
+#### More Events
+* Added events related to Default Infrastructure Service.
+#### Feature Updates
+* Added events related to Default Infrastructure Service.
+
+### 2025. 05. 22.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
 ### 2025. 04. 15.
 #### More Events
 * Added events related to Gamebase.
+* Added events related to Network Firewall.
+* Added events related to RDS for PostgreSQL.
 * Added events related to Notification Hub.
 
 ### 2025. 03. 25.
@@ -56,6 +68,11 @@
 * Added events related to Cloud Scheduler.
 * Added events related to Object Storage.
 
+### 2024. 10. 15.
+#### More Events
+* Added events related to Network Firewall.
+* Added events related to RDS for PostgreSQL.
+
 ### 2024. 08. 27.
 #### More Events
 * Added events related to Secure Key Manager.
@@ -68,6 +85,7 @@
 ### 2024. 07. 23.
 #### More Events
 * Added events related to Gamebase.
+* Added events related to Network Firewall.
 * Added events related to DataFlow.
 #### Feature Updates
 * [CONSOLE] When selecting a service in the service filter, only events for that service are displayed in the event filter
@@ -83,6 +101,10 @@
 #### More Events
 * Added events related to NHN Bastion.
 * Added events related to DataFlow.
+
+### 2024. 06. 25.
+#### More Events
+* Added events related to Network Firewall.
 
 ### 2024. 06. 11.
 #### More Features
@@ -102,6 +124,11 @@
 ### 2024. 05. 23.
 #### More Events
 * Added events related to Default Infrastructure Service.
+
+### 2024. 05. 14.
+#### More Events
+* Added events related to Network Firewall.
+* Added events related to RDS for PostgreSQL.
 
 ### 2024. 05. 03.
 #### More Events
@@ -168,6 +195,7 @@
 ### 2023. 08. 29.
 #### More Events
 * Added events related to API Gateway.
+* Added events related to Network Firewall.
 * Added events related to Default Infrastructure Service.
 * Added events related to RDS for MySQL.
 
@@ -178,15 +206,10 @@
 ### 2023. 07. 11.
 #### More Events
 * Added events related to Gamebase.
-* Added events related to Network Firewall.
 
 ### 2023. 07. 10.
 #### More Events
 * Added events related to RDS for MySQL.
-
-### 2023. 07. 07.
-#### More Events
-* Added events related to Network Firewall.
 
 ### 2023. 06. 27.
 #### More Events
