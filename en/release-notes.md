@@ -14,6 +14,7 @@
 #### More Events
 * Added events related to Gamebase.
 * Added events related to Network Firewall.
+* Added events related to RDS for PostgreSQL.
 * Added events related to Notification Hub.
 
 ### 2025. 03. 25.
@@ -70,6 +71,7 @@
 ### 2024. 10. 15.
 #### More Events
 * Added events related to Network Firewall.
+* Added events related to RDS for PostgreSQL.
 
 ### 2024. 08. 27.
 #### More Events
@@ -126,6 +128,7 @@
 ### 2024. 05. 14.
 #### More Events
 * Added events related to Network Firewall.
+* Added events related to RDS for PostgreSQL.
 
 ### 2024. 05. 03.
 #### More Events
