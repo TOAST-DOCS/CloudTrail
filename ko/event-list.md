@@ -611,18 +611,18 @@
 |NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
 |NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
 |NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
-|게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
-|게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
-|게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
-|게이트웨이 생성 완료|event_id.iaas.storage_gateway.gateway.create_end|
-|게이트웨이 설정 변경 완료|event_id.iaas.storage_gateway.gateway.update_end|
-|게이트웨이 삭제 완료|event_id.iaas.storage_gateway.gateway.delete_end|
-|공유 생성|event_id.iaas.storage_gateway.share.create|
-|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
-|공유 삭제|event_id.iaas.storage_gateway.share.delete|
-|공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
-|공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
-|공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
+|스토리지 게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
+|스토리지 게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
+|스토리지 게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
+|스토리지 게이트웨이 생성 완료|event_id.iaas.storage_gateway.gateway.create_end|
+|스토리지 게이트웨이 설정 변경 완료|event_id.iaas.storage_gateway.gateway.update_end|
+|스토리지 게이트웨이 삭제 완료|event_id.iaas.storage_gateway.gateway.delete_end|
+|스토리지 게이트웨이 공유 생성|event_id.iaas.storage_gateway.share.create|
+|스토리지 게이트웨이 공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|스토리지 게이트웨이 공유 삭제|event_id.iaas.storage_gateway.share.delete|
+|스토리지 게이트웨이 공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
+|스토리지 게이트웨이 공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
+|스토리지 게이트웨이 공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
@@ -2040,4 +2040,69 @@
 |모의 훈련 생성|event_id.ddos_guard.mock_training_create|
 |모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
 |모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
+
+### RDS for PostgreSQL
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|오브젝트 스토리지로 백업 내보내기|event_id.rds_for_postgresql.BACKUP_EXPORT|
+|서버 모니터링 차트 레이아웃 추가|event_id.rds_for_postgresql.CHART_LAYOUT_CREATE|
+|서버 모니터링 차트 레이아웃 삭제|event_id.rds_for_postgresql.CHART_LAYOUT_DELETE|
+|서버 모니터링 차트 레이아웃 수정|event_id.rds_for_postgresql.CHART_LAYOUT_MODIFY|
+|DB 인스턴스 백업|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_BACKUP|
+|DB 인스턴스 강제 승격|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_PROMOTE|
+|DB 인스턴스 강제 재시작|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_RESTART|
+|고가용성 일시 중지|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PAUSE_HA|
+|DB 인스턴스 승격|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PROMOTE|
+|장애조치 완료된 고가용성 재구축|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_HA|
+|복제 재구축|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_REPLICATION|
+|장애 조치 인스턴스 고가용성 기능 복구|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPAIR_HA|
+|DB 인스턴스 복제|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPLICATE|
+|DB 인스턴스 재시작|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTART|
+|DB 인스턴스 복원|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTORE|
+|고가용성 다시 시작|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESUME_HA|
+|장애조치 완료후 일반 DB 인스턴스로 변경|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_SPLIT_AFTER_FAILOVER_COMPLETION|
+|DB 인스턴스 시작|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_START|
+|DB 인스턴스 중지|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_STOP|
+|접근 제어 규칙 변경 사항 적용|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_HBA_RULE|
+|파라미터 그룹 변경 사항 적용|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_RECENT_PARAMETER_GROUP|
+|백업 삭제|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_DELETE|
+|DB 인스턴스 백업 및 내보내기|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_EXPORT|
+|DB 인스턴스 삭제 보호 설정 변경|event_id.rds_for_postgresql.DB_INSTANCE_CHANGE_DELETION_PROTECTION|
+|DB 인스턴스 생성|event_id.rds_for_postgresql.DB_INSTANCE_CREATE|
+|데이터베이스 생성|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_CREATE|
+|데이터베이스 삭제|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_DELETE|
+|데이터베이스 수정|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_MODIFY|
+|사용자 추가|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_CREATE|
+|사용자 삭제|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_DELETE|
+|사용자 수정|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_MODIFY|
+|사용자 동기화|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_SYNC|
+|DB 인스턴스 삭제|event_id.rds_for_postgresql.DB_INSTANCE_DELETE|
+|DB 인스턴스 용량 확보|event_id.rds_for_postgresql.DB_INSTANCE_DELETE_WAL_LOG|
+|확장 변경 사항 적용|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_APPLY|
+|확장 동기화|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_SYNC|
+|DB 인스턴스 마이그레이션|event_id.rds_for_postgresql.DB_INSTANCE_MIGRATION|
+|DB 인스턴스 상세 설정 변경|event_id.rds_for_postgresql.DB_INSTANCE_MODIFY|
+|DB 인스턴스 오브젝트 스토리지로부터 복원|event_id.rds_for_postgresql.DB_INSTANCE_RESTORE_FROM_OBS|
+|DB 인스턴스 스토리지 확장|event_id.rds_for_postgresql.DB_INSTANCE_VOLUME_EXTEND|
+|DB 보안그룹 생성|event_id.rds_for_postgresql.DB_SECURITY_GROUP_CREATE|
+|DB 보안그룹 삭제|event_id.rds_for_postgresql.DB_SECURITY_GROUP_DELETE|
+|DB 보안그룹 수정|event_id.rds_for_postgresql.DB_SECURITY_GROUP_MODIFY|
+|DB 보안그룹 규칙 생성|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_CREATE|
+|DB 보안그룹 규칙 삭제|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_DELETE|
+|DB 보안그룹 규칙 수정|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_MODIFY|
+|이벤트 구독 삭제|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_DELETE|
+|이벤트 구독 수정|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_MODIFY|
+|이벤트 구독 등록|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_REGISTER|
+|알림 그룹 생성|event_id.rds_for_postgresql.NOTIFICATION_GROUP_CREATE|
+|알림 그룹 삭제|event_id.rds_for_postgresql.NOTIFICATION_GROUP_DELETE|
+|알림 그룹 수정|event_id.rds_for_postgresql.NOTIFICATION_GROUP_MODIFY|
+|파라미터 그룹 복사|event_id.rds_for_postgresql.PARAMETER_GROUP_COPY|
+|파라미터 그룹 생성|event_id.rds_for_postgresql.PARAMETER_GROUP_CREATE|
+|파라미터 그룹 삭제|event_id.rds_for_postgresql.PARAMETER_GROUP_DELETE|
+|파라미터 그룹 수정|event_id.rds_for_postgresql.PARAMETER_GROUP_MODIFY_PARAMETERS|
+|파라미터 그룹 재설정|event_id.rds_for_postgresql.PARAMETER_GROUP_RESET|
+|사용자 그룹 생성|event_id.rds_for_postgresql.USER_GROUP_CREATE|
+|사용자 그룹 삭제|event_id.rds_for_postgresql.USER_GROUP_DELETE|
+|사용자 그룹 수정|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
