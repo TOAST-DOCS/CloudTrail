@@ -611,18 +611,18 @@
 |Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
 |Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
 |Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
-|Create Gateway|event_id.iaas.storage_gateway.gateway.create|
-|Change Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
-|Delete Gateway|event_id.iaas.storage_gateway.gateway.delete|
-|Create Gateway Completed|event_id.iaas.storage_gateway.gateway.create_end|
-|Change Gateway Settings Completed|event_id.iaas.storage_gateway.gateway.update_end|
-|Delete Gateway Completed|event_id.iaas.storage_gateway.gateway.delete_end|
-|Create Share|event_id.iaas.storage_gateway.share.create|
-|Change Share Settings|event_id.iaas.storage_gateway.share.update|
-|Delete Share|event_id.iaas.storage_gateway.share.delete|
-|Create Share Comleted|event_id.iaas.storage_gateway.share.create_end|
-|Change Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
-|Delete Share Completed|event_id.iaas.storage_gateway.share.delete_end|
+|Create Storage Gateway|event_id.iaas.storage_gateway.gateway.create|
+|Change Storage Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
+|Delete Storage Gateway|event_id.iaas.storage_gateway.gateway.delete|
+|Create Storage Gateway Completed|event_id.iaas.storage_gateway.gateway.create_end|
+|Change Storage Gateway Settings Completed|event_id.iaas.storage_gateway.gateway.update_end|
+|Delete Storage Gateway Completed|event_id.iaas.storage_gateway.gateway.delete_end|
+|Create Storage Share|event_id.iaas.storage_gateway.share.create|
+|Change Storage Share Settings|event_id.iaas.storage_gateway.share.update|
+|Delete Storage Share|event_id.iaas.storage_gateway.share.delete|
+|Create Storage Share Comleted|event_id.iaas.storage_gateway.share.create_end|
+|Change Storage Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
+|Delete Storage Share Completed|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
@@ -2040,4 +2040,69 @@
 |Create Mock Training|event_id.ddos_guard.mock_training_create|
 |Modify Mock Training|event_id.ddos_guard.mock_training_modify|
 |Delete Mock Training|event_id.ddos_guard.mock_training_delete|
+
+### RDS for PostgreSQL
+
+| Event | Event ID |
+| --- | --- |
+|Export backup to the object storage|event_id.rds_for_postgresql.BACKUP_EXPORT|
+|Add Server Monitoring Chart Layout|event_id.rds_for_postgresql.CHART_LAYOUT_CREATE|
+|Delete Server Monitoring Chart Layout|event_id.rds_for_postgresql.CHART_LAYOUT_DELETE|
+|Modify Server Monitoring Chart Layout|event_id.rds_for_postgresql.CHART_LAYOUT_MODIFY|
+|Back Up DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_BACKUP|
+|DB instance force promotion|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_PROMOTE|
+|Force Restart DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_RESTART|
+|Pause High Availability|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PAUSE_HA|
+|Promote DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PROMOTE|
+|High Availability Rebuild after Failover|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_HA|
+|Rebuild Replication|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_REPLICATION|
+|Restore High Availability of Failover Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPAIR_HA|
+|Replicate DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPLICATE|
+|Restart DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTART|
+|Restore DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTORE|
+|Resume High Availability|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESUME_HA|
+|Change to DB Instance after Failover|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_SPLIT_AFTER_FAILOVER_COMPLETION|
+|DB instance started|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_START|
+|Stop DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_STOP|
+|Apply Access Control Rule Changes|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_HBA_RULE|
+|Apply Parameter Group Changes|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_RECENT_PARAMETER_GROUP|
+|Delete Backup|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_DELETE|
+|Make and export a DB instance backup|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_EXPORT|
+|Change Deletion Protection Setting for DB instance|event_id.rds_for_postgresql.DB_INSTANCE_CHANGE_DELETION_PROTECTION|
+|Create DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_CREATE|
+|Create Database|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_CREATE|
+|Delete Database|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_DELETE|
+|Modify Database|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_MODIFY|
+|Add User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_CREATE|
+|Delete User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_DELETE|
+|Modify User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_MODIFY|
+|Synchronize User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_SYNC|
+|Delete DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_DELETE|
+|Free Up DB Instance Space|event_id.rds_for_postgresql.DB_INSTANCE_DELETE_WAL_LOG|
+|Apply Extension Changes|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_APPLY|
+|Synchronize Extensions|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_SYNC|
+|DB instance migration|event_id.rds_for_postgresql.DB_INSTANCE_MIGRATION|
+|Change Detailed Setting For DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_MODIFY|
+|Restoration from DB Instance Object Storage|event_id.rds_for_postgresql.DB_INSTANCE_RESTORE_FROM_OBS|
+|Expand DB Instance Storage|event_id.rds_for_postgresql.DB_INSTANCE_VOLUME_EXTEND|
+|Create DB Security Group|event_id.rds_for_postgresql.DB_SECURITY_GROUP_CREATE|
+|Delete DB Security Group|event_id.rds_for_postgresql.DB_SECURITY_GROUP_DELETE|
+|Modify DB Security Group|event_id.rds_for_postgresql.DB_SECURITY_GROUP_MODIFY|
+|Create DB Security Group Rule|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_CREATE|
+|Delete DB Security Group Rule|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_DELETE|
+|Modify DB Security Group Rule|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_MODIFY|
+|Delete Event Subscription|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_DELETE|
+|Modify Event Group|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_MODIFY|
+|Register Event Subscription|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_REGISTER|
+|Create Notification Group|event_id.rds_for_postgresql.NOTIFICATION_GROUP_CREATE|
+|Delete Notification Group|event_id.rds_for_postgresql.NOTIFICATION_GROUP_DELETE|
+|Modify Notification Group|event_id.rds_for_postgresql.NOTIFICATION_GROUP_MODIFY|
+|Copy Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_COPY|
+|Create Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_CREATE|
+|Delete Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_DELETE|
+|Modify Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_MODIFY_PARAMETERS|
+|Reset Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_RESET|
+|Create User Group|event_id.rds_for_postgresql.USER_GROUP_CREATE|
+|Delete User Group|event_id.rds_for_postgresql.USER_GROUP_DELETE|
+|Modify User Group|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
