@@ -258,6 +258,18 @@
 |키페어 업데이트 시작|event_id.iaas.cluster.update_vm_auth_key.start|
 |키페어 업데이트 완료|event_id.iaas.cluster.update_vm_auth_key.end|
 |키페어 업데이트 실패|event_id.iaas.cluster.update_vm_auth_key.failed|
+|컨트롤 플레인 로그 수집 업데이트 시작|event_id.iaas.cluster.update_control_plane_log.start|
+|컨트롤 플레인 로그 수집 업데이트 완료|event_id.iaas.cluster.update_control_plane_log.end|
+|컨트롤 플레인 로그 수집 업데이트 실패|event_id.iaas.cluster.update_control_plane_log.failed|
+|Addon 제거 시작|event_id.iaas.cluster.uninstall_addon.start|
+|Addon 제거 완료|event_id.iaas.cluster.uninstall_addon.end|
+|Addon 제거 실패|event_id.iaas.cluster.uninstall_addon.failed|
+|Addon 설치 시작|event_id.iaas.cluster.install_addon.start|
+|Addon 설치 완료|event_id.iaas.cluster.install_addon.end|
+|Addon 설치 실패|event_id.iaas.cluster.install_addon.failed|
+|Addon 업데이트 시작|event_id.iaas.cluster.update_addon.start|
+|Addon 업데이트 완료|event_id.iaas.cluster.update_addon.end|
+|Addon 업데이트 실패|event_id.iaas.cluster.update_addon.failed|
 |노드 그룹 생성 완료|event_id.iaas.nodegroup.create.end|
 |노드 그룹 생성 실패|event_id.iaas.nodegroup.create.failed|
 |노드 그룹 생성 시작|event_id.iaas.nodegroup.create.start|
@@ -288,6 +300,27 @@
 |추가 보안 그룹 업데이트 완료|event_id.iaas.nodegroup.update_extra_security_group.end|
 |추가 보안 그룹 업데이트 실패|event_id.iaas.nodegroup.update_extra_security_group.fail|
 |추가 보안 그룹 업데이트 시작|event_id.iaas.nodegroup.update_extra_security_group.start|
+|노드 그룹 지표 기반 오토스케일러 설정 시작|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
+|노드 그룹 지표 기반 오토스케일러 설정 완료|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
+|노드 그룹 지표 기반 오토스케일러 설정 실패|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 시작|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 완료|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
+|지표 기반 오토 스케일러 노드 그룹 노드 증설 실패|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 시작|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 완료|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
+|지표 기반 오토 스케일러 노드 그룹 노드 감축 실패|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
+|노드 그룹 쿠버네티스 노드 레이블 변경 시작|event_id.iaas.nodegroup.update_k8s_node_labels.start|
+|노드 그룹 쿠버네티스 노드 레이블 변경 완료|event_id.iaas.nodegroup.update_k8s_node_labels.end|
+|노드 그룹 쿠버네티스 노드 레이블 변경 실패|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
+|플로팅 IP 자동 할당 변경 시작|event_id.iaas.nodegroup.update_fip_auto_bind.start|
+|플로팅 IP 자동 할당 변경 완료|event_id.iaas.nodegroup.update_fip_auto_bind.end|
+|플로팅 IP 자동 할당 변경 실패|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
+|노드 감축 시작|event_id.iaas.nodegroup.scale_in.start|
+|노드 감축 완료|event_id.iaas.nodegroup.scale_in.end|
+|노드 감축 실패|event_id.iaas.nodegroup.scale_in.failed|
+|노드 증설 시작|event_id.iaas.nodegroup.scale_out.start|
+|노드 증설 완료|event_id.iaas.nodegroup.scale_out.end|
+|노드 증설 실패|event_id.iaas.nodegroup.scale_out.failed|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -880,6 +913,31 @@
 |사용자 데이터 삭제|event_id.certificate_manager.user_data.delete|
 |사용자 데이터 수정|event_id.certificate_manager.user_data.update|
 
+### Pipeline
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|파이프라인 생성|event_id.pipeline.pipeline_manage.create|
+|파이프라인 수정|event_id.pipeline.pipeline_manage.update|
+|파이프라인 삭제|event_id.pipeline.pipeline_manage.delete|
+|파이프라인 수동 실행|event_id.pipeline.pipeline_manage.manual_execute|
+|파이프라인 실행 취소|event_id.pipeline.pipeline_manage.execute_cancel|
+|소스 저장소 생성|event_id.pipeline.source_repository.create|
+|소스 저장소 수정|event_id.pipeline.source_repository.update|
+|소스 저장소 삭제|event_id.pipeline.source_repository.delete|
+|이미지 저장소 생성|event_id.pipeline.image_registry.create|
+|이미지 저장소 수정|event_id.pipeline.image_registry.update|
+|이미지 저장소 삭제|event_id.pipeline.image_registry.delete|
+|빌드 도구 생성|event_id.pipeline.build_tool.create|
+|빌드 도구 수정|event_id.pipeline.build_tool.update|
+|빌드 도구 삭제|event_id.pipeline.build_tool.delete|
+|배포 대상 생성|event_id.pipeline.deploy_target.create|
+|배포 대상 수정|event_id.pipeline.deploy_target.update|
+|배포 대상 삭제|event_id.pipeline.deploy_target.delete|
+|차트 저장소 생성|event_id.pipeline.chart_repository.create|
+|차트 저장소 수정|event_id.pipeline.chart_repository.update|
+|차트 저장소 삭제|event_id.pipeline.chart_repository.delete|
+
 ### NHN AppGuard
 
 | 이벤트 | 이벤트 ID |
@@ -1083,4 +1141,52 @@
 |이미지 캐시 생성|event_id.ncr.image_cache.create|
 |이미지 캐시 삭제|event_id.ncr.image_cache.delete|
 |이미지 캐시 수정|event_id.ncr.image_cache.update|
+
+### NHN Bastion
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|실시간 세션 차단|event_id.bastion.session_block|
+|명령어 등록|event_id.bastion.logging_command_modify|
+|정책 생성|event_id.bastion.access_policy_add|
+|정책 수정|event_id.bastion.access_policy_modify|
+|정책 순서 변경|event_id.bastion.access_policy_move|
+|정책 복사|event_id.bastion.access_policy_copy|
+|정책 삭제|event_id.bastion.access_policy_delete|
+|명령어 통제 정책 추가|event_id.bastion.command_policy_add|
+|명령어 통제 정책 수정|event_id.bastion.command_policy_modify|
+|명령어 통제 정책 복사|event_id.bastion.command_policy_copy|
+|명령어 통제 정책 삭제|event_id.bastion.command_policy_delete|
+|인스턴스 연결|event_id.bastion.instance_connect|
+|인스턴스 자원관리|event_id.bastion.instance_modify|
+|인스턴스 자동등록|event_id.bastion.instance_modify_register_auto|
+|인스턴스 삭제|event_id.bastion.instance_delete|
+|인스턴스 전체 삭제|event_id.bastion.instance_delete_all|
+|인스턴스 등록|event_id.bastion.instance_register|
+|인스턴스 새로고침|event_id.bastion.instance_sync|
+|자원 그룹 생성|event_id.bastion.instance_group_add|
+|자원 그룹 수정|event_id.bastion.instance_group_modify|
+|자원 그룹 삭제|event_id.bastion.instance_group_delete|
+|자원 그룹 복사|event_id.bastion.instance_group_copy|
+|환경 설정 수정|event_id.bastion.preference_modify|
+|OBS 유효성 검증|event_id.bastion.preference_obs_validation|
+|NHN Bastion 삭제|event_id.bastion.preference_region_delete|
+|사용자 새로고침|event_id.bastion.user_sync|
+|사용자 그룹 추가|event_id.bastion.user_group_add|
+|사용자 그룹 수정|event_id.bastion.user_group_modify|
+|사용자 그룹 삭제|event_id.bastion.user_group_delete|
+|사용자 그룹 복사|event_id.bastion.user_group_copy|
+|시스템 테넌트 생성|event_id.bastion.infra_add|
+|웹터미널 과 시스템 테넌트 생성|event_id.bastion.web_terminal_infra_add|
+|웹터미널 생성|event_id.bastion.web_terminal_add|
+|웹터미널 재생성|event_id.bastion.web_terminal_re_create|
+|웹터미널 삭제|event_id.bastion.web_terminal_delete|
+|웹터미널 플로팅 IP 변경|event_id.bastion.web_terminal_fip_set|
+|웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
+|웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
+|대칭 키 검증|event_id.bastion.symmetric_key_validation|
+|대칭 키 회전|event_id.bastion.symmetric_key_rotation|
+|정적 라우팅 갱신|event_id.bastion.web_terminal_net_daemon_restart|
+|정책 일괄 등록 검증|event_id.bastion.access_policy_dry_run|
+|외부 자원 일괄 등록 검증|event_id.bastion.instance_register_dry_run|
 
