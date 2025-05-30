@@ -59,16 +59,11 @@
 |블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
 |블록 스토리지 수정|event_id.iaas.volume.update|
 |블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
-|블록 스토리지 복제|event_id.iaas.volume.copy|
-|블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
 |인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
 |인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
-|블록 스토리지 이동|event_id.iaas.volume.transfer|
-|블록 스토리지 이동 완료(대상)|event_id.iaas.volume.transfer_accept|
-|블록 스토리지 이동 완료(소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
