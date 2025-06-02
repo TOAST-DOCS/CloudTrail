@@ -34,10 +34,13 @@
 |인스턴스 네트워크 인터페이스 연결 해제|event_id.iaas.interface.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
+|배치 정책 생성|event_id.iaas.servergroup.create|
+|배치 정책 삭제|event_id.iaas.servergroup.delete|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
+|이미지 생성 실패|event_id.iaas.image.create_failed|
 |이미지 삭제|event_id.iaas.image.delete|
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
@@ -65,6 +68,9 @@
 |인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|블록 스토리지 이동|event_id.iaas.volume.transfer|
+|블록 스토리지 이동 완료(대상)|event_id.iaas.volume.transfer_accept|
+|블록 스토리지 이동 완료(소스)|event_id.iaas.volume.transfer_create|
 |블록 스토리지 스냅숏 생성|event_id.iaas.snapshot.create|
 |블록 스토리지 스냅숏 생성 완료|event_id.iaas.snapshot.create_end|
 |블록 스토리지 스냅숏 삭제|event_id.iaas.snapshot.delete|
@@ -89,9 +95,11 @@
 |VPC 서브넷 라우팅 테이블 연결 해제|event_id.iaas.vpc_subnet.detach_routingtable|
 |서브넷 정적 라우트 생성|event_id.iaas.vpc_subnet_route.create|
 |서브넷 정적 라우트 삭제|event_id.iaas.vpc_subnet_route.delete|
-|포트 생성|event_id.iaas.port.create|
-|포트 삭제|event_id.iaas.port.delete|
-|포트 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 생성|event_id.iaas.port.create|
+|네트워크 인터페이스 생성 완료|event_id.iaas.port.create_end|
+|네트워크 인터페이스 변경|event_id.iaas.port.update|
+|네트워크 인터페이스 삭제|event_id.iaas.port.delete|
+|네트워크 인터페이스 삭제 완료|event_id.iaas.port.delete_end|
 |라우팅 테이블 생성|event_id.iaas.routing_table.create|
 |라우팅 테이블 삭제|event_id.iaas.routing_table.delete|
 |라우팅 테이블 변경|event_id.iaas.routing_table.update|
@@ -1047,7 +1055,7 @@
 |인프라 구성|event_id.network_firewall.config_project|
 |인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
 |VPN 이벤트 로그 다운로드|event_id.network_firewall.event_log_download|
-|VPN 게이트웨이 수정|event_id.network_firewall.gateway_modify|
+|VPN 게이트웨이 수정|event_id.network_firewall.vpn_gateway_modify|
 |정책 추가|event_id.network_firewall.group_create|
 |정책 엑셀 추가|event_id.network_firewall.group_create_template|
 |정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
