@@ -1,5 +1,17 @@
 ## CloudTrail > Release Notes
 
+### 2025. 06. 24.
+#### More Events
+* Added events related to Notification Hub.
+
+### 2025. 06. 16.
+#### More Events
+* Added events related to Cloud Functions.
+
+### 2025. 06. 10.
+#### More Events
+* Added events related to NHN AppGuard.
+
 ### 2025. 05. 27.
 #### More Events
 * Added events related to Default Infrastructure Service.
