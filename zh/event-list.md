@@ -93,12 +93,12 @@
 |Take Console Screenshot|event_id.iaas.instance_action.screenshot|
 |Terminate Instance|event_id.iaas.instance_action.shelve|
 |Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|
-|Start Stopped Instance|event_id.iaas.instance_action.start|
-|Start Stopped Instance Completed|event_id.iaas.instance_action.start_end|
+|Start Instance|event_id.iaas.instance_action.start|
+|Start Instance Completed|event_id.iaas.instance_action.start_end|
 |Stop Instance|event_id.iaas.instance_action.stop|
 |Stop Instance Completed|event_id.iaas.instance_action.stop_end|
-|Start Terminated Instance|event_id.iaas.instance_action.unshelve|
-|Start Terminated Instance Completed|event_id.iaas.instance_action.unshelve_end|
+|Start Instance|event_id.iaas.instance_action.unshelve|
+|Start Instance Completed|event_id.iaas.instance_action.unshelve_end|
 |Change Instance Key Pair|event_id.iaas.instance_action.reset_keypair|
 |Create Instance Template|event_id.iaas.instance_template.create|
 |Delete Instance Template|event_id.iaas.instance_template.delete|
@@ -107,8 +107,8 @@
 |Create Instance Metadata|event_id.iaas.metadata.create|
 |Delete Instance Metadata|event_id.iaas.metadata.delete|
 |Change Instance Metadata|event_id.iaas.metadata.update|
-|Attach Instance Network Interface|event_id.iaas.interface.create|
-|Detach Instance Network Interface|event_id.iaas.interface.delete|
+|Create Instance Interface|event_id.iaas.interface.create|
+|Delete Instance Interface|event_id.iaas.interface.delete|
 |Create Keypair|event_id.iaas.keypair.create|
 |Delete Keypair|event_id.iaas.keypair.delete|
 |Create Placement Policy|event_id.iaas.servergroup.create|
@@ -117,12 +117,12 @@
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
 |Create Image ID|event_id.iaas.image.create_id|
-|Create Image Failed|event_id.iaas.image.create_failed|
 |Delete Image|event_id.iaas.image.delete|
-|Delete Image Completed|event_id.iaas.image.delete_end|
-|Modify Image|event_id.iaas.image.update|
-|Modify Image Completed|event_id.iaas.image.update_end|
+|Create Image Failed|event_id.iaas.image.create_failed|
+|Change Image Information|event_id.iaas.image.update|
 |Upload Image|event_id.iaas.image.upload|
+|Delete Image Completed|event_id.iaas.image.delete_end|
+|Modify Image Completed|event_id.iaas.image.update_end|
 |Create Image Sharing|event_id.iaas.image_member.create|
 |Delete Image Sharing|event_id.iaas.image_member.delete|
 |Build Image|event_id.iaas.image_template.build|
@@ -130,19 +130,19 @@
 |Create Image Template|event_id.iaas.image_template.create|
 |Delete Image Template|event_id.iaas.image_template.delete|
 |Modify Image Template|event_id.iaas.image_template.update|
-|Create Block Storage|event_id.iaas.volume.create|
+|Connect Instance Volume|event_id.iaas.volume.attach|
+|Copy Volume|event_id.iaas.volume.copy|
 |Create Block Storage Completed|event_id.iaas.volume.create_end|
+|Create Block Storage|event_id.iaas.volume.create|
 |Delete Block Storage|event_id.iaas.volume.delete|
 |Delete Block Storage Completed|event_id.iaas.volume.delete_end|
-|Modify Block Storage|event_id.iaas.volume.update|
-|Modify Block Storage Completed|event_id.iaas.volume.update_end|
-|Replicate Block Storage|event_id.iaas.volume.copy|
-|Replicate Block Storage Completed|event_id.iaas.volume.copy_end|
-|Attach Instance Block Storage|event_id.iaas.volume.attach|
-|Attach Instance Block Storage Completed|event_id.iaas.volume.attach_end|
-|Detach Instance Block Storage|event_id.iaas.volume.detach|
-|Detach Instance Block Storage Completed|event_id.iaas.volume.detach_end|
+|Disconnect Instance Volume|event_id.iaas.volume.detach|
 |Change Block Storage Size|event_id.iaas.volume.extend|
+|Modify Block Storage Completed|event_id.iaas.volume.update_end|
+|Change Block Storage Information|event_id.iaas.volume.update|
+|Replicate Block Storage Completed|event_id.iaas.volume.copy_end|
+|Attach Instance Block Storage Completed|event_id.iaas.volume.attach_end|
+|Detach Instance Block Storage Completed|event_id.iaas.volume.detach_end|
 |Move Block Storage|event_id.iaas.volume.transfer|
 |Move Block Storage Completed (Target)|event_id.iaas.volume.transfer_accept|
 |Move Block Storage Completed (Source)|event_id.iaas.volume.transfer_create|
@@ -1185,6 +1185,7 @@
 |정책 수정|event_id.appguard.policy_update|
 |Unity SDK download|event_id.appguard.sdk_download_unity|
 |React Native SDK download|event_id.appguard.sdk_download_react_native|
+|Unreal SDK download|event_id.appguard.sdk_download_unreal|
 
 ### ShortURL
 
@@ -1389,22 +1390,22 @@
 
 | Event | Event ID |
 | --- | --- |
-|Create Flow Meta|event_id.dataflow.flow.meta.create|
-|Modify Flow Meta|event_id.dataflow.flow.meta.update|
-|Delete Flow Meta|event_id.dataflow.flow.meta.delete|
-|Modify Flow Graph|event_id.dataflow.flow.graph.update|
-|Copy Flow Meta|event_id.dataflow.flow.meta.copy|
+|Create Flow|event_id.dataflow.flow.meta.create|
+|Modify Flow|event_id.dataflow.flow.meta.update|
+|Delete Flow|event_id.dataflow.flow.meta.delete|
+|Save Flow Settings|event_id.dataflow.flow.graph.update|
+|Copy Flow|event_id.dataflow.flow.meta.copy|
 |Start Flow|event_id.dataflow.flow.start|
 |End Flow|event_id.dataflow.flow.stop|
-|Create Template Meta|event_id.dataflow.template.meta.create|
-|Modify Template Meta|event_id.dataflow.template.meta.update|
-|Delete Template Meta|event_id.dataflow.template.meta.delete|
-|Modify Template Graph|event_id.dataflow.template.graph.update|
-|Copy Template Graph|event_id.dataflow.template.graph.copy|
+|Create Template|event_id.dataflow.template.meta.create|
+|Modify Template|event_id.dataflow.template.meta.update|
+|Delete Template|event_id.dataflow.template.meta.delete|
+|Save Template Settings|event_id.dataflow.template.graph.update|
+|Copy Template|event_id.dataflow.template.graph.copy|
 |Save Scheduler|event_id.dataflow.scheduler.meta.save|
-|Enable Validation|event_id.dataflow.settings.accessibility-checker.enable|
+|Use Validation|event_id.dataflow.settings.accessibility-checker.enable|
 |Disable Validation|event_id.dataflow.settings.accessibility-checker.disable|
-|End After Draining|event_id.dataflow.flow.drain|
+|End After Flow Draining|event_id.dataflow.flow.drain|
 |Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
 |Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
@@ -1631,7 +1632,7 @@
 |Infrastructure configuration|event_id.network_firewall.config_project|
 |Infrastructure and firewall configuration|event_id.network_firewall.config_project_iaas|
 |Download VPN Event Logs|event_id.network_firewall.event_log_download|
-|Modify VPN Gateway|event_id.network_firewall.gateway_modify|
+|Modify VPN Gateway|event_id.network_firewall.vpn_gateway_modify|
 |Add Policy|event_id.network_firewall.group_create|
 |Add Policy as Excel|event_id.network_firewall.group_create_template|
 |Validate Policy as Excel|event_id.network_firewall.group_create_template_verify|
@@ -2028,6 +2029,19 @@
 |친구톡 발신프로필과 비즈니스 폼 아이디 등록|event_id.notification_hub.detail_configuration_FRIENDTALK_register_sender_key_and_biz_form_id|
 |Push 광고 표시 문구 위치 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_message_position|
 |Push 광고 수신 동의 확인 메시지 자동 발송 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_re_agreement_notice_auto_sending|
+|서브 도메인 등록|event_id.notification_hub.sender.register_email_subdomain|
+|서브 도메인 삭제|event_id.notification_hub.sender.delete_email_subdomain|
+|앱 유형 설정|event_id.notification_hub.detail_configuration_PUSH_modify_token_policy|
+|첨부파일 삭제|event_id.notification_hub.attachment_delete|
+|첨부파일 수정|event_id.notification_hub.attachment_modify|
+|카테고리 삭제|event_id.notification_hub.template_category_delete|
+|카테고리 수정|event_id.notification_hub.template_category_modify|
+|연락처 수정|event_id.notification_hub.addressbook_recipient_modify|
+|연락처 다건 삭제|event_id.notification_hub.addressbook_recipient_delete|
+|그룹 삭제|event_id.notification_hub.addressbook_group_delete|
+|그룹 수정|event_id.notification_hub.addressbook_group_modify|
+|수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
+|수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
 
 ### DDoS Guard
 
@@ -2040,6 +2054,18 @@
 |Create Mock Training|event_id.ddos_guard.mock_training_create|
 |Modify Mock Training|event_id.ddos_guard.mock_training_modify|
 |Delete Mock Training|event_id.ddos_guard.mock_training_delete|
+
+### Cloud Functions
+
+| Event | Event ID |
+| --- | --- |
+|Copy Function|event_id.cloud_functions.function.copy|
+|Create Function|event_id.cloud_functions.function.create|
+|Delete Function|event_id.cloud_functions.function.delete|
+|Update Function|event_id.cloud_functions.function.update&#9;|
+|Create Trigger|event_id.cloud_functions.trigger.create|
+|Delete Trigger|event_id.cloud_functions.trigger.delete|
+|Update Trigger|event_id.cloud_functions.trigger.update|
 
 ### RDS for PostgreSQL
 
