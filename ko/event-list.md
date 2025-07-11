@@ -1243,6 +1243,8 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
+|M/N 타입 사용 신청|event_id.brandmessage.marketing.agreement|
+|마케팅 수신동의 증적자료 업로드|event_id.brandmessage.upload.marketing.agreement|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|
 |발신 프로필 토큰 인증|event_id.kakaotalk.sender.token.certification|
 |발신 프로필 삭제|event_id.kakaotalk.sender.deletion|
@@ -2055,6 +2057,55 @@
 |모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
 |모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
 
+### Cloud Access
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|사용자 추가|event_id.cloud_access.user_create|
+|사용자 삭제|event_id.cloud_access.user_delete|
+|사용자 수정|event_id.cloud_access.user_modify|
+|사용자 계정 상태 변경|event_id.cloud_access.user_account_state_change|
+|사용자 OTP 초기화|event_id.cloud_access.user_otp_reset|
+|사용자 비밀번호 초기화|event_id.cloud_access.user_password_reset|
+|사용자 로그인 실패 초기화|event_id.cloud_access.user_login_failure_reset|
+|사용자 계정 활성화|event_id.cloud_access.user_account_activate|
+|사용자 일괄 업로드 검증|event_id.cloud_access.user_create_verify|
+|사용자 일괄 업로드|event_id.cloud_access.user_create_template|
+|사용자 정책 추가|event_id.cloud_access.user_policy_create|
+|사용자 정책 수정|event_id.cloud_access.user_policy_modify|
+|사용자 정책 삭제|event_id.cloud_access.user_policy_delete|
+|ACL 정책 추가|event_id.cloud_access.acl_policy_create|
+|ACL 정책 복사|event_id.cloud_access.acl_policy_copy_create|
+|ACL 정책 삭제|event_id.cloud_access.acl_policy_delete|
+|ACL 정책 수정|event_id.cloud_access.acl_policy_modify|
+|ACL 정책 이동|event_id.cloud_access.acl_policy_move|
+|ACL 정책 일괄 업로드 검증|event_id.cloud_access.acl_policy_create_template_verify|
+|ACL 정책 일괄 업로드|event_id.cloud_access.acl_policy_create_template|
+|IP 객체 추가|event_id.cloud_access.ip_object_create|
+|IP 객체 추가(사용자)|event_id.cloud_access.ip_object_user_create|
+|IP 객체 삭제|event_id.cloud_access.ip_object_delete|
+|IP 객체 수정|event_id.cloud_access.ip_object_modify|
+|IP 객체 일괄 업로드 검증|event_id.cloud_access.ip_object_create_template_verify|
+|IP 객체 일괄 업로드|event_id.cloud_access.ip_object_create_template|
+|Port 객체 추가|event_id.cloud_access.port_object_create|
+|Port 객체 삭제|event_id.cloud_access.port_object_delete|
+|Port 객체 수정|event_id.cloud_access.port_object_modify|
+|Port 객체 일괄 업로드 검증|event_id.cloud_access.port_object_create_template_verify|
+|Port 객체 일괄 업로드|event_id.cloud_access.port_object_create_template|
+|기본 차단 정책 로그 설정|event_id.cloud_access.option_deny_log_create|
+|원격 로그(Syslog) 설정|event_id.cloud_access.option_remote_log_syslog_create|
+|원격 로그(OBS) 설정|event_id.cloud_access.option_remote_log_obs_create|
+|원격 로그(Log &amp; Crash Search) 설정|event_id.cloud_access.option_remote_log_lncs_create|
+|원격 로그(Log &amp; Crash Search) 정보 검증|event_id.cloud_access.option_lncs_valid|
+|원격 로그(OBS) 정보 검증|event_id.cloud_access.option_obs_valid|
+|로그인 보안(로그인 실패) 설정|event_id.cloud_access.option_login_failure_create|
+|로그인 보안(비밀번호 만료) 설정|event_id.cloud_access.option_password_expire_create|
+|로그인 보안(비밀번호 정책) 설정|event_id.cloud_access.option_password_policy_create|
+|연결 설정|event_id.cloud_access.option_connection_create|
+|연결 설정 변경|event_id.cloud_access.option_connection_modify|
+|안내 설정|event_id.cloud_access.option_guide_create|
+|로고 설정|event_id.cloud_access.option_logo_create|
+
 ### Cloud Functions
 
 | 이벤트 | 이벤트 ID |
@@ -2062,7 +2113,7 @@
 |함수 복사|event_id.cloud_functions.function.copy|
 |함수 생성|event_id.cloud_functions.function.create|
 |함수 삭제|event_id.cloud_functions.function.delete|
-|함수 수정|event_id.cloud_functions.function.update&#9;|
+|함수 수정|event_id.cloud_functions.function.update|
 |트리거 생성|event_id.cloud_functions.trigger.create|
 |트리거 삭제|event_id.cloud_functions.trigger.delete|
 |트리거 수정|event_id.cloud_functions.trigger.update|
@@ -2131,4 +2182,102 @@
 |사용자 그룹 생성|event_id.rds_for_postgresql.USER_GROUP_CREATE|
 |사용자 그룹 삭제|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |사용자 그룹 수정|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
+
+### Cloud Access Beta
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|사용자 추가|event_id.cloud_access.user_create|
+|사용자 삭제|event_id.cloud_access.user_delete|
+|사용자 수정|event_id.cloud_access.user_modify|
+|사용자 계정 상태 변경|event_id.cloud_access.user_account_state_change|
+|사용자 OTP 초기화|event_id.cloud_access.user_otp_reset|
+|사용자 비밀번호 초기화|event_id.cloud_access.user_password_reset|
+|사용자 로그인 실패 초기화|event_id.cloud_access.user_login_failure_reset|
+|사용자 계정 활성화|event_id.cloud_access.user_account_activate|
+|사용자 일괄 업로드 검증|event_id.cloud_access.user_create_verify|
+|사용자 일괄 업로드|event_id.cloud_access.user_create_template|
+|사용자 정책 추가|event_id.cloud_access.user_policy_create|
+|사용자 정책 수정|event_id.cloud_access.user_policy_modify|
+|사용자 정책 삭제|event_id.cloud_access.user_policy_delete|
+|ACL 정책 추가|event_id.cloud_access.acl_policy_create|
+|ACL 정책 복사|event_id.cloud_access.acl_policy_copy_create|
+|ACL 정책 삭제|event_id.cloud_access.acl_policy_delete|
+|ACL 정책 수정|event_id.cloud_access.acl_policy_modify|
+|ACL 정책 이동|event_id.cloud_access.acl_policy_move|
+|ACL 정책 일괄 업로드 검증|event_id.cloud_access.acl_policy_create_template_verify|
+|ACL 정책 일괄 업로드|event_id.cloud_access.acl_policy_create_template|
+|IP 객체 추가|event_id.cloud_access.ip_object_create|
+|IP 객체 추가(사용자)|event_id.cloud_access.ip_object_user_create|
+|IP 객체 삭제|event_id.cloud_access.ip_object_delete|
+|IP 객체 수정|event_id.cloud_access.ip_object_modify|
+|IP 객체 일괄 업로드 검증|event_id.cloud_access.ip_object_create_template_verify|
+|IP 객체 일괄 업로드|event_id.cloud_access.ip_object_create_template|
+|Port 객체 추가|event_id.cloud_access.port_object_create|
+|Port 객체 삭제|event_id.cloud_access.port_object_delete|
+|Port 객체 수정|event_id.cloud_access.port_object_modify|
+|Port 객체 일괄 업로드 검증|event_id.cloud_access.port_object_create_template_verify|
+|Port 객체 일괄 업로드|event_id.cloud_access.port_object_create_template|
+|기본 차단 정책 로그 설정|event_id.cloud_access.option_deny_log_create|
+|원격 로그(Syslog) 설정|event_id.cloud_access.option_remote_log_syslog_create|
+|원격 로그(OBS) 설정|event_id.cloud_access.option_remote_log_obs_create|
+|원격 로그(Log &amp; Crash Search) 설정|event_id.cloud_access.option_remote_log_lncs_create|
+|원격 로그(Log &amp; Crash Search) 정보 검증|event_id.cloud_access.option_lncs_valid|
+|원격 로그(OBS) 정보 검증|event_id.cloud_access.option_obs_valid|
+|로그인 보안(로그인 실패) 설정|event_id.cloud_access.option_login_failure_create|
+|로그인 보안(비밀번호 만료) 설정|event_id.cloud_access.option_password_expire_create|
+|로그인 보안(비밀번호 정책) 설정|event_id.cloud_access.option_password_policy_create|
+|연결 설정|event_id.cloud_access.option_connection_create|
+|연결 설정 변경|event_id.cloud_access.option_connection_modify|
+|안내 설정|event_id.cloud_access.option_guide_create|
+|로고 설정|event_id.cloud_access.option_logo_create|
+
+### Cloud Access Alpha
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|사용자 추가|event_id.cloud_access.user_create|
+|사용자 삭제|event_id.cloud_access.user_delete|
+|사용자 수정|event_id.cloud_access.user_modify|
+|사용자 계정 상태 변경|event_id.cloud_access.user_account_state_change|
+|사용자 OTP 초기화|event_id.cloud_access.user_otp_reset|
+|사용자 비밀번호 초기화|event_id.cloud_access.user_password_reset|
+|사용자 로그인 실패 초기화|event_id.cloud_access.user_login_failure_reset|
+|사용자 계정 활성화|event_id.cloud_access.user_account_activate|
+|사용자 일괄 업로드 검증|event_id.cloud_access.user_create_verify|
+|사용자 일괄 업로드|event_id.cloud_access.user_create_template|
+|사용자 정책 추가|event_id.cloud_access.user_policy_create|
+|사용자 정책 수정|event_id.cloud_access.user_policy_modify|
+|사용자 정책 삭제|event_id.cloud_access.user_policy_delete|
+|ACL 정책 추가|event_id.cloud_access.acl_policy_create|
+|ACL 정책 복사|event_id.cloud_access.acl_policy_copy_create|
+|ACL 정책 삭제|event_id.cloud_access.acl_policy_delete|
+|ACL 정책 수정|event_id.cloud_access.acl_policy_modify|
+|ACL 정책 이동|event_id.cloud_access.acl_policy_move|
+|ACL 정책 일괄 업로드 검증|event_id.cloud_access.acl_policy_create_template_verify|
+|ACL 정책 일괄 업로드|event_id.cloud_access.acl_policy_create_template|
+|IP 객체 추가|event_id.cloud_access.ip_object_create|
+|IP 객체 추가(사용자)|event_id.cloud_access.ip_object_user_create|
+|IP 객체 삭제|event_id.cloud_access.ip_object_delete|
+|IP 객체 수정|event_id.cloud_access.ip_object_modify|
+|IP 객체 일괄 업로드 검증|event_id.cloud_access.ip_object_create_template_verify|
+|IP 객체 일괄 업로드|event_id.cloud_access.ip_object_create_template|
+|Port 객체 추가|event_id.cloud_access.port_object_create|
+|Port 객체 삭제|event_id.cloud_access.port_object_delete|
+|Port 객체 수정|event_id.cloud_access.port_object_modify|
+|Port 객체 일괄 업로드 검증|event_id.cloud_access.port_object_create_template_verify|
+|Port 객체 일괄 업로드|event_id.cloud_access.port_object_create_template|
+|기본 차단 정책 로그 설정|event_id.cloud_access.option_deny_log_create|
+|원격 로그(Syslog) 설정|event_id.cloud_access.option_remote_log_syslog_create|
+|원격 로그(OBS) 설정|event_id.cloud_access.option_remote_log_obs_create|
+|원격 로그(Log &amp; Crash Search) 설정|event_id.cloud_access.option_remote_log_lncs_create|
+|원격 로그(Log &amp; Crash Search) 정보 검증|event_id.cloud_access.option_lncs_valid|
+|원격 로그(OBS) 정보 검증|event_id.cloud_access.option_obs_valid|
+|로그인 보안(로그인 실패) 설정|event_id.cloud_access.option_login_failure_create|
+|로그인 보안(비밀번호 만료) 설정|event_id.cloud_access.option_password_expire_create|
+|로그인 보안(비밀번호 정책) 설정|event_id.cloud_access.option_password_policy_create|
+|연결 설정|event_id.cloud_access.option_connection_create|
+|연결 설정 변경|event_id.cloud_access.option_connection_modify|
+|안내 설정|event_id.cloud_access.option_guide_create|
+|로고 설정|event_id.cloud_access.option_logo_create|
 
