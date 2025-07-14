@@ -657,7 +657,7 @@
 |Change to DB Instance after Failover|event_id.rds_for_mysql.instance_action.failover_split|
 |High Availability Rebuild after Failover|event_id.rds_for_mysql.instance.ha.rebuild|
 |Restore High Availability of Failover Instance|event_id.rds_for_mysql.instance.ha.repair|
-|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|
+|Enable Authentication Plugin|event_id.rds_for_mysql.enable_authentication_plugin|
 |Stop Instance|event_id.rds_for_mysql.instance.stop|
 |Modify Event Group|event_id.rds_for_mysql.modifyEventSubscription|
 |Delete Event Subscription|event_id.rds_for_mysql.deleteEventSubscription|
@@ -716,7 +716,7 @@
 |Modify DB Security Group Rule|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
 |Create DB Security Group Rule|event_id.rds_for_mysql.createDbSecurityGroupRule|
 |Delete DB Security Group Rule|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
-|DB 인스턴스 운영체제 업그레이드|event_id.rds_for_mysql.instance.os.upgrade|
+|DB Instance OS Upgrade|event_id.rds_for_mysql.instance.os.upgrade|
 
 ### RDS for MariaDB
 
@@ -1243,6 +1243,8 @@
 
 | Event | Event ID |
 | --- | --- |
+|Application for M/N type use|event_id.brandmessage.marketing.agreement|
+|Upload evidence of marketing consent|event_id.brandmessage.upload.marketing.agreement|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|
 |Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|
 |Delete Sender Profile|event_id.kakaotalk.sender.deletion|
@@ -2055,6 +2057,55 @@
 |Modify Mock Training|event_id.ddos_guard.mock_training_modify|
 |Delete Mock Training|event_id.ddos_guard.mock_training_delete|
 
+### Cloud Access
+
+| Event | Event ID |
+| --- | --- |
+|Add User|event_id.cloud_access.user_create|
+|Delete User|event_id.cloud_access.user_delete|
+|Modify User|event_id.cloud_access.user_modify|
+|Change User Account Status|event_id.cloud_access.user_account_state_change|
+|Reset User Otp|event_id.cloud_access.user_otp_reset|
+|Reset User Password|event_id.cloud_access.user_password_reset|
+|Reset User Login Failure|event_id.cloud_access.user_login_failure_reset|
+|Activate User Account|event_id.cloud_access.user_account_activate|
+|Verify User Upload in Batch|event_id.cloud_access.user_create_verify|
+|Upload User in Batch|event_id.cloud_access.user_create_template|
+|Add User Policy|event_id.cloud_access.user_policy_create|
+|Modify User Policy|event_id.cloud_access.user_policy_modify|
+|Delete User Policy|event_id.cloud_access.user_policy_delete|
+|Add ACL Policy|event_id.cloud_access.acl_policy_create|
+|Copy ACL Policy|event_id.cloud_access.acl_policy_copy_create|
+|Delete ACL Policy|event_id.cloud_access.acl_policy_delete|
+|Modify ACL Policy|event_id.cloud_access.acl_policy_modify|
+|Move ACL Policy|event_id.cloud_access.acl_policy_move|
+|Verify Upload ACL Policy in Batch|event_id.cloud_access.acl_policy_create_template_verify|
+|Upload ACL Policy in Batch|event_id.cloud_access.acl_policy_create_template|
+|Add IP Object|event_id.cloud_access.ip_object_create|
+|Add IP Object (User)|event_id.cloud_access.ip_object_user_create|
+|Delete IP Object|event_id.cloud_access.ip_object_delete|
+|Modify IP Object|event_id.cloud_access.ip_object_modify|
+|Verify Upload IP Object in Batch|event_id.cloud_access.ip_object_create_template_verify|
+|Upload IP Object in Batch|event_id.cloud_access.ip_object_create_template|
+|Add Port Object|event_id.cloud_access.port_object_create|
+|Delete Port Object|event_id.cloud_access.port_object_delete|
+|Modify Port Object|event_id.cloud_access.port_object_modify|
+|Verify Upload PORT Object in Batch|event_id.cloud_access.port_object_create_template_verify|
+|Upload PORT Object in Batch|event_id.cloud_access.port_object_create_template|
+|Default Deny Policy Log Settings|event_id.cloud_access.option_deny_log_create|
+|Remote Log (Syslog) Settings|event_id.cloud_access.option_remote_log_syslog_create|
+|Remote Log (OBS) Settings|event_id.cloud_access.option_remote_log_obs_create|
+|Remote Log(Log &amp; Crash Search) Settings|event_id.cloud_access.option_remote_log_lncs_create|
+|Validate Remote Log (Log &amp; Crash Search) Information|event_id.cloud_access.option_lncs_valid|
+|Validate Remote Log (OBS) Information|event_id.cloud_access.option_obs_valid|
+|Login Security (Login Failed) Settings|event_id.cloud_access.option_login_failure_create|
+|Login Security (Password Expiration) Settings|event_id.cloud_access.option_password_expire_create|
+|Login Security (Password Policy) Settings|event_id.cloud_access.option_password_policy_create|
+|Connection Settings|event_id.cloud_access.option_connection_create|
+|Change Connection Settings|event_id.cloud_access.option_connection_modify|
+|Notice Settings|event_id.cloud_access.option_guide_create|
+|Logo Settings|event_id.cloud_access.option_logo_create|
+
 ### Cloud Functions
 
 | Event | Event ID |
@@ -2062,7 +2113,7 @@
 |Copy Function|event_id.cloud_functions.function.copy|
 |Create Function|event_id.cloud_functions.function.create|
 |Delete Function|event_id.cloud_functions.function.delete|
-|Update Function|event_id.cloud_functions.function.update&#9;|
+|Update Function|event_id.cloud_functions.function.update|
 |Create Trigger|event_id.cloud_functions.trigger.create|
 |Delete Trigger|event_id.cloud_functions.trigger.delete|
 |Update Trigger|event_id.cloud_functions.trigger.update|
