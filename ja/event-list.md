@@ -657,7 +657,7 @@
 |フェイルオーバー完了後、一般DBインスタンスに変更|event_id.rds_for_mysql.instance_action.failover_split|
 |フェイルオーバーが完了した高可用性の再構築|event_id.rds_for_mysql.instance.ha.rebuild|
 |障害措置インスタンス高可用性機能を復旧|event_id.rds_for_mysql.instance.ha.repair|
-|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|
+|認証プラグインの有効化|event_id.rds_for_mysql.enable_authentication_plugin|
 |インスタンスの停止|event_id.rds_for_mysql.instance.stop|
 |イベント購読を修正|event_id.rds_for_mysql.modifyEventSubscription|
 |イベント購読を削除|event_id.rds_for_mysql.deleteEventSubscription|
@@ -716,7 +716,7 @@
 |DBセキュリティグループルールの修正|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
 |DBセキュリティグループルールの作成|event_id.rds_for_mysql.createDbSecurityGroupRule|
 |DBセキュリティグループルールの削除|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
-|DB 인스턴스 운영체제 업그레이드|event_id.rds_for_mysql.instance.os.upgrade|
+|DBインスタンスOSアップグレード|event_id.rds_for_mysql.instance.os.upgrade|
 
 ### RDS for MariaDB
 
@@ -1243,6 +1243,8 @@
 
 | イベント | イベントID |
 | --- | --- |
+|M/Nタイプ使用申請|event_id.brandmessage.marketing.agreement|
+|マーケティング受信同意証跡資料アップロード|event_id.brandmessage.upload.marketing.agreement|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|
 |発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|
 |発信プロフィールの削除|event_id.kakaotalk.sender.deletion|
@@ -2055,6 +2057,55 @@
 |模擬訓練の修正|event_id.ddos_guard.mock_training_modify|
 |模擬訓練の削除|event_id.ddos_guard.mock_training_delete|
 
+### Cloud Access
+
+| イベント | イベントID |
+| --- | --- |
+|ユーザー追加|event_id.cloud_access.user_create|
+|ユーザー削除|event_id.cloud_access.user_delete|
+|ユーザー修正|event_id.cloud_access.user_modify|
+|ユーザーアカウント状態変更|event_id.cloud_access.user_account_state_change|
+|ユーザーOTP初期化|event_id.cloud_access.user_otp_reset|
+|ユーザーパスワードリセット|event_id.cloud_access.user_password_reset|
+|ユーザーログイン失敗初期化|event_id.cloud_access.user_login_failure_reset|
+|ユーザーアカウント有効化|event_id.cloud_access.user_account_activate|
+|ユーザー一括アップロード検証|event_id.cloud_access.user_create_verify|
+|ユーザー一括アップロード|event_id.cloud_access.user_create_template|
+|ユーザーポリシー追加|event_id.cloud_access.user_policy_create|
+|ユーザーポリシー修正|event_id.cloud_access.user_policy_modify|
+|ユーザーポリシー削除|event_id.cloud_access.user_policy_delete|
+|ユーザーポリシー削除|event_id.cloud_access.acl_policy_create|
+|ACLポリシーコピー|event_id.cloud_access.acl_policy_copy_create|
+|ACLポリシー削除|event_id.cloud_access.acl_policy_delete|
+|ACLポリシー修正|event_id.cloud_access.acl_policy_modify|
+|ACLポリシー移動|event_id.cloud_access.acl_policy_move|
+|ACLポリシー一括アップロード検証|event_id.cloud_access.acl_policy_create_template_verify|
+|ACLポリシー一括アップロード|event_id.cloud_access.acl_policy_create_template|
+|IPオブジェクト追加|event_id.cloud_access.ip_object_create|
+|IPオブジェクト追加(ユーザー)|event_id.cloud_access.ip_object_user_create|
+|IPオブジェクト削除|event_id.cloud_access.ip_object_delete|
+|IPオブジェクト修正|event_id.cloud_access.ip_object_modify|
+|IPオブジェクト一括アップロード検証|event_id.cloud_access.ip_object_create_template_verify|
+|IPオブジェクト一括アップロード|event_id.cloud_access.ip_object_create_template|
+|PORTオブジェクト追加|event_id.cloud_access.port_object_create|
+|PORTオブジェクト削除|event_id.cloud_access.port_object_delete|
+|PORTオブジェクト修正|event_id.cloud_access.port_object_modify|
+|PORTオブジェクト一括アップロード検証|event_id.cloud_access.port_object_create_template_verify|
+|PORTオブジェクト一括アップロード|event_id.cloud_access.port_object_create_template|
+|基本ブロックポリシーログ設定|event_id.cloud_access.option_deny_log_create|
+|リモートログ(Syslog)設定|event_id.cloud_access.option_remote_log_syslog_create|
+|リモートログ(OBS)設定|event_id.cloud_access.option_remote_log_obs_create|
+|リモートログ(Log &amp; Crash Search)設定|event_id.cloud_access.option_remote_log_lncs_create|
+|リモートログ(Log &amp; Crash Search)情報検証|event_id.cloud_access.option_lncs_valid|
+|リモートログ(OBS)情報検証|event_id.cloud_access.option_obs_valid|
+|ログインセキュリティ(ログイン失敗)設定|event_id.cloud_access.option_login_failure_create|
+|ログインセキュリティ(パスワード有効期限)設定|event_id.cloud_access.option_password_expire_create|
+|ログインセキュリティ(パスワードポリシー)設定|event_id.cloud_access.option_password_policy_create|
+|接続設定|event_id.cloud_access.option_connection_create|
+|接続設定の変更|event_id.cloud_access.option_connection_modify|
+|案内設定|event_id.cloud_access.option_guide_create|
+|ロゴ設定|event_id.cloud_access.option_logo_create|
+
 ### Cloud Functions
 
 | イベント | イベントID |
@@ -2062,7 +2113,7 @@
 |関数のコピー|event_id.cloud_functions.function.copy|
 |関数の作成|event_id.cloud_functions.function.create|
 |関数の削除|event_id.cloud_functions.function.delete|
-|関数の修正|event_id.cloud_functions.function.update&#9;|
+|関数の修正|event_id.cloud_functions.function.update|
 |トリガーの作成|event_id.cloud_functions.trigger.create|
 |トリガーの削除|event_id.cloud_functions.trigger.delete|
 |トリガーの修正|event_id.cloud_functions.trigger.update|
