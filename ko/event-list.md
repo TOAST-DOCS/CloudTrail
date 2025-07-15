@@ -93,12 +93,12 @@
 |콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |인스턴스 종료|event_id.iaas.instance_action.shelve|
 |인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
-|중지된 인스턴스 시작|event_id.iaas.instance_action.start|
-|중지된 인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
+|인스턴스 시작|event_id.iaas.instance_action.start|
+|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
-|종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
-|종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|인스턴스 시작|event_id.iaas.instance_action.unshelve|
+|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
 |인스턴스 키페어 변경|event_id.iaas.instance_action.reset_keypair|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
@@ -107,8 +107,8 @@
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
-|인스턴스 네트워크 인터페이스 연결 추가|event_id.iaas.interface.create|
-|인스턴스 네트워크 인터페이스 연결 해제|event_id.iaas.interface.delete|
+|인스턴스 인터페이스 추가|event_id.iaas.interface.create|
+|인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
@@ -117,12 +117,12 @@
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
-|이미지 생성 실패|event_id.iaas.image.create_failed|
 |이미지 삭제|event_id.iaas.image.delete|
-|이미지 삭제 완료|event_id.iaas.image.delete_end|
-|이미지 수정|event_id.iaas.image.update|
-|이미지 수정 완료|event_id.iaas.image.update_end|
+|이미지 생성 실패|event_id.iaas.image.create_failed|
+|이미지 정보 변경|event_id.iaas.image.update|
 |이미지 업로드|event_id.iaas.image.upload|
+|이미지 삭제 완료|event_id.iaas.image.delete_end|
+|이미지 수정 완료|event_id.iaas.image.update_end|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
 |이미지 빌드|event_id.iaas.image_template.build|
@@ -130,19 +130,19 @@
 |이미지 템플릿 생성|event_id.iaas.image_template.create|
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
-|블록 스토리지 생성|event_id.iaas.volume.create|
+|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
+|볼륨 복제|event_id.iaas.volume.copy|
 |블록 스토리지 생성 완료|event_id.iaas.volume.create_end|
+|블록 스토리지 생성|event_id.iaas.volume.create|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
 |블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
-|블록 스토리지 수정|event_id.iaas.volume.update|
-|블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
-|블록 스토리지 복제|event_id.iaas.volume.copy|
-|블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
-|인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
-|인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
-|인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
-|인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
+|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
 |블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
+|블록 스토리지 정보 변경|event_id.iaas.volume.update|
+|블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
+|인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
+|인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
 |블록 스토리지 이동|event_id.iaas.volume.transfer|
 |블록 스토리지 이동 완료(대상)|event_id.iaas.volume.transfer_accept|
 |블록 스토리지 이동 완료(소스)|event_id.iaas.volume.transfer_create|
@@ -1185,6 +1185,7 @@
 |정책 수정|event_id.appguard.policy_update|
 |Unity SDK 다운로드|event_id.appguard.sdk_download_unity|
 |React Native SDK 다운로드|event_id.appguard.sdk_download_react_native|
+|Unreal SDK 다운로드|event_id.appguard.sdk_download_unreal|
 
 ### ShortURL
 
@@ -1242,6 +1243,8 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
+|M/N 타입 사용 신청|event_id.brandmessage.marketing.agreement|
+|마케팅 수신동의 증적자료 업로드|event_id.brandmessage.upload.marketing.agreement|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|
 |발신 프로필 토큰 인증|event_id.kakaotalk.sender.token.certification|
 |발신 프로필 삭제|event_id.kakaotalk.sender.deletion|
@@ -1389,22 +1392,22 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|플로우 메타 생성|event_id.dataflow.flow.meta.create|
-|플로우 메타 수정|event_id.dataflow.flow.meta.update|
-|플로우 메타 삭제|event_id.dataflow.flow.meta.delete|
-|플로우 그래프 수정|event_id.dataflow.flow.graph.update|
-|플로우 메타 복사|event_id.dataflow.flow.meta.copy|
+|플로우 생성|event_id.dataflow.flow.meta.create|
+|플로우 변경|event_id.dataflow.flow.meta.update|
+|플로우 삭제|event_id.dataflow.flow.meta.delete|
+|플로우 설정 저장|event_id.dataflow.flow.graph.update|
+|플로우 복사|event_id.dataflow.flow.meta.copy|
 |플로우 시작|event_id.dataflow.flow.start|
 |플로우 종료|event_id.dataflow.flow.stop|
-|템플릿 메타 생성|event_id.dataflow.template.meta.create|
-|템플릿 메타 수정|event_id.dataflow.template.meta.update|
-|템플릿 메타 삭제|event_id.dataflow.template.meta.delete|
-|템플릿 그래프 수정|event_id.dataflow.template.graph.update|
-|템플릿 그래프 복사|event_id.dataflow.template.graph.copy|
+|템플릿 생성|event_id.dataflow.template.meta.create|
+|템플릿 변경|event_id.dataflow.template.meta.update|
+|템플릿 삭제|event_id.dataflow.template.meta.delete|
+|템플릿 설정 저장|event_id.dataflow.template.graph.update|
+|템플릿 복사|event_id.dataflow.template.graph.copy|
 |스케쥴러 저장|event_id.dataflow.scheduler.meta.save|
-|유효성 검사 활성화|event_id.dataflow.settings.accessibility-checker.enable|
-|유효성 검사 비활성화|event_id.dataflow.settings.accessibility-checker.disable|
-|드레이닝 후 종료|event_id.dataflow.flow.drain|
+|유효성 검사 사용|event_id.dataflow.settings.accessibility-checker.enable|
+|유효성 검사 사용 안 함|event_id.dataflow.settings.accessibility-checker.disable|
+|플로우 드레이닝 후 종료|event_id.dataflow.flow.drain|
 |Log &amp; Crash Search 저장 설정 저장|event_id.dataflow.settings.lncs.save|
 |Log &amp; Crash Search 저장 설정 삭제|event_id.dataflow.settings.lncs.delete|
 
@@ -1631,7 +1634,7 @@
 |인프라 구성|event_id.network_firewall.config_project|
 |인프라 및 방화벽 구성|event_id.network_firewall.config_project_iaas|
 |VPN 이벤트 로그 다운로드|event_id.network_firewall.event_log_download|
-|VPN 게이트웨이 수정|event_id.network_firewall.gateway_modify|
+|VPN 게이트웨이 수정|event_id.network_firewall.vpn_gateway_modify|
 |정책 추가|event_id.network_firewall.group_create|
 |정책 엑셀 추가|event_id.network_firewall.group_create_template|
 |정책 엑셀 검증|event_id.network_firewall.group_create_template_verify|
@@ -2028,6 +2031,19 @@
 |친구톡 발신프로필과 비즈니스 폼 아이디 등록|event_id.notification_hub.detail_configuration_FRIENDTALK_register_sender_key_and_biz_form_id|
 |Push 광고 표시 문구 위치 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_message_position|
 |Push 광고 수신 동의 확인 메시지 자동 발송 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_re_agreement_notice_auto_sending|
+|서브 도메인 등록|event_id.notification_hub.sender.register_email_subdomain|
+|서브 도메인 삭제|event_id.notification_hub.sender.delete_email_subdomain|
+|앱 유형 설정|event_id.notification_hub.detail_configuration_PUSH_modify_token_policy|
+|첨부파일 삭제|event_id.notification_hub.attachment_delete|
+|첨부파일 수정|event_id.notification_hub.attachment_modify|
+|카테고리 삭제|event_id.notification_hub.template_category_delete|
+|카테고리 수정|event_id.notification_hub.template_category_modify|
+|연락처 수정|event_id.notification_hub.addressbook_recipient_modify|
+|연락처 다건 삭제|event_id.notification_hub.addressbook_recipient_delete|
+|그룹 삭제|event_id.notification_hub.addressbook_group_delete|
+|그룹 수정|event_id.notification_hub.addressbook_group_modify|
+|수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
+|수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
 
 ### DDoS Guard
 
@@ -2040,6 +2056,67 @@
 |모의 훈련 생성|event_id.ddos_guard.mock_training_create|
 |모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
 |모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
+
+### Cloud Access
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|사용자 추가|event_id.cloud_access.user_create|
+|사용자 삭제|event_id.cloud_access.user_delete|
+|사용자 수정|event_id.cloud_access.user_modify|
+|사용자 계정 상태 변경|event_id.cloud_access.user_account_state_change|
+|사용자 OTP 초기화|event_id.cloud_access.user_otp_reset|
+|사용자 비밀번호 초기화|event_id.cloud_access.user_password_reset|
+|사용자 로그인 실패 초기화|event_id.cloud_access.user_login_failure_reset|
+|사용자 계정 활성화|event_id.cloud_access.user_account_activate|
+|사용자 일괄 업로드 검증|event_id.cloud_access.user_create_verify|
+|사용자 일괄 업로드|event_id.cloud_access.user_create_template|
+|사용자 정책 추가|event_id.cloud_access.user_policy_create|
+|사용자 정책 수정|event_id.cloud_access.user_policy_modify|
+|사용자 정책 삭제|event_id.cloud_access.user_policy_delete|
+|ACL 정책 추가|event_id.cloud_access.acl_policy_create|
+|ACL 정책 복사|event_id.cloud_access.acl_policy_copy_create|
+|ACL 정책 삭제|event_id.cloud_access.acl_policy_delete|
+|ACL 정책 수정|event_id.cloud_access.acl_policy_modify|
+|ACL 정책 이동|event_id.cloud_access.acl_policy_move|
+|ACL 정책 일괄 업로드 검증|event_id.cloud_access.acl_policy_create_template_verify|
+|ACL 정책 일괄 업로드|event_id.cloud_access.acl_policy_create_template|
+|IP 객체 추가|event_id.cloud_access.ip_object_create|
+|IP 객체 추가(사용자)|event_id.cloud_access.ip_object_user_create|
+|IP 객체 삭제|event_id.cloud_access.ip_object_delete|
+|IP 객체 수정|event_id.cloud_access.ip_object_modify|
+|IP 객체 일괄 업로드 검증|event_id.cloud_access.ip_object_create_template_verify|
+|IP 객체 일괄 업로드|event_id.cloud_access.ip_object_create_template|
+|Port 객체 추가|event_id.cloud_access.port_object_create|
+|Port 객체 삭제|event_id.cloud_access.port_object_delete|
+|Port 객체 수정|event_id.cloud_access.port_object_modify|
+|Port 객체 일괄 업로드 검증|event_id.cloud_access.port_object_create_template_verify|
+|Port 객체 일괄 업로드|event_id.cloud_access.port_object_create_template|
+|기본 차단 정책 로그 설정|event_id.cloud_access.option_deny_log_create|
+|원격 로그(Syslog) 설정|event_id.cloud_access.option_remote_log_syslog_create|
+|원격 로그(OBS) 설정|event_id.cloud_access.option_remote_log_obs_create|
+|원격 로그(Log &amp; Crash Search) 설정|event_id.cloud_access.option_remote_log_lncs_create|
+|원격 로그(Log &amp; Crash Search) 정보 검증|event_id.cloud_access.option_lncs_valid|
+|원격 로그(OBS) 정보 검증|event_id.cloud_access.option_obs_valid|
+|로그인 보안(로그인 실패) 설정|event_id.cloud_access.option_login_failure_create|
+|로그인 보안(비밀번호 만료) 설정|event_id.cloud_access.option_password_expire_create|
+|로그인 보안(비밀번호 정책) 설정|event_id.cloud_access.option_password_policy_create|
+|연결 설정|event_id.cloud_access.option_connection_create|
+|연결 설정 변경|event_id.cloud_access.option_connection_modify|
+|안내 설정|event_id.cloud_access.option_guide_create|
+|로고 설정|event_id.cloud_access.option_logo_create|
+
+### Cloud Functions
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|함수 복사|event_id.cloud_functions.function.copy|
+|함수 생성|event_id.cloud_functions.function.create|
+|함수 삭제|event_id.cloud_functions.function.delete|
+|함수 수정|event_id.cloud_functions.function.update|
+|트리거 생성|event_id.cloud_functions.trigger.create|
+|트리거 삭제|event_id.cloud_functions.trigger.delete|
+|트리거 수정|event_id.cloud_functions.trigger.update|
 
 ### RDS for PostgreSQL
 

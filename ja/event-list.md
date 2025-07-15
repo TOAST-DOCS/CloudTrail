@@ -93,12 +93,12 @@
 |コンソールスクリーンショットの作成|event_id.iaas.instance_action.screenshot|
 |インスタンス終了|event_id.iaas.instance_action.shelve|
 |インスタンス終了完了|event_id.iaas.instance_action.shelve_end|
-|停止したインスタンスの起動|event_id.iaas.instance_action.start|
-|停止したインスタンスの起動完了|event_id.iaas.instance_action.start_end|
+|インスタンスの起動|event_id.iaas.instance_action.start|
+|インスタンスの起動完了|event_id.iaas.instance_action.start_end|
 |インスタンスの停止|event_id.iaas.instance_action.stop|
 |インスタンスの停止完了|event_id.iaas.instance_action.stop_end|
-|終了したインスタンスの起動|event_id.iaas.instance_action.unshelve|
-|終了したインスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
+|インスタンスの起動|event_id.iaas.instance_action.unshelve|
+|インスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
 |インスタンスキーペア変更|event_id.iaas.instance_action.reset_keypair|
 |インスタンステンプレートの作成|event_id.iaas.instance_template.create|
 |インスタンステンプレートの削除|event_id.iaas.instance_template.delete|
@@ -107,8 +107,8 @@
 |インスタンスメタデータの作成|event_id.iaas.metadata.create|
 |インスタンスメタデータの削除|event_id.iaas.metadata.delete|
 |インスタンスメタデータの変更|event_id.iaas.metadata.update|
-|インスタンスのネットワークインターフェイス接続の追加|event_id.iaas.interface.create|
-|インスタンスのネットワークインターフェイス接続の解除|event_id.iaas.interface.delete|
+|インスタンスインターフェイスの作成|event_id.iaas.interface.create|
+|インスタンスインターフェイスの削除|event_id.iaas.interface.delete|
 |キーペアの作成|event_id.iaas.keypair.create|
 |キーペアの削除|event_id.iaas.keypair.delete|
 |配置ポリシー作成|event_id.iaas.servergroup.create|
@@ -117,12 +117,12 @@
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
 |イメージID作成|event_id.iaas.image.create_id|
-|イメージ作成失敗|event_id.iaas.image.create_failed|
 |イメージの削除|event_id.iaas.image.delete|
-|イメージ削除完了|event_id.iaas.image.delete_end|
-|イメージ修正|event_id.iaas.image.update|
-|イメージ修正完了|event_id.iaas.image.update_end|
+|イメージ作成失敗|event_id.iaas.image.create_failed|
+|イメージ情報の変更|event_id.iaas.image.update|
 |イメージのアップロード|event_id.iaas.image.upload|
+|イメージ削除完了|event_id.iaas.image.delete_end|
+|イメージ修正完了|event_id.iaas.image.update_end|
 |イメージ共有の作成|event_id.iaas.image_member.create|
 |イメージ共有の削除|event_id.iaas.image_member.delete|
 |イメージビルド|event_id.iaas.image_template.build|
@@ -130,19 +130,19 @@
 |イメージテンプレートの作成|event_id.iaas.image_template.create|
 |イメージテンプレートの削除|event_id.iaas.image_template.delete|
 |イメージテンプレートの修正|event_id.iaas.image_template.update|
-|ブロックストレージの作成|event_id.iaas.volume.create|
+|インスタンスボリュームの接続|event_id.iaas.volume.attach|
+|ボリュームのコピー|event_id.iaas.volume.copy|
 |ブロックストレージ作成完了|event_id.iaas.volume.create_end|
+|ブロックストレージの作成|event_id.iaas.volume.create|
 |ブロックストレージの削除|event_id.iaas.volume.delete|
 |ブロックストレージ削除完了|event_id.iaas.volume.delete_end|
-|ブロックストレージ修正|event_id.iaas.volume.update|
-|ブロックストレージ修正完了|event_id.iaas.volume.update_end|
-|ブロックストレージ複製|event_id.iaas.volume.copy|
-|ブロックストレージ複製完了|event_id.iaas.volume.copy_end|
-|インスタンスブロックストレージ接続|event_id.iaas.volume.attach|
-|インスタンスブロックストレージ接続完了|event_id.iaas.volume.attach_end|
-|インスタンスブロックストレージ接続解除|event_id.iaas.volume.detach|
-|インスタンスブロックストレージ接続解除完了|event_id.iaas.volume.detach_end|
+|インスタンスボリュームの接続解除|event_id.iaas.volume.detach|
 |ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
+|ブロックストレージ修正完了|event_id.iaas.volume.update_end|
+|ブロックストレージの情報変更|event_id.iaas.volume.update|
+|ブロックストレージ複製完了|event_id.iaas.volume.copy_end|
+|インスタンスブロックストレージ接続完了|event_id.iaas.volume.attach_end|
+|インスタンスブロックストレージ接続解除完了|event_id.iaas.volume.detach_end|
 |ブロックストレージ移動|event_id.iaas.volume.transfer|
 |ブロックストレージ移動完了(対象)|event_id.iaas.volume.transfer_accept|
 |ブロックストレージ移動完了(ソース)|event_id.iaas.volume.transfer_create|
@@ -657,7 +657,7 @@
 |フェイルオーバー完了後、一般DBインスタンスに変更|event_id.rds_for_mysql.instance_action.failover_split|
 |フェイルオーバーが完了した高可用性の再構築|event_id.rds_for_mysql.instance.ha.rebuild|
 |障害措置インスタンス高可用性機能を復旧|event_id.rds_for_mysql.instance.ha.repair|
-|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|
+|認証プラグインの有効化|event_id.rds_for_mysql.enable_authentication_plugin|
 |インスタンスの停止|event_id.rds_for_mysql.instance.stop|
 |イベント購読を修正|event_id.rds_for_mysql.modifyEventSubscription|
 |イベント購読を削除|event_id.rds_for_mysql.deleteEventSubscription|
@@ -716,7 +716,7 @@
 |DBセキュリティグループルールの修正|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
 |DBセキュリティグループルールの作成|event_id.rds_for_mysql.createDbSecurityGroupRule|
 |DBセキュリティグループルールの削除|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
-|DB 인스턴스 운영체제 업그레이드|event_id.rds_for_mysql.instance.os.upgrade|
+|DBインスタンスOSアップグレード|event_id.rds_for_mysql.instance.os.upgrade|
 
 ### RDS for MariaDB
 
@@ -1185,6 +1185,7 @@
 |ポリシー修正|event_id.appguard.policy_update|
 |Unity SDKダウンロード|event_id.appguard.sdk_download_unity|
 |React Native SDK ダウンロード|event_id.appguard.sdk_download_react_native|
+|Unreal SDK ダウンロード|event_id.appguard.sdk_download_unreal|
 
 ### ShortURL
 
@@ -1242,6 +1243,8 @@
 
 | イベント | イベントID |
 | --- | --- |
+|M/Nタイプ使用申請|event_id.brandmessage.marketing.agreement|
+|マーケティング受信同意証跡資料アップロード|event_id.brandmessage.upload.marketing.agreement|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|
 |発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|
 |発信プロフィールの削除|event_id.kakaotalk.sender.deletion|
@@ -1389,22 +1392,22 @@
 
 | イベント | イベントID |
 | --- | --- |
-|フローメタの作成|event_id.dataflow.flow.meta.create|
-|フローメタの修正|event_id.dataflow.flow.meta.update|
-|フローメタの削除|event_id.dataflow.flow.meta.delete|
-|フローグラフの修正|event_id.dataflow.flow.graph.update|
-|フローメタのコピー|event_id.dataflow.flow.meta.copy|
+|フローの作成|event_id.dataflow.flow.meta.create|
+|フローの変更|event_id.dataflow.flow.meta.update|
+|フローの削除|event_id.dataflow.flow.meta.delete|
+|フロー設定の保存|event_id.dataflow.flow.graph.update|
+|フローのコピー|event_id.dataflow.flow.meta.copy|
 |フローの開始|event_id.dataflow.flow.start|
 |フロー終了|event_id.dataflow.flow.stop|
-|テンプレートメタの作成|event_id.dataflow.template.meta.create|
-|テンプレートメタの修正|event_id.dataflow.template.meta.update|
-|テンプレートメタの削除|event_id.dataflow.template.meta.delete|
-|テンプレートグラフの修正|event_id.dataflow.template.graph.update|
-|テンプレートグラフのコピー|event_id.dataflow.template.graph.copy|
+|テンプレートの作成|event_id.dataflow.template.meta.create|
+|テンプレートの変更|event_id.dataflow.template.meta.update|
+|テンプレートの削除|event_id.dataflow.template.meta.delete|
+|テンプレート設定の保存|event_id.dataflow.template.graph.update|
+|テンプレートのコピー|event_id.dataflow.template.graph.copy|
 |スケジューラの保存|event_id.dataflow.scheduler.meta.save|
-|有効性検査の有効化|event_id.dataflow.settings.accessibility-checker.enable|
-|有効性検査の無効化|event_id.dataflow.settings.accessibility-checker.disable|
-|ドレイン後に終了|event_id.dataflow.flow.drain|
+|有効性検査の使用|event_id.dataflow.settings.accessibility-checker.enable|
+|有効性検査の使用しない|event_id.dataflow.settings.accessibility-checker.disable|
+|フロードレイン後に終了|event_id.dataflow.flow.drain|
 |Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
 |Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
@@ -1631,7 +1634,7 @@
 |インフラ構成|event_id.network_firewall.config_project|
 |インフラおよびファイアウォール構成|event_id.network_firewall.config_project_iaas|
 |VPNイベントログのダウンロード|event_id.network_firewall.event_log_download|
-|VPNゲートウェイの修正|event_id.network_firewall.gateway_modify|
+|VPNゲートウェイの修正|event_id.network_firewall.vpn_gateway_modify|
 |ポリシーの追加|event_id.network_firewall.group_create|
 |ポリシーExcel追加|event_id.network_firewall.group_create_template|
 |ポリシーExcel検証|event_id.network_firewall.group_create_template_verify|
@@ -2028,6 +2031,19 @@
 |친구톡 발신프로필과 비즈니스 폼 아이디 등록|event_id.notification_hub.detail_configuration_FRIENDTALK_register_sender_key_and_biz_form_id|
 |Push 광고 표시 문구 위치 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_message_position|
 |Push 광고 수신 동의 확인 메시지 자동 발송 설정|event_id.notification_hub.detail_configuration_PUSH_modify_ad_re_agreement_notice_auto_sending|
+|서브 도메인 등록|event_id.notification_hub.sender.register_email_subdomain|
+|서브 도메인 삭제|event_id.notification_hub.sender.delete_email_subdomain|
+|앱 유형 설정|event_id.notification_hub.detail_configuration_PUSH_modify_token_policy|
+|첨부파일 삭제|event_id.notification_hub.attachment_delete|
+|첨부파일 수정|event_id.notification_hub.attachment_modify|
+|카테고리 삭제|event_id.notification_hub.template_category_delete|
+|카테고리 수정|event_id.notification_hub.template_category_modify|
+|연락처 수정|event_id.notification_hub.addressbook_recipient_modify|
+|연락처 다건 삭제|event_id.notification_hub.addressbook_recipient_delete|
+|그룹 삭제|event_id.notification_hub.addressbook_group_delete|
+|그룹 수정|event_id.notification_hub.addressbook_group_modify|
+|수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
+|수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
 
 ### DDoS Guard
 
@@ -2040,6 +2056,67 @@
 |模擬訓練の作成|event_id.ddos_guard.mock_training_create|
 |模擬訓練の修正|event_id.ddos_guard.mock_training_modify|
 |模擬訓練の削除|event_id.ddos_guard.mock_training_delete|
+
+### Cloud Access
+
+| イベント | イベントID |
+| --- | --- |
+|ユーザー追加|event_id.cloud_access.user_create|
+|ユーザー削除|event_id.cloud_access.user_delete|
+|ユーザー修正|event_id.cloud_access.user_modify|
+|ユーザーアカウント状態変更|event_id.cloud_access.user_account_state_change|
+|ユーザーOTP初期化|event_id.cloud_access.user_otp_reset|
+|ユーザーパスワードリセット|event_id.cloud_access.user_password_reset|
+|ユーザーログイン失敗初期化|event_id.cloud_access.user_login_failure_reset|
+|ユーザーアカウント有効化|event_id.cloud_access.user_account_activate|
+|ユーザー一括アップロード検証|event_id.cloud_access.user_create_verify|
+|ユーザー一括アップロード|event_id.cloud_access.user_create_template|
+|ユーザーポリシー追加|event_id.cloud_access.user_policy_create|
+|ユーザーポリシー修正|event_id.cloud_access.user_policy_modify|
+|ユーザーポリシー削除|event_id.cloud_access.user_policy_delete|
+|ユーザーポリシー削除|event_id.cloud_access.acl_policy_create|
+|ACLポリシーコピー|event_id.cloud_access.acl_policy_copy_create|
+|ACLポリシー削除|event_id.cloud_access.acl_policy_delete|
+|ACLポリシー修正|event_id.cloud_access.acl_policy_modify|
+|ACLポリシー移動|event_id.cloud_access.acl_policy_move|
+|ACLポリシー一括アップロード検証|event_id.cloud_access.acl_policy_create_template_verify|
+|ACLポリシー一括アップロード|event_id.cloud_access.acl_policy_create_template|
+|IPオブジェクト追加|event_id.cloud_access.ip_object_create|
+|IPオブジェクト追加(ユーザー)|event_id.cloud_access.ip_object_user_create|
+|IPオブジェクト削除|event_id.cloud_access.ip_object_delete|
+|IPオブジェクト修正|event_id.cloud_access.ip_object_modify|
+|IPオブジェクト一括アップロード検証|event_id.cloud_access.ip_object_create_template_verify|
+|IPオブジェクト一括アップロード|event_id.cloud_access.ip_object_create_template|
+|PORTオブジェクト追加|event_id.cloud_access.port_object_create|
+|PORTオブジェクト削除|event_id.cloud_access.port_object_delete|
+|PORTオブジェクト修正|event_id.cloud_access.port_object_modify|
+|PORTオブジェクト一括アップロード検証|event_id.cloud_access.port_object_create_template_verify|
+|PORTオブジェクト一括アップロード|event_id.cloud_access.port_object_create_template|
+|基本ブロックポリシーログ設定|event_id.cloud_access.option_deny_log_create|
+|リモートログ(Syslog)設定|event_id.cloud_access.option_remote_log_syslog_create|
+|リモートログ(OBS)設定|event_id.cloud_access.option_remote_log_obs_create|
+|リモートログ(Log &amp; Crash Search)設定|event_id.cloud_access.option_remote_log_lncs_create|
+|リモートログ(Log &amp; Crash Search)情報検証|event_id.cloud_access.option_lncs_valid|
+|リモートログ(OBS)情報検証|event_id.cloud_access.option_obs_valid|
+|ログインセキュリティ(ログイン失敗)設定|event_id.cloud_access.option_login_failure_create|
+|ログインセキュリティ(パスワード有効期限)設定|event_id.cloud_access.option_password_expire_create|
+|ログインセキュリティ(パスワードポリシー)設定|event_id.cloud_access.option_password_policy_create|
+|接続設定|event_id.cloud_access.option_connection_create|
+|接続設定の変更|event_id.cloud_access.option_connection_modify|
+|案内設定|event_id.cloud_access.option_guide_create|
+|ロゴ設定|event_id.cloud_access.option_logo_create|
+
+### Cloud Functions
+
+| イベント | イベントID |
+| --- | --- |
+|関数のコピー|event_id.cloud_functions.function.copy|
+|関数の作成|event_id.cloud_functions.function.create|
+|関数の削除|event_id.cloud_functions.function.delete|
+|関数の修正|event_id.cloud_functions.function.update|
+|トリガーの作成|event_id.cloud_functions.trigger.create|
+|トリガーの削除|event_id.cloud_functions.trigger.delete|
+|トリガーの修正|event_id.cloud_functions.trigger.update|
 
 ### RDS for PostgreSQL
 
