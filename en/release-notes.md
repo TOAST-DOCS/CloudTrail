@@ -1,7 +1,12 @@
 ## CloudTrail > Release Notes
 
+### 2025. 07. 15.
+#### More Events
+* Added events related to Cloud Access.
+
 ### 2025. 06. 24.
 #### More Events
+* Added events related to KakaoTalk Bizmessage.
 * Added events related to Notification Hub.
 
 ### 2025. 06. 16.
