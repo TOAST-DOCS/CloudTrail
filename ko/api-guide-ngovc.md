@@ -6,7 +6,7 @@
 ## URL & Appkey
 RESTful API를 사용하려면 AppKey가 필요합니다.
 [CONSOLE]의 우측 상단에서 발급된 Key 정보를 확인할 수 있습니다.
-![[그림 1] AppKey & SecretKey 확인](http://static.toastoven.net/prod_cloudtrail/cloudtrail_20190924.png)
+![[그림 1] AppKey & SecretKey 확인](https://static-station.ngovc.com/v1/AUTH_3365819a41194e7ca358853f5b2eec52/cdn/prod_cloudtrail/cloudtrail_20190924.png)
 <center>[그림 1] AppKey 확인</center>
 
 ## User Access Key ID & Secret Access Key
