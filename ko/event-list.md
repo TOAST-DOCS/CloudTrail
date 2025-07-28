@@ -93,12 +93,12 @@
 |콘솔 스크린숏 생성|event_id.iaas.instance_action.screenshot|
 |인스턴스 종료|event_id.iaas.instance_action.shelve|
 |인스턴스 종료 완료|event_id.iaas.instance_action.shelve_end|
-|인스턴스 시작|event_id.iaas.instance_action.start|
-|인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
+|중지된 인스턴스 시작|event_id.iaas.instance_action.start|
+|중지된 인스턴스 시작 완료|event_id.iaas.instance_action.start_end|
 |인스턴스 중지|event_id.iaas.instance_action.stop|
 |인스턴스 중지 완료|event_id.iaas.instance_action.stop_end|
-|인스턴스 시작|event_id.iaas.instance_action.unshelve|
-|인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
+|종료된 인스턴스 시작|event_id.iaas.instance_action.unshelve|
+|종료된 인스턴스 시작 완료|event_id.iaas.instance_action.unshelve_end|
 |인스턴스 키페어 변경|event_id.iaas.instance_action.reset_keypair|
 |인스턴스 템플릿 생성|event_id.iaas.instance_template.create|
 |인스턴스 템플릿 삭제|event_id.iaas.instance_template.delete|
@@ -107,8 +107,8 @@
 |인스턴스 메타데이터 생성|event_id.iaas.metadata.create|
 |인스턴스 메타데이터 삭제|event_id.iaas.metadata.delete|
 |인스턴스 메타데이터 변경|event_id.iaas.metadata.update|
-|인스턴스 인터페이스 추가|event_id.iaas.interface.create|
-|인스턴스 인터페이스 삭제|event_id.iaas.interface.delete|
+|인스턴스 네트워크 인터페이스 연결 추가|event_id.iaas.interface.create|
+|인스턴스 네트워크 인터페이스 연결 해제|event_id.iaas.interface.delete|
 |키페어 생성|event_id.iaas.keypair.create|
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
@@ -117,12 +117,12 @@
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
 |이미지 아이디 생성|event_id.iaas.image.create_id|
-|이미지 삭제|event_id.iaas.image.delete|
 |이미지 생성 실패|event_id.iaas.image.create_failed|
-|이미지 정보 변경|event_id.iaas.image.update|
-|이미지 업로드|event_id.iaas.image.upload|
+|이미지 삭제|event_id.iaas.image.delete|
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
+|이미지 수정|event_id.iaas.image.update|
 |이미지 수정 완료|event_id.iaas.image.update_end|
+|이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
 |이미지 빌드|event_id.iaas.image_template.build|
@@ -130,19 +130,19 @@
 |이미지 템플릿 생성|event_id.iaas.image_template.create|
 |이미지 템플릿 삭제|event_id.iaas.image_template.delete|
 |이미지 템플릿 수정|event_id.iaas.image_template.update|
-|인스턴스 볼륨 연결|event_id.iaas.volume.attach|
-|볼륨 복제|event_id.iaas.volume.copy|
-|블록 스토리지 생성 완료|event_id.iaas.volume.create_end|
 |블록 스토리지 생성|event_id.iaas.volume.create|
+|블록 스토리지 생성 완료|event_id.iaas.volume.create_end|
 |블록 스토리지 삭제|event_id.iaas.volume.delete|
 |블록 스토리지 삭제 완료|event_id.iaas.volume.delete_end|
-|인스턴스 볼륨 연결 해제|event_id.iaas.volume.detach|
-|블록 스토리지 크기 변경|event_id.iaas.volume.extend|
+|블록 스토리지 수정|event_id.iaas.volume.update|
 |블록 스토리지 수정 완료|event_id.iaas.volume.update_end|
-|블록 스토리지 정보 변경|event_id.iaas.volume.update|
+|블록 스토리지 복제|event_id.iaas.volume.copy|
 |블록 스토리지 복제 완료|event_id.iaas.volume.copy_end|
+|인스턴스 블록 스토리지 연결|event_id.iaas.volume.attach|
 |인스턴스 블록 스토리지 연결 완료|event_id.iaas.volume.attach_end|
+|인스턴스 블록 스토리지 연결 해제|event_id.iaas.volume.detach|
 |인스턴스 블록 스토리지 연결 해제 완료|event_id.iaas.volume.detach_end|
+|블록 스토리지 크기 변경|event_id.iaas.volume.extend|
 |블록 스토리지 이동|event_id.iaas.volume.transfer|
 |블록 스토리지 이동 완료(대상)|event_id.iaas.volume.transfer_accept|
 |블록 스토리지 이동 완료(소스)|event_id.iaas.volume.transfer_create|
@@ -611,18 +611,18 @@
 |NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
 |NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
 |NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
-|스토리지 게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
-|스토리지 게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
-|스토리지 게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
-|스토리지 게이트웨이 생성 완료|event_id.iaas.storage_gateway.gateway.create_end|
-|스토리지 게이트웨이 설정 변경 완료|event_id.iaas.storage_gateway.gateway.update_end|
-|스토리지 게이트웨이 삭제 완료|event_id.iaas.storage_gateway.gateway.delete_end|
-|스토리지 게이트웨이 공유 생성|event_id.iaas.storage_gateway.share.create|
-|스토리지 게이트웨이 공유 설정 변경|event_id.iaas.storage_gateway.share.update|
-|스토리지 게이트웨이 공유 삭제|event_id.iaas.storage_gateway.share.delete|
-|스토리지 게이트웨이 공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
-|스토리지 게이트웨이 공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
-|스토리지 게이트웨이 공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
+|게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
+|게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
+|게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
+|게이트웨이 생성 완료|event_id.iaas.storage_gateway.gateway.create_end|
+|게이트웨이 설정 변경 완료|event_id.iaas.storage_gateway.gateway.update_end|
+|게이트웨이 삭제 완료|event_id.iaas.storage_gateway.gateway.delete_end|
+|공유 생성|event_id.iaas.storage_gateway.share.create|
+|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|공유 삭제|event_id.iaas.storage_gateway.share.delete|
+|공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
+|공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
+|공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
