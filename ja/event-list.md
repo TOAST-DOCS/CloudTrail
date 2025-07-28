@@ -93,12 +93,12 @@
 |コンソールスクリーンショットの作成|event_id.iaas.instance_action.screenshot|
 |インスタンス終了|event_id.iaas.instance_action.shelve|
 |インスタンス終了完了|event_id.iaas.instance_action.shelve_end|
-|インスタンスの起動|event_id.iaas.instance_action.start|
-|インスタンスの起動完了|event_id.iaas.instance_action.start_end|
+|停止したインスタンスの起動|event_id.iaas.instance_action.start|
+|停止したインスタンスの起動完了|event_id.iaas.instance_action.start_end|
 |インスタンスの停止|event_id.iaas.instance_action.stop|
 |インスタンスの停止完了|event_id.iaas.instance_action.stop_end|
-|インスタンスの起動|event_id.iaas.instance_action.unshelve|
-|インスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
+|終了したインスタンスの起動|event_id.iaas.instance_action.unshelve|
+|終了したインスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
 |インスタンスキーペア変更|event_id.iaas.instance_action.reset_keypair|
 |インスタンステンプレートの作成|event_id.iaas.instance_template.create|
 |インスタンステンプレートの削除|event_id.iaas.instance_template.delete|
@@ -107,8 +107,8 @@
 |インスタンスメタデータの作成|event_id.iaas.metadata.create|
 |インスタンスメタデータの削除|event_id.iaas.metadata.delete|
 |インスタンスメタデータの変更|event_id.iaas.metadata.update|
-|インスタンスインターフェイスの作成|event_id.iaas.interface.create|
-|インスタンスインターフェイスの削除|event_id.iaas.interface.delete|
+|インスタンスのネットワークインターフェイス接続の追加|event_id.iaas.interface.create|
+|インスタンスのネットワークインターフェイス接続の解除|event_id.iaas.interface.delete|
 |キーペアの作成|event_id.iaas.keypair.create|
 |キーペアの削除|event_id.iaas.keypair.delete|
 |配置ポリシー作成|event_id.iaas.servergroup.create|
@@ -117,12 +117,12 @@
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
 |イメージID作成|event_id.iaas.image.create_id|
-|イメージの削除|event_id.iaas.image.delete|
 |イメージ作成失敗|event_id.iaas.image.create_failed|
-|イメージ情報の変更|event_id.iaas.image.update|
-|イメージのアップロード|event_id.iaas.image.upload|
+|イメージの削除|event_id.iaas.image.delete|
 |イメージ削除完了|event_id.iaas.image.delete_end|
+|イメージ修正|event_id.iaas.image.update|
 |イメージ修正完了|event_id.iaas.image.update_end|
+|イメージのアップロード|event_id.iaas.image.upload|
 |イメージ共有の作成|event_id.iaas.image_member.create|
 |イメージ共有の削除|event_id.iaas.image_member.delete|
 |イメージビルド|event_id.iaas.image_template.build|
@@ -130,19 +130,19 @@
 |イメージテンプレートの作成|event_id.iaas.image_template.create|
 |イメージテンプレートの削除|event_id.iaas.image_template.delete|
 |イメージテンプレートの修正|event_id.iaas.image_template.update|
-|インスタンスボリュームの接続|event_id.iaas.volume.attach|
-|ボリュームのコピー|event_id.iaas.volume.copy|
-|ブロックストレージ作成完了|event_id.iaas.volume.create_end|
 |ブロックストレージの作成|event_id.iaas.volume.create|
+|ブロックストレージ作成完了|event_id.iaas.volume.create_end|
 |ブロックストレージの削除|event_id.iaas.volume.delete|
 |ブロックストレージ削除完了|event_id.iaas.volume.delete_end|
-|インスタンスボリュームの接続解除|event_id.iaas.volume.detach|
-|ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
+|ブロックストレージ修正|event_id.iaas.volume.update|
 |ブロックストレージ修正完了|event_id.iaas.volume.update_end|
-|ブロックストレージの情報変更|event_id.iaas.volume.update|
+|ブロックストレージ複製|event_id.iaas.volume.copy|
 |ブロックストレージ複製完了|event_id.iaas.volume.copy_end|
+|インスタンスブロックストレージ接続|event_id.iaas.volume.attach|
 |インスタンスブロックストレージ接続完了|event_id.iaas.volume.attach_end|
+|インスタンスブロックストレージ接続解除|event_id.iaas.volume.detach|
 |インスタンスブロックストレージ接続解除完了|event_id.iaas.volume.detach_end|
+|ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
 |ブロックストレージ移動|event_id.iaas.volume.transfer|
 |ブロックストレージ移動完了(対象)|event_id.iaas.volume.transfer_accept|
 |ブロックストレージ移動完了(ソース)|event_id.iaas.volume.transfer_create|
@@ -611,18 +611,18 @@
 |NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
 |NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
 |NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
-|ストレージゲートウェイの作成|event_id.iaas.storage_gateway.gateway.create|
-|ストレージゲートウェイ設定の変更|event_id.iaas.storage_gateway.gateway.update|
-|ストレージゲートウェイの削除|event_id.iaas.storage_gateway.gateway.delete|
-|ストレージゲートウェイ作成完了|event_id.iaas.storage_gateway.gateway.create_end|
-|ストレージゲートウェイ設定変更完了|event_id.iaas.storage_gateway.gateway.update_end|
-|ストレージゲートウェイ削除完了|event_id.iaas.storage_gateway.gateway.delete_end|
-|ストレージゲートウェイ共有の作成|event_id.iaas.storage_gateway.share.create|
-|ストレージゲートウェイ共有設定変更|event_id.iaas.storage_gateway.share.update|
-|ストレージゲートウェイ共有の削除|event_id.iaas.storage_gateway.share.delete|
-|ストレージゲートウェイ共有作成完了|event_id.iaas.storage_gateway.share.create_end|
-|ストレージゲートウェイ共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
-|ストレージゲートウェイ共有の削除完了|event_id.iaas.storage_gateway.share.delete_end|
+|ゲートウェイ作成|event_id.iaas.storage_gateway.gateway.create|
+|ゲートウェイ設定変更|event_id.iaas.storage_gateway.gateway.update|
+|ゲートウェイ削除|event_id.iaas.storage_gateway.gateway.delete|
+|ゲートウェイ作成完了|event_id.iaas.storage_gateway.gateway.create_end|
+|ゲートウェイ設定変更完了|event_id.iaas.storage_gateway.gateway.update_end|
+|ゲートウェイ削除完了|event_id.iaas.storage_gateway.gateway.delete_end|
+|共有作成|event_id.iaas.storage_gateway.share.create|
+|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|共有削除|event_id.iaas.storage_gateway.share.delete|
+|共有作成完了|event_id.iaas.storage_gateway.share.create_end|
+|共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
+|共有削除完了|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 

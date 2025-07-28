@@ -93,12 +93,12 @@
 |Take Console Screenshot|event_id.iaas.instance_action.screenshot|
 |Terminate Instance|event_id.iaas.instance_action.shelve|
 |Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|
-|Start Instance|event_id.iaas.instance_action.start|
-|Start Instance Completed|event_id.iaas.instance_action.start_end|
+|Start Stopped Instance|event_id.iaas.instance_action.start|
+|Start Stopped Instance Completed|event_id.iaas.instance_action.start_end|
 |Stop Instance|event_id.iaas.instance_action.stop|
 |Stop Instance Completed|event_id.iaas.instance_action.stop_end|
-|Start Instance|event_id.iaas.instance_action.unshelve|
-|Start Instance Completed|event_id.iaas.instance_action.unshelve_end|
+|Start Terminated Instance|event_id.iaas.instance_action.unshelve|
+|Start Terminated Instance Completed|event_id.iaas.instance_action.unshelve_end|
 |Change Instance Key Pair|event_id.iaas.instance_action.reset_keypair|
 |Create Instance Template|event_id.iaas.instance_template.create|
 |Delete Instance Template|event_id.iaas.instance_template.delete|
@@ -107,8 +107,8 @@
 |Create Instance Metadata|event_id.iaas.metadata.create|
 |Delete Instance Metadata|event_id.iaas.metadata.delete|
 |Change Instance Metadata|event_id.iaas.metadata.update|
-|Create Instance Interface|event_id.iaas.interface.create|
-|Delete Instance Interface|event_id.iaas.interface.delete|
+|Attach Instance Network Interface|event_id.iaas.interface.create|
+|Detach Instance Network Interface|event_id.iaas.interface.delete|
 |Create Keypair|event_id.iaas.keypair.create|
 |Delete Keypair|event_id.iaas.keypair.delete|
 |Create Placement Policy|event_id.iaas.servergroup.create|
@@ -117,12 +117,12 @@
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
 |Create Image ID|event_id.iaas.image.create_id|
-|Delete Image|event_id.iaas.image.delete|
 |Create Image Failed|event_id.iaas.image.create_failed|
-|Change Image Information|event_id.iaas.image.update|
-|Upload Image|event_id.iaas.image.upload|
+|Delete Image|event_id.iaas.image.delete|
 |Delete Image Completed|event_id.iaas.image.delete_end|
+|Modify Image|event_id.iaas.image.update|
 |Modify Image Completed|event_id.iaas.image.update_end|
+|Upload Image|event_id.iaas.image.upload|
 |Create Image Sharing|event_id.iaas.image_member.create|
 |Delete Image Sharing|event_id.iaas.image_member.delete|
 |Build Image|event_id.iaas.image_template.build|
@@ -130,19 +130,19 @@
 |Create Image Template|event_id.iaas.image_template.create|
 |Delete Image Template|event_id.iaas.image_template.delete|
 |Modify Image Template|event_id.iaas.image_template.update|
-|Connect Instance Volume|event_id.iaas.volume.attach|
-|Copy Volume|event_id.iaas.volume.copy|
-|Create Block Storage Completed|event_id.iaas.volume.create_end|
 |Create Block Storage|event_id.iaas.volume.create|
+|Create Block Storage Completed|event_id.iaas.volume.create_end|
 |Delete Block Storage|event_id.iaas.volume.delete|
 |Delete Block Storage Completed|event_id.iaas.volume.delete_end|
-|Disconnect Instance Volume|event_id.iaas.volume.detach|
-|Change Block Storage Size|event_id.iaas.volume.extend|
+|Modify Block Storage|event_id.iaas.volume.update|
 |Modify Block Storage Completed|event_id.iaas.volume.update_end|
-|Change Block Storage Information|event_id.iaas.volume.update|
+|Replicate Block Storage|event_id.iaas.volume.copy|
 |Replicate Block Storage Completed|event_id.iaas.volume.copy_end|
+|Attach Instance Block Storage|event_id.iaas.volume.attach|
 |Attach Instance Block Storage Completed|event_id.iaas.volume.attach_end|
+|Detach Instance Block Storage|event_id.iaas.volume.detach|
 |Detach Instance Block Storage Completed|event_id.iaas.volume.detach_end|
+|Change Block Storage Size|event_id.iaas.volume.extend|
 |Move Block Storage|event_id.iaas.volume.transfer|
 |Move Block Storage Completed (Target)|event_id.iaas.volume.transfer_accept|
 |Move Block Storage Completed (Source)|event_id.iaas.volume.transfer_create|
@@ -611,18 +611,18 @@
 |Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
 |Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
 |Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
-|Create Storage Gateway|event_id.iaas.storage_gateway.gateway.create|
-|Change Storage Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
-|Delete Storage Gateway|event_id.iaas.storage_gateway.gateway.delete|
-|Create Storage Gateway Completed|event_id.iaas.storage_gateway.gateway.create_end|
-|Change Storage Gateway Settings Completed|event_id.iaas.storage_gateway.gateway.update_end|
-|Delete Storage Gateway Completed|event_id.iaas.storage_gateway.gateway.delete_end|
-|Create Storage Share|event_id.iaas.storage_gateway.share.create|
-|Change Storage Share Settings|event_id.iaas.storage_gateway.share.update|
-|Delete Storage Share|event_id.iaas.storage_gateway.share.delete|
-|Create Storage Share Comleted|event_id.iaas.storage_gateway.share.create_end|
-|Change Storage Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
-|Delete Storage Share Completed|event_id.iaas.storage_gateway.share.delete_end|
+|Create Gateway|event_id.iaas.storage_gateway.gateway.create|
+|Change Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
+|Delete Gateway|event_id.iaas.storage_gateway.gateway.delete|
+|Create Gateway Completed|event_id.iaas.storage_gateway.gateway.create_end|
+|Change Gateway Settings Completed|event_id.iaas.storage_gateway.gateway.update_end|
+|Delete Gateway Completed|event_id.iaas.storage_gateway.gateway.delete_end|
+|Create Share|event_id.iaas.storage_gateway.share.create|
+|Change Share Settings|event_id.iaas.storage_gateway.share.update|
+|Delete Share|event_id.iaas.storage_gateway.share.delete|
+|Create Share Comleted|event_id.iaas.storage_gateway.share.create_end|
+|Change Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
+|Delete Share Completed|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
