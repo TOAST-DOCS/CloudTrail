@@ -5,19 +5,19 @@
 CloudTrail은 조직을 활성화하면 기본으로 제공되는 서비스입니다. 따라서 조직을 생성했다면 별도로 처리할 작업은 없습니다.
 조직을 생성한 후 서비스 선택에서 CloudTrail 서비스를 선택하시면 사용할 수 있습니다.
 
-![cloudtrail_01](https://static.toastoven.net/prod_cloudtrail/IMG01_KO.png)
+![cloudtrail_01](https://static-station.ngoic.com/v1/AUTH_c8bd5293535a46f8bc6705b349f67ea3/cdn/prod_cloudtrail/IMG01_KO.png)
 
 ### 목록
 
 CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 
-![cloudtrail_02](https://static.toastoven.net/prod_cloudtrail/IMG02_KO.png)
+![cloudtrail_02](https://static-station.ngoic.com/v1/AUTH_c8bd5293535a46f8bc6705b349f67ea3/cdn/prod_cloudtrail/IMG02_KO.png)
 
 해당 조직 내에서 사용자 이벤트가 기록되고, 이를 확인할 수 있습니다.
 
 ### 검색 및 정렬 기능
 
-![cloudtrail_03](https://static.toastoven.net/prod_cloudtrail/IMG03_KO.png)
+![cloudtrail_03](https://static-station.ngoic.com/v1/AUTH_c8bd5293535a46f8bc6705b349f67ea3/cdn/prod_cloudtrail/IMG03_KO.png)
 
 1. 프로젝트를 검색합니다. 이름 단위로만 검색할 수 있습니다.
 2. 소스(이벤트가 발생한 장소) 단위로 검색합니다.
@@ -42,7 +42,7 @@ CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 
 ### 상세 보기 기능
 
-![cloudtrail_04](https://static.toastoven.net/prod_cloudtrail/IMG04_KO.png)
+![cloudtrail_04](https://static-station.ngoic.com/v1/AUTH_c8bd5293535a46f8bc6705b349f67ea3/cdn/prod_cloudtrail/IMG04_KO.png)
 
 행을 선택하면, 해당 행이 확장되면서 상세 이벤트가 나타납니다.
 
@@ -52,7 +52,7 @@ CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 해당 조직 내에서 기록된 사용자 이벤트 로그를 외부 Object Storage를 통해 저장/다운로드 할 수 있습니다.
 **로그 저장/다운로드 설정** 버튼을 클릭한 후 대화 상자에서 사용 여부를 선택합니다.
 
-![cloudtrail_07](https://static.toastoven.net/prod_cloudtrail/IMG07_KO.png)
+![cloudtrail_07](https://static-station.ngoic.com/v1/AUTH_c8bd5293535a46f8bc6705b349f67ea3/cdn/prod_cloudtrail/IMG07_KO.png)
 
 * 아래부터는 [NHN Cloud Object Storage](/Storage/Object%20Storage/ko/Overview/)를 이용한 로그 저장/다운로드 방법을 설명합니다.
     * **액세스 키**, **비밀 키**는 [AWS S3 API](/Storage/Object%20Storage/ko/s3-api-guide-ngoic/#_1)를 이용한 **EC2 자격 증명 등록 및 조회**로 확인할 수 있습니다.
