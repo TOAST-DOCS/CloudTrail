@@ -303,6 +303,12 @@
 |VPN Connection 생성|event_id.iaas.vpn_connection.create|
 |VPN Connection 삭제|event_id.iaas.vpn_connection.delete|
 |VPN Connection 수정|event_id.iaas.vpn_connection.update|
+|VPNGW  v2 생성|event_id.iaas.vpngw_v2.create|
+|VPNGW  v2 삭제|event_id.iaas.vpngw_v2.delete|
+|VPNGW  v2 수정|event_id.iaas.vpngw_v2.update|
+|VPN Connection  v2 생성|event_id.iaas.vpn_connection_v2.create|
+|VPN Connection  v2 삭제|event_id.iaas.vpn_connection_v2.delete|
+|VPN Connection  v2 수정|event_id.iaas.vpn_connection_v2.update|
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
@@ -1244,6 +1250,7 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |M/N 타입 사용 신청|event_id.brandmessage.marketing.agreement|
+|발신프로필 080 무료수신거부 정보 등록|event_id.brandmessage.update.unsubscribe.content|
 |마케팅 수신동의 증적자료 업로드|event_id.brandmessage.upload.marketing.agreement|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|
 |발신 프로필 토큰 인증|event_id.kakaotalk.sender.token.certification|
@@ -1293,6 +1300,8 @@
 |알림톡 인증 발송 메시지 상세 조회|event_id.alimtalk.auth.message_searching_detail|
 |친구톡 일반 발송 메시지 상세 조회|event_id.friendtalk.message_searching_detail|
 |메시지 파일 다운로드|event_id.kakaotalk.download.message_export|
+|브랜드메시지 메시지 발송 취소|event_id.brandmessage.message.sending-cancellation|
+|브랜드메시지 대량 메시지 전송 취소|event_id.brandmessage.mass.message.sending-cancellation|
 
 ### API Gateway
 
