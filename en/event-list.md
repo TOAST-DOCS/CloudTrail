@@ -303,6 +303,12 @@
 |Create VPN Connection|event_id.iaas.vpn_connection.create|
 |Delete VPN Connection|event_id.iaas.vpn_connection.delete|
 |Update VPN Connection|event_id.iaas.vpn_connection.update|
+|Create VPNGW v2|event_id.iaas.vpngw_v2.create|
+|Delete VPNGW v2|event_id.iaas.vpngw_v2.delete|
+|Update VPNGW v2|event_id.iaas.vpngw_v2.update|
+|Create VPN Connection v2|event_id.iaas.vpn_connection_v2.create|
+|Delete VPN Connection v2|event_id.iaas.vpn_connection_v2.delete|
+|Update VPN Connection v2|event_id.iaas.vpn_connection_v2.update|
 |Create Service Gateway|event_id.iaas.service_gateway.create|
 |Delete Service Gateway|event_id.iaas.service_gateway.delete|
 |Change Service Gateway|event_id.iaas.service_gateway.update|
@@ -1244,6 +1250,7 @@
 | Event | Event ID |
 | --- | --- |
 |Application for M/N type use|event_id.brandmessage.marketing.agreement|
+|Register 080 Toll-Free Unsubscribe Information in Sender Profile|event_id.brandmessage.update.unsubscribe.content|
 |Upload evidence of marketing consent|event_id.brandmessage.upload.marketing.agreement|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|
 |Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|
@@ -1293,6 +1300,8 @@
 |Inquiry for alimtalk auth message detail|event_id.alimtalk.auth.message_searching_detail|
 |Inquiry for friendtalk auth message detail|event_id.friendtalk.message_searching_detail|
 |Download message export file|event_id.kakaotalk.download.message_export|
+|Cancel Sending Brand Message|event_id.brandmessage.message.sending-cancellation|
+|Cancel Sending Bulk Brand Messages|event_id.brandmessage.mass.message.sending-cancellation|
 
 ### API Gateway
 
