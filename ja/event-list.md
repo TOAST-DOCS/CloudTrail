@@ -303,6 +303,12 @@
 |VPN接続の作成|event_id.iaas.vpn_connection.create|
 |VPN接続の削除|event_id.iaas.vpn_connection.delete|
 |VPN接続の修正|event_id.iaas.vpn_connection.update|
+|VPNGW  v2 作成|event_id.iaas.vpngw_v2.create|
+|VPNGW  v2 削除 |event_id.iaas.vpngw_v2.delete|
+|VPNGW  v2 修正|event_id.iaas.vpngw_v2.update|
+|VPN接続 v2の作成|event_id.iaas.vpn_connection_v2.create|
+|VPN接続 v2の削除|event_id.iaas.vpn_connection_v2.delete|
+|VPN接続 v2の修正|event_id.iaas.vpn_connection_v2.update|
 |サービスゲートウェイの作成|event_id.iaas.service_gateway.create|
 |サービスゲートウェイの削除|event_id.iaas.service_gateway.delete|
 |サービスゲートウェイの変更|event_id.iaas.service_gateway.update|
@@ -1244,6 +1250,7 @@
 | イベント | イベントID |
 | --- | --- |
 |M/Nタイプ使用申請|event_id.brandmessage.marketing.agreement|
+|発信プロファイルに080無料受信拒否情報を登録|event_id.brandmessage.update.unsubscribe.content|
 |マーケティング受信同意証跡資料アップロード|event_id.brandmessage.upload.marketing.agreement|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|
 |発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|
@@ -1293,6 +1300,8 @@
 |通知トーク認証送信メッセージ詳細検索|event_id.alimtalk.auth.message_searching_detail|
 |友達トーク一般発送メッセージ詳細検索|event_id.friendtalk.message_searching_detail|
 |メッセージファイルのダウンロード|event_id.kakaotalk.download.message_export|
+|ブランドメッセージの送信キャンセル|event_id.brandmessage.message.sending-cancellation|
+|ブランドメッセージの一括送信キャンセル|event_id.brandmessage.mass.message.sending-cancellation|
 
 ### API Gateway
 
