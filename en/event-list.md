@@ -53,6 +53,8 @@
 |Modify Role Group|event_id.project.role_group.update|
 |Delete Role Group|event_id.project.role_group.delete|
 |Add Role to Role Group|event_id.project.role_group.assign.roles|
+|Add Role Group Member|event_id.project.role_group.add.members|
+|Delete Role Group Member|event_id.project.role_group.delete.members|
 |Modify Roles in Role Group|event_id.project.role_group.modify.roles|
 |Delete Role from Role Group|event_id.project.role_group.remove.roles|
 |Access IAM Project|event_id.iam.project.selected|
@@ -76,6 +78,12 @@
 |조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
 |프로젝트 알림 수신 대상 설정|event_id.project.system_notification.receivers.update|
 |프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
+|Add Organization Role Group|event_id.org.org_role_group.create|
+|Modify Organization Role Group|event_id.org.org_role_group.update|
+|Delete Organization Role Group|event_id.org.org_role_group.delete|
+|Modify Organization Role Group&#39;s Role|event_id.org.org_role_group.modify.roles|
+|Add Organization Role Group Member|event_id.org.org_role_group.add.members|
+|Delete Organization Role Group Member|event_id.org.org_role_group.delete.members|
 
 ### Default Infrastructure Service
 
@@ -1250,6 +1258,8 @@
 | Event | Event ID |
 | --- | --- |
 |Application for M/N type use|event_id.brandmessage.marketing.agreement|
+|Export Brand Message Mass Message Results|event_id.brandmessage.mass.message.results.export|
+|Export Brand Message Message Results|event_id.brandmessage.message.results.export|
 |Register 080 Toll-Free Unsubscribe Information in Sender Profile|event_id.brandmessage.update.unsubscribe.content|
 |Upload evidence of marketing consent|event_id.brandmessage.upload.marketing.agreement|
 |Create Sender Profile|event_id.kakaotalk.sender.creation|
@@ -1591,6 +1601,7 @@
 |태그 발송 요청 목록 조회|event_id.sms.get_tag_message_master_list|
 |Retrieve Details of Recipients of Tag Delivery Requests|event_id.sms.get_tag_message_recipient_detail|
 |Retrieve Recipients of Tag Delivery Requests|event_id.sms.get_tag_message_recipient_list|
+|Monthly Send Count Quota Threshold Crossed|event_id.sms.message_send_quota_threshold_crossed|
 |Remove Opt-Out Service|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
