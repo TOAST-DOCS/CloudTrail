@@ -1,5 +1,15 @@
 ## CloudTrail > Release Notes
 
+### 2025. 10. 28.
+#### More Events
+* Added events related to Console.
+
+### 2025. 09. 23.
+#### More Events
+* Added events related to Console.
+* Added events related to KakaoTalk Bizmessage.
+* Added events related to SMS.
+
 ### 2025. 08. 26.
 #### More Events
 * Added events related to Default Infrastructure Service.
