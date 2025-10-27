@@ -53,6 +53,8 @@
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
+|역할 그룹 멤버 추가|event_id.project.role_group.add.members|
+|역할 그룹 멤버 삭제|event_id.project.role_group.delete.members|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
@@ -76,6 +78,12 @@
 |조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
 |프로젝트 알림 수신 대상 수정|event_id.project.system_notification.receivers.update|
 |프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
+|조직 역할 그룹 추가|event_id.org.org_role_group.create|
+|조직 역할 그룹 수정|event_id.org.org_role_group.update|
+|조직 역할 그룹 삭제|event_id.org.org_role_group.delete|
+|조직 역할 그룹 역할 수정|event_id.org.org_role_group.modify.roles|
+|조직 역할 그룹 멤버 추가|event_id.org.org_role_group.add.members|
+|조직 역할 그룹 멤버 삭제|event_id.org.org_role_group.delete.members|
 
 ### 기본 인프라 서비스
 
@@ -1250,6 +1258,8 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |M/N 타입 사용 신청|event_id.brandmessage.marketing.agreement|
+|브랜드 메시지 대량 메시지 결과 내보내기|event_id.brandmessage.mass.message.results.export|
+|브랜드 메시지 메시지 결과 내보내기|event_id.brandmessage.message.results.export|
 |발신프로필 080 무료수신거부 정보 등록|event_id.brandmessage.update.unsubscribe.content|
 |마케팅 수신동의 증적자료 업로드|event_id.brandmessage.upload.marketing.agreement|
 |발신 프로필 생성|event_id.kakaotalk.sender.creation|
@@ -1591,6 +1601,7 @@
 |태그 발송 요청 목록 조회|event_id.sms.get_tag_message_master_list|
 |태그 발송 요청 수신자 상세 조회|event_id.sms.get_tag_message_recipient_detail|
 |태그 발송 요청 수신자 목록 조회|event_id.sms.get_tag_message_recipient_list|
+|월 발송량 제한 임계치 알림|event_id.sms.message_send_quota_threshold_crossed|
 |수신거부 서비스 제거|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
