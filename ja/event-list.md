@@ -53,6 +53,8 @@
 |ロールグループ修正|event_id.project.role_group.update|
 |ロールグループ削除|event_id.project.role_group.delete|
 |ロールグループロール追加|event_id.project.role_group.assign.roles|
+|ロールグループのメンバー追加|event_id.project.role_group.add.members|
+|ロールグループのメンバー削除|event_id.project.role_group.delete.members|
 |ロールグループのロールを修正|event_id.project.role_group.modify.roles|
 |ロールグループロール削除|event_id.project.role_group.remove.roles|
 |IAMプロジェクト アクセス|event_id.iam.project.selected|
@@ -76,6 +78,12 @@
 |조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
 |프로젝트 알림 수신 대상 설정|event_id.project.system_notification.receivers.update|
 |프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
+|組織ロールグループの追加|event_id.org.org_role_group.create|
+|組織ロールグループの修正|event_id.org.org_role_group.update|
+|組織ロールグループの削除|event_id.org.org_role_group.delete|
+|組織ロールグループのロール修正|event_id.org.org_role_group.modify.roles|
+|組織ロールグループのメンバー追加|event_id.org.org_role_group.add.members|
+|組織ロールグループのメンバー削除|event_id.org.org_role_group.delete.members|
 
 ### 基本インフラサービス
 
@@ -1250,6 +1258,8 @@
 | イベント | イベントID |
 | --- | --- |
 |M/Nタイプ使用申請|event_id.brandmessage.marketing.agreement|
+|ブランドメッセージ大量メッセージ結果のエクスポート|event_id.brandmessage.mass.message.results.export|
+|ブランドメッセージメッセージ結果のエクスポート|event_id.brandmessage.message.results.export|
 |発信プロファイルに080無料受信拒否情報を登録|event_id.brandmessage.update.unsubscribe.content|
 |マーケティング受信同意証跡資料アップロード|event_id.brandmessage.upload.marketing.agreement|
 |発信プロフィールの作成|event_id.kakaotalk.sender.creation|
@@ -1591,6 +1601,7 @@
 |태그 발송 요청 목록 조회|event_id.sms.get_tag_message_master_list|
 |タグ送信リクエスト受信者 詳細照会|event_id.sms.get_tag_message_recipient_detail|
 |タグ送信リクエスト受信者 リスト照会|event_id.sms.get_tag_message_recipient_list|
+|月間送信数クォータの上限を超えました|event_id.sms.message_send_quota_threshold_crossed|
 |受信拒否サービスの削除|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
