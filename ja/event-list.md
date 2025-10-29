@@ -121,9 +121,9 @@
 |キーペアの削除|event_id.iaas.keypair.delete|
 |配置ポリシー作成|event_id.iaas.servergroup.create|
 |配置ポリシー削除|event_id.iaas.servergroup.delete|
-|シリアルコンソール接続|event_id.iaas.remote_console.connect|
-|シリアルコンソール接続完了|event_id.iaas.remote_console.connect_end|
-|シリアルコンソール接続を中断|event_id.iaas.remote_console.disconnect_end|
+|シリアルコンソール接続|event_id.iaas.serial_console.connect|
+|シリアルコンソール接続完了|event_id.iaas.serial_console.connect_end|
+|シリアルコンソール接続を中断|event_id.iaas.serial_console.disconnect_end|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
