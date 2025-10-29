@@ -121,9 +121,9 @@
 |Delete Keypair|event_id.iaas.keypair.delete|
 |Create Placement Policy|event_id.iaas.servergroup.create|
 |Delete Placement Policy|event_id.iaas.servergroup.delete|
-|Serial Console Connection|event_id.iaas.remote_console.connect|
-|Serial Console Connection Completed|event_id.iaas.remote_console.connect_end|
-|Serial Console Connection Stopped|event_id.iaas.remote_console.disconnect_end|
+|Serial Console Connection|event_id.iaas.serial_console.connect|
+|Serial Console Connection Completed|event_id.iaas.serial_console.connect_end|
+|Serial Console Connection Stopped|event_id.iaas.serial_console.disconnect_end|
 |Copy Image|event_id.iaas.image.copy|
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
