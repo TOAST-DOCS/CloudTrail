@@ -54,7 +54,7 @@
 |Delete Role Group|event_id.project.role_group.delete|
 |Add Role to Role Group|event_id.project.role_group.assign.roles|
 |Add Role Group Member|event_id.project.role_group.add.members|
-|Delete Role Group Member|event_id.project.role_group.delete.members|
+|Delete Role Group Member|event_id.project.role_group.delete_members|
 |Modify Roles in Role Group|event_id.project.role_group.modify.roles|
 |Delete Role from Role Group|event_id.project.role_group.remove.roles|
 |Access IAM Project|event_id.iam.project.selected|
@@ -121,6 +121,9 @@
 |Delete Keypair|event_id.iaas.keypair.delete|
 |Create Placement Policy|event_id.iaas.servergroup.create|
 |Delete Placement Policy|event_id.iaas.servergroup.delete|
+|Serial Console Connection|event_id.iaas.remote_console.connect|
+|Serial Console Connection Completed|event_id.iaas.remote_console.connect_end|
+|Serial Console Connection Stopped|event_id.iaas.remote_console.disconnect_end|
 |Copy Image|event_id.iaas.image.copy|
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
@@ -216,6 +219,11 @@
 |Change Security Group|event_id.iaas.security_group.update|
 |Create Security Rule|event_id.iaas.security_group_rule.create|
 |Delete Security Rule|event_id.iaas.security_group_rule.delete|
+|Create Security Group Completed|event_id.iaas.security_group.create_end|
+|Delete Security Group Completed|event_id.iaas.security_group.delete_end|
+|Change Security Group Completed|event_id.iaas.security_group.update_end|
+|Create Security Rule Completed|event_id.iaas.security_group_rule.create_end|
+|Delete Security Rule Completed|event_id.iaas.security_group_rule.delete_end|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|
 |Delete Load Balancer|event_id.iaas.loadbalancer.delete|
 |Change Load Balancer Information|event_id.iaas.loadbalancer.update|
@@ -2125,6 +2133,7 @@
 |Change Connection Settings|event_id.cloud_access.option_connection_modify|
 |Notice Settings|event_id.cloud_access.option_guide_create|
 |Logo Settings|event_id.cloud_access.option_logo_create|
+|Reset User Passkey|event_id.cloud_access.user_passkey_reset|
 
 ### Cloud Functions
 
