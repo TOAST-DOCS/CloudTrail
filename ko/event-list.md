@@ -121,9 +121,9 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
 |배치 정책 삭제|event_id.iaas.servergroup.delete|
-|시리얼 콘솔 접속|event_id.iaas.remote_console.connect|
-|시리얼 콘솔 접속 완료|event_id.iaas.remote_console.connect_end|
-|시리얼 콘솔 접속 중단|event_id.iaas.remote_console.disconnect_end|
+|시리얼 콘솔 접속|event_id.iaas.serial_console.connect|
+|시리얼 콘솔 접속 완료|event_id.iaas.serial_console.connect_end|
+|시리얼 콘솔 접속 중단|event_id.iaas.serial_console.disconnect_end|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
