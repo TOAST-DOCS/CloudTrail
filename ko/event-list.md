@@ -54,7 +54,7 @@
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
 |역할 그룹 멤버 추가|event_id.project.role_group.add.members|
-|역할 그룹 멤버 삭제|event_id.project.role_group.delete.members|
+|역할 그룹 멤버 삭제|event_id.project.role_group.delete_members|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
@@ -121,6 +121,9 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
 |배치 정책 삭제|event_id.iaas.servergroup.delete|
+|시리얼 콘솔 접속|event_id.iaas.remote_console.connect|
+|시리얼 콘솔 접속 완료|event_id.iaas.remote_console.connect_end|
+|시리얼 콘솔 접속 중단|event_id.iaas.remote_console.disconnect_end|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
@@ -216,6 +219,11 @@
 |보안 그룹 변경|event_id.iaas.security_group.update|
 |보안 규칙 생성|event_id.iaas.security_group_rule.create|
 |보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
+|보안 그룹 생성 완료|event_id.iaas.security_group.create_end|
+|보안 그룹 삭제 완료|event_id.iaas.security_group.delete_end|
+|보안 그룹 변경 완료|event_id.iaas.security_group.update_end|
+|보안 규칙 생성 완료|event_id.iaas.security_group_rule.create_end|
+|보안 규칙 삭제 완료|event_id.iaas.security_group_rule.delete_end|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|
 |로드 밸런서 삭제|event_id.iaas.loadbalancer.delete|
 |로드 밸런서 정보 변경|event_id.iaas.loadbalancer.update|
@@ -2125,6 +2133,7 @@
 |연결 설정 변경|event_id.cloud_access.option_connection_modify|
 |안내 설정|event_id.cloud_access.option_guide_create|
 |로고 설정|event_id.cloud_access.option_logo_create|
+|사용자 패스키 초기화|event_id.cloud_access.user_passkey_reset|
 
 ### Cloud Functions
 
