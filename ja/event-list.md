@@ -54,7 +54,7 @@
 |ロールグループ削除|event_id.project.role_group.delete|
 |ロールグループロール追加|event_id.project.role_group.assign.roles|
 |ロールグループのメンバー追加|event_id.project.role_group.add.members|
-|ロールグループのメンバー削除|event_id.project.role_group.delete.members|
+|ロールグループのメンバー削除|event_id.project.role_group.delete_members|
 |ロールグループのロールを修正|event_id.project.role_group.modify.roles|
 |ロールグループロール削除|event_id.project.role_group.remove.roles|
 |IAMプロジェクト アクセス|event_id.iam.project.selected|
@@ -121,6 +121,9 @@
 |キーペアの削除|event_id.iaas.keypair.delete|
 |配置ポリシー作成|event_id.iaas.servergroup.create|
 |配置ポリシー削除|event_id.iaas.servergroup.delete|
+|シリアルコンソール接続|event_id.iaas.remote_console.connect|
+|シリアルコンソール接続完了|event_id.iaas.remote_console.connect_end|
+|シリアルコンソール接続を中断|event_id.iaas.remote_console.disconnect_end|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
@@ -216,6 +219,11 @@
 |セキュリティーグループの変更|event_id.iaas.security_group.update|
 |セキュリティルールの作成|event_id.iaas.security_group_rule.create|
 |セキュリティルールの削除|event_id.iaas.security_group_rule.delete|
+|セキュリティーグループの作成完了|event_id.iaas.security_group.create_end|
+|セキュリティーグループの削除完了|event_id.iaas.security_group.delete_end|
+|セキュリティーグループの変更完了|event_id.iaas.security_group.update_end|
+|セキュリティルールの作成完了|event_id.iaas.security_group_rule.create_end|
+|セキュリティルールの削除完了|event_id.iaas.security_group_rule.delete_end|
 |ロードバランサーの作成|event_id.iaas.loadbalancer.create|
 |ロードバランサーの削除|event_id.iaas.loadbalancer.delete|
 |ロードバランサー情報の変更|event_id.iaas.loadbalancer.update|
@@ -2125,6 +2133,7 @@
 |接続設定の変更|event_id.cloud_access.option_connection_modify|
 |案内設定|event_id.cloud_access.option_guide_create|
 |ロゴ設定|event_id.cloud_access.option_logo_create|
+|ユーザーパスキー初期化|event_id.cloud_access.user_passkey_reset|
 
 ### Cloud Functions
 
