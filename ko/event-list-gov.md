@@ -44,9 +44,7 @@
 |이미지 삭제|event_id.iaas.image.delete|
 |이미지 삭제 완료|event_id.iaas.image.delete_end|
 |이미지 수정|event_id.iaas.image.update|
-|이미지 이동 완료 (대상)|event_id.iaas.image.transfer_accept|
 |이미지 수정 완료|event_id.iaas.image.update_end|
-|이미지 이동 완료 (소스)|event_id.iaas.image.transfer_create|
 |이미지 업로드|event_id.iaas.image.upload|
 |이미지 공유 추가|event_id.iaas.image_member.create|
 |이미지 공유 삭제|event_id.iaas.image_member.delete|
@@ -126,6 +124,11 @@
 |보안 그룹 변경|event_id.iaas.security_group.update|
 |보안 규칙 생성|event_id.iaas.security_group_rule.create|
 |보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
+|보안 그룹 생성 완료|event_id.iaas.security_group.create_end|
+|보안 그룹 삭제 완료|event_id.iaas.security_group.delete_end|
+|보안 그룹 변경 완료|event_id.iaas.security_group.update_end|
+|보안 규칙 생성 완료|event_id.iaas.security_group_rule.create_end|
+|보안 규칙 삭제 완료|event_id.iaas.security_group_rule.delete_end|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|
 |로드 밸런서 삭제|event_id.iaas.loadbalancer.delete|
 |로드 밸런서 정보 변경|event_id.iaas.loadbalancer.update|
@@ -222,6 +225,9 @@
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
 |Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
+|네트워크 인터페이스 라우트 생성|event_id.iaas.port_route.create|
+|네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
+|네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -467,22 +473,31 @@
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
-|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
-|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
 |워크로드 작업 재시작|event_id.iaas.ncs.workload_task.restart|
 |워크로드 오토스케일러 변경|event_id.iaas.ncs.workload_autoscaler.update|
 |워크로드 작업 수 자동 조정 시작|event_id.iaas.ncs.workload_task_resize.start|
 |워크로드 작업 수 자동 조정 종료|event_id.iaas.ncs.workload_task_resize.end|
 |워크로드 작업 수 자동 조정 실패|event_id.iaas.ncs.workload_task_resize.failed|
-|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
-|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
-|NAS 볼륨 변경|event_id.iaas.nas.volume.update|
-|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
-|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
-|NAS 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
-|CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
-|CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
-|CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
+|NAS CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
+|NAS CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
+|NAS CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
+|NAS 암호화 키 저장소 설정|event_id.iaas.nas.encryption_key_store.set|
+|NAS 스토리지 생성|event_id.iaas.nas.volume.create|
+|NAS 스토리지 삭제|event_id.iaas.nas.volume.delete|
+|NAS 스토리지 설정 변경|event_id.iaas.nas.volume.update|
+|NAS 스토리지 생성 완료|event_id.iaas.nas.volume.create_end|
+|NAS 스토리지 삭제 완료|event_id.iaas.nas.volume.delete_end|
+|NAS 스토리지 설정 변경 완료|event_id.iaas.nas.volume.update_end|
+|NAS 스토리지 스냅숏 생성|event_id.iaas.nas.snapshot.create|
+|NAS 스토리지 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|NAS 스토리지 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
+|NAS 스토리지 복제 설정|event_id.iaas.nas.replication.set|
+|NAS 스토리지 복제 설정 해제|event_id.iaas.nas.replication.unset|
+|NAS 스토리지 복제 시작|event_id.iaas.nas.replication.start|
+|NAS 스토리지 복제 중지|event_id.iaas.nas.replication.stop|
+|NAS 스토리지 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
+|NAS 스토리지 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
+|NAS 스토리지 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
 
 ### Object Storage
 
@@ -500,6 +515,8 @@
 |컨테이너 복제 설정 변경|event_id.object_storage.container.sync.update|
 |컨테이너 복제 설정 해제|event_id.object_storage.container.sync.disable|
 |오브젝트 복제 업로드|event_id.object_storage.object.sync.upload|
+|컨테이너 복제 중지|event_id.object_storage.container.sync.suspend|
+|컨테이너 복제 재시작|event_id.object_storage.container.sync.resume|
 
 ### RDS for MySQL
 
@@ -643,27 +660,27 @@
 |승인 프로세스 승인|event_id.skm.approval.approve|
 |승인 프로세스 거절|event_id.skm.approval.deny|
 |승인 프로세스 승인 요청|event_id.skm.approval.approve_request|
-|기밀 데이터 조회|event_id.skm.api.secrets.get|
-|대칭 키를 통한 암호화|event_id.skm.api.symmetric.encrypt|
-|대칭 키를 통한 복호화|event_id.skm.api.symmetric.decrypt|
-|로컬 키 생성|event_id.skm.api.symmetric.create_local_key|
-|비대칭 키를 통한 서명|event_id.skm.api.asymmetric.sign|
-|비대칭 키를 통한 서명 검증|event_id.skm.api.asymmetric.verify|
-|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
-|대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
-|비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
-|대칭 키 조회|event_id.skm.api.symmetric.get|
-|개인 키 조회|event_id.skm.api.asymmetric.get.privateKey|
-|공개 키 조회|event_id.skm.api.asymmetric.get.publicKey|
-|기밀 데이터 생성|event_id.skm.api.secrets.create|
-|대칭 키 생성|event_id.skm.api.symmetric.create|
-|비대칭 키 생성|event_id.skm.api.asymmetric.create|
-|기밀 데이터 삭제 요청|event_id.skm.api.secrets.delete_request|
-|대칭 키 삭제 요청|event_id.skm.api.symmetric.delete_request|
-|비대칭 키 삭제 요청|event_id.skm.api.asymmetric.delete_request|
-|기밀 데이터 즉시 삭제|event_id.skm.api.secrets.delete|
-|대칭 키 즉시 삭제|event_id.skm.api.symmetric.delete|
-|비대칭 키 즉시 삭제|event_id.skm.api.asymmetric.delete|
+|기밀 데이터 조회 (API)|event_id.skm.api.secrets.get|
+|대칭 키를 통한 암호화 (API)|event_id.skm.api.symmetric.encrypt|
+|대칭 키를 통한 복호화 (API)|event_id.skm.api.symmetric.decrypt|
+|로컬 키 생성 (API)|event_id.skm.api.symmetric.create_local_key|
+|비대칭 키를 통한 서명 (API)|event_id.skm.api.asymmetric.sign|
+|비대칭 키를 통한 서명 검증 (API)|event_id.skm.api.asymmetric.verify|
+|기밀 데이터 자동 삭제|event_id.skm.secrets.scheduled_delete|
+|대칭 키 자동 삭제|event_id.skm.symmetric.scheduled_delete|
+|비대칭 키 자동 삭제|event_id.skm.asymmetric.scheduled_delete|
+|대칭 키 조회 (API)|event_id.skm.api.symmetric.get|
+|개인 키 조회 (API)|event_id.skm.api.asymmetric.get.privateKey|
+|공개 키 조회 (API)|event_id.skm.api.asymmetric.get.publicKey|
+|기밀 데이터 생성 (API)|event_id.skm.api.secrets.create|
+|대칭 키 생성 (API)|event_id.skm.api.symmetric.create|
+|비대칭 키 생성 (API)|event_id.skm.api.asymmetric.create|
+|기밀 데이터 삭제 요청 (API)|event_id.skm.api.secrets.delete_request|
+|대칭 키 삭제 요청 (API)|event_id.skm.api.symmetric.delete_request|
+|비대칭 키 삭제 요청 (API)|event_id.skm.api.asymmetric.delete_request|
+|기밀 데이터 즉시 삭제 (API)|event_id.skm.api.secrets.delete|
+|대칭 키 즉시 삭제 (API)|event_id.skm.api.symmetric.delete|
+|비대칭 키 즉시 삭제 (API)|event_id.skm.api.asymmetric.delete|
 
 ### Deploy
 
@@ -710,7 +727,7 @@
 |커스텀 대시보드 복제|event_id.cloud_monitoring_organization.dashboard_copy|
 |커스텀 대시보드 생성|event_id.cloud_monitoring_organization.dashboard_create|
 |커스텀 대시보드 삭제|event_id.cloud_monitoring_organization.dashboard_delete|
-|하|event_id.cloud_monitoring_organization.dashboard_exposure|
+|커스텀 대시보드 노출 설정|event_id.cloud_monitoring_organization.dashboard_exposure|
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
@@ -752,6 +769,10 @@
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
+|역할 그룹 멤버 추가|event_id.project.role_group.add.members|
+|역할 그룹 멤버 삭제|event_id.project.role_group.delete_members|
+|역할 그룹 멤버 추가|event_id.project.role_group.members.add|
+|역할 그룹 멤버 삭제|event_id.project.role_group.members.delete|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
@@ -769,12 +790,14 @@
 |조직 알림 수신 그룹 수정|event_id.org.alarm_group.update|
 |조직 알림 수신 그룹 삭제|event_id.org.alarm_group.delete|
 |프로젝트 알림 수신 그룹 생성|event_id.project.alarm_group.create|
-|프로젝트 알림 수신 그룹 수정|event_id.event_id.project.alarm_group.update|
-|프로젝트 알림 수신 그룹 삭제|event_id.event_id.project.alarm_group.delete|
-|조직 알림 수신 대상 수정|event_id.org.system_notification.receivers.update|
-|조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
-|프로젝트 알림 수신 대상 수정|event_id.project.system_notification.receivers.update|
-|프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
+|프로젝트 알림 수신 그룹 수정|event_id.project.alarm_group.update|
+|프로젝트 알림 수신 그룹 삭제|event_id.project.alarm_group.delete|
+|조직 역할 그룹 추가|event_id.org.org_role_group.create|
+|조직 역할 그룹 수정|event_id.org.org_role_group.update|
+|조직 역할 그룹 삭제|event_id.org.org_role_group.delete|
+|조직 역할 그룹 역할 수정|event_id.org.org_role_group.modify.roles|
+|조직 역할 그룹 멤버 추가|event_id.org.org_role_group.members.add|
+|조직 역할 그룹 멤버 삭제|event_id.org.org_role_group.members.delete|
 
 ### EasyCache
 
@@ -825,6 +848,9 @@
 |백업 경로 변경|event_id.backup.target.update|
 |백업 경로 삭제|event_id.backup.target.delete|
 |복구 신청|event_id.backup.restoration.apply|
+|백업 계획 중지|event_id.backup.target.suspend|
+|백업 계획 시작|event_id.backup.target.resume|
+|백업 결과 파일 생성|event_id.backup.result.file|
 |백업 서버 정보 변경|event_id.backup.client.update|
 
 ### DNS Plus
@@ -1000,6 +1026,19 @@
 |리소스 응답 생성|event_id.apigw.resource.create_response|
 |스테이지에 도메인 별칭 연결|event_id.apigw.stage.connect_alias_domain|
 |스테이지에 도메인 별칭 연결 해제|event_id.apigw.stage.disconnect_alias_domain|
+|스테이지에 사용자 지정 도메인 연결|event_id.apigw.stage.connect_custom_domain|
+|스테이지에 사용자 지정 도메인 연결 해제|event_id.apigw.stage.disconnect_custom_domain|
+|API Key 가져오기|event_id.apigw.apikey.import|
+|사용자 지정 도메인 생성|event_id.apigw.custom_domain.create|
+|사용자 지정 도메인 삭제|event_id.apigw.custom_domain.delete|
+|요청 제한 정책 생성|event_id.apigw.request_policy.create|
+|요청 제한 정책 수정|event_id.apigw.request_policy.update|
+|요청 제한 정책 삭제|event_id.apigw.request_policy.delete|
+|요청 제한 정책 키 값 생성|event_id.apigw.request_policy.key.create|
+|요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
+|요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
+|게이트웨이 응답 재정의|event_id.apigw.gateway_response.update|
+|게이트웨이 응답 초기화|event_id.apigw.gateway_response.reset|
 
 ### CloudTrail
 
@@ -1087,33 +1126,6 @@
 |VPN 터널 연결/연결 해제|event_id.network_firewall.vpn_tunnel_initiate_terminate|
 |VPN 터널 수정|event_id.network_firewall.vpn_tunnel_modify|
 
-### Cloud Monitoring
-
-| 이벤트 | 이벤트 ID |
-| --- | --- |
-|알림 사용 여부 설정|event_id.cloud_monitoring_project.alarm_activate|
-|알림 생성|event_id.cloud_monitoring_project.alarm_create|
-|알림 삭제|event_id.cloud_monitoring_project.alarm_delete|
-|알림 수정|event_id.cloud_monitoring_project.alarm_modify|
-|대시보드 복제|event_id.cloud_monitoring_project.dashboard_copy|
-|대시보드 생성|event_id.cloud_monitoring_project.dashboard_create|
-|대시보드 삭제|event_id.cloud_monitoring_project.dashboard_delete|
-|대시보드 노출 설정|event_id.cloud_monitoring_project.dashboard_exposure|
-|대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
-|지표 수집 설정|event_id.cloud_monitoring_project.service_management|
-
-### DDoS Guard
-
-| 이벤트 | 이벤트 ID |
-| --- | --- |
-|Zone 생성|event_id.ddos_guard.zone_create|
-|Zone 수정|event_id.ddos_guard.zone_modify|
-|Zone 해제|event_id.ddos_guard.zone_cancel|
-|보고서 설정|event_id.ddos_guard.report_usage_set|
-|모의 훈련 생성|event_id.ddos_guard.mock_training_create|
-|모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
-|모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
-
 ### NHN Container Registry(NCR)
 
 | 이벤트 | 이벤트 ID |
@@ -1150,54 +1162,32 @@
 |이미지 캐시 삭제|event_id.ncr.image_cache.delete|
 |이미지 캐시 수정|event_id.ncr.image_cache.update|
 
-### Cloud Access
+### Cloud Monitoring
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|사용자 추가|event_id.cloud_access.user_create|
-|사용자 삭제|event_id.cloud_access.user_delete|
-|사용자 수정|event_id.cloud_access.user_modify|
-|사용자 계정 상태 변경|event_id.cloud_access.user_account_state_change|
-|사용자 OTP 초기화|event_id.cloud_access.user_otp_reset|
-|사용자 비밀번호 초기화|event_id.cloud_access.user_password_reset|
-|사용자 로그인 실패 초기화|event_id.cloud_access.user_login_failure_reset|
-|사용자 계정 활성화|event_id.cloud_access.user_account_activate|
-|사용자 일괄 업로드 검증|event_id.cloud_access.user_create_verify|
-|사용자 일괄 업로드|event_id.cloud_access.user_create_template|
-|사용자 정책 추가|event_id.cloud_access.user_policy_create|
-|사용자 정책 수정|event_id.cloud_access.user_policy_modify|
-|사용자 정책 삭제|event_id.cloud_access.user_policy_delete|
-|ACL 정책 추가|event_id.cloud_access.acl_policy_create|
-|ACL 정책 복사|event_id.cloud_access.acl_policy_copy_create|
-|ACL 정책 삭제|event_id.cloud_access.acl_policy_delete|
-|ACL 정책 수정|event_id.cloud_access.acl_policy_modify|
-|ACL 정책 이동|event_id.cloud_access.acl_policy_move|
-|ACL 정책 일괄 업로드 검증|event_id.cloud_access.acl_policy_create_template_verify|
-|ACL 정책 일괄 업로드|event_id.cloud_access.acl_policy_create_template|
-|IP 객체 추가|event_id.cloud_access.ip_object_create|
-|IP 객체 추가(사용자)|event_id.cloud_access.ip_object_user_create|
-|IP 객체 삭제|event_id.cloud_access.ip_object_delete|
-|IP 객체 수정|event_id.cloud_access.ip_object_modify|
-|IP 객체 일괄 업로드 검증|event_id.cloud_access.ip_object_create_template_verify|
-|IP 객체 일괄 업로드|event_id.cloud_access.ip_object_create_template|
-|Port 객체 추가|event_id.cloud_access.port_object_create|
-|Port 객체 삭제|event_id.cloud_access.port_object_delete|
-|Port 객체 수정|event_id.cloud_access.port_object_modify|
-|Port 객체 일괄 업로드 검증|event_id.cloud_access.port_object_create_template_verify|
-|Port 객체 일괄 업로드|event_id.cloud_access.port_object_create_template|
-|기본 차단 정책 로그 설정|event_id.cloud_access.option_deny_log_create|
-|원격 로그(Syslog) 설정|event_id.cloud_access.option_remote_log_syslog_create|
-|원격 로그(OBS) 설정|event_id.cloud_access.option_remote_log_obs_create|
-|원격 로그(Log &amp; Crash Search) 설정|event_id.cloud_access.option_remote_log_lncs_create|
-|원격 로그(Log &amp; Crash Search) 정보 검증|event_id.cloud_access.option_lncs_valid|
-|원격 로그(OBS) 정보 검증|event_id.cloud_access.option_obs_valid|
-|로그인 보안(로그인 실패) 설정|event_id.cloud_access.option_login_failure_create|
-|로그인 보안(비밀번호 만료) 설정|event_id.cloud_access.option_password_expire_create|
-|로그인 보안(비밀번호 정책) 설정|event_id.cloud_access.option_password_policy_create|
-|연결 설정|event_id.cloud_access.option_connection_create|
-|연결 설정 변경|event_id.cloud_access.option_connection_modify|
-|안내 설정|event_id.cloud_access.option_guide_create|
-|로고 설정|event_id.cloud_access.option_logo_create|
+|알림 사용 여부 설정|event_id.cloud_monitoring_project.alarm_activate|
+|알림 생성|event_id.cloud_monitoring_project.alarm_create|
+|알림 삭제|event_id.cloud_monitoring_project.alarm_delete|
+|알림 수정|event_id.cloud_monitoring_project.alarm_modify|
+|대시보드 복제|event_id.cloud_monitoring_project.dashboard_copy|
+|대시보드 생성|event_id.cloud_monitoring_project.dashboard_create|
+|대시보드 삭제|event_id.cloud_monitoring_project.dashboard_delete|
+|대시보드 노출 설정|event_id.cloud_monitoring_project.dashboard_exposure|
+|대시보드 수정|event_id.cloud_monitoring_project.dashboard_modify|
+|지표 수집 설정|event_id.cloud_monitoring_project.service_management|
+
+### DDoS Guard
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|Zone 생성|event_id.ddos_guard.zone_create|
+|Zone 수정|event_id.ddos_guard.zone_modify|
+|Zone 해제|event_id.ddos_guard.zone_cancel|
+|보고서 설정|event_id.ddos_guard.report_usage_set|
+|모의 훈련 생성|event_id.ddos_guard.mock_training_create|
+|모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
+|모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
 
 ### NHN Bastion
 
