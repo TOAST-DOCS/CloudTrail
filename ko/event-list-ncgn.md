@@ -119,6 +119,11 @@
 |보안 그룹 변경|event_id.iaas.security_group.update|
 |보안 규칙 생성|event_id.iaas.security_group_rule.create|
 |보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
+|보안 그룹 생성 완료|event_id.iaas.security_group.create_end|
+|보안 그룹 삭제 완료|event_id.iaas.security_group.delete_end|
+|보안 그룹 변경 완료|event_id.iaas.security_group.update_end|
+|보안 규칙 생성 완료|event_id.iaas.security_group_rule.create_end|
+|보안 규칙 삭제 완료|event_id.iaas.security_group_rule.delete_end|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|
 |로드 밸런서 삭제|event_id.iaas.loadbalancer.delete|
 |로드 밸런서 정보 변경|event_id.iaas.loadbalancer.update|
@@ -163,6 +168,9 @@
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
+|네트워크 인터페이스 라우트 생성|event_id.iaas.port_route.create|
+|네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
+|네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -513,6 +521,10 @@
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
+|역할 그룹 멤버 추가|event_id.project.role_group.add.members|
+|역할 그룹 멤버 삭제|event_id.project.role_group.delete_members|
+|역할 그룹 멤버 추가|event_id.project.role_group.members.add|
+|역할 그룹 멤버 삭제|event_id.project.role_group.members.delete|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
@@ -536,6 +548,12 @@
 |조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
 |프로젝트 알림 수신 대상 수정|event_id.project.system_notification.receivers.update|
 |프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
+|조직 역할 그룹 추가|event_id.org.org_role_group.create|
+|조직 역할 그룹 수정|event_id.org.org_role_group.update|
+|조직 역할 그룹 삭제|event_id.org.org_role_group.delete|
+|조직 역할 그룹 역할 수정|event_id.org.org_role_group.modify.roles|
+|조직 역할 그룹 멤버 추가|event_id.org.org_role_group.members.add|
+|조직 역할 그룹 멤버 삭제|event_id.org.org_role_group.members.delete|
 
 ### Backup
 
