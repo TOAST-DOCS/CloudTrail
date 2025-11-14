@@ -55,6 +55,8 @@
 |ロールグループロール追加|event_id.project.role_group.assign.roles|
 |ロールグループのメンバー追加|event_id.project.role_group.add.members|
 |ロールグループのメンバー削除|event_id.project.role_group.delete_members|
+|ロールグループのメンバー追加|event_id.project.role_group.members.add|
+|ロールグループのメンバー削除|event_id.project.role_group.members.delete|
 |ロールグループのロールを修正|event_id.project.role_group.modify.roles|
 |ロールグループロール削除|event_id.project.role_group.remove.roles|
 |IAMプロジェクト アクセス|event_id.iam.project.selected|
@@ -82,8 +84,8 @@
 |組織ロールグループの修正|event_id.org.org_role_group.update|
 |組織ロールグループの削除|event_id.org.org_role_group.delete|
 |組織ロールグループのロール修正|event_id.org.org_role_group.modify.roles|
-|組織ロールグループのメンバー追加|event_id.org.org_role_group.add.members|
-|組織ロールグループのメンバー削除|event_id.org.org_role_group.delete.members|
+|組織ロールグループのメンバー追加|event_id.org.org_role_group.members.add|
+|組織ロールグループのメンバー削除|event_id.org.org_role_group.members.delete|
 
 ### 基本インフラサービス
 
@@ -123,7 +125,7 @@
 |配置ポリシー削除|event_id.iaas.servergroup.delete|
 |シリアルコンソール接続|event_id.iaas.serial_console.connect|
 |シリアルコンソール接続完了|event_id.iaas.serial_console.connect_end|
-|シリアルコンソール接続を中断|event_id.iaas.serial_console.disconnect_end|
+|シリアルコンソール接続を終了|event_id.iaas.serial_console.disconnect_end|
 |イメージのコピー|event_id.iaas.image.copy|
 |イメージの作成|event_id.iaas.image.create|
 |イメージ作成完了|event_id.iaas.image.create_end|
@@ -177,7 +179,6 @@
 |VPCの作成完了|event_id.iaas.vpc.create_end|
 |VPCの削除完了|event_id.iaas.vpc.delete_end|
 |VPCの情報変更完了|event_id.iaas.vpc.update_end|
-|VPCの作成完了|event_id.iaas|
 |VPCサブネットの作成|event_id.iaas.vpc_subnet.create|
 |VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
 |VPCサブネットの変更|event_id.iaas.vpc_subnet.update|
@@ -356,6 +357,9 @@
 |フローログストレージの削除|event_id.iaas.flowlog_storage.delete|
 |フローログロガーの修正完了|event_id.iaas.flowlog_logger.update_end|
 |フローログストレージの修正|event_id.iaas.flowlog_storage.update|
+|ネットワークインターフェースのルート作成|event_id.iaas.port_route.create|
+|ネットワークインターフェースのルート削除|event_id.iaas.port_route.delete|
+|ネットワークインターフェースのルート変更|event_id.iaas.port_route.update|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -2146,6 +2150,30 @@
 |トリガーの作成|event_id.cloud_functions.trigger.create|
 |トリガーの削除|event_id.cloud_functions.trigger.delete|
 |トリガーの修正|event_id.cloud_functions.trigger.update|
+
+### Private CA
+
+| イベント | イベントID |
+| --- | --- |
+|CA 생성|event_id.pca.ca.create|
+|CA 삭제|event_id.pca..ca.delete|
+|CA 변경|event_id.pca.ca.update|
+|템플릿 생성|event_id.pca.template.create|
+|템플릿 삭제|event_id.pca.template.delete|
+|템플릿 수정|event_id.pca.template.update|
+|템플릿 조회|event_id.pca.template.get|
+|인증서 신규 생성|event_id.pca.template.issue|
+|발급자 생성|event_id.pca.issuer.create|
+|발급자 폐기|event_id.pca.issuer.revoke|
+|발급자 수정|event_id.pca.issuer.update|
+|발급자 조회|event_id.pca.issuer.get|
+|발급자 다운로드|event_id.pca.issuer.download|
+|인증서 폐기|event_id.pca.certificate.revoke|
+|인증서 조회|event_id.pca.certificate.get|
+|인증서 다운로드|event_id.pca.certificate.download|
+|ACME 토큰 생성|event_id.pca.acme.create|
+|ACME 토큰 삭제|event_id.pca.acme.delete|
+|ACME 토큰 조회|event_id.pca.acme.get|
 
 ### RDS for PostgreSQL
 
