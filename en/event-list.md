@@ -55,6 +55,8 @@
 |Add Role to Role Group|event_id.project.role_group.assign.roles|
 |Add Role Group Member|event_id.project.role_group.add.members|
 |Delete Role Group Member|event_id.project.role_group.delete_members|
+|Add Role Group Member|event_id.project.role_group.members.add|
+|Delete Role Group Member|event_id.project.role_group.members.delete|
 |Modify Roles in Role Group|event_id.project.role_group.modify.roles|
 |Delete Role from Role Group|event_id.project.role_group.remove.roles|
 |Access IAM Project|event_id.iam.project.selected|
@@ -82,8 +84,8 @@
 |Modify Organization Role Group|event_id.org.org_role_group.update|
 |Delete Organization Role Group|event_id.org.org_role_group.delete|
 |Modify Organization Role Group&#39;s Role|event_id.org.org_role_group.modify.roles|
-|Add Organization Role Group Member|event_id.org.org_role_group.add.members|
-|Delete Organization Role Group Member|event_id.org.org_role_group.delete.members|
+|Add Organization Role Group Member|event_id.org.org_role_group.members.add|
+|Delete Organization Role Group Member|event_id.org.org_role_group.members.delete|
 
 ### Default Infrastructure Service
 
@@ -123,7 +125,7 @@
 |Delete Placement Policy|event_id.iaas.servergroup.delete|
 |Serial Console Connection|event_id.iaas.serial_console.connect|
 |Serial Console Connection Completed|event_id.iaas.serial_console.connect_end|
-|Serial Console Connection Stopped|event_id.iaas.serial_console.disconnect_end|
+|Serial Console Connection Ended|event_id.iaas.serial_console.disconnect_end|
 |Copy Image|event_id.iaas.image.copy|
 |Create Image|event_id.iaas.image.create|
 |Create Image Completed|event_id.iaas.image.create_end|
@@ -177,7 +179,6 @@
 |Create VPC Completed|event_id.iaas.vpc.create_end|
 |Delete VPC Completed|event_id.iaas.vpc.delete_end|
 |Change VPC Information Completed|event_id.iaas.vpc.update_end|
-|Create VPC Completed|event_id.iaas|
 |Create VPC Subnet|event_id.iaas.vpc_subnet.create|
 |Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
 |Change VPC Subnet|event_id.iaas.vpc_subnet.update|
@@ -356,6 +357,9 @@
 |Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
 |Modify Flow Log Logger Completed|event_id.iaas.flowlog_logger.update_end|
 |Modify Flow Log Storage|event_id.iaas.flowlog_storage.update|
+|event_id.iaas.port_route.create|event_id.iaas.port_route.create|
+|Delete Network Interface Route|event_id.iaas.port_route.delete|
+|Change Network Interface Route|event_id.iaas.port_route.update|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -2146,6 +2150,30 @@
 |Create Trigger|event_id.cloud_functions.trigger.create|
 |Delete Trigger|event_id.cloud_functions.trigger.delete|
 |Update Trigger|event_id.cloud_functions.trigger.update|
+
+### Private CA
+
+| Event | Event ID |
+| --- | --- |
+|CA 생성|event_id.pca.ca.create|
+|CA 삭제|event_id.pca..ca.delete|
+|CA 변경|event_id.pca.ca.update|
+|템플릿 생성|event_id.pca.template.create|
+|템플릿 삭제|event_id.pca.template.delete|
+|템플릿 수정|event_id.pca.template.update|
+|템플릿 조회|event_id.pca.template.get|
+|인증서 신규 생성|event_id.pca.template.issue|
+|발급자 생성|event_id.pca.issuer.create|
+|발급자 폐기|event_id.pca.issuer.revoke|
+|발급자 수정|event_id.pca.issuer.update|
+|발급자 조회|event_id.pca.issuer.get|
+|발급자 다운로드|event_id.pca.issuer.download|
+|인증서 폐기|event_id.pca.certificate.revoke|
+|인증서 조회|event_id.pca.certificate.get|
+|인증서 다운로드|event_id.pca.certificate.download|
+|ACME 토큰 생성|event_id.pca.acme.create|
+|ACME 토큰 삭제|event_id.pca.acme.delete|
+|ACME 토큰 조회|event_id.pca.acme.get|
 
 ### RDS for PostgreSQL
 
