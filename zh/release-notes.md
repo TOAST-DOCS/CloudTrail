@@ -1,5 +1,18 @@
 ## CloudTrail > Release Notes
 
+### 2025. 11. 25.
+#### More Events
+* Added events related to Default Infrastructure Service.
+* Added events related to Private CA.
+
+### 2025. 11. 13.
+#### More Events
+* Added events related to Default Infrastructure Service.
+
+### 2025. 11. 11.
+#### More Events
+* Added events related to Cloud Access.
+
 ### 2025. 10. 28.
 #### More Events
 * Added events related to Console.

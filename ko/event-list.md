@@ -54,7 +54,9 @@
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
 |역할 그룹 멤버 추가|event_id.project.role_group.add.members|
-|역할 그룹 멤버 삭제|event_id.project.role_group.delete.members|
+|역할 그룹 멤버 삭제|event_id.project.role_group.delete_members|
+|역할 그룹 멤버 추가|event_id.project.role_group.members.add|
+|역할 그룹 멤버 삭제|event_id.project.role_group.members.delete|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
 |역할 그룹 역할 삭제|event_id.project.role_group.remove.roles|
 |IAM 프로젝트 접속|event_id.iam.project.selected|
@@ -82,8 +84,8 @@
 |조직 역할 그룹 수정|event_id.org.org_role_group.update|
 |조직 역할 그룹 삭제|event_id.org.org_role_group.delete|
 |조직 역할 그룹 역할 수정|event_id.org.org_role_group.modify.roles|
-|조직 역할 그룹 멤버 추가|event_id.org.org_role_group.add.members|
-|조직 역할 그룹 멤버 삭제|event_id.org.org_role_group.delete.members|
+|조직 역할 그룹 멤버 추가|event_id.org.org_role_group.members.add|
+|조직 역할 그룹 멤버 삭제|event_id.org.org_role_group.members.delete|
 
 ### 기본 인프라 서비스
 
@@ -121,6 +123,9 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
 |배치 정책 삭제|event_id.iaas.servergroup.delete|
+|시리얼 콘솔 접속|event_id.iaas.serial_console.connect|
+|시리얼 콘솔 접속 완료|event_id.iaas.serial_console.connect_end|
+|시리얼 콘솔 접속 종료|event_id.iaas.serial_console.disconnect_end|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
@@ -174,7 +179,6 @@
 |VPC 생성 완료|event_id.iaas.vpc.create_end|
 |VPC 삭제 완료|event_id.iaas.vpc.delete_end|
 |VPC 정보 변경 완료|event_id.iaas.vpc.update_end|
-|VPC 생성 완료|event_id.iaas|
 |VPC 서브넷 생성|event_id.iaas.vpc_subnet.create|
 |VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
 |VPC 서브넷 변경|event_id.iaas.vpc_subnet.update|
@@ -216,6 +220,11 @@
 |보안 그룹 변경|event_id.iaas.security_group.update|
 |보안 규칙 생성|event_id.iaas.security_group_rule.create|
 |보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
+|보안 그룹 생성 완료|event_id.iaas.security_group.create_end|
+|보안 그룹 삭제 완료|event_id.iaas.security_group.delete_end|
+|보안 그룹 변경 완료|event_id.iaas.security_group.update_end|
+|보안 규칙 생성 완료|event_id.iaas.security_group_rule.create_end|
+|보안 규칙 삭제 완료|event_id.iaas.security_group_rule.delete_end|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|
 |로드 밸런서 삭제|event_id.iaas.loadbalancer.delete|
 |로드 밸런서 정보 변경|event_id.iaas.loadbalancer.update|
@@ -348,6 +357,9 @@
 |플로우 로그 스토리지 삭제|event_id.iaas.flowlog_storage.delete|
 |플로우 로그 로거 수정 완료|event_id.iaas.flowlog_logger.update_end|
 |플로우 로그 스토리지 수정|event_id.iaas.flowlog_storage.update|
+|네트워크 인터페이스 라우트 생성|event_id.iaas.port_route.create|
+|네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
+|네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -2125,6 +2137,7 @@
 |연결 설정 변경|event_id.cloud_access.option_connection_modify|
 |안내 설정|event_id.cloud_access.option_guide_create|
 |로고 설정|event_id.cloud_access.option_logo_create|
+|사용자 패스키 초기화|event_id.cloud_access.user_passkey_reset|
 
 ### Cloud Functions
 
@@ -2137,6 +2150,30 @@
 |트리거 생성|event_id.cloud_functions.trigger.create|
 |트리거 삭제|event_id.cloud_functions.trigger.delete|
 |트리거 수정|event_id.cloud_functions.trigger.update|
+
+### Private CA
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|CA 생성|event_id.pca.ca.create|
+|CA 삭제|event_id.pca..ca.delete|
+|CA 변경|event_id.pca.ca.update|
+|템플릿 생성|event_id.pca.template.create|
+|템플릿 삭제|event_id.pca.template.delete|
+|템플릿 수정|event_id.pca.template.update|
+|템플릿 조회|event_id.pca.template.get|
+|인증서 신규 생성|event_id.pca.template.issue|
+|발급자 생성|event_id.pca.issuer.create|
+|발급자 폐기|event_id.pca.issuer.revoke|
+|발급자 수정|event_id.pca.issuer.update|
+|발급자 조회|event_id.pca.issuer.get|
+|발급자 다운로드|event_id.pca.issuer.download|
+|인증서 폐기|event_id.pca.certificate.revoke|
+|인증서 조회|event_id.pca.certificate.get|
+|인증서 다운로드|event_id.pca.certificate.download|
+|ACME 토큰 생성|event_id.pca.acme.create|
+|ACME 토큰 삭제|event_id.pca.acme.delete|
+|ACME 토큰 조회|event_id.pca.acme.get|
 
 ### RDS for PostgreSQL
 
