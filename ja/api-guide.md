@@ -4,21 +4,15 @@
 > Cloud TrailにRESTful APIを呼び出し、ユーザーが設定した条件に合ったイベントを照会できます。
 
 ## URL & Appkey
-RESTful APIを使用するにはAppKeyが必要です。
-[CONSOLE]の右上で、発行されたKey情報を確認できます。
-![[図1] AppKey & SecretKeyの確認](http://static.toastoven.net/prod_cloudtrail/cloudtrail_20190924.png)
-<center>[図1] AppKeyの確認</center>
+CloudTrail APIを使用するには、Appkeyが必要です。Appkeyは、API呼び出し時にリクエストURLに含めて特定のリソースを指定し、識別するために使用されます。
+
+Appkeyの確認及び使用に関する詳細は、[Appkey](docs.nhncloud.com/ja/nhncloud/ja/public-api/appkey)を参照してください。
 
 ## User Access Key ID & Secret Access Key
 
-2.0バージョンのAPIからユーザー認証が追加され、ユーザーの権限に応じて認可をチェックします。
-したがって、User Access Key IDとSecret Access Keyを追加する必要があります。User Access Key IDとSecret Access Keyは、コンソール右上のアカウントエリアをクリックした後、ドロップダウンメニューで<b>APIセキュリティ設定</b>を選択し、+ <b>User Access Key ID作成</b>をクリックして作成でき、
-APIを呼び出す時、HTTP HEADERに下記のように追加する必要があります。
+CloudTrail API(V2.0+)を使用するには、User Access Keyが必要です。User Access Keyは、NHN CloudアカウントまたはIAMアカウントに基づいて発行される認証キーであり、Secret Access Keyと共に使用してAPIリクエストに対する認証手段として利用されます。
 
-```
-    X-TC-AUTHENTICATION-ID : User Access Key ID
-    X-TC-AUTHENTICATION-SECRET : Secret Access Key 
-```
+User Access KeyとSecret Access Keyは、コンソールのAPIセキュリティ設定で発行できます。User Access Keyの発行及び使用に関する詳細は、[User Access Key](docs.nhncloud.com/ja/nhncloud/ja/public-api/user-access-key)を参照してください。
 
 ## RESTful APIガイド
 
