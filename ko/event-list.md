@@ -612,6 +612,9 @@
 |워크로드 작업 수 자동 조정 시작|event_id.iaas.ncs.workload_task_resize.start|
 |워크로드 작업 수 자동 조정 종료|event_id.iaas.ncs.workload_task_resize.end|
 |워크로드 작업 수 자동 조정 실패|event_id.iaas.ncs.workload_task_resize.failed|
+|워크로드 생성|event_id.iaas.ncs.workload.create|
+|워크로드 재시작|event_id.iaas.ncs.workload.restart|
+|워크로드 변경|event_id.iaas.ncs.workload.update|
 |NAS CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
 |NAS CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
 |NAS CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
@@ -1260,6 +1263,7 @@
 |Document OCR 신용카드 분석 요청|event_id.ocr.document_ocr.credit_card.analyze|
 |Document OCR 신분증 분석 요청|event_id.ocr.document_ocr.id_card.analyze|
 |Document OCR 신분증 진위 확인 요청|event_id.ocr.document_ocr.id_card.authenticity|
+|Vehicle Plate OCR 차량 번호판 분석 요청|event_id.ocr.vehicle_plate_ocr.analyze|
 |Document OCR 신분증 분석 요청(단독)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
 |Document OCR 사업자등록증 휴/폐업 조회|event_id.ocr.document_ocr.business.authenticity|
 |General OCR 이미지 분할 인식 요청|event_id.ocr.general_ocr.cropping_analyze|
@@ -1418,6 +1422,17 @@
 | --- | --- |
 |웹 셸 메일 수신 활성화|event_id.webshell_treat_detector.mail_send_activated|
 |웹 셸 메일 수신 비활성화|event_id.webshell_treat_detector.mail_send_deactivated|
+
+### 
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|서비스 이용 신청|event_id.ai_word_suggestion.service_use_request.submit|
+|서비스 이용 신청 취소|event_id.ai_word_suggestion.service_use_request.cancel|
+|검색어 교정 요청|event_id.ai_word_suggestion.correct|
+|사전 단어 등록|event_id.ai_word_suggestion.dictionary.add|
+|사전 단어 삭제|event_id.ai_word_suggestion.dictionary.delete|
+|사전 단어 수정|event_id.ai_word_suggestion.dictionary.update|
 
 ### DataFlow
 
@@ -1752,6 +1767,12 @@
 |대량 발송 요청|event_id.email.send_mass_mail|
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
+
+### 
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|Pose Estimation 분석 요청|event_id.pose_estimation.pose|
 
 ### ROLE
 
@@ -2239,4 +2260,10 @@
 |사용자 그룹 생성|event_id.rds_for_postgresql.USER_GROUP_CREATE|
 |사용자 그룹 삭제|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |사용자 그룹 수정|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
+
+### 
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|스푸핑 감지|event_id.face_liveness.spoofing|
 
