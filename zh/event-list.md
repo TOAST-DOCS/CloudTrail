@@ -53,8 +53,6 @@
 |Modify Role Group|event_id.project.role_group.update|
 |Delete Role Group|event_id.project.role_group.delete|
 |Add Role to Role Group|event_id.project.role_group.assign.roles|
-|Add Role Group Member|event_id.project.role_group.add.members|
-|Delete Role Group Member|event_id.project.role_group.delete_members|
 |Add Role Group Member|event_id.project.role_group.members.add|
 |Delete Role Group Member|event_id.project.role_group.members.delete|
 |Modify Roles in Role Group|event_id.project.role_group.modify.roles|
@@ -1234,21 +1232,6 @@
 |Update a certificate permission|event_id.short_url.certificate_update_role|
 |Delete a certificate|event_id.short_url.certificate_delete|
 
-### AI Fashion
-
-| Event | Event ID |
-| --- | --- |
-|Search for similar-image products by product ID|event_id.ai_fashion.service.searchbyproductid|
-|Detect fashion items|event_id.ai_fashion.service.detect|
-|Search for similar-image products by image|event_id.ai_fashion.service.searchbyimage|
-|Add services|event_id.ai_fashion.service.addservice|
-|List services|event_id.ai_fashion.service.listservice|
-|Delete services|event_id.ai_fashion.service.deleteservice|
-|Deep tagging of fashion items|event_id.ai_fashion.service.tag|
-|Request indexing|event_id.ai_fashion.maker.index|
-|Check service information|event_id.ai_fashion.maker.serviceinfo|
-|Check indexing request status|event_id.ai_fashion.maker.indexstatus|
-
 ### OCR
 
 | Event | Event ID |
@@ -2156,7 +2139,7 @@
 | Event | Event ID |
 | --- | --- |
 |CA 생성|event_id.pca.ca.create|
-|CA 삭제|event_id.pca..ca.delete|
+|CA 삭제|event_id.pca.ca.delete|
 |CA 변경|event_id.pca.ca.update|
 |템플릿 생성|event_id.pca.template.create|
 |템플릿 삭제|event_id.pca.template.delete|

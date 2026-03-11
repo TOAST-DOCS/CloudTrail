@@ -53,8 +53,6 @@
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
-|역할 그룹 멤버 추가|event_id.project.role_group.add.members|
-|역할 그룹 멤버 삭제|event_id.project.role_group.delete_members|
 |역할 그룹 멤버 추가|event_id.project.role_group.members.add|
 |역할 그룹 멤버 삭제|event_id.project.role_group.members.delete|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
@@ -1234,21 +1232,6 @@
 |인증서 권한 수정|event_id.short_url.certificate_update_role|
 |인증서 삭제|event_id.short_url.certificate_delete|
 
-### AI Fashion
-
-| 이벤트 | 이벤트 ID |
-| --- | --- |
-|상품 아이디로 유사 이미지 상품 검색|event_id.ai_fashion.service.searchbyproductid|
-|패션 아이템 검출|event_id.ai_fashion.service.detect|
-|이미지로 유사 이미지 상품 검색|event_id.ai_fashion.service.searchbyimage|
-|서비스 추가|event_id.ai_fashion.service.addservice|
-|서비스 목록|event_id.ai_fashion.service.listservice|
-|서비스 삭제|event_id.ai_fashion.service.deleteservice|
-|패션 아이템 딥 태깅|event_id.ai_fashion.service.tag|
-|색인 요청|event_id.ai_fashion.maker.index|
-|서비스 정보 확인|event_id.ai_fashion.maker.serviceinfo|
-|색인 요청 상태 확인|event_id.ai_fashion.maker.indexstatus|
-
 ### OCR
 
 | 이벤트 | 이벤트 ID |
@@ -2156,7 +2139,7 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |CA 생성|event_id.pca.ca.create|
-|CA 삭제|event_id.pca..ca.delete|
+|CA 삭제|event_id.pca.ca.delete|
 |CA 변경|event_id.pca.ca.update|
 |템플릿 생성|event_id.pca.template.create|
 |템플릿 삭제|event_id.pca.template.delete|
