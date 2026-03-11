@@ -53,8 +53,6 @@
 |ロールグループ修正|event_id.project.role_group.update|
 |ロールグループ削除|event_id.project.role_group.delete|
 |ロールグループロール追加|event_id.project.role_group.assign.roles|
-|ロールグループのメンバー追加|event_id.project.role_group.add.members|
-|ロールグループのメンバー削除|event_id.project.role_group.delete_members|
 |ロールグループのメンバー追加|event_id.project.role_group.members.add|
 |ロールグループのメンバー削除|event_id.project.role_group.members.delete|
 |ロールグループのロールを修正|event_id.project.role_group.modify.roles|
@@ -1234,21 +1232,6 @@
 |証明書の権限を修正|event_id.short_url.certificate_update_role|
 |証明書の削除|event_id.short_url.certificate_delete|
 
-### AI Fashion
-
-| イベント | イベントID |
-| --- | --- |
-|商品IDで類似画像商品を検索|event_id.ai_fashion.service.searchbyproductid|
-|ファッションアイテム検出|event_id.ai_fashion.service.detect|
-|画像で類似画像商品を検索|event_id.ai_fashion.service.searchbyimage|
-|サービス追加|event_id.ai_fashion.service.addservice|
-|サービスリスト|event_id.ai_fashion.service.listservice|
-|サービス削除|event_id.ai_fashion.service.deleteservice|
-|ファッションアイテムディープタギング|event_id.ai_fashion.service.tag|
-|インデックスリクエスト状態の確認|event_id.ai_fashion.maker.index|
-|サービス情報確認|event_id.ai_fashion.maker.serviceinfo|
-|インデックスリクエスト状態の確認|event_id.ai_fashion.maker.indexstatus|
-
 ### OCR
 
 | イベント | イベントID |
@@ -2156,7 +2139,7 @@
 | イベント | イベントID |
 | --- | --- |
 |CA 생성|event_id.pca.ca.create|
-|CA 삭제|event_id.pca..ca.delete|
+|CA 삭제|event_id.pca.ca.delete|
 |CA 변경|event_id.pca.ca.update|
 |템플릿 생성|event_id.pca.template.create|
 |템플릿 삭제|event_id.pca.template.delete|
