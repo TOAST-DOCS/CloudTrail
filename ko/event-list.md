@@ -358,6 +358,9 @@
 |네트워크 인터페이스 라우트 생성|event_id.iaas.port_route.create|
 |네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
 |네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
+|네트워크 인터페이스 라우트 생성 완료|event_id.iaas.port_route.create_end|
+|네트워크 인터페이스 라우트 삭제 완료|event_id.iaas.port_route.delete_end|
+|네트워크 인터페이스 라우트 변경 완료|event_id.iaas.port_route.update_end|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -465,6 +468,12 @@
 |노드 증설 시작|event_id.iaas.nodegroup.scale_out.start|
 |노드 증설 완료|event_id.iaas.nodegroup.scale_out.end|
 |노드 증설 실패|event_id.iaas.nodegroup.scale_out.failed|
+|노드 그룹 Kubernetes Taint 설정 변경 시작|event_id.iaas.nodegroup.update_k8s_node_taints.start|
+|노드 그룹 Kubernetes Taint 설정 변경 완료|event_id.iaas.nodegroup.update_k8s_node_taints.end|
+|노드 그룹 Kubernetes Taint 설정 변경 실패|event_id.iaas.nodegroup.update_k8s_node_taints.failed|
+|노드 그룹의 Kubernetes 컴포넌트 설정 변경 시작|event_id.iaas.nodegroup.update_k8s_args.start|
+|노드 그룹의 Kubernetes 컴포넌트 설정 변경 완료|event_id.iaas.nodegroup.update_k8s_args.end|
+|노드 그룹의 Kubernetes 컴포넌트 설정 변경 실패|event_id.iaas.nodegroup.update_k8s_args.failed|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -861,6 +870,7 @@
 |기밀 데이터 즉시 삭제 (API)|event_id.skm.api.secrets.delete|
 |대칭 키 즉시 삭제 (API)|event_id.skm.api.symmetric.delete|
 |비대칭 키 즉시 삭제 (API)|event_id.skm.api.asymmetric.delete|
+|기밀 데이터 수정 (API)|event_id.skm.api.secrets.modify|
 
 ### Deploy
 
@@ -1387,6 +1397,8 @@
 | 이벤트 | 이벤트 ID |
 | --- | --- |
 |Speech to Text 변환 요청|event_id.speech.stt.convert|
+|Speech to Text Websocket 접속|event_id.speech.stt.websocket_connect|
+|Speech to Text Websocket 접속 종료|event_id.speech.stt.websocket_disconnect|
 
 ### CloudTrail
 
@@ -2033,6 +2045,8 @@
 |080 수신거부 번호 개통 요청|event_id.notification_hub.unsubscribed_phone_number_request|
 |080 수신거부 번호 해지|event_id.notification_hub.unsubscribed_phone_number_delete|
 |080 수신거부 번호 해지 취소|event_id.notification_hub.unsubscribed_phone_number_cancel_deletion|
+|080 수신거부 외부 번호 등록|event_id.notification_hub.event_id.notification_hub.unsubscribe_phone_number_external_registered|
+|080 수신거부 외부 번호 해지|event_id.notification_hub.event_id.notification_hub.unsubscribe_phone_number_external_terminated|
 |플로우 수정|event_id.notification_hub.flow_modify|
 |플로우 삭제|event_id.notification_hub.flow_delete|
 |템플릿 수정|event_id.notification_hub.template_modify|
@@ -2071,6 +2085,15 @@
 |모의 훈련 생성|event_id.ddos_guard.mock_training_create|
 |모의 훈련 수정|event_id.ddos_guard.mock_training_modify|
 |모의 훈련 삭제|event_id.ddos_guard.mock_training_delete|
+
+### EasyQueue
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|토픽 생성|event_id.easyqueue.topic.create|
+|토픽 수정|event_id.easyqueue.topic.update|
+|토픽 삭제|event_id.easyqueue.topic.delete|
+|메시지 전송|event_id.easyqueue.topic.send_messages|
 
 ### Cloud Access
 
@@ -2129,10 +2152,12 @@
 |함수 복사|event_id.cloud_functions.function.copy|
 |함수 생성|event_id.cloud_functions.function.create|
 |함수 삭제|event_id.cloud_functions.function.delete|
+|버전 배포|event_id.cloud_functions.function.deploy.version|
 |함수 수정|event_id.cloud_functions.function.update|
 |트리거 생성|event_id.cloud_functions.trigger.create|
 |트리거 삭제|event_id.cloud_functions.trigger.delete|
 |트리거 수정|event_id.cloud_functions.trigger.update|
+|버전 삭제|event_id.cloud_functions.version.delete|
 
 ### Private CA
 
@@ -2222,4 +2247,38 @@
 |사용자 그룹 생성|event_id.rds_for_postgresql.USER_GROUP_CREATE|
 |사용자 그룹 삭제|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |사용자 그룹 수정|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
+
+### Data Lake Storage
+
+| 이벤트 | 이벤트 ID |
+| --- | --- |
+|사용자 인증|event_id.datalakestorage.auth.authenticate|
+|자격 증명 검증|event_id.datalakestorage.auth.validate|
+|버킷 생성|event_id.datalakestorage.bucket.create|
+|버킷 삭제|event_id.datalakestorage.bucket.delete|
+|버킷 메타 조회|event_id.datalakestorage.bucket.head|
+|버킷 목록 조회|event_id.datalakestorage.bucket.list|
+|버킷 태그 삭제|event_id.datalakestorage.bucket.tagging.delete|
+|버킷 태그 조회|event_id.datalakestorage.bucket.tagging.get|
+|버킷 태그 설정|event_id.datalakestorage.bucket.tagging.update|
+|버킷 버저닝 조회|event_id.datalakestorage.bucket.versioning.get|
+|버킷 버저닝 설정|event_id.datalakestorage.bucket.versioning.update|
+|멀티파트 업로드 중단|event_id.datalakestorage.multipart.abort|
+|멀티파트 업로드 완료|event_id.datalakestorage.multipart.complete|
+|멀티파트 업로드 시작|event_id.datalakestorage.multipart.create|
+|멀티파트 목록 조회|event_id.datalakestorage.multipart.list|
+|파트 복사|event_id.datalakestorage.multipart.part.copy|
+|멀티파트 파트 목록 조회|event_id.datalakestorage.multipart.part.list|
+|파트 업로드|event_id.datalakestorage.multipart.part.upload|
+|객체 복사|event_id.datalakestorage.object.copy|
+|객체 업로드|event_id.datalakestorage.object.create|
+|객체 삭제|event_id.datalakestorage.object.delete|
+|객체 다중 삭제|event_id.datalakestorage.object.delete-multiple|
+|객체 다운로드|event_id.datalakestorage.object.get|
+|객체 메타 조회|event_id.datalakestorage.object.head|
+|객체 목록 조회|event_id.datalakestorage.object.list|
+|객체 목록 조회 V2|event_id.datalakestorage.object.list-v2|
+|객체 태그 삭제|event_id.datalakestorage.object.tagging.delete|
+|객체 태그 조회|event_id.datalakestorage.object.tagging.get|
+|객체 태그 설정|event_id.datalakestorage.object.tagging.update|
 
