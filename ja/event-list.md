@@ -358,6 +358,9 @@
 |ネットワークインターフェースのルート作成|event_id.iaas.port_route.create|
 |ネットワークインターフェースのルート削除|event_id.iaas.port_route.delete|
 |ネットワークインターフェースのルート変更|event_id.iaas.port_route.update|
+|ネットワークインターフェースのルート作成完了|event_id.iaas.port_route.create_end|
+|ネットワークインターフェースのルート削除完了|event_id.iaas.port_route.delete_end|
+|ネットワークインターフェースのルート変更完了|event_id.iaas.port_route.update_end|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -465,6 +468,12 @@
 |ノード増設開始|event_id.iaas.nodegroup.scale_out.start|
 |ノード増設完了|event_id.iaas.nodegroup.scale_out.end|
 |ノード増設失敗|event_id.iaas.nodegroup.scale_out.failed|
+|ノードグループ Kubernetes Taint 設定変更の開始|event_id.iaas.nodegroup.update_k8s_node_taints.start|
+|ノードグループ Kubernetes Taint 設定変更完了|event_id.iaas.nodegroup.update_k8s_node_taints.end|
+|ノードグループ Kubernetes Taint 設定の変更に失敗しました|event_id.iaas.nodegroup.update_k8s_node_taints.failed|
+|ノードグループの Kubernetes コンポーネント設定変更の開始|event_id.iaas.nodegroup.update_k8s_args.start|
+|ノードグループのKubernetesコンポーネント設定の変更が完了しました|event_id.iaas.nodegroup.update_k8s_args.end|
+|ノードグループのKubernetesコンポーネント設定の変更に失敗しました|event_id.iaas.nodegroup.update_k8s_args.failed|
 |CSR 承認|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 作成|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 削除|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -861,6 +870,7 @@
 |機密データの即時削除 (API)|event_id.skm.api.secrets.delete|
 |対称鍵の即時削除 (API)|event_id.skm.api.symmetric.delete|
 |非対称鍵の即時削除 (API)|event_id.skm.api.asymmetric.delete|
+|機密データの更新（API|event_id.skm.api.secrets.modify|
 
 ### Deploy
 
@@ -1387,6 +1397,8 @@
 | イベント | イベントID |
 | --- | --- |
 |Speech to Text変換リクエスト|event_id.speech.stt.convert|
+|Speech to Text Websocket接続|event_id.speech.stt.websocket_connect|
+|Speech to Text Websocket接続終了|event_id.speech.stt.websocket_disconnect|
 
 ### CloudTrail
 
@@ -1422,8 +1434,8 @@
 |有効性検査の使用|event_id.dataflow.settings.accessibility-checker.enable|
 |有効性検査の使用しない|event_id.dataflow.settings.accessibility-checker.disable|
 |フロードレイン後に終了|event_id.dataflow.flow.drain|
-|Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
-|Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
+|Log &amp; Crash Search保存設定の保存|event_id.dataflow.settings.lncs.save|
+|Log &amp; Crash Search保存設定の削除|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
@@ -2033,6 +2045,8 @@
 |080 수신거부 번호 개통 요청|event_id.notification_hub.unsubscribed_phone_number_request|
 |080 수신거부 번호 해지|event_id.notification_hub.unsubscribed_phone_number_delete|
 |080 수신거부 번호 해지 취소|event_id.notification_hub.unsubscribed_phone_number_cancel_deletion|
+|080 수신거부 외부 번호 등록|event_id.notification_hub.event_id.notification_hub.unsubscribe_phone_number_external_registered|
+|080 수신거부 외부 번호 해지|event_id.notification_hub.event_id.notification_hub.unsubscribe_phone_number_external_terminated|
 |플로우 수정|event_id.notification_hub.flow_modify|
 |플로우 삭제|event_id.notification_hub.flow_delete|
 |템플릿 수정|event_id.notification_hub.template_modify|
@@ -2071,6 +2085,15 @@
 |模擬訓練の作成|event_id.ddos_guard.mock_training_create|
 |模擬訓練の修正|event_id.ddos_guard.mock_training_modify|
 |模擬訓練の削除|event_id.ddos_guard.mock_training_delete|
+
+### EasyQueue
+
+| イベント | イベントID |
+| --- | --- |
+|トピック作成|event_id.easyqueue.topic.create|
+|トピック編集|event_id.easyqueue.topic.update|
+|トピック削除|event_id.easyqueue.topic.delete|
+|メッセージ送信|event_id.easyqueue.topic.send_messages|
 
 ### Cloud Access
 
@@ -2129,10 +2152,12 @@
 |関数のコピー|event_id.cloud_functions.function.copy|
 |関数の作成|event_id.cloud_functions.function.create|
 |関数の削除|event_id.cloud_functions.function.delete|
+|バージョンの配布|event_id.cloud_functions.function.deploy.version|
 |関数の修正|event_id.cloud_functions.function.update|
 |トリガーの作成|event_id.cloud_functions.trigger.create|
 |トリガーの削除|event_id.cloud_functions.trigger.delete|
 |トリガーの修正|event_id.cloud_functions.trigger.update|
+|バージョンの削除|event_id.cloud_functions.version.delete|
 
 ### Private CA
 
@@ -2222,4 +2247,38 @@
 |ユーザーグループを作成|event_id.rds_for_postgresql.USER_GROUP_CREATE|
 |ユーザーグループを削除|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |ユーザーグループを修正|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
+
+### Data Lake Storage
+
+| イベント | イベントID |
+| --- | --- |
+|ユーザー認証|event_id.datalakestorage.auth.authenticate|
+|認証情報検証|event_id.datalakestorage.auth.validate|
+|バケット作成|event_id.datalakestorage.bucket.create|
+|バケット削除|event_id.datalakestorage.bucket.delete|
+|バケット情報確認|event_id.datalakestorage.bucket.head|
+|バケット一覧取得|event_id.datalakestorage.bucket.list|
+|バケットタグ削除|event_id.datalakestorage.bucket.tagging.delete|
+|バケットタグ取得|event_id.datalakestorage.bucket.tagging.get|
+|バケットタグ設定|event_id.datalakestorage.bucket.tagging.update|
+|バケットバージョニング取得|event_id.datalakestorage.bucket.versioning.get|
+|バケットバージョニング設定|event_id.datalakestorage.bucket.versioning.update|
+|マルチパート中断|event_id.datalakestorage.multipart.abort|
+|マルチパート完了|event_id.datalakestorage.multipart.complete|
+|マルチパート開始|event_id.datalakestorage.multipart.create|
+|マルチパート一覧取得|event_id.datalakestorage.multipart.list|
+|パートコピー|event_id.datalakestorage.multipart.part.copy|
+|パート一覧取得|event_id.datalakestorage.multipart.part.list|
+|パートアップロード|event_id.datalakestorage.multipart.part.upload|
+|オブジェクトコピー|event_id.datalakestorage.object.copy|
+|オブジェクトアップロード|event_id.datalakestorage.object.create|
+|オブジェクト削除|event_id.datalakestorage.object.delete|
+|オブジェクト一括削除|event_id.datalakestorage.object.delete-multiple|
+|オブジェクト取得|event_id.datalakestorage.object.get|
+|オブジェクト情報確認|event_id.datalakestorage.object.head|
+|オブジェクト一覧取得|event_id.datalakestorage.object.list|
+|オブジェクト一覧取得V2|event_id.datalakestorage.object.list-v2|
+|オブジェクトタグ削除|event_id.datalakestorage.object.tagging.delete|
+|オブジェクトタグ取得|event_id.datalakestorage.object.tagging.get|
+|オブジェクトタグ設定|event_id.datalakestorage.object.tagging.update|
 

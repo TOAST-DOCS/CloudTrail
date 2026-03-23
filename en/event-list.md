@@ -358,6 +358,9 @@
 |event_id.iaas.port_route.create|event_id.iaas.port_route.create|
 |Delete Network Interface Route|event_id.iaas.port_route.delete|
 |Change Network Interface Route|event_id.iaas.port_route.update|
+|Create Network Interface Route Completed|event_id.iaas.port_route.create_end|
+|Delete Network Interface Route Completed|event_id.iaas.port_route.delete_end|
+|Change Network Interface Route Completed|event_id.iaas.port_route.update_end|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -465,6 +468,12 @@
 |Node scale-out Started|event_id.iaas.nodegroup.scale_out.start|
 |Node scale-out Completed|event_id.iaas.nodegroup.scale_out.end|
 |Node scale-out Failed|event_id.iaas.nodegroup.scale_out.failed|
+|Changing the node group Kubernetes Taint settings Start|event_id.iaas.nodegroup.update_k8s_node_taints.start|
+|Changing the node group Kubernetes Taint settings Complete|event_id.iaas.nodegroup.update_k8s_node_taints.end|
+|Changing the node group Kubernetes Taint settings Failed|event_id.iaas.nodegroup.update_k8s_node_taints.failed|
+|Changing Kubernetes component settings for a node group Start|event_id.iaas.nodegroup.update_k8s_args.start|
+|Changing Kubernetes component settings for a node group Complete|event_id.iaas.nodegroup.update_k8s_args.end|
+|Changing Kubernetes component settings for a node group Failed|event_id.iaas.nodegroup.update_k8s_args.failed|
 |Approve CSR|event_id.iaas.cluster.certificate_signing_request.approval|
 |Create CSR|event_id.iaas.cluster.certificate_signing_request.create|
 |Delete CSR|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -861,6 +870,7 @@
 |Immediately Delete Confidential Data (API)|event_id.skm.api.secrets.delete|
 |Immediately Delete Symmetric Key (API)|event_id.skm.api.symmetric.delete|
 |Immediately Delete Asymmetric Key (API)|event_id.skm.api.asymmetric.delete|
+|Modify Confidential Data (API)|event_id.skm.api.secrets.modify|
 
 ### Deploy
 
@@ -1387,6 +1397,8 @@
 | Event | Event ID |
 | --- | --- |
 |Request Speech to Text conversion|event_id.speech.stt.convert|
+|Speech to Text Websocket connected|event_id.speech.stt.websocket_connect|
+|Speech to Text Websocket disconnected|event_id.speech.stt.websocket_disconnect|
 
 ### CloudTrail
 
@@ -2033,6 +2045,8 @@
 |080 수신거부 번호 개통 요청|event_id.notification_hub.unsubscribed_phone_number_request|
 |080 수신거부 번호 해지|event_id.notification_hub.unsubscribed_phone_number_delete|
 |080 수신거부 번호 해지 취소|event_id.notification_hub.unsubscribed_phone_number_cancel_deletion|
+|080 수신거부 외부 번호 등록|event_id.notification_hub.event_id.notification_hub.unsubscribe_phone_number_external_registered|
+|080 수신거부 외부 번호 해지|event_id.notification_hub.event_id.notification_hub.unsubscribe_phone_number_external_terminated|
 |플로우 수정|event_id.notification_hub.flow_modify|
 |플로우 삭제|event_id.notification_hub.flow_delete|
 |템플릿 수정|event_id.notification_hub.template_modify|
@@ -2071,6 +2085,15 @@
 |Create Mock Training|event_id.ddos_guard.mock_training_create|
 |Modify Mock Training|event_id.ddos_guard.mock_training_modify|
 |Delete Mock Training|event_id.ddos_guard.mock_training_delete|
+
+### EasyQueue
+
+| Event | Event ID |
+| --- | --- |
+|Create Topic|event_id.easyqueue.topic.create|
+|Modify Topic|event_id.easyqueue.topic.update|
+|Delete Topic|event_id.easyqueue.topic.delete|
+|Send Message|event_id.easyqueue.topic.send_messages|
 
 ### Cloud Access
 
@@ -2129,10 +2152,12 @@
 |Copy Function|event_id.cloud_functions.function.copy|
 |Create Function|event_id.cloud_functions.function.create|
 |Delete Function|event_id.cloud_functions.function.delete|
+|Deploy Version|event_id.cloud_functions.function.deploy.version|
 |Update Function|event_id.cloud_functions.function.update|
 |Create Trigger|event_id.cloud_functions.trigger.create|
 |Delete Trigger|event_id.cloud_functions.trigger.delete|
 |Update Trigger|event_id.cloud_functions.trigger.update|
+|Delete Version|event_id.cloud_functions.version.delete|
 
 ### Private CA
 
@@ -2222,4 +2247,38 @@
 |Create User Group|event_id.rds_for_postgresql.USER_GROUP_CREATE|
 |Delete User Group|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |Modify User Group|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
+
+### Data Lake Storage
+
+| Event | Event ID |
+| --- | --- |
+|Authenticate User|event_id.datalakestorage.auth.authenticate|
+|Validate Credentials|event_id.datalakestorage.auth.validate|
+|Create Bucket|event_id.datalakestorage.bucket.create|
+|Delete Bucket|event_id.datalakestorage.bucket.delete|
+|Head Bucket|event_id.datalakestorage.bucket.head|
+|List Buckets|event_id.datalakestorage.bucket.list|
+|Delete Bucket Tagging|event_id.datalakestorage.bucket.tagging.delete|
+|Get Bucket Tagging|event_id.datalakestorage.bucket.tagging.get|
+|Put Bucket Tagging|event_id.datalakestorage.bucket.tagging.update|
+|Get Bucket Versioning|event_id.datalakestorage.bucket.versioning.get|
+|Put Bucket Versioning|event_id.datalakestorage.bucket.versioning.update|
+|Abort Multipart Upload|event_id.datalakestorage.multipart.abort|
+|Complete Multipart Upload|event_id.datalakestorage.multipart.complete|
+|Create Multipart Upload|event_id.datalakestorage.multipart.create|
+|List Multipart Uploads|event_id.datalakestorage.multipart.list|
+|Upload Part Copy|event_id.datalakestorage.multipart.part.copy|
+|List Parts|event_id.datalakestorage.multipart.part.list|
+|Upload Part|event_id.datalakestorage.multipart.part.upload|
+|Copy Object|event_id.datalakestorage.object.copy|
+|Put Object|event_id.datalakestorage.object.create|
+|Delete Object|event_id.datalakestorage.object.delete|
+|Delete Objects|event_id.datalakestorage.object.delete-multiple|
+|Get Object|event_id.datalakestorage.object.get|
+|Head Object|event_id.datalakestorage.object.head|
+|List Objects|event_id.datalakestorage.object.list|
+|List Objects V2|event_id.datalakestorage.object.list-v2|
+|Delete Object Tagging|event_id.datalakestorage.object.tagging.delete|
+|Get Object Tagging|event_id.datalakestorage.object.tagging.get|
+|Put Object Tagging|event_id.datalakestorage.object.tagging.update|
 
