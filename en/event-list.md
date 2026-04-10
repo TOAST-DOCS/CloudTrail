@@ -1,1364 +1,1368 @@
-## CloudTrail > List of Collected Events
+## CloudTrail > 収集されるイベントリスト
 
-### Console
+### コンソール
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Enable Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_activate|
-|Create Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_create|
-|Delete Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_delete|
-|Modify Custom Dashboard Notification|event_id.cloud_monitoring_organization.alarm_modify|
-|Copy Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_copy|
-|Create Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_create|
-|Delete Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_delete|
-|Display Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_exposure|
-|Modify Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_modify|
-|Enable Custom Dashboard Metrics Collection|event_id.cloud_monitoring_organization.service_manage_ment|
-|IAM Login|event_id.iam.login|
-|Change Authority for IAM Members|event_id.iam.member.role.update|
-|Add Organization Domain|event_id.org.domain.add|
-|Modify Organization Domain|event_id.org.domain.update|
-|Add Organization Member|event_id.org.iam.member.add|
-|Send Notification Mail to Organization Members to Change Password|event_id.org.iam.member.send_mail|
-|Modify Organization Member Information|event_id.org.iam.member.update|
-|Add Organization Member|event_id.org.member.add|
-|Delete Organization Member|event_id.org.member.delete|
-|Invite Organization Member|event_id.org.member.invite|
-|Cancel Organization Member Invitation|event_id.org.member.invite_cancel|
-|Modify Organization Member|event_id.org.member.update|
-|Disable Organization Service|event_id.org.product.disable|
-|Enable Organization Service|event_id.org.product.enable|
-|Modify Organization Information|event_id.org.update|
-|Access Organization|event_id.org.selected|
-|Access IAM Organization|event_id.iam.org.selected|
-|Create Project|event_id.project.create|
-|Delete Project|event_id.project.delete|
-|Add Project Member|event_id.project.member.add|
-|Delete Project Member (single)|event_id.project.member.delete|
-|Invite Project Member|event_id.project.member.invite|
-|Cancel Project Member Invitation|event_id.project.member.invite_cancel|
-|Modify Project Member Authority|event_id.project.member.update|
-|Delete Project Member (multiple)|event_id.project.members.delete|
-|Disable Project Service|event_id.project.product.disable|
-|Enable Project Service|event_id.project.product.enable|
-|Modify Project|event_id.project.update|
-|Access Project|event_id.project.selected|
-|Add Project Common Role Group|event_id.org.role_group.create|
-|Modify Project Common Role Group|event_id.org.role_group.update|
-|Delete Project Common Role Group|event_id.org.role_group.delete|
-|Add Role to Project Common Role Group|event_id.org.role_group.assign.roles|
-|Modify Roles in Project Common Role Group|event_id.org.role_group.modify.roles|
-|Delete Role from Project Common Role Group|event_id.org.role_group.remove.roles|
-|Add Role Group|event_id.project.role_group.create|
-|Modify Role Group|event_id.project.role_group.update|
-|Delete Role Group|event_id.project.role_group.delete|
-|Add Role to Role Group|event_id.project.role_group.assign.roles|
-|Add Role Group Member|event_id.project.role_group.members.add|
-|Delete Role Group Member|event_id.project.role_group.members.delete|
-|Modify Roles in Role Group|event_id.project.role_group.modify.roles|
-|Delete Role from Role Group|event_id.project.role_group.remove.roles|
-|Access IAM Project|event_id.iam.project.selected|
-|Add Budget|event_id.budget.create|
-|Modify Budget|event_id.budget.modify|
-|Delete Budget|event_id.budget.delete|
-|Change governance setting|event_id.governance.change|
-|Delete the service support team|event_id.supporter.delete|
-|Invite service support team|event_id.supporter.add|
-|Apply for Marketplace|event_id.market_place.apply|
-|Cancel Applying for Marketplace|event_id.market_place.apply-cancel|
-|Apply for Marketplace Cancellation|event_id.market_place.termination-apply|
-|Cancel Applying for Marketplace Cancellation|event_id.market_place.termination-apply-cancel|
-|Create Notification Receiver Group in Organization|event_id.org.alarm_group.create|
-|Modify Notification Receiver Group in Organization|event_id.org.alarm_group.update|
-|Delete Notification Receiver Group in Organization|event_id.org.alarm_group.delete|
-|Create Notification Receiver Group in Project|event_id.project.alarm_group.create|
-|Modify Notification Receiver Group in Project|event_id.project.alarm_group.update|
-|Delete Notification Receiver Group in Project|event_id.project.alarm_group.delete|
+|カスタムダッシュボード通知使用設定|event_id.cloud_monitoring_organization.alarm_activate|
+|カスタムダッシュボード通知作成|event_id.cloud_monitoring_organization.alarm_create|
+|カスタムダッシュボード通知削除|event_id.cloud_monitoring_organization.alarm_delete|
+|カスタムダッシュボード通知修正|event_id.cloud_monitoring_organization.alarm_modify|
+|カスタムダッシュボードの複製|event_id.cloud_monitoring_organization.dashboard_copy|
+|カスタムダッシュボードの作成|event_id.cloud_monitoring_organization.dashboard_create|
+|カスタムダッシュボードの削除|event_id.cloud_monitoring_organization.dashboard_delete|
+|カスタムダッシュボード表示設定|event_id.cloud_monitoring_organization.dashboard_exposure|
+|カスタムダッシュボードの修正|event_id.cloud_monitoring_organization.dashboard_modify|
+|カスタムダッシュボードの指標収集設定|event_id.cloud_monitoring_organization.service_manage_ment|
+|IAM ログイン|event_id.iam.login|
+|組織メンバーのIaaS APIパスワードをリセット|event_id.org.member.iam.iaas_api_password.reset|
+|組織メンバーのUser Access Keyを無効化|event_id.org.member.iam.user_access_key.stop|
+|組織メンバーのトークンを一括で有効期限切れに設定|event_id.org.member.iam.user_token.expire|
+|プロジェクトメンバーのS3 API認証情報を削除|event_id.project.member.iam.s3_api_credential.delete|
+|IAMメンバーの権限変更|event_id.iam.member.role.update|
+|組織ドメインの追加|event_id.org.domain.add|
+|組織ドメインの修正|event_id.org.domain.update|
+|組織内部会員の追加|event_id.org.iam.member.add|
+|組織内部会員パスワードの変更告知メール送信|event_id.org.iam.member.send_mail|
+|組織内部会員情報の修正|event_id.org.iam.member.update|
+|組織メンバーの追加|event_id.org.member.add|
+|組織メンバーの削除|event_id.org.member.delete|
+|組織メンバーの招待|event_id.org.member.invite|
+|組織メンバーの招待キャンセル|event_id.org.member.invite_cancel|
+|組織メンバーの修正|event_id.org.member.update|
+|組織サービスの無効化|event_id.org.product.disable|
+|組織サービスの有効化|event_id.org.product.enable|
+|組織情報の修正|event_id.org.update|
+|組織 アクセス|event_id.org.selected|
+|IAM組織 アクセス|event_id.iam.org.selected|
+|プロジェクトの作成|event_id.project.create|
+|プロジェクトの削除|event_id.project.delete|
+|プロジェクトメンバーの追加|event_id.project.member.add|
+|プロジェクトメンバーの削除(1件)|event_id.project.member.delete|
+|プロジェクトメンバーの招待|event_id.project.member.invite|
+|プロジェクトメンバーの招待キャンセル|event_id.project.member.invite_cancel|
+|プロジェクトメンバーの権限修正|event_id.project.member.update|
+|プロジェクトメンバーの削除(複数件)|event_id.project.members.delete|
+|プロジェクトサービスの無効化|event_id.project.product.disable|
+|プロジェクトサービスの有効化|event_id.project.product.enable|
+|プロジェクトの修正|event_id.project.update|
+|プロジェクト アクセス|event_id.project.selected|
+|プロジェクト共通ロールグループ追加|event_id.org.role_group.create|
+|プロジェクト共通ロールグループ修正|event_id.org.role_group.update|
+|プロジェクト共通ロールグループ削除|event_id.org.role_group.delete|
+|プロジェクト共通ロールグループロール追加|event_id.org.role_group.assign.roles|
+|プロジェクト共通ロールグループのロールを修正|event_id.org.role_group.modify.roles|
+|プロジェクト共通ロールグループロール削除|event_id.org.role_group.remove.roles|
+|ロールグループ追加|event_id.project.role_group.create|
+|ロールグループ修正|event_id.project.role_group.update|
+|ロールグループ削除|event_id.project.role_group.delete|
+|ロールグループロール追加|event_id.project.role_group.assign.roles|
+|ロールグループのメンバー追加|event_id.project.role_group.members.add|
+|ロールグループのメンバー削除|event_id.project.role_group.members.delete|
+|ロールグループのロールを修正|event_id.project.role_group.modify.roles|
+|ロールグループロール削除|event_id.project.role_group.remove.roles|
+|IAMプロジェクト アクセス|event_id.iam.project.selected|
+|予算追加|event_id.budget.create|
+|予算修正|event_id.budget.modify|
+|予算削除|event_id.budget.delete|
+|ガバナンス設定変更|event_id.governance.change|
+|サービスサポートチームを削除する|event_id.supporter.delete|
+|サービスサポートチームを招待する|event_id.supporter.add|
+|マーケットプレイス申請|event_id.market_place.apply|
+|マーケットプレイス申請キャンセル|event_id.market_place.apply-cancel|
+|マーケットプレイス解約申請|event_id.market_place.termination-apply|
+|マーケットプレイス解約申請ャンセル|event_id.market_place.termination-apply-cancel|
+|組織通知受信グループの作成|event_id.org.alarm_group.create|
+|組織通知受信グループの修正|event_id.org.alarm_group.update|
+|組織通知受信グループの削除|event_id.org.alarm_group.delete|
+|プロジェクト通知受信グループの作成|event_id.project.alarm_group.create|
+|プロジェクト通知受信グループの修正|event_id.project.alarm_group.update|
+|プロジェクト通知受信グループの削除|event_id.project.alarm_group.delete|
 |조직 알림 수신 대상 수정|event_id.org.system_notification.receivers.update|
 |조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
 |프로젝트 알림 수신 대상 설정|event_id.project.system_notification.receivers.update|
 |프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
-|Add Organization Role Group|event_id.org.org_role_group.create|
-|Modify Organization Role Group|event_id.org.org_role_group.update|
-|Delete Organization Role Group|event_id.org.org_role_group.delete|
-|Modify Organization Role Group&#39;s Role|event_id.org.org_role_group.modify.roles|
-|Add Organization Role Group Member|event_id.org.org_role_group.members.add|
-|Delete Organization Role Group Member|event_id.org.org_role_group.members.delete|
+|組織ロールグループの追加|event_id.org.org_role_group.create|
+|組織ロールグループの修正|event_id.org.org_role_group.update|
+|組織ロールグループの削除|event_id.org.org_role_group.delete|
+|組織ロールグループのロール修正|event_id.org.org_role_group.modify.roles|
+|組織ロールグループのメンバー追加|event_id.org.org_role_group.members.add|
+|組織ロールグループのメンバー削除|event_id.org.org_role_group.members.delete|
 
-### Default Infrastructure Service
+### 基本インフラサービス
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Instance|event_id.iaas.instance.create|
-|Create Instance Completed|event_id.iaas.instance.create_end|
-|Delete Instance|event_id.iaas.instance.delete|
-|Delete Instance Completed|event_id.iaas.instance.delete_end|
-|Change Instance Information|event_id.iaas.instance.update|
-|Reboot Instance|event_id.iaas.instance_action.reboot|
-|Reboot Instance Completed|event_id.iaas.instance_action.reboot_end|
-|Change Instance Type|event_id.iaas.instance_action.resize|
-|Change Instance Type Completed|event_id.iaas.instance_action.resize_end|
-|Take Console Screenshot|event_id.iaas.instance_action.screenshot|
-|Terminate Instance|event_id.iaas.instance_action.shelve|
-|Terminate Instance Completed|event_id.iaas.instance_action.shelve_end|
-|Start Stopped Instance|event_id.iaas.instance_action.start|
-|Start Stopped Instance Completed|event_id.iaas.instance_action.start_end|
-|Stop Instance|event_id.iaas.instance_action.stop|
-|Stop Instance Completed|event_id.iaas.instance_action.stop_end|
-|Start Terminated Instance|event_id.iaas.instance_action.unshelve|
-|Start Terminated Instance Completed|event_id.iaas.instance_action.unshelve_end|
-|Change Instance Key Pair|event_id.iaas.instance_action.reset_keypair|
-|Create Instance Template|event_id.iaas.instance_template.create|
-|Delete Instance Template|event_id.iaas.instance_template.delete|
-|Change Instance Template OWNER|event_id.iaas.instance_template.handover|
-|Change Instance Template|event_id.iaas.instance_template.update|
-|Create Instance Metadata|event_id.iaas.metadata.create|
-|Delete Instance Metadata|event_id.iaas.metadata.delete|
-|Change Instance Metadata|event_id.iaas.metadata.update|
-|Attach Instance Network Interface|event_id.iaas.interface.create|
-|Detach Instance Network Interface|event_id.iaas.interface.delete|
-|Create Keypair|event_id.iaas.keypair.create|
-|Delete Keypair|event_id.iaas.keypair.delete|
-|Create Placement Policy|event_id.iaas.servergroup.create|
-|Delete Placement Policy|event_id.iaas.servergroup.delete|
-|Serial Console Connection|event_id.iaas.serial_console.connect|
-|Serial Console Connection Completed|event_id.iaas.serial_console.connect_end|
-|Serial Console Connection Ended|event_id.iaas.serial_console.disconnect_end|
-|Copy Image|event_id.iaas.image.copy|
-|Create Image|event_id.iaas.image.create|
-|Create Image Completed|event_id.iaas.image.create_end|
-|Create Image ID|event_id.iaas.image.create_id|
-|Create Image Failed|event_id.iaas.image.create_failed|
-|Delete Image|event_id.iaas.image.delete|
-|Delete Image Completed|event_id.iaas.image.delete_end|
-|Modify Image|event_id.iaas.image.update|
-|Modify Image Completed|event_id.iaas.image.update_end|
-|Upload Image|event_id.iaas.image.upload|
-|Create Image Sharing|event_id.iaas.image_member.create|
-|Delete Image Sharing|event_id.iaas.image_member.delete|
-|Build Image|event_id.iaas.image_template.build|
-|Cancel Image Build|event_id.iaas.image_template.cancel_build|
-|Create Image Template|event_id.iaas.image_template.create|
-|Delete Image Template|event_id.iaas.image_template.delete|
-|Modify Image Template|event_id.iaas.image_template.update|
-|Create Block Storage|event_id.iaas.volume.create|
-|Create Block Storage Completed|event_id.iaas.volume.create_end|
-|Delete Block Storage|event_id.iaas.volume.delete|
-|Delete Block Storage Completed|event_id.iaas.volume.delete_end|
-|Modify Block Storage|event_id.iaas.volume.update|
-|Modify Block Storage Completed|event_id.iaas.volume.update_end|
-|Replicate Block Storage|event_id.iaas.volume.copy|
-|Replicate Block Storage Completed|event_id.iaas.volume.copy_end|
-|Attach Instance Block Storage|event_id.iaas.volume.attach|
-|Attach Instance Block Storage Completed|event_id.iaas.volume.attach_end|
-|Detach Instance Block Storage|event_id.iaas.volume.detach|
-|Detach Instance Block Storage Completed|event_id.iaas.volume.detach_end|
-|Change Block Storage Size|event_id.iaas.volume.extend|
-|Move Block Storage|event_id.iaas.volume.transfer|
-|Move Block Storage Completed (Target)|event_id.iaas.volume.transfer_accept|
-|Move Block Storage Completed (Source)|event_id.iaas.volume.transfer_create|
-|Create Block Storage Snapshot|event_id.iaas.snapshot.create|
-|Create Block Storage Snapshot Completed|event_id.iaas.snapshot.create_end|
-|Delete Block Storage Snapshot|event_id.iaas.snapshot.delete|
-|Delete Block Storage Snapshot Completed|event_id.iaas.snapshot.delete_end|
-|Create Schedule for Scaling Group|event_id.iaas.autoscale_schedule.create|
-|Delete Schedule for Scaling Group|event_id.iaas.autoscale_schedule.delete|
-|Change Scheduled Task OWNER Of Scaling Group|event_id.iaas.autoscale_schedule.handover|
-|Create Scaling Group|event_id.iaas.scaling_group.create|
-|Delete Scaling Group|event_id.iaas.scaling_group.delete|
-|Change Scaling Group OWNER|event_id.iaas.scaling_group.handover|
-|Change Scaling Group|event_id.iaas.scaling_group.update|
-|Create S3 API Credentials|event_id.iaas.s3credential.create|
-|Delete S3 API Credentials|event_id.iaas.s3credential.delete|
-|Change API Password|event_id.iaas.identity.password_change|
-|Create VPC|event_id.iaas.vpc.create|
-|Delete VPC|event_id.iaas.vpc.delete|
-|Change VPC Information|event_id.iaas.vpc.update|
-|Create VPC Completed|event_id.iaas.vpc.create_end|
-|Delete VPC Completed|event_id.iaas.vpc.delete_end|
-|Change VPC Information Completed|event_id.iaas.vpc.update_end|
-|Create VPC Subnet|event_id.iaas.vpc_subnet.create|
-|Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
-|Change VPC Subnet|event_id.iaas.vpc_subnet.update|
-|Connect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.attach_routingtable|
-|Disconnect Routing Table over VPC Subnet|event_id.iaas.vpc_subnet.detach_routingtable|
-|Create Subnet Static Route|event_id.iaas.vpc_subnet_route.create|
-|Delete Subnet Static Route|event_id.iaas.vpc_subnet_route.delete|
-|Create Network Interface|event_id.iaas.port.create|
-|Create Network Interface Completed|event_id.iaas.port.create_end|
-|Change Network Interface|event_id.iaas.port.update|
-|Delete Network Interface|event_id.iaas.port.delete|
-|Delete Network Interface Completed|event_id.iaas.port.delete_end|
-|Create Routing Table|event_id.iaas.routing_table.create|
-|Delete Routing Table|event_id.iaas.routing_table.delete|
-|Change Routing Table|event_id.iaas.routing_table.update|
-|Connect Routing Table over Internet Gateway|event_id.iaas.routing_table.attach_gateway|
-|Disconnect Routing Table over Internet Gateway|event_id.iaas.routing_table.detach_gateway|
-|Set Default Routing Table|event_id.iaas.routing_table.set_as_default|
-|Create Route in Routing Table|event_id.iaas.route.create|
-|Change Route in Routing Table|event_id.iaas.route.update|
-|Delete Route in Routing Table|event_id.iaas.route.delete|
-|Create Floating IP|event_id.iaas.floating_ip.create|
-|Delete Floating IP|event_id.iaas.floating_ip.delete|
-|Associate Instance Floating IP|event_id.iaas.floating_ip.attach|
-|Disassociate Instance Floating IP|event_id.iaas.floating_ip.detach|
-|Create Floating IP Completed|event_id.iaas.floating_ip.create_end|
-|Update Floating IP Completed|event_id.iaas.floating_ip.update_end|
-|Delete Floating IP Completed|event_id.iaas.floating_ip.delete_end|
-|Create NetworkACL|event_id.iaas.networkacl.create|
-|Delete NetworkACL|event_id.iaas.networkacl.delete|
-|Update NetworkACL|event_id.iaas.networkacl.update|
-|Create NetworkACL Rule|event_id.iaas.networkacl_rule.create|
-|Delete NetworkACL Rule|event_id.iaas.networkacl_rule.delete|
-|Update NetworkACL Rule|event_id.iaas.networkacl_rule.update|
-|Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
-|Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
-|Create Security Group|event_id.iaas.security_group.create|
-|Delete Security Group|event_id.iaas.security_group.delete|
-|Change Security Group|event_id.iaas.security_group.update|
-|Create Security Rule|event_id.iaas.security_group_rule.create|
-|Delete Security Rule|event_id.iaas.security_group_rule.delete|
-|Create Security Group Completed|event_id.iaas.security_group.create_end|
-|Delete Security Group Completed|event_id.iaas.security_group.delete_end|
-|Change Security Group Completed|event_id.iaas.security_group.update_end|
-|Create Security Rule Completed|event_id.iaas.security_group_rule.create_end|
-|Delete Security Rule Completed|event_id.iaas.security_group_rule.delete_end|
-|Create Load Balancer|event_id.iaas.loadbalancer.create|
-|Delete Load Balancer|event_id.iaas.loadbalancer.delete|
-|Change Load Balancer Information|event_id.iaas.loadbalancer.update|
-|Create Load Balancer Listener|event_id.iaas.loadbalancer_listener.create|
-|Delete Load Balancer Listener|event_id.iaas.loadbalancer_listener.delete|
-|Change Load Balancer Listener|event_id.iaas.loadbalancer_listener.update|
-|Create Load Balancer Member Group (Pool)|event_id.iaas.loadbalancer_pool.create|
-|Delete Load Balancer Member Group (Pool)|event_id.iaas.loadbalancer_pool.delete|
-|Change Load Balancer Member Group (Pool)|event_id.iaas.loadbalancer_pool.update|
-|Create Load Balancer Health Monitor|event_id.iaas.loadbalancer_healthmonitor.create|
-|Change Load Balancer Health Monitor|event_id.iaas.loadbalancer_healthmonitor.update|
-|Delete Load Balancer Health Monitor|event_id.iaas.loadbalancer_healthmonitor.delete|
-|Attach Load Balancer Instance|event_id.iaas.loadbalancer_member.create|
-|Detach Load Balancer Instance|event_id.iaas.loadbalancer_member.delete|
-|Change Status of Load Balancer Instance|event_id.iaas.loadbalancer_member.update|
-|Create Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.create|
-|Delete Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.delete|
-|Modify Load Balancer L7 Policy|event_id.iaas.loadbalancer_l7policy.update|
-|Create Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.create|
-|Delete Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.delete|
-|Modify Load Balancer L7 Rule|event_id.iaas.loadbalancer_l7rule.update|
-|Create Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.create|
-|Delete Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.delete|
-|Modify Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.update|
-|Create Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.create|
-|Delete Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.delete|
-|Modify Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.update|
-|Apply Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.bind|
-|Create Load Balancer Completed|event_id.iaas.loadbalancer.create_end|
-|Delete Load Balancer Completed|event_id.iaas.loadbalancer.delete_end|
-|Change Load Balancer Information Completed|event_id.iaas.loadbalancer.update_end|
-|Create Transit Hub|event_id.iaas.transit_hub.create|
-|Delete Transit Hub|event_id.iaas.transit_hub.delete|
-|Modify Transit Hub|event_id.iaas.transit_hub.update|
-|Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|
-|Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|
-|Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|
-|Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|
-|Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|
-|Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|
-|Create Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.create|
-|Delete Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.delete|
-|Modify Transit Hub Routing Table|event_id.iaas.transit_hub_routing_table.update|
-|Create Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.create|
-|Delete Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.delete|
-|Modify Transit Hub Routing Association|event_id.iaas.transit_hub_routing_association.update|
-|Create Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.create|
-|Delete Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.delete|
-|Modify Transit Hub Routing Propagation|event_id.iaas.transit_hub_routing_propagation.update|
-|Create Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.create|
-|Delete Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.delete|
-|Modify Transit Hub Routing Rule|event_id.iaas.transit_hub_routing_rule.update|
-|Create Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.create|
-|Delete Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.delete|
-|Modify Transit Hub Multicast Domain|event_id.iaas.transit_hub_multicast_domain.update|
-|Create Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.create|
-|Delete Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.delete|
-|Modify Transit Hub Multicast Association|event_id.iaas.transit_hub_multicast_association.update|
-|Create Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.create|
-|Delete Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.delete|
-|Modify Transit Hub Multicast Group|event_id.iaas.transit_hub_multicast_group.update|
-|Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
-|Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
-|Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|Create Transit Hub Completed|event_id.iaas.transit_hub.create_end|
-|Delete Transit Hub Completed|event_id.iaas.transit_hub.delete_end|
-|Modify Transit Hub Completed|event_id.iaas.transit_hub.update_end|
-|Create Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.create_end|
-|Delete Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.delete_end|
-|Modify Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.update_end|
-|Create Internet Gateway|event_id.iaas.internet_gateway.create|
-|Delete Internet Gateway|event_id.iaas.internet_gateway.delete|
-|Create VPC Peering|event_id.iaas.peering.create|
-|Delete VPC Peering|event_id.iaas.peering.delete|
-|Create Region Peering|event_id.iaas.region_peering.create|
-|Delete Region Peering|event_id.iaas.region_peering.delete|
-|Change Region Peering|event_id.iaas.region_peering.update|
-|Create Project Peering|event_id.iaas.project_peering.create|
-|Delete Project Peering|event_id.iaas.project_peering.delete|
-|Change Project Peering|event_id.iaas.project_peering.update|
-|Create Peering Allow List|event_id.iaas.peering_allow_project.create|
-|Delete Peering Allow List|event_id.iaas.peering_allow_project.delete|
-|Change Peering Allow List|event_id.iaas.peering_allow_project.update|
-|Create NAT Gateway|event_id.iaas.nat_gateway.create|
-|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
-|Change NAT Gateway|event_id.iaas.nat_gateway.update|
-|Create NAT Gateway Completed|event_id.iaas.nat_gateway.create_end|
-|Delete NAT Gateway Completed|event_id.iaas.nat_gateway.delete_end|
-|Change NAT Gateway Completed|event_id.iaas.nat_gateway.update_end|
-|Create VPNGW|event_id.iaas.vpngw.create|
-|Delete VPNGW|event_id.iaas.vpngw.delete|
-|Update VPNGW|event_id.iaas.vpngw.update|
-|Create VPN Connection|event_id.iaas.vpn_connection.create|
-|Delete VPN Connection|event_id.iaas.vpn_connection.delete|
-|Update VPN Connection|event_id.iaas.vpn_connection.update|
-|Create VPNGW v2|event_id.iaas.vpngw_v2.create|
-|Delete VPNGW v2|event_id.iaas.vpngw_v2.delete|
-|Update VPNGW v2|event_id.iaas.vpngw_v2.update|
-|Create VPN Connection v2|event_id.iaas.vpn_connection_v2.create|
-|Delete VPN Connection v2|event_id.iaas.vpn_connection_v2.delete|
-|Update VPN Connection v2|event_id.iaas.vpn_connection_v2.update|
-|Create Service Gateway|event_id.iaas.service_gateway.create|
-|Delete Service Gateway|event_id.iaas.service_gateway.delete|
-|Change Service Gateway|event_id.iaas.service_gateway.update|
-|Create Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.create|
-|Delete Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.delete|
-|Change Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.update|
-|Create Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.create|
-|Delete Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.delete|
-|Change Traffic Mirroring Filter Group|event_id.iaas.traffic_mirroring.filter_group.update|
-|Create Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.create|
-|Delete Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.delete|
-|Change Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.update|
-|Create Private DNS Zone|event_id.iaas.privatedns.zone.create|
-|Delete Private DNS Zone|event_id.iaas.privatedns.zone.delete|
-|Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|
-|Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create|
-|Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|
-|Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
-|Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|
-|Create Private DNS Zone Completed|event_id.iaas.private_dns.zone.create_end|
-|Delete Private DNS Zone Completed|event_id.iaas.private_dns.zone.delete_end|
-|Modify Private DNS Zone Completed|event_id.iaas.private_dns.zone.update_end|
-|Create Flow Log Logger|event_id.iaas.flowlog_logger.create|
-|Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
-|Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
-|Create Flow Log Logger Completed|event_id.iaas.flowlog_logger.create_end|
-|Create Flow Log Storage|event_id.iaas.flowlog_storage.create|
-|Delete Flow Log Logger Completed|event_id.iaas.flowlog_logger.delete_end|
-|Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
-|Modify Flow Log Logger Completed|event_id.iaas.flowlog_logger.update_end|
-|Modify Flow Log Storage|event_id.iaas.flowlog_storage.update|
-|event_id.iaas.port_route.create|event_id.iaas.port_route.create|
-|Delete Network Interface Route|event_id.iaas.port_route.delete|
-|Change Network Interface Route|event_id.iaas.port_route.update|
-|Create Network Interface Route Completed|event_id.iaas.port_route.create_end|
-|Delete Network Interface Route Completed|event_id.iaas.port_route.delete_end|
-|Change Network Interface Route Completed|event_id.iaas.port_route.update_end|
-|Create Cluster Completed|event_id.iaas.cluster.create.end|
-|Create Cluster Failed|event_id.iaas.cluster.create.failed|
-|Create Cluster Started|event_id.iaas.cluster.create.start|
-|Delete Cluster Completed|event_id.iaas.cluster.delete.end|
-|Delete Cluster Failed|event_id.iaas.cluster.delete.failed|
-|Delete Cluster Started|event_id.iaas.cluster.delete.start|
-|Change Cluster OWNER Completed|event_id.iaas.cluster.handover.end|
-|Change Cluster OWNER Failed|event_id.iaas.cluster.handover.failed|
-|Change Cluster OWNER Started|event_id.iaas.cluster.handover.start|
-|Resize Cluster Completed|event_id.iaas.cluster.resize.end|
-|Resize Cluster Failed|event_id.iaas.cluster.resize.failed|
-|Resize Cluster Started|event_id.iaas.cluster.resize.start|
-|Change operational state Completed|event_id.iaas.cluster.resume.end|
-|Change operational state Failed|event_id.iaas.cluster.resume.failed|
-|Change operational state Started|event_id.iaas.cluster.resume.start|
-|Change CNI Completed|event_id.iaas.cluster.cni_update.end|
-|Change CNI Failed|event_id.iaas.cluster.cni_update.failed|
-|Change CNI Started|event_id.iaas.cluster.cni_update.start|
-|Update Cluster API endpoint IP ACL Completed|event_id.iaas.cluster.api_ep_ipacl_update.end|
-|Update Cluster API endpoint IP ACL Failed|event_id.iaas.cluster.api_ep_ipacl_update.failed|
-|Update Cluster API endpoint IP ACL Started|event_id.iaas.cluster.api_ep_ipacl_update.start|
-|Change SGW Completed|event_id.iaas.cluster.update_sgw.end|
-|Change SGW Failed|event_id.iaas.cluster.update_sgw.failed|
-|Change SGW Started|event_id.iaas.cluster.update_sgw.start|
-|Rotate Certificate Completed|event_id.iaas.cluster.cluster_rotate_certificate.end|
-|Rotate Certificate Failed|event_id.iaas.cluster.cluster_rotate_certificate.failed|
-|Rotate Certificate Started|event_id.iaas.cluster.cluster_rotate_certificate.start|
-|Detected K8S APISERVER Issue|event_id.iaas.cluster.k8s_api_not_working.detected|
-|Resolved K8S APISERVER Issue|event_id.iaas.cluster.k8s_api_not_working.resolved|
-|Detected all node stop|event_id.iaas.cluster.all_nodes_not_ready.detected|
-|Resolved all node stop|event_id.iaas.cluster.all_nodes_not_ready.resolved|
-|Detected autohealing|event_id.iaas.cluster.auto_healing.detected|
-|NKS registry update completed|event_id.iaas.cluster.update_nks_registry.end|
-|NKS registry update failed|event_id.iaas.cluster.update_nks_registry.fail|
-|NKS registry update started|event_id.iaas.cluster.update_nks_registry.start|
-|K8S Audent Update Started|event_id.iaas.cluster.update_k8s_args.start|
-|K8S Audent Update Completed|event_id.iaas.cluster.update_k8s_args.end|
-|K8S Audent Update Failed|event_id.iaas.cluster.update_k8s_args.failed|
-|OIDC Audent Update Started|event_id.iaas.cluster.update_oidc_args.start|
-|OIDC Audent Update Completed|event_id.iaas.cluster.update_oidc_args.end|
-|OIDC Audent Update Failed|event_id.iaas.cluster.update_oidc_args.failed|
-|Keypair Update Started|event_id.iaas.cluster.update_vm_auth_key.start|
-|Keypair Update Completed|event_id.iaas.cluster.update_vm_auth_key.end|
-|Keypair Update Failed|event_id.iaas.cluster.update_vm_auth_key.failed|
-|Control plane log collection update Started|event_id.iaas.cluster.update_control_plane_log.start|
-|Control plane log collection update Completed|event_id.iaas.cluster.update_control_plane_log.end|
-|Control plane log collection update Failed|event_id.iaas.cluster.update_control_plane_log.failed|
-|Addon removal Started|event_id.iaas.cluster.uninstall_addon.start|
-|Addon removal Completed|event_id.iaas.cluster.uninstall_addon.end|
-|Addon removal Failed|event_id.iaas.cluster.uninstall_addon.failed|
-|Addon installation Started|event_id.iaas.cluster.install_addon.start|
-|Addon installation Completed|event_id.iaas.cluster.install_addon.end|
-|Addon installation Failed|event_id.iaas.cluster.install_addon.failed|
-|Addon update Started|event_id.iaas.cluster.update_addon.start|
-|Addon update Completed|event_id.iaas.cluster.update_addon.end|
-|Addon update Failed|event_id.iaas.cluster.update_addon.failed|
-|Create Node Group Completed|event_id.iaas.nodegroup.create.end|
-|Create Node Group Failed|event_id.iaas.nodegroup.create.failed|
-|Create Node Group Started|event_id.iaas.nodegroup.create.start|
-|Delete Node Group Completed|event_id.iaas.nodegroup.delete.end|
-|Delete Node Group Failed|event_id.iaas.nodegroup.delete.failed|
-|Delete Node Group Started|event_id.iaas.nodegroup.delete.start|
-|Start Worker Node Completed|event_id.iaas.nodegroup.node_action.start_node.end|
-|Start Worker Node Failed|event_id.iaas.nodegroup.node_action.start_node.failed|
-|Start Worker Node Started|event_id.iaas.nodegroup.node_action.start_node.start|
-|Stop Worker Node Completed|event_id.iaas.nodegroup.node_action.stop_node.end|
-|Stop Worker Node Failed|event_id.iaas.nodegroup.node_action.stop_node.failed|
-|Stop Worker Node Started|event_id.iaas.nodegroup.node_action.stop_node.start|
-|Change Autoscaler Settings Completed|event_id.iaas.nodegroup.set_cluster_autoscaler.end|
-|Change Autoscaler Settings Failed|event_id.iaas.nodegroup.set_cluster_autoscaler.failed|
-|Change Autoscaler Settings Started|event_id.iaas.nodegroup.set_cluster_autoscaler.start|
-|Change Instance Type Completed|event_id.iaas.nodegroup.update_flavor.end|
-|Change Instance Type Failed|event_id.iaas.nodegroup.update_flavor.failed|
-|Change Instance Type Started|event_id.iaas.nodegroup.update_flavor.start|
-|Change User Script Completed|event_id.iaas.nodegroup.update_userscript.end|
-|Change User Script Failed|event_id.iaas.nodegroup.update_userscript.failed|
-|Change User Script Started|event_id.iaas.nodegroup.update_userscript.start|
-|Upgrade Node Group Completed|event_id.iaas.nodegroup.upgrade.end|
-|Upgrade Node Group Failed|event_id.iaas.nodegroup.upgrade.failed|
-|Upgrade Node Group Started|event_id.iaas.nodegroup.upgrade.start|
-|Additional block storage update completed|event_id.iaas.nodegroup.update_extra_volume.end|
-|Additional block storage update failed|event_id.iaas.nodegroup.update_extra_volume.fail|
-|Additional block storage update started|event_id.iaas.nodegroup.update_extra_volume.start|
-|Additional security group update completed|event_id.iaas.nodegroup.update_extra_security_group.end|
-|Additional security group update failed|event_id.iaas.nodegroup.update_extra_security_group.fail|
-|Additional security group update started|event_id.iaas.nodegroup.update_extra_security_group.start|
-|Metric-based autoscaler configuration for node group Started|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
-|Metric-based autoscaler configuration for node group Completed|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
-|Metric-based autoscaler configuration for node group Failed|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
-|Node group scale-out by metric-based autoscaler Started|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
-|Node group scale-out by metric-based autoscaler Completed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
-|Node group scale-out by metric-based autoscaler Failed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
-|Node group scale-in by metric-based autoscaler Started|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
-|Node group scale-in by metric-based autoscaler Completed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
-|Node group scale-in by metric-based autoscaler Failed|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
-|Kubernetes node label change in node group Started|event_id.iaas.nodegroup.update_k8s_node_labels.start|
-|Kubernetes node label change in node group Completed|event_id.iaas.nodegroup.update_k8s_node_labels.end|
-|Kubernetes node label change in node group Failed|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
-|Floating IP auto-assignment change Started|event_id.iaas.nodegroup.update_fip_auto_bind.start|
-|Floating IP auto-assignment change Completed|event_id.iaas.nodegroup.update_fip_auto_bind.end|
-|Floating IP auto-assignment change Failed|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
-|Node scale-in Started|event_id.iaas.nodegroup.scale_in.start|
-|Node scale-in Completed|event_id.iaas.nodegroup.scale_in.end|
-|Node scale-in Failed|event_id.iaas.nodegroup.scale_in.failed|
-|Node scale-out Started|event_id.iaas.nodegroup.scale_out.start|
-|Node scale-out Completed|event_id.iaas.nodegroup.scale_out.end|
-|Node scale-out Failed|event_id.iaas.nodegroup.scale_out.failed|
-|Changing the node group Kubernetes Taint settings Start|event_id.iaas.nodegroup.update_k8s_node_taints.start|
-|Changing the node group Kubernetes Taint settings Complete|event_id.iaas.nodegroup.update_k8s_node_taints.end|
-|Changing the node group Kubernetes Taint settings Failed|event_id.iaas.nodegroup.update_k8s_node_taints.failed|
-|Changing Kubernetes component settings for a node group Start|event_id.iaas.nodegroup.update_k8s_args.start|
-|Changing Kubernetes component settings for a node group Complete|event_id.iaas.nodegroup.update_k8s_args.end|
-|Changing Kubernetes component settings for a node group Failed|event_id.iaas.nodegroup.update_k8s_args.failed|
-|Approve CSR|event_id.iaas.cluster.certificate_signing_request.approval|
-|Create CSR|event_id.iaas.cluster.certificate_signing_request.create|
-|Delete CSR|event_id.iaas.cluster.certificate_signing_request.delete|
-|Update CSR|event_id.iaas.cluster.certificate_signing_request.update|
-|Create Cluster Role|event_id.iaas.cluster.cluster_role.create|
-|Delete Cluster Role|event_id.iaas.cluster.cluster_role.delete|
-|Update Cluster Role|event_id.iaas.cluster.cluster_role.update|
-|Create Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.create|
-|Delete Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.delete|
-|Update Cluster Role Binding|event_id.iaas.cluster.cluster_role_binding.update|
-|Create Configmap|event_id.iaas.cluster.configmap.create|
-|Delete Configmap|event_id.iaas.cluster.configmap.delete|
-|Update Configmap|event_id.iaas.cluster.configmap.update|
-|Create Cron Job|event_id.iaas.cluster.cronjob.create|
-|Delete Cron Job|event_id.iaas.cluster.cronjob.delete|
-|Update Cron Job|event_id.iaas.cluster.cronjob.update|
-|Create Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.create|
-|Delete Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.delete|
-|Update Custom Resource Definition|event_id.iaas.cluster.custom_resource_definition.update|
-|Create Daemon Set|event_id.iaas.cluster.daemon_set.create|
-|Delete Daemon Set|event_id.iaas.cluster.daemon_set.delete|
-|Update Daemon Set|event_id.iaas.cluster.daemon_set.update|
-|Create Deployment|event_id.iaas.cluster.deployment.create|
-|Delete Deployment|event_id.iaas.cluster.deployment.delete|
-|Update Deployment|event_id.iaas.cluster.deployment.update|
-|Scale Up Deployment|event_id.iaas.cluster.deployment.update_scale|
-|Create Endpoint|event_id.iaas.cluster.endpoint.create|
-|Delete Endpoint|event_id.iaas.cluster.endpoint.delete|
-|Update Endpoint|event_id.iaas.cluster.endpoint.update|
-|Create Endpoint Slice|event_id.iaas.cluster.endpoint_slice.create|
-|Delete Endpoint Slice|event_id.iaas.cluster.endpoint_slice.delete|
-|Update Endpoint Slice|event_id.iaas.cluster.endpoint_slice.update|
-|Create Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.create|
-|Delete Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.delete|
-|Update Horizontal Pod Autoscaler|event_id.iaas.cluster.horizontal_pod_autoscaler.update|
-|Create Ingress|event_id.iaas.cluster.ingress.create|
-|Delete Ingress|event_id.iaas.cluster.ingress.delete|
-|Update Ingress|event_id.iaas.cluster.ingress.update|
-|Create Job|event_id.iaas.cluster.job.create|
-|Delete Job|event_id.iaas.cluster.job.delete|
-|Update Job|event_id.iaas.cluster.job.update|
-|Create Limit Range|event_id.iaas.cluster.limit_range.create|
-|Delete Limit Range|event_id.iaas.cluster.limit_range.delete|
-|Update Limit Range|event_id.iaas.cluster.limit_range.update|
-|Create Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.create|
-|Delete Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.delete|
-|Update Mutating Webhook Configuration|event_id.iaas.cluster.mutating_webhook_configuration.update|
-|Create Namespace|event_id.iaas.cluster.namespace.create|
-|Delete Namespace|event_id.iaas.cluster.namespace.delete|
-|Update Namespace|event_id.iaas.cluster.namespace.update|
-|Create Network Policy|event_id.iaas.cluster.network_policy.create|
-|Delete Network Policy|event_id.iaas.cluster.network_policy.delete|
-|Update Network Policy|event_id.iaas.cluster.network_policy.update|
-|Create Persistent Volume|event_id.iaas.cluster.persistent_volume.create|
-|Delete Persistent Volume|event_id.iaas.cluster.persistent_volume.delete|
-|Update Persistent Volume|event_id.iaas.cluster.persistent_volume.update|
-|Create Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.create|
-|Delete Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.delete|
-|Update Persistent Volume Claim|event_id.iaas.cluster.persistent_volume_claim.update|
-|Attach Pod|event_id.iaas.cluster.pod.attach|
-|Create Pod|event_id.iaas.cluster.pod.create|
-|Delete Pod|event_id.iaas.cluster.pod.delete|
-|Evict Pod|event_id.iaas.cluster.pod.evict|
-|Exec Pod|event_id.iaas.cluster.pod.exec|
-|Set Pod&#39;s Port Forwarding|event_id.iaas.cluster.pod.port_forward|
-|Update Pod|event_id.iaas.cluster.pod.update|
-|Create Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.create|
-|Delete Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.delete|
-|Update Pod Disruption Budget|event_id.iaas.cluster.pod_disruption_budget.update|
-|Create Pod Security Policy|event_id.iaas.cluster.pod_security_policy.create|
-|Delete Pod Security Policy|event_id.iaas.cluster.pod_security_policy.delete|
-|Update Pod Security Policy|event_id.iaas.cluster.pod_security_policy.update|
-|Create Pod Template|event_id.iaas.cluster.pod_template.create|
-|Delete Pod Template|event_id.iaas.cluster.pod_template.delete|
-|Update Pod Template|event_id.iaas.cluster.pod_template.update|
-|Create Priority Class|event_id.iaas.cluster.priority_class.create|
-|Delete Priority Class|event_id.iaas.cluster.priority_class.delete|
-|Update Priority Class|event_id.iaas.cluster.priority_class.update|
-|Create Replication Controller|event_id.iaas.cluster.replication_controller.create|
-|Delete Replication Controller|event_id.iaas.cluster.replication_controller.delete|
-|Update Replication Controller|event_id.iaas.cluster.replication_controller.update|
-|Update Replication Controller&#39;s Scale|event_id.iaas.cluster.replication_controller.update_scale|
-|Create Replica Set|event_id.iaas.cluster.replica_set.create|
-|Delete Replica Set|event_id.iaas.cluster.replica_set.delete|
-|Update Replica Set|event_id.iaas.cluster.replica_set.update|
-|Update Replica Set&#39;s Scale|event_id.iaas.cluster.replica_set.update_scale|
-|Create Resource Quota|event_id.iaas.cluster.resource_quota.create|
-|Delete Resource Quota|event_id.iaas.cluster.resource_quota.delete|
-|Update Resource Quota|event_id.iaas.cluster.resource_quota.update|
-|Create Role|event_id.iaas.cluster.role.create|
-|Delete Role|event_id.iaas.cluster.role.delete|
-|Update Role|event_id.iaas.cluster.role.update|
-|Create Role Binding|event_id.iaas.cluster.role_binding.create|
-|Delete Role Binding|event_id.iaas.cluster.role_binding.delete|
-|Update Role Binding|event_id.iaas.cluster.role_binding.update|
-|Create Secret|event_id.iaas.cluster.secret.create|
-|Delete Secret|event_id.iaas.cluster.secret.delete|
-|Update Secret|event_id.iaas.cluster.secret.update|
-|Create Service|event_id.iaas.cluster.service.create|
-|Delete Service|event_id.iaas.cluster.service.delete|
-|Update Service|event_id.iaas.cluster.service.update|
-|Create Service Account|event_id.iaas.cluster.service_account.create|
-|Delete Service Account|event_id.iaas.cluster.service_account.delete|
-|Update Service Account|event_id.iaas.cluster.service_account.update|
-|Create Stateful Set|event_id.iaas.cluster.stateful_set.create|
-|Delete Stateful Set|event_id.iaas.cluster.stateful_set.delete|
-|Update Stateful Set|event_id.iaas.cluster.stateful_set.update|
-|Update Stateful Set&#39;s Scale|event_id.iaas.cluster.stateful_set.update_scale|
-|Create Storage Class|event_id.iaas.cluster.storage_class.create|
-|Delete Storage Class|event_id.iaas.cluster.storage_class.delete|
-|Update Storage Class|event_id.iaas.cluster.storage_class.update|
-|Create Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.create|
-|Delete Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.delete|
-|Update Validating Webhook Configuration|event_id.iaas.cluster.validating_webhook_configuration.update|
-|Create Template|event_id.iaas.ncs.template.create|
-|Delete Template|event_id.iaas.ncs.template.delete|
-|Create Template Version|event_id.iaas.ncs.template_version.create|
-|Delete Template Version|event_id.iaas.ncs.template_version.delete|
-|Create Workload Started|event_id.iaas.ncs.workload_create.start|
-|Create Workload Completed|event_id.iaas.ncs.workload_create.end|
-|Create Workload Failed|event_id.iaas.ncs.workload_create.failed|
-|Delete Workload|event_id.iaas.ncs.workload.delete|
-|Stop Workload|event_id.iaas.ncs.workload.stop|
-|Restart Workload Started|event_id.iaas.ncs.workload_restart.start|
-|Restart Workload Completed|event_id.iaas.ncs.workload_restart.end|
-|Restart Workload Failed|event_id.iaas.ncs.workload_restart.failed|
-|Change Workload Description|event_id.iaas.ncs.workload_description.update|
-|Change Workload Template Started|event_id.iaas.ncs.workload_template_update.start|
-|Change Workload Template Completed|event_id.iaas.ncs.workload_template_update.end|
-|Change Workload Template Failed|event_id.iaas.ncs.workload_template_update.failed|
-|Change Number of Workload Task Requests Start|event_id.iaas.ncs.workload_desired_update.start|
-|Change Number of Workload Task Requests Completed|event_id.iaas.ncs.workload_desired_update.end|
-|Change Number of Workload Task Requests Failed|event_id.iaas.ncs.workload_desired_update.failed|
-|Change Schedule Termination|event_id.iaas.ncs.workload_active_deadline.update|
-|Change Workload Load Balancer Start|event_id.iaas.ncs.workload_loadbalancer_update.start|
-|Change Workload Load Balancer Completed|event_id.iaas.ncs.workload_loadbalancer_update.end|
-|Change Workload Internal Load Balancer|event_id.iaas.ncs.workload_internal_loadbalancer.update|
-|Change Scheduled Run|event_id.iaas.ncs.workload_schedule.update|
-|Access Container Terminal|event_id.iaas.ncs.container_terminal.exec|
-|Access Container Terminal Ended|event_id.iaas.ncs.container_terminal.exit|
-|Restart Workload|event_id.iaas.ncs.workload_task.restart|
-|Change Workload Autoscaler|event_id.iaas.ncs.workload_autoscaler.update|
-|Resize Workload Tasks Started|event_id.iaas.ncs.workload_task_resize.start|
-|Resize Workload Tasks Ended|event_id.iaas.ncs.workload_task_resize.end|
-|Resize Workload Tasks Failed|event_id.iaas.ncs.workload_task_resize.failed|
-|Create NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.create|
-|Delete NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.delete|
-|Change NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.update|
-|Set NAS Encryption Key Store|event_id.iaas.nas.encryption_key_store.set|
-|Create NAS Storage|event_id.iaas.nas.volume.create|
-|Delete NAS Storage|event_id.iaas.nas.volume.delete|
-|Modify NAS Storage Settings|event_id.iaas.nas.volume.update|
-|NAS Storage Creation Completed|event_id.iaas.nas.volume.create_end|
-|NAS Storage Deletion Completed|event_id.iaas.nas.volume.delete_end|
-|NAS Storage Settings Modification Completed|event_id.iaas.nas.volume.update_end|
-|Create NAS Storage Snapshot|event_id.iaas.nas.snapshot.create|
-|Delete NAS Storage Snapshot|event_id.iaas.nas.snapshot.delete|
-|Restore NAS Storage Snapshot|event_id.iaas.nas.snapshot.restore|
-|Set NAS Storage Replication|event_id.iaas.nas.replication.set|
-|Turn off NAS Storage Replication|event_id.iaas.nas.replication.unset|
-|Start NAS Storage Replication|event_id.iaas.nas.replication.start|
-|Stop NAS Storage Replication|event_id.iaas.nas.replication.stop|
-|Change NAS Storage Replication Direction|event_id.iaas.nas.replication.change_direction|
-|Add NAS Storage Subnet Association|event_id.iaas.nas.subnet.attach|
-|Disassociate NAS Storage Subnet|event_id.iaas.nas.subnet.detach|
-|Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
-|Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
-|Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
-|Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
-|Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
-|Create Gateway|event_id.iaas.storage_gateway.gateway.create|
-|Change Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
-|Delete Gateway|event_id.iaas.storage_gateway.gateway.delete|
-|Create Gateway Completed|event_id.iaas.storage_gateway.gateway.create_end|
-|Change Gateway Settings Completed|event_id.iaas.storage_gateway.gateway.update_end|
-|Delete Gateway Completed|event_id.iaas.storage_gateway.gateway.delete_end|
-|Create Share|event_id.iaas.storage_gateway.share.create|
-|Change Share Settings|event_id.iaas.storage_gateway.share.update|
-|Delete Share|event_id.iaas.storage_gateway.share.delete|
-|Create Share Comleted|event_id.iaas.storage_gateway.share.create_end|
-|Change Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
-|Delete Share Completed|event_id.iaas.storage_gateway.share.delete_end|
+|インスタンスの作成|event_id.iaas.instance.create|
+|インスタンスの作成完了|event_id.iaas.instance.create_end|
+|インスタンスの削除|event_id.iaas.instance.delete|
+|インスタンスの削除完了|event_id.iaas.instance.delete_end|
+|インスタンス情報の変更|event_id.iaas.instance.update|
+|インスタンスの再起動|event_id.iaas.instance_action.reboot|
+|インスタンスの再起動完了|event_id.iaas.instance_action.reboot_end|
+|インスタンスタイプの変更|event_id.iaas.instance_action.resize|
+|インスタンスタイプの変更完了|event_id.iaas.instance_action.resize_end|
+|コンソールスクリーンショットの作成|event_id.iaas.instance_action.screenshot|
+|インスタンス終了|event_id.iaas.instance_action.shelve|
+|インスタンス終了完了|event_id.iaas.instance_action.shelve_end|
+|停止したインスタンスの起動|event_id.iaas.instance_action.start|
+|停止したインスタンスの起動完了|event_id.iaas.instance_action.start_end|
+|インスタンスの停止|event_id.iaas.instance_action.stop|
+|インスタンスの停止完了|event_id.iaas.instance_action.stop_end|
+|終了したインスタンスの起動|event_id.iaas.instance_action.unshelve|
+|終了したインスタンスの起動完了|event_id.iaas.instance_action.unshelve_end|
+|インスタンスキーペア変更|event_id.iaas.instance_action.reset_keypair|
+|インスタンステンプレートの作成|event_id.iaas.instance_template.create|
+|インスタンステンプレートの削除|event_id.iaas.instance_template.delete|
+|インスタンステンプレートOWNERの変更|event_id.iaas.instance_template.handover|
+|インスタンステンプレートの変更|event_id.iaas.instance_template.update|
+|インスタンスメタデータの作成|event_id.iaas.metadata.create|
+|インスタンスメタデータの削除|event_id.iaas.metadata.delete|
+|インスタンスメタデータの変更|event_id.iaas.metadata.update|
+|インスタンスのネットワークインターフェイス接続の追加|event_id.iaas.interface.create|
+|インスタンスのネットワークインターフェイス接続の解除|event_id.iaas.interface.delete|
+|キーペアの作成|event_id.iaas.keypair.create|
+|キーペアの削除|event_id.iaas.keypair.delete|
+|配置ポリシー作成|event_id.iaas.servergroup.create|
+|配置ポリシー削除|event_id.iaas.servergroup.delete|
+|シリアルコンソール接続|event_id.iaas.serial_console.connect|
+|シリアルコンソール接続完了|event_id.iaas.serial_console.connect_end|
+|シリアルコンソール接続を終了|event_id.iaas.serial_console.disconnect_end|
+|イメージのコピー|event_id.iaas.image.copy|
+|イメージの作成|event_id.iaas.image.create|
+|イメージ作成完了|event_id.iaas.image.create_end|
+|イメージID作成|event_id.iaas.image.create_id|
+|イメージ作成失敗|event_id.iaas.image.create_failed|
+|イメージの削除|event_id.iaas.image.delete|
+|イメージ削除完了|event_id.iaas.image.delete_end|
+|イメージ修正|event_id.iaas.image.update|
+|イメージ修正完了|event_id.iaas.image.update_end|
+|イメージのアップロード|event_id.iaas.image.upload|
+|イメージ共有の作成|event_id.iaas.image_member.create|
+|イメージ共有の削除|event_id.iaas.image_member.delete|
+|イメージビルド|event_id.iaas.image_template.build|
+|イメージビルドのキャンセル|event_id.iaas.image_template.cancel_build|
+|イメージテンプレートの作成|event_id.iaas.image_template.create|
+|イメージテンプレートの削除|event_id.iaas.image_template.delete|
+|イメージテンプレートの修正|event_id.iaas.image_template.update|
+|ブロックストレージの作成|event_id.iaas.volume.create|
+|ブロックストレージ作成完了|event_id.iaas.volume.create_end|
+|ブロックストレージの削除|event_id.iaas.volume.delete|
+|ブロックストレージ削除完了|event_id.iaas.volume.delete_end|
+|ブロックストレージ修正|event_id.iaas.volume.update|
+|ブロックストレージ修正完了|event_id.iaas.volume.update_end|
+|ブロックストレージ複製|event_id.iaas.volume.copy|
+|ブロックストレージ複製完了|event_id.iaas.volume.copy_end|
+|インスタンスブロックストレージ接続|event_id.iaas.volume.attach|
+|インスタンスブロックストレージ接続完了|event_id.iaas.volume.attach_end|
+|インスタンスブロックストレージ接続解除|event_id.iaas.volume.detach|
+|インスタンスブロックストレージ接続解除完了|event_id.iaas.volume.detach_end|
+|ブロックストレージのサイズ変更|event_id.iaas.volume.extend|
+|ブロックストレージ移動|event_id.iaas.volume.transfer|
+|ブロックストレージ移動完了(対象)|event_id.iaas.volume.transfer_accept|
+|ブロックストレージ移動完了(ソース)|event_id.iaas.volume.transfer_create|
+|ブロックストレージスナップショットの作成|event_id.iaas.snapshot.create|
+|ブロックストレージスナップショット作成完了|event_id.iaas.snapshot.create_end|
+|ブロックストレージスナップショットの削除|event_id.iaas.snapshot.delete|
+|ブロックストレージスナップショット削除完了|event_id.iaas.snapshot.delete_end|
+|スケーリンググループの予約作業の作成|event_id.iaas.autoscale_schedule.create|
+|スケーリンググループの予約作業の削除|event_id.iaas.autoscale_schedule.delete|
+|スケーリンググループ予約タスクOWNERの変更|event_id.iaas.autoscale_schedule.handover|
+|スケーリンググループの作成|event_id.iaas.scaling_group.create|
+|スケーリンググループの削除|event_id.iaas.scaling_group.delete|
+|スケーリンググループOWNERの変更|event_id.iaas.scaling_group.handover|
+|スケーリンググループの変更|event_id.iaas.scaling_group.update|
+|S3 API認証情報の作成|event_id.iaas.s3credential.create|
+|S3 API認証情報の削除|event_id.iaas.s3credential.delete|
+|APIパスワードの変更|event_id.iaas.identity.password_change|
+|VPCの作成|event_id.iaas.vpc.create|
+|VPCの削除|event_id.iaas.vpc.delete|
+|VPCの情報変更|event_id.iaas.vpc.update|
+|VPCの作成完了|event_id.iaas.vpc.create_end|
+|VPCの削除完了|event_id.iaas.vpc.delete_end|
+|VPCの情報変更完了|event_id.iaas.vpc.update_end|
+|VPCサブネットの作成|event_id.iaas.vpc_subnet.create|
+|VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
+|VPCサブネットの変更|event_id.iaas.vpc_subnet.update|
+|VPCサブネットルーティングテーブルの接続|event_id.iaas.vpc_subnet.attach_routingtable|
+|VPCサブネットルーティングテーブルの接続解除|event_id.iaas.vpc_subnet.detach_routingtable|
+|サブネット静的ルートの作成|event_id.iaas.vpc_subnet_route.create|
+|サブネット静的ルートの削除|event_id.iaas.vpc_subnet_route.delete|
+|ネットワークインターフェイスの作成|event_id.iaas.port.create|
+|ネットワークインターフェイスの作成完了|event_id.iaas.port.create_end|
+|ネットワークインターフェイスの変更|event_id.iaas.port.update|
+|ネットワークインターフェイスの削除|event_id.iaas.port.delete|
+|ネットワークインターフェイスの削除完了|event_id.iaas.port.delete_end|
+|ルーティングテーブルの作成|event_id.iaas.routing_table.create|
+|ルーティングテーブルの削除|event_id.iaas.routing_table.delete|
+|ルーティングテーブルの変更|event_id.iaas.routing_table.update|
+|ルーティングテーブルインターネットゲートウェイの接続|event_id.iaas.routing_table.attach_gateway|
+|ルーティングテーブルインターネットゲートウェイの接続解除|event_id.iaas.routing_table.detach_gateway|
+|ルーティングテーブルの基本指定|event_id.iaas.routing_table.set_as_default|
+|ルーティングテーブルルートの作成|event_id.iaas.route.create|
+|ルーティングテーブルルートの変更|event_id.iaas.route.update|
+|ルーティングテーブルルートの削除|event_id.iaas.route.delete|
+|Floating IPの作成|event_id.iaas.floating_ip.create|
+|Floating IPの削除|event_id.iaas.floating_ip.delete|
+|インスタンスFloating IPの接続|event_id.iaas.floating_ip.attach|
+|インスタンスFloating IPの接続解除|event_id.iaas.floating_ip.detach|
+|Floating IPの作成完了|event_id.iaas.floating_ip.create_end|
+|Floating IPの変更完了|event_id.iaas.floating_ip.update_end|
+|Floating IPの削除完了|event_id.iaas.floating_ip.delete_end|
+|NetworkACL 作成|event_id.iaas.networkacl.create|
+|NetworkACL 削除|event_id.iaas.networkacl.delete|
+|NetworkACL 修正|event_id.iaas.networkacl.update|
+|NetworkACL Rule 作成|event_id.iaas.networkacl_rule.create|
+|NetworkACL Rule 削除|event_id.iaas.networkacl_rule.delete|
+|NetworkACL Rule 修正|event_id.iaas.networkacl_rule.update|
+|NetworkACL Binding 作成|event_id.iaas.networkacl_binding.create|
+|NetworkACL Binding 削除|event_id.iaas.networkacl_binding.delete|
+|セキュリティーグループの作成|event_id.iaas.security_group.create|
+|セキュリティーグループの削除|event_id.iaas.security_group.delete|
+|セキュリティーグループの変更|event_id.iaas.security_group.update|
+|セキュリティルールの作成|event_id.iaas.security_group_rule.create|
+|セキュリティルールの削除|event_id.iaas.security_group_rule.delete|
+|セキュリティーグループの作成完了|event_id.iaas.security_group.create_end|
+|セキュリティーグループの削除完了|event_id.iaas.security_group.delete_end|
+|セキュリティーグループの変更完了|event_id.iaas.security_group.update_end|
+|セキュリティルールの作成完了|event_id.iaas.security_group_rule.create_end|
+|セキュリティルールの削除完了|event_id.iaas.security_group_rule.delete_end|
+|ロードバランサーの作成|event_id.iaas.loadbalancer.create|
+|ロードバランサーの削除|event_id.iaas.loadbalancer.delete|
+|ロードバランサー情報の変更|event_id.iaas.loadbalancer.update|
+|ロードバランサーリスナーの作成|event_id.iaas.loadbalancer_listener.create|
+|ロードバランサーリスナーの削除|event_id.iaas.loadbalancer_listener.delete|
+|ロードバランサーリスナーの変更|event_id.iaas.loadbalancer_listener.update|
+|ロードバランサーメンバーグループ(プール)作成|event_id.iaas.loadbalancer_pool.create|
+|ロードバランサーメンバーグループ(プール)削除|event_id.iaas.loadbalancer_pool.delete|
+|ロードバランサーメンバーグループ(プール)変更|event_id.iaas.loadbalancer_pool.update|
+|ロードバランサーヘルスモニター作成|event_id.iaas.loadbalancer_healthmonitor.create|
+|ロードバランサーヘルスモニター変更|event_id.iaas.loadbalancer_healthmonitor.update|
+|ロードバランサーヘルスモニター削除|event_id.iaas.loadbalancer_healthmonitor.delete|
+|ロードバランサーインスタンスの接続追加|event_id.iaas.loadbalancer_member.create|
+|ロードバランサーインスタンスの接続解除|event_id.iaas.loadbalancer_member.delete|
+|ロードバランサーインスタンスの有効状態を変更|event_id.iaas.loadbalancer_member.update|
+|ロードバランサーL7ポリシーの作成|event_id.iaas.loadbalancer_l7policy.create|
+|ロードバランサーL7ポリシーの削除|event_id.iaas.loadbalancer_l7policy.delete|
+|ロードバランサーL7ポリシーの変更|event_id.iaas.loadbalancer_l7policy.update|
+|ロードバランサーL7ルールの作成|event_id.iaas.loadbalancer_l7rule.create|
+|ロードバランサーL7ルールの削除|event_id.iaas.loadbalancer_l7rule.delete|
+|ロードバランサーL7ルールの変更|event_id.iaas.loadbalancer_l7rule.update|
+|ロードバランサーIP ACLグループ作成|event_id.iaas.loadbalancer_ipacl_group.create|
+|ロードバランサーIP ACLグループ削除|event_id.iaas.loadbalancer_ipacl_group.delete|
+|ロードバランサーIP ACLグループ修正|event_id.iaas.loadbalancer_ipacl_group.update|
+|ロードバランサーIP ACLターゲット作成|event_id.iaas.loadbalancer_ipacl_target.create|
+|ロードバランサーIP ACLターゲット削除|event_id.iaas.loadbalancer_ipacl_target.delete|
+|ロードバランサーIP ACLターゲット修正|event_id.iaas.loadbalancer_ipacl_target.update|
+|ロードバランサーにIP ACLグループ適用|event_id.iaas.loadbalancer_ipacl_group.bind|
+|ロードバランサーの作成完了|event_id.iaas.loadbalancer.create_end|
+|ロードバランサーの削除完了|event_id.iaas.loadbalancer.delete_end|
+|ロードバランサー情報の変更完了|event_id.iaas.loadbalancer.update_end|
+|トランジットハブの作成|event_id.iaas.transit_hub.create|
+|トランジットハブの削除|event_id.iaas.transit_hub.delete|
+|トランジットハブの変更|event_id.iaas.transit_hub.update|
+|トランジットハブ接続の作成|event_id.iaas.transit_hub_attachment.create|
+|トランジットハブ接続の削除|event_id.iaas.transit_hub_attachment.delete|
+|トランジットハブ接続の変更|event_id.iaas.transit_hub_attachment.update|
+|トランジットハブ許可リストの作成|event_id.iaas.transit_hub_allow_project.create|
+|トランジットハブ許可リストの削除|event_id.iaas.transit_hub_allow_project.delete|
+|トランジットハブ許可リストの変更|event_id.iaas.transit_hub_allow_project.update|
+|トランジットハブルーティングテーブルの作成|event_id.iaas.transit_hub_routing_table.create|
+|トランジットハブルーティングテーブルの削除|event_id.iaas.transit_hub_routing_table.delete|
+|トランジットハブルーティングテーブルの変更|event_id.iaas.transit_hub_routing_table.update|
+|トランジットハブルーティング接続の作成|event_id.iaas.transit_hub_routing_association.create|
+|トランジットハブルーティング接続の削除|event_id.iaas.transit_hub_routing_association.delete|
+|トランジットハブルーティング接続の変更|event_id.iaas.transit_hub_routing_association.update|
+|トランジットハブルーティング配信の作成|event_id.iaas.transit_hub_routing_propagation.create|
+|トランジットハブルーティング配信の削除|event_id.iaas.transit_hub_routing_propagation.delete|
+|トランジットハブルーティング配信の変更|event_id.iaas.transit_hub_routing_propagation.update|
+|トランジットハブルーティングルールの作成|event_id.iaas.transit_hub_routing_rule.create|
+|トランジットハブルーティングルールの削除|event_id.iaas.transit_hub_routing_rule.delete|
+|トランジットハブルーティングルールの変更|event_id.iaas.transit_hub_routing_rule.update|
+|トランジットハブマルチキャストドメインの作成|event_id.iaas.transit_hub_multicast_domain.create|
+|トランジットハブマルチキャストドメインの削除|event_id.iaas.transit_hub_multicast_domain.delete|
+|トランジットハブマルチキャストドメインの変更|event_id.iaas.transit_hub_multicast_domain.update|
+|トランジットハブマルチキャスト接続の作成|event_id.iaas.transit_hub_multicast_association.create|
+|トランジットハブマルチキャスト接続の削除|event_id.iaas.transit_hub_multicast_association.delete|
+|トランジットハブマルチキャスト接続の変更|event_id.iaas.transit_hub_multicast_association.update|
+|トランジットハブマルチキャストグループの作成|event_id.iaas.transit_hub_multicast_group.create|
+|トランジットハブマルチキャストグループの削除|event_id.iaas.transit_hub_multicast_group.delete|
+|トランジットハブマルチキャストグループの変更|event_id.iaas.transit_hub_multicast_group.update|
+|トランジットハブマルチキャストドメイン許可リストの作成|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
+|トランジットハブマルチキャストドメイン許可リストの削除|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
+|トランジットハブマルチキャストドメイン許可リストの変更|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|トランジットハブの作成完了|event_id.iaas.transit_hub.create_end|
+|トランジットハブの削除完了|event_id.iaas.transit_hub.delete_end|
+|トランジットハブの変更完了|event_id.iaas.transit_hub.update_end|
+|トランジットハブ接続の作成完了|event_id.iaas.transit_hub_attachment.create_end|
+|トランジットハブ接続の削除完了|event_id.iaas.transit_hub_attachment.delete_end|
+|トランジットハブ接続の変更完了|event_id.iaas.transit_hub_attachment.update_end|
+|インターネットゲートウェイの作成|event_id.iaas.internet_gateway.create|
+|インターネットゲートウェイの削除|event_id.iaas.internet_gateway.delete|
+|VPCピアリングの作成|event_id.iaas.peering.create|
+|VPCピアリングの削除|event_id.iaas.peering.delete|
+|リージョンピアリングの作成|event_id.iaas.region_peering.create|
+|リージョンピアリングの削除|event_id.iaas.region_peering.delete|
+|リージョンピアリングの変更|event_id.iaas.region_peering.update|
+|プロジェクトピアリングを作成|event_id.iaas.project_peering.create|
+|プロジェクトピアリングを削除|event_id.iaas.project_peering.delete|
+|プロジェクトピアリングを変更|event_id.iaas.project_peering.update|
+|ピアリング許可リスト作成|event_id.iaas.peering_allow_project.create|
+|ピアリング許可リスト削除|event_id.iaas.peering_allow_project.delete|
+|ピアリング許可リスト変更|event_id.iaas.peering_allow_project.update|
+|NATゲートウェイの作成|event_id.iaas.nat_gateway.create|
+|NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
+|NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
+|NATゲートウェイの作成完了|event_id.iaas.nat_gateway.create_end|
+|NATゲートウェイの削除完了|event_id.iaas.nat_gateway.delete_end|
+|NATゲートウェイの変更完了|event_id.iaas.nat_gateway.update_end|
+|VPNGW作成|event_id.iaas.vpngw.create|
+|VPNGW削除|event_id.iaas.vpngw.delete|
+|VPNGW修正|event_id.iaas.vpngw.update|
+|VPN接続の作成|event_id.iaas.vpn_connection.create|
+|VPN接続の削除|event_id.iaas.vpn_connection.delete|
+|VPN接続の修正|event_id.iaas.vpn_connection.update|
+|VPNGW  v2 作成|event_id.iaas.vpngw_v2.create|
+|VPNGW  v2 削除 |event_id.iaas.vpngw_v2.delete|
+|VPNGW  v2 修正|event_id.iaas.vpngw_v2.update|
+|VPN接続 v2の作成|event_id.iaas.vpn_connection_v2.create|
+|VPN接続 v2の削除|event_id.iaas.vpn_connection_v2.delete|
+|VPN接続 v2の修正|event_id.iaas.vpn_connection_v2.update|
+|サービスゲートウェイの作成|event_id.iaas.service_gateway.create|
+|サービスゲートウェイの削除|event_id.iaas.service_gateway.delete|
+|サービスゲートウェイの変更|event_id.iaas.service_gateway.update|
+|トラフィックミラーリングセッションの作成|event_id.iaas.traffic_mirroring.session.create|
+|トラフィックミラーリングセッションの削除|event_id.iaas.traffic_mirroring.session.delete|
+|トラフィックミラーリングセッションの変更|event_id.iaas.traffic_mirroring.session.update|
+|トラフィックミラーリングフィルタグループの作成|event_id.iaas.traffic_mirroring.filter_group.create|
+|トラフィックミラーリングフィルタグループの削除|event_id.iaas.traffic_mirroring.filter_group.delete|
+|トラフィックミラーリングフィルタグループの変更|event_id.iaas.traffic_mirroring.filter_group.update|
+|トラフィックミラーリングフィルタの作成|event_id.iaas.traffic_mirroring.filter.create|
+|トラフィックミラーリングフィルタの削除|event_id.iaas.traffic_mirroring.filter.delete|
+|トラフィックミラーリングフィルタの変更|event_id.iaas.traffic_mirroring.filter.update|
+|Private DNS Zone作成|event_id.iaas.privatedns.zone.create|
+|Private DNS Zone削除|event_id.iaas.privatedns.zone.delete|
+|Private DNS Zone修正|event_id.iaas.privatedns.zone.update|
+|Private DNS レコードセット作成|event_id.iaas.privatedns.recordset.create|
+|Private DNS レコードセット削除|event_id.iaas.privatedns.recordset.delete|
+|Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|
+|Private DNS レコードセットの大量作成|event_id.iaas.privatedns.recordset.create_list|
+|Private DNS Zone作成完了|event_id.iaas.private_dns.zone.create_end|
+|Private DNS Zone削除完了|event_id.iaas.private_dns.zone.delete_end|
+|Private DNS Zone修正完了|event_id.iaas.private_dns.zone.update_end|
+|フローログロガーの作成|event_id.iaas.flowlog_logger.create|
+|フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
+|フローログロガーの修正|event_id.iaas.flowlog_logger.update|
+|フローログロガーの作成完了|event_id.iaas.flowlog_logger.create_end|
+|フローログストレージの作成|event_id.iaas.flowlog_storage.create|
+|フローログロガーの削除完了|event_id.iaas.flowlog_logger.delete_end|
+|フローログストレージの削除|event_id.iaas.flowlog_storage.delete|
+|フローログロガーの修正完了|event_id.iaas.flowlog_logger.update_end|
+|フローログストレージの修正|event_id.iaas.flowlog_storage.update|
+|ネットワークインターフェースのルート作成|event_id.iaas.port_route.create|
+|ネットワークインターフェースのルート削除|event_id.iaas.port_route.delete|
+|ネットワークインターフェースのルート変更|event_id.iaas.port_route.update|
+|ネットワークインターフェースのルート作成完了|event_id.iaas.port_route.create_end|
+|ネットワークインターフェースのルート削除完了|event_id.iaas.port_route.delete_end|
+|ネットワークインターフェースのルート変更完了|event_id.iaas.port_route.update_end|
+|クラスター作成完了|event_id.iaas.cluster.create.end|
+|クラスター作成失敗|event_id.iaas.cluster.create.failed|
+|クラスター作成起動|event_id.iaas.cluster.create.start|
+|クラスター削除完了|event_id.iaas.cluster.delete.end|
+|クラスター削除失敗|event_id.iaas.cluster.delete.failed|
+|クラスター削除起動|event_id.iaas.cluster.delete.start|
+|クラスタOWNERの変更完了|event_id.iaas.cluster.handover.end|
+|クラスタOWNERの変更失敗|event_id.iaas.cluster.handover.failed|
+|クラスタOWNERの変更起動|event_id.iaas.cluster.handover.start|
+|クラスターサイズ調整完了|event_id.iaas.cluster.resize.end|
+|クラスターサイズ調整失敗|event_id.iaas.cluster.resize.failed|
+|クラスターサイズ調整起動|event_id.iaas.cluster.resize.start|
+|クラスタ動作可能な移行完了|event_id.iaas.cluster.resume.end|
+|クラスター動作可能遷移失敗|event_id.iaas.cluster.resume.failed|
+|クラスタ動作可能な移行の開始|event_id.iaas.cluster.resume.start|
+|CNI変更完了|event_id.iaas.cluster.cni_update.end|
+|CNI変更失敗|event_id.iaas.cluster.cni_update.failed|
+|CNI変更起動|event_id.iaas.cluster.cni_update.start|
+|クラスタAPIエンドポイントIPアクセス制御の変更の完了|event_id.iaas.cluster.api_ep_ipacl_update.end|
+|クラスタAPIエンドポイントIPアクセス制御の変更の失敗|event_id.iaas.cluster.api_ep_ipacl_update.failed|
+|クラスタAPIエンドポイントIPアクセス制御の変更の起動|event_id.iaas.cluster.api_ep_ipacl_update.start|
+|SGW 変更完了|event_id.iaas.cluster.update_sgw.end|
+|SGW 変更失敗|event_id.iaas.cluster.update_sgw.failed|
+|SGW 変更|event_id.iaas.cluster.update_sgw.start|
+|証明書の更新完了|event_id.iaas.cluster.cluster_rotate_certificate.end|
+|証明書の更新に失敗しました|event_id.iaas.cluster.cluster_rotate_certificate.failed|
+|証明書更新の開始|event_id.iaas.cluster.cluster_rotate_certificate.start|
+|K8S APISERVERの問題検出|event_id.iaas.cluster.k8s_api_not_working.detected|
+|K8S APISERVERのトラブルシューティング|event_id.iaas.cluster.k8s_api_not_working.resolved|
+|すべてのノード停止問題の検出|event_id.iaas.cluster.all_nodes_not_ready.detected|
+|すべてのノード停止のトラブルシューティング|event_id.iaas.cluster.all_nodes_not_ready.resolved|
+|オートヒーリング検出|event_id.iaas.cluster.auto_healing.detected|
+|NKSレジストリ更新の完了|event_id.iaas.cluster.update_nks_registry.end|
+|NKSレジストリ更新に失敗しました|event_id.iaas.cluster.update_nks_registry.fail|
+|NKSレジストリ更新の開始|event_id.iaas.cluster.update_nks_registry.start|
+|K8Sオーデントアップデート開始|event_id.iaas.cluster.update_k8s_args.start|
+|K8S集約更新が完了しました|event_id.iaas.cluster.update_k8s_args.end|
+|K8Sオーデントアップデートは失敗しました|event_id.iaas.cluster.update_k8s_args.failed|
+|OIDCオーデントアップデート開始|event_id.iaas.cluster.update_oidc_args.start|
+|OIDC集約更新が完了しました|event_id.iaas.cluster.update_oidc_args.end|
+|OIDCオーデントアップデートは失敗しました|event_id.iaas.cluster.update_oidc_args.failed|
+|キーペアアップデートを開始|event_id.iaas.cluster.update_vm_auth_key.start|
+|キーペア更新完了|event_id.iaas.cluster.update_vm_auth_key.end|
+|キーペアの更新に失敗しました|event_id.iaas.cluster.update_vm_auth_key.failed|
+|コントロールプレーンのログ収集の更新開始|event_id.iaas.cluster.update_control_plane_log.start|
+|コントロールプレーンのログ収集の更新完了|event_id.iaas.cluster.update_control_plane_log.end|
+|コントロールプレーンのログ収集の更新失敗|event_id.iaas.cluster.update_control_plane_log.failed|
+|Addonの削除開始|event_id.iaas.cluster.uninstall_addon.start|
+|Addonの削除完了|event_id.iaas.cluster.uninstall_addon.end|
+|Addonの削除失敗|event_id.iaas.cluster.uninstall_addon.failed|
+|Addonのインストール開始|event_id.iaas.cluster.install_addon.start|
+|Addonのインストール完了|event_id.iaas.cluster.install_addon.end|
+|Addonのインストール失敗|event_id.iaas.cluster.install_addon.failed|
+|Addonの更新開始|event_id.iaas.cluster.update_addon.start|
+|Addonの更新完了|event_id.iaas.cluster.update_addon.end|
+|Addonの更新失敗|event_id.iaas.cluster.update_addon.failed|
+|ノードグループ作成完了|event_id.iaas.nodegroup.create.end|
+|ノードグループ作成失敗|event_id.iaas.nodegroup.create.failed|
+|ノードグループ作成起動|event_id.iaas.nodegroup.create.start|
+|ノードグループ削除完了|event_id.iaas.nodegroup.delete.end|
+|ノードグループ削除失敗|event_id.iaas.nodegroup.delete.failed|
+|ノードグループ削除起動|event_id.iaas.nodegroup.delete.start|
+|ワーカーノードの起動完了|event_id.iaas.nodegroup.node_action.start_node.end|
+|ワーカーノードの起動失敗|event_id.iaas.nodegroup.node_action.start_node.failed|
+|ワーカーノードの起動|event_id.iaas.nodegroup.node_action.start_node.start|
+|ワーカーノードの停止完了|event_id.iaas.nodegroup.node_action.stop_node.end|
+|ワーカーノードの停止失敗|event_id.iaas.nodegroup.node_action.stop_node.failed|
+|ワーカーノードの停止起動|event_id.iaas.nodegroup.node_action.stop_node.start|
+|オートスケーラーの設定を変更完了|event_id.iaas.nodegroup.set_cluster_autoscaler.end|
+|オートスケーラーの設定を変更失敗|event_id.iaas.nodegroup.set_cluster_autoscaler.failed|
+|オートスケーラーの設定を変更起動|event_id.iaas.nodegroup.set_cluster_autoscaler.start|
+|インスタンスタイプの変更完了|event_id.iaas.nodegroup.update_flavor.end|
+|インスタンスタイプの変更失敗|event_id.iaas.nodegroup.update_flavor.failed|
+|インスタンスタイプの変更|event_id.iaas.nodegroup.update_flavor.start|
+|ユーザースクリプト変更完了|event_id.iaas.nodegroup.update_userscript.end|
+|ユーザースクリプト変更失敗|event_id.iaas.nodegroup.update_userscript.failed|
+|ユーザースクリプト変更起動|event_id.iaas.nodegroup.update_userscript.start|
+|ノードグループーのアップグレード完了|event_id.iaas.nodegroup.upgrade.end|
+|ノードグループーのアップグレード失敗|event_id.iaas.nodegroup.upgrade.failed|
+|ノードグループーのアップグレード起動|event_id.iaas.nodegroup.upgrade.start|
+|追加ブロックストレージアップデートの完了|event_id.iaas.nodegroup.update_extra_volume.end|
+|追加ブロックストレージの更新に失敗しました|event_id.iaas.nodegroup.update_extra_volume.fail|
+|追加ブロックストレージアップデートの開始|event_id.iaas.nodegroup.update_extra_volume.start|
+|追加セキュリティグループの更新が完了しました|event_id.iaas.nodegroup.update_extra_security_group.end|
+|追加のセキュリティグループの更新に失敗しました|event_id.iaas.nodegroup.update_extra_security_group.fail|
+|追加のセキュリティグループの更新を開始|event_id.iaas.nodegroup.update_extra_security_group.start|
+|ノードグループのメトリクスベースオートスケーラー設定開始|event_id.iaas.nodegroup.set_metric_base_autoscaler.start|
+|ノードグループのメトリクスベースオートスケーラー設定完了|event_id.iaas.nodegroup.set_metric_base_autoscaler.end|
+|ノードグループのメトリクスベースオートスケーラー設定失敗|event_id.iaas.nodegroup.set_metric_base_autoscaler.failed|
+|メトリクスベースオートスケーラーによるノードグループのノード増設開始|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.start|
+|メトリクスベースオートスケーラーによるノードグループのノード増設完了|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.end|
+|メトリクスベースオートスケーラーによるノードグループのノード増設失敗|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_out.failed|
+|メトリクスベースオートスケーラーによるノードグループのノード削減開始|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.start|
+|メトリクスベースオートスケーラーによるノードグループのノード削減完了|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.end|
+|メトリクスベースオートスケーラーによるノードグループのノード削減失敗|event_id.iaas.nodegroup.metric_base_autoscaler_node_scale_in.failed|
+|ノードグループのKubernetesノードラベル変更開始|event_id.iaas.nodegroup.update_k8s_node_labels.start|
+|ノードグループのKubernetesノードラベル変更完了|event_id.iaas.nodegroup.update_k8s_node_labels.end|
+|ノードグループのKubernetesノードラベル変更失敗|event_id.iaas.nodegroup.update_k8s_node_labels.failed|
+|フローティングIPの自動割り当て変更開始|event_id.iaas.nodegroup.update_fip_auto_bind.start|
+|フローティングIPの自動割り当て変更完了|event_id.iaas.nodegroup.update_fip_auto_bind.end|
+|フローティングIPの自動割り当て変更失敗|event_id.iaas.nodegroup.update_fip_auto_bind.failed|
+|ノード削減開始|event_id.iaas.nodegroup.scale_in.start|
+|ノード削減完了|event_id.iaas.nodegroup.scale_in.end|
+|ノード削減失敗|event_id.iaas.nodegroup.scale_in.failed|
+|ノード増設開始|event_id.iaas.nodegroup.scale_out.start|
+|ノード増設完了|event_id.iaas.nodegroup.scale_out.end|
+|ノード増設失敗|event_id.iaas.nodegroup.scale_out.failed|
+|ノードグループ Kubernetes Taint 設定変更の開始|event_id.iaas.nodegroup.update_k8s_node_taints.start|
+|ノードグループ Kubernetes Taint 設定変更完了|event_id.iaas.nodegroup.update_k8s_node_taints.end|
+|ノードグループ Kubernetes Taint 設定の変更に失敗しました|event_id.iaas.nodegroup.update_k8s_node_taints.failed|
+|ノードグループの Kubernetes コンポーネント設定変更の開始|event_id.iaas.nodegroup.update_k8s_args.start|
+|ノードグループのKubernetesコンポーネント設定の変更が完了しました|event_id.iaas.nodegroup.update_k8s_args.end|
+|ノードグループのKubernetesコンポーネント設定の変更に失敗しました|event_id.iaas.nodegroup.update_k8s_args.failed|
+|CSR 承認|event_id.iaas.cluster.certificate_signing_request.approval|
+|CSR 作成|event_id.iaas.cluster.certificate_signing_request.create|
+|CSR 削除|event_id.iaas.cluster.certificate_signing_request.delete|
+|CSR 修正|event_id.iaas.cluster.certificate_signing_request.update|
+|クラスターロール 作成|event_id.iaas.cluster.cluster_role.create|
+|クラスターロール 削除|event_id.iaas.cluster.cluster_role.delete|
+|クラスターロール 修正|event_id.iaas.cluster.cluster_role.update|
+|クラスターロールバインディング 作成|event_id.iaas.cluster.cluster_role_binding.create|
+|クラスターロールバインディング 削除|event_id.iaas.cluster.cluster_role_binding.delete|
+|クラスターロールバインディング 修正|event_id.iaas.cluster.cluster_role_binding.update|
+|コンフィグマップ 作成|event_id.iaas.cluster.configmap.create|
+|コンフィグマップ 削除|event_id.iaas.cluster.configmap.delete|
+|コンフィグマップ 修正|event_id.iaas.cluster.configmap.update|
+|クローンジョブ 作成|event_id.iaas.cluster.cronjob.create|
+|クローンジョブ 削除|event_id.iaas.cluster.cronjob.delete|
+|クロンジョブ 受精|event_id.iaas.cluster.cronjob.update|
+|ユーザーリソース定義 作成|event_id.iaas.cluster.custom_resource_definition.create|
+|ユーザーリソース定義 削除|event_id.iaas.cluster.custom_resource_definition.delete|
+|ユーザーリソース定義 修正|event_id.iaas.cluster.custom_resource_definition.update|
+|Daemon Set 作成|event_id.iaas.cluster.daemon_set.create|
+|Daemon Set 削除|event_id.iaas.cluster.daemon_set.delete|
+|Daemon Set 修正|event_id.iaas.cluster.daemon_set.update|
+|Deployment 作成|event_id.iaas.cluster.deployment.create|
+|Deployment 削除|event_id.iaas.cluster.deployment.delete|
+|Deployment 修正|event_id.iaas.cluster.deployment.update|
+|Deploymentスケール 調整|event_id.iaas.cluster.deployment.update_scale|
+|Endpoint 作成|event_id.iaas.cluster.endpoint.create|
+|Endpoint 削除|event_id.iaas.cluster.endpoint.delete|
+|Endpoint 修正|event_id.iaas.cluster.endpoint.update|
+|Endpoint Slice 作成|event_id.iaas.cluster.endpoint_slice.create|
+|Endpoint Slice 削除|event_id.iaas.cluster.endpoint_slice.delete|
+|Endpoint Slice 修正|event_id.iaas.cluster.endpoint_slice.update|
+|Horizontal Pod Autoscaler 作成|event_id.iaas.cluster.horizontal_pod_autoscaler.create|
+|Horizontal Pod Autoscaler 削除|event_id.iaas.cluster.horizontal_pod_autoscaler.delete|
+|Horizontal Pod Autoscaler 修正|event_id.iaas.cluster.horizontal_pod_autoscaler.update|
+|Ingress 作成|event_id.iaas.cluster.ingress.create|
+|Ingress 削除|event_id.iaas.cluster.ingress.delete|
+|Ingress 修正|event_id.iaas.cluster.ingress.update|
+|Job 作成|event_id.iaas.cluster.job.create|
+|Job 削除|event_id.iaas.cluster.job.delete|
+|Job 受精|event_id.iaas.cluster.job.update|
+|Limit Range 作成|event_id.iaas.cluster.limit_range.create|
+|Limit Range 削除|event_id.iaas.cluster.limit_range.delete|
+|Limit Range 修正|event_id.iaas.cluster.limit_range.update|
+|Mutating Webhook Configuration 作成|event_id.iaas.cluster.mutating_webhook_configuration.create|
+|Mutating Webhook Configuration 削除|event_id.iaas.cluster.mutating_webhook_configuration.delete|
+|Mutating Webhook Configuration 修正|event_id.iaas.cluster.mutating_webhook_configuration.update|
+|ネームスペース 作成|event_id.iaas.cluster.namespace.create|
+|ネームスペース 削除|event_id.iaas.cluster.namespace.delete|
+|ネームスペース 修正|event_id.iaas.cluster.namespace.update|
+|Network Policy 作成|event_id.iaas.cluster.network_policy.create|
+|Network Policy 削除|event_id.iaas.cluster.network_policy.delete|
+|Network Policy 修正|event_id.iaas.cluster.network_policy.update|
+|Persistent Volume 作成|event_id.iaas.cluster.persistent_volume.create|
+|Persistent Volume 削除|event_id.iaas.cluster.persistent_volume.delete|
+|Persistent Volume 修正|event_id.iaas.cluster.persistent_volume.update|
+|Persistent Volume Claim 作成|event_id.iaas.cluster.persistent_volume_claim.create|
+|Persistent Volume Claim 削除|event_id.iaas.cluster.persistent_volume_claim.delete|
+|Persistent Volume Claim 修正|event_id.iaas.cluster.persistent_volume_claim.update|
+|Pod 接続|event_id.iaas.cluster.pod.attach|
+|Pod 作成|event_id.iaas.cluster.pod.create|
+|Pod 削除|event_id.iaas.cluster.pod.delete|
+|Pod 退避|event_id.iaas.cluster.pod.evict|
+|Pod 実行|event_id.iaas.cluster.pod.exec|
+|Podポートフォワーディング 設定|event_id.iaas.cluster.pod.port_forward|
+|Pod 修正|event_id.iaas.cluster.pod.update|
+|Pod Disruption Budget 作成|event_id.iaas.cluster.pod_disruption_budget.create|
+|Pod Disruption Budget 削除|event_id.iaas.cluster.pod_disruption_budget.delete|
+|Pod Disruption Budget 修正|event_id.iaas.cluster.pod_disruption_budget.update|
+|Pod Security Policy 作成|event_id.iaas.cluster.pod_security_policy.create|
+|Pod Security Policy 削除|event_id.iaas.cluster.pod_security_policy.delete|
+|Pod Security Policy 修正|event_id.iaas.cluster.pod_security_policy.update|
+|Pod Template 作成|event_id.iaas.cluster.pod_template.create|
+|Pod Template 削除|event_id.iaas.cluster.pod_template.delete|
+|Pod Template 修正|event_id.iaas.cluster.pod_template.update|
+|Priority Class 作成|event_id.iaas.cluster.priority_class.create|
+|Priority Class 削除|event_id.iaas.cluster.priority_class.delete|
+|Priority Class 修正|event_id.iaas.cluster.priority_class.update|
+|Replication Controller 作成|event_id.iaas.cluster.replication_controller.create|
+|Replication Controller 削除|event_id.iaas.cluster.replication_controller.delete|
+|Replication Controller 修正|event_id.iaas.cluster.replication_controller.update|
+|Replication Controllerスケール調整|event_id.iaas.cluster.replication_controller.update_scale|
+|Replica Set 作成|event_id.iaas.cluster.replica_set.create|
+|Replica Set 削除|event_id.iaas.cluster.replica_set.delete|
+|Replica Set 修正|event_id.iaas.cluster.replica_set.update|
+|Replica Setスケール 調整|event_id.iaas.cluster.replica_set.update_scale|
+|Resource Quota 作成|event_id.iaas.cluster.resource_quota.create|
+|Resource Quota 削除|event_id.iaas.cluster.resource_quota.delete|
+|Resource Quota 修正|event_id.iaas.cluster.resource_quota.update|
+|Role 作成|event_id.iaas.cluster.role.create|
+|Role 削除|event_id.iaas.cluster.role.delete|
+|Role 修正|event_id.iaas.cluster.role.update|
+|RoleBinding 作成|event_id.iaas.cluster.role_binding.create|
+|RoleBinding 削除|event_id.iaas.cluster.role_binding.delete|
+|RoleBinding 修正|event_id.iaas.cluster.role_binding.update|
+|Secret 作成|event_id.iaas.cluster.secret.create|
+|Secret 削除|event_id.iaas.cluster.secret.delete|
+|Secret 修正|event_id.iaas.cluster.secret.update|
+|サービス 作成|event_id.iaas.cluster.service.create|
+|サービス 削除|event_id.iaas.cluster.service.delete|
+|サービス 修正|event_id.iaas.cluster.service.update|
+|Service Account 作成|event_id.iaas.cluster.service_account.create|
+|Service Account 削除|event_id.iaas.cluster.service_account.delete|
+|Service Account 修正|event_id.iaas.cluster.service_account.update|
+|Stateful Set 作成|event_id.iaas.cluster.stateful_set.create|
+|Stateful Set 削除|event_id.iaas.cluster.stateful_set.delete|
+|Stateful Set 修正|event_id.iaas.cluster.stateful_set.update|
+|Stateful Setスケール 調整|event_id.iaas.cluster.stateful_set.update_scale|
+|Storage Class 作成|event_id.iaas.cluster.storage_class.create|
+|Storage Class 削除|event_id.iaas.cluster.storage_class.delete|
+|Storage Class 修正|event_id.iaas.cluster.storage_class.update|
+|Validating Webhook Configuration 作成|event_id.iaas.cluster.validating_webhook_configuration.create|
+|Validating Webhook Configuration 削除|event_id.iaas.cluster.validating_webhook_configuration.delete|
+|Validating Webhook Configuration 修正|event_id.iaas.cluster.validating_webhook_configuration.update|
+|テンプレートの作成|event_id.iaas.ncs.template.create|
+|テンプレートの削除|event_id.iaas.ncs.template.delete|
+|テンプレートバージョンの作成|event_id.iaas.ncs.template_version.create|
+|テンプレートバージョンの削除|event_id.iaas.ncs.template_version.delete|
+|ワークロードの作成|event_id.iaas.ncs.workload_create.start|
+|ワークロードの作成完|event_id.iaas.ncs.workload_create.end|
+|ワークロードの作成失敗|event_id.iaas.ncs.workload_create.failed|
+|ワークロードの削除|event_id.iaas.ncs.workload.delete|
+|ワークロード停止|event_id.iaas.ncs.workload.stop|
+|ワークロード再起動|event_id.iaas.ncs.workload_restart.start|
+|ワークロード再起動完了|event_id.iaas.ncs.workload_restart.end|
+|ワークロード再起動失敗|event_id.iaas.ncs.workload_restart.failed|
+|ワークロード説明の変更|event_id.iaas.ncs.workload_description.update|
+|ワークロードのテンプレート変更|event_id.iaas.ncs.workload_template_update.start|
+|ワークロードのテンプレート変更完了|event_id.iaas.ncs.workload_template_update.end|
+|ワークロードのテンプレート変更失敗|event_id.iaas.ncs.workload_template_update.failed|
+|ワークロード作業リクエスト数の変更|event_id.iaas.ncs.workload_desired_update.start|
+|ワークロード作業リクエスト数の変更完了|event_id.iaas.ncs.workload_desired_update.end|
+|ワークロード作業リクエスト数の変更失敗|event_id.iaas.ncs.workload_desired_update.failed|
+|ワークロードの終了予約設定を変更|event_id.iaas.ncs.workload_active_deadline.update|
+|ワークロードロードバランサーの変更|event_id.iaas.ncs.workload_loadbalancer_update.start|
+|ワークロードロードバランサーの変更完了|event_id.iaas.ncs.workload_loadbalancer_update.end|
+|ワークロード内部ロードバランサーの変更|event_id.iaas.ncs.workload_internal_loadbalancer.update|
+|ワークロードの予約実行変更|event_id.iaas.ncs.workload_schedule.update|
+|コンテナターミナル接続|event_id.iaas.ncs.container_terminal.exec|
+|コンテナターミナル接続終了|event_id.iaas.ncs.container_terminal.exit|
+|ワークロード作業の再起動|event_id.iaas.ncs.workload_task.restart|
+|ワークロードオートスケーラの変更|event_id.iaas.ncs.workload_autoscaler.update|
+|ワークロード作業数の自動調整開始|event_id.iaas.ncs.workload_task_resize.start|
+|ワークロード作業数の自動調整終了|event_id.iaas.ncs.workload_task_resize.end|
+|ワークロード作業数の自動調整失敗|event_id.iaas.ncs.workload_task_resize.failed|
+|NAS CIFS認証情報の作成|event_id.iaas.nas.cifs_credential.create|
+|NAS CIFS認証情報の削除|event_id.iaas.nas.cifs_credential.delete|
+|NAS CIFS認証情報の変更|event_id.iaas.nas.cifs_credential.update|
+|NAS暗号化キーストア設定&#61;|event_id.iaas.nas.encryption_key_store.set|
+|NASストレージ作成|event_id.iaas.nas.volume.create|
+|NASストレージ削除|event_id.iaas.nas.volume.delete|
+|NASストレージ設定の変更|event_id.iaas.nas.volume.update|
+|NASストレージ作成完了|event_id.iaas.nas.volume.create_end|
+|NASストレージ削除完了|event_id.iaas.nas.volume.delete_end|
+|NASストレージ設定の変更完了|event_id.iaas.nas.volume.update_end|
+|NASストレージスナップショット作成|event_id.iaas.nas.snapshot.create|
+|NASストレージスナップショット削除|event_id.iaas.nas.snapshot.delete|
+|NASストレージスナップショット復元|event_id.iaas.nas.snapshot.restore|
+|NASストレージ複製設定|event_id.iaas.nas.replication.set|
+|NASストレージ複製設定の解除|event_id.iaas.nas.replication.unset|
+|NASストレージ複製開始|event_id.iaas.nas.replication.start|
+|NASストレージ複製停止|event_id.iaas.nas.replication.stop|
+|NASストレージ複製方向の変更|event_id.iaas.nas.replication.change_direction|
+|NASサブネット接続の追加|event_id.iaas.nas.subnet.attach|
+|NASサブネット接続解除|event_id.iaas.nas.subnet.detach|
+|NAS for AIスナップショットの作成|event_id.iaas.nas_for_ai.snapshot.create|
+|NAS for AIスナップショットの削除|event_id.iaas.nas_for_ai.snapshot.delete|
+|NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
+|NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
+|NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
+|ゲートウェイ作成|event_id.iaas.storage_gateway.gateway.create|
+|ゲートウェイ設定変更|event_id.iaas.storage_gateway.gateway.update|
+|ゲートウェイ削除|event_id.iaas.storage_gateway.gateway.delete|
+|ゲートウェイ作成完了|event_id.iaas.storage_gateway.gateway.create_end|
+|ゲートウェイ設定変更完了|event_id.iaas.storage_gateway.gateway.update_end|
+|ゲートウェイ削除完了|event_id.iaas.storage_gateway.gateway.delete_end|
+|共有作成|event_id.iaas.storage_gateway.share.create|
+|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|共有削除|event_id.iaas.storage_gateway.share.delete|
+|共有作成完了|event_id.iaas.storage_gateway.share.create_end|
+|共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
+|共有削除完了|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Register/Modify Account Metadata|event_id.object_storage.account.metadata.update|
-|Create Containers|event_id.object_storage.container.create|
-|Delete Containers|event_id.object_storage.container.delete|
-|Register/Modify Container Metadata|event_id.object_storage.container.metadata.update|
-|Upload objects|event_id.object_storage.object.upload|
-|Copy objects|event_id.object_storage.object.copy|
-|Delete objects|event_id.object_storage.object.delete|
-|Register/Modify Object Metadata|event_id.object_storage.object.metadata.update|
-|Set Container Replication|event_id.object_storage.container.sync.enable|
-|Change Container Replication Settings|event_id.object_storage.container.sync.update|
-|Unset Container Replication|event_id.object_storage.container.sync.disable|
-|Upload Object Replication|event_id.object_storage.object.sync.upload|
-|Download objects|event_id.object_storage.object.download|
-|List Objects|event_id.object_storage.object.list_lookup|
-|List Containers|event_id.object_storage.container.list_lookup|
+|アカウントメタデータの登録/修正|event_id.object_storage.account.metadata.update|
+|コンテナの作成|event_id.object_storage.container.create|
+|コンテナの削除|event_id.object_storage.container.delete|
+|コンテナメタデータの登録/修正|event_id.object_storage.container.metadata.update|
+|オブジェクトのアップロード|event_id.object_storage.object.upload|
+|オブジェクトのコピー|event_id.object_storage.object.copy|
+|オブジェクトの削除|event_id.object_storage.object.delete|
+|オブジェクトメタデータの登録/修正|event_id.object_storage.object.metadata.update|
+|コンテナ複製設定|event_id.object_storage.container.sync.enable|
+|コンテナ複製設定の変更|event_id.object_storage.container.sync.update|
+|コンテナ複製設定の解除|event_id.object_storage.container.sync.disable|
+|オブジェクト複製アップロード|event_id.object_storage.object.sync.upload|
+|オブジェクトのダウンロード|event_id.object_storage.object.download|
+|オブジェクトリストの照会|event_id.object_storage.object.list_lookup|
+|コンテナリストの照会|event_id.object_storage.container.list_lookup|
 
 ### RDS for MySQL
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Reset Parameter Group|event_id.rds_for_mysql.resetParameterGroup|
-|Modify Parameter Group|event_id.rds_for_mysql.modifyParameterGroup|
-|Create Parameter Group|event_id.rds_for_mysql.createParameterGroup|
-|Delete Parameter Group|event_id.rds_for_mysql.deleteParameterGroup|
-|Copy Parameter Group|event_id.rds_for_mysql.copyParameterGroup|
-|Apply Parameter Group Changes|event_id.rds_for_mysql.instance_apply_recent_parameter_group|
-|Change to DB Instance after Failover|event_id.rds_for_mysql.instance_action.failover_split|
-|High Availability Rebuild after Failover|event_id.rds_for_mysql.instance.ha.rebuild|
-|Restore High Availability of Failover Instance|event_id.rds_for_mysql.instance.ha.repair|
-|Enable Authentication Plugin|event_id.rds_for_mysql.enable_authentication_plugin|
-|Stop Instance|event_id.rds_for_mysql.instance.stop|
-|Modify Event Group|event_id.rds_for_mysql.modifyEventSubscription|
-|Delete Event Subscription|event_id.rds_for_mysql.deleteEventSubscription|
-|Register Event Subscription|event_id.rds_for_mysql.registerEventSubscription|
-|Export backup to the object storage|event_id.rds_for_mysql.backup.export|
-|Enable Notification|event_id.rds_for_mysql.notification.enable|
-|Create Notification|event_id.rds_for_mysql.notification.create|
-|Delete Notification|event_id.rds_for_mysql.notification.delete|
-|Disable Notification|event_id.rds_for_mysql.notification.disable|
-|Change Notification|event_id.rds_for_mysql.notification.update|
-|Modify Notification Group|event_id.rds_for_mysql.modifyNotificationGroup|
-|Create Notification Group|event_id.rds_for_mysql.createNotificationGroup|
-|Delete Notification Group|event_id.rds_for_mysql.deleteNotificationGroup|
-|Create Receiver Group|event_id.rds_for_mysql.receiver_group.create|
-|Delete Receiver Group|event_id.rds_for_mysql.receiver_group.delete|
-|Change Receiver Group|event_id.rds_for_mysql.receiver_group.update|
-|Add User|event_id.rds_for_mysql.instance.db_definition.user.create|
-|Delete User|event_id.rds_for_mysql.instance.db_definition.user.delete|
-|Modify User|event_id.rds_for_mysql.instance.db_definition.user.update|
-|Synchronize User|event_id.rds_for_mysql.instance.db_definition.user.sync|
-|Modify User Group|event_id.rds_for_mysql.modifyUserGroup|
-|Create User Group|event_id.rds_for_mysql.createUserGroup|
-|Delete User Group|event_id.rds_for_mysql.deleteUserGroup|
-|Rebuild Replication|event_id.rds_for_mysql.instance.repair_replication|
-|Delete Backup|event_id.rds_for_mysql.instance.backup.delete|
-|Add Monitoring Chart Layout|event_id.rds_for_mysql.createChartLayout|
-|Modify Monitoring Chart Layout|event_id.rds_for_mysql.modifyChartLayout|
-|Delete Monitoring Chart Layout|event_id.rds_for_mysql.deleteChartLayout|
-|Pause High Availability|event_id.rds_for_mysql.instance.ha.pause|
-|Resume High Availability|event_id.rds_for_mysql.instance.ha.resume|
-|Updated DB definition information|event_id.rds_for_mysql.instance.db_definition.update|
-|Restart DB Instance|event_id.rds_for_mysql.instance_action.restart|
-|Free Up DB Instance Space|event_id.rds_for_mysql.instance.volume.secure|
-|Restoration from DB Instance Object Storage|event_id.rds_for_mysql.instance.restore_from_obs|
-|DB instance started|event_id.rds_for_mysql.instance_action.start|
-|Promote DB Instance|event_id.rds_for_mysql.instance_action.promote|
-|Expand DB Instance Storage|event_id.rds_for_mysql.instance.volume.extend|
-|Create DB Instance|event_id.rds_for_mysql.instance.create|
-|Change Detailed Setting For DB Instance|event_id.rds_for_mysql.instance.detail.update|
-|Change Deletion Protection Setting for DB instance|event_id.rds_for_mysql.instance.change_deletion_protection|
-|Delete DB Instance|event_id.rds_for_mysql.instance.delete|
-|Replicate DB Instance|event_id.rds_for_mysql.instance_action.replicate|
-|Restore DB Instance|event_id.rds_for_mysql.instance_action.restore|
-|Make and export a DB instance backup|event_id.rds_for_mysql.instance.backup.export|
-|Back Up DB Instance|event_id.rds_for_mysql.instance_action.backup|
-|DB instance migration|event_id.rds_for_mysql.instance.migrate|
-|Change Management Information for DB Instance|event_id.rds_for_mysql.instance.management.update|
-|Force Restart DB Instance|event_id.rds_for_mysql.instance_action.force_restart|
-|Change DB Instance Configuration|event_id.rds_for_mysql.instance.configuration.update|
-|DB schema created|event_id.rds_for_mysql.instance.db_definition.schema.create|
-|DB schema deleted|event_id.rds_for_mysql.instance.db_definition.schema.delete|
-|Synchronize DB Schema|event_id.rds_for_mysql.instance.db_definition.schema.sync|
-|Modify DB Security Group|event_id.rds_for_mysql.modifyDbSecurityGroup|
-|Create DB Security Group|event_id.rds_for_mysql.createDbSecurityGroup|
-|Delete DB Security Group|event_id.rds_for_mysql.deleteDbSecurityGroup|
-|Modify DB Security Group Rule|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
-|Create DB Security Group Rule|event_id.rds_for_mysql.createDbSecurityGroupRule|
-|Delete DB Security Group Rule|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
-|DB Instance OS Upgrade|event_id.rds_for_mysql.instance.os.upgrade|
+|パラメータグループ再設定|event_id.rds_for_mysql.resetParameterGroup|
+|パラメータグループ修正|event_id.rds_for_mysql.modifyParameterGroup|
+|パラメータグループ作成|event_id.rds_for_mysql.createParameterGroup|
+|パラメータグループ削除|event_id.rds_for_mysql.deleteParameterGroup|
+|パラメータグループのコピー|event_id.rds_for_mysql.copyParameterGroup|
+|パラメータグループの変更事項を適用|event_id.rds_for_mysql.instance_apply_recent_parameter_group|
+|フェイルオーバー完了後、一般DBインスタンスに変更|event_id.rds_for_mysql.instance_action.failover_split|
+|フェイルオーバーが完了した高可用性の再構築|event_id.rds_for_mysql.instance.ha.rebuild|
+|障害措置インスタンス高可用性機能を復旧|event_id.rds_for_mysql.instance.ha.repair|
+|認証プラグインの有効化|event_id.rds_for_mysql.enable_authentication_plugin|
+|インスタンスの停止|event_id.rds_for_mysql.instance.stop|
+|イベント購読を修正|event_id.rds_for_mysql.modifyEventSubscription|
+|イベント購読を削除|event_id.rds_for_mysql.deleteEventSubscription|
+|イベント購読を登録|event_id.rds_for_mysql.registerEventSubscription|
+|オブジェクトストレージでバックアップをエクスポート|event_id.rds_for_mysql.backup.export|
+|通知の有効化|event_id.rds_for_mysql.notification.enable|
+|通知の作成|event_id.rds_for_mysql.notification.create|
+|通知の削除|event_id.rds_for_mysql.notification.delete|
+|通知の無効化|event_id.rds_for_mysql.notification.disable|
+|通知の変更|event_id.rds_for_mysql.notification.update|
+|通知グループを修正|event_id.rds_for_mysql.modifyNotificationGroup|
+|通知グループを作成|event_id.rds_for_mysql.createNotificationGroup|
+|通知グループを削除|event_id.rds_for_mysql.deleteNotificationGroup|
+|受信グループの作成|event_id.rds_for_mysql.receiver_group.create|
+|受信グループの削除|event_id.rds_for_mysql.receiver_group.delete|
+|受信グループの変更|event_id.rds_for_mysql.receiver_group.update|
+|ユーザーの追加|event_id.rds_for_mysql.instance.db_definition.user.create|
+|ユーザーの削除|event_id.rds_for_mysql.instance.db_definition.user.delete|
+|ユーザー変更|event_id.rds_for_mysql.instance.db_definition.user.update|
+|ユーザーの同期|event_id.rds_for_mysql.instance.db_definition.user.sync|
+|ユーザーグループを修正|event_id.rds_for_mysql.modifyUserGroup|
+|ユーザーグループを作成|event_id.rds_for_mysql.createUserGroup|
+|ユーザーグループを削除|event_id.rds_for_mysql.deleteUserGroup|
+|複製再構築|event_id.rds_for_mysql.instance.repair_replication|
+|バックアップの削除|event_id.rds_for_mysql.instance.backup.delete|
+|モニタリングチャートレイアウトを追加|event_id.rds_for_mysql.createChartLayout|
+|モニタリングチャートレイアウトを修正|event_id.rds_for_mysql.modifyChartLayout|
+|モニタリングチャートレイアウトを削除|event_id.rds_for_mysql.deleteChartLayout|
+|高可用性一時停止|event_id.rds_for_mysql.instance.ha.pause|
+|高可用性再開|event_id.rds_for_mysql.instance.ha.resume|
+|DB定義情報変更|event_id.rds_for_mysql.instance.db_definition.update|
+|DBインスタンスの再起動|event_id.rds_for_mysql.instance_action.restart|
+|DBインスタンスの容量を確保|event_id.rds_for_mysql.instance.volume.secure|
+|DBインスタンスオブジェクトストレージから復元|event_id.rds_for_mysql.instance.restore_from_obs|
+|DBインスタンスの起動|event_id.rds_for_mysql.instance_action.start|
+|DBインスタンスの昇格|event_id.rds_for_mysql.instance_action.promote|
+|DBインスタンスのストレージを拡張|event_id.rds_for_mysql.instance.volume.extend|
+|DBインスタンスの作成|event_id.rds_for_mysql.instance.create|
+|DBインスタンスの詳細設定を変更|event_id.rds_for_mysql.instance.detail.update|
+|DBインスタンスの削除保護設定を変更|event_id.rds_for_mysql.instance.change_deletion_protection|
+|DBインスタンスの削除|event_id.rds_for_mysql.instance.delete|
+|DBインスタンスのコピー|event_id.rds_for_mysql.instance_action.replicate|
+|DBインスタンスの復元|event_id.rds_for_mysql.instance_action.restore|
+|DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_mysql.instance.backup.export|
+|DBインスタンスのバックアップ|event_id.rds_for_mysql.instance_action.backup|
+|DBインスタンスマイグレーション|event_id.rds_for_mysql.instance.migrate|
+|DBインスタンス管理情報を変更|event_id.rds_for_mysql.instance.management.update|
+|DBインスタンス強制再起動|event_id.rds_for_mysql.instance_action.force_restart|
+|DBインスタンスの構成を変更|event_id.rds_for_mysql.instance.configuration.update|
+|DBスキーマ作成|event_id.rds_for_mysql.instance.db_definition.schema.create|
+|DBスキーマ削除|event_id.rds_for_mysql.instance.db_definition.schema.delete|
+|DBスキーマの同期|event_id.rds_for_mysql.instance.db_definition.schema.sync|
+|DBセキュリティグループの修正|event_id.rds_for_mysql.modifyDbSecurityGroup|
+|DBセキュリティグループの作成|event_id.rds_for_mysql.createDbSecurityGroup|
+|DBセキュリティグループの削除|event_id.rds_for_mysql.deleteDbSecurityGroup|
+|DBセキュリティグループルールの修正|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
+|DBセキュリティグループルールの作成|event_id.rds_for_mysql.createDbSecurityGroupRule|
+|DBセキュリティグループルールの削除|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
+|DBインスタンスOSアップグレード|event_id.rds_for_mysql.instance.os.upgrade|
 
 ### RDS for MariaDB
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create DB Instance|event_id.rds_for_mysql.instance.create|
-|Delete DB Instance|event_id.rds_for_mysql.instance.delete|
-|Change Detailed Setting For DB Instance|event_id.rds_for_mysql.instance.detail.update|
-|Change Management Information for DB Instance|event_id.rds_for_mysql.instance.management.update|
-|Change DB Instance Configuration|event_id.rds_for_mysql.instance.configuration.update|
-|Back Up DB Instance|event_id.rds_for_mysql.instance_action.backup|
-|Restore DB Instance|event_id.rds_for_mysql.instance_action.restore|
-|Replicate DB Instance|event_id.rds_for_mysql.instance_action.replicate|
-|Restart DB Instance|event_id.rds_for_mysql.instance_action.restart|
-|Promote DB Instance|event_id.rds_for_mysql.instance_action.promote|
-|Expand DB Instance Storage|event_id.rds_for_mysql.instance.volume.extend|
-|Free Up DB Instance Space|event_id.rds_for_mysql.instance.volume.secure|
-|Stop Instance|event_id.rds_for_mysql.instance.stop|
-|Add Monitoring Chart Layout|event_id.rds_for_mysql.createChartLayout|
-|Delete Monitoring Chart Layout|event_id.rds_for_mysql.deleteChartLayout|
-|Modify Monitoring Chart Layout|event_id.rds_for_mysql.modifyChartLayout|
-|Delete Backup|event_id.rds_for_mysql.instance.backup.delete|
-|Create Notification|event_id.rds_for_mysql.notification.create|
-|Change Notification|event_id.rds_for_mysql.notification.update|
-|Delete Notification|event_id.rds_for_mysql.notification.delete|
-|Enable Notification|event_id.rds_for_mysql.notification.enable|
-|Disable Notification|event_id.rds_for_mysql.notification.disable|
-|Create Notification Group|event_id.rds_for_mysql.createNotificationGroup|
-|Modify Notification Group|event_id.rds_for_mysql.modifyNotificationGroup|
-|Delete Notification Group|event_id.rds_for_mysql.deleteNotificationGroup|
-|Register Event Subscription|event_id.rds_for_mysql.registerEventSubscription|
-|Modify Event Group|event_id.rds_for_mysql.modifyEventSubscription|
-|Delete Event Subscription|event_id.rds_for_mysql.deleteEventSubscription|
-|Create User Group|event_id.rds_for_mysql.createUserGroup|
-|Modify User Group|event_id.rds_for_mysql.modifyUserGroup|
-|Delete User Group|event_id.rds_for_mysql.deleteUserGroup|
-|Create Receiver Group|event_id.rds_for_mysql.receiver_group.create|
-|Change Receiver Group|event_id.rds_for_mysql.receiver_group.update|
-|Delete Receiver Group|event_id.rds_for_mysql.receiver_group.delete|
-|Updated DB definition information|event_id.rds_for_mysql.instance.db_definition.update|
-|Synchronize DB Schema|event_id.rds_for_mysql.instance.db_definition.schema.sync|
-|Synchronize User|event_id.rds_for_mysql.instance.db_definition.user.sync|
-|Make and export a DB instance backup|event_id.rds_for_mysql.instance.backup.export|
-|Export backup to the object storage|event_id.rds_for_mysql.backup.export|
+|DBインスタンスの作成|event_id.rds_for_mysql.instance.create|
+|DBインスタンスの削除|event_id.rds_for_mysql.instance.delete|
+|DBインスタンスの詳細設定を変更|event_id.rds_for_mysql.instance.detail.update|
+|DBインスタンス管理情報を変更|event_id.rds_for_mysql.instance.management.update|
+|DBインスタンスの構成を変更|event_id.rds_for_mysql.instance.configuration.update|
+|DBインスタンスのバックアップ|event_id.rds_for_mysql.instance_action.backup|
+|DBインスタンスの復元|event_id.rds_for_mysql.instance_action.restore|
+|DBインスタンスのコピー|event_id.rds_for_mysql.instance_action.replicate|
+|DBインスタンスの再起動|event_id.rds_for_mysql.instance_action.restart|
+|DBインスタンスの昇格|event_id.rds_for_mysql.instance_action.promote|
+|DBインスタンスのストレージを拡張|event_id.rds_for_mysql.instance.volume.extend|
+|DBインスタンスの容量を確保|event_id.rds_for_mysql.instance.volume.secure|
+|インスタンスの停止|event_id.rds_for_mysql.instance.stop|
+|モニタリングチャートレイアウトを追加|event_id.rds_for_mysql.createChartLayout|
+|モニタリングチャートレイアウトを削除|event_id.rds_for_mysql.deleteChartLayout|
+|モニタリングチャートレイアウトを修正|event_id.rds_for_mysql.modifyChartLayout|
+|バックアップの削除|event_id.rds_for_mysql.instance.backup.delete|
+|通知の作成|event_id.rds_for_mysql.notification.create|
+|通知の変更|event_id.rds_for_mysql.notification.update|
+|通知の削除|event_id.rds_for_mysql.notification.delete|
+|通知の有効化|event_id.rds_for_mysql.notification.enable|
+|通知の無効化|event_id.rds_for_mysql.notification.disable|
+|通知グループを作成|event_id.rds_for_mysql.createNotificationGroup|
+|通知グループを修正|event_id.rds_for_mysql.modifyNotificationGroup|
+|通知グループを削除|event_id.rds_for_mysql.deleteNotificationGroup|
+|イベント購読を登録|event_id.rds_for_mysql.registerEventSubscription|
+|イベント購読を修正|event_id.rds_for_mysql.modifyEventSubscription|
+|イベント購読を削除|event_id.rds_for_mysql.deleteEventSubscription|
+|ユーザーグループを作成|event_id.rds_for_mysql.createUserGroup|
+|ユーザーグループを修正|event_id.rds_for_mysql.modifyUserGroup|
+|ユーザーグループを削除|event_id.rds_for_mysql.deleteUserGroup|
+|受信グループの作成|event_id.rds_for_mysql.receiver_group.create|
+|受信グループの変更|event_id.rds_for_mysql.receiver_group.update|
+|受信グループの削除|event_id.rds_for_mysql.receiver_group.delete|
+|DB定義情報変更|event_id.rds_for_mysql.instance.db_definition.update|
+|DBスキーマの同期|event_id.rds_for_mysql.instance.db_definition.schema.sync|
+|ユーザーの同期|event_id.rds_for_mysql.instance.db_definition.user.sync|
+|DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_mysql.instance.backup.export|
+|オブジェクトストレージでバックアップをエクスポート|event_id.rds_for_mysql.backup.export|
 
 ### Secure Key Manager
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Keystore|event_id.skm.keystore.create|
-|Delete Keystore|event_id.skm.keystore.delete|
-|Change Keystore Information|event_id.skm.keystore.update|
-|Create Confidential Data|event_id.skm.secret.create|
-|Immediately Delete Confidential Data|event_id.skm.secret.delete|
-|Request for Deleting Confidential Data|event_id.skm.secret.delete_request|
-|Cancel Request for Deleting Confidential Data|event_id.skm.secret.delete_request_cancel|
-|Change Confidential Data Information|event_id.skm.secret.update|
-|Query Confidential Data|event_id.skm.secret.get|
-|Create Symmetric Key|event_id.skm.symmetric.create|
-|Immediately Delete Symmetric Key|event_id.skm.symmetric.delete|
-|Request for Deleting Symmetric Key|event_id.skm.symmetric.delete_request|
-|Cancel Request for Deleting Symmetric Key|event_id.skm.symmetric.delete_request_cancel|
-|Change Symmetric Key Information|event_id.skm.symmetric.update|
-|Immediately Rotate Symmetric Key|event_id.skm.symmetric.rotate|
-|Request for Deleting Symmetric Key Version|event_id.skm.symmetric_version.delete_request|
-|Cancel Request for Deleting Symmetric Key Version|event_id.skm.symmetric_version.delete_request_cancel|
-|Immediately Delete Symmetric Key Version|event_id.skm.symmetric_version.delete|
-|Create Asymmetric Key|event_id.skm.asymmetric.create|
-|Immediately Delete Asymmetric Key|event_id.skm.asymmetric.delete|
-|Request for Deleting Asymmetric Key|event_id.skm.asymmetric.delete_request|
-|Cancel Request for Deleting Asymmetric Key|event_id.skm.asymmetric.delete_request_cancel|
-|Change Asymmetric Key Information|event_id.skm.asymmetric.update|
-|Immediately Rotate Asymmetric Key|event_id.skm.asymmetric.rotate|
-|Request for Deleting Asymmetric Key Version|event_id.skm.asymmetric_version.delete_request|
-|Cancel Request for Deleting Asymmetric Key Version|event_id.skm.asymmetric_version.delete_request_cancel|
-|Immediately Delete Asymmetric Key Version|event_id.skm.asymmetric_version.delete|
-|Register IPv4 Address|event_id.skm.ipv4.create|
-|Request for Deleting IPv4 Address|event_id.skm.ipv4.delete_request|
-|Cancel Request for IPv4 Address|event_id.skm.ipv4.delete_request_cancel|
-|Change IPv4 Address Information|event_id.skm.ipv4.update|
-|Immediately Delete IPv4 Address|event_id.skm.ipv4.delete|
-|Download List of IPv4 Addresses|event_id.skm.ipv4.download_list|
-|Bulk Register IPv4 Addresses|event_id.skm.ipv4.create_multi|
-|Register MAC Address|event_id.skm.mac.create|
-|Request for Deleting MAC Address|event_id.skm.mac.delete_request|
-|Cancel Request for Deleting MAC Address|event_id.skm.mac.delete_request_cancel|
-|Change MAC Address Information|event_id.skm.mac.update|
-|Immediately Delete MAC Address|event_id.skm.mac.delete|
-|Download List of MAC Addresses|event_id.skm.mac.download_list|
-|Bulk Register MAC Addresses|event_id.skm.mac.create_multi|
-|Register Certificate|event_id.skm.cert.create|
-|Request for Deleting Certificate|event_id.skm.cert.delete_request|
-|Cancel Request for Deleting Certificate|event_id.skm.cert.delete_request_cancel|
-|Change Certificate Information|event_id.skm.cert.update|
-|Immediately Delete Certificate|event_id.skm.cert.delete|
-|Download Certificate|event_id.skm.cert.download|
-|Approval Process Approve|event_id.skm.approval.approve|
-|Approval Process Deny|event_id.skm.approval.deny|
-|Approval Process Approve Request|event_id.skm.approval.approve_request|
-|Query Confidential Data (API)|event_id.skm.api.secrets.get|
-|Encrypt with Symmetric Key (API)|event_id.skm.api.symmetric.encrypt|
-|Decrypt with Symmetric Key (API)|event_id.skm.api.symmetric.decrypt|
-|Create Local Key (API)|event_id.skm.api.symmetric.create_local_key|
-|Sign with Asymmetric Key (API)|event_id.skm.api.asymmetric.sign|
-|Verify Signature with Asymmetric Key (API)|event_id.skm.api.asymmetric.verify|
-|Auto Delete Confidential Data|event_id.skm.secrets.scheduled_delete|
-|Auto Delete Symmetric Key|event_id.skm.symmetric.scheduled_delete|
-|Auto Delete Asymmetric Key|event_id.skm.asymmetric.scheduled_delete|
-|Query Symmetric Key (API)|event_id.skm.api.symmetric.get|
-|Query Private Key (API)|event_id.skm.api.asymmetric.get.privateKey|
-|Query Public Key (API)|event_id.skm.api.asymmetric.get.publicKey|
-|Create Confidential Data (API)|event_id.skm.api.secrets.create|
-|Create Symmetric Key (API)|event_id.skm.api.symmetric.create|
-|Create Asymmetric Key (API)|event_id.skm.api.asymmetric.create|
-|Request for Deleting Confidential Data (API)|event_id.skm.api.secrets.delete_request|
-|Request for Deleting Symmetric Key (API)|event_id.skm.api.symmetric.delete_request|
-|Request for Deleting Asymmetric Key (API)|event_id.skm.api.asymmetric.delete_request|
-|Immediately Delete Confidential Data (API)|event_id.skm.api.secrets.delete|
-|Immediately Delete Symmetric Key (API)|event_id.skm.api.symmetric.delete|
-|Immediately Delete Asymmetric Key (API)|event_id.skm.api.asymmetric.delete|
-|Modify Confidential Data (API)|event_id.skm.api.secrets.modify|
+|キーストアの作成|event_id.skm.keystore.create|
+|キーストアの削除|event_id.skm.keystore.delete|
+|キーストア情報の変更|event_id.skm.keystore.update|
+|機密データの作成|event_id.skm.secret.create|
+|機密データの即時削除|event_id.skm.secret.delete|
+|機密データの削除リクエスト|event_id.skm.secret.delete_request|
+|機密データ削除リクエストキャンセル|event_id.skm.secret.delete_request_cancel|
+|機密データ情報の変更|event_id.skm.secret.update|
+|機密データの照会|event_id.skm.secret.get|
+|対称鍵の作成|event_id.skm.symmetric.create|
+|対称鍵の即時削除|event_id.skm.symmetric.delete|
+|対称鍵の削除リクエスト|event_id.skm.symmetric.delete_request|
+|対称鍵削除リクエストキャンセル|event_id.skm.symmetric.delete_request_cancel|
+|対称鍵情報の変更|event_id.skm.symmetric.update|
+|対称鍵の即時ローテーション|event_id.skm.symmetric.rotate|
+|対称鍵バージョンの削除リクエスト|event_id.skm.symmetric_version.delete_request|
+|対称鍵バージョン削除リクエストキャンセル|event_id.skm.symmetric_version.delete_request_cancel|
+|対称鍵バージョンの即時削除|event_id.skm.symmetric_version.delete|
+|非対称鍵の作成|event_id.skm.asymmetric.create|
+|非対称鍵の即時削除|event_id.skm.asymmetric.delete|
+|非対称鍵の削除リクエスト|event_id.skm.asymmetric.delete_request|
+|非対称鍵削除リクエストのキャンセル|event_id.skm.asymmetric.delete_request_cancel|
+|非対称鍵情報の変更|event_id.skm.asymmetric.update|
+|非対称鍵の即時ローテーション|event_id.skm.asymmetric.rotate|
+|非対称鍵バージョン削除リクエスト|event_id.skm.asymmetric_version.delete_request|
+|非対称鍵バージョン削除リクエストのキャンセル|event_id.skm.asymmetric_version.delete_request_cancel|
+|非対称鍵バージョンの即時削除|event_id.skm.asymmetric_version.delete|
+|IPv4アドレスの登録|event_id.skm.ipv4.create|
+|IPv4アドレスの削除リクエスト|event_id.skm.ipv4.delete_request|
+|IPv4アドレスの削除リクエストキャンセル|event_id.skm.ipv4.delete_request_cancel|
+|IPv4アドレス情報の変更|event_id.skm.ipv4.update|
+|IPv4アドレスの即時削除|event_id.skm.ipv4.delete|
+|IPv4アドレスリストのダウンロード|event_id.skm.ipv4.download_list|
+|IPv4アドレスの一括登録|event_id.skm.ipv4.create_multi|
+|MACアドレスの登録|event_id.skm.mac.create|
+|MACアドレスの削除リクエスト|event_id.skm.mac.delete_request|
+|MACアドレス削除リクエストキャンセル|event_id.skm.mac.delete_request_cancel|
+|MACアドレス情報の変更|event_id.skm.mac.update|
+|MACアドレスの即時削除|event_id.skm.mac.delete|
+|MACアドレスリストのダウンロード|event_id.skm.mac.download_list|
+|MACアドレスの一括登録|event_id.skm.mac.create_multi|
+|証明書の登録|event_id.skm.cert.create|
+|証明書の削除リクエスト|event_id.skm.cert.delete_request|
+|証明書の削除リクエストキャンセル|event_id.skm.cert.delete_request_cancel|
+|証明書情報の変更|event_id.skm.cert.update|
+|証明書の即時削除|event_id.skm.cert.delete|
+|証明書のダウンロード|event_id.skm.cert.download|
+|承認プロセスを承認|event_id.skm.approval.approve|
+|承認プロセスを拒否|event_id.skm.approval.deny|
+|承認プロセスの承認リクエスト|event_id.skm.approval.approve_request|
+|機密データの照会 (API)|event_id.skm.api.secrets.get|
+|対称鍵による暗号化 (API)|event_id.skm.api.symmetric.encrypt|
+|対称による復号 (API)|event_id.skm.api.symmetric.decrypt|
+|ローカルキー作成 (API)|event_id.skm.api.symmetric.create_local_key|
+|非対称鍵による署名 (API)|event_id.skm.api.asymmetric.sign|
+|非対称鍵による署名検証 (API)|event_id.skm.api.asymmetric.verify|
+|機密データの自動削除|event_id.skm.secrets.scheduled_delete|
+|対称鍵の自動削除|event_id.skm.symmetric.scheduled_delete|
+|非対称鍵の自動削除|event_id.skm.asymmetric.scheduled_delete|
+|対称鍵の照会 (API)|event_id.skm.api.symmetric.get|
+|秘密鍵の照会 (API)|event_id.skm.api.asymmetric.get.privateKey|
+|公開鍵の照会 (API)|event_id.skm.api.asymmetric.get.publicKey|
+|機密データの作成 (API)|event_id.skm.api.secrets.create|
+|対称鍵の作成 (API)|event_id.skm.api.symmetric.create|
+|非対称鍵の作成 (API)|event_id.skm.api.asymmetric.create|
+|機密データの削除リクエスト (API)|event_id.skm.api.secrets.delete_request|
+|対称鍵の削除リクエスト (API)|event_id.skm.api.symmetric.delete_request|
+|非対称鍵の削除リクエスト (API)|event_id.skm.api.asymmetric.delete_request|
+|機密データの即時削除 (API)|event_id.skm.api.secrets.delete|
+|対称鍵の即時削除 (API)|event_id.skm.api.symmetric.delete|
+|非対称鍵の即時削除 (API)|event_id.skm.api.asymmetric.delete|
+|機密データの更新（API|event_id.skm.api.secrets.modify|
 
 ### Deploy
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Artifact|event_id.deploy.artifact_create|
-|Modify Artifact|event_id.deploy.artifact_update|
-|Delete Artifact|event_id.deploy.artifact_delete|
-|Create Binary Group|event_id.deploy.binary_group_create|
-|Delete Binary Group|event_id.deploy.binary_group_delete|
-|Modify Binary Group|event_id.deploy.binary_group_update|
-|Upload Binary|event_id.deploy.binary_upload|
-|Download Binary|event_id.deploy.binary_download|
-|Delete Binary|event_id.deploy.binary_delete|
-|Modify Binary|event_id.deploy.binary_update|
-|Create Server Group|event_id.deploy.server_group_create|
-|Delete Server Group|event_id.deploy.server_group_delete|
-|Modify Server Group|event_id.deploy.server_group_update|
-|Create Resource Group|event_id.deploy.resource_group_create|
-|Delete Resource Group|event_id.deploy.resource_group_delete|
-|Create Resource|event_id.deploy.resource_create|
-|Modify Resource|event_id.deploy.resource_update|
-|Save Resource|event_id.deploy.resource_save|
-|Download Resource|event_id.deploy.resource_download|
-|Delete Resource|event_id.deploy.resource_delete|
-|Create Scenario|event_id.deploy.scenario_create|
-|Copy Scenario|event_id.deploy.scenario_copy|
-|Download Scenario|event_id.deploy.scenario_download|
-|Upload Scenario|event_id.deploy.scenario_upload|
-|Modify Scenario|event_id.deploy.scenario_update|
-|Delete Scenario|event_id.deploy.scenario_delete|
-|Execute Deployment|event_id.deploy.deploy_execute|
-|Download deployment history|event_id.deploy.deploy_history_download|
-|Execute Autoscale Deployment|event_id.deploy.autoscale_deploy_execute|
+|アーティファクト作成|event_id.deploy.artifact_create|
+|アーティファクト修正|event_id.deploy.artifact_update|
+|アーティファクト削除|event_id.deploy.artifact_delete|
+|バイナリグループ作成|event_id.deploy.binary_group_create|
+|バイナリグループ削除|event_id.deploy.binary_group_delete|
+|バイナリグループ修正|event_id.deploy.binary_group_update|
+|バイナリ·アップロード|event_id.deploy.binary_upload|
+|バイナリ·ダウンロード|event_id.deploy.binary_download|
+|バイナリ削除|event_id.deploy.binary_delete|
+|バイナリ修正|event_id.deploy.binary_update|
+|サーバーグループ作成|event_id.deploy.server_group_create|
+|サーバーグループ削除|event_id.deploy.server_group_delete|
+|サーバーグループ修正|event_id.deploy.server_group_update|
+|リソースグループ作成|event_id.deploy.resource_group_create|
+|リソースグループ削除|event_id.deploy.resource_group_delete|
+|リソース作成|event_id.deploy.resource_create|
+|リソース修正|event_id.deploy.resource_update|
+|リソース保存|event_id.deploy.resource_save|
+|リソース·ダウンロード|event_id.deploy.resource_download|
+|リソース削除|event_id.deploy.resource_delete|
+|シナリオ作成|event_id.deploy.scenario_create|
+|シナリオコピー|event_id.deploy.scenario_copy|
+|シナリオダウンロード|event_id.deploy.scenario_download|
+|シナリオ アップロード|event_id.deploy.scenario_upload|
+|シナリオ修正|event_id.deploy.scenario_update|
+|シナリオ削除|event_id.deploy.scenario_delete|
+|配布実行|event_id.deploy.deploy_execute|
+|配布履歴のダウンロード|event_id.deploy.deploy_history_download|
+|オートスケール配布実行|event_id.deploy.autoscale_deploy_execute|
 
 ### Service Monitoring
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Service|event_id.service_monitoring.creation_service|
-|Change Service|event_id.service_monitoring.modification_service|
-|Delete Service|event_id.service_monitoring.delete_service|
-|Change Service Group|event_id.service_monitoring.modification_service_group|
-|Add Scenario|event_id.service_monitoring.creation_scenario|
-|Change Scenario|event_id.service_monitoring.modification_scenario|
-|Delete Scenario|event_id.service_monitoring.delete_scenario|
-|Copy Scenario|event_id.service_monitoring.copy_scenario|
-|Test Scenario|event_id.service_monitoring.simulate_scenario|
-|Register PM|event_id.service_monitoring.registration_prevention_maintenance|
-|Change PM|event_id.service_monitoring.modification_prevention_maintenance|
-|Delete PM|event_id.service_monitoring.delete_prevention_maintenance|
-|Transfer Failure to the Next Group|event_id.service_monitoring.send_next_transmission|
-|Migrate Failure to Anther Service|event_id.service_monitoring.send_transfer_transmission|
-|Suspend Failure Transfers|event_id.service_monitoring.send_stop_transmission|
+|サービス作成|event_id.service_monitoring.creation_service|
+|サービス変更|event_id.service_monitoring.modification_service|
+|サービス削除|event_id.service_monitoring.delete_service|
+|サービスグループ変更|event_id.service_monitoring.modification_service_group|
+|シナリオ追加|event_id.service_monitoring.creation_scenario|
+|シナリオ変更|event_id.service_monitoring.modification_scenario|
+|シナリオ削除|event_id.service_monitoring.delete_scenario|
+|シナリオコピー|event_id.service_monitoring.copy_scenario|
+|シナリオテスト|event_id.service_monitoring.simulate_scenario|
+|PM登録|event_id.service_monitoring.registration_prevention_maintenance|
+|PM変更|event_id.service_monitoring.modification_prevention_maintenance|
+|PM削除|event_id.service_monitoring.delete_prevention_maintenance|
+|次のグループへ障害を伝える|event_id.service_monitoring.send_next_transmission|
+|他のサービスに障害を移管|event_id.service_monitoring.send_transfer_transmission|
+|障害伝達中止|event_id.service_monitoring.send_stop_transmission|
 
 ### EasyCache
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Manual Backup|event_id.easycache.backup.manual|
-|Delete Backup|event_id.easycache.backup.delete|
-|Set up Public Domain|event_id.easycache.public_domain.attach|
-|Cancel Public Domain|event_id.easycache.public_domain.detach|
-|Update Domain|event_id.easycache.domain.update|
-|Create Replication Group|event_id.easycache.group.create|
-|Delete Replication Group|event_id.easycache.group.delete|
-|Modify Replication Group|event_id.easycache.group.modify|
-|Restart Replication Group|event_id.easycache.group.restart|
-|Upgrade Replication Group|event_id.easycache.group.upgrade|
-|Re-configure HA for Replication Group|event_id.easycache.group.ha_reset|
-|Confirm Password for Replication Group|event_id.easycache.group.password|
-|Add Node|event_id.easycache.node.create|
-|Delete Node|event_id.easycache.node.delete|
-|Change Master|event_id.easycache.node.promote|
-|Create Profile|event_id.easycache.profile.create|
-|Update Profile|event_id.easycache.profile.update|
-|Delete Profile|event_id.easycache.profile.delete|
-|Create Alarm Rule|event_id.easycache.alarm_rule.create|
-|Modify Alarm Rule|event_id.easycache.alarm_rule.update|
-|Delete Alarm Rule|event_id.easycache.alarm_rule.delete|
-|Enable/Disable Alarm Rule|event_id.easycache.alarm_rule.use_unuse|
-|Create Alarm Recipient Group|event_id.easycache.alarm_receiver_group.create|
-|Modify Alarm Recipient Group|event_id.easycache.alarm_receiver_group.update|
-|Delete Alarm Recipient Group|event_id.easycache.alarm_receiver_group.delete|
-|Change Group Instance|event_id.easycache.group.modify_flavor|
-|Add ACL|event_id.easycache.acl.create|
-|Delete ACL|event_id.easycache.acl.delete|
-|Read-only Domain Setup|event_id.easycache.readonly_domain.attach|
-|Disable Read-only Domain|event_id.easycache.readonly_domain.detach|
-|Import data|event_id.easycache.group.import|
-|Update HA for Replication Group|event_id.easycache.group.ha_update|
-|Export data|event_id.easycache.group.export|
-|Restore existing replication group|event_id.easycache.backup.migrate|
+|手動バックアップ|event_id.easycache.backup.manual|
+|バックアップ削除|event_id.easycache.backup.delete|
+|パブリックドメイン設定|event_id.easycache.public_domain.attach|
+|パブリックドメイン解除|event_id.easycache.public_domain.detach|
+|ドメイン更新|event_id.easycache.domain.update|
+|レプリケーショングループ作成|event_id.easycache.group.create|
+|レプリケーショングループ削除|event_id.easycache.group.delete|
+|レプリケーショングループ修正|event_id.easycache.group.modify|
+|レプリケーショングループ再起動|event_id.easycache.group.restart|
+|レプリケーショングループアップグレード|event_id.easycache.group.upgrade|
+|レプリケーショングループHA再設定|event_id.easycache.group.ha_reset|
+|レプリケーショングループパスワード確認|event_id.easycache.group.password|
+|ノード追加|event_id.easycache.node.create|
+|ノード削除|event_id.easycache.node.delete|
+|マスター変更|event_id.easycache.node.promote|
+|プロフィル作成|event_id.easycache.profile.create|
+|プロファイル修正|event_id.easycache.profile.update|
+|プロフィル削除|event_id.easycache.profile.delete|
+|アラームルール作成|event_id.easycache.alarm_rule.create|
+|アラームルール修正|event_id.easycache.alarm_rule.update|
+|アラームルール削除|event_id.easycache.alarm_rule.delete|
+|アラームルール有効 / 無効|event_id.easycache.alarm_rule.use_unuse|
+|アラーム受信者グループ作成|event_id.easycache.alarm_receiver_group.create|
+|アラーム受信者グループ修正|event_id.easycache.alarm_receiver_group.update|
+|アラーム受信者グループ削除|event_id.easycache.alarm_receiver_group.delete|
+|グループインスタンス変更|event_id.easycache.group.modify_flavor|
+|ACL追加|event_id.easycache.acl.create|
+|ACL削除|event_id.easycache.acl.delete|
+|読み取り専用ドメイン設定|event_id.easycache.readonly_domain.attach|
+|読み取り専用ドメイン解除|event_id.easycache.readonly_domain.detach|
+|データインポート|event_id.easycache.group.import|
+|レプリケーショングループHA設定更新|event_id.easycache.group.ha_update|
+|データエクスポート|event_id.easycache.group.export|
+|既存レプリケーショングループ復元|event_id.easycache.backup.migrate|
 
 ### RDS for MS-SQL
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Activate backup|event_id.rds_for_sqlserver.db_instance.activate_backup|
-|Activate Log Backup|event_id.rds_for_sqlserver.db_instance.activate_log_backup|
-|Deactivate Backup|event_id.rds_for_sqlserver.db_instance.deactivate_backup|
-|Deactivate Log Backup|event_id.rds_for_sqlserver.db_instance.deactivate_log_backup|
-|Differential Backup to DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|
-|Restoration from DB Instance Object Storage|event_id.rds_for_sqlserver.db_instance.restore_from_obs|
-|Create Database Instance|event_id.rds_for_sqlserver.db_instance.create|
-|Delete Database Instance|event_id.rds_for_sqlserver.db_instance.delete|
-|Back Up Database Instance|event_id.rds_for_sqlserver.db_instance.backup|
-|Restart Database Instance|event_id.rds_for_sqlserver.db_instance.restart|
-|Hypervisor Migration|event_id.rds_for_sqlserver.db_instance.migrate_hypervisor|
-|Delete Backup|event_id.rds_for_sqlserver.backup.delete|
-|Restore Database Instance from Backup|event_id.rds_for_sqlserver.backup.restore_snapshot|
-|Change Database Instance Name|event_id.rds_for_sqlserver.db_instance.modify_name|
-|Modify Database Instance|event_id.rds_for_sqlserver.db_instance.modify|
-|Restore Database Instance to a Point in Time|event_id.rds_for_sqlserver.db_instance.restore_point_to_time|
-|Create Database Security Group|event_id.rds_for_sqlserver.security_group.create|
-|Modify Database Security Group|event_id.rds_for_sqlserver.security_group.modify|
-|Delete Database Security Group|event_id.rds_for_sqlserver.security_group.delete|
-|Subscribe to Event|event_id.rds_for_sqlserver.event.subscription.create|
-|Modify Event Subscription|event_id.rds_for_sqlserver.event.subscription.modify|
-|Delete Event Subscription|event_id.rds_for_sqlserver.event.subscription.delete|
-|Create Parameter Group|event_id.rds_for_sqlserver.parameter_group.create|
-|Modify Parameter Group|event_id.rds_for_sqlserver.parameter_group.modify|
-|Delete Parameter Group|event_id.rds_for_sqlserver.parameter_group.delete|
-|Create Chart Layout|event_id.rds_for_sqlserver.chart_layout.create|
-|Change Chart Layout Name|event_id.rds_for_sqlserver.chart_layout.modify_name|
-|Modify Chart Layout|event_id.rds_for_sqlserver.chart_layout.modify|
-|Delete Chart Layout|event_id.rds_for_sqlserver.chart_layout.delete|
-|Create Notification Group Monitoring|event_id.rds_for_sqlserver.notification.group.metric.create|
-|Create User Group|event_id.rds_for_sqlserver.user.group.create|
-|Modify DB Instance of Notification Group|event_id.rds_for_sqlserver.notification.group.db.instance.modify|
-|Force Restart DB Instance|event_id.rds_for_sqlserver.db_instance.force-restart|
-|Modify User Group of Notification Group|event_id.rds_for_sqlserver.notification.group.user.group.modify|
-|Delete Notification Group|event_id.rds_for_sqlserver.notification.group.delete|
-|Delete Notification Group Monitoring|event_id.rds_for_sqlserver.notification.group.metric.delete|
-|Delete User Group|event_id.rds_for_sqlserver.user.group.delete|
-|Modify Notification Group Monitoring|event_id.rds_for_sqlserver.notification.group.metric.modify|
-|Modify User Group|event_id.rds_for_sqlserver.user.group.modify|
-|Create Notification Group|event_id.rds_for_sqlserver.notification.group.create|
-|Modify Notification Group|event_id.rds_for_sqlserver.notification.group.modify|
-|Modify Scheduled Task|event_id.rds_for_sqlserver.process.reserved-process.modify|
-|Delete Scheduled Task|event_id.rds_for_sqlserver.process.reserved-process.deleted|
+|バックアップ有効化|event_id.rds_for_sqlserver.db_instance.activate_backup|
+|ログバックアップ有効化|event_id.rds_for_sqlserver.db_instance.activate_log_backup|
+|バックアップ無効化|event_id.rds_for_sqlserver.db_instance.deactivate_backup|
+|ログバックアップ無効化|event_id.rds_for_sqlserver.db_instance.deactivate_log_backup|
+|DBインスタンスオブジェクトストレージに差分バックアップ|event_id.rds_for_sqlserver.db_instance.differential_backup_to_obs|
+|DBインスタンスオブジェクトストレージから復元|event_id.rds_for_sqlserver.db_instance.restore_from_obs|
+|DBインスタンスの作成|event_id.rds_for_sqlserver.db_instance.create|
+|DBインスタンスの削除|event_id.rds_for_sqlserver.db_instance.delete|
+|DBインスタンスのバックアップ|event_id.rds_for_sqlserver.db_instance.backup|
+|DBインスタンスの再起動|event_id.rds_for_sqlserver.db_instance.restart|
+|ハイパーバイザのマイグレーション|event_id.rds_for_sqlserver.db_instance.migrate_hypervisor|
+|バックアップ削除|event_id.rds_for_sqlserver.backup.delete|
+|バックアップを利用したDBインスタンスの復元|event_id.rds_for_sqlserver.backup.restore_snapshot|
+|DBインスタンス名変更|event_id.rds_for_sqlserver.db_instance.modify_name|
+|DBインスタンス修正|event_id.rds_for_sqlserver.db_instance.modify|
+|特定の時点へのDBインスタンスの復元|event_id.rds_for_sqlserver.db_instance.restore_point_to_time|
+|DBセキュリティグループ作成|event_id.rds_for_sqlserver.security_group.create|
+|DBセキュリティグループ修正|event_id.rds_for_sqlserver.security_group.modify|
+|DBセキュリティグループ削除|event_id.rds_for_sqlserver.security_group.delete|
+|イベントの購読を作成|event_id.rds_for_sqlserver.event.subscription.create|
+|イベントの購読を修正|event_id.rds_for_sqlserver.event.subscription.modify|
+|イベントの購読を削除|event_id.rds_for_sqlserver.event.subscription.delete|
+|パラメータグループ作成|event_id.rds_for_sqlserver.parameter_group.create|
+|パラメータグループ修正|event_id.rds_for_sqlserver.parameter_group.modify|
+|パラメータグループ削除|event_id.rds_for_sqlserver.parameter_group.delete|
+|チャートレイアウト作成|event_id.rds_for_sqlserver.chart_layout.create|
+|チャートレイアウト名変更|event_id.rds_for_sqlserver.chart_layout.modify_name|
+|チャートレイアウト修正|event_id.rds_for_sqlserver.chart_layout.modify|
+|チャートレイアウト削除|event_id.rds_for_sqlserver.chart_layout.delete|
+|通知グループの監視作成|event_id.rds_for_sqlserver.notification.group.metric.create|
+|ユーザーグループの作成|event_id.rds_for_sqlserver.user.group.create|
+|通知グループのDBインスタンス修正|event_id.rds_for_sqlserver.notification.group.db.instance.modify|
+|DBインスタンス強制再起動|event_id.rds_for_sqlserver.db_instance.force-restart|
+|通知グループのユーザーグループ修正|event_id.rds_for_sqlserver.notification.group.user.group.modify|
+|通知グループの削除|event_id.rds_for_sqlserver.notification.group.delete|
+|通知グループの監視削除|event_id.rds_for_sqlserver.notification.group.metric.delete|
+|ユーザーグループの削除|event_id.rds_for_sqlserver.user.group.delete|
+|通知グループの監視修正|event_id.rds_for_sqlserver.notification.group.metric.modify|
+|ユーザーグループの修正|event_id.rds_for_sqlserver.user.group.modify|
+|通知グループの作成|event_id.rds_for_sqlserver.notification.group.create|
+|通知グループの修正|event_id.rds_for_sqlserver.notification.group.modify|
+|予約タスクの修正|event_id.rds_for_sqlserver.process.reserved-process.modify|
+|予約タスクの削除|event_id.rds_for_sqlserver.process.reserved-process.deleted|
 
 ### Log &amp; Crash Search
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Upload Symbol Files|event_id.logncrash.symbolfile.delete|
-|Delete Symbol Files|event_id.logncrash.symbolfile.upload|
-|Saved query registered|event_id.logncrash.stored_search.save|
-|Saved query deleted|event_id.logncrash.stored_search.delete|
-|Selected field added|event_id.logncrash.search_field.save|
-|Selected field deleted|event_id.logncrash.search_field.delete|
-|Crash tag added|event_id.logncrash.crash.tag.save|
-|Crash tag deleted|event_id.logncrash.crash.tag.delete|
-|Crash tag applied|event_id.logncrash.crash.tag.assign|
-|Crash comment added|event_id.logncrash.crash.comment.save|
-|Crash comment deleted|event_id.logncrash.crash.comment.delete|
-|Crash status changed|event_id.logncrash.crash.state|
-|Crash issue tracker registered|event_id.logncrash.crash.issue_tracker.save|
-|Log notification added|event_id.logncrash.search.alarm.log.save|
-|Log notification deleted|event_id.logncrash.search.alarm.log.delete|
-|Log notification recipient saved|event_id.logncrash.search.alarm.log.member.save|
-|Log notification status changed|event_id.logncrash.search.alarm.log.state|
-|Crash notification saved|event_id.logncrash.search.alarm.crash.save|
-|Use notification saved|event_id.logncrash.search.alarm.affected_user.save|
-|Linked issue tracker settings saved|event_id.logncrash.issue_tracker.save|
-|Log retention period saved|event_id.logncrash.retention.save|
-|Log send settings|event_id.logncrash.client.setting|
-|External log archiving settings|event_id.logncrash.external_archive_config.save|
-|Network insight settings|event_id.logncrash.network_insights.save|
-|Create project|event_id.logncrash.project.save|
-|Delete project|event_id.logncrash.project.delete|
-|Project appkey changed|event_id.logncrash.project.appkey|
-|Project status changed|event_id.logncrash.project.state|
-|Log entry limit changed|event_id.logncrash.limit.save|
+|シンボルファイルの削除|event_id.logncrash.symbolfile.delete|
+|シンボルファイルのアップロード|event_id.logncrash.symbolfile.upload|
+|保存クエリ登録|event_id.logncrash.stored_search.save|
+|保存クエリ削除|event_id.logncrash.stored_search.delete|
+|選択フィールド追加|event_id.logncrash.search_field.save|
+|選択フィールド削除|event_id.logncrash.search_field.delete|
+|クラッシュタグ追加|event_id.logncrash.crash.tag.save|
+|クラッシュタグ削除|event_id.logncrash.crash.tag.delete|
+|クラッシュタグ適用|event_id.logncrash.crash.tag.assign|
+|クラッシュ意見追加|event_id.logncrash.crash.comment.save|
+|クラッシュ意見削除|event_id.logncrash.crash.comment.delete|
+|クラッシュ状態変更|event_id.logncrash.crash.state|
+|クラッシュ課題トラッカー登録|event_id.logncrash.crash.issue_tracker.save|
+|ログアラーム追加|event_id.logncrash.search.alarm.log.save|
+|ログアラーム削除|event_id.logncrash.search.alarm.log.delete|
+|ログアラーム受信者保存|event_id.logncrash.search.alarm.log.member.save|
+|ログアラーム状態変更|event_id.logncrash.search.alarm.log.state|
+|クラッシュアラーム保存|event_id.logncrash.search.alarm.crash.save|
+|ユーザーアラーム保存|event_id.logncrash.search.alarm.affected_user.save|
+|連動課題トラッカー設定を保存|event_id.logncrash.issue_tracker.save|
+|ログ保管期間を保存|event_id.logncrash.retention.save|
+|ログ送信設定|event_id.logncrash.client.setting|
+|ログ外部保管設定|event_id.logncrash.external_archive_config.save|
+|ネットワークインサイト設定|event_id.logncrash.network_insights.save|
+|プロジェクト作成|event_id.logncrash.project.save|
+|プロジェクト削除|event_id.logncrash.project.delete|
+|プロジェクトアプリケーションキー変更|event_id.logncrash.project.appkey|
+|プロジェクト状態変更|event_id.logncrash.project.state|
+|ログ引き込み制限変更|event_id.logncrash.limit.save|
 
 ### Backup
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Register Backup Server|event_id.backup.client.register|
-|Delete Backup Server|event_id.backup.client.delete|
-|Register Backup Path|event_id.backup.target.register|
-|Change Backup Path|event_id.backup.target.update|
-|Delete Backup Path|event_id.backup.target.delete|
-|Apply for Restoration|event_id.backup.restoration.apply|
-|Pause Backup Plan|event_id.backup.target.suspend|
-|Resume Backup Plan|event_id.backup.target.resume|
-|Create Backup Result File|event_id.backup.result.file|
-|Change Backup Server Data|event_id.backup.client.update|
+|バックアップサーバー登録|event_id.backup.client.register|
+|バックアップサーバー削除|event_id.backup.client.delete|
+|バックアップパス登録|event_id.backup.target.register|
+|バックアップパス変更|event_id.backup.target.update|
+|バックアップパス削除|event_id.backup.target.delete|
+|復旧申請|event_id.backup.restoration.apply|
+|バックアップ計画中止|event_id.backup.target.suspend|
+|バックアップ計画開始|event_id.backup.target.resume|
+|バックアップ結果ファイルを作成します|event_id.backup.result.file|
+|バックアップサーバー情報の変更|event_id.backup.client.update|
 
 ### DNS Plus
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create DNS Zone|event_id.dnsplus.zone.create|
-|Modify DNS Zone|event_id.dnsplus.zone.update|
-|Delete DNS Zone|event_id.dnsplus.zone.delete|
-|Create Record Set|event_id.dnsplus.recordset.create|
-|Modify Record Set|event_id.dnsplus.recordset.update|
-|Delete Record Set|event_id.dnsplus.recordset.delete|
-|Bulk Create Record Sets|event_id.dnsplus.recordset.create_list|
-|Create GSLB|event_id.dnsplus.gslb.create|
-|Modify GSLB|event_id.dnsplus.gslb.update|
-|Delete GSLB|event_id.dnsplus.gslb.delete|
-|Connect Pools|event_id.dnsplus.gslb_connected_pool.create|
-|Modify Pool Connection|event_id.dnsplus.gslb_connected_pool.update|
-|Disconnect Pools|event_id.dnsplus.gslb_connected_pool.delete|
-|Create Pools|event_id.dnsplus.pool.create|
-|Modify Pools|event_id.dnsplus.pool.update|
-|Delete Pools|event_id.dnsplus.pool.delete|
-|Create Health Checks|event_id.dnsplus.health_check.create|
-|Modify Health Checks|event_id.dnsplus.health_check.update|
-|Delete Health Checks|event_id.dnsplus.health_check.delete|
+|DNS Zone作成|event_id.dnsplus.zone.create|
+|DNS Zone修正|event_id.dnsplus.zone.update|
+|DNS Zone削除|event_id.dnsplus.zone.delete|
+|レコードセット作成|event_id.dnsplus.recordset.create|
+|レコードセット修正|event_id.dnsplus.recordset.update|
+|レコードセット削除|event_id.dnsplus.recordset.delete|
+|レコードセットの大量作成|event_id.dnsplus.recordset.create_list|
+|GSLB作成|event_id.dnsplus.gslb.create|
+|GSLB修正|event_id.dnsplus.gslb.update|
+|GSLB削除|event_id.dnsplus.gslb.delete|
+|Pool接続|event_id.dnsplus.gslb_connected_pool.create|
+|Pool接続修正|event_id.dnsplus.gslb_connected_pool.update|
+|Pool接続解除|event_id.dnsplus.gslb_connected_pool.delete|
+|Pool作成|event_id.dnsplus.pool.create|
+|Pool修正|event_id.dnsplus.pool.update|
+|Pool削除|event_id.dnsplus.pool.delete|
+|ヘルスチェック作成|event_id.dnsplus.health_check.create|
+|ヘルスチェック修正|event_id.dnsplus.health_check.update|
+|ヘルスチェック削除|event_id.dnsplus.health_check.delete|
 
 ### CDN
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Issue New Certificates|event_id.cdn.certificate.create|
-|Delete Certificate|event_id.cdn.certificate.delete|
-|Cancel in the Certificate Verification Step|event_id.cdn.certificate.validation_cancel|
-|Create CDN Service|event_id.cdn.distribution.create|
-|Delete CDN Service|event_id.cdn.distribution.delete|
-|Delete All CDN Service|event_id.cdn.distribution.delete_all|
-|Resume CDN Service|event_id.cdn.distribution.resume|
-|Suspend CDN Service|event_id.cdn.distribution.suspend|
-|Modify CDN Service Setting|event_id.cdn.distribution.modify|
-|Purge Cache|event_id.cdn.cache_purge.common|
-|Purge Cache - Item|event_id.cdn.cache_purge.item_type|
-|Purge Cache - All|event_id.cdn.cache_purge.all_type|
-|Create an Auth Token|event_id.cdn.auth_token|
+|新規証明書の発行|event_id.cdn.certificate.create|
+|証明書の削除|event_id.cdn.certificate.delete|
+|証明書検証段階での発行キャンセル|event_id.cdn.certificate.validation_cancel|
+|CDNサービス作成|event_id.cdn.distribution.create|
+|CDNサービス削除|event_id.cdn.distribution.delete|
+|CDNサービス全体削除|event_id.cdn.distribution.delete_all|
+|CDNサービス再起動|event_id.cdn.distribution.resume|
+|CDNサービス停止|event_id.cdn.distribution.suspend|
+|CDNサービス設定変更|event_id.cdn.distribution.modify|
+|キャッシュ再配布|event_id.cdn.cache_purge.common|
+|特定ファイルキャッシュ再配布|event_id.cdn.cache_purge.item_type|
+|全ファイルキャッシュ再配布|event_id.cdn.cache_purge.all_type|
+|Auth Token作成|event_id.cdn.auth_token|
 
 ### System Monitoring(CloudTrail)
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|서버 대시보드 레이아웃 추가|event_id.system_monitoring.server_dashboard_layout_addition|
-|서버 대시보드 레이아웃 변경|event_id.system_monitoring.server_dashboard_layout_updating|
-|서버 대시보드 레이아웃 삭제|event_id.system_monitoring.server_dashboard_layout_deletion|
-|OpenMetrics 대시보드 차트 생성|event_id.system_monitoring.open_metrics_chart_addition|
-|OpenMetrics 대시보드 차트 변경|event_id.system_monitoring.open_metrics_chart_updating|
-|OpenMetrics 대시보드 차트 삭제|event_id.system_monitoring.open_metrics_chart_deletion|
-|OpenMetrics 대시보드 수집 대상 추가|event_id.system_monitoring.open_metrics_target_addition|
-|OpenMetrics 대시보드 수집 대상 변경|event_id.system_monitoring.open_metrics_target_updating|
-|OpenMetrics 대시보드 수집 대상 삭제|event_id.system_monitoring.open_metrics_target_deletion|
-|OpenMetrics 대시보드 레이아웃 추가|event_id.system_monitoring.open_metrics_layout_addition|
-|OpenMetrics 대시보드 레이아웃 변경|event_id.system_monitoring.open_metrics_layout_updating|
-|OpenMetrics 대시보드 레이아웃 삭제|event_id.system_monitoring.open_metrics_layout_deletion|
-|OpenMetrics 대시보드 작업 공간 추가|event_id.system_monitoring.open_metrics_workspace_addition|
-|OpenMetrics 대시보드 작업 공간 변경|event_id.system_monitoring.open_metrics_workspace_updating|
-|OpenMetrics 대시보드 작업 공간 삭제|event_id.system_monitoring.open_metrics_workspace_deletion|
-|사용자 그룹 추가|event_id.system_monitoring.user_group_addition|
-|사용자 그룹 삭제|event_id.system_monitoring.user_group_deletion|
-|사용자 그룹에 사용자 추가|event_id.system_monitoring.user_group_user_addition|
-|사용자 그룹에 사용자 삭제|event_id.system_monitoring.user_group_user_deletion|
-|사용자 그룹 이름 수정|event_id.system_monitoring.user_group_name_updating|
-|알림 그룹 추가|event_id.system_monitoring.alarm_group_addition|
-|알림 그룹 변경|event_id.system_monitoring.alarm_group_updating|
-|알림 그룹 삭제|event_id.system_monitoring.alarm_group_deletion|
-|알림 설정 추가|event_id.system_monitoring.alarm_config_addition|
-|알림 설정 변경|event_id.system_monitoring.alarm_config_updating|
-|알림 설정 삭제|event_id.system_monitoring.alarm_config_deletion|
-|이벤트 강제 종료|event_id.system_monitoring.event_force_close|
+|サーバーダッシュボードレイアウト追加|event_id.system_monitoring.server_dashboard_layout_addition|
+|サーバーダッシュボードレイアウト変更|event_id.system_monitoring.server_dashboard_layout_updating|
+|サーバーダッシュボードレイアウト削除|event_id.system_monitoring.server_dashboard_layout_deletion|
+|OpenMetricsダッシュボードチャート作成|event_id.system_monitoring.open_metrics_chart_addition|
+|OpenMetricsダッシュボードチャート変更|event_id.system_monitoring.open_metrics_chart_updating|
+|OpenMetricsダッシュボードチャート削除|event_id.system_monitoring.open_metrics_chart_deletion|
+|OpenMetricsダッシュボード収集対象追加|event_id.system_monitoring.open_metrics_target_addition|
+|OpenMetricsダッシュボード収集対象の変更|event_id.system_monitoring.open_metrics_target_updating|
+|OpenMetricsダッシュボード収集対象削除|event_id.system_monitoring.open_metrics_target_deletion|
+|OpenMetricsダッシュボード追加|event_id.system_monitoring.open_metrics_layout_addition|
+|OpenMetricsダッシュボード変更|event_id.system_monitoring.open_metrics_layout_updating|
+|OpenMetricsダッシュボード削除|event_id.system_monitoring.open_metrics_layout_deletion|
+|OpenMetricsダッシュボード作業スペース追加|event_id.system_monitoring.open_metrics_workspace_addition|
+|OpenMetricsダッシュボード作業スペース変更|event_id.system_monitoring.open_metrics_workspace_updating|
+|OpenMetricsダッシュボード作業スペース削除|event_id.system_monitoring.open_metrics_workspace_deletion|
+|ユーザーグループ追加|event_id.system_monitoring.user_group_addition|
+|ユーザーグループ削除|event_id.system_monitoring.user_group_deletion|
+|ユーザーグループにユーザーを追加|event_id.system_monitoring.user_group_user_addition|
+|ユーザーグループのユーザーを削除|event_id.system_monitoring.user_group_user_deletion|
+|ユーザーグループ名を変更|event_id.system_monitoring.user_group_name_updating|
+|通知グループ追加|event_id.system_monitoring.alarm_group_addition|
+|通知グループ変更|event_id.system_monitoring.alarm_group_updating|
+|通知グループ削除|event_id.system_monitoring.alarm_group_deletion|
+|通知設定追加|event_id.system_monitoring.alarm_config_addition|
+|通知設定変更|event_id.system_monitoring.alarm_config_updating|
+|通知設定削除|event_id.system_monitoring.alarm_config_deletion|
+|イベント強制終了|event_id.system_monitoring.event_force_close|
 
 ### Certificate Manager
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Add Alarm Group|event_id.certificate_manager.alarm_group.create|
-|Delete Alarm Group|event_id.certificate_manager.alarm_group.delete|
-|Edit Alarm Group|event_id.certificate_manager.alarm_group.update|
-|Edit Receiving Group|event_id.certificate_manager.alarm_group_user.update|
-|Edit Alarm|event_id.certificate_manager.alarm.update|
-|Add Certificate|event_id.certificate_manager.certificate.create|
-|Delete Certificate|event_id.certificate_manager.certificate.delete|
-|Download Certificate|event_id.certificate_manager.certificate.download|
-|Edit Certificate|event_id.certificate_manager.certificate.update|
-|Edit Certificate Usage|event_id.certificate_manager.certificate.usage.update|
-|Add Domain|event_id.certificate_manager.domain.create|
-|Delete Domain|event_id.certificate_manager.domain.delete|
-|Edit Domain|event_id.certificate_manager.domain.update|
-|Add User Data|event_id.certificate_manager.user_data.create|
-|Delete User Data|event_id.certificate_manager.user_data.delete|
-|Edit User Data|event_id.certificate_manager.user_data.update|
+|通知グループの追加|event_id.certificate_manager.alarm_group.create|
+|通知グループの削除|event_id.certificate_manager.alarm_group.delete|
+|通知グループの修正|event_id.certificate_manager.alarm_group.update|
+|受信グループの修正|event_id.certificate_manager.alarm_group_user.update|
+|通知の修正|event_id.certificate_manager.alarm.update|
+|証明書の追加|event_id.certificate_manager.certificate.create|
+|証明書の削除|event_id.certificate_manager.certificate.delete|
+|証明書のダウンロード|event_id.certificate_manager.certificate.download|
+|証明書の修正|event_id.certificate_manager.certificate.update|
+|証明書の使用情報の修正|event_id.certificate_manager.certificate.usage.update|
+|ドメインの追加|event_id.certificate_manager.domain.create|
+|ドメインの削除|event_id.certificate_manager.domain.delete|
+|ドメインの修正|event_id.certificate_manager.domain.update|
+|ユーザーデータの追加|event_id.certificate_manager.user_data.create|
+|ユーザーデータの削除|event_id.certificate_manager.user_data.delete|
+|ユーザーデータの修正|event_id.certificate_manager.user_data.update|
 
 ### Face Recognition
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Recognize face|event_id.face_recognition.face.detect|
-|Compare faces|event_id.face_recognition.face.compare|
-|Register face|event_id.face_recognition.face.add|
-|Delete face|event_id.face_recognition.face.delete|
-|Face verification|event_id.face_recognition.face.verify|
-|Create facial recognition group|event_id.face_recognition.group.create|
-|View facial recognition group list|event_id.face_recognition.group.list|
-|View facial recognition group details|event_id.face_recognition.group.get_detail|
-|View faces registered to the facial recognition group|event_id.face_recognition.group.face_list|
-|Delete facial recognition group|event_id.face_recognition.group.delete|
-|Search face by face ID|event_id.face_recognition.search_face.byfaceid|
-|Search face by image|event_id.face_recognition.search_face.byimage|
-|Spoofing detection|event_id.face_recognition.face.spoofing|
-|Recognize face(Spoofing detection)|event_id.face_recognition.spoofing.face.detect|
-|Compare faces(Spoofing detection)|event_id.face_recognition.spoofing.face.compare|
-|Register face(Spoofing detection)|event_id.face_recognition.spoofing.face.add|
-|Face verification(Spoofing detection)|event_id.face_recognition.spoofing.face.verify|
-|Search face by image(Spoofing detection)|event_id.face_recognition.spoofing.search_face.byimage|
+|顔検出|event_id.face_recognition.face.detect|
+|顔比較|event_id.face_recognition.face.compare|
+|顔登録|event_id.face_recognition.face.add|
+|顔削除|event_id.face_recognition.face.delete|
+|顔検証|event_id.face_recognition.face.verify|
+|顔認識グループを作成|event_id.face_recognition.group.create|
+|顔認識グループのリスト照会|event_id.face_recognition.group.list|
+|顔認識グループの詳細照会|event_id.face_recognition.group.get_detail|
+|顔認識グループに登録された顔を照会|event_id.face_recognition.group.face_list|
+|顔認識グループの削除|event_id.face_recognition.group.delete|
+|フェイス名で顔検索|event_id.face_recognition.search_face.byfaceid|
+|画像から顔検索|event_id.face_recognition.search_face.byimage|
+|スプーフィング検出|event_id.face_recognition.face.spoofing|
+|顔検出(スプーフィング検出)|event_id.face_recognition.spoofing.face.detect|
+|顔比較(スプーフィング検出)|event_id.face_recognition.spoofing.face.compare|
+|顔登録(スプーフィング検出)|event_id.face_recognition.spoofing.face.add|
+|顔検証(スプーフィング検出)|event_id.face_recognition.spoofing.face.verify|
+|画像から顔検索(スプーフィング検出)|event_id.face_recognition.spoofing.search_face.byimage|
 
 ### Pipeline
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Pipeline|event_id.pipeline.pipeline_manage.create|
-|Modify Pipeline|event_id.pipeline.pipeline_manage.update|
-|Delete Pipeline|event_id.pipeline.pipeline_manage.delete|
-|Manually Run Pipeline|event_id.pipeline.pipeline_manage.manual_execute|
-|Undo Pipeline|event_id.pipeline.pipeline_manage.execute_cancel|
-|Create Source Repository|event_id.pipeline.source_repository.create|
-|Modify Source Repository|event_id.pipeline.source_repository.update|
-|Delete Source Repository|event_id.pipeline.source_repository.delete|
-|Create Image Registry|event_id.pipeline.image_registry.create|
-|Modify Image Registry|event_id.pipeline.image_registry.update|
-|Delete Image Registry|event_id.pipeline.image_registry.delete|
-|Create Build Tool|event_id.pipeline.build_tool.create|
-|Modify Build Tool|event_id.pipeline.build_tool.update|
-|Delete Build Tool|event_id.pipeline.build_tool.delete|
-|Create Deployment Target|event_id.pipeline.deploy_target.create|
-|Modify Deployment Target|event_id.pipeline.deploy_target.update|
-|Delete Deployment Target|event_id.pipeline.deploy_target.delete|
-|Create Chart Repository|event_id.pipeline.chart_repository.create|
-|Modify Chart Repository|event_id.pipeline.chart_repository.update|
-|Delete Chart Repository|event_id.pipeline.chart_repository.delete|
+|パイプラインの作成|event_id.pipeline.pipeline_manage.create|
+|パイプラインの修正|event_id.pipeline.pipeline_manage.update|
+|パイプラインの削除|event_id.pipeline.pipeline_manage.delete|
+|パイプラインの手動実行|event_id.pipeline.pipeline_manage.manual_execute|
+|パイプラインの実行キャンセル|event_id.pipeline.pipeline_manage.execute_cancel|
+|ソース保存場所の作成|event_id.pipeline.source_repository.create|
+|ソース保存場所の修正|event_id.pipeline.source_repository.update|
+|ソース保存場所の削除|event_id.pipeline.source_repository.delete|
+|イメージ保存場所の作成|event_id.pipeline.image_registry.create|
+|イメージ保存場所の修正|event_id.pipeline.image_registry.update|
+|イメージ保存場所の削除|event_id.pipeline.image_registry.delete|
+|ビルドツールの作成|event_id.pipeline.build_tool.create|
+|ビルドツールの修正|event_id.pipeline.build_tool.update|
+|ビルドツールの削除|event_id.pipeline.build_tool.delete|
+|デプロイ対象の作成|event_id.pipeline.deploy_target.create|
+|デプロイ対象の修正|event_id.pipeline.deploy_target.update|
+|デプロイ対象の削除|event_id.pipeline.deploy_target.delete|
+|チャートリポジトリの作成|event_id.pipeline.chart_repository.create|
+|チャートリポジトリの修正|event_id.pipeline.chart_repository.update|
+|チャートリポジトリの削除|event_id.pipeline.chart_repository.delete|
 
 ### NHN AppGuard
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Android SDK download|event_id.appguard.sdk_download_aos|
-|iOS SDK download|event_id.appguard.sdk_download_ios|
-|Report download|event_id.appguard.report_download|
-|protection|event_id.appguard.protection|
-|Obfuscation application|event_id.appguard.obfuscation_request|
-|Blacklist addition|event_id.appguard.blacklist_add|
-|Blacklist unblock|event_id.appguard.blacklist_delete|
-|policy update|event_id.appguard.policy_update|
-|Unity SDK download|event_id.appguard.sdk_download_unity|
-|React Native SDK download|event_id.appguard.sdk_download_react_native|
-|Unreal SDK download|event_id.appguard.sdk_download_unreal|
+|Android SDKダウンロード|event_id.appguard.sdk_download_aos|
+|iOS SDKダウンロード|event_id.appguard.sdk_download_ios|
+|レポートダウンロード|event_id.appguard.report_download|
+|保護作業|event_id.appguard.protection|
+|難読化申請|event_id.appguard.obfuscation_request|
+|ブラックリスト追加|event_id.appguard.blacklist_add|
+|ブラックリスト解除|event_id.appguard.blacklist_delete|
+|ポリシー修正|event_id.appguard.policy_update|
+|Unity SDKダウンロード|event_id.appguard.sdk_download_unity|
+|React Native SDK ダウンロード|event_id.appguard.sdk_download_react_native|
+|Unreal SDK ダウンロード|event_id.appguard.sdk_download_unreal|
 
 ### ShortURL
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create a URL|event_id.short_url.url_create|
-|Update a URL|event_id.short_url.url_update|
-|Enable a URL|event_id.short_url.url_enable|
-|Disable a URL|event_id.short_url.url_disable|
-|Delete a URL|event_id.short_url.url_delete|
-|Create a campaign|event_id.short_url.campaign_create|
-|Update a campaign|event_id.short_url.campaign_update|
-|Delete a campaign|event_id.short_url.campaign_delete|
-|Register a domain|event_id.short_url.domain_register|
-|Update a domain|event_id.short_url.domain_renew|
-|Update a domain permission|event_id.short_url.domain_update_role|
-|Delete a domain|event_id.short_url.domain_delete|
-|Register a certificate|event_id.short_url.certificate_register|
-|Update a certificate|event_id.short_url.certificate_renew|
-|Update a certificate permission|event_id.short_url.certificate_update_role|
-|Delete a certificate|event_id.short_url.certificate_delete|
+|URLの作成|event_id.short_url.url_create|
+|URLの修正|event_id.short_url.url_update|
+|URLの有効化|event_id.short_url.url_enable|
+|URLの無効化|event_id.short_url.url_disable|
+|URLの削除|event_id.short_url.url_delete|
+|キャンペーンの作成|event_id.short_url.campaign_create|
+|キャンペーンの修正|event_id.short_url.campaign_update|
+|キャンペーンの削除|event_id.short_url.campaign_delete|
+|ドメインの登録|event_id.short_url.domain_register|
+|ドメインの更新|event_id.short_url.domain_renew|
+|ドメインの権限を修正|event_id.short_url.domain_update_role|
+|ドメインの削除|event_id.short_url.domain_delete|
+|証明書の登録|event_id.short_url.certificate_register|
+|証明書の更新|event_id.short_url.certificate_renew|
+|証明書の権限を修正|event_id.short_url.certificate_update_role|
+|証明書の削除|event_id.short_url.certificate_delete|
 
 ### OCR
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Request General OCR Image Analysis|event_id.ocr.general_ocr.analyze|
-|Apply for Document OCR Service|event_id.ocr.document_ocr.service_use_request.submit|
-|Cancel Application of Document OCR Service|event_id.ocr.document_ocr.service_use_request.cancel|
-|Request Analysis of Document OCR Business Registration Certificate|event_id.ocr.document_ocr.business.analyze|
-|Request Analysis of Document OCR Credit Card|event_id.ocr.document_ocr.credit_card.analyze|
-|RequestAnalysis of Document OCR ID Card|event_id.ocr.document_ocr.id_card.analyze|
-|Request to Verify Authenticity of Document OCR ID Card|event_id.ocr.document_ocr.id_card.authenticity|
-|Request ID Card Analysis (only)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
-|Retrieve Stoppage/Closure of Business Registration Certificate for Document OCR|event_id.ocr.document_ocr.business.authenticity|
-|Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|
-|Request Document AI Analysis|event_id.ocr.document_ai.analyze|
+|General OCRイメージ分析リクエスト|event_id.ocr.general_ocr.analyze|
+|Document OCRサービス利用申請|event_id.ocr.document_ocr.service_use_request.submit|
+|Document OCRサービス利用申請キャンセル|event_id.ocr.document_ocr.service_use_request.cancel|
+|Document OCR事業者登録証の分析リクエスト|event_id.ocr.document_ocr.business.analyze|
+|Document OCRクレジットカード分析リクエスト|event_id.ocr.document_ocr.credit_card.analyze|
+|Document OCR身分証の分析リクエスト|event_id.ocr.document_ocr.id_card.analyze|
+|Document OCR身分証の真偽確認リクエスト|event_id.ocr.document_ocr.id_card.authenticity|
+|Document OCR 身分証明書分析リクエスト(単独)|event_id.ocr.document_ocr.id_card.analyze_stand_alone|
+|Document OCR事業者登録証休業/廃業照会|event_id.ocr.document_ocr.business.authenticity|
+|General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|
+|Document AI分析リクエスト|event_id.ocr.document_ai.analyze|
 
 ### KakaoTalk Bizmessage
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Application for M/N type use|event_id.brandmessage.marketing.agreement|
-|Export Brand Message Mass Message Results|event_id.brandmessage.mass.message.results.export|
-|Export Brand Message Message Results|event_id.brandmessage.message.results.export|
-|Register 080 Toll-Free Unsubscribe Information in Sender Profile|event_id.brandmessage.update.unsubscribe.content|
-|Upload evidence of marketing consent|event_id.brandmessage.upload.marketing.agreement|
-|Create Sender Profile|event_id.kakaotalk.sender.creation|
-|Certify Sender Profile Token|event_id.kakaotalk.sender.token.certification|
-|Delete Sender Profile|event_id.kakaotalk.sender.deletion|
-|Create Sender Profile Group|event_id.kakaotalk.sender.group.creation|
-|Delete Sender Profile Group|event_id.kakaotalk.sender.group.deletion|
-|Add Sender Profile to Group|event_id.kakaotalk.sender.group.member.addition|
-|Delete Sender Profile from Group|event_id.kakaotalk.sender.group.member.deletion|
-|Store Alimtalk, Friendtalk Fallback SMS Appkey|event_id.kakaotalk.fallback.appkey.creation|
-|Store Alimtalk, Friendtalk Fallback Settings|event_id.kakaotalk.fallback.setting.creation|
-|Create Template|event_id.alimtalk.template.creation|
-|Modify Template|event_id.alimtalk.template.modification|
-|Delete Template|event_id.alimtalk.template.deletion|
-|Inquire about Template|event_id.alimtalk.template.comment|
-|Create Template using Attachments|event_id.alimtalk.template.creation-for-file|
-|Upload Template Image|event_id.alimtalk.template.image.uploading|
-|Send Alimtalk Message|event_id.alimtalk.message.sending|
-|Send Alimtalk Authentication Message|event_id.alimtalk.message.auth.sending|
-|Cancel Sending Alimtalk Message|event_id.alimtalk.message.sending-cancellation|
-|Retrieve Alimtalk Message List|event_id.alimtalk.messages.searching|
-|Retrieve Alimtalk Authentication Message List|event_id.alimtalk.auth.messages.searching|
-|Retrieve Alimtalk Mass Recipient List|event_id.alimtalk.mass.recipients.searching|
-|Export Alimtalk Mass Message Results|event_id.alimtalk.mass.message.results.export|
-|Upload Alimtalk Mass Message File|event_id.alimtalk.mass.message.uploading|
-|Send Alimtalk Mass Message|event_id.alimtalk.mass.message.sending|
-|Confirm Sending AlimTalk Mass Messages|event_id.alimtalk.mass.message.confirm-send-request|
-|Cancel Sending Alimtalk Mass Message|event_id.alimtalk.mass.message.sending-cancellation|
-|Export Alimtalk Message Results|event_id.alimtalk.message.results.export|
-|Upload Friendtalk Mass Message File|event_id.friendtalk.mass.message.uploading|
-|Send Friendtalk Message|event_id.friendtalk.message.sending|
-|Sending Friendtalk Mass Message|event_id.friendtalk.mass.message.sending|
-|Cancel Sending Friendtalk Mass Message|event_id.friendtalk.mass.message.sending-cancellation|
-|Cancel Sending Friendtalk Message|event_id.friendtalk.message.sending-cancellation|
-|Retrieve Friendtalk Message List|event_id.friendtalk.messages.searching|
-|Export Friendtalk Message Results|event_id.friendtalk.message.results.export|
-|Retrieve Friendtalk Mass Recipient List|event_id.friendtalk.mass.recipients.searching|
-|Export Friendtalk Mass Message Results|event_id.friendtalk.mass.message.results.export|
-|Confirm Sending ?FriendTalk Mass Messages|event_id.friendtalk.mass.message.confirm-send-request|
-|Upload Friendtalk Image|event_id.friendtalk.image.uploading|
-|Delete Friendtalk Image|event_id.friendtalk.image.deletion|
-|Upload Friendtalk bizFormId|event_id.friendtalk.upload.biz-form-id|
-|Inquiry for notification message bulk sending requests|event_id.alimtalk.get_mass_message_master_list|
-|Inquiry for mass message sending recipients|event_id.alimtalk.get_mass_message_recipient_list|
-|Inquiry for friendtalk mass message sending requests|event_id.friendtalk.get_mass_message_master_list|
-|Inquiry for friendtalk mass message sending recipient detail|event_id.friendtalk.get_mass_message_recipient_detail|
-|Inquiry for alimtalk normal message detail|event_id.alimtalk.message_searching_detail|
-|Inquiry for alimtalk auth message detail|event_id.alimtalk.auth.message_searching_detail|
-|Inquiry for friendtalk auth message detail|event_id.friendtalk.message_searching_detail|
-|Download message export file|event_id.kakaotalk.download.message_export|
-|Cancel Sending Brand Message|event_id.brandmessage.message.sending-cancellation|
-|Cancel Sending Bulk Brand Messages|event_id.brandmessage.mass.message.sending-cancellation|
+|M/Nタイプ使用申請|event_id.brandmessage.marketing.agreement|
+|ブランドメッセージ大量メッセージ結果のエクスポート|event_id.brandmessage.mass.message.results.export|
+|ブランドメッセージメッセージ結果のエクスポート|event_id.brandmessage.message.results.export|
+|発信プロファイルに080無料受信拒否情報を登録|event_id.brandmessage.update.unsubscribe.content|
+|マーケティング受信同意証跡資料アップロード|event_id.brandmessage.upload.marketing.agreement|
+|発信プロフィールの作成|event_id.kakaotalk.sender.creation|
+|発信プロフィールトークンの認証|event_id.kakaotalk.sender.token.certification|
+|発信プロフィールの削除|event_id.kakaotalk.sender.deletion|
+|発信プロフィールグループの作成|event_id.kakaotalk.sender.group.creation|
+|発信プロフィールグループの削除|event_id.kakaotalk.sender.group.deletion|
+|グループに発信プロフィールを追加|event_id.kakaotalk.sender.group.member.addition|
+|グループから発信プロフィールを削除|event_id.kakaotalk.sender.group.member.deletion|
+|お知らせトーク、カカともへのメッセージ代替送信&#96;SMS&#96; Appkey保存|event_id.kakaotalk.fallback.appkey.creation|
+|お知らせトーク、カカともへのメッセージ代替送信設定の保存|event_id.kakaotalk.fallback.setting.creation|
+|テンプレートの作成|event_id.alimtalk.template.creation|
+|テンプレートの修正|event_id.alimtalk.template.modification|
+|テンプレートの削除|event_id.alimtalk.template.deletion|
+|テンプレートのお問い合わせ|event_id.alimtalk.template.comment|
+|添付ファイルを使用してテンプレート作成|event_id.alimtalk.template.creation-for-file|
+|テンプレートイメージのアップロード|event_id.alimtalk.template.image.uploading|
+|お知らせトークメッセージの送信|event_id.alimtalk.message.sending|
+|お知らせトーク認証メッセージの送信|event_id.alimtalk.message.auth.sending|
+|お知らせトークメッセージの送信キャンセル|event_id.alimtalk.message.sending-cancellation|
+|お知らせトークメッセージリストの照会|event_id.alimtalk.messages.searching|
+|お知らせトーク認証メッセージリストの照会|event_id.alimtalk.auth.messages.searching|
+|お知らせトーク大量受信者リストの照会|event_id.alimtalk.mass.recipients.searching|
+|お知らせトーク大量メッセージ結果のエクスポート|event_id.alimtalk.mass.message.results.export|
+|お知らせトーク大量メッセージファイルのアップロード|event_id.alimtalk.mass.message.uploading|
+|お知らせトーク大量メッセージ送信|event_id.alimtalk.mass.message.sending|
+|お知らせトーク大量メッセージの送信を承認する|event_id.alimtalk.mass.message.confirm-send-request|
+|お知らせトーク大量メッセージ送信のキャンセル|event_id.alimtalk.mass.message.sending-cancellation|
+|お知らせトークメッセージ結果のエクスポート|event_id.alimtalk.message.results.export|
+|カカともへのメッセージ大量メッセージファイルのアップロード|event_id.friendtalk.mass.message.uploading|
+|カカともへのメッセージの送信|event_id.friendtalk.message.sending|
+|カカともへのメッセージ大量送信|event_id.friendtalk.mass.message.sending|
+|カカともへのメッセージ大量メッセージ送信のキャンセル|event_id.friendtalk.mass.message.sending-cancellation|
+|カカともへのメッセージの送信キャンセル|event_id.friendtalk.message.sending-cancellation|
+|カカともへのメッセージリストの照会|event_id.friendtalk.messages.searching|
+|カカともへのメッセージ結果のエクスポート|event_id.friendtalk.message.results.export|
+|カカともへのメッセージ大量受信者リストの照会|event_id.friendtalk.mass.recipients.searching|
+|カカともへのメッセージ大量メッセージ結果のエクスポート|event_id.friendtalk.mass.message.results.export|
+|カカともへのメッセージ大量メッセージの送信を承認する|event_id.friendtalk.mass.message.confirm-send-request|
+|カカともへのメッセージイメージのアップロード|event_id.friendtalk.image.uploading|
+|カカともへのメッセージイメージの削除|event_id.friendtalk.image.deletion|
+|FriendtalkのbizFormIdをアップロード|event_id.friendtalk.upload.biz-form-id|
+|通知トークバルク出荷依頼の照会|event_id.alimtalk.get_mass_message_master_list|
+|通知トーク一括送信受信者の検索|event_id.alimtalk.get_mass_message_recipient_list|
+|友達トークバルク出荷依頼の照会|event_id.friendtalk.get_mass_message_master_list|
+|友達トーク一括送信受信者詳細検索|event_id.friendtalk.get_mass_message_recipient_detail|
+|通知トーク一般発送メッセージ詳細照会|event_id.alimtalk.message_searching_detail|
+|通知トーク認証送信メッセージ詳細検索|event_id.alimtalk.auth.message_searching_detail|
+|友達トーク一般発送メッセージ詳細検索|event_id.friendtalk.message_searching_detail|
+|メッセージファイルのダウンロード|event_id.kakaotalk.download.message_export|
+|ブランドメッセージの送信キャンセル|event_id.brandmessage.message.sending-cancellation|
+|ブランドメッセージの一括送信キャンセル|event_id.brandmessage.mass.message.sending-cancellation|
 
 ### API Gateway
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create API Key|event_id.apigw.apikey.create|
-|Modify API Key|event_id.apigw.apikey.update|
-|Delete API Key|event_id.apigw.apikey.delete|
-|Regenerate Primary/Secondary API Key|event_id.apigw.apikey.regenerate|
-|Deploy Stage|event_id.apigw.stage.deploy|
-|Rollback Stage|event_id.apigw.stage.rollback|
-|Delete Stage Deployment History|event_id.apigw.stage.delete_deploy_history|
-|Create Model|event_id.apigw.model.create|
-|Modify Model|event_id.apigw.model.update|
-|Delete Model|event_id.apigw.model.delete|
-|Create Resource Path and Method|event_id.apigw.resource.create_path_and_method|
-|Create Resource Method|event_id.apigw.resource.create_method|
-|Modify Resource Path Plugin|event_id.apigw.resource.update_path_plugin|
-|Modify Resource Method Information and Plugin|event_id.apigw.resource.update_method_info_and_plugin|
-|Delete Resource|event_id.apigw.resource.delete|
-|Import Resources with Swagger|event_id.apigw.resource.import_swagger|
-|Create Service|event_id.apigw.service.create|
-|Modify Service|event_id.apigw.service.update|
-|Delete Service|event_id.apigw.service.delete|
-|Create Stage|event_id.apigw.stage.create|
-|Modify Stage|event_id.apigw.stage.update|
-|Delete Stage|event_id.apigw.stage.delete|
-|Apply Resources to Stage|event_id.apigw.stage.import_resource|
-|Modify Stage Resource|event_id.apigw.stage.update_stage_resource|
-|Connect API Key to Usage plan and Stage|event_id.apigw.apikey.connect_usage_plan|
-|Disconnect API Key from Usage Plan and Stage|event_id.apigw.apikey.disconnect_usage_plan|
-|Change API Key Usage Plan|event_id.apigw.apikey.change_usage_plan|
-|Change API Document Publish Type|event_id.apigw.document.update_publish_type|
-|Create Usage Plan|event_id.apigw.usage_plan.create|
-|Modify Usage Plan|event_id.apigw.usage_plan.update|
-|Delete Usage Plan|event_id.apigw.usage_plan.delete|
-|Connect Stage to Usage Plan|event_id.apigw.usage_plan.connect_stage|
-|Disconnect Stage from Usage Plan|event_id.apigw.usage_plan.disconnect_stage|
-|Create Resource Request Parameters|event_id.apigw.resource.create_request_parameter|
-|Create Resource Response|event_id.apigw.resource.create_response|
-|Connect Domain Alias to Stage|event_id.apigw.stage.connect_alias_domain|
-|Disconnect Domain Alias from Stage|event_id.apigw.stage.disconnect_alias_domain|
+|API Key作成|event_id.apigw.apikey.create|
+|API Key修正|event_id.apigw.apikey.update|
+|API Key削除|event_id.apigw.apikey.delete|
+|Primary/Secondary API Key再発行|event_id.apigw.apikey.regenerate|
+|ステージ配布|event_id.apigw.stage.deploy|
+|ステージを元に戻す|event_id.apigw.stage.rollback|
+|ステージ配布履歴の削除|event_id.apigw.stage.delete_deploy_history|
+|モデル作成|event_id.apigw.model.create|
+|モデル修正|event_id.apigw.model.update|
+|モデル削除|event_id.apigw.model.delete|
+|リソースパスとメソッド作成|event_id.apigw.resource.create_path_and_method|
+|リソースメソッド作成|event_id.apigw.resource.create_method|
+|リソースパスプラグイン修正|event_id.apigw.resource.update_path_plugin|
+|リソースメソッド情報とプラグイン修正|event_id.apigw.resource.update_method_info_and_plugin|
+|リソース削除|event_id.apigw.resource.delete|
+|Swaggerにリソースをインポート|event_id.apigw.resource.import_swagger|
+|サービス作成|event_id.apigw.service.create|
+|サービス修正|event_id.apigw.service.update|
+|サービス削除|event_id.apigw.service.delete|
+|ステージ作成|event_id.apigw.stage.create|
+|ステージ修正|event_id.apigw.stage.update|
+|ステージ削除|event_id.apigw.stage.delete|
+|ステージにリソース適用|event_id.apigw.stage.import_resource|
+|ステージリソース修正|event_id.apigw.stage.update_stage_resource|
+|使用量プラン、ステージとAPI Key接続|event_id.apigw.apikey.connect_usage_plan|
+|使用量プラン、ステージとAPI Key接続解除|event_id.apigw.apikey.disconnect_usage_plan|
+|API Key使用量プラン変更|event_id.apigw.apikey.change_usage_plan|
+|API説明書掲示タイプ変更|event_id.apigw.document.update_publish_type|
+|使用量プラン作成|event_id.apigw.usage_plan.create|
+|使用量プラン修正|event_id.apigw.usage_plan.update|
+|使用量プラン削除|event_id.apigw.usage_plan.delete|
+|使用量プランとステージ接続|event_id.apigw.usage_plan.connect_stage|
+|使用量プランとステージ接続解除|event_id.apigw.usage_plan.disconnect_stage|
+|リソースリクエストパラメータ作成|event_id.apigw.resource.create_request_parameter|
+|リソースレスポンス作成|event_id.apigw.resource.create_response|
+|ステージにドメインエイリアス接続|event_id.apigw.stage.connect_alias_domain|
+|ステージにドメインエイリアス接続解除|event_id.apigw.stage.disconnect_alias_domain|
 |스테이지에 사용자 지정 도메인 연결|event_id.apigw.stage.connect_custom_domain|
 |스테이지에 사용자 지정 도메인 연결 해제|event_id.apigw.stage.disconnect_custom_domain|
 |API Key 가져오기|event_id.apigw.apikey.import|
@@ -1373,156 +1377,156 @@
 
 ### Text to Speech
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Request Text to Speech conversion|event_id.speech.tts.convert|
+|Text to Speech変換リクエスト|event_id.speech.tts.convert|
 
 ### GameStarter
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Register Service Domain|event_id.gamestarter.service_domain.create|
-|Register Game Configuration|event_id.gamestarter.game_config.create|
-|Modify Game Configuration|event_id.gamestarter.game_config.modify|
-|Copy Game Configuration|event_id.gamestarter.game_config.copy|
-|Register Deployment Zone|event_id.gamestarter.deploy_zone.create|
-|Modify Deployment Zone|event_id.gamestarter.deploy_zone.modify|
-|Run Deployment Immediately|event_id.gamestarter.deploy.immediately|
-|Register Deployment Reservation|event_id.gamestarter.deploy.reservation_create|
-|Change Deployment Reservation|event_id.gamestarter.deploy.reservation_change|
-|Cancel Deployment Reservation|event_id.gamestarter.deploy.reservation_cancel|
+|サービスドメインの登録|event_id.gamestarter.service_domain.create|
+|ゲーム設定の登録|event_id.gamestarter.game_config.create|
+|ゲーム設定の修正|event_id.gamestarter.game_config.modify|
+|ゲーム設定のコピー|event_id.gamestarter.game_config.copy|
+|配布ゾーンの登録|event_id.gamestarter.deploy_zone.create|
+|配布ゾーンの修正|event_id.gamestarter.deploy_zone.modify|
+|即時配布の実行|event_id.gamestarter.deploy.immediately|
+|配布予約の登録|event_id.gamestarter.deploy.reservation_create|
+|配布予約の変更|event_id.gamestarter.deploy.reservation_change|
+|配布予約のキャンセル|event_id.gamestarter.deploy.reservation_cancel|
 
 ### Speech to Text
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Request Speech to Text conversion|event_id.speech.stt.convert|
-|Speech to Text Websocket connected|event_id.speech.stt.websocket_connect|
-|Speech to Text Websocket disconnected|event_id.speech.stt.websocket_disconnect|
+|Speech to Text変換リクエスト|event_id.speech.stt.convert|
+|Speech to Text Websocket接続|event_id.speech.stt.websocket_connect|
+|Speech to Text Websocket接続終了|event_id.speech.stt.websocket_disconnect|
 
 ### CloudTrail
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Delete log save/download setting|event_id.cloud_trail.delete_log_save_download_config|
-|Log save/download setting|event_id.cloud_trail.set_log_save_download_config|
+|ログ保存/ダウンロード設定 削除|event_id.cloud_trail.delete_log_save_download_config|
+|ログ保存/ダウンロード設定|event_id.cloud_trail.set_log_save_download_config|
 
 ### Webshell Threat Detector
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Activate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_activated|
-|Deactivate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_deactivated|
+|Webシェルメール受信の有効化|event_id.webshell_treat_detector.mail_send_activated|
+|Webシェルメール受信の無効化|event_id.webshell_treat_detector.mail_send_deactivated|
 
 ### DataFlow
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Flow|event_id.dataflow.flow.meta.create|
-|Modify Flow|event_id.dataflow.flow.meta.update|
-|Delete Flow|event_id.dataflow.flow.meta.delete|
-|Save Flow Settings|event_id.dataflow.flow.graph.update|
-|Copy Flow|event_id.dataflow.flow.meta.copy|
-|Start Flow|event_id.dataflow.flow.start|
-|End Flow|event_id.dataflow.flow.stop|
-|Create Template|event_id.dataflow.template.meta.create|
-|Modify Template|event_id.dataflow.template.meta.update|
-|Delete Template|event_id.dataflow.template.meta.delete|
-|Save Template Settings|event_id.dataflow.template.graph.update|
-|Copy Template|event_id.dataflow.template.graph.copy|
-|Save Scheduler|event_id.dataflow.scheduler.meta.save|
-|Use Validation|event_id.dataflow.settings.accessibility-checker.enable|
-|Disable Validation|event_id.dataflow.settings.accessibility-checker.disable|
-|End After Flow Draining|event_id.dataflow.flow.drain|
-|Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
-|Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
+|フローの作成|event_id.dataflow.flow.meta.create|
+|フローの変更|event_id.dataflow.flow.meta.update|
+|フローの削除|event_id.dataflow.flow.meta.delete|
+|フロー設定の保存|event_id.dataflow.flow.graph.update|
+|フローのコピー|event_id.dataflow.flow.meta.copy|
+|フローの開始|event_id.dataflow.flow.start|
+|フロー終了|event_id.dataflow.flow.stop|
+|テンプレートの作成|event_id.dataflow.template.meta.create|
+|テンプレートの変更|event_id.dataflow.template.meta.update|
+|テンプレートの削除|event_id.dataflow.template.meta.delete|
+|テンプレート設定の保存|event_id.dataflow.template.graph.update|
+|テンプレートのコピー|event_id.dataflow.template.graph.copy|
+|スケジューラの保存|event_id.dataflow.scheduler.meta.save|
+|有効性検査の使用|event_id.dataflow.settings.accessibility-checker.enable|
+|有効性検査の使用しない|event_id.dataflow.settings.accessibility-checker.disable|
+|フロードレイン後に終了|event_id.dataflow.flow.drain|
+|Log &amp; Crash Search保存設定の保存|event_id.dataflow.settings.lncs.save|
+|Log &amp; Crash Search保存設定の削除|event_id.dataflow.settings.lncs.delete|
 
 ### DataQuery
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Activate Project|event_id.dataquery.project_activated|
-|Deactivate Project|event_id.dataquery.project_deactivated|
-|Cluster On|event_id.dataquery.cluster_on|
-|Cluster Off|event_id.dataquery.cluster_off|
-|Stop Resource Usage|event_id.dataquery.resource.pause|
-|Cluster Restart|event_id.dataquery.cluster_restart|
+|プロジェクトの有効化|event_id.dataquery.project_activated|
+|プロジェクトの無効化|event_id.dataquery.project_deactivated|
+|クラスタオン|event_id.dataquery.cluster_on|
+|クラスタオフ|event_id.dataquery.cluster_off|
+|リソース利用停止|event_id.dataquery.resource.pause|
+|クラスタの再起動|event_id.dataquery.cluster_restart|
 
 ### Resource Watcher
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Change Status of Notification|event_id.resource_watcher.alarm.change_status|
-|Create Notification|event_id.resource_watcher.alarm.create|
-|Delete Notification|event_id.resource_watcher.alarm.delete|
-|Modify Notification|event_id.resource_watcher.alarm.update|
-|Create Resource|event_id.resource_watcher.resource.create|
-|Delete Resource|event_id.resource_watcher.resource.delete|
-|Modify Resource|event_id.resource_watcher.resource.update|
-|Create Resource Group|event_id.resource_watcher.resource_group.create|
-|Delete Resource Group|event_id.resource_watcher.resource_group.delete|
-|Modify Resource Group|event_id.resource_watcher.resource_group.update|
-|Create Resource Group Relation|event_id.resource_watcher.resource_group_relation.create|
-|Delete Resource Group Relation|event_id.resource_watcher.resource_group_relation.delete|
-|Modify Resource Group Relation|event_id.resource_watcher.resource_group_relation.update|
-|Create Resource Tag|event_id.resource_watcher.resource_tag.create|
-|Delete Resource Tag|event_id.resource_watcher.resource_tag.delete|
-|Modify Resource Tag|event_id.resource_watcher.resource_tag.update|
-|Add Resource Group Relation|event_id.resource_watcher.resource_tag_relation.create|
-|Delete Resource Group Relation|event_id.resource_watcher.resource_tag_relation.delete|
-|Modify Resource Group Relation|event_id.resource_watcher.resource_tag_relation.update|
+|通知の状態変更|event_id.resource_watcher.alarm.change_status|
+|通知の作成|event_id.resource_watcher.alarm.create|
+|通知の削除|event_id.resource_watcher.alarm.delete|
+|通知の修正|event_id.resource_watcher.alarm.update|
+|リソース作成|event_id.resource_watcher.resource.create|
+|リソース削除|event_id.resource_watcher.resource.delete|
+|リソース修正|event_id.resource_watcher.resource.update|
+|リソースグループ作成|event_id.resource_watcher.resource_group.create|
+|リソースグループ削除|event_id.resource_watcher.resource_group.delete|
+|リソースグループ修正|event_id.resource_watcher.resource_group.update|
+|リソースグループ関係の追加|event_id.resource_watcher.resource_group_relation.create|
+|リソースグループ関係の削除|event_id.resource_watcher.resource_group_relation.delete|
+|リソースグループ関係の修正|event_id.resource_watcher.resource_group_relation.update|
+|リソースタグ作成|event_id.resource_watcher.resource_tag.create|
+|リソースタグ削除|event_id.resource_watcher.resource_tag.delete|
+|リソースタグ修正|event_id.resource_watcher.resource_tag.update|
+|リソースタグ関係の追加|event_id.resource_watcher.resource_tag_relation.create|
+|リソースタグ関係の削除|event_id.resource_watcher.resource_tag_relation.delete|
+|リソースタグ関係の修正|event_id.resource_watcher.resource_tag_relation.update|
 
 ### AI EasyMaker
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Enable API Gateway Service|event_id.easymaker.enable_apigateway|
-|Enable Log&amp;Crash Search Service|event_id.easymaker.enable_logandcrash|
-|Create Endpoint|event_id.easymaker.endpoint.create|
-|Delete Endpoint|event_id.easymaker.endpoint.delete|
-|Change Endpoint|event_id.easymaker.endpoint.update|
-|Create Endpoint Model|event_id.easymaker.endpoint_model.create|
-|Delete Endpoint Model|event_id.easymaker.endpoint_model.delete|
-|Change Endpoint Model|event_id.easymaker.endpoint_model.update|
-|Create Endpoint Stage|event_id.easymaker.endpoint_stage.create|
-|Delete Endpoint Stage|event_id.easymaker.endpoint_stage.delete|
-|Change Endpoint Stage|event_id.easymaker.endpoint_stage.update|
-|Change Endpoint Default Stage|event_id.easymaker.endpoint_stage.update_default_stage|
-|Create Experiment|event_id.easymaker.experiment.create|
-|Delete Experiment|event_id.easymaker.experiment.delete|
-|Create Model|event_id.easymaker.model.create|
-|Delete Model|event_id.easymaker.model.delete|
-|Change Model|event_id.easymaker.model.update|
-|Create Notebook|event_id.easymaker.notebook.create|
-|Delete Notebook|event_id.easymaker.notebook.delete|
-|Change Notebook Instance Flavor|event_id.easymaker.notebook.resize|
-|Start Notebook|event_id.easymaker.notebook.start|
-|Stop Notebook|event_id.easymaker.notebook.stop|
-|Change Notebook|event_id.easymaker.notebook.update|
-|Create Training|event_id.easymaker.training.create|
-|Delete Training|event_id.easymaker.training.delete|
-|Stop Training|event_id.easymaker.training.stop|
-|Change Training|event_id.easymaker.training.update|
-|Create Training Template|event_id.easymaker.training_template.create|
-|Change Training Template|event_id.easymaker.training_template.update|
-|Delete Training Template|event_id.easymaker.training_template.delete|
-|Create Hyperparameter Tuning|event_id.easymaker.hyperparameter_tuning.create|
-|Change Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.update|
-|Stop Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.stop|
-|Delete Hyperparameter tuning|event_id.easymaker.hyperparameter_tuning.delete|
-|Create Registry Credential|event_id.easymaker.registry.credential.create|
-|Change Registry Credential|event_id.easymaker.registry.credential.update_info|
-|Change Registry Credential|event_id.easymaker.registry.credential.update|
-|Delete Registry Credential|event_id.easymaker.registry.credential.delete|
-|Create Image|event_id.easymaker.image_private.create|
-|Change Image|event_id.easymaker.image_private.update|
-|Delete Image|event_id.easymaker.image_private.delete|
-|Change Auto Scaler Settings|event_id.easymaker.endpoint_stage.update_autoscale|
-|Restart Notebook|event_id.easymaker.notebook.restart|
+|API Gatewayサービスの有効化|event_id.easymaker.enable_apigateway|
+|Log&amp;Crash Searchサービスの有効化|event_id.easymaker.enable_logandcrash|
+|エンドポイントの作成|event_id.easymaker.endpoint.create|
+|エンドポイントの削除|event_id.easymaker.endpoint.delete|
+|エンドポイントの変更|event_id.easymaker.endpoint.update|
+|エンドポイントモデルの作成|event_id.easymaker.endpoint_model.create|
+|エンドポイントモデルの削除|event_id.easymaker.endpoint_model.delete|
+|エンドポイントモデルの変更|event_id.easymaker.endpoint_model.update|
+|エンドポイントステージの作成|event_id.easymaker.endpoint_stage.create|
+|エンドポイントステージの削除|event_id.easymaker.endpoint_stage.delete|
+|エンドポイントステージの変更|event_id.easymaker.endpoint_stage.update|
+|エンドポイント基本ステージの変更|event_id.easymaker.endpoint_stage.update_default_stage|
+|実験の作成|event_id.easymaker.experiment.create|
+|実験の削除|event_id.easymaker.experiment.delete|
+|モデルの作成|event_id.easymaker.model.create|
+|モデルの削除|event_id.easymaker.model.delete|
+|モデルの変更|event_id.easymaker.model.update|
+|ノートパソコンの作成|event_id.easymaker.notebook.create|
+|ノートパソコンの削除|event_id.easymaker.notebook.delete|
+|ノートパソコンインスタンスタイプの変更|event_id.easymaker.notebook.resize|
+|ノートパソコンの起動|event_id.easymaker.notebook.start|
+|ノートパソコンの停止|event_id.easymaker.notebook.stop|
+|ノートパソコンの変更|event_id.easymaker.notebook.update|
+|学習の作成|event_id.easymaker.training.create|
+|学習の削除|event_id.easymaker.training.delete|
+|学習の停止|event_id.easymaker.training.stop|
+|学習の変更|event_id.easymaker.training.update|
+|学習テンプレートの作成|event_id.easymaker.training_template.create|
+|学習テンプレートの変更|event_id.easymaker.training_template.update|
+|学習テンプレート削除|event_id.easymaker.training_template.delete|
+|ハイパーパラメータチューニングの作成|event_id.easymaker.hyperparameter_tuning.create|
+|ハイパーパラメータチューニングの変更|event_id.easymaker.hyperparameter_tuning.update|
+|ハイパーパラメータチューニングの停止|event_id.easymaker.hyperparameter_tuning.stop|
+|ハイパーパラメータチューニングの削除|event_id.easymaker.hyperparameter_tuning.delete|
+|レジストリアカウントの作成|event_id.easymaker.registry.credential.create|
+|レジストリアカウントの修正|event_id.easymaker.registry.credential.update_info|
+|レジストリアカウントの修正|event_id.easymaker.registry.credential.update|
+|レジストリアカウントの削除|event_id.easymaker.registry.credential.delete|
+|イメージ作成|event_id.easymaker.image_private.create|
+|イメージの変更|event_id.easymaker.image_private.update|
+|イメージの削除|event_id.easymaker.image_private.delete|
+|オートスケーラー設定の変更|event_id.easymaker.endpoint_stage.update_autoscale|
+|ノートパソコン再起動|event_id.easymaker.notebook.restart|
 
 ### GameAnvil
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |오토스케일링 그룹 복구|event_id.gameanvil.autoscale.restore|
 |GameAnvil Config 생성|event_id.gameanvil.config.create|
@@ -1580,24 +1584,24 @@
 
 ### SMS
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |수신 거부자 목록 추가|event_id.sms.add_block_recipient_list|
 |수신거부 서비스 추가|event_id.sms.add_block_service|
-|Delete Category|event_id.sms.add_category|
-|Register Template|event_id.sms.add_template|
+|カテゴリーの削除|event_id.sms.add_category|
+|テンプレートの登録|event_id.sms.add_template|
 |대량 발송 취소|event_id.sms.cancel_mass_message|
 |예약 발송 메시지 취소|event_id.sms.cancel_reservation_message|
 |수신거부 서비스 공유 해지|event_id.sms.cancel_share_block_service|
-|Send blocking on a country occurred due to conversion rate|event_id.sms.conversion_block|
-|Delete Opt-Out List|event_id.sms.delete_block_recipient_list|
-|Download Files|event_id.sms.download_reserved_file|
+|コンバージョン率に基づくブロック国発生|event_id.sms.conversion_block|
+|受信拒否者リストの削除|event_id.sms.delete_block_recipient_list|
+|ファイルのダウンロード|event_id.sms.download_reserved_file|
 |수신 거부자 목록 조회|event_id.sms.get_block_recipient_list|
 |대량 발송 요청 목록 조회|event_id.sms.get_mass_message_master_list|
 |대량 발송 요청 수신자 상세 조회|event_id.sms.get_mass_message_recipient_detail|
-|Retrieve Recipients of Mass Delivery Requests|event_id.sms.get_mass_message_recipient_list|
+|大量送信リクエスト受信者 リスのト照会|event_id.sms.get_mass_message_recipient_list|
 |일반 발송 인증 메시지 상세 조회|event_id.sms.get_normal_auth_message_detail|
-|Retrieve General Delivery Authentication Messages|event_id.sms.get_normal_auth_message_list|
+|一般送信認証メッセージリストの照会|event_id.sms.get_normal_auth_message_list|
 |일반 발송 MMS 메시지 상세 조회|event_id.sms.get_normal_mms_message_detail|
 |일반 발송 MMS 메시지 목록 조회|event_id.sms.get_normal_mms_message_list|
 |일반 발송 SMS 메시지 상세 조회|event_id.sms.get_normal_sms_message_detail|
@@ -1606,18 +1610,18 @@
 |예약 발송 메시지 목록 조회|event_id.sms.get_reservation_message_list|
 |예약 발송 메시지 검색하여 취소 목록 조회|event_id.sms.get_search_cancel_reservation_list|
 |태그 발송 요청 목록 조회|event_id.sms.get_tag_message_master_list|
-|Retrieve Details of Recipients of Tag Delivery Requests|event_id.sms.get_tag_message_recipient_detail|
-|Retrieve Recipients of Tag Delivery Requests|event_id.sms.get_tag_message_recipient_list|
-|Monthly Send Count Quota Threshold Crossed|event_id.sms.message_send_quota_threshold_crossed|
-|Remove Opt-Out Service|event_id.sms.remove_block_service|
+|タグ送信リクエスト受信者 詳細照会|event_id.sms.get_tag_message_recipient_detail|
+|タグ送信リクエスト受信者 リスト照会|event_id.sms.get_tag_message_recipient_list|
+|月間送信数クォータの上限を超えました|event_id.sms.message_send_quota_threshold_crossed|
+|受信拒否サービスの削除|event_id.sms.remove_block_service|
 |카테고리 삭제|event_id.sms.remove_category|
 |템플릿 삭제|event_id.sms.remove_template|
 |수신 거부자 파일 다운로드 예약|event_id.sms.reserve_download_block_recipient|
-|Schedule Downloads of Bulk Recipient Files|event_id.sms.reserve_download_mass_message|
+|大量受信者ファイルダウンロード予約|event_id.sms.reserve_download_mass_message|
 |일반 수신자 파일 다운로드 예약|event_id.sms.reserve_download_normal_message|
 |태그 수신자 파일 다운로드 예약|event_id.sms.reserve_download_tag_message|
 |예약 발송 메시지 검색하여 취소|event_id.sms.search_cancel_reservation_message|
-|Request Mass Delivery|event_id.sms.send_mass_message|
+|大量送信リクエスト|event_id.sms.send_mass_message|
 |수신거부 서비스 공유|event_id.sms.share_block_service|
 |국제 발송 설정 수정|event_id.sms.update_international_send_config|
 |발송 설정 수정|event_id.sms.update_send_config|
@@ -1625,7 +1629,7 @@
 
 ### File-Crafter
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |상품 활성화|event_id.file_crafter.enableProduct|
 |상품 비활성화|event_id.file_crafter.disableProduct|
@@ -1649,53 +1653,53 @@
 
 ### Network Firewall
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Firewall configuration|event_id.network_firewall.config_iaas|
-|Add Mirroring Filter Group|event_id.network_firewall.mirroring_filter_group_create|
-|Delete Mirroring Filter Group|event_id.network_firewall.mirroring_filter_group_delete|
-|Modify Mirroring Filter Group|event_id.network_firewall.mirroring_filter_group_modify|
-|Add Mirroring Rule|event_id.network_firewall.mirroring_rule_create|
-|Delete Mirroring Rule|event_id.network_firewall.mirroring_rule_delete|
-|Modify Mirroring Rule|event_id.network_firewall.mirroring_rule_modify|
-|Infrastructure configuration|event_id.network_firewall.config_project|
-|Infrastructure and firewall configuration|event_id.network_firewall.config_project_iaas|
-|Download VPN Event Logs|event_id.network_firewall.event_log_download|
-|Modify VPN Gateway|event_id.network_firewall.vpn_gateway_modify|
-|Add Policy|event_id.network_firewall.group_create|
-|Add Policy as Excel|event_id.network_firewall.group_create_template|
-|Validate Policy as Excel|event_id.network_firewall.group_create_template_verify|
-|Delete Policy|event_id.network_firewall.group_delete|
-|Modify Policy|event_id.network_firewall.group_modify|
-|Add IP Object|event_id.network_firewall.ip_object_create|
-|Delete IP Object|event_id.network_firewall.ip_object_delete|
-|Add IP Instance Object|event_id.network_firewall.ip_object_instance_create|
-|Modify IP Object|event_id.network_firewall.ip_object_modify|
-|Add NAT|event_id.network_firewall.nat_create|
-|Delete NAT|event_id.network_firewall.nat_delete|
-|Edit NAT|event_id.network_firewall.nat_edit|
-|Option Settings|event_id.network_firewall.option_create|
-|Validate LNCS Info|event_id.network_firewall.option_lncs_valid|
-|Validate OBS Info|event_id.network_firewall.option_obs_valid|
-|Add Port Object|event_id.network_firewall.port_object_create|
-|Delete Port Object|event_id.network_firewall.port_object_delete|
-|Modify Port Object|event_id.network_firewall.port_object_modify|
-|Delete Network Firewall|event_id.network_firewall.region_delete|
-|Add Routing|event_id.network_firewall.route_create|
-|Delete Routing|event_id.network_firewall.route_delete|
-|Modify Routing|event_id.network_firewall.route_modify|
-|VPN Event|event_id.network_firewall.vpn|
-|Create VPN Gateway|event_id.network_firewall.vpn_gateway_create|
-|Delete VPN Gateway|event_id.network_firewall.vpn_gateway_delete|
-|Associate Floating IP with VPN Gateway|event_id.network_firewall.vpn_gateway_floatingip|
-|Create VPN Tunnel|event_id.network_firewall.vpn_tunnel_create|
-|Delete VPN Tunnel|event_id.network_firewall.vpn_tunnel_delete|
-|Attach/Detach VPN Tunnel|event_id.network_firewall.vpn_tunnel_initiate_terminate|
-|Modify VPN Tunnel|event_id.network_firewall.vpn_tunnel_modify|
+|ファイアウォール構成|event_id.network_firewall.config_iaas|
+|ミラーリングフィルタの追加|event_id.network_firewall.mirroring_filter_group_create|
+|ミラーリングフィルタの削除|event_id.network_firewall.mirroring_filter_group_delete|
+|ミラーリングフィルタの修正|event_id.network_firewall.mirroring_filter_group_modify|
+|ミラーリングルールの追加|event_id.network_firewall.mirroring_rule_create|
+|ミラーリングルールの削除|event_id.network_firewall.mirroring_rule_delete|
+|ミラーリングルールの修正|event_id.network_firewall.mirroring_rule_modify|
+|インフラ構成|event_id.network_firewall.config_project|
+|インフラおよびファイアウォール構成|event_id.network_firewall.config_project_iaas|
+|VPNイベントログのダウンロード|event_id.network_firewall.event_log_download|
+|VPNゲートウェイの修正|event_id.network_firewall.vpn_gateway_modify|
+|ポリシーの追加|event_id.network_firewall.group_create|
+|ポリシーExcel追加|event_id.network_firewall.group_create_template|
+|ポリシーExcel検証|event_id.network_firewall.group_create_template_verify|
+|ポリシーの削除|event_id.network_firewall.group_delete|
+|ポリシーの修正|event_id.network_firewall.group_modify|
+|IPオブジェクトの追加|event_id.network_firewall.ip_object_create|
+|IPオブジェクトの削除|event_id.network_firewall.ip_object_delete|
+|IPインスタンスオブジェクトの追加|event_id.network_firewall.ip_object_instance_create|
+|IPオブジェクトの修正|event_id.network_firewall.ip_object_modify|
+|NATの追加|event_id.network_firewall.nat_create|
+|NATの削除|event_id.network_firewall.nat_delete|
+|NATの修正|event_id.network_firewall.nat_edit|
+|オプション設定|event_id.network_firewall.option_create|
+|LNCS情報検証|event_id.network_firewall.option_lncs_valid|
+|OBS情報検証|event_id.network_firewall.option_obs_valid|
+|Portオブジェクトの追加|event_id.network_firewall.port_object_create|
+|Portオブジェクトの削除|event_id.network_firewall.port_object_delete|
+|Portオブジェクトの修正|event_id.network_firewall.port_object_modify|
+|NetworkFirewall削除|event_id.network_firewall.region_delete|
+|ルーティングの追加|event_id.network_firewall.route_create|
+|ルーティングの削除|event_id.network_firewall.route_delete|
+|ルーティングの修正|event_id.network_firewall.route_modify|
+|VPNイベント|event_id.network_firewall.vpn|
+|VPNゲートウェイの作成|event_id.network_firewall.vpn_gateway_create|
+|VPNゲートウェイの削除|event_id.network_firewall.vpn_gateway_delete|
+|VPNゲートウェイにFloating IP接続|event_id.network_firewall.vpn_gateway_floatingip|
+|VPNトンネルの作成|event_id.network_firewall.vpn_tunnel_create|
+|VPNトンネルの削除|event_id.network_firewall.vpn_tunnel_delete|
+|VPNトンネル接続/接続解除|event_id.network_firewall.vpn_tunnel_initiate_terminate|
+|VPNトンネルの修正|event_id.network_firewall.vpn_tunnel_modify|
 
 ### RCS Bizmessage
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |프로젝트 SMS 링크|event_id.rcs_bizmessage.link_sms_product|
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|
@@ -1703,16 +1707,16 @@
 
 ### Security Advisor
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Auto Inspection Completed|event_id.security_advisor.auto_scan_complete|
-|Download Excel|event_id.security_advisor.excel_download|
-|Selected Inspection Requested|event_id.security_advisor.manual_scan_request|
-|Settings Changed|event_id.security_advisor.setting_change|
+|自動点検完了|event_id.security_advisor.auto_scan_complete|
+|Excelダウンロード|event_id.security_advisor.excel_download|
+|選択点検リクエスト|event_id.security_advisor.manual_scan_request|
+|設定変更|event_id.security_advisor.setting_change|
 
 ### Email
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |파일 다운로드|email_id.email.file_download|
 |파일 다운로드 요청|email_id.email.file_download_request|
@@ -1750,46 +1754,46 @@
 
 ### ROLE
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Role|event_id.role.role.create|
-|Modify Role|event_id.role.role.update|
-|Delete Role|event_id.role.role.delete|
-|Create Role Tag|event_id.role.role_tag.create|
-|Delete Role Tag|event_id.role.role_tag.delete|
-|Create User|event_id.role.user.create|
-|Modify User|event_id.role.user.update|
-|Delete User|event_id.role.user.delete|
-|Create Scope|event_id.role.scope.create|
-|Modify Scope|event_id.role.scope.update|
-|Delete Scope|event_id.role.scope.delete|
-|Create Resource|event_id.role.resource.create|
-|Modify Resource|event_id.role.resource.update|
-|Delete Resource|event_id.role.resource.delete|
-|Create Resource-related Role|event_id.role.resource_authorization.create|
-|Delete Resource-related Role|event_id.role.resource_authorization.delete|
-|Create Operation|event_id.role.operation.create|
-|Modify Operation|event_id.role.operation.update|
-|Delete Operation|event_id.role.operation.delete|
-|Create Related Role|event_id.role.role_relation.create|
-|Modify Related Role|event_id.role.role_relation.update|
-|Delete Related Role|event_id.role.role_relation.delete|
-|Create User-related Role|event_id.role.user_role_relation.create|
-|Modify User-related Role|event_id.role.user_role_relation.update|
-|Delete User-related Role|event_id.role.user_role_relation.delete|
-|Delete Cache|event_id.role.cache_flushtime.update|
-|Bulk Change|event_id.role.execute_behavior|
-|Create Condition Attribute|event_id.role.attribute.create|
-|Modify Condition Attribute|event_id.role.attribute.update|
-|Delete Condition Attribute|event_id.role.attribute.delete|
-|Create Condition Attribute-related Role|event_id.role.attribute_role_relation.create|
-|Delete Condition Attribute-related Role|event_id.role.attribute_role_relation.delete|
-|Create Condition Attribute Tag|event_id.role.attribute_tag.create|
-|Delete Condition Attribute Tag|event_id.role.attribute_tag.delete|
+|ロールの作成|event_id.role.role.create|
+|ロールの修正|event_id.role.role.update|
+|ロールの削除|event_id.role.role.delete|
+|ロールタグの作成|event_id.role.role_tag.create|
+|ロールタグの削除|event_id.role.role_tag.delete|
+|ユーザーの作成|event_id.role.user.create|
+|ユーザーの修正|event_id.role.user.update|
+|ユーザーの削除|event_id.role.user.delete|
+|範囲作成|event_id.role.scope.create|
+|範囲修正|event_id.role.scope.update|
+|範囲削除|event_id.role.scope.delete|
+|リソースの作成|event_id.role.resource.create|
+|リソースの修正|event_id.role.resource.update|
+|リソースの削除|event_id.role.resource.delete|
+|リソース関連ロールの作成|event_id.role.resource_authorization.create|
+|リソース関連ロールの削除|event_id.role.resource_authorization.delete|
+|オペレーションの作成|event_id.role.operation.create|
+|オペレーションの修正|event_id.role.operation.update|
+|オペレーションの削除|event_id.role.operation.delete|
+|関連ロールの作成|event_id.role.role_relation.create|
+|関連ロールの修正|event_id.role.role_relation.update|
+|関連ロールの削除|event_id.role.role_relation.delete|
+|ユーザー関連ロールの作成|event_id.role.user_role_relation.create|
+|ユーザー関連ロールの修正|event_id.role.user_role_relation.update|
+|ユーザー関連ロールの削除|event_id.role.user_role_relation.delete|
+|キャッシュの削除|event_id.role.cache_flushtime.update|
+|一括変更|event_id.role.execute_behavior|
+|条件属性の作成|event_id.role.attribute.create|
+|条件属性の修正|event_id.role.attribute.update|
+|条件属性の削除|event_id.role.attribute.delete|
+|条件属性関連ロールの作成|event_id.role.attribute_role_relation.create|
+|条件属性関連ロールの削除|event_id.role.attribute_role_relation.delete|
+|条件属性タグの作成|event_id.role.attribute_tag.create|
+|条件属性タグの削除|event_id.role.attribute_tag.delete|
 
 ### Gamebase
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |Update App|event_id.gamebase.app_update|
 |Add test device|event_id.gamebase.access_devices_create|
@@ -1844,7 +1848,7 @@
 |단말기 이전 키 발급|event_id.gamebase.transfer_account_key_update|
 |단말기 이전 차단 상태 해제|event_id.gamebase.transfer_account_block_update|
 |이용정지 등록|event_id.gamebase.ban_create|
-|Release ban|event_id.gamebase.ban_delete|
+|이용정지 해제|event_id.gamebase.ban_delete|
 |이용정지 템플릿 등록|event_id.gamebase.ban_template_create|
 |이용정지 템플릿 수정|event_id.gamebase.ban_template_update|
 |이용정지 앱가드 설정|event_id.gamebase.ban_app_guard_update|
@@ -1909,43 +1913,43 @@
 
 ### NHN Container Registry(NCR)
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Enable NCR|event_id.ncr.enable|
-|Disable NCR|event_id.ncr.disable|
-|Create Registry|event_id.ncr.registry.create|
-|Delete Registry|event_id.ncr.registry.delete|
-|Modify Registry|event_id.ncr.registry.update|
-|Add Image Protection Policy|event_id.ncr.immutable_tag_rule.create|
-|Delete Image Protection Policy|event_id.ncr.immutable_tag_rule.delete|
-|Modify Image Protection Policy|event_id.ncr.immutable_tag_rule.update|
-|Create Image Cleanup Policy|event_id.ncr.retention_rule.create|
-|Delete Image Cleanup Policy|event_id.ncr.retention_rule.delete|
-|Run Image Cleanup Policy|event_id.ncr.retention_rule.execute|
-|Modify Image Cleanup Policy|event_id.ncr.retention_rule.update|
-|Set Image Cleanup Policy|event_id.ncr.retention_schedule.update|
-|Create Webhook|event_id.ncr.webhook.create|
-|Delete Webhook|event_id.ncr.webhook.delete|
-|Modify Webhook|event_id.ncr.webhook.update|
-|Delete Image|event_id.ncr.image.delete|
-|Delete Artifact|event_id.ncr.artifact.delete|
-|Scan Artifact|event_id.ncr.artifact.scan|
-|Stop Scanning|event_id.ncr.artifact.scan_stop|
-|Create Tag|event_id.ncr.tag.create|
-|Delete Tag|event_id.ncr.tag.delete|
-|Create Replication Policy|event_id.ncr.replication_policy.create|
-|Delete Replication Policy|event_id.ncr.replication_policy.delete|
-|Modify Replication Policy|event_id.ncr.replication_policy.update|
-|Run Replication Policy|event_id.ncr.replication_policy.execute|
-|Set CVE Allow List|event_id.ncr.cve_allowlist.update|
-|Set Auto Scan Cycle|event_id.ncr.scan_all_schedule.update|
-|Create Image Cache|event_id.ncr.image_cache.create|
-|Delete Image Cache|event_id.ncr.image_cache.delete|
-|Modify Image Cache|event_id.ncr.image_cache.update|
+|NCRサービスの有効化|event_id.ncr.enable|
+|NCRサービスの無効化|event_id.ncr.disable|
+|レジストリの作成|event_id.ncr.registry.create|
+|レジストリの削除|event_id.ncr.registry.delete|
+|レジストリの修正|event_id.ncr.registry.update|
+|イメージ保護ポリシー追加|event_id.ncr.immutable_tag_rule.create|
+|イメージ保護ポリシー削除|event_id.ncr.immutable_tag_rule.delete|
+|イメージ保護ポリシー修正|event_id.ncr.immutable_tag_rule.update|
+|イメージ整理ポリシー追加|event_id.ncr.retention_rule.create|
+|イメージ整理ポリシー削除|event_id.ncr.retention_rule.delete|
+|イメージ整理ポリシー実行|event_id.ncr.retention_rule.execute|
+|イメージ整理ポリシー修正|event_id.ncr.retention_rule.update|
+|イメージ整理サイクル設定|event_id.ncr.retention_schedule.update|
+|Webフック作成|event_id.ncr.webhook.create|
+|Webフック削除|event_id.ncr.webhook.delete|
+|Webフック修正|event_id.ncr.webhook.update|
+|イメージ削除|event_id.ncr.image.delete|
+|アーティファクト削除|event_id.ncr.artifact.delete|
+|アーティファクトスキャン|event_id.ncr.artifact.scan|
+|アーティファクトスキャン停止|event_id.ncr.artifact.scan_stop|
+|アーティファクトタグ作成|event_id.ncr.tag.create|
+|アーティファクトタグ削除|event_id.ncr.tag.delete|
+|レジストリ複製の作成|event_id.ncr.replication_policy.create|
+|レジストリ複製の削除|event_id.ncr.replication_policy.delete|
+|レジストリ複製の修正|event_id.ncr.replication_policy.update|
+|レジストリ複製の実行|event_id.ncr.replication_policy.execute|
+|CVE許可リスト設定|event_id.ncr.cve_allowlist.update|
+|自動スキャン周期設定|event_id.ncr.scan_all_schedule.update|
+|イメージキャッシュの作成|event_id.ncr.image_cache.create|
+|イメージキャッシュの削除|event_id.ncr.image_cache.delete|
+|イメージキャッシュの修正|event_id.ncr.image_cache.update|
 
 ### NHN Bastion
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |실시간 세션 차단|event_id.bastion.session_block|
 |명령어 등록|event_id.bastion.logging_command_modify|
@@ -1988,35 +1992,35 @@
 
 ### Cloud Monitoring
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Enable Notification|event_id.cloud_monitoring_project.alarm_activate|
-|Create Notification|event_id.cloud_monitoring_project.alarm_create|
-|Delete Notification|event_id.cloud_monitoring_project.alarm_delete|
-|Modify Notification|event_id.cloud_monitoring_project.alarm_modify|
-|Copy Dashboard|event_id.cloud_monitoring_project.dashboard_copy|
-|Create Dashboard|event_id.cloud_monitoring_project.dashboard_create|
-|Delete Dashboard|event_id.cloud_monitoring_project.dashboard_delete|
-|Display Dashboard|event_id.cloud_monitoring_project.dashboard_exposure|
-|Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
-|Enable Metrics Collection|event_id.cloud_monitoring_project.service_management|
+|通知の使用有無設定|event_id.cloud_monitoring_project.alarm_activate|
+|通知の作成|event_id.cloud_monitoring_project.alarm_create|
+|通知の削除|event_id.cloud_monitoring_project.alarm_delete|
+|通知の修正|event_id.cloud_monitoring_project.alarm_modify|
+|ダッシュボードの複製|event_id.cloud_monitoring_project.dashboard_copy|
+|ダッシュボードの作成|event_id.cloud_monitoring_project.dashboard_create|
+|ダッシュボードの削除|event_id.cloud_monitoring_project.dashboard_delete|
+|ダッシュボードの表示設定|event_id.cloud_monitoring_project.dashboard_exposure|
+|ダッシュボードの修正|event_id.cloud_monitoring_project.dashboard_modify|
+|指標収集の設定|event_id.cloud_monitoring_project.service_management|
 
 ### Cloud Scheduler
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Schedule|event_id.cloud_scheduler.schedule.create|
-|Change Schedule|event_id.cloud_scheduler.schedule.update|
-|Delete Schedule|event_id.cloud_scheduler.schedule.delete|
-|&#8;Activate Schedule|event_id.cloud_scheduler.schedule.enable|
-|Deactivate Schedule|event_id.cloud_scheduler.schedule.disable|
-|Create Template|event_id.cloud_scheduler.schedule_template.create|
-|Modify Template|event_id.cloud_scheduler.schedule_template.update|
-|Delete Template|event_id.cloud_scheduler.schedule_template.delete|
+|スケジュールの作成|event_id.cloud_scheduler.schedule.create|
+|スケジュールの変更|event_id.cloud_scheduler.schedule.update|
+|スケジュールの削除|event_id.cloud_scheduler.schedule.delete|
+|スケジュールの有効化|event_id.cloud_scheduler.schedule.enable|
+|スケジュールの無効化|event_id.cloud_scheduler.schedule.disable|
+|テンプレート作成|event_id.cloud_scheduler.schedule_template.create|
+|テンプレート変更|event_id.cloud_scheduler.schedule_template.update|
+|テンプレート削除|event_id.cloud_scheduler.schedule_template.delete|
 
 ### Notification Hub
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |주소록 수신자 목록 파일 다운로드 요청|event_id.notification_hub.addressbook.export_recipients|
 |주소록 그룹 수신자 목록 파일 다운로드 요청|event_id.notification_hub.addressbook.export_group_recipients|
@@ -2076,92 +2080,92 @@
 
 ### DDoS Guard
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Zone|event_id.ddos_guard.zone_create|
-|Modify Zone|event_id.ddos_guard.zone_modify|
-|Deactivate Zone|event_id.ddos_guard.zone_cancel|
-|Set Report|event_id.ddos_guard.report_usage_set|
-|Create Mock Training|event_id.ddos_guard.mock_training_create|
-|Modify Mock Training|event_id.ddos_guard.mock_training_modify|
-|Delete Mock Training|event_id.ddos_guard.mock_training_delete|
+|Zone作成|event_id.ddos_guard.zone_create|
+|Zone修正|event_id.ddos_guard.zone_modify|
+|Zone解除|event_id.ddos_guard.zone_cancel|
+|レポート設定|event_id.ddos_guard.report_usage_set|
+|模擬訓練の作成|event_id.ddos_guard.mock_training_create|
+|模擬訓練の修正|event_id.ddos_guard.mock_training_modify|
+|模擬訓練の削除|event_id.ddos_guard.mock_training_delete|
 
 ### EasyQueue
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Create Topic|event_id.easyqueue.topic.create|
-|Modify Topic|event_id.easyqueue.topic.update|
-|Delete Topic|event_id.easyqueue.topic.delete|
-|Send Message|event_id.easyqueue.topic.send_messages|
+|トピック作成|event_id.easyqueue.topic.create|
+|トピック編集|event_id.easyqueue.topic.update|
+|トピック削除|event_id.easyqueue.topic.delete|
+|メッセージ送信|event_id.easyqueue.topic.send_messages|
 
 ### Cloud Access
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Add User|event_id.cloud_access.user_create|
-|Delete User|event_id.cloud_access.user_delete|
-|Modify User|event_id.cloud_access.user_modify|
-|Change User Account Status|event_id.cloud_access.user_account_state_change|
-|Reset User Otp|event_id.cloud_access.user_otp_reset|
-|Reset User Password|event_id.cloud_access.user_password_reset|
-|Reset User Login Failure|event_id.cloud_access.user_login_failure_reset|
-|Activate User Account|event_id.cloud_access.user_account_activate|
-|Verify User Upload in Batch|event_id.cloud_access.user_create_verify|
-|Upload User in Batch|event_id.cloud_access.user_create_template|
-|Add User Policy|event_id.cloud_access.user_policy_create|
-|Modify User Policy|event_id.cloud_access.user_policy_modify|
-|Delete User Policy|event_id.cloud_access.user_policy_delete|
-|Add ACL Policy|event_id.cloud_access.acl_policy_create|
-|Copy ACL Policy|event_id.cloud_access.acl_policy_copy_create|
-|Delete ACL Policy|event_id.cloud_access.acl_policy_delete|
-|Modify ACL Policy|event_id.cloud_access.acl_policy_modify|
-|Move ACL Policy|event_id.cloud_access.acl_policy_move|
-|Verify Upload ACL Policy in Batch|event_id.cloud_access.acl_policy_create_template_verify|
-|Upload ACL Policy in Batch|event_id.cloud_access.acl_policy_create_template|
-|Add IP Object|event_id.cloud_access.ip_object_create|
-|Add IP Object (User)|event_id.cloud_access.ip_object_user_create|
-|Delete IP Object|event_id.cloud_access.ip_object_delete|
-|Modify IP Object|event_id.cloud_access.ip_object_modify|
-|Verify Upload IP Object in Batch|event_id.cloud_access.ip_object_create_template_verify|
-|Upload IP Object in Batch|event_id.cloud_access.ip_object_create_template|
-|Add Port Object|event_id.cloud_access.port_object_create|
-|Delete Port Object|event_id.cloud_access.port_object_delete|
-|Modify Port Object|event_id.cloud_access.port_object_modify|
-|Verify Upload PORT Object in Batch|event_id.cloud_access.port_object_create_template_verify|
-|Upload PORT Object in Batch|event_id.cloud_access.port_object_create_template|
-|Default Deny Policy Log Settings|event_id.cloud_access.option_deny_log_create|
-|Remote Log (Syslog) Settings|event_id.cloud_access.option_remote_log_syslog_create|
-|Remote Log (OBS) Settings|event_id.cloud_access.option_remote_log_obs_create|
-|Remote Log(Log &amp; Crash Search) Settings|event_id.cloud_access.option_remote_log_lncs_create|
-|Validate Remote Log (Log &amp; Crash Search) Information|event_id.cloud_access.option_lncs_valid|
-|Validate Remote Log (OBS) Information|event_id.cloud_access.option_obs_valid|
-|Login Security (Login Failed) Settings|event_id.cloud_access.option_login_failure_create|
-|Login Security (Password Expiration) Settings|event_id.cloud_access.option_password_expire_create|
-|Login Security (Password Policy) Settings|event_id.cloud_access.option_password_policy_create|
-|Connection Settings|event_id.cloud_access.option_connection_create|
-|Change Connection Settings|event_id.cloud_access.option_connection_modify|
-|Notice Settings|event_id.cloud_access.option_guide_create|
-|Logo Settings|event_id.cloud_access.option_logo_create|
-|Reset User Passkey|event_id.cloud_access.user_passkey_reset|
+|ユーザー追加|event_id.cloud_access.user_create|
+|ユーザー削除|event_id.cloud_access.user_delete|
+|ユーザー修正|event_id.cloud_access.user_modify|
+|ユーザーアカウント状態変更|event_id.cloud_access.user_account_state_change|
+|ユーザーOTP初期化|event_id.cloud_access.user_otp_reset|
+|ユーザーパスワードリセット|event_id.cloud_access.user_password_reset|
+|ユーザーログイン失敗初期化|event_id.cloud_access.user_login_failure_reset|
+|ユーザーアカウント有効化|event_id.cloud_access.user_account_activate|
+|ユーザー一括アップロード検証|event_id.cloud_access.user_create_verify|
+|ユーザー一括アップロード|event_id.cloud_access.user_create_template|
+|ユーザーポリシー追加|event_id.cloud_access.user_policy_create|
+|ユーザーポリシー修正|event_id.cloud_access.user_policy_modify|
+|ユーザーポリシー削除|event_id.cloud_access.user_policy_delete|
+|ユーザーポリシー削除|event_id.cloud_access.acl_policy_create|
+|ACLポリシーコピー|event_id.cloud_access.acl_policy_copy_create|
+|ACLポリシー削除|event_id.cloud_access.acl_policy_delete|
+|ACLポリシー修正|event_id.cloud_access.acl_policy_modify|
+|ACLポリシー移動|event_id.cloud_access.acl_policy_move|
+|ACLポリシー一括アップロード検証|event_id.cloud_access.acl_policy_create_template_verify|
+|ACLポリシー一括アップロード|event_id.cloud_access.acl_policy_create_template|
+|IPオブジェクト追加|event_id.cloud_access.ip_object_create|
+|IPオブジェクト追加(ユーザー)|event_id.cloud_access.ip_object_user_create|
+|IPオブジェクト削除|event_id.cloud_access.ip_object_delete|
+|IPオブジェクト修正|event_id.cloud_access.ip_object_modify|
+|IPオブジェクト一括アップロード検証|event_id.cloud_access.ip_object_create_template_verify|
+|IPオブジェクト一括アップロード|event_id.cloud_access.ip_object_create_template|
+|PORTオブジェクト追加|event_id.cloud_access.port_object_create|
+|PORTオブジェクト削除|event_id.cloud_access.port_object_delete|
+|PORTオブジェクト修正|event_id.cloud_access.port_object_modify|
+|PORTオブジェクト一括アップロード検証|event_id.cloud_access.port_object_create_template_verify|
+|PORTオブジェクト一括アップロード|event_id.cloud_access.port_object_create_template|
+|基本ブロックポリシーログ設定|event_id.cloud_access.option_deny_log_create|
+|リモートログ(Syslog)設定|event_id.cloud_access.option_remote_log_syslog_create|
+|リモートログ(OBS)設定|event_id.cloud_access.option_remote_log_obs_create|
+|リモートログ(Log &amp; Crash Search)設定|event_id.cloud_access.option_remote_log_lncs_create|
+|リモートログ(Log &amp; Crash Search)情報検証|event_id.cloud_access.option_lncs_valid|
+|リモートログ(OBS)情報検証|event_id.cloud_access.option_obs_valid|
+|ログインセキュリティ(ログイン失敗)設定|event_id.cloud_access.option_login_failure_create|
+|ログインセキュリティ(パスワード有効期限)設定|event_id.cloud_access.option_password_expire_create|
+|ログインセキュリティ(パスワードポリシー)設定|event_id.cloud_access.option_password_policy_create|
+|接続設定|event_id.cloud_access.option_connection_create|
+|接続設定の変更|event_id.cloud_access.option_connection_modify|
+|案内設定|event_id.cloud_access.option_guide_create|
+|ロゴ設定|event_id.cloud_access.option_logo_create|
+|ユーザーパスキー初期化|event_id.cloud_access.user_passkey_reset|
 
 ### Cloud Functions
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Copy Function|event_id.cloud_functions.function.copy|
-|Create Function|event_id.cloud_functions.function.create|
-|Delete Function|event_id.cloud_functions.function.delete|
-|Deploy Version|event_id.cloud_functions.function.deploy.version|
-|Update Function|event_id.cloud_functions.function.update|
-|Create Trigger|event_id.cloud_functions.trigger.create|
-|Delete Trigger|event_id.cloud_functions.trigger.delete|
-|Update Trigger|event_id.cloud_functions.trigger.update|
-|Delete Version|event_id.cloud_functions.version.delete|
+|関数のコピー|event_id.cloud_functions.function.copy|
+|関数の作成|event_id.cloud_functions.function.create|
+|関数の削除|event_id.cloud_functions.function.delete|
+|バージョンの配布|event_id.cloud_functions.function.deploy.version|
+|関数の修正|event_id.cloud_functions.function.update|
+|トリガーの作成|event_id.cloud_functions.trigger.create|
+|トリガーの削除|event_id.cloud_functions.trigger.delete|
+|トリガーの修正|event_id.cloud_functions.trigger.update|
+|バージョンの削除|event_id.cloud_functions.version.delete|
 
 ### Private CA
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
 |CA 생성|event_id.pca.ca.create|
 |CA 삭제|event_id.pca.ca.delete|
@@ -2185,100 +2189,100 @@
 
 ### RDS for PostgreSQL
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Export backup to the object storage|event_id.rds_for_postgresql.BACKUP_EXPORT|
-|Add Server Monitoring Chart Layout|event_id.rds_for_postgresql.CHART_LAYOUT_CREATE|
-|Delete Server Monitoring Chart Layout|event_id.rds_for_postgresql.CHART_LAYOUT_DELETE|
-|Modify Server Monitoring Chart Layout|event_id.rds_for_postgresql.CHART_LAYOUT_MODIFY|
-|Back Up DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_BACKUP|
-|DB instance force promotion|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_PROMOTE|
-|Force Restart DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_RESTART|
-|Pause High Availability|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PAUSE_HA|
-|Promote DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PROMOTE|
-|High Availability Rebuild after Failover|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_HA|
-|Rebuild Replication|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_REPLICATION|
-|Restore High Availability of Failover Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPAIR_HA|
-|Replicate DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPLICATE|
-|Restart DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTART|
-|Restore DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTORE|
-|Resume High Availability|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESUME_HA|
-|Change to DB Instance after Failover|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_SPLIT_AFTER_FAILOVER_COMPLETION|
-|DB instance started|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_START|
-|Stop DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_STOP|
-|Apply Access Control Rule Changes|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_HBA_RULE|
-|Apply Parameter Group Changes|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_RECENT_PARAMETER_GROUP|
-|Delete Backup|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_DELETE|
-|Make and export a DB instance backup|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_EXPORT|
-|Change Deletion Protection Setting for DB instance|event_id.rds_for_postgresql.DB_INSTANCE_CHANGE_DELETION_PROTECTION|
-|Create DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_CREATE|
-|Create Database|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_CREATE|
-|Delete Database|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_DELETE|
-|Modify Database|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_MODIFY|
-|Add User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_CREATE|
-|Delete User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_DELETE|
-|Modify User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_MODIFY|
-|Synchronize User|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_SYNC|
-|Delete DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_DELETE|
-|Free Up DB Instance Space|event_id.rds_for_postgresql.DB_INSTANCE_DELETE_WAL_LOG|
-|Apply Extension Changes|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_APPLY|
-|Synchronize Extensions|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_SYNC|
-|DB instance migration|event_id.rds_for_postgresql.DB_INSTANCE_MIGRATION|
-|Change Detailed Setting For DB Instance|event_id.rds_for_postgresql.DB_INSTANCE_MODIFY|
-|Restoration from DB Instance Object Storage|event_id.rds_for_postgresql.DB_INSTANCE_RESTORE_FROM_OBS|
-|Expand DB Instance Storage|event_id.rds_for_postgresql.DB_INSTANCE_VOLUME_EXTEND|
-|Create DB Security Group|event_id.rds_for_postgresql.DB_SECURITY_GROUP_CREATE|
-|Delete DB Security Group|event_id.rds_for_postgresql.DB_SECURITY_GROUP_DELETE|
-|Modify DB Security Group|event_id.rds_for_postgresql.DB_SECURITY_GROUP_MODIFY|
-|Create DB Security Group Rule|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_CREATE|
-|Delete DB Security Group Rule|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_DELETE|
-|Modify DB Security Group Rule|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_MODIFY|
-|Delete Event Subscription|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_DELETE|
-|Modify Event Group|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_MODIFY|
-|Register Event Subscription|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_REGISTER|
-|Create Notification Group|event_id.rds_for_postgresql.NOTIFICATION_GROUP_CREATE|
-|Delete Notification Group|event_id.rds_for_postgresql.NOTIFICATION_GROUP_DELETE|
-|Modify Notification Group|event_id.rds_for_postgresql.NOTIFICATION_GROUP_MODIFY|
-|Copy Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_COPY|
-|Create Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_CREATE|
-|Delete Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_DELETE|
-|Modify Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_MODIFY_PARAMETERS|
-|Reset Parameter Group|event_id.rds_for_postgresql.PARAMETER_GROUP_RESET|
-|Create User Group|event_id.rds_for_postgresql.USER_GROUP_CREATE|
-|Delete User Group|event_id.rds_for_postgresql.USER_GROUP_DELETE|
-|Modify User Group|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
+|オブジェクトストレージでバックアップをエクスポート|event_id.rds_for_postgresql.BACKUP_EXPORT|
+|サーバーモニタリングチャートレイアウトを追加|event_id.rds_for_postgresql.CHART_LAYOUT_CREATE|
+|サーバーモニタリングチャートレイアウトを削除|event_id.rds_for_postgresql.CHART_LAYOUT_DELETE|
+|サーバーモニタリングチャートレイアウトを修正|event_id.rds_for_postgresql.CHART_LAYOUT_MODIFY|
+|DBインスタンスのバックアップ|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_BACKUP|
+|DBインスタンス強制昇格|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_PROMOTE|
+|DBインスタンス強制再起動|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_FORCE_RESTART|
+|高可用性一時停止|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PAUSE_HA|
+|DBインスタンスの昇格|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_PROMOTE|
+|フェイルオーバーが完了した高可用性の再構築|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_HA|
+|複製再構築|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REBUILD_REPLICATION|
+|障害措置インスタンス高可用性機能を復旧|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPAIR_HA|
+|DBインスタンスのコピー|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_REPLICATE|
+|DBインスタンスの再起動|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTART|
+|DBインスタンスの復元|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESTORE|
+|高可用性再開|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_RESUME_HA|
+|フェイルオーバー完了後、一般DBインスタンスに変更|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_SPLIT_AFTER_FAILOVER_COMPLETION|
+|DBインスタンスの起動|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_START|
+|DBインスタンスの停止|event_id.rds_for_postgresql.DB_INSTANCE_ACTION_STOP|
+|アクセス制御ルールの変更を適用|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_HBA_RULE|
+|パラメータグループの変更事項を適用|event_id.rds_for_postgresql.DB_INSTANCE_APPLY_RECENT_PARAMETER_GROUP|
+|バックアップの削除|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_DELETE|
+|DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_postgresql.DB_INSTANCE_BACKUP_EXPORT|
+|DBインスタンスの削除保護設定を変更|event_id.rds_for_postgresql.DB_INSTANCE_CHANGE_DELETION_PROTECTION|
+|DBインスタンスの作成|event_id.rds_for_postgresql.DB_INSTANCE_CREATE|
+|データベースの作成|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_CREATE|
+|データベースの削除|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_DELETE|
+|データベースの修正|event_id.rds_for_postgresql.DB_INSTANCE_DATABASE_MODIFY|
+|ユーザーの追加|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_CREATE|
+|ユーザーの削除|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_DELETE|
+|ユーザー変更|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_MODIFY|
+|ユーザーの同期|event_id.rds_for_postgresql.DB_INSTANCE_DB_USER_SYNC|
+|DBインスタンスの削除|event_id.rds_for_postgresql.DB_INSTANCE_DELETE|
+|DBインスタンスの容量を確保|event_id.rds_for_postgresql.DB_INSTANCE_DELETE_WAL_LOG|
+|拡張機能変更事項適用|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_APPLY|
+|拡張機能の同期|event_id.rds_for_postgresql.DB_INSTANCE_GROUP_EXTENSION_SYNC|
+|DBインスタンスマイグレーション|event_id.rds_for_postgresql.DB_INSTANCE_MIGRATION|
+|DBインスタンスの詳細設定を変更|event_id.rds_for_postgresql.DB_INSTANCE_MODIFY|
+|DBインスタンスオブジェクトストレージから復元|event_id.rds_for_postgresql.DB_INSTANCE_RESTORE_FROM_OBS|
+|DBインスタンスのストレージを拡張|event_id.rds_for_postgresql.DB_INSTANCE_VOLUME_EXTEND|
+|DBセキュリティグループの作成|event_id.rds_for_postgresql.DB_SECURITY_GROUP_CREATE|
+|DBセキュリティグループの削除|event_id.rds_for_postgresql.DB_SECURITY_GROUP_DELETE|
+|DBセキュリティグループの修正|event_id.rds_for_postgresql.DB_SECURITY_GROUP_MODIFY|
+|DBセキュリティグループルールの作成|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_CREATE|
+|DBセキュリティグループルールの削除|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_DELETE|
+|DBセキュリティグループルールの修正|event_id.rds_for_postgresql.DB_SECURITY_GROUP_RULE_MODIFY|
+|イベント購読を削除|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_DELETE|
+|イベント購読を修正|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_MODIFY|
+|イベント購読を登録|event_id.rds_for_postgresql.EVENT_SUBSCRIPTION_REGISTER|
+|通知グループを作成|event_id.rds_for_postgresql.NOTIFICATION_GROUP_CREATE|
+|通知グループを削除|event_id.rds_for_postgresql.NOTIFICATION_GROUP_DELETE|
+|通知グループを修正|event_id.rds_for_postgresql.NOTIFICATION_GROUP_MODIFY|
+|パラメータグループのコピー|event_id.rds_for_postgresql.PARAMETER_GROUP_COPY|
+|パラメータグループ作成|event_id.rds_for_postgresql.PARAMETER_GROUP_CREATE|
+|パラメータグループ削除|event_id.rds_for_postgresql.PARAMETER_GROUP_DELETE|
+|パラメータグループ修正|event_id.rds_for_postgresql.PARAMETER_GROUP_MODIFY_PARAMETERS|
+|パラメータグループ再設定|event_id.rds_for_postgresql.PARAMETER_GROUP_RESET|
+|ユーザーグループを作成|event_id.rds_for_postgresql.USER_GROUP_CREATE|
+|ユーザーグループを削除|event_id.rds_for_postgresql.USER_GROUP_DELETE|
+|ユーザーグループを修正|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
 ### Data Lake Storage
 
-| Event | Event ID |
+| イベント | イベントID |
 | --- | --- |
-|Authenticate User|event_id.datalakestorage.auth.authenticate|
-|Validate Credentials|event_id.datalakestorage.auth.validate|
-|Create Bucket|event_id.datalakestorage.bucket.create|
-|Delete Bucket|event_id.datalakestorage.bucket.delete|
-|Head Bucket|event_id.datalakestorage.bucket.head|
-|List Buckets|event_id.datalakestorage.bucket.list|
-|Delete Bucket Tagging|event_id.datalakestorage.bucket.tagging.delete|
-|Get Bucket Tagging|event_id.datalakestorage.bucket.tagging.get|
-|Put Bucket Tagging|event_id.datalakestorage.bucket.tagging.update|
-|Get Bucket Versioning|event_id.datalakestorage.bucket.versioning.get|
-|Put Bucket Versioning|event_id.datalakestorage.bucket.versioning.update|
-|Abort Multipart Upload|event_id.datalakestorage.multipart.abort|
-|Complete Multipart Upload|event_id.datalakestorage.multipart.complete|
-|Create Multipart Upload|event_id.datalakestorage.multipart.create|
-|List Multipart Uploads|event_id.datalakestorage.multipart.list|
-|Upload Part Copy|event_id.datalakestorage.multipart.part.copy|
-|List Parts|event_id.datalakestorage.multipart.part.list|
-|Upload Part|event_id.datalakestorage.multipart.part.upload|
-|Copy Object|event_id.datalakestorage.object.copy|
-|Put Object|event_id.datalakestorage.object.create|
-|Delete Object|event_id.datalakestorage.object.delete|
-|Delete Objects|event_id.datalakestorage.object.delete-multiple|
-|Get Object|event_id.datalakestorage.object.get|
-|Head Object|event_id.datalakestorage.object.head|
-|List Objects|event_id.datalakestorage.object.list|
-|List Objects V2|event_id.datalakestorage.object.list-v2|
-|Delete Object Tagging|event_id.datalakestorage.object.tagging.delete|
-|Get Object Tagging|event_id.datalakestorage.object.tagging.get|
-|Put Object Tagging|event_id.datalakestorage.object.tagging.update|
+|ユーザー認証|event_id.datalakestorage.auth.authenticate|
+|認証情報検証|event_id.datalakestorage.auth.validate|
+|バケット作成|event_id.datalakestorage.bucket.create|
+|バケット削除|event_id.datalakestorage.bucket.delete|
+|バケット情報確認|event_id.datalakestorage.bucket.head|
+|バケット一覧取得|event_id.datalakestorage.bucket.list|
+|バケットタグ削除|event_id.datalakestorage.bucket.tagging.delete|
+|バケットタグ取得|event_id.datalakestorage.bucket.tagging.get|
+|バケットタグ設定|event_id.datalakestorage.bucket.tagging.update|
+|バケットバージョニング取得|event_id.datalakestorage.bucket.versioning.get|
+|バケットバージョニング設定|event_id.datalakestorage.bucket.versioning.update|
+|マルチパート中断|event_id.datalakestorage.multipart.abort|
+|マルチパート完了|event_id.datalakestorage.multipart.complete|
+|マルチパート開始|event_id.datalakestorage.multipart.create|
+|マルチパート一覧取得|event_id.datalakestorage.multipart.list|
+|パートコピー|event_id.datalakestorage.multipart.part.copy|
+|パート一覧取得|event_id.datalakestorage.multipart.part.list|
+|パートアップロード|event_id.datalakestorage.multipart.part.upload|
+|オブジェクトコピー|event_id.datalakestorage.object.copy|
+|オブジェクトアップロード|event_id.datalakestorage.object.create|
+|オブジェクト削除|event_id.datalakestorage.object.delete|
+|オブジェクト一括削除|event_id.datalakestorage.object.delete-multiple|
+|オブジェクト取得|event_id.datalakestorage.object.get|
+|オブジェクト情報確認|event_id.datalakestorage.object.head|
+|オブジェクト一覧取得|event_id.datalakestorage.object.list|
+|オブジェクト一覧取得V2|event_id.datalakestorage.object.list-v2|
+|オブジェクトタグ削除|event_id.datalakestorage.object.tagging.delete|
+|オブジェクトタグ取得|event_id.datalakestorage.object.tagging.get|
+|オブジェクトタグ設定|event_id.datalakestorage.object.tagging.update|
 
