@@ -15,10 +15,10 @@
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
-|조직 멤버 laaS API 비밀번호 초기화|event_id.org.member.iam.iaas_api_password.reset|
-|조직 멤버 User Access Key 사용 중지|event_id.org.member.iam.user_access_key.stop|
-|조직 멤버 토큰 일괄 만료|event_id.org.member.iam.user_token.expire|
-|프로젝트 멤버 S3 API 자격 증명 삭제|event_id.project.member.iam.s3_api_credential.delete|
+|조직 멤버 laaS API 비밀번호 초기화|event_id.org.iam.member.iaas_api_password.reset|
+|조직 멤버 User Access Key 사용 중지|event_id.org.iam.member.user_access_key.stop|
+|조직 멤버 토큰 일괄 만료|event_id.org.iam.member.user_access_key.token.expire|
+|프로젝트 멤버 S3 API 자격 증명 삭제|event_id.project.iam.member.s3_api_credential.delete|
 |IAM 멤버 권한 변경|event_id.iam.member.role.update|
 |조직 도메인 추가|event_id.org.domain.add|
 |조직 도메인 수정|event_id.org.domain.update|
