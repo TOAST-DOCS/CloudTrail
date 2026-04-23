@@ -15,6 +15,10 @@
 |Modify Custom Dashboard|event_id.cloud_monitoring_organization.dashboard_modify|
 |Enable Custom Dashboard Metrics Collection|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM Login|event_id.iam.login|
+|Reset Organization Member IaaS API Passwords|event_id.org.iam.member.iaas_api_password.reset|
+|Disable Organization Member User Access Key|event_id.org.iam.member.user_access_key.stop|
+|Bulk Expire Organization Member Tokens|event_id.org.iam.member.user_access_key.token.expire|
+|Delete Project Member S3 API Credentials|event_id.project.iam.member.s3_api_credential.delete|
 |Change Authority for IAM Members|event_id.iam.member.role.update|
 |Add Organization Domain|event_id.org.domain.add|
 |Modify Organization Domain|event_id.org.domain.update|

@@ -15,6 +15,10 @@
 |カスタムダッシュボードの修正|event_id.cloud_monitoring_organization.dashboard_modify|
 |カスタムダッシュボードの指標収集設定|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM ログイン|event_id.iam.login|
+|組織メンバーのIaaS APIパスワードをリセット|event_id.org.iam.member.iaas_api_password.reset|
+|組織メンバーのUser Access Keyを無効化|event_id.org.iam.member.user_access_key.stop|
+|組織メンバーのトークンを一括で有効期限切れに設定|event_id.org.iam.member.user_access_key.token.expire|
+|プロジェクトメンバーのS3 API認証情報を削除|event_id.project.iam.member.s3_api_credential.delete|
 |IAMメンバーの権限変更|event_id.iam.member.role.update|
 |組織ドメインの追加|event_id.org.domain.add|
 |組織ドメインの修正|event_id.org.domain.update|
