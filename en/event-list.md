@@ -365,6 +365,17 @@
 |Create Network Interface Route Completed|event_id.iaas.port_route.create_end|
 |Delete Network Interface Route Completed|event_id.iaas.port_route.delete_end|
 |Change Network Interface Route Completed|event_id.iaas.port_route.update_end|
+|Create Load Balancer (DSR)|event_id.iaas.loadbalancer_dsr.create|
+|Delete Load Balancer (DSR)|event_id.iaas.loadbalancer_dsr.delete|
+|Change Load Balancer (DSR) Info|event_id.iaas.loadbalancer_dsr.update|
+|Create Load Balancer (DSR) Member|event_id.iaas.loadbalancer_dsr_member.create|
+|Delete Load Balancer (DSR) Member|event_id.iaas.loadbalancer_dsr_member.delete|
+|Create Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
+|Change Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
+|Delete Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
+|Load Balancer (DSR) Creation Completed|event_id.iaas.loadbalancer_dsr.create_end|
+|Load Balancer (DSR) Deletion Completed|event_id.iaas.loadbalancer_dsr.delete_end|
+|Load Balancer (DSR) Info Change Completed|event_id.iaas.loadbalancer_dsr.update_end|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -627,27 +638,22 @@
 |Delete NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.delete|
 |Change NAS CIFS Credentials|event_id.iaas.nas.cifs_credential.update|
 |Set NAS Encryption Key Store|event_id.iaas.nas.encryption_key_store.set|
-|Create NAS Storage|event_id.iaas.nas.volume.create|
-|Delete NAS Storage|event_id.iaas.nas.volume.delete|
-|Modify NAS Storage Settings|event_id.iaas.nas.volume.update|
-|NAS Storage Creation Completed|event_id.iaas.nas.volume.create_end|
-|NAS Storage Deletion Completed|event_id.iaas.nas.volume.delete_end|
-|NAS Storage Settings Modification Completed|event_id.iaas.nas.volume.update_end|
-|Create NAS Storage Snapshot|event_id.iaas.nas.snapshot.create|
-|Delete NAS Storage Snapshot|event_id.iaas.nas.snapshot.delete|
-|Restore NAS Storage Snapshot|event_id.iaas.nas.snapshot.restore|
-|Set NAS Storage Replication|event_id.iaas.nas.replication.set|
-|Turn off NAS Storage Replication|event_id.iaas.nas.replication.unset|
-|Start NAS Storage Replication|event_id.iaas.nas.replication.start|
-|Stop NAS Storage Replication|event_id.iaas.nas.replication.stop|
-|Change NAS Storage Replication Direction|event_id.iaas.nas.replication.change_direction|
-|Add NAS Storage Subnet Association|event_id.iaas.nas.subnet.attach|
-|Disassociate NAS Storage Subnet|event_id.iaas.nas.subnet.detach|
-|Create NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.create|
-|Delete NAS for AI Snapshot|event_id.iaas.nas_for_ai.snapshot.delete|
-|Create NAS for AI Volume|event_id.iaas.nas_for_ai.volume.create|
-|Delete NAS for AI Volume|event_id.iaas.nas_for_ai.volume.delete|
-|Change NAS for AI Volume|event_id.iaas.nas_for_ai.volume.update|
+|Create NAS Volume|event_id.iaas.nas.volume.create|
+|NAS Volume Creation Completed|event_id.iaas.nas.volume.create_end|
+|Delete NAS Volume|event_id.iaas.nas.volume.delete|
+|NAS Volume Deletion Completed|event_id.iaas.nas.volume.delete_end|
+|Modify NAS Volume Settings|event_id.iaas.nas.volume.update|
+|NAS Volume Settings Modification Completed|event_id.iaas.nas.volume.update_end|
+|Create NAS Snapshot|event_id.iaas.nas.snapshot.create|
+|Delete NAS Snapshot|event_id.iaas.nas.snapshot.delete|
+|Restore NAS Snapshot|event_id.iaas.nas.snapshot.restore|
+|Set NAS Volume Replication|event_id.iaas.nas.replication.set|
+|Turn off NAS Volume Replication|event_id.iaas.nas.replication.unset|
+|Start NAS Volume Replication|event_id.iaas.nas.replication.start|
+|Stop NAS Volume Replication|event_id.iaas.nas.replication.stop|
+|Change NAS Volume Replication Direction|event_id.iaas.nas.replication.change_direction|
+|Add NAS Volume Subnet Association|event_id.iaas.nas.subnet.attach|
+|Disassociate NAS Volume Subnet|event_id.iaas.nas.subnet.detach|
 |Create Gateway|event_id.iaas.storage_gateway.gateway.create|
 |Change Gateway Settings|event_id.iaas.storage_gateway.gateway.update|
 |Delete Gateway|event_id.iaas.storage_gateway.gateway.delete|
@@ -660,6 +666,12 @@
 |Create Share Comleted|event_id.iaas.storage_gateway.share.create_end|
 |Change Share Settings Completed|event_id.iaas.storage_gateway.share.update_end|
 |Delete Share Completed|event_id.iaas.storage_gateway.share.delete_end|
+|Create NAS for BigData Snapshot|event_id.iaas.nas_for_bigdata.snapshot.create|
+|Delete NAS for BigData Snapshot|event_id.iaas.nas_for_bigdata.snapshot.delete|
+|Restore NAS for BigData Snapshot|event_id.iaas.nas_for_bigdata.snapshot.restore|
+|Create NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.create|
+|Delete NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.delete|
+|Change NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.update|
 
 ### Object Storage
 
