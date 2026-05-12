@@ -365,6 +365,17 @@
 |네트워크 인터페이스 라우트 생성 완료|event_id.iaas.port_route.create_end|
 |네트워크 인터페이스 라우트 삭제 완료|event_id.iaas.port_route.delete_end|
 |네트워크 인터페이스 라우트 변경 완료|event_id.iaas.port_route.update_end|
+|로드 밸런서(DSR) 생성|event_id.iaas.loadbalancer_dsr.create|
+|로드 밸런서(DSR) 삭제|event_id.iaas.loadbalancer_dsr.delete|
+|로드 밸런서(DSR) 정보 변경|event_id.iaas.loadbalancer_dsr.update|
+|로드 밸런서(DSR) 멤버 생성|event_id.iaas.loadbalancer_dsr_member.create|
+|로드 밸런서(DSR) 멤버 삭제|event_id.iaas.loadbalancer_dsr_member.delete|
+|로드 밸런서(DSR) 헬스 모니터 생성|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
+|로드 밸런서(DSR) 헬스 모니터 변경|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
+|로드 밸런서(DSR) 헬스 모니터 삭제|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
+|로드 밸런서(DSR) 생성 완료|event_id.iaas.loadbalancer_dsr.create_end|
+|로드 밸런서(DSR) 삭제 완료|event_id.iaas.loadbalancer_dsr.delete_end|
+|로드 밸런서(DSR) 정보 변경 완료|event_id.iaas.loadbalancer_dsr.update_end|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -627,27 +638,22 @@
 |NAS CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
 |NAS CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
 |NAS 암호화 키 저장소 설정|event_id.iaas.nas.encryption_key_store.set|
-|NAS 스토리지 생성|event_id.iaas.nas.volume.create|
-|NAS 스토리지 삭제|event_id.iaas.nas.volume.delete|
-|NAS 스토리지 설정 변경|event_id.iaas.nas.volume.update|
-|NAS 스토리지 생성 완료|event_id.iaas.nas.volume.create_end|
-|NAS 스토리지 삭제 완료|event_id.iaas.nas.volume.delete_end|
-|NAS 스토리지 설정 변경 완료|event_id.iaas.nas.volume.update_end|
-|NAS 스토리지 스냅숏 생성|event_id.iaas.nas.snapshot.create|
-|NAS 스토리지 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
-|NAS 스토리지 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
-|NAS 스토리지 복제 설정|event_id.iaas.nas.replication.set|
-|NAS 스토리지 복제 설정 해제|event_id.iaas.nas.replication.unset|
-|NAS 스토리지 복제 시작|event_id.iaas.nas.replication.start|
-|NAS 스토리지 복제 중지|event_id.iaas.nas.replication.stop|
-|NAS 스토리지 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
-|NAS 스토리지 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
-|NAS 스토리지 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
-|NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|
-|NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|
-|NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
-|NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
-|NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
+|NAS 볼륨 생성 완료|event_id.iaas.nas.volume.create_end|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
+|NAS 볼륨 삭제 완료|event_id.iaas.nas.volume.delete_end|
+|NAS 볼륨 설정 변경|event_id.iaas.nas.volume.update|
+|NAS 볼륨 설정 변경 완료|event_id.iaas.nas.volume.update_end|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|NAS 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
+|NAS 볼륨 복제 설정|event_id.iaas.nas.replication.set|
+|NAS 볼륨 복제 설정 해제|event_id.iaas.nas.replication.unset|
+|NAS 볼륨 복제 시작|event_id.iaas.nas.replication.start|
+|NAS 볼륨 복제 중지|event_id.iaas.nas.replication.stop|
+|NAS 볼륨 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
+|NAS 볼륨 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
+|NAS 볼륨 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
 |게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
 |게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
 |게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
@@ -660,6 +666,12 @@
 |공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
 |공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
 |공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
+|NAS for BigData 스냅숏 생성|event_id.iaas.nas_for_bigdata.snapshot.create|
+|NAS for BigData 스냅숏 삭제|event_id.iaas.nas_for_bigdata.snapshot.delete|
+|NAS for BigData 스냅숏 복원|event_id.iaas.nas_for_bigdata.snapshot.restore|
+|NAS for BigData 볼륨 생성|event_id.iaas.nas_for_bigdata.volume.create|
+|NAS for BigData 볼륨 삭제|event_id.iaas.nas_for_bigdata.volume.delete|
+|NAS for BigData 볼륨 변경|event_id.iaas.nas_for_bigdata.volume.update|
 
 ### Object Storage
 
