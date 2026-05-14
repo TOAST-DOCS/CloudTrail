@@ -36,6 +36,9 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
 |배치 정책 삭제|event_id.iaas.servergroup.delete|
+|시리얼 콘솔 접속|event_id.iaas.serial_console.connect|
+|시리얼 콘솔 접속 완료|event_id.iaas.serial_console.connect_end|
+|시리얼 콘솔 접속 종료|event_id.iaas.serial_console.disconnect_end|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
@@ -86,6 +89,9 @@
 |VPC 생성|event_id.iaas.vpc.create|
 |VPC 삭제|event_id.iaas.vpc.delete|
 |VPC 정보 변경|event_id.iaas.vpc.update|
+|VPC 생성 완료|event_id.iaas.vpc.create_end|
+|VPC 삭제 완료|event_id.iaas.vpc.delete_end|
+|VPC 정보 변경 완료|event_id.iaas.vpc.update_end|
 |VPC 서브넷 생성|event_id.iaas.vpc_subnet.create|
 |VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
 |VPC 서브넷 변경|event_id.iaas.vpc_subnet.update|
@@ -111,6 +117,9 @@
 |플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
 |인스턴스 플로팅 IP 연결|event_id.iaas.floating_ip.attach|
 |인스턴스 플로팅 IP 연결 해제|event_id.iaas.floating_ip.detach|
+|플로팅 IP 생성 완료|event_id.iaas.floating_ip.create_end|
+|플로팅 IP 변경 완료|event_id.iaas.floating_ip.update_end|
+|플로팅 IP 삭제 완료|event_id.iaas.floating_ip.delete_end|
 |NetworkACL 생성|event_id.iaas.networkacl.create|
 |NetworkACL 삭제|event_id.iaas.networkacl.delete|
 |NetworkACL 수정|event_id.iaas.networkacl.update|
@@ -157,6 +166,9 @@
 |로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
 |로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
 |로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
+|로드 밸런서 생성 완료|event_id.iaas.loadbalancer.create_end|
+|로드 밸런서 삭제 완료|event_id.iaas.loadbalancer.delete_end|
+|로드 밸런서 정보 변경 완료|event_id.iaas.loadbalancer.update_end|
 |트랜짓 허브 생성|event_id.iaas.transit_hub.create|
 |트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
 |트랜짓 허브 수정|event_id.iaas.transit_hub.update|
@@ -190,6 +202,12 @@
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
+|트랜짓 허브 생성 완료|event_id.iaas.transit_hub.create_end|
+|트랜짓 허브 삭제 완료|event_id.iaas.transit_hub.delete_end|
+|트랜짓 허브 수정 완료|event_id.iaas.transit_hub.update_end|
+|트랜짓 허브 연결 생성 완료|event_id.iaas.transit_hub_attachment.create_end|
+|트랜짓 허브 연결 삭제 완료|event_id.iaas.transit_hub_attachment.delete_end|
+|트랜짓 허브 연결 변경 완료|event_id.iaas.transit_hub_attachment.update_end|
 |인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|
 |인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|
 |VPC 피어링 생성|event_id.iaas.peering.create|
@@ -206,6 +224,21 @@
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
 |NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
 |NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
+|NAT 게이트웨이 생성 완료|event_id.iaas.nat_gateway.create_end|
+|NAT 게이트웨이 삭제 완료|event_id.iaas.nat_gateway.delete_end|
+|NAT 게이트웨이 변경 완료|event_id.iaas.nat_gateway.update_end|
+|VPNGW 생성|event_id.iaas.vpngw.create|
+|VPNGW 삭제|event_id.iaas.vpngw.delete|
+|VPNGW 수정|event_id.iaas.vpngw.update|
+|VPN Connection 생성|event_id.iaas.vpn_connection.create|
+|VPN Connection 삭제|event_id.iaas.vpn_connection.delete|
+|VPN Connection 수정|event_id.iaas.vpn_connection.update|
+|VPNGW  v2 생성|event_id.iaas.vpngw_v2.create|
+|VPNGW  v2 삭제|event_id.iaas.vpngw_v2.delete|
+|VPNGW  v2 수정|event_id.iaas.vpngw_v2.update|
+|VPN Connection  v2 생성|event_id.iaas.vpn_connection_v2.create|
+|VPN Connection  v2 삭제|event_id.iaas.vpn_connection_v2.delete|
+|VPN Connection  v2 수정|event_id.iaas.vpn_connection_v2.update|
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
@@ -225,9 +258,35 @@
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
 |Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
+|Private DNS Zone 생성 완료|event_id.iaas.private_dns.zone.create_end|
+|Private DNS Zone 삭제 완료|event_id.iaas.private_dns.zone.delete_end|
+|Private DNS Zone 수정 완료|event_id.iaas.private_dns.zone.update_end|
+|플로우 로그 로거 생성|event_id.iaas.flowlog_logger.create|
+|플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
+|플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
+|플로우 로그 로거 생성 완료|event_id.iaas.flowlog_logger.create_end|
+|플로우 로그 스토리지 생성|event_id.iaas.flowlog_storage.create|
+|플로우 로그 로거 삭제 완료|event_id.iaas.flowlog_logger.delete_end|
+|플로우 로그 스토리지 삭제|event_id.iaas.flowlog_storage.delete|
+|플로우 로그 로거 수정 완료|event_id.iaas.flowlog_logger.update_end|
+|플로우 로그 스토리지 수정|event_id.iaas.flowlog_storage.update|
 |네트워크 인터페이스 라우트 생성|event_id.iaas.port_route.create|
 |네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
 |네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
+|네트워크 인터페이스 라우트 생성 완료|event_id.iaas.port_route.create_end|
+|네트워크 인터페이스 라우트 삭제 완료|event_id.iaas.port_route.delete_end|
+|네트워크 인터페이스 라우트 변경 완료|event_id.iaas.port_route.update_end|
+|로드 밸런서(DSR) 생성|event_id.iaas.loadbalancer_dsr.create|
+|로드 밸런서(DSR) 삭제|event_id.iaas.loadbalancer_dsr.delete|
+|로드 밸런서(DSR) 정보 변경|event_id.iaas.loadbalancer_dsr.update|
+|로드 밸런서(DSR) 멤버 생성|event_id.iaas.loadbalancer_dsr_member.create|
+|로드 밸런서(DSR) 멤버 삭제|event_id.iaas.loadbalancer_dsr_member.delete|
+|로드 밸런서(DSR) 헬스 모니터 생성|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
+|로드 밸런서(DSR) 헬스 모니터 변경|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
+|로드 밸런서(DSR) 헬스 모니터 삭제|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
+|로드 밸런서(DSR) 생성 완료|event_id.iaas.loadbalancer_dsr.create_end|
+|로드 밸런서(DSR) 삭제 완료|event_id.iaas.loadbalancer_dsr.delete_end|
+|로드 밸런서(DSR) 정보 변경 완료|event_id.iaas.loadbalancer_dsr.update_end|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -335,6 +394,12 @@
 |노드 증설 시작|event_id.iaas.nodegroup.scale_out.start|
 |노드 증설 완료|event_id.iaas.nodegroup.scale_out.end|
 |노드 증설 실패|event_id.iaas.nodegroup.scale_out.failed|
+|노드 그룹 Kubernetes Taint 설정 변경 시작|event_id.iaas.nodegroup.update_k8s_node_taints.start|
+|노드 그룹 Kubernetes Taint 설정 변경 완료|event_id.iaas.nodegroup.update_k8s_node_taints.end|
+|노드 그룹 Kubernetes Taint 설정 변경 실패|event_id.iaas.nodegroup.update_k8s_node_taints.failed|
+|노드 그룹의 Kubernetes 컴포넌트 설정 변경 시작|event_id.iaas.nodegroup.update_k8s_args.start|
+|노드 그룹의 Kubernetes 컴포넌트 설정 변경 완료|event_id.iaas.nodegroup.update_k8s_args.end|
+|노드 그룹의 Kubernetes 컴포넌트 설정 변경 실패|event_id.iaas.nodegroup.update_k8s_args.failed|
 |CSR 승인|event_id.iaas.cluster.certificate_signing_request.approval|
 |CSR 생성|event_id.iaas.cluster.certificate_signing_request.create|
 |CSR 삭제|event_id.iaas.cluster.certificate_signing_request.delete|
@@ -473,31 +538,50 @@
 |워크로드 로드 밸런서 설정 변경 완료|event_id.iaas.ncs.workload_loadbalancer_update.end|
 |워크로드 내부 로드 밸런서 설정 변경|event_id.iaas.ncs.workload_internal_loadbalancer.update|
 |워크로드 예약 실행 변경|event_id.iaas.ncs.workload_schedule.update|
+|컨테이너 터미널 접속|event_id.iaas.ncs.container_terminal.exec|
+|컨테이너 터미널 접속 종료|event_id.iaas.ncs.container_terminal.exit|
 |워크로드 작업 재시작|event_id.iaas.ncs.workload_task.restart|
 |워크로드 오토스케일러 변경|event_id.iaas.ncs.workload_autoscaler.update|
 |워크로드 작업 수 자동 조정 시작|event_id.iaas.ncs.workload_task_resize.start|
 |워크로드 작업 수 자동 조정 종료|event_id.iaas.ncs.workload_task_resize.end|
 |워크로드 작업 수 자동 조정 실패|event_id.iaas.ncs.workload_task_resize.failed|
-|NAS CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
-|NAS CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
-|NAS CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
+|CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
+|CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
+|CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
 |NAS 암호화 키 저장소 설정|event_id.iaas.nas.encryption_key_store.set|
-|NAS 스토리지 생성|event_id.iaas.nas.volume.create|
-|NAS 스토리지 삭제|event_id.iaas.nas.volume.delete|
-|NAS 스토리지 설정 변경|event_id.iaas.nas.volume.update|
-|NAS 스토리지 생성 완료|event_id.iaas.nas.volume.create_end|
-|NAS 스토리지 삭제 완료|event_id.iaas.nas.volume.delete_end|
-|NAS 스토리지 설정 변경 완료|event_id.iaas.nas.volume.update_end|
-|NAS 스토리지 스냅숏 생성|event_id.iaas.nas.snapshot.create|
-|NAS 스토리지 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
-|NAS 스토리지 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
-|NAS 스토리지 복제 설정|event_id.iaas.nas.replication.set|
-|NAS 스토리지 복제 설정 해제|event_id.iaas.nas.replication.unset|
-|NAS 스토리지 복제 시작|event_id.iaas.nas.replication.start|
-|NAS 스토리지 복제 중지|event_id.iaas.nas.replication.stop|
-|NAS 스토리지 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
-|NAS 스토리지 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
-|NAS 스토리지 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
+|NAS 볼륨 생성|event_id.iaas.nas.volume.create|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
+|NAS 볼륨 설정 변경|event_id.iaas.nas.volume.update|
+|NAS 볼륨 생성 완료|event_id.iaas.nas.volume.create_end|
+|NAS 볼륨 삭제 완료|event_id.iaas.nas.volume.delete_end|
+|NAS 볼륨 설정 변경 완료|event_id.iaas.nas.volume.update_end|
+|NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
+|NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
+|NAS 스냅숏 복원|event_id.iaas.nas.snapshot.restore|
+|NAS 볼륨 복제 설정|event_id.iaas.nas.replication.set|
+|NAS 볼륨 복제 설정 해제|event_id.iaas.nas.replication.unset|
+|NAS 볼륨 복제 시작|event_id.iaas.nas.replication.start|
+|NAS 볼륨 복제 중지|event_id.iaas.nas.replication.stop|
+|NAS 볼륨 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
+|NAS 볼륨 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
+|NAS 볼륨 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
+|NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|
+|NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|
+|NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
+|NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
+|NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
+|게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
+|게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
+|게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
+|게이트웨이 생성 완료|event_id.iaas.storage_gateway.gateway.create_end|
+|게이트웨이 설정 변경 완료|event_id.iaas.storage_gateway.gateway.update_end|
+|게이트웨이 삭제 완료|event_id.iaas.storage_gateway.gateway.delete_end|
+|공유 생성|event_id.iaas.storage_gateway.share.create|
+|공유 설정 변경|event_id.iaas.storage_gateway.share.update|
+|공유 삭제|event_id.iaas.storage_gateway.share.delete|
+|공유 생성 완료|event_id.iaas.storage_gateway.share.create_end|
+|공유 설정 변경 완료|event_id.iaas.storage_gateway.share.update_end|
+|공유 삭제 완료|event_id.iaas.storage_gateway.share.delete_end|
 
 ### Object Storage
 
@@ -515,6 +599,9 @@
 |컨테이너 복제 설정 변경|event_id.object_storage.container.sync.update|
 |컨테이너 복제 설정 해제|event_id.object_storage.container.sync.disable|
 |오브젝트 복제 업로드|event_id.object_storage.object.sync.upload|
+|오브젝트 다운로드|event_id.object_storage.object.download|
+|오브젝트 목록 조회|event_id.object_storage.object.list_lookup|
+|컨테이너 목록 조회|event_id.object_storage.container.list_lookup|
 |컨테이너 복제 중지|event_id.object_storage.container.sync.suspend|
 |컨테이너 복제 재시작|event_id.object_storage.container.sync.resume|
 
@@ -522,45 +609,75 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|DB 인스턴스 생성|event_id.rds_for_mysql.instance.create|
-|DB 인스턴스 삭제|event_id.rds_for_mysql.instance.delete|
-|DB 인스턴스 상세 설정 변경|event_id.rds_for_mysql.instance.detail.update|
-|DB 인스턴스 관리 정보 변경|event_id.rds_for_mysql.instance.management.update|
-|DB 인스턴스 Configuration 변경|event_id.rds_for_mysql.instance.configuration.update|
-|DB 인스턴스 백업|event_id.rds_for_mysql.instance_action.backup|
-|DB 인스턴스 복원|event_id.rds_for_mysql.instance_action.restore|
-|DB 인스턴스 복제|event_id.rds_for_mysql.instance_action.replicate|
-|DB 인스턴스 재시작|event_id.rds_for_mysql.instance_action.restart|
-|DB 인스턴스 승격|event_id.rds_for_mysql.instance_action.promote|
-|DB 인스턴스 스토리지 확장|event_id.rds_for_mysql.instance.volume.extend|
-|DB 인스턴스 용량 확보|event_id.rds_for_mysql.instance.volume.secure|
+|파라미터 그룹 재설정|event_id.rds_for_mysql.resetParameterGroup|
+|파라미터 그룹 수정|event_id.rds_for_mysql.modifyParameterGroup|
+|파라미터 그룹 생성|event_id.rds_for_mysql.createParameterGroup|
+|파라미터 그룹 삭제|event_id.rds_for_mysql.deleteParameterGroup|
+|파라미터 그룹 복사|event_id.rds_for_mysql.copyParameterGroup|
+|파라미터 그룹 변경 사항 적용|event_id.rds_for_mysql.instance_apply_recent_parameter_group|
+|장애조치 완료후 일반 DB 인스턴스로 변경|event_id.rds_for_mysql.instance_action.failover_split|
+|장애조치 완료된 고가용성 재구축|event_id.rds_for_mysql.instance.ha.rebuild|
+|장애 조치 인스턴스 고가용성 기능 복구|event_id.rds_for_mysql.instance.ha.repair|
+|인증 플러그인 활성화|event_id.rds_for_mysql.enable_authentication_plugin|
 |인스턴스 중지|event_id.rds_for_mysql.instance.stop|
-|모니터링 차트 레이아웃 추가|event_id.rds_for_mysql.createChartLayout|
-|모니터링 차트 레이아웃 삭제|event_id.rds_for_mysql.deleteChartLayout|
-|모니터링 차트 레이아웃 수정|event_id.rds_for_mysql.modifyChartLayout|
-|백업 삭제|event_id.rds_for_mysql.instance.backup.delete|
-|알림 생성|event_id.rds_for_mysql.notification.create|
-|알림 변경|event_id.rds_for_mysql.notification.update|
-|알림 삭제|event_id.rds_for_mysql.notification.delete|
-|알림 활성화|event_id.rds_for_mysql.notification.enable|
-|알림 비활성화|event_id.rds_for_mysql.notification.disable|
-|알림 그룹 생성|event_id.rds_for_mysql.createNotificationGroup|
-|알림 그룹 수정|event_id.rds_for_mysql.modifyNotificationGroup|
-|알림 그룹 삭제|event_id.rds_for_mysql.deleteNotificationGroup|
-|이벤트 구독 등록|event_id.rds_for_mysql.registerEventSubscription|
 |이벤트 구독 수정|event_id.rds_for_mysql.modifyEventSubscription|
 |이벤트 구독 삭제|event_id.rds_for_mysql.deleteEventSubscription|
-|사용자 그룹 생성|event_id.rds_for_mysql.createUserGroup|
-|사용자 그룹 수정|event_id.rds_for_mysql.modifyUserGroup|
-|사용자 그룹 삭제|event_id.rds_for_mysql.deleteUserGroup|
-|수신 그룹 생성|event_id.rds_for_mysql.receiver_group.create|
-|수신 그룹 변경|event_id.rds_for_mysql.receiver_group.update|
-|수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|
-|DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|
-|DB 스키마 동기화|event_id.rds_for_mysql.instance.db_definition.schema.sync|
-|사용자 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|
-|DB 인스턴스 백업 및 내보내기|event_id.rds_for_mysql.instance.backup.export|
+|이벤트 구독 등록|event_id.rds_for_mysql.registerEventSubscription|
 |오브젝트 스토리지로 백업 내보내기|event_id.rds_for_mysql.backup.export|
+|알림 활성화|event_id.rds_for_mysql.notification.enable|
+|알림 생성|event_id.rds_for_mysql.notification.create|
+|알림 삭제|event_id.rds_for_mysql.notification.delete|
+|알림 비활성화|event_id.rds_for_mysql.notification.disable|
+|알림 변경|event_id.rds_for_mysql.notification.update|
+|알림 그룹 수정|event_id.rds_for_mysql.modifyNotificationGroup|
+|알림 그룹 생성|event_id.rds_for_mysql.createNotificationGroup|
+|알림 그룹 삭제|event_id.rds_for_mysql.deleteNotificationGroup|
+|수신 그룹 생성|event_id.rds_for_mysql.receiver_group.create|
+|수신 그룹 삭제|event_id.rds_for_mysql.receiver_group.delete|
+|수신 그룹 변경|event_id.rds_for_mysql.receiver_group.update|
+|사용자 추가|event_id.rds_for_mysql.instance.db_definition.user.create|
+|사용자 삭제|event_id.rds_for_mysql.instance.db_definition.user.delete|
+|사용자 변경|event_id.rds_for_mysql.instance.db_definition.user.update|
+|사용자 동기화|event_id.rds_for_mysql.instance.db_definition.user.sync|
+|사용자 그룹 수정|event_id.rds_for_mysql.modifyUserGroup|
+|사용자 그룹 생성|event_id.rds_for_mysql.createUserGroup|
+|사용자 그룹 삭제|event_id.rds_for_mysql.deleteUserGroup|
+|복제 재구축|event_id.rds_for_mysql.instance.repair_replication|
+|백업 삭제|event_id.rds_for_mysql.instance.backup.delete|
+|모니터링 차트 레이아웃 추가|event_id.rds_for_mysql.createChartLayout|
+|모니터링 차트 레이아웃 수정|event_id.rds_for_mysql.modifyChartLayout|
+|모니터링 차트 레이아웃 삭제|event_id.rds_for_mysql.deleteChartLayout|
+|고가용성 일시 중지|event_id.rds_for_mysql.instance.ha.pause|
+|고가용성 다시 시작|event_id.rds_for_mysql.instance.ha.resume|
+|DB 정의 정보 변경|event_id.rds_for_mysql.instance.db_definition.update|
+|DB 인스턴스 재시작|event_id.rds_for_mysql.instance_action.restart|
+|DB 인스턴스 용량 확보|event_id.rds_for_mysql.instance.volume.secure|
+|DB 인스턴스 오브젝트 스토리지로부터 복원|event_id.rds_for_mysql.instance.restore_from_obs|
+|DB 인스턴스 시작|event_id.rds_for_mysql.instance_action.start|
+|DB 인스턴스 승격|event_id.rds_for_mysql.instance_action.promote|
+|DB 인스턴스 스토리지 확장|event_id.rds_for_mysql.instance.volume.extend|
+|DB 인스턴스 생성|event_id.rds_for_mysql.instance.create|
+|DB 인스턴스 상세 설정 변경|event_id.rds_for_mysql.instance.detail.update|
+|DB 인스턴스 삭제 보호 설정 변경|event_id.rds_for_mysql.instance.change_deletion_protection|
+|DB 인스턴스 삭제|event_id.rds_for_mysql.instance.delete|
+|DB 인스턴스 복제|event_id.rds_for_mysql.instance_action.replicate|
+|DB 인스턴스 복원|event_id.rds_for_mysql.instance_action.restore|
+|DB 인스턴스 백업 및 내보내기|event_id.rds_for_mysql.instance.backup.export|
+|DB 인스턴스 백업|event_id.rds_for_mysql.instance_action.backup|
+|DB 인스턴스 마이그레이션|event_id.rds_for_mysql.instance.migrate|
+|DB 인스턴스 관리 정보 변경|event_id.rds_for_mysql.instance.management.update|
+|DB 인스턴스 강제 재시작|event_id.rds_for_mysql.instance_action.force_restart|
+|DB 인스턴스 Configuration 변경|event_id.rds_for_mysql.instance.configuration.update|
+|DB 스키마 생성|event_id.rds_for_mysql.instance.db_definition.schema.create|
+|DB 스키마 삭제|event_id.rds_for_mysql.instance.db_definition.schema.delete|
+|DB 스키마 동기화|event_id.rds_for_mysql.instance.db_definition.schema.sync|
+|DB 보안그룹 수정|event_id.rds_for_mysql.modifyDbSecurityGroup|
+|DB 보안그룹 생성|event_id.rds_for_mysql.createDbSecurityGroup|
+|DB 보안그룹 삭제|event_id.rds_for_mysql.deleteDbSecurityGroup|
+|DB 보안그룹 규칙 수정|event_id.rds_for_mysql.modifyDbSecurityGroupRule|
+|DB 보안그룹 규칙 생성|event_id.rds_for_mysql.createDbSecurityGroupRule|
+|DB 보안그룹 규칙 삭제|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
+|DB 인스턴스 운영체제 업그레이드|event_id.rds_for_mysql.instance.os.upgrade|
 
 ### RDS for MariaDB
 
@@ -681,40 +798,41 @@
 |기밀 데이터 즉시 삭제 (API)|event_id.skm.api.secrets.delete|
 |대칭 키 즉시 삭제 (API)|event_id.skm.api.symmetric.delete|
 |비대칭 키 즉시 삭제 (API)|event_id.skm.api.asymmetric.delete|
+|기밀 데이터 수정 (API)|event_id.skm.api.secrets.modify|
 
 ### Deploy
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|아티팩트 생성|event_id.deploy.artifact_create|
-|아티팩트 수정|event_id.deploy.artifact_update|
-|아티팩트 삭제|event_id.deploy.artifact_delete|
-|바이너리 그룹 생성|event_id.deploy.binary_group_create|
-|바이너리 그룹 삭제|event_id.deploy.binary_group_delete|
-|바이너리 그룹 수정|event_id.deploy.binary_group_update|
-|바이너리 업로드|event_id.deploy.binary_upload|
-|바이너리 다운로드|event_id.deploy.binary_download|
-|바이너리 삭제|event_id.deploy.binary_delete|
-|바이너리 수정|event_id.deploy.binary_update|
-|서버 그룹 생성|event_id.deploy.server_group_create|
-|서버 그룹 삭제|event_id.deploy.server_group_delete|
-|서버 그룹 수정|event_id.deploy.server_group_update|
-|리소스 그룹 생성|event_id.deploy.resource_group_create|
-|리소스 그룹 삭제|event_id.deploy.resource_group_delete|
-|리소스 생성|event_id.deploy.resource_create|
-|리소스 수정|event_id.deploy.resource_update|
-|리소스 최신버전으로 저장|event_id.deploy.resource_save|
-|리소스 다운로드|event_id.deploy.resource_download|
-|리소스 삭제|event_id.deploy.resource_delete|
-|시나리오 생성|event_id.deploy.scenario_create|
-|시나리오 복사|event_id.deploy.scenario_copy|
-|시나리오 다운로드|event_id.deploy.scenario_download|
-|시나리오 업로드|event_id.deploy.scenario_upload|
-|시나리오 수정|event_id.deploy.scenario_update|
-|시나리오 삭제|event_id.deploy.scenario_delete|
-|배포 실행|event_id.deploy.deploy_execute|
-|배포 이력 다운로드|event_id.deploy.deploy_history_download|
-|오토스케일 배포 실행|event_id.deploy.autoscale_deploy_execute|
+|null|event_id.deploy.artifact_create|
+|null|event_id.deploy.artifact_update|
+|null|event_id.deploy.artifact_delete|
+|null|event_id.deploy.binary_group_create|
+|null|event_id.deploy.binary_group_delete|
+|null|event_id.deploy.binary_group_update|
+|null|event_id.deploy.binary_upload|
+|null|event_id.deploy.binary_download|
+|null|event_id.deploy.binary_delete|
+|null|event_id.deploy.binary_update|
+|null|event_id.deploy.server_group_create|
+|null|event_id.deploy.server_group_delete|
+|null|event_id.deploy.server_group_update|
+|null|event_id.deploy.resource_group_create|
+|null|event_id.deploy.resource_group_delete|
+|null|event_id.deploy.resource_create|
+|null|event_id.deploy.resource_update|
+|null|event_id.deploy.resource_save|
+|null|event_id.deploy.resource_download|
+|null|event_id.deploy.resource_delete|
+|null|event_id.deploy.scenario_create|
+|null|event_id.deploy.scenario_copy|
+|null|event_id.deploy.scenario_download|
+|null|event_id.deploy.scenario_upload|
+|null|event_id.deploy.scenario_update|
+|null|event_id.deploy.scenario_delete|
+|null|event_id.deploy.deploy_execute|
+|null|event_id.deploy.deploy_history_download|
+|null|event_id.deploy.autoscale_deploy_execute|
 
 ### 콘솔
 
@@ -731,6 +849,10 @@
 |커스텀 대시보드 수정|event_id.cloud_monitoring_organization.dashboard_modify|
 |커스텀 대시보드 지표 수집 설정|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM 로그인|event_id.iam.login|
+|조직 멤버 laaS API 비밀번호 초기화|event_id.org.iam.member.iaas_api_password.reset|
+|조직 멤버 User Access Key 사용 중지|event_id.org.iam.member.user_access_key.stop|
+|조직 멤버 토큰 일괄 만료|event_id.org.iam.member.user_access_key.token.expire|
+|프로젝트 멤버 S3 API 자격 증명 삭제|event_id.project.iam.member.s3_api_credential.delete|
 |IAM 멤버 권한 변경|event_id.iam.member.role.update|
 |조직 도메인 추가|event_id.org.domain.add|
 |조직 도메인 수정|event_id.org.domain.update|
@@ -769,8 +891,6 @@
 |역할 그룹 수정|event_id.project.role_group.update|
 |역할 그룹 삭제|event_id.project.role_group.delete|
 |역할 그룹 역할 추가|event_id.project.role_group.assign.roles|
-|역할 그룹 멤버 추가|event_id.project.role_group.add.members|
-|역할 그룹 멤버 삭제|event_id.project.role_group.delete_members|
 |역할 그룹 멤버 추가|event_id.project.role_group.members.add|
 |역할 그룹 멤버 삭제|event_id.project.role_group.members.delete|
 |역할 그룹 역할 수정|event_id.project.role_group.modify.roles|
@@ -792,6 +912,10 @@
 |프로젝트 알림 수신 그룹 생성|event_id.project.alarm_group.create|
 |프로젝트 알림 수신 그룹 수정|event_id.project.alarm_group.update|
 |프로젝트 알림 수신 그룹 삭제|event_id.project.alarm_group.delete|
+|조직 알림 수신 대상 수정|event_id.org.system_notification.receivers.update|
+|조직 알림 수신 대상 일괄 수정|event_id.org.system_notification.receivers.multiple-update|
+|프로젝트 알림 수신 대상 수정|event_id.project.system_notification.receivers.update|
+|프로젝트 알림 수신 대상 일괄 수정|event_id.project.system_notification.receivers.multiple-update|
 |조직 역할 그룹 추가|event_id.org.org_role_group.create|
 |조직 역할 그룹 수정|event_id.org.org_role_group.update|
 |조직 역할 그룹 삭제|event_id.org.org_role_group.delete|
@@ -893,6 +1017,11 @@
 |캐시 재배포|event_id.cdn.cache_purge.common|
 |특정 파일 캐시 재배포|event_id.cdn.cache_purge.item_type|
 |전체 파일 캐시 재배포|event_id.cdn.cache_purge.all_type|
+|도메인 별칭 추가|event_id.cdn.alias_domain.create|
+|AUTH Token 생성|event_id.cdn.auth_token|
+|도메인 별칭 삭제|event_id.cdn.alias_domain.delete|
+|도메인 검증 토큰 재발급|event_id.cdn.alias_domain.reissue|
+|도메인 검증 실행|event_id.cdn.alias_domain.validate|
 
 ### System Monitoring
 
@@ -984,6 +1113,9 @@
 |블랙리스트 추가|event_id.appguard.blacklist_add|
 |블랙리스트 차단 해제|event_id.appguard.blacklist_delete|
 |정책 수정|event_id.appguard.policy_update|
+|Unity SDK 다운로드|event_id.appguard.sdk_download_unity|
+|React Native SDK 다운로드|event_id.appguard.sdk_download_react_native|
+|Unreal SDK 다운로드|event_id.appguard.sdk_download_unreal|
 
 ### API Gateway
 
@@ -1229,8 +1361,8 @@
 |웹터미널 재생성|event_id.bastion.web_terminal_re_create|
 |웹터미널 삭제|event_id.bastion.web_terminal_delete|
 |웹터미널 플로팅 IP 변경|event_id.bastion.web_terminal_fip_set|
-|웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 |웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
+|웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 |대칭 키 검증|event_id.bastion.symmetric_key_validation|
 |대칭 키 회전|event_id.bastion.symmetric_key_rotation|
 |정적 라우팅 갱신|event_id.bastion.web_terminal_net_daemon_restart|
