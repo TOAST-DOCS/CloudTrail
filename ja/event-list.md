@@ -15,6 +15,10 @@
 |カスタムダッシュボードの修正|event_id.cloud_monitoring_organization.dashboard_modify|
 |カスタムダッシュボードの指標収集設定|event_id.cloud_monitoring_organization.service_manage_ment|
 |IAM ログイン|event_id.iam.login|
+|組織メンバーのIaaS APIパスワードをリセット|event_id.org.iam.member.iaas_api_password.reset|
+|組織メンバーのUser Access Keyを無効化|event_id.org.iam.member.user_access_key.stop|
+|組織メンバーのトークンを一括で有効期限切れに設定|event_id.org.iam.member.user_access_key.token.expire|
+|プロジェクトメンバーのS3 API認証情報を削除|event_id.project.iam.member.s3_api_credential.delete|
 |IAMメンバーの権限変更|event_id.iam.member.role.update|
 |組織ドメインの追加|event_id.org.domain.add|
 |組織ドメインの修正|event_id.org.domain.update|
@@ -361,6 +365,17 @@
 |ネットワークインターフェースのルート作成完了|event_id.iaas.port_route.create_end|
 |ネットワークインターフェースのルート削除完了|event_id.iaas.port_route.delete_end|
 |ネットワークインターフェースのルート変更完了|event_id.iaas.port_route.update_end|
+|ロードバランサー(DSR)作成|event_id.iaas.loadbalancer_dsr.create|
+|ロードバランサー(DSR)削除|event_id.iaas.loadbalancer_dsr.delete|
+|ロードバランサー(DSR)情報変更|event_id.iaas.loadbalancer_dsr.update|
+|ロードバランサー(DSR)メンバー作成|event_id.iaas.loadbalancer_dsr_member.create|
+|ロードバランサー(DSR)メンバー削除|event_id.iaas.loadbalancer_dsr_member.delete|
+|ロードバランサー(DSR)ヘルスモニター作成|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
+|ロードバランサー(DSR)ヘルスモニター変更|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
+|ロードバランサー(DSR)ヘルスモニター削除|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
+|ロードバランサー(DSR)作成完了|event_id.iaas.loadbalancer_dsr.create_end|
+|ロードバランサー(DSR)削除完了|event_id.iaas.loadbalancer_dsr.delete_end|
+|ロードバランサー(DSR)情報変更完了|event_id.iaas.loadbalancer_dsr.update_end|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -623,27 +638,22 @@
 |NAS CIFS認証情報の削除|event_id.iaas.nas.cifs_credential.delete|
 |NAS CIFS認証情報の変更|event_id.iaas.nas.cifs_credential.update|
 |NAS暗号化キーストア設定&#61;|event_id.iaas.nas.encryption_key_store.set|
-|NASストレージ作成|event_id.iaas.nas.volume.create|
-|NASストレージ削除|event_id.iaas.nas.volume.delete|
-|NASストレージ設定の変更|event_id.iaas.nas.volume.update|
-|NASストレージ作成完了|event_id.iaas.nas.volume.create_end|
-|NASストレージ削除完了|event_id.iaas.nas.volume.delete_end|
-|NASストレージ設定の変更完了|event_id.iaas.nas.volume.update_end|
-|NASストレージスナップショット作成|event_id.iaas.nas.snapshot.create|
-|NASストレージスナップショット削除|event_id.iaas.nas.snapshot.delete|
-|NASストレージスナップショット復元|event_id.iaas.nas.snapshot.restore|
-|NASストレージ複製設定|event_id.iaas.nas.replication.set|
-|NASストレージ複製設定の解除|event_id.iaas.nas.replication.unset|
-|NASストレージ複製開始|event_id.iaas.nas.replication.start|
-|NASストレージ複製停止|event_id.iaas.nas.replication.stop|
-|NASストレージ複製方向の変更|event_id.iaas.nas.replication.change_direction|
+|NASボリューム作成|event_id.iaas.nas.volume.create|
+|NASボリューム作成完了|event_id.iaas.nas.volume.create_end|
+|NASボリューム削除|event_id.iaas.nas.volume.delete|
+|NASボリューム削除完了|event_id.iaas.nas.volume.delete_end|
+|NASボリューム設定の変更|event_id.iaas.nas.volume.update|
+|NASボリューム設定の変更完了|event_id.iaas.nas.volume.update_end|
+|NASスナップショットの作成|event_id.iaas.nas.snapshot.create|
+|NASスナップショットの削除|event_id.iaas.nas.snapshot.delete|
+|NASスナップショット復元|event_id.iaas.nas.snapshot.restore|
+|NASボリューム複製設定|event_id.iaas.nas.replication.set|
+|NASボリューム複製設定の解除|event_id.iaas.nas.replication.unset|
+|NASボリューム複製開始|event_id.iaas.nas.replication.start|
+|NASボリューム複製停止|event_id.iaas.nas.replication.stop|
+|NASボリューム複製方向の変更|event_id.iaas.nas.replication.change_direction|
 |NASサブネット接続の追加|event_id.iaas.nas.subnet.attach|
 |NASサブネット接続解除|event_id.iaas.nas.subnet.detach|
-|NAS for AIスナップショットの作成|event_id.iaas.nas_for_ai.snapshot.create|
-|NAS for AIスナップショットの削除|event_id.iaas.nas_for_ai.snapshot.delete|
-|NAS for AIボリュームの作成|event_id.iaas.nas_for_ai.volume.create|
-|NAS for AIボリュームの削除|event_id.iaas.nas_for_ai.volume.delete|
-|NAS for AIボリュームの変更|event_id.iaas.nas_for_ai.volume.update|
 |ゲートウェイ作成|event_id.iaas.storage_gateway.gateway.create|
 |ゲートウェイ設定変更|event_id.iaas.storage_gateway.gateway.update|
 |ゲートウェイ削除|event_id.iaas.storage_gateway.gateway.delete|
@@ -656,6 +666,12 @@
 |共有作成完了|event_id.iaas.storage_gateway.share.create_end|
 |共有設定変更完了|event_id.iaas.storage_gateway.share.update_end|
 |共有削除完了|event_id.iaas.storage_gateway.share.delete_end|
+|NAS for BigDataスナップショットの作成|event_id.iaas.nas_for_bigdata.snapshot.create|
+|NAS for BigDataスナップショットの削除|event_id.iaas.nas_for_bigdata.snapshot.delete|
+|NAS for BigDataスナップショットの復元|event_id.iaas.nas_for_bigdata.snapshot.restore|
+|NAS for BigDataボリュームの作成|event_id.iaas.nas_for_bigdata.volume.create|
+|NAS for BigDataボリュームの削除|event_id.iaas.nas_for_bigdata.volume.delete|
+|NAS for BigDataボリュームの変更|event_id.iaas.nas_for_bigdata.volume.update|
 
 ### Object Storage
 
