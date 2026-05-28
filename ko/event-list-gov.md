@@ -36,9 +36,6 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
 |배치 정책 삭제|event_id.iaas.servergroup.delete|
-|시리얼 콘솔 접속|event_id.iaas.serial_console.connect|
-|시리얼 콘솔 접속 완료|event_id.iaas.serial_console.connect_end|
-|시리얼 콘솔 접속 종료|event_id.iaas.serial_console.disconnect_end|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
@@ -87,10 +84,10 @@
 |S3 API 자격 증명 삭제|event_id.iaas.s3credential.delete|
 |API 비밀번호 변경|event_id.iaas.identity.password_change|
 |VPC 생성|event_id.iaas.vpc.create|
-|VPC 삭제|event_id.iaas.vpc.delete|
-|VPC 정보 변경|event_id.iaas.vpc.update|
 |VPC 생성 완료|event_id.iaas.vpc.create_end|
+|VPC 삭제|event_id.iaas.vpc.delete|
 |VPC 삭제 완료|event_id.iaas.vpc.delete_end|
+|VPC 정보 변경|event_id.iaas.vpc.update|
 |VPC 정보 변경 완료|event_id.iaas.vpc.update_end|
 |VPC 서브넷 생성|event_id.iaas.vpc_subnet.create|
 |VPC 서브넷 삭제|event_id.iaas.vpc_subnet.delete|
@@ -114,12 +111,12 @@
 |라우팅 테이블 라우트 변경|event_id.iaas.route.update|
 |라우팅 테이블 라우트 삭제|event_id.iaas.route.delete|
 |플로팅 IP 생성|event_id.iaas.floating_ip.create|
+|플로팅 IP 생성 완료|event_id.iaas.floating_ip.create_end|
 |플로팅 IP 삭제|event_id.iaas.floating_ip.delete|
+|플로팅 IP 삭제 완료|event_id.iaas.floating_ip.delete_end|
 |인스턴스 플로팅 IP 연결|event_id.iaas.floating_ip.attach|
 |인스턴스 플로팅 IP 연결 해제|event_id.iaas.floating_ip.detach|
-|플로팅 IP 생성 완료|event_id.iaas.floating_ip.create_end|
 |플로팅 IP 변경 완료|event_id.iaas.floating_ip.update_end|
-|플로팅 IP 삭제 완료|event_id.iaas.floating_ip.delete_end|
 |NetworkACL 생성|event_id.iaas.networkacl.create|
 |NetworkACL 삭제|event_id.iaas.networkacl.delete|
 |NetworkACL 수정|event_id.iaas.networkacl.update|
@@ -129,18 +126,21 @@
 |NetworkACL Binding 생성|event_id.iaas.networkacl_binding.create|
 |NetworkACL Binding 삭제|event_id.iaas.networkacl_binding.delete|
 |보안 그룹 생성|event_id.iaas.security_group.create|
-|보안 그룹 삭제|event_id.iaas.security_group.delete|
-|보안 그룹 변경|event_id.iaas.security_group.update|
-|보안 규칙 생성|event_id.iaas.security_group_rule.create|
-|보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
 |보안 그룹 생성 완료|event_id.iaas.security_group.create_end|
+|보안 그룹 삭제|event_id.iaas.security_group.delete|
 |보안 그룹 삭제 완료|event_id.iaas.security_group.delete_end|
+|보안 그룹 변경|event_id.iaas.security_group.update|
 |보안 그룹 변경 완료|event_id.iaas.security_group.update_end|
+|보안 규칙 생성|event_id.iaas.security_group_rule.create|
 |보안 규칙 생성 완료|event_id.iaas.security_group_rule.create_end|
+|보안 규칙 삭제|event_id.iaas.security_group_rule.delete|
 |보안 규칙 삭제 완료|event_id.iaas.security_group_rule.delete_end|
 |로드 밸런서 생성|event_id.iaas.loadbalancer.create|
+|로드 밸런서 생성 완료|event_id.iaas.loadbalancer.create_end|
 |로드 밸런서 삭제|event_id.iaas.loadbalancer.delete|
+|로드 밸런서 삭제 완료|event_id.iaas.loadbalancer.delete_end|
 |로드 밸런서 정보 변경|event_id.iaas.loadbalancer.update|
+|로드 밸런서 정보 변경 완료|event_id.iaas.loadbalancer.update_end|
 |로드 밸런서 리스너 생성|event_id.iaas.loadbalancer_listener.create|
 |로드 밸런서 리스너 삭제|event_id.iaas.loadbalancer_listener.delete|
 |로드 밸런서 리스너 변경|event_id.iaas.loadbalancer_listener.update|
@@ -166,15 +166,18 @@
 |로드 밸런서 IP ACL 타깃 삭제|event_id.iaas.loadbalancer_ipacl_target.delete|
 |로드 밸런서 IP ACL 타깃 수정|event_id.iaas.loadbalancer_ipacl_target.update|
 |로드 밸런서에 IP ACL 그룹 적용|event_id.iaas.loadbalancer_ipacl_group.bind|
-|로드 밸런서 생성 완료|event_id.iaas.loadbalancer.create_end|
-|로드 밸런서 삭제 완료|event_id.iaas.loadbalancer.delete_end|
-|로드 밸런서 정보 변경 완료|event_id.iaas.loadbalancer.update_end|
 |트랜짓 허브 생성|event_id.iaas.transit_hub.create|
+|트랜짓 허브 생성 완료|event_id.iaas.transit_hub.create_end|
 |트랜짓 허브 삭제|event_id.iaas.transit_hub.delete|
+|트랜짓 허브 삭제 완료|event_id.iaas.transit_hub.delete_end|
 |트랜짓 허브 수정|event_id.iaas.transit_hub.update|
+|트랜짓 허브 수정 완료|event_id.iaas.transit_hub.update_end|
 |트랜짓 허브 연결 생성|event_id.iaas.transit_hub_attachment.create|
+|트랜짓 허브 연결 생성 완료|event_id.iaas.transit_hub_attachment.create_end|
 |트랜짓 허브 연결 삭제|event_id.iaas.transit_hub_attachment.delete|
+|트랜짓 허브 연결 삭제 완료|event_id.iaas.transit_hub_attachment.delete_end|
 |트랜짓 허브 연결 변경|event_id.iaas.transit_hub_attachment.update|
+|트랜짓 허브 연결 변경 완료|event_id.iaas.transit_hub_attachment.update_end|
 |트랜짓 허브 허용 목록 생성|event_id.iaas.transit_hub_allow_project.create|
 |트랜짓 허브 허용 목록 삭제|event_id.iaas.transit_hub_allow_project.delete|
 |트랜짓 허브 허용 목록 변경|event_id.iaas.transit_hub_allow_project.update|
@@ -202,12 +205,6 @@
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 생성|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 삭제|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |트랜짓 허브 멀티캐스트 도메인 허용 목록 변경|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|트랜짓 허브 생성 완료|event_id.iaas.transit_hub.create_end|
-|트랜짓 허브 삭제 완료|event_id.iaas.transit_hub.delete_end|
-|트랜짓 허브 수정 완료|event_id.iaas.transit_hub.update_end|
-|트랜짓 허브 연결 생성 완료|event_id.iaas.transit_hub_attachment.create_end|
-|트랜짓 허브 연결 삭제 완료|event_id.iaas.transit_hub_attachment.delete_end|
-|트랜짓 허브 연결 변경 완료|event_id.iaas.transit_hub_attachment.update_end|
 |인터넷 게이트웨이 생성|event_id.iaas.internet_gateway.create|
 |인터넷 게이트웨이 삭제|event_id.iaas.internet_gateway.delete|
 |VPC 피어링 생성|event_id.iaas.peering.create|
@@ -222,10 +219,10 @@
 |피어링 허용 목록 삭제|event_id.iaas.peering_allow_project.delete|
 |피어링 허용 목록 변경|event_id.iaas.peering_allow_project.update|
 |NAT 게이트웨이 생성|event_id.iaas.nat_gateway.create|
-|NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
-|NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
 |NAT 게이트웨이 생성 완료|event_id.iaas.nat_gateway.create_end|
+|NAT 게이트웨이 삭제|event_id.iaas.nat_gateway.delete|
 |NAT 게이트웨이 삭제 완료|event_id.iaas.nat_gateway.delete_end|
+|NAT 게이트웨이 변경|event_id.iaas.nat_gateway.update|
 |NAT 게이트웨이 변경 완료|event_id.iaas.nat_gateway.update_end|
 |VPNGW 생성|event_id.iaas.vpngw.create|
 |VPNGW 삭제|event_id.iaas.vpngw.delete|
@@ -252,41 +249,41 @@
 |트래픽 미러링 필터 삭제|event_id.iaas.traffic_mirroring.filter.delete|
 |트래픽 미러링 필터 변경|event_id.iaas.traffic_mirroring.filter.update|
 |Private DNS Zone 생성|event_id.iaas.privatedns.zone.create|
+|Private DNS Zone 생성 완료|event_id.iaas.private_dns.zone.create_end|
 |Private DNS Zone 삭제|event_id.iaas.privatedns.zone.delete|
+|Private DNS Zone 삭제 완료|event_id.iaas.private_dns.zone.delete_end|
 |Private DNS Zone 수정|event_id.iaas.privatedns.zone.update|
+|Private DNS Zone 수정 완료|event_id.iaas.private_dns.zone.update_end|
 |Private DNS 레코드 세트 생성|event_id.iaas.privatedns.recordset.create|
 |Private DNS 레코드 세트 삭제|event_id.iaas.privatedns.recordset.delete|
 |Private DNS 레코드 세트 수정|event_id.iaas.privatedns.recordset.update|
 |Private DNS 레코드 세트 대량 생성|event_id.iaas.privatedns.recordset.create_list|
-|Private DNS Zone 생성 완료|event_id.iaas.private_dns.zone.create_end|
-|Private DNS Zone 삭제 완료|event_id.iaas.private_dns.zone.delete_end|
-|Private DNS Zone 수정 완료|event_id.iaas.private_dns.zone.update_end|
 |플로우 로그 로거 생성|event_id.iaas.flowlog_logger.create|
-|플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
-|플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
 |플로우 로그 로거 생성 완료|event_id.iaas.flowlog_logger.create_end|
-|플로우 로그 스토리지 생성|event_id.iaas.flowlog_storage.create|
+|플로우 로그 로거 삭제|event_id.iaas.flowlog_logger.delete|
 |플로우 로그 로거 삭제 완료|event_id.iaas.flowlog_logger.delete_end|
-|플로우 로그 스토리지 삭제|event_id.iaas.flowlog_storage.delete|
+|플로우 로그 로거 수정|event_id.iaas.flowlog_logger.update|
 |플로우 로그 로거 수정 완료|event_id.iaas.flowlog_logger.update_end|
+|플로우 로그 스토리지 생성|event_id.iaas.flowlog_storage.create|
+|플로우 로그 스토리지 삭제|event_id.iaas.flowlog_storage.delete|
 |플로우 로그 스토리지 수정|event_id.iaas.flowlog_storage.update|
 |네트워크 인터페이스 라우트 생성|event_id.iaas.port_route.create|
-|네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
-|네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
 |네트워크 인터페이스 라우트 생성 완료|event_id.iaas.port_route.create_end|
+|네트워크 인터페이스 라우트 삭제|event_id.iaas.port_route.delete|
 |네트워크 인터페이스 라우트 삭제 완료|event_id.iaas.port_route.delete_end|
+|네트워크 인터페이스 라우트 변경|event_id.iaas.port_route.update|
 |네트워크 인터페이스 라우트 변경 완료|event_id.iaas.port_route.update_end|
 |로드 밸런서(DSR) 생성|event_id.iaas.loadbalancer_dsr.create|
+|로드 밸런서(DSR) 생성 완료|event_id.iaas.loadbalancer_dsr.create_end|
 |로드 밸런서(DSR) 삭제|event_id.iaas.loadbalancer_dsr.delete|
+|로드 밸런서(DSR) 삭제 완료|event_id.iaas.loadbalancer_dsr.delete_end|
 |로드 밸런서(DSR) 정보 변경|event_id.iaas.loadbalancer_dsr.update|
+|로드 밸런서(DSR) 정보 변경 완료|event_id.iaas.loadbalancer_dsr.update_end|
 |로드 밸런서(DSR) 멤버 생성|event_id.iaas.loadbalancer_dsr_member.create|
 |로드 밸런서(DSR) 멤버 삭제|event_id.iaas.loadbalancer_dsr_member.delete|
 |로드 밸런서(DSR) 헬스 모니터 생성|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
 |로드 밸런서(DSR) 헬스 모니터 변경|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
 |로드 밸런서(DSR) 헬스 모니터 삭제|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
-|로드 밸런서(DSR) 생성 완료|event_id.iaas.loadbalancer_dsr.create_end|
-|로드 밸런서(DSR) 삭제 완료|event_id.iaas.loadbalancer_dsr.delete_end|
-|로드 밸런서(DSR) 정보 변경 완료|event_id.iaas.loadbalancer_dsr.update_end|
 |클러스터 생성 완료|event_id.iaas.cluster.create.end|
 |클러스터 생성 실패|event_id.iaas.cluster.create.failed|
 |클러스터 생성 시작|event_id.iaas.cluster.create.start|
@@ -550,10 +547,10 @@
 |CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
 |NAS 암호화 키 저장소 설정|event_id.iaas.nas.encryption_key_store.set|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
-|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
-|NAS 볼륨 설정 변경|event_id.iaas.nas.volume.update|
 |NAS 볼륨 생성 완료|event_id.iaas.nas.volume.create_end|
+|NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
 |NAS 볼륨 삭제 완료|event_id.iaas.nas.volume.delete_end|
+|NAS 볼륨 설정 변경|event_id.iaas.nas.volume.update|
 |NAS 볼륨 설정 변경 완료|event_id.iaas.nas.volume.update_end|
 |NAS 스냅숏 생성|event_id.iaas.nas.snapshot.create|
 |NAS 스냅숏 삭제|event_id.iaas.nas.snapshot.delete|
@@ -565,11 +562,6 @@
 |NAS 볼륨 복제 방향 변경|event_id.iaas.nas.replication.change_direction|
 |NAS 볼륨 서브넷 연결 추가|event_id.iaas.nas.subnet.attach|
 |NAS 볼륨 서브넷 연결 해제|event_id.iaas.nas.subnet.detach|
-|NAS for AI 스냅숏 생성|event_id.iaas.nas_for_ai.snapshot.create|
-|NAS for AI 스냅숏 삭제|event_id.iaas.nas_for_ai.snapshot.delete|
-|NAS for AI 볼륨 생성|event_id.iaas.nas_for_ai.volume.create|
-|NAS for AI 볼륨 삭제|event_id.iaas.nas_for_ai.volume.delete|
-|NAS for AI 볼륨 변경|event_id.iaas.nas_for_ai.volume.update|
 |게이트웨이 생성|event_id.iaas.storage_gateway.gateway.create|
 |게이트웨이 설정 변경|event_id.iaas.storage_gateway.gateway.update|
 |게이트웨이 삭제|event_id.iaas.storage_gateway.gateway.delete|
@@ -799,6 +791,8 @@
 |대칭 키 즉시 삭제 (API)|event_id.skm.api.symmetric.delete|
 |비대칭 키 즉시 삭제 (API)|event_id.skm.api.asymmetric.delete|
 |기밀 데이터 수정 (API)|event_id.skm.api.secrets.modify|
+|비대칭 키를 통한 표준 서명 (API)|event_id.skm.api.asymmetric.sign_standard|
+|비대칭 키를 통한 표준 서명 검증 (API)|event_id.skm.api.asymmetric.verify_standard|
 
 ### Deploy
 
