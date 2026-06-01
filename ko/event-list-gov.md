@@ -798,35 +798,35 @@
 
 | 이벤트 | 이벤트 ID |
 | --- | --- |
-|null|event_id.deploy.artifact_create|
-|null|event_id.deploy.artifact_update|
-|null|event_id.deploy.artifact_delete|
-|null|event_id.deploy.binary_group_create|
-|null|event_id.deploy.binary_group_delete|
-|null|event_id.deploy.binary_group_update|
-|null|event_id.deploy.binary_upload|
-|null|event_id.deploy.binary_download|
-|null|event_id.deploy.binary_delete|
-|null|event_id.deploy.binary_update|
-|null|event_id.deploy.server_group_create|
-|null|event_id.deploy.server_group_delete|
-|null|event_id.deploy.server_group_update|
-|null|event_id.deploy.resource_group_create|
-|null|event_id.deploy.resource_group_delete|
-|null|event_id.deploy.resource_create|
-|null|event_id.deploy.resource_update|
-|null|event_id.deploy.resource_save|
-|null|event_id.deploy.resource_download|
-|null|event_id.deploy.resource_delete|
-|null|event_id.deploy.scenario_create|
-|null|event_id.deploy.scenario_copy|
-|null|event_id.deploy.scenario_download|
-|null|event_id.deploy.scenario_upload|
-|null|event_id.deploy.scenario_update|
-|null|event_id.deploy.scenario_delete|
-|null|event_id.deploy.deploy_execute|
-|null|event_id.deploy.deploy_history_download|
-|null|event_id.deploy.autoscale_deploy_execute|
+|아티팩트 생성|event_id.deploy.artifact_create|
+|아티팩트 수정|event_id.deploy.artifact_update|
+|아티팩트 삭제|event_id.deploy.artifact_delete|
+|바이너리 그룹 생성|event_id.deploy.binary_group_create|
+|바이너리 그룹 삭제|event_id.deploy.binary_group_delete|
+|바이너리 그룹 수정|event_id.deploy.binary_group_update|
+|바이너리 업로드|event_id.deploy.binary_upload|
+|바이너리 다운로드|event_id.deploy.binary_download|
+|바이너리 삭제|event_id.deploy.binary_delete|
+|바이너리 수정|event_id.deploy.binary_update|
+|서버 그룹 생성|event_id.deploy.server_group_create|
+|서버 그룹 삭제|event_id.deploy.server_group_delete|
+|서버 그룹 수정|event_id.deploy.server_group_update|
+|리소스 그룹 생성|event_id.deploy.resource_group_create|
+|리소스 그룹 삭제|event_id.deploy.resource_group_delete|
+|리소스 생성|event_id.deploy.resource_create|
+|리소스 수정|event_id.deploy.resource_update|
+|리소스 최신버전으로 저장|event_id.deploy.resource_save|
+|리소스 다운로드|event_id.deploy.resource_download|
+|리소스 삭제|event_id.deploy.resource_delete|
+|시나리오 생성|event_id.deploy.scenario_create|
+|시나리오 복사|event_id.deploy.scenario_copy|
+|시나리오 다운로드|event_id.deploy.scenario_download|
+|시나리오 업로드|event_id.deploy.scenario_upload|
+|시나리오 수정|event_id.deploy.scenario_update|
+|시나리오 삭제|event_id.deploy.scenario_delete|
+|배포 실행|event_id.deploy.deploy_execute|
+|배포 이력 다운로드|event_id.deploy.deploy_history_download|
+|오토스케일 배포 실행|event_id.deploy.autoscale_deploy_execute|
 
 ### 콘솔
 
