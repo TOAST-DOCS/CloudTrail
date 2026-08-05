@@ -331,6 +331,20 @@
 |서비스 게이트웨이 생성|event_id.iaas.service_gateway.create|
 |서비스 게이트웨이 삭제|event_id.iaas.service_gateway.delete|
 |서비스 게이트웨이 변경|event_id.iaas.service_gateway.update|
+|사용자 정의 엔드포인트 생성|event_id.iaas.custom_endpoint.create|
+|사용자 정의 엔드포인트 생성 완료|event_id.iaas.custom_endpoint.create_end|
+|사용자 정의 엔드포인트 삭제|event_id.iaas.custom_endpoint.delete|
+|사용자 정의 엔드포인트 삭제 완료|event_id.iaas.custom_endpoint.delete_end|
+|사용자 정의 엔드포인트 정보 변경|event_id.iaas.custom_endpoint.update|
+|사용자 정의 엔드포인트 정보 변경 완료|event_id.iaas.custom_endpoint.update_end|
+|사용자 정의 엔드포인트 허용 프로젝트 생성|event_id.iaas.custom_endpoint_allow_project.create|
+|사용자 정의 엔드포인트 허용 프로젝트 생성 완료|event_id.iaas.serviceendpointallowproject.create_end|
+|사용자 정의 엔드포인트 허용 프로젝트 삭제|event_id.iaas.custom_endpoint_allow_project.delete|
+|사용자 정의 엔드포인트 허용 프로젝트 삭제 완료|event_id.iaas.serviceendpointallowproject.delete_end|
+|사용자 정의 엔드포인트 허용 프로젝트 정보 변경|event_id.iaas.custom_endpoint_allow_project.update|
+|사용자 정의 엔드포인트 허용 프로젝트 정보 변경 완료|event_id.iaas.serviceendpointallowproject.update_end|
+|사용자 정의 엔드포인트 서비스 이름 재발급|event_id.iaas.custom_endpoint_service_name.update|
+|사용자 정의 엔드포인트 서비스 이름 재발급 완료|event_id.iaas.custom_endpoint_service_name.update_end|
 |트래픽 미러링 세션 생성|event_id.iaas.traffic_mirroring.session.create|
 |트래픽 미러링 세션 삭제|event_id.iaas.traffic_mirroring.session.delete|
 |트래픽 미러링 세션 변경|event_id.iaas.traffic_mirroring.session.update|
@@ -889,6 +903,9 @@
 |기밀 데이터 수정 (API)|event_id.skm.api.secrets.modify|
 |비대칭 키를 통한 표준 서명 (API)|event_id.skm.api.asymmetric.sign_standard|
 |비대칭 키를 통한 표준 서명 검증 (API)|event_id.skm.api.asymmetric.verify_standard|
+|키 저장소 생성 (API)|event_id.skm.api.keystore.create|
+|키 저장소 정보 변경 (API)|event_id.skm.api.keystore.update|
+|키 저장소 삭제 (API)|event_id.skm.api.keystore.delete|
 
 ### Deploy
 
@@ -1238,6 +1255,16 @@
 |Unity SDK 다운로드|event_id.appguard.sdk_download_unity|
 |React Native SDK 다운로드|event_id.appguard.sdk_download_react_native|
 |Unreal SDK 다운로드|event_id.appguard.sdk_download_unreal|
+|flutter SDK 다운로드|event_id.appguard.sdk_download_flutter|
+|앱 증명 신청|event_id.appguard.integrity_request|
+|블랙리스트 일괄 등록|event_id.appguard.blacklist_add_bulk|
+|블랙리스트 일괄 재등록|event_id.appguard.blacklist_re_register_bulk|
+|블랙리스트 일괄 해제|event_id.appguard.blacklist_delete_bulk|
+|블랙리스트 다운로드|event_id.appguard.blacklist_report_download|
+|난독화 매핑 파일 다운로드|event_id.appguard.protection_obfuscation_mapping_download|
+|보호 완료 앱 다운로드|event_id.appguard.objectstorage_download|
+|조건 차단 조건 추가|event_id.appguard.condition_create|
+|조건 차단 조건 삭제|event_id.appguard.condition_delete|
 
 ### ShortURL
 
@@ -2012,6 +2039,9 @@
 |알림 생성|event_id.cloud_monitoring_project.alarm_create|
 |알림 삭제|event_id.cloud_monitoring_project.alarm_delete|
 |알림 수정|event_id.cloud_monitoring_project.alarm_modify|
+|이상탐지 생성|event_id.cloud_monitoring_project.anomaly_create|
+|이상탐지 삭제|event_id.cloud_monitoring_project.anomaly_delete|
+|이상탐지 수정|event_id.cloud_monitoring_project.anomaly_modify|
 |대시보드 복제|event_id.cloud_monitoring_project.dashboard_copy|
 |대시보드 생성|event_id.cloud_monitoring_project.dashboard_create|
 |대시보드 삭제|event_id.cloud_monitoring_project.dashboard_delete|
@@ -2091,6 +2121,7 @@
 |그룹 수정|event_id.notification_hub.addressbook_group_modify|
 |수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
 |수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
+|비즈니스폼 키 발급|event_id.notification_hub.detail_configuration_BRANDMESSAGE_register_sender_key_and_biz_form_id|
 
 ### DDoS Guard
 
@@ -2275,7 +2306,12 @@
 |버킷 생성|event_id.datalakestorage.bucket.create|
 |버킷 삭제|event_id.datalakestorage.bucket.delete|
 |버킷 메타 조회|event_id.datalakestorage.bucket.head|
+|버킷 라이프사이클 삭제|event_id.datalakestorage.bucket.lifecycle.delete|
+|버킷 라이프사이클 조회|event_id.datalakestorage.bucket.lifecycle.get|
+|버킷 라이프사이클 설정|event_id.datalakestorage.bucket.lifecycle.update|
 |버킷 목록 조회|event_id.datalakestorage.bucket.list|
+|버킷 정책 삭제|event_id.datalakestorage.bucket.policy.delete|
+|버킷 정책 수정|event_id.datalakestorage.bucket.policy.update|
 |버킷 태그 삭제|event_id.datalakestorage.bucket.tagging.delete|
 |버킷 태그 조회|event_id.datalakestorage.bucket.tagging.get|
 |버킷 태그 설정|event_id.datalakestorage.bucket.tagging.update|
