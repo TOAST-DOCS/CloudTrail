@@ -176,10 +176,10 @@
 |S3 API認証情報の削除|event_id.iaas.s3credential.delete|
 |APIパスワードの変更|event_id.iaas.identity.password_change|
 |VPCの作成|event_id.iaas.vpc.create|
-|VPCの削除|event_id.iaas.vpc.delete|
-|VPCの情報変更|event_id.iaas.vpc.update|
 |VPCの作成完了|event_id.iaas.vpc.create_end|
+|VPCの削除|event_id.iaas.vpc.delete|
 |VPCの削除完了|event_id.iaas.vpc.delete_end|
+|VPCの情報変更|event_id.iaas.vpc.update|
 |VPCの情報変更完了|event_id.iaas.vpc.update_end|
 |VPCサブネットの作成|event_id.iaas.vpc_subnet.create|
 |VPCサブネットの削除|event_id.iaas.vpc_subnet.delete|
@@ -203,12 +203,12 @@
 |ルーティングテーブルルートの変更|event_id.iaas.route.update|
 |ルーティングテーブルルートの削除|event_id.iaas.route.delete|
 |Floating IPの作成|event_id.iaas.floating_ip.create|
+|Floating IPの作成完了|event_id.iaas.floating_ip.create_end|
 |Floating IPの削除|event_id.iaas.floating_ip.delete|
+|Floating IPの削除完了|event_id.iaas.floating_ip.delete_end|
 |インスタンスFloating IPの接続|event_id.iaas.floating_ip.attach|
 |インスタンスFloating IPの接続解除|event_id.iaas.floating_ip.detach|
-|Floating IPの作成完了|event_id.iaas.floating_ip.create_end|
 |Floating IPの変更完了|event_id.iaas.floating_ip.update_end|
-|Floating IPの削除完了|event_id.iaas.floating_ip.delete_end|
 |NetworkACL 作成|event_id.iaas.networkacl.create|
 |NetworkACL 削除|event_id.iaas.networkacl.delete|
 |NetworkACL 修正|event_id.iaas.networkacl.update|
@@ -218,18 +218,21 @@
 |NetworkACL Binding 作成|event_id.iaas.networkacl_binding.create|
 |NetworkACL Binding 削除|event_id.iaas.networkacl_binding.delete|
 |セキュリティーグループの作成|event_id.iaas.security_group.create|
-|セキュリティーグループの削除|event_id.iaas.security_group.delete|
-|セキュリティーグループの変更|event_id.iaas.security_group.update|
-|セキュリティルールの作成|event_id.iaas.security_group_rule.create|
-|セキュリティルールの削除|event_id.iaas.security_group_rule.delete|
 |セキュリティーグループの作成完了|event_id.iaas.security_group.create_end|
+|セキュリティーグループの削除|event_id.iaas.security_group.delete|
 |セキュリティーグループの削除完了|event_id.iaas.security_group.delete_end|
+|セキュリティーグループの変更|event_id.iaas.security_group.update|
 |セキュリティーグループの変更完了|event_id.iaas.security_group.update_end|
+|セキュリティルールの作成|event_id.iaas.security_group_rule.create|
 |セキュリティルールの作成完了|event_id.iaas.security_group_rule.create_end|
+|セキュリティルールの削除|event_id.iaas.security_group_rule.delete|
 |セキュリティルールの削除完了|event_id.iaas.security_group_rule.delete_end|
 |ロードバランサーの作成|event_id.iaas.loadbalancer.create|
+|ロードバランサーの作成完了|event_id.iaas.loadbalancer.create_end|
 |ロードバランサーの削除|event_id.iaas.loadbalancer.delete|
+|ロードバランサーの削除完了|event_id.iaas.loadbalancer.delete_end|
 |ロードバランサー情報の変更|event_id.iaas.loadbalancer.update|
+|ロードバランサー情報の変更完了|event_id.iaas.loadbalancer.update_end|
 |ロードバランサーリスナーの作成|event_id.iaas.loadbalancer_listener.create|
 |ロードバランサーリスナーの削除|event_id.iaas.loadbalancer_listener.delete|
 |ロードバランサーリスナーの変更|event_id.iaas.loadbalancer_listener.update|
@@ -255,15 +258,18 @@
 |ロードバランサーIP ACLターゲット削除|event_id.iaas.loadbalancer_ipacl_target.delete|
 |ロードバランサーIP ACLターゲット修正|event_id.iaas.loadbalancer_ipacl_target.update|
 |ロードバランサーにIP ACLグループ適用|event_id.iaas.loadbalancer_ipacl_group.bind|
-|ロードバランサーの作成完了|event_id.iaas.loadbalancer.create_end|
-|ロードバランサーの削除完了|event_id.iaas.loadbalancer.delete_end|
-|ロードバランサー情報の変更完了|event_id.iaas.loadbalancer.update_end|
 |トランジットハブの作成|event_id.iaas.transit_hub.create|
+|トランジットハブの作成完了|event_id.iaas.transit_hub.create_end|
 |トランジットハブの削除|event_id.iaas.transit_hub.delete|
+|トランジットハブの削除完了|event_id.iaas.transit_hub.delete_end|
 |トランジットハブの変更|event_id.iaas.transit_hub.update|
+|トランジットハブの変更完了|event_id.iaas.transit_hub.update_end|
 |トランジットハブ接続の作成|event_id.iaas.transit_hub_attachment.create|
+|トランジットハブ接続の作成完了|event_id.iaas.transit_hub_attachment.create_end|
 |トランジットハブ接続の削除|event_id.iaas.transit_hub_attachment.delete|
+|トランジットハブ接続の削除完了|event_id.iaas.transit_hub_attachment.delete_end|
 |トランジットハブ接続の変更|event_id.iaas.transit_hub_attachment.update|
+|トランジットハブ接続の変更完了|event_id.iaas.transit_hub_attachment.update_end|
 |トランジットハブ許可リストの作成|event_id.iaas.transit_hub_allow_project.create|
 |トランジットハブ許可リストの削除|event_id.iaas.transit_hub_allow_project.delete|
 |トランジットハブ許可リストの変更|event_id.iaas.transit_hub_allow_project.update|
@@ -291,12 +297,6 @@
 |トランジットハブマルチキャストドメイン許可リストの作成|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |トランジットハブマルチキャストドメイン許可リストの削除|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |トランジットハブマルチキャストドメイン許可リストの変更|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|トランジットハブの作成完了|event_id.iaas.transit_hub.create_end|
-|トランジットハブの削除完了|event_id.iaas.transit_hub.delete_end|
-|トランジットハブの変更完了|event_id.iaas.transit_hub.update_end|
-|トランジットハブ接続の作成完了|event_id.iaas.transit_hub_attachment.create_end|
-|トランジットハブ接続の削除完了|event_id.iaas.transit_hub_attachment.delete_end|
-|トランジットハブ接続の変更完了|event_id.iaas.transit_hub_attachment.update_end|
 |インターネットゲートウェイの作成|event_id.iaas.internet_gateway.create|
 |インターネットゲートウェイの削除|event_id.iaas.internet_gateway.delete|
 |VPCピアリングの作成|event_id.iaas.peering.create|
@@ -311,10 +311,10 @@
 |ピアリング許可リスト削除|event_id.iaas.peering_allow_project.delete|
 |ピアリング許可リスト変更|event_id.iaas.peering_allow_project.update|
 |NATゲートウェイの作成|event_id.iaas.nat_gateway.create|
-|NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
-|NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
 |NATゲートウェイの作成完了|event_id.iaas.nat_gateway.create_end|
+|NATゲートウェイの削除|event_id.iaas.nat_gateway.delete|
 |NATゲートウェイの削除完了|event_id.iaas.nat_gateway.delete_end|
+|NATゲートウェイの変更|event_id.iaas.nat_gateway.update|
 |NATゲートウェイの変更完了|event_id.iaas.nat_gateway.update_end|
 |VPNGW作成|event_id.iaas.vpngw.create|
 |VPNGW削除|event_id.iaas.vpngw.delete|
@@ -331,6 +331,20 @@
 |サービスゲートウェイの作成|event_id.iaas.service_gateway.create|
 |サービスゲートウェイの削除|event_id.iaas.service_gateway.delete|
 |サービスゲートウェイの変更|event_id.iaas.service_gateway.update|
+|ユーザー定義エンドポイント作成|event_id.iaas.custom_endpoint.create|
+|ユーザー定義エンドポイント作成完了|event_id.iaas.custom_endpoint.create_end|
+|ユーザー定義エンドポイント削除|event_id.iaas.custom_endpoint.delete|
+|ユーザー定義エンドポイント削除完了|event_id.iaas.custom_endpoint.delete_end|
+|ユーザー定義エンドポイント情報変更|event_id.iaas.custom_endpoint.update|
+|ユーザー定義エンドポイント情報変更完了|event_id.iaas.custom_endpoint.update_end|
+|ユーザー定義エンドポイント許可プロジェクト作成|event_id.iaas.custom_endpoint_allow_project.create|
+|ユーザー定義エンドポイント許可プロジェクト作成完了|event_id.iaas.serviceendpointallowproject.create_end|
+|ユーザー定義エンドポイント許可プロジェクト削除|event_id.iaas.custom_endpoint_allow_project.delete|
+|ユーザー定義エンドポイント許可プロジェクト削除完了|event_id.iaas.serviceendpointallowproject.delete_end|
+|ユーザー定義エンドポイント許可プロジェクト情報変更|event_id.iaas.custom_endpoint_allow_project.update|
+|ユーザー定義エンドポイント許可プロジェクト情報変更完了|event_id.iaas.serviceendpointallowproject.update_end|
+|ユーザー定義エンドポイントサービス名再発行|event_id.iaas.custom_endpoint_service_name.update|
+|ユーザー定義エンドポイントサービス名再発行完了|event_id.iaas.custom_endpoint_service_name.update_end|
 |トラフィックミラーリングセッションの作成|event_id.iaas.traffic_mirroring.session.create|
 |トラフィックミラーリングセッションの削除|event_id.iaas.traffic_mirroring.session.delete|
 |トラフィックミラーリングセッションの変更|event_id.iaas.traffic_mirroring.session.update|
@@ -341,41 +355,41 @@
 |トラフィックミラーリングフィルタの削除|event_id.iaas.traffic_mirroring.filter.delete|
 |トラフィックミラーリングフィルタの変更|event_id.iaas.traffic_mirroring.filter.update|
 |Private DNS Zone作成|event_id.iaas.privatedns.zone.create|
+|Private DNS Zone作成完了|event_id.iaas.private_dns.zone.create_end|
 |Private DNS Zone削除|event_id.iaas.privatedns.zone.delete|
+|Private DNS Zone削除完了|event_id.iaas.private_dns.zone.delete_end|
 |Private DNS Zone修正|event_id.iaas.privatedns.zone.update|
+|Private DNS Zone修正完了|event_id.iaas.private_dns.zone.update_end|
 |Private DNS レコードセット作成|event_id.iaas.privatedns.recordset.create|
 |Private DNS レコードセット削除|event_id.iaas.privatedns.recordset.delete|
 |Private DNS レコードセット修正|event_id.iaas.privatedns.recordset.update|
 |Private DNS レコードセットの大量作成|event_id.iaas.privatedns.recordset.create_list|
-|Private DNS Zone作成完了|event_id.iaas.private_dns.zone.create_end|
-|Private DNS Zone削除完了|event_id.iaas.private_dns.zone.delete_end|
-|Private DNS Zone修正完了|event_id.iaas.private_dns.zone.update_end|
 |フローログロガーの作成|event_id.iaas.flowlog_logger.create|
-|フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
-|フローログロガーの修正|event_id.iaas.flowlog_logger.update|
 |フローログロガーの作成完了|event_id.iaas.flowlog_logger.create_end|
-|フローログストレージの作成|event_id.iaas.flowlog_storage.create|
+|フローログロガーの削除|event_id.iaas.flowlog_logger.delete|
 |フローログロガーの削除完了|event_id.iaas.flowlog_logger.delete_end|
-|フローログストレージの削除|event_id.iaas.flowlog_storage.delete|
+|フローログロガーの修正|event_id.iaas.flowlog_logger.update|
 |フローログロガーの修正完了|event_id.iaas.flowlog_logger.update_end|
+|フローログストレージの作成|event_id.iaas.flowlog_storage.create|
+|フローログストレージの削除|event_id.iaas.flowlog_storage.delete|
 |フローログストレージの修正|event_id.iaas.flowlog_storage.update|
 |ネットワークインターフェースのルート作成|event_id.iaas.port_route.create|
-|ネットワークインターフェースのルート削除|event_id.iaas.port_route.delete|
-|ネットワークインターフェースのルート変更|event_id.iaas.port_route.update|
 |ネットワークインターフェースのルート作成完了|event_id.iaas.port_route.create_end|
+|ネットワークインターフェースのルート削除|event_id.iaas.port_route.delete|
 |ネットワークインターフェースのルート削除完了|event_id.iaas.port_route.delete_end|
+|ネットワークインターフェースのルート変更|event_id.iaas.port_route.update|
 |ネットワークインターフェースのルート変更完了|event_id.iaas.port_route.update_end|
 |ロードバランサー(DSR)作成|event_id.iaas.loadbalancer_dsr.create|
+|ロードバランサー(DSR)作成完了|event_id.iaas.loadbalancer_dsr.create_end|
 |ロードバランサー(DSR)削除|event_id.iaas.loadbalancer_dsr.delete|
+|ロードバランサー(DSR)削除完了|event_id.iaas.loadbalancer_dsr.delete_end|
 |ロードバランサー(DSR)情報変更|event_id.iaas.loadbalancer_dsr.update|
+|ロードバランサー(DSR)情報変更完了|event_id.iaas.loadbalancer_dsr.update_end|
 |ロードバランサー(DSR)メンバー作成|event_id.iaas.loadbalancer_dsr_member.create|
 |ロードバランサー(DSR)メンバー削除|event_id.iaas.loadbalancer_dsr_member.delete|
 |ロードバランサー(DSR)ヘルスモニター作成|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
 |ロードバランサー(DSR)ヘルスモニター変更|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
 |ロードバランサー(DSR)ヘルスモニター削除|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
-|ロードバランサー(DSR)作成完了|event_id.iaas.loadbalancer_dsr.create_end|
-|ロードバランサー(DSR)削除完了|event_id.iaas.loadbalancer_dsr.delete_end|
-|ロードバランサー(DSR)情報変更完了|event_id.iaas.loadbalancer_dsr.update_end|
 |クラスター作成完了|event_id.iaas.cluster.create.end|
 |クラスター作成失敗|event_id.iaas.cluster.create.failed|
 |クラスター作成起動|event_id.iaas.cluster.create.start|
@@ -887,6 +901,11 @@
 |対称鍵の即時削除 (API)|event_id.skm.api.symmetric.delete|
 |非対称鍵の即時削除 (API)|event_id.skm.api.asymmetric.delete|
 |機密データの更新（API|event_id.skm.api.secrets.modify|
+|非対称鍵による標準署名 (API)|event_id.skm.api.asymmetric.sign_standard|
+|非対称鍵による標準署名検証 (API)|event_id.skm.api.asymmetric.verify_standard|
+|キーストアの作成 (API)|event_id.skm.api.keystore.create|
+|キーストア情報の変更 (API)|event_id.skm.api.keystore.update|
+|キーストアの削除 (API)|event_id.skm.api.keystore.delete|
 
 ### Deploy
 
@@ -1236,6 +1255,16 @@
 |Unity SDKダウンロード|event_id.appguard.sdk_download_unity|
 |React Native SDK ダウンロード|event_id.appguard.sdk_download_react_native|
 |Unreal SDK ダウンロード|event_id.appguard.sdk_download_unreal|
+|flutter SDK ダウンロード|event_id.appguard.sdk_download_flutter|
+|アプリ証明申請|event_id.appguard.integrity_request|
+|ブラックリスト一括登録|event_id.appguard.blacklist_add_bulk|
+|ブラックリスト一括再登録|event_id.appguard.blacklist_re_register_bulk|
+|ブラックリスト一括解除|event_id.appguard.blacklist_delete_bulk|
+|ブラックリストダウンロード|event_id.appguard.blacklist_report_download|
+|難読化マッピングファイルのダウンロード|event_id.appguard.protection_obfuscation_mapping_download|
+|保護完了アプリのダウンロード|event_id.appguard.objectstorage_download|
+|条件遮断の条件追加|event_id.appguard.condition_create|
+|条件遮断の条件削除|event_id.appguard.condition_delete|
 
 ### ShortURL
 
@@ -2010,6 +2039,9 @@
 |通知の作成|event_id.cloud_monitoring_project.alarm_create|
 |通知の削除|event_id.cloud_monitoring_project.alarm_delete|
 |通知の修正|event_id.cloud_monitoring_project.alarm_modify|
+|이상탐지 생성|event_id.cloud_monitoring_project.anomaly_create|
+|이상탐지 삭제|event_id.cloud_monitoring_project.anomaly_delete|
+|이상탐지 수정|event_id.cloud_monitoring_project.anomaly_modify|
 |ダッシュボードの複製|event_id.cloud_monitoring_project.dashboard_copy|
 |ダッシュボードの作成|event_id.cloud_monitoring_project.dashboard_create|
 |ダッシュボードの削除|event_id.cloud_monitoring_project.dashboard_delete|
@@ -2089,6 +2121,7 @@
 |그룹 수정|event_id.notification_hub.addressbook_group_modify|
 |수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
 |수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
+|비즈니스폼 키 발급|event_id.notification_hub.detail_configuration_BRANDMESSAGE_register_sender_key_and_biz_form_id|
 
 ### DDoS Guard
 
@@ -2273,7 +2306,12 @@
 |バケット作成|event_id.datalakestorage.bucket.create|
 |バケット削除|event_id.datalakestorage.bucket.delete|
 |バケット情報確認|event_id.datalakestorage.bucket.head|
+|バケットライフサイクル削除|event_id.datalakestorage.bucket.lifecycle.delete|
+|バケットライフサイクル取得|event_id.datalakestorage.bucket.lifecycle.get|
+|バケットライフサイクル設定|event_id.datalakestorage.bucket.lifecycle.update|
 |バケット一覧取得|event_id.datalakestorage.bucket.list|
+|バケットポリシーの削除|event_id.datalakestorage.bucket.policy.delete|
+|バケットポリシーの編集|event_id.datalakestorage.bucket.policy.update|
 |バケットタグ削除|event_id.datalakestorage.bucket.tagging.delete|
 |バケットタグ取得|event_id.datalakestorage.bucket.tagging.get|
 |バケットタグ設定|event_id.datalakestorage.bucket.tagging.update|
