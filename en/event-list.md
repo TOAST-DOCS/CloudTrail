@@ -176,10 +176,10 @@
 |Delete S3 API Credentials|event_id.iaas.s3credential.delete|
 |Change API Password|event_id.iaas.identity.password_change|
 |Create VPC|event_id.iaas.vpc.create|
-|Delete VPC|event_id.iaas.vpc.delete|
-|Change VPC Information|event_id.iaas.vpc.update|
 |Create VPC Completed|event_id.iaas.vpc.create_end|
+|Delete VPC|event_id.iaas.vpc.delete|
 |Delete VPC Completed|event_id.iaas.vpc.delete_end|
+|Change VPC Information|event_id.iaas.vpc.update|
 |Change VPC Information Completed|event_id.iaas.vpc.update_end|
 |Create VPC Subnet|event_id.iaas.vpc_subnet.create|
 |Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
@@ -203,12 +203,12 @@
 |Change Route in Routing Table|event_id.iaas.route.update|
 |Delete Route in Routing Table|event_id.iaas.route.delete|
 |Create Floating IP|event_id.iaas.floating_ip.create|
+|Create Floating IP Completed|event_id.iaas.floating_ip.create_end|
 |Delete Floating IP|event_id.iaas.floating_ip.delete|
+|Delete Floating IP Completed|event_id.iaas.floating_ip.delete_end|
 |Associate Instance Floating IP|event_id.iaas.floating_ip.attach|
 |Disassociate Instance Floating IP|event_id.iaas.floating_ip.detach|
-|Create Floating IP Completed|event_id.iaas.floating_ip.create_end|
 |Update Floating IP Completed|event_id.iaas.floating_ip.update_end|
-|Delete Floating IP Completed|event_id.iaas.floating_ip.delete_end|
 |Create NetworkACL|event_id.iaas.networkacl.create|
 |Delete NetworkACL|event_id.iaas.networkacl.delete|
 |Update NetworkACL|event_id.iaas.networkacl.update|
@@ -218,18 +218,21 @@
 |Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
 |Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
 |Create Security Group|event_id.iaas.security_group.create|
-|Delete Security Group|event_id.iaas.security_group.delete|
-|Change Security Group|event_id.iaas.security_group.update|
-|Create Security Rule|event_id.iaas.security_group_rule.create|
-|Delete Security Rule|event_id.iaas.security_group_rule.delete|
 |Create Security Group Completed|event_id.iaas.security_group.create_end|
+|Delete Security Group|event_id.iaas.security_group.delete|
 |Delete Security Group Completed|event_id.iaas.security_group.delete_end|
+|Change Security Group|event_id.iaas.security_group.update|
 |Change Security Group Completed|event_id.iaas.security_group.update_end|
+|Create Security Rule|event_id.iaas.security_group_rule.create|
 |Create Security Rule Completed|event_id.iaas.security_group_rule.create_end|
+|Delete Security Rule|event_id.iaas.security_group_rule.delete|
 |Delete Security Rule Completed|event_id.iaas.security_group_rule.delete_end|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|
+|Create Load Balancer Completed|event_id.iaas.loadbalancer.create_end|
 |Delete Load Balancer|event_id.iaas.loadbalancer.delete|
+|Delete Load Balancer Completed|event_id.iaas.loadbalancer.delete_end|
 |Change Load Balancer Information|event_id.iaas.loadbalancer.update|
+|Change Load Balancer Information Completed|event_id.iaas.loadbalancer.update_end|
 |Create Load Balancer Listener|event_id.iaas.loadbalancer_listener.create|
 |Delete Load Balancer Listener|event_id.iaas.loadbalancer_listener.delete|
 |Change Load Balancer Listener|event_id.iaas.loadbalancer_listener.update|
@@ -255,15 +258,18 @@
 |Delete Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.delete|
 |Modify Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.update|
 |Apply Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.bind|
-|Create Load Balancer Completed|event_id.iaas.loadbalancer.create_end|
-|Delete Load Balancer Completed|event_id.iaas.loadbalancer.delete_end|
-|Change Load Balancer Information Completed|event_id.iaas.loadbalancer.update_end|
 |Create Transit Hub|event_id.iaas.transit_hub.create|
+|Create Transit Hub Completed|event_id.iaas.transit_hub.create_end|
 |Delete Transit Hub|event_id.iaas.transit_hub.delete|
+|Delete Transit Hub Completed|event_id.iaas.transit_hub.delete_end|
 |Modify Transit Hub|event_id.iaas.transit_hub.update|
+|Modify Transit Hub Completed|event_id.iaas.transit_hub.update_end|
 |Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|
+|Create Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.create_end|
 |Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|
+|Delete Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.delete_end|
 |Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|
+|Modify Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.update_end|
 |Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|
 |Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|
 |Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|
@@ -291,12 +297,6 @@
 |Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|Create Transit Hub Completed|event_id.iaas.transit_hub.create_end|
-|Delete Transit Hub Completed|event_id.iaas.transit_hub.delete_end|
-|Modify Transit Hub Completed|event_id.iaas.transit_hub.update_end|
-|Create Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.create_end|
-|Delete Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.delete_end|
-|Modify Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.update_end|
 |Create Internet Gateway|event_id.iaas.internet_gateway.create|
 |Delete Internet Gateway|event_id.iaas.internet_gateway.delete|
 |Create VPC Peering|event_id.iaas.peering.create|
@@ -311,10 +311,10 @@
 |Delete Peering Allow List|event_id.iaas.peering_allow_project.delete|
 |Change Peering Allow List|event_id.iaas.peering_allow_project.update|
 |Create NAT Gateway|event_id.iaas.nat_gateway.create|
-|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
-|Change NAT Gateway|event_id.iaas.nat_gateway.update|
 |Create NAT Gateway Completed|event_id.iaas.nat_gateway.create_end|
+|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
 |Delete NAT Gateway Completed|event_id.iaas.nat_gateway.delete_end|
+|Change NAT Gateway|event_id.iaas.nat_gateway.update|
 |Change NAT Gateway Completed|event_id.iaas.nat_gateway.update_end|
 |Create VPNGW|event_id.iaas.vpngw.create|
 |Delete VPNGW|event_id.iaas.vpngw.delete|
@@ -331,6 +331,20 @@
 |Create Service Gateway|event_id.iaas.service_gateway.create|
 |Delete Service Gateway|event_id.iaas.service_gateway.delete|
 |Change Service Gateway|event_id.iaas.service_gateway.update|
+|Create Custom Endpoint|event_id.iaas.custom_endpoint.create|
+|Create Custom Endpoint Complete|event_id.iaas.custom_endpoint.create_end|
+|Delete Custom Endpoint|event_id.iaas.custom_endpoint.delete|
+|Delete Custom Endpoint Complete|event_id.iaas.custom_endpoint.delete_end|
+|Update Custom Endpoint Info|event_id.iaas.custom_endpoint.update|
+|Update Custom Endpoint Info Complete|event_id.iaas.custom_endpoint.update_end|
+|Create Custom Endpoint Allowed Project|event_id.iaas.custom_endpoint_allow_project.create|
+|Create Custom Endpoint Allowed Project Complete|event_id.iaas.serviceendpointallowproject.create_end|
+|Delete Custom Endpoint Allowed Project|event_id.iaas.custom_endpoint_allow_project.delete|
+|Delete Custom Endpoint Allowed Project Complete|event_id.iaas.serviceendpointallowproject.delete_end|
+|Update Custom Endpoint Allowed Project Info|event_id.iaas.custom_endpoint_allow_project.update|
+|Update Custom Endpoint Allowed Project Info Complete|event_id.iaas.serviceendpointallowproject.update_end|
+|Reissue Custom Endpoint Service Name|event_id.iaas.custom_endpoint_service_name.update|
+|Reissue Custom Endpoint Service Name Complete|event_id.iaas.custom_endpoint_service_name.update_end|
 |Create Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.create|
 |Delete Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.delete|
 |Change Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.update|
@@ -341,41 +355,41 @@
 |Delete Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.delete|
 |Change Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.update|
 |Create Private DNS Zone|event_id.iaas.privatedns.zone.create|
+|Create Private DNS Zone Completed|event_id.iaas.private_dns.zone.create_end|
 |Delete Private DNS Zone|event_id.iaas.privatedns.zone.delete|
+|Delete Private DNS Zone Completed|event_id.iaas.private_dns.zone.delete_end|
 |Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|
+|Modify Private DNS Zone Completed|event_id.iaas.private_dns.zone.update_end|
 |Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create|
 |Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|
 |Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
 |Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|
-|Create Private DNS Zone Completed|event_id.iaas.private_dns.zone.create_end|
-|Delete Private DNS Zone Completed|event_id.iaas.private_dns.zone.delete_end|
-|Modify Private DNS Zone Completed|event_id.iaas.private_dns.zone.update_end|
 |Create Flow Log Logger|event_id.iaas.flowlog_logger.create|
-|Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
-|Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Create Flow Log Logger Completed|event_id.iaas.flowlog_logger.create_end|
-|Create Flow Log Storage|event_id.iaas.flowlog_storage.create|
+|Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
 |Delete Flow Log Logger Completed|event_id.iaas.flowlog_logger.delete_end|
-|Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
+|Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Modify Flow Log Logger Completed|event_id.iaas.flowlog_logger.update_end|
+|Create Flow Log Storage|event_id.iaas.flowlog_storage.create|
+|Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
 |Modify Flow Log Storage|event_id.iaas.flowlog_storage.update|
-|event_id.iaas.port_route.create|event_id.iaas.port_route.create|
-|Delete Network Interface Route|event_id.iaas.port_route.delete|
-|Change Network Interface Route|event_id.iaas.port_route.update|
+|Create Network Interface Route|event_id.iaas.port_route.create|
 |Create Network Interface Route Completed|event_id.iaas.port_route.create_end|
+|Delete Network Interface Route|event_id.iaas.port_route.delete|
 |Delete Network Interface Route Completed|event_id.iaas.port_route.delete_end|
+|Change Network Interface Route|event_id.iaas.port_route.update|
 |Change Network Interface Route Completed|event_id.iaas.port_route.update_end|
 |Create Load Balancer (DSR)|event_id.iaas.loadbalancer_dsr.create|
+|Load Balancer (DSR) Creation Completed|event_id.iaas.loadbalancer_dsr.create_end|
 |Delete Load Balancer (DSR)|event_id.iaas.loadbalancer_dsr.delete|
+|Load Balancer (DSR) Deletion Completed|event_id.iaas.loadbalancer_dsr.delete_end|
 |Change Load Balancer (DSR) Info|event_id.iaas.loadbalancer_dsr.update|
+|Load Balancer (DSR) Info Change Completed|event_id.iaas.loadbalancer_dsr.update_end|
 |Create Load Balancer (DSR) Member|event_id.iaas.loadbalancer_dsr_member.create|
 |Delete Load Balancer (DSR) Member|event_id.iaas.loadbalancer_dsr_member.delete|
 |Create Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
 |Change Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
 |Delete Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
-|Load Balancer (DSR) Creation Completed|event_id.iaas.loadbalancer_dsr.create_end|
-|Load Balancer (DSR) Deletion Completed|event_id.iaas.loadbalancer_dsr.delete_end|
-|Load Balancer (DSR) Info Change Completed|event_id.iaas.loadbalancer_dsr.update_end|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -887,6 +901,11 @@
 |Immediately Delete Symmetric Key (API)|event_id.skm.api.symmetric.delete|
 |Immediately Delete Asymmetric Key (API)|event_id.skm.api.asymmetric.delete|
 |Modify Confidential Data (API)|event_id.skm.api.secrets.modify|
+|Standard Sign with Asymmetric Key (API)|event_id.skm.api.asymmetric.sign_standard|
+|Verify Standard Signature with Asymmetric Key (API)|event_id.skm.api.asymmetric.verify_standard|
+|Create Keystore (API)|event_id.skm.api.keystore.create|
+|Change Keystore Information (API)|event_id.skm.api.keystore.update|
+|Delete Keystore (API)|event_id.skm.api.keystore.delete|
 
 ### Deploy
 
@@ -1236,6 +1255,16 @@
 |Unity SDK download|event_id.appguard.sdk_download_unity|
 |React Native SDK download|event_id.appguard.sdk_download_react_native|
 |Unreal SDK download|event_id.appguard.sdk_download_unreal|
+|flutter SDK download|event_id.appguard.sdk_download_flutter|
+|App Attestation application|event_id.appguard.integrity_request|
+|Blacklist batch register|event_id.appguard.blacklist_add_bulk|
+|Blacklist Batch Re-register|event_id.appguard.blacklist_re_register_bulk|
+|Blacklist Batch Remove|event_id.appguard.blacklist_delete_bulk|
+|Download Blacklist|event_id.appguard.blacklist_report_download|
+|Download Obfuscation Mapping File|event_id.appguard.protection_obfuscation_mapping_download|
+|Download Protected App|event_id.appguard.objectstorage_download|
+|Add Block-by-Condition Condition|event_id.appguard.condition_create|
+|Delete Block-by-Condition Condition|event_id.appguard.condition_delete|
 
 ### ShortURL
 
@@ -2010,6 +2039,9 @@
 |Create Notification|event_id.cloud_monitoring_project.alarm_create|
 |Delete Notification|event_id.cloud_monitoring_project.alarm_delete|
 |Modify Notification|event_id.cloud_monitoring_project.alarm_modify|
+|이상탐지 생성|event_id.cloud_monitoring_project.anomaly_create|
+|이상탐지 삭제|event_id.cloud_monitoring_project.anomaly_delete|
+|이상탐지 수정|event_id.cloud_monitoring_project.anomaly_modify|
 |Copy Dashboard|event_id.cloud_monitoring_project.dashboard_copy|
 |Create Dashboard|event_id.cloud_monitoring_project.dashboard_create|
 |Delete Dashboard|event_id.cloud_monitoring_project.dashboard_delete|
@@ -2089,6 +2121,7 @@
 |그룹 수정|event_id.notification_hub.addressbook_group_modify|
 |수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
 |수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
+|비즈니스폼 키 발급|event_id.notification_hub.detail_configuration_BRANDMESSAGE_register_sender_key_and_biz_form_id|
 
 ### DDoS Guard
 
@@ -2273,7 +2306,12 @@
 |Create Bucket|event_id.datalakestorage.bucket.create|
 |Delete Bucket|event_id.datalakestorage.bucket.delete|
 |Head Bucket|event_id.datalakestorage.bucket.head|
+|Delete Bucket Lifecycle|event_id.datalakestorage.bucket.lifecycle.delete|
+|Get Bucket Lifecycle|event_id.datalakestorage.bucket.lifecycle.get|
+|Put Bucket Lifecycle|event_id.datalakestorage.bucket.lifecycle.update|
 |List Buckets|event_id.datalakestorage.bucket.list|
+|Delete Bucket Policy|event_id.datalakestorage.bucket.policy.delete|
+|Edit Bucket Policy|event_id.datalakestorage.bucket.policy.update|
 |Delete Bucket Tagging|event_id.datalakestorage.bucket.tagging.delete|
 |Get Bucket Tagging|event_id.datalakestorage.bucket.tagging.get|
 |Put Bucket Tagging|event_id.datalakestorage.bucket.tagging.update|
