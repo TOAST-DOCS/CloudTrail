@@ -1,6 +1,10 @@
-## CloudTrail > List of Collected Events
+<!-- pre-align:aligned sig=3447ebdf1f03 -->
 
-### Console
+<a id="cloudtrail-list-of-collected-events"></a>
+## CloudTrail > List of Collected Events { #cloudtrail-list-of-collected-events }
+
+<a id="console"></a>
+### Console { #console }
 
 | Event | Event ID |
 | --- | --- |
@@ -89,7 +93,8 @@
 |Add Organization Role Group Member|event_id.org.org_role_group.members.add|
 |Delete Organization Role Group Member|event_id.org.org_role_group.members.delete|
 
-### Default Infrastructure Service
+<a id="default-infrastructure-service"></a>
+### Default Infrastructure Service { #default-infrastructure-service }
 
 | Event | Event ID |
 | --- | --- |
@@ -673,7 +678,8 @@
 |Delete NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.delete|
 |Change NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.update|
 
-### Object Storage
+<a id="object-storage"></a>
+### Object Storage { #object-storage }
 
 | Event | Event ID |
 | --- | --- |
@@ -693,7 +699,8 @@
 |List Objects|event_id.object_storage.object.list_lookup|
 |List Containers|event_id.object_storage.container.list_lookup|
 
-### RDS for MySQL
+<a id="rds-for-mysql"></a>
+### RDS for MySQL { #rds-for-mysql }
 
 | Event | Event ID |
 | --- | --- |
@@ -767,7 +774,8 @@
 |Delete DB Security Group Rule|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
 |DB Instance OS Upgrade|event_id.rds_for_mysql.instance.os.upgrade|
 
-### RDS for MariaDB
+<a id="rds-for-mariadb"></a>
+### RDS for MariaDB { #rds-for-mariadb }
 
 | Event | Event ID |
 | --- | --- |
@@ -811,7 +819,8 @@
 |Make and export a DB instance backup|event_id.rds_for_mysql.instance.backup.export|
 |Export backup to the object storage|event_id.rds_for_mysql.backup.export|
 
-### Secure Key Manager
+<a id="secure-key-manager"></a>
+### Secure Key Manager { #secure-key-manager }
 
 | Event | Event ID |
 | --- | --- |
@@ -888,7 +897,8 @@
 |Immediately Delete Asymmetric Key (API)|event_id.skm.api.asymmetric.delete|
 |Modify Confidential Data (API)|event_id.skm.api.secrets.modify|
 
-### Deploy
+<a id="deploy"></a>
+### Deploy { #deploy }
 
 | Event | Event ID |
 | --- | --- |
@@ -922,7 +932,8 @@
 |Download deployment history|event_id.deploy.deploy_history_download|
 |Execute Autoscale Deployment|event_id.deploy.autoscale_deploy_execute|
 
-### Service Monitoring
+<a id="service-monitoring"></a>
+### Service Monitoring { #service-monitoring }
 
 | Event | Event ID |
 | --- | --- |
@@ -942,7 +953,8 @@
 |Migrate Failure to Anther Service|event_id.service_monitoring.send_transfer_transmission|
 |Suspend Failure Transfers|event_id.service_monitoring.send_stop_transmission|
 
-### EasyCache
+<a id="easycache"></a>
+### EasyCache { #easycache }
 
 | Event | Event ID |
 | --- | --- |
@@ -981,7 +993,8 @@
 |Export data|event_id.easycache.group.export|
 |Restore existing replication group|event_id.easycache.backup.migrate|
 
-### RDS for MS-SQL
+<a id="rds-for-ms-sql"></a>
+### RDS for MS-SQL { #rds-for-ms-sql }
 
 | Event | Event ID |
 | --- | --- |
@@ -1029,7 +1042,8 @@
 |Modify Scheduled Task|event_id.rds_for_sqlserver.process.reserved-process.modify|
 |Delete Scheduled Task|event_id.rds_for_sqlserver.process.reserved-process.deleted|
 
-### Log &amp; Crash Search
+<a id="log-amp-crash-search"></a>
+### Log &amp; Crash Search { #log-amp-crash-search }
 
 | Event | Event ID |
 | --- | --- |
@@ -1063,7 +1077,8 @@
 |Project status changed|event_id.logncrash.project.state|
 |Log entry limit changed|event_id.logncrash.limit.save|
 
-### Backup
+<a id="backup"></a>
+### Backup { #backup }
 
 | Event | Event ID |
 | --- | --- |
@@ -1078,7 +1093,8 @@
 |Create Backup Result File|event_id.backup.result.file|
 |Change Backup Server Data|event_id.backup.client.update|
 
-### DNS Plus
+<a id="dns-plus"></a>
+### DNS Plus { #dns-plus }
 
 | Event | Event ID |
 | --- | --- |
@@ -1102,7 +1118,8 @@
 |Modify Health Checks|event_id.dnsplus.health_check.update|
 |Delete Health Checks|event_id.dnsplus.health_check.delete|
 
-### CDN
+<a id="cdn"></a>
+### CDN { #cdn }
 
 | Event | Event ID |
 | --- | --- |
@@ -1120,7 +1137,8 @@
 |Purge Cache - All|event_id.cdn.cache_purge.all_type|
 |Create an Auth Token|event_id.cdn.auth_token|
 
-### System Monitoring(CloudTrail)
+<a id="system-monitoringcloudtrail"></a>
+### System Monitoring(CloudTrail) { #system-monitoringcloudtrail }
 
 | Event | Event ID |
 | --- | --- |
@@ -1152,7 +1170,8 @@
 |알림 설정 삭제|event_id.system_monitoring.alarm_config_deletion|
 |이벤트 강제 종료|event_id.system_monitoring.event_force_close|
 
-### Certificate Manager
+<a id="certificate-manager"></a>
+### Certificate Manager { #certificate-manager }
 
 | Event | Event ID |
 | --- | --- |
@@ -1173,7 +1192,8 @@
 |Delete User Data|event_id.certificate_manager.user_data.delete|
 |Edit User Data|event_id.certificate_manager.user_data.update|
 
-### Face Recognition
+<a id="face-recognition"></a>
+### Face Recognition { #face-recognition }
 
 | Event | Event ID |
 | --- | --- |
@@ -1196,7 +1216,8 @@
 |Face verification(Spoofing detection)|event_id.face_recognition.spoofing.face.verify|
 |Search face by image(Spoofing detection)|event_id.face_recognition.spoofing.search_face.byimage|
 
-### Pipeline
+<a id="pipeline"></a>
+### Pipeline { #pipeline }
 
 | Event | Event ID |
 | --- | --- |
@@ -1221,7 +1242,8 @@
 |Modify Chart Repository|event_id.pipeline.chart_repository.update|
 |Delete Chart Repository|event_id.pipeline.chart_repository.delete|
 
-### NHN AppGuard
+<a id="nhn-appguard"></a>
+### NHN AppGuard { #nhn-appguard }
 
 | Event | Event ID |
 | --- | --- |
@@ -1237,7 +1259,8 @@
 |React Native SDK download|event_id.appguard.sdk_download_react_native|
 |Unreal SDK download|event_id.appguard.sdk_download_unreal|
 
-### ShortURL
+<a id="shorturl"></a>
+### ShortURL { #shorturl }
 
 | Event | Event ID |
 | --- | --- |
@@ -1258,7 +1281,8 @@
 |Update a certificate permission|event_id.short_url.certificate_update_role|
 |Delete a certificate|event_id.short_url.certificate_delete|
 
-### OCR
+<a id="ocr"></a>
+### OCR { #ocr }
 
 | Event | Event ID |
 | --- | --- |
@@ -1274,7 +1298,8 @@
 |Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|
 |Request Document AI Analysis|event_id.ocr.document_ai.analyze|
 
-### KakaoTalk Bizmessage
+<a id="kakaotalk-bizmessage"></a>
+### KakaoTalk Bizmessage { #kakaotalk-bizmessage }
 
 | Event | Event ID |
 | --- | --- |
@@ -1334,7 +1359,8 @@
 |Cancel Sending Brand Message|event_id.brandmessage.message.sending-cancellation|
 |Cancel Sending Bulk Brand Messages|event_id.brandmessage.mass.message.sending-cancellation|
 
-### API Gateway
+<a id="api-gateway"></a>
+### API Gateway { #api-gateway }
 
 | Event | Event ID |
 | --- | --- |
@@ -1387,13 +1413,15 @@
 |요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
 |요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
 
-### Text to Speech
+<a id="text-to-speech"></a>
+### Text to Speech { #text-to-speech }
 
 | Event | Event ID |
 | --- | --- |
 |Request Text to Speech conversion|event_id.speech.tts.convert|
 
-### GameStarter
+<a id="gamestarter"></a>
+### GameStarter { #gamestarter }
 
 | Event | Event ID |
 | --- | --- |
@@ -1408,7 +1436,8 @@
 |Change Deployment Reservation|event_id.gamestarter.deploy.reservation_change|
 |Cancel Deployment Reservation|event_id.gamestarter.deploy.reservation_cancel|
 
-### Speech to Text
+<a id="speech-to-text"></a>
+### Speech to Text { #speech-to-text }
 
 | Event | Event ID |
 | --- | --- |
@@ -1416,21 +1445,24 @@
 |Speech to Text Websocket connected|event_id.speech.stt.websocket_connect|
 |Speech to Text Websocket disconnected|event_id.speech.stt.websocket_disconnect|
 
-### CloudTrail
+<a id="cloudtrail"></a>
+### CloudTrail { #cloudtrail }
 
 | Event | Event ID |
 | --- | --- |
 |Delete log save/download setting|event_id.cloud_trail.delete_log_save_download_config|
 |Log save/download setting|event_id.cloud_trail.set_log_save_download_config|
 
-### Webshell Threat Detector
+<a id="webshell-threat-detector"></a>
+### Webshell Threat Detector { #webshell-threat-detector }
 
 | Event | Event ID |
 | --- | --- |
 |Activate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_activated|
 |Deactivate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_deactivated|
 
-### DataFlow
+<a id="dataflow"></a>
+### DataFlow { #dataflow }
 
 | Event | Event ID |
 | --- | --- |
@@ -1453,7 +1485,8 @@
 |Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
 |Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
-### DataQuery
+<a id="dataquery"></a>
+### DataQuery { #dataquery }
 
 | Event | Event ID |
 | --- | --- |
@@ -1464,7 +1497,8 @@
 |Stop Resource Usage|event_id.dataquery.resource.pause|
 |Cluster Restart|event_id.dataquery.cluster_restart|
 
-### Resource Watcher
+<a id="resource-watcher"></a>
+### Resource Watcher { #resource-watcher }
 
 | Event | Event ID |
 | --- | --- |
@@ -1488,7 +1522,8 @@
 |Delete Resource Group Relation|event_id.resource_watcher.resource_tag_relation.delete|
 |Modify Resource Group Relation|event_id.resource_watcher.resource_tag_relation.update|
 
-### AI EasyMaker
+<a id="ai-easymaker"></a>
+### AI EasyMaker { #ai-easymaker }
 
 | Event | Event ID |
 | --- | --- |
@@ -1536,7 +1571,8 @@
 |Change Auto Scaler Settings|event_id.easymaker.endpoint_stage.update_autoscale|
 |Restart Notebook|event_id.easymaker.notebook.restart|
 
-### GameAnvil
+<a id="gameanvil"></a>
+### GameAnvil { #gameanvil }
 
 | Event | Event ID |
 | --- | --- |
@@ -1594,7 +1630,8 @@
 |SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|
 |MATCH 노드 시작|event_id.gameanvil.match_node.start_up|
 
-### SMS
+<a id="sms"></a>
+### SMS { #sms }
 
 | Event | Event ID |
 | --- | --- |
@@ -1639,7 +1676,8 @@
 |발송 설정 수정|event_id.sms.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
 
-### File-Crafter
+<a id="file-crafter"></a>
+### File-Crafter { #file-crafter }
 
 | Event | Event ID |
 | --- | --- |
@@ -1663,7 +1701,8 @@
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|
 
-### Network Firewall
+<a id="network-firewall"></a>
+### Network Firewall { #network-firewall }
 
 | Event | Event ID |
 | --- | --- |
@@ -1709,7 +1748,8 @@
 |Attach/Detach VPN Tunnel|event_id.network_firewall.vpn_tunnel_initiate_terminate|
 |Modify VPN Tunnel|event_id.network_firewall.vpn_tunnel_modify|
 
-### RCS Bizmessage
+<a id="rcs-bizmessage"></a>
+### RCS Bizmessage { #rcs-bizmessage }
 
 | Event | Event ID |
 | --- | --- |
@@ -1717,7 +1757,8 @@
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|
 
-### Security Advisor
+<a id="security-advisor"></a>
+### Security Advisor { #security-advisor }
 
 | Event | Event ID |
 | --- | --- |
@@ -1726,7 +1767,8 @@
 |Selected Inspection Requested|event_id.security_advisor.manual_scan_request|
 |Settings Changed|event_id.security_advisor.setting_change|
 
-### Email
+<a id="email"></a>
+### Email { #email }
 
 | Event | Event ID |
 | --- | --- |
@@ -1764,7 +1806,8 @@
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
-### ROLE
+<a id="role"></a>
+### ROLE { #role }
 
 | Event | Event ID |
 | --- | --- |
@@ -1803,7 +1846,8 @@
 |Create Condition Attribute Tag|event_id.role.attribute_tag.create|
 |Delete Condition Attribute Tag|event_id.role.attribute_tag.delete|
 
-### Gamebase
+<a id="gamebase"></a>
+### Gamebase { #gamebase }
 
 | Event | Event ID |
 | --- | --- |
@@ -1923,7 +1967,8 @@
 |Delete game notice|event_id.gamebase.game_notice_delete|
 |Update game notice settings|event_id.gamebase.game_notice_app_update|
 
-### NHN Container Registry(NCR)
+<a id="nhn-container-registryncr"></a>
+### NHN Container Registry(NCR) { #nhn-container-registryncr }
 
 | Event | Event ID |
 | --- | --- |
@@ -1959,7 +2004,8 @@
 |Delete Image Cache|event_id.ncr.image_cache.delete|
 |Modify Image Cache|event_id.ncr.image_cache.update|
 
-### NHN Bastion
+<a id="nhn-bastion"></a>
+### NHN Bastion { #nhn-bastion }
 
 | Event | Event ID |
 | --- | --- |
@@ -2002,7 +2048,8 @@
 |웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
 |웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 
-### Cloud Monitoring
+<a id="cloud-monitoring"></a>
+### Cloud Monitoring { #cloud-monitoring }
 
 | Event | Event ID |
 | --- | --- |
@@ -2017,7 +2064,8 @@
 |Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
 |Enable Metrics Collection|event_id.cloud_monitoring_project.service_management|
 
-### Cloud Scheduler
+<a id="cloud-scheduler"></a>
+### Cloud Scheduler { #cloud-scheduler }
 
 | Event | Event ID |
 | --- | --- |
@@ -2030,7 +2078,8 @@
 |Modify Template|event_id.cloud_scheduler.schedule_template.update|
 |Delete Template|event_id.cloud_scheduler.schedule_template.delete|
 
-### Notification Hub
+<a id="notification-hub"></a>
+### Notification Hub { #notification-hub }
 
 | Event | Event ID |
 | --- | --- |
@@ -2090,7 +2139,8 @@
 |수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
 |수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
 
-### DDoS Guard
+<a id="ddos-guard"></a>
+### DDoS Guard { #ddos-guard }
 
 | Event | Event ID |
 | --- | --- |
@@ -2102,7 +2152,8 @@
 |Modify Mock Training|event_id.ddos_guard.mock_training_modify|
 |Delete Mock Training|event_id.ddos_guard.mock_training_delete|
 
-### EasyQueue
+<a id="easyqueue"></a>
+### EasyQueue { #easyqueue }
 
 | Event | Event ID |
 | --- | --- |
@@ -2111,7 +2162,8 @@
 |Delete Topic|event_id.easyqueue.topic.delete|
 |Send Message|event_id.easyqueue.topic.send_messages|
 
-### Cloud Access
+<a id="cloud-access"></a>
+### Cloud Access { #cloud-access }
 
 | Event | Event ID |
 | --- | --- |
@@ -2161,7 +2213,8 @@
 |Logo Settings|event_id.cloud_access.option_logo_create|
 |Reset User Passkey|event_id.cloud_access.user_passkey_reset|
 
-### Cloud Functions
+<a id="cloud-functions"></a>
+### Cloud Functions { #cloud-functions }
 
 | Event | Event ID |
 | --- | --- |
@@ -2175,7 +2228,8 @@
 |Update Trigger|event_id.cloud_functions.trigger.update|
 |Delete Version|event_id.cloud_functions.version.delete|
 
-### Private CA
+<a id="private-ca"></a>
+### Private CA { #private-ca }
 
 | Event | Event ID |
 | --- | --- |
@@ -2199,7 +2253,8 @@
 |ACME 토큰 삭제|event_id.pca.acme.delete|
 |ACME 토큰 조회|event_id.pca.acme.get|
 
-### RDS for PostgreSQL
+<a id="rds-for-postgresql"></a>
+### RDS for PostgreSQL { #rds-for-postgresql }
 
 | Event | Event ID |
 | --- | --- |
@@ -2264,7 +2319,8 @@
 |Delete User Group|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |Modify User Group|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
-### Data Lake Storage
+<a id="data-lake-storage"></a>
+### Data Lake Storage { #data-lake-storage }
 
 | Event | Event ID |
 | --- | --- |

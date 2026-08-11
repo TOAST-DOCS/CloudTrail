@@ -1,13 +1,17 @@
+<!-- pre-align:aligned sig=db732f06e47d -->
 
-## CloudTrail > Console Guide
+<a id="cloudtrail-console-guide"></a>
+## CloudTrail > Console Guide { #cloudtrail-console-guide }
 
-### Getting Started
+<a id="getting-started"></a>
+### Getting Started { #getting-started }
 CloudTrail is a service provided by default when an organization is activated. If an organization has already been created, no further action is necessary.
 CloudTrail can be used by selecting it from Select Service after an organization is created.
 
 ![cloudtrail_01](https://static.toastoven.net/prod_cloudtrail/IMG01_EN.png)
 
-### List
+<a id="list"></a>
+### List { #list }
 
 The following screen appears when the CloudTrail service is selected.
 
@@ -15,7 +19,8 @@ The following screen appears when the CloudTrail service is selected.
 
 User events are logged in the organization and users can view them.
 
-### Searching and sorting
+<a id="searching-and-sorting"></a>
+### Searching and sorting { #searching-and-sorting }
 
 ![cloudtrail_03](https://static.toastoven.net/prod_cloudtrail/IMG03_EN.png)
 
@@ -40,7 +45,8 @@ User events are logged in the organization and users can view them.
 
 * The sort feature can only be used in the time item.
 
-### Detailed view
+<a id="detailed-view"></a>
+### Detailed view { #detailed-view }
 
 ![cloudtrail_04](https://static.toastoven.net/prod_cloudtrail/IMG04_EN.png)
 
@@ -48,7 +54,8 @@ When a column is selected, the column is expanded and event details are displaye
 
 Shows requests and response results so that users can see the history of attempted requests.
 
-### Log Save/Download Settings
+<a id="log-savedownload-settings"></a>
+### Log Save/Download Settings { #log-savedownload-settings }
 You can save/download user event logs written within the organization through an external object storage.
 Click the **Log Save/Download Settings** button and enable/disable it in the dialog box.
 
