@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <a id="cloudtrail-overview"></a>
 ## CloudTrail > Overview { #cloudtrail-overview }
 
@@ -10,11 +12,6 @@ NHN Cloud CloudTrail allows you to check the history of your NHN Cloud usage.The
 
 <a id="precautions"></a>
 ## Precautions { #precautions }
-
-<!-- TODO: translate body -->
-
-<!-- pre-align: ko에 대응 섹션 없음 — 검토 필요 (Reads as body text (a quota constraint sentence) accidentally promoted to a heading; has no semantic counterpart among the ko headings) -->
-## node_count: min 1, max 10 (however, the max value can be adjusted with quota)
 * When creating an organization, CloudTrail is enabled automatically and cannot be disabled manually.
 * CloudTrail is only available to members with CloudTrail permissions in your organization.
   * Some features may be limited depending on permissions.
