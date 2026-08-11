@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <a id="cloudtrail-overview"></a>
 ## CloudTrail > 概要 { #cloudtrail-overview }
 
@@ -14,4 +16,4 @@ NHN Cloud CloudTrailは、ユーザーのNHN Cloud使用履歴を確認できる
 * 組織を作成すると自動的に有効になり、手動で無効にできません。
 * 該当サービスは組織のCloudTraill権限を持つメンバーのみ利用可能です。
   * 権限によって機能が制限される場合があります。
-* 多様なサービスの履歴を確認できるように拡張する予定です。
+* 継続して多様なサービスの履歴を確認できるように拡張する予定です。
