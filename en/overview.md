@@ -1,5 +1,7 @@
 <!-- machine_translated: true -->
 
+<!-- pre-align:aligned sig=4fb5536e2dd6 -->
+
 <a id="cloudtrail-overview"></a>
 ## CloudTrail > Overview { #cloudtrail-overview }
 
