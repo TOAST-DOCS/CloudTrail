@@ -1,23 +1,29 @@
+<!-- pre-align:aligned sig=d7e93506eedd -->
 
-## CloudTrail > API Guide
+<a id="cloudtrail-api-guide"></a>
+## CloudTrail > API Guide { #cloudtrail-api-guide }
 
 > By calling RESTful API to Cloud Trail, events can be queried by user-defined conditions. 
 
-## URL & Appkey
+<a id="url-appkey"></a>
+## URL & Appkey { #url-appkey }
 Appkey is required to use the CloudTrail API. The Appkey is included in the request URL to identify and specify a particular resource when making API calls.
 
 For more information on checking and using Appkeys, please refer to the [Appkey](/nhncloud/en/public-api/appkey).
 
-## User Access Key ID & Secret Access Key
+<a id="user-access-key-id-secret-access-key"></a>
+## User Access Key ID & Secret Access Key { #user-access-key-id-secret-access-key }
 
 User Access Key is required to use the CloudTrail API(V2.0+). A User Access Key is an authentication key issued based on an NHN Cloud or IAM account. It is used in conjunction with a Secret Access Key to authenticate API requests.
 
 User Access Keys and Secret Access Keys can be issued in the console's API Security Setting. For more information on issuing and using User Access Key, please refer to the [User Access Key](/nhncloud/en/public-api/user-access-key).
 
 
-## RESTful API Guide 
+<a id="restful-api-guide"></a>
+## RESTful API Guide { #restful-api-guide }
 
-### Common Response Body
+<a id="common-response-body"></a>
+### Common Response Body { #common-response-body }
 
 To all API requests, HTTP sends 200 for response code. 
 Read the header at Response Body for more details of the response result.
@@ -39,7 +45,8 @@ Read the header at Response Body for more details of the response result.
 |header.resultCode|	int| Response code: 0 for successful; error code returned if it fails |
 |header.resultMessage|	String| Response message: "SUCCESS" if successful; or, error code returned if it fails. |
 
-### 1. Query Events (1.0)
+<a id="query-events-10"></a>
+### 1. Query Events (1.0) { #query-events-10 }
 * Query events that occur. 
 * Query events by user-defined search conditions.
 * Request Body must include the search conditions. 
@@ -180,7 +187,8 @@ Read the header at Response Body for more details of the response result.
 | targetMembers.userCode | Integer | ID of target member incurred with event (for IAM members) |
 | targetMembers.emailAddress | String | Email address of target member incurred with event (for NHN Cloud members) |
 
-### 1. Query Events (2.0)
+<a id="query-events-20"></a>
+### 1. Query Events (2.0) { #query-events-20 }
 * Query events that occur. 
 * Query events by user-defined search conditions.
 * Request Body must include the search conditions. 
