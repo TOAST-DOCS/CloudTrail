@@ -1,6 +1,10 @@
-## CloudTrail > 収集されるイベントリスト
+<!-- pre-align:aligned sig=3447ebdf1f03 -->
 
-### コンソール
+<a id="cloudtrail-list-of-collected-events"></a>
+## CloudTrail > 収集されるイベントリスト { #cloudtrail-list-of-collected-events }
+
+<a id="console"></a>
+### コンソール { #console }
 
 | イベント | イベントID |
 | --- | --- |
@@ -89,7 +93,8 @@
 |組織ロールグループのメンバー追加|event_id.org.org_role_group.members.add|
 |組織ロールグループのメンバー削除|event_id.org.org_role_group.members.delete|
 
-### 基本インフラサービス
+<a id="default-infrastructure-service"></a>
+### 基本インフラサービス { #default-infrastructure-service }
 
 | イベント | イベントID |
 | --- | --- |
@@ -673,7 +678,8 @@
 |NAS for BigDataボリュームの削除|event_id.iaas.nas_for_bigdata.volume.delete|
 |NAS for BigDataボリュームの変更|event_id.iaas.nas_for_bigdata.volume.update|
 
-### Object Storage
+<a id="object-storage"></a>
+### Object Storage { #object-storage }
 
 | イベント | イベントID |
 | --- | --- |
@@ -693,7 +699,8 @@
 |オブジェクトリストの照会|event_id.object_storage.object.list_lookup|
 |コンテナリストの照会|event_id.object_storage.container.list_lookup|
 
-### RDS for MySQL
+<a id="rds-for-mysql"></a>
+### RDS for MySQL { #rds-for-mysql }
 
 | イベント | イベントID |
 | --- | --- |
@@ -767,7 +774,8 @@
 |DBセキュリティグループルールの削除|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
 |DBインスタンスOSアップグレード|event_id.rds_for_mysql.instance.os.upgrade|
 
-### RDS for MariaDB
+<a id="rds-for-mariadb"></a>
+### RDS for MariaDB { #rds-for-mariadb }
 
 | イベント | イベントID |
 | --- | --- |
@@ -811,7 +819,8 @@
 |DBインスタンスのバックアップおよびエクスポート|event_id.rds_for_mysql.instance.backup.export|
 |オブジェクトストレージでバックアップをエクスポート|event_id.rds_for_mysql.backup.export|
 
-### Secure Key Manager
+<a id="secure-key-manager"></a>
+### Secure Key Manager { #secure-key-manager }
 
 | イベント | イベントID |
 | --- | --- |
@@ -888,7 +897,8 @@
 |非対称鍵の即時削除 (API)|event_id.skm.api.asymmetric.delete|
 |機密データの更新（API|event_id.skm.api.secrets.modify|
 
-### Deploy
+<a id="deploy"></a>
+### Deploy { #deploy }
 
 | イベント | イベントID |
 | --- | --- |
@@ -922,7 +932,8 @@
 |配布履歴のダウンロード|event_id.deploy.deploy_history_download|
 |オートスケール配布実行|event_id.deploy.autoscale_deploy_execute|
 
-### Service Monitoring
+<a id="service-monitoring"></a>
+### Service Monitoring { #service-monitoring }
 
 | イベント | イベントID |
 | --- | --- |
@@ -942,7 +953,8 @@
 |他のサービスに障害を移管|event_id.service_monitoring.send_transfer_transmission|
 |障害伝達中止|event_id.service_monitoring.send_stop_transmission|
 
-### EasyCache
+<a id="easycache"></a>
+### EasyCache { #easycache }
 
 | イベント | イベントID |
 | --- | --- |
@@ -981,7 +993,8 @@
 |データエクスポート|event_id.easycache.group.export|
 |既存レプリケーショングループ復元|event_id.easycache.backup.migrate|
 
-### RDS for MS-SQL
+<a id="rds-for-ms-sql"></a>
+### RDS for MS-SQL { #rds-for-ms-sql }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1029,7 +1042,8 @@
 |予約タスクの修正|event_id.rds_for_sqlserver.process.reserved-process.modify|
 |予約タスクの削除|event_id.rds_for_sqlserver.process.reserved-process.deleted|
 
-### Log &amp; Crash Search
+<a id="log-amp-crash-search"></a>
+### Log &amp; Crash Search { #log-amp-crash-search }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1063,7 +1077,8 @@
 |プロジェクト状態変更|event_id.logncrash.project.state|
 |ログ引き込み制限変更|event_id.logncrash.limit.save|
 
-### Backup
+<a id="backup"></a>
+### Backup { #backup }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1078,7 +1093,8 @@
 |バックアップ結果ファイルを作成します|event_id.backup.result.file|
 |バックアップサーバー情報の変更|event_id.backup.client.update|
 
-### DNS Plus
+<a id="dns-plus"></a>
+### DNS Plus { #dns-plus }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1102,7 +1118,8 @@
 |ヘルスチェック修正|event_id.dnsplus.health_check.update|
 |ヘルスチェック削除|event_id.dnsplus.health_check.delete|
 
-### CDN
+<a id="cdn"></a>
+### CDN { #cdn }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1120,7 +1137,8 @@
 |全ファイルキャッシュ再配布|event_id.cdn.cache_purge.all_type|
 |Auth Token作成|event_id.cdn.auth_token|
 
-### System Monitoring(CloudTrail)
+<a id="system-monitoringcloudtrail"></a>
+### System Monitoring(CloudTrail) { #system-monitoringcloudtrail }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1152,7 +1170,8 @@
 |通知設定削除|event_id.system_monitoring.alarm_config_deletion|
 |イベント強制終了|event_id.system_monitoring.event_force_close|
 
-### Certificate Manager
+<a id="certificate-manager"></a>
+### Certificate Manager { #certificate-manager }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1173,7 +1192,8 @@
 |ユーザーデータの削除|event_id.certificate_manager.user_data.delete|
 |ユーザーデータの修正|event_id.certificate_manager.user_data.update|
 
-### Face Recognition
+<a id="face-recognition"></a>
+### Face Recognition { #face-recognition }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1196,7 +1216,8 @@
 |顔検証(スプーフィング検出)|event_id.face_recognition.spoofing.face.verify|
 |画像から顔検索(スプーフィング検出)|event_id.face_recognition.spoofing.search_face.byimage|
 
-### Pipeline
+<a id="pipeline"></a>
+### Pipeline { #pipeline }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1221,7 +1242,8 @@
 |チャートリポジトリの修正|event_id.pipeline.chart_repository.update|
 |チャートリポジトリの削除|event_id.pipeline.chart_repository.delete|
 
-### NHN AppGuard
+<a id="nhn-appguard"></a>
+### NHN AppGuard { #nhn-appguard }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1237,7 +1259,8 @@
 |React Native SDK ダウンロード|event_id.appguard.sdk_download_react_native|
 |Unreal SDK ダウンロード|event_id.appguard.sdk_download_unreal|
 
-### ShortURL
+<a id="shorturl"></a>
+### ShortURL { #shorturl }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1258,7 +1281,8 @@
 |証明書の権限を修正|event_id.short_url.certificate_update_role|
 |証明書の削除|event_id.short_url.certificate_delete|
 
-### OCR
+<a id="ocr"></a>
+### OCR { #ocr }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1274,7 +1298,8 @@
 |General OCRイメージ分割認識リクエスト|event_id.ocr.general_ocr.cropping_analyze|
 |Document AI分析リクエスト|event_id.ocr.document_ai.analyze|
 
-### KakaoTalk Bizmessage
+<a id="kakaotalk-bizmessage"></a>
+### KakaoTalk Bizmessage { #kakaotalk-bizmessage }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1334,7 +1359,8 @@
 |ブランドメッセージの送信キャンセル|event_id.brandmessage.message.sending-cancellation|
 |ブランドメッセージの一括送信キャンセル|event_id.brandmessage.mass.message.sending-cancellation|
 
-### API Gateway
+<a id="api-gateway"></a>
+### API Gateway { #api-gateway }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1387,13 +1413,15 @@
 |요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
 |요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
 
-### Text to Speech
+<a id="text-to-speech"></a>
+### Text to Speech { #text-to-speech }
 
 | イベント | イベントID |
 | --- | --- |
 |Text to Speech変換リクエスト|event_id.speech.tts.convert|
 
-### GameStarter
+<a id="gamestarter"></a>
+### GameStarter { #gamestarter }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1408,7 +1436,8 @@
 |配布予約の変更|event_id.gamestarter.deploy.reservation_change|
 |配布予約のキャンセル|event_id.gamestarter.deploy.reservation_cancel|
 
-### Speech to Text
+<a id="speech-to-text"></a>
+### Speech to Text { #speech-to-text }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1416,21 +1445,24 @@
 |Speech to Text Websocket接続|event_id.speech.stt.websocket_connect|
 |Speech to Text Websocket接続終了|event_id.speech.stt.websocket_disconnect|
 
-### CloudTrail
+<a id="cloudtrail"></a>
+### CloudTrail { #cloudtrail }
 
 | イベント | イベントID |
 | --- | --- |
 |ログ保存/ダウンロード設定 削除|event_id.cloud_trail.delete_log_save_download_config|
 |ログ保存/ダウンロード設定|event_id.cloud_trail.set_log_save_download_config|
 
-### Webshell Threat Detector
+<a id="webshell-threat-detector"></a>
+### Webshell Threat Detector { #webshell-threat-detector }
 
 | イベント | イベントID |
 | --- | --- |
 |Webシェルメール受信の有効化|event_id.webshell_treat_detector.mail_send_activated|
 |Webシェルメール受信の無効化|event_id.webshell_treat_detector.mail_send_deactivated|
 
-### DataFlow
+<a id="dataflow"></a>
+### DataFlow { #dataflow }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1453,7 +1485,8 @@
 |Log &amp; Crash Search保存設定の保存|event_id.dataflow.settings.lncs.save|
 |Log &amp; Crash Search保存設定の削除|event_id.dataflow.settings.lncs.delete|
 
-### DataQuery
+<a id="dataquery"></a>
+### DataQuery { #dataquery }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1464,7 +1497,8 @@
 |リソース利用停止|event_id.dataquery.resource.pause|
 |クラスタの再起動|event_id.dataquery.cluster_restart|
 
-### Resource Watcher
+<a id="resource-watcher"></a>
+### Resource Watcher { #resource-watcher }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1488,7 +1522,8 @@
 |リソースタグ関係の削除|event_id.resource_watcher.resource_tag_relation.delete|
 |リソースタグ関係の修正|event_id.resource_watcher.resource_tag_relation.update|
 
-### AI EasyMaker
+<a id="ai-easymaker"></a>
+### AI EasyMaker { #ai-easymaker }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1536,7 +1571,8 @@
 |オートスケーラー設定の変更|event_id.easymaker.endpoint_stage.update_autoscale|
 |ノートパソコン再起動|event_id.easymaker.notebook.restart|
 
-### GameAnvil
+<a id="gameanvil"></a>
+### GameAnvil { #gameanvil }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1594,7 +1630,8 @@
 |SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|
 |MATCH 노드 시작|event_id.gameanvil.match_node.start_up|
 
-### SMS
+<a id="sms"></a>
+### SMS { #sms }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1639,7 +1676,8 @@
 |발송 설정 수정|event_id.sms.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
 
-### File-Crafter
+<a id="file-crafter"></a>
+### File-Crafter { #file-crafter }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1663,7 +1701,8 @@
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|
 
-### Network Firewall
+<a id="network-firewall"></a>
+### Network Firewall { #network-firewall }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1709,7 +1748,8 @@
 |VPNトンネル接続/接続解除|event_id.network_firewall.vpn_tunnel_initiate_terminate|
 |VPNトンネルの修正|event_id.network_firewall.vpn_tunnel_modify|
 
-### RCS Bizmessage
+<a id="rcs-bizmessage"></a>
+### RCS Bizmessage { #rcs-bizmessage }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1717,7 +1757,8 @@
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|
 
-### Security Advisor
+<a id="security-advisor"></a>
+### Security Advisor { #security-advisor }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1726,7 +1767,8 @@
 |選択点検リクエスト|event_id.security_advisor.manual_scan_request|
 |設定変更|event_id.security_advisor.setting_change|
 
-### Email
+<a id="email"></a>
+### Email { #email }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1764,7 +1806,8 @@
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
-### ROLE
+<a id="role"></a>
+### ROLE { #role }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1803,7 +1846,8 @@
 |条件属性タグの作成|event_id.role.attribute_tag.create|
 |条件属性タグの削除|event_id.role.attribute_tag.delete|
 
-### Gamebase
+<a id="gamebase"></a>
+### Gamebase { #gamebase }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1923,7 +1967,8 @@
 |Delete game notice|event_id.gamebase.game_notice_delete|
 |Update game notice settings|event_id.gamebase.game_notice_app_update|
 
-### NHN Container Registry(NCR)
+<a id="nhn-container-registryncr"></a>
+### NHN Container Registry(NCR) { #nhn-container-registryncr }
 
 | イベント | イベントID |
 | --- | --- |
@@ -1959,7 +2004,8 @@
 |イメージキャッシュの削除|event_id.ncr.image_cache.delete|
 |イメージキャッシュの修正|event_id.ncr.image_cache.update|
 
-### NHN Bastion
+<a id="nhn-bastion"></a>
+### NHN Bastion { #nhn-bastion }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2002,7 +2048,8 @@
 |웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
 |웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 
-### Cloud Monitoring
+<a id="cloud-monitoring"></a>
+### Cloud Monitoring { #cloud-monitoring }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2017,7 +2064,8 @@
 |ダッシュボードの修正|event_id.cloud_monitoring_project.dashboard_modify|
 |指標収集の設定|event_id.cloud_monitoring_project.service_management|
 
-### Cloud Scheduler
+<a id="cloud-scheduler"></a>
+### Cloud Scheduler { #cloud-scheduler }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2030,7 +2078,8 @@
 |テンプレート変更|event_id.cloud_scheduler.schedule_template.update|
 |テンプレート削除|event_id.cloud_scheduler.schedule_template.delete|
 
-### Notification Hub
+<a id="notification-hub"></a>
+### Notification Hub { #notification-hub }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2090,7 +2139,8 @@
 |수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
 |수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
 
-### DDoS Guard
+<a id="ddos-guard"></a>
+### DDoS Guard { #ddos-guard }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2102,7 +2152,8 @@
 |模擬訓練の修正|event_id.ddos_guard.mock_training_modify|
 |模擬訓練の削除|event_id.ddos_guard.mock_training_delete|
 
-### EasyQueue
+<a id="easyqueue"></a>
+### EasyQueue { #easyqueue }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2111,7 +2162,8 @@
 |トピック削除|event_id.easyqueue.topic.delete|
 |メッセージ送信|event_id.easyqueue.topic.send_messages|
 
-### Cloud Access
+<a id="cloud-access"></a>
+### Cloud Access { #cloud-access }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2161,7 +2213,8 @@
 |ロゴ設定|event_id.cloud_access.option_logo_create|
 |ユーザーパスキー初期化|event_id.cloud_access.user_passkey_reset|
 
-### Cloud Functions
+<a id="cloud-functions"></a>
+### Cloud Functions { #cloud-functions }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2175,7 +2228,8 @@
 |トリガーの修正|event_id.cloud_functions.trigger.update|
 |バージョンの削除|event_id.cloud_functions.version.delete|
 
-### Private CA
+<a id="private-ca"></a>
+### Private CA { #private-ca }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2199,7 +2253,8 @@
 |ACME 토큰 삭제|event_id.pca.acme.delete|
 |ACME 토큰 조회|event_id.pca.acme.get|
 
-### RDS for PostgreSQL
+<a id="rds-for-postgresql"></a>
+### RDS for PostgreSQL { #rds-for-postgresql }
 
 | イベント | イベントID |
 | --- | --- |
@@ -2264,7 +2319,8 @@
 |ユーザーグループを削除|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |ユーザーグループを修正|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
-### Data Lake Storage
+<a id="data-lake-storage"></a>
+### Data Lake Storage { #data-lake-storage }
 
 | イベント | イベントID |
 | --- | --- |

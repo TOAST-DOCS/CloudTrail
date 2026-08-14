@@ -1,13 +1,18 @@
-## CloudTrail > 개요
+<!-- pre-align:aligned sig=4fb5536e2dd6 -->
+
+<a id="cloudtrail-overview"></a>
+## CloudTrail > 개요 { #cloudtrail-overview }
 
 NHN Cloud CloudTrail은 사용자의 NHN Cloud 사용 이력을 확인할 수 있는 서비스입니다.
 조직 단위로 제공되며, 별도의 활성화 과정 없이 바로 사용할 수 있습니다.
 
-## 특징 및 기능
+<a id="characteristics-and-features"></a>
+## 특징 및 기능 { #characteristics-and-features }
 * 조직 내부에서 실행된 동작을 확인할 수 있습니다.
 * 특정 사용자, 프로젝트, 서비스 등 다양한 조건으로 사용 이력을 볼 수 있으며, 해당 시점의 세부적인 동작을 확인할 수 있습니다.
 
-## 주의 사항
+<a id="precautions"></a>
+## 주의 사항 { #precautions }
 * 조직을 생성하면 자동으로 활성화되며, 수동으로 비활성화할 수 없습니다.
 * 해당 서비스는 조직의 CloudTrail 권한을 가진 멤버만 사용 가능합니다.
   * 권한에 따라 기능이 제한될 수 있습니다.
