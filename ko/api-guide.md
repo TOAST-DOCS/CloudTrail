@@ -1,22 +1,28 @@
+<!-- pre-align:aligned sig=d7e93506eedd -->
 
-## CloudTrail > API 가이드
+<a id="cloudtrail-api-guide"></a>
+## CloudTrail > API 가이드 { #cloudtrail-api-guide }
 
 > CloudTrail에 RESTful API를 호출해, 사용자가 설정한 조건에 맞는 이벤트를 조회할 수 있습니다.
 
-## URL & Appkey
+<a id="url-appkey"></a>
+## URL & Appkey { #url-appkey }
 CloudTrail API를 사용하려면 Appkey가 필요합니다. Appkey는 API 호출 시 요청 URL에 포함하여 특정 리소스를 가리키고 식별하는 데 사용됩니다.
 
 Appkey 확인 및 사용에 대한 자세한 내용은 [Appkey](/nhncloud/ko/public-api/appkey)를 참고하세요.
 
-## User Access Key ID & Secret Access Key
+<a id="user-access-key-id-secret-access-key"></a>
+## User Access Key ID & Secret Access Key { #user-access-key-id-secret-access-key }
 
 CloudTrail API(2.0 버전 이후)를 사용하려면 User Access Key가 필요합니다. User Access Key는 NHN Cloud 계정 또는 IAM 계정을 기반으로 발급되는 인증 키로, Secret Access Key와 함께 사용하여 API 요청에 대한 인증 수단으로 활용됩니다.
 
 User Access Key와 Secret Access Key는 콘솔의 API 보안 설정에서 발급할 수 있습니다. User Access Key 발급 및 사용에 대한 자세한 내용은 [User Access Key](/nhncloud/ko/public-api/user-access-key)를 참고하세요.
 
-## RESTful API 가이드
+<a id="restful-api-guide"></a>
+## RESTful API 가이드 { #restful-api-guide }
 
-### Common Response Body
+<a id="common-response-body"></a>
+### Common Response Body { #common-response-body }
 
 모든 API 요청에 대해 HTTP 응답 코드는 200입니다.
 자세한 응답 결과는 Response Body의 header 항목을 참고합니다.
@@ -38,7 +44,8 @@ User Access Key와 Secret Access Key는 콘솔의 API 보안 설정에서 발급
 |header.resultCode|	int|	응답 코드. 성공 시 0, 실패 시 오류 코드 반환|
 |header.resultMessage|	String|	응답 메시지. 성공 시 "SUCCESS", 실패 시 오류 메시지 반환|
 
-### 1. Event 조회(1.0)
+<a id="query-events-10"></a>
+### 1. Event 조회(1.0) { #query-events-10 }
 * 발생한 이벤트를 조회합니다.
 * 이벤트 조회 시, 사용자가 설정한 검색 조건으로 조회됩니다.
 * Request Body에 이 검색 조건을 포함해야 합니다.
@@ -171,7 +178,8 @@ User Access Key와 Secret Access Key는 콘솔의 API 보안 설정에서 발급
 | targetMembers.emailAddress | String | 발생한 이벤트의 대상 회원의 이메일 주소(NHN Cloud 회원일 경우) |
 
 
-### 2. Event 조회(2.0)
+<a id="query-events-20"></a>
+### 2. Event 조회(2.0) { #query-events-20 }
 * 발생한 이벤트를 조회합니다.
 * 이벤트 조회 시, 사용자가 설정한 검색 조건으로 조회됩니다.
 * Request Body에 이 검색 조건을 포함해야 합니다.

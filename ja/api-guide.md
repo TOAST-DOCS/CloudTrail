@@ -1,22 +1,28 @@
+<!-- pre-align:aligned sig=d7e93506eedd -->
 
-## CloudTrail > APIガイド
+<a id="cloudtrail-api-guide"></a>
+## CloudTrail > APIガイド { #cloudtrail-api-guide }
 
 > Cloud TrailにRESTful APIを呼び出し、ユーザーが設定した条件に合ったイベントを照会できます。
 
-## URL & Appkey
+<a id="url-appkey"></a>
+## URL & Appkey { #url-appkey }
 CloudTrail APIを使用するには、Appkeyが必要です。Appkeyは、API呼び出し時にリクエストURLに含めて特定のリソースを指定し、識別するために使用されます。
 
 Appkeyの確認及び使用に関する詳細は、[Appkey](/nhncloud/ja/public-api/appkey)を参照してください。
 
-## User Access Key ID & Secret Access Key
+<a id="user-access-key-id-secret-access-key"></a>
+## User Access Key ID & Secret Access Key { #user-access-key-id-secret-access-key }
 
 CloudTrail API(V2.0+)を使用するには、User Access Keyが必要です。User Access Keyは、NHN CloudアカウントまたはIAMアカウントに基づいて発行される認証キーであり、Secret Access Keyと共に使用してAPIリクエストに対する認証手段として利用されます。
 
 User Access KeyとSecret Access Keyは、コンソールのAPIセキュリティ設定で発行できます。User Access Keyの発行及び使用に関する詳細は、[User Access Key](/nhncloud/ja/public-api/user-access-key)を参照してください。
 
-## RESTful APIガイド
+<a id="restful-api-guide"></a>
+## RESTful APIガイド { #restful-api-guide }
 
-### Common Response Body
+<a id="common-response-body"></a>
+### Common Response Body { #common-response-body }
 
 すべてのAPIリクエストに対するHTTPレスポンスコードは200です。
 レスポンス結果の詳細はResponse Bodyのheader項目を参照してください。
@@ -38,7 +44,8 @@ User Access KeyとSecret Access Keyは、コンソールのAPIセキュリティ
 |header.resultCode|	int|	レスポンスコード。成功時は0、失敗時はエラーコードを返す|
 |header.resultMessage|	String|	レスポンスメッセージ。成功時は"SUCCESS"、失敗時はエラーメッセージを返す|
 
-### 1. Event照会 (1.0)
+<a id="query-events-10"></a>
+### 1. Event照会 (1.0) { #query-events-10 }
 * 発生したイベントを照会します。 
 * イベント照会時、ユーザーが設定した検索条件で照会されます。
 * Request Bodyにこの検索条件を含める必要があります。
@@ -170,7 +177,8 @@ User Access KeyとSecret Access Keyは、コンソールのAPIセキュリティ
 | targetMembers.userCode | Integer | 発生したイベントの対象会員のID (IAM会員の場合) |
 | targetMembers.emailAddress | String | 発生したイベントの対象会員のメールアドレス(NHN Cloud会員の場合) |
 
-### 1. Event照会 (2.0)
+<a id="query-events-20"></a>
+### 1. Event照会 (2.0) { #query-events-20 }
 * 発生したイベントを照会します。 
 * イベント照会時、ユーザーが設定した検索条件で照会されます。
 * Request Bodyにこの検索条件を含める必要があります。

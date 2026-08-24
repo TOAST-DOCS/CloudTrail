@@ -1,13 +1,17 @@
+<!-- pre-align:aligned sig=db732f06e47d -->
 
-## CloudTrail > 콘솔 사용 가이드
+<a id="cloudtrail-console-guide"></a>
+## CloudTrail > 콘솔 사용 가이드 { #cloudtrail-console-guide }
 
-### 시작하기
+<a id="getting-started"></a>
+### 시작하기 { #getting-started }
 CloudTrail은 조직을 활성화하면 기본으로 제공되는 서비스입니다. 따라서 조직을 생성했다면 별도로 처리할 작업은 없습니다.
 조직을 생성한 후 서비스 선택에서 CloudTrail 서비스를 선택하시면 사용할 수 있습니다.
 
 ![cloudtrail_01](https://static.toastoven.net/prod_cloudtrail/IMG01_KO.png)
 
-### 목록
+<a id="list"></a>
+### 목록 { #list }
 
 CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 
@@ -15,7 +19,8 @@ CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 
 해당 조직 내에서 사용자 이벤트가 기록되고, 이를 확인할 수 있습니다.
 
-### 검색 및 정렬 기능
+<a id="searching-and-sorting"></a>
+### 검색 및 정렬 기능 { #searching-and-sorting }
 
 ![cloudtrail_03](https://static.toastoven.net/prod_cloudtrail/IMG03_KO.png)
 
@@ -40,7 +45,8 @@ CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 
 * 정렬 기능은 시간 항목에서만 사용할 수 있습니다.
 
-### 상세 보기 기능
+<a id="detailed-view"></a>
+### 상세 보기 기능 { #detailed-view }
 
 ![cloudtrail_04](https://static.toastoven.net/prod_cloudtrail/IMG04_KO.png)
 
@@ -48,7 +54,8 @@ CloudTrail 서비스를 선택하면 다음과 같은 화면이 나타납니다.
 
 요청과 응답 결과를 표시해 어떠한 요청을 시도했는지 확인할 수 있습니다.
 
-### 로그 저장/다운로드 설정
+<a id="log-savedownload-settings"></a>
+### 로그 저장/다운로드 설정 { #log-savedownload-settings }
 해당 조직 내에서 기록된 사용자 이벤트 로그를 외부 Object Storage를 통해 저장/다운로드 할 수 있습니다.
 **로그 저장/다운로드 설정** 버튼을 클릭한 후 대화 상자에서 사용 여부를 선택합니다.
 

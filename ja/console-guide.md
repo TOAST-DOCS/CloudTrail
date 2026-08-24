@@ -1,12 +1,17 @@
-## CloudTrail > コンソール使用ガイド
+<!-- pre-align:aligned sig=db732f06e47d -->
 
-### 始める
+<a id="cloudtrail-console-guide"></a>
+## CloudTrail > コンソール使用ガイド { #cloudtrail-console-guide }
+
+<a id="getting-started"></a>
+### 始める { #getting-started }
 CloudTrailは、組織を有効にするとデフォルトで提供されるサービスです。したがって、組織を作成している場合は別途行う作業はありません。
 組織を作成した後、サービス選択でCloudTrailサービスを選択すると使用できます。
 
 ![cloudtrail_01](https://static.toastoven.net/prod_cloudtrail/IMG01_JA.png)
 
-### リスト
+<a id="list"></a>
+### リスト { #list }
 
 CloudTrailサービスを選択すると、次のような画面が現れます。
 
@@ -14,7 +19,8 @@ CloudTrailサービスを選択すると、次のような画面が現れます�
 
 該当組織内でユーザーイベントが記録され、これを確認できます。
 
-### 検索およびソート機能
+<a id="searching-and-sorting"></a>
+### 検索およびソート機能 { #searching-and-sorting }
 
 ![cloudtrail_03](https://static.toastoven.net/prod_cloudtrail/IMG03_JA.png)
 
@@ -39,7 +45,8 @@ CloudTrailサービスを選択すると、次のような画面が現れます�
 
 * ソート機能は時間項目でのみ使用できます。
 
-### 詳細表示機能
+<a id="detailed-view"></a>
+### 詳細表示機能 { #detailed-view }
 
 ![cloudtrail_04](https://static.toastoven.net/prod_cloudtrail/IMG04_JA.png)
 
@@ -48,7 +55,8 @@ CloudTrailサービスを選択すると、次のような画面が現れます�
 リクエストとレスポンス結果を表示し、どんなリクエストを送ったかを確認できます。
 
 
-### ログ保存/ダウンロード設定
+<a id="log-savedownload-settings"></a>
+### ログ保存/ダウンロード設定 { #log-savedownload-settings }
 該当組織内で記録されたユーザーイベントログを外部Object Storageへ保存/ダウンロードできます。
 **ログ保存/ダウンロード設定** ボタンを押した後、ダイアログボックスで使用するかどうかを選択します。
 
