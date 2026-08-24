@@ -88,6 +88,18 @@
 |Modify Organization Role Group&#39;s Role|event_id.org.org_role_group.modify.roles|
 |Add Organization Role Group Member|event_id.org.org_role_group.members.add|
 |Delete Organization Role Group Member|event_id.org.org_role_group.members.delete|
+|Organization Service Account Creation|event_id.org.service_member.create|
+|Organization Service Account Modification|event_id.org.service_member.update|
+|Organization Service Account Status Change|event_id.org.service_member.status-update|
+|Organization Service Account Role Change|event_id.org.service_member.role-update|
+|Organization Service Account Deletion/Invitation Cancellation|event_id.org.service_member.delete|
+|Service Account Invitation to Organization|event_id.org.service_member.invite|
+|Project Service Account Creation|event_id.project.service_member.create|
+|Project Service Account Modification|event_id.project.service_member.update|
+|Project Service Account Status Change|event_id.project.service_member.status-update|
+|Project Service Account Role Change|event_id.project.service_member.role-update|
+|Project Service Account Deletion/Invitation Cancellation|event_id.project.service_member.delete|
+|Service Account Invitation to Project|event_id.project.service_member.invite|
 
 ### Default Infrastructure Service
 
