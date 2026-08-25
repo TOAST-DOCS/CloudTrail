@@ -1,10 +1,6 @@
-<!-- pre-align:aligned sig=3447ebdf1f03 -->
+## CloudTrail > List of Collected Events
 
-<a id="cloudtrail-list-of-collected-events"></a>
-## CloudTrail > List of Collected Events { #cloudtrail-list-of-collected-events }
-
-<a id="console"></a>
-### Console { #console }
+### Console
 
 | Event | Event ID |
 | --- | --- |
@@ -92,9 +88,20 @@
 |Modify Organization Role Group&#39;s Role|event_id.org.org_role_group.modify.roles|
 |Add Organization Role Group Member|event_id.org.org_role_group.members.add|
 |Delete Organization Role Group Member|event_id.org.org_role_group.members.delete|
+|Organization Service Account Creation|event_id.org.service_member.create|
+|Organization Service Account Modification|event_id.org.service_member.update|
+|Organization Service Account Status Change|event_id.org.service_member.status-update|
+|Organization Service Account Role Change|event_id.org.service_member.role-update|
+|Organization Service Account Deletion/Invitation Cancellation|event_id.org.service_member.delete|
+|Service Account Invitation to Organization|event_id.org.service_member.invite|
+|Project Service Account Creation|event_id.project.service_member.create|
+|Project Service Account Modification|event_id.project.service_member.update|
+|Project Service Account Status Change|event_id.project.service_member.status-update|
+|Project Service Account Role Change|event_id.project.service_member.role-update|
+|Project Service Account Deletion/Invitation Cancellation|event_id.project.service_member.delete|
+|Service Account Invitation to Project|event_id.project.service_member.invite|
 
-<a id="default-infrastructure-service"></a>
-### Default Infrastructure Service { #default-infrastructure-service }
+### Default Infrastructure Service
 
 | Event | Event ID |
 | --- | --- |
@@ -181,10 +188,10 @@
 |Delete S3 API Credentials|event_id.iaas.s3credential.delete|
 |Change API Password|event_id.iaas.identity.password_change|
 |Create VPC|event_id.iaas.vpc.create|
-|Delete VPC|event_id.iaas.vpc.delete|
-|Change VPC Information|event_id.iaas.vpc.update|
 |Create VPC Completed|event_id.iaas.vpc.create_end|
+|Delete VPC|event_id.iaas.vpc.delete|
 |Delete VPC Completed|event_id.iaas.vpc.delete_end|
+|Change VPC Information|event_id.iaas.vpc.update|
 |Change VPC Information Completed|event_id.iaas.vpc.update_end|
 |Create VPC Subnet|event_id.iaas.vpc_subnet.create|
 |Delete VPC Subnet|event_id.iaas.vpc_subnet.delete|
@@ -208,12 +215,12 @@
 |Change Route in Routing Table|event_id.iaas.route.update|
 |Delete Route in Routing Table|event_id.iaas.route.delete|
 |Create Floating IP|event_id.iaas.floating_ip.create|
+|Create Floating IP Completed|event_id.iaas.floating_ip.create_end|
 |Delete Floating IP|event_id.iaas.floating_ip.delete|
+|Delete Floating IP Completed|event_id.iaas.floating_ip.delete_end|
 |Associate Instance Floating IP|event_id.iaas.floating_ip.attach|
 |Disassociate Instance Floating IP|event_id.iaas.floating_ip.detach|
-|Create Floating IP Completed|event_id.iaas.floating_ip.create_end|
 |Update Floating IP Completed|event_id.iaas.floating_ip.update_end|
-|Delete Floating IP Completed|event_id.iaas.floating_ip.delete_end|
 |Create NetworkACL|event_id.iaas.networkacl.create|
 |Delete NetworkACL|event_id.iaas.networkacl.delete|
 |Update NetworkACL|event_id.iaas.networkacl.update|
@@ -223,18 +230,21 @@
 |Create NetworkACL Binding|event_id.iaas.networkacl_binding.create|
 |Delete NetworkACL Binding|event_id.iaas.networkacl_binding.delete|
 |Create Security Group|event_id.iaas.security_group.create|
-|Delete Security Group|event_id.iaas.security_group.delete|
-|Change Security Group|event_id.iaas.security_group.update|
-|Create Security Rule|event_id.iaas.security_group_rule.create|
-|Delete Security Rule|event_id.iaas.security_group_rule.delete|
 |Create Security Group Completed|event_id.iaas.security_group.create_end|
+|Delete Security Group|event_id.iaas.security_group.delete|
 |Delete Security Group Completed|event_id.iaas.security_group.delete_end|
+|Change Security Group|event_id.iaas.security_group.update|
 |Change Security Group Completed|event_id.iaas.security_group.update_end|
+|Create Security Rule|event_id.iaas.security_group_rule.create|
 |Create Security Rule Completed|event_id.iaas.security_group_rule.create_end|
+|Delete Security Rule|event_id.iaas.security_group_rule.delete|
 |Delete Security Rule Completed|event_id.iaas.security_group_rule.delete_end|
 |Create Load Balancer|event_id.iaas.loadbalancer.create|
+|Create Load Balancer Completed|event_id.iaas.loadbalancer.create_end|
 |Delete Load Balancer|event_id.iaas.loadbalancer.delete|
+|Delete Load Balancer Completed|event_id.iaas.loadbalancer.delete_end|
 |Change Load Balancer Information|event_id.iaas.loadbalancer.update|
+|Change Load Balancer Information Completed|event_id.iaas.loadbalancer.update_end|
 |Create Load Balancer Listener|event_id.iaas.loadbalancer_listener.create|
 |Delete Load Balancer Listener|event_id.iaas.loadbalancer_listener.delete|
 |Change Load Balancer Listener|event_id.iaas.loadbalancer_listener.update|
@@ -260,15 +270,18 @@
 |Delete Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.delete|
 |Modify Load Balancer IP ACL Target|event_id.iaas.loadbalancer_ipacl_target.update|
 |Apply Load Balancer IP ACL Group|event_id.iaas.loadbalancer_ipacl_group.bind|
-|Create Load Balancer Completed|event_id.iaas.loadbalancer.create_end|
-|Delete Load Balancer Completed|event_id.iaas.loadbalancer.delete_end|
-|Change Load Balancer Information Completed|event_id.iaas.loadbalancer.update_end|
 |Create Transit Hub|event_id.iaas.transit_hub.create|
+|Create Transit Hub Completed|event_id.iaas.transit_hub.create_end|
 |Delete Transit Hub|event_id.iaas.transit_hub.delete|
+|Delete Transit Hub Completed|event_id.iaas.transit_hub.delete_end|
 |Modify Transit Hub|event_id.iaas.transit_hub.update|
+|Modify Transit Hub Completed|event_id.iaas.transit_hub.update_end|
 |Create Transit Hub Attachment|event_id.iaas.transit_hub_attachment.create|
+|Create Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.create_end|
 |Delete Transit Hub Attachment|event_id.iaas.transit_hub_attachment.delete|
+|Delete Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.delete_end|
 |Modify Transit Hub Attachment|event_id.iaas.transit_hub_attachment.update|
+|Modify Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.update_end|
 |Create Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.create|
 |Delete Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.delete|
 |Modify Transit Hub Allow List|event_id.iaas.transit_hub_allow_project.update|
@@ -296,12 +309,6 @@
 |Create Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.create|
 |Delete Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.delete|
 |Modify Transit Hub Multicast Domain Allow List|event_id.iaas.transit_hub_multicast_domain_allow_project.update|
-|Create Transit Hub Completed|event_id.iaas.transit_hub.create_end|
-|Delete Transit Hub Completed|event_id.iaas.transit_hub.delete_end|
-|Modify Transit Hub Completed|event_id.iaas.transit_hub.update_end|
-|Create Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.create_end|
-|Delete Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.delete_end|
-|Modify Transit Hub Attachment Completed|event_id.iaas.transit_hub_attachment.update_end|
 |Create Internet Gateway|event_id.iaas.internet_gateway.create|
 |Delete Internet Gateway|event_id.iaas.internet_gateway.delete|
 |Create VPC Peering|event_id.iaas.peering.create|
@@ -316,10 +323,10 @@
 |Delete Peering Allow List|event_id.iaas.peering_allow_project.delete|
 |Change Peering Allow List|event_id.iaas.peering_allow_project.update|
 |Create NAT Gateway|event_id.iaas.nat_gateway.create|
-|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
-|Change NAT Gateway|event_id.iaas.nat_gateway.update|
 |Create NAT Gateway Completed|event_id.iaas.nat_gateway.create_end|
+|Delete NAT Gateway|event_id.iaas.nat_gateway.delete|
 |Delete NAT Gateway Completed|event_id.iaas.nat_gateway.delete_end|
+|Change NAT Gateway|event_id.iaas.nat_gateway.update|
 |Change NAT Gateway Completed|event_id.iaas.nat_gateway.update_end|
 |Create VPNGW|event_id.iaas.vpngw.create|
 |Delete VPNGW|event_id.iaas.vpngw.delete|
@@ -336,6 +343,20 @@
 |Create Service Gateway|event_id.iaas.service_gateway.create|
 |Delete Service Gateway|event_id.iaas.service_gateway.delete|
 |Change Service Gateway|event_id.iaas.service_gateway.update|
+|Create Custom Endpoint|event_id.iaas.custom_endpoint.create|
+|Create Custom Endpoint Complete|event_id.iaas.custom_endpoint.create_end|
+|Delete Custom Endpoint|event_id.iaas.custom_endpoint.delete|
+|Delete Custom Endpoint Complete|event_id.iaas.custom_endpoint.delete_end|
+|Update Custom Endpoint Info|event_id.iaas.custom_endpoint.update|
+|Update Custom Endpoint Info Complete|event_id.iaas.custom_endpoint.update_end|
+|Create Custom Endpoint Allowed Project|event_id.iaas.custom_endpoint_allow_project.create|
+|Create Custom Endpoint Allowed Project Complete|event_id.iaas.serviceendpointallowproject.create_end|
+|Delete Custom Endpoint Allowed Project|event_id.iaas.custom_endpoint_allow_project.delete|
+|Delete Custom Endpoint Allowed Project Complete|event_id.iaas.serviceendpointallowproject.delete_end|
+|Update Custom Endpoint Allowed Project Info|event_id.iaas.custom_endpoint_allow_project.update|
+|Update Custom Endpoint Allowed Project Info Complete|event_id.iaas.serviceendpointallowproject.update_end|
+|Reissue Custom Endpoint Service Name|event_id.iaas.custom_endpoint_service_name.update|
+|Reissue Custom Endpoint Service Name Complete|event_id.iaas.custom_endpoint_service_name.update_end|
 |Create Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.create|
 |Delete Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.delete|
 |Change Traffic Mirroring Session|event_id.iaas.traffic_mirroring.session.update|
@@ -346,41 +367,41 @@
 |Delete Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.delete|
 |Change Traffic Mirroring Filter|event_id.iaas.traffic_mirroring.filter.update|
 |Create Private DNS Zone|event_id.iaas.privatedns.zone.create|
+|Create Private DNS Zone Completed|event_id.iaas.private_dns.zone.create_end|
 |Delete Private DNS Zone|event_id.iaas.privatedns.zone.delete|
+|Delete Private DNS Zone Completed|event_id.iaas.private_dns.zone.delete_end|
 |Modify Private DNS Zone|event_id.iaas.privatedns.zone.update|
+|Modify Private DNS Zone Completed|event_id.iaas.private_dns.zone.update_end|
 |Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create|
 |Delete Private DNS Record Set|event_id.iaas.privatedns.recordset.delete|
 |Modify Private DNS Record Set|event_id.iaas.privatedns.recordset.update|
 |Bulk Create Private DNS Record Set|event_id.iaas.privatedns.recordset.create_list|
-|Create Private DNS Zone Completed|event_id.iaas.private_dns.zone.create_end|
-|Delete Private DNS Zone Completed|event_id.iaas.private_dns.zone.delete_end|
-|Modify Private DNS Zone Completed|event_id.iaas.private_dns.zone.update_end|
 |Create Flow Log Logger|event_id.iaas.flowlog_logger.create|
-|Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
-|Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Create Flow Log Logger Completed|event_id.iaas.flowlog_logger.create_end|
-|Create Flow Log Storage|event_id.iaas.flowlog_storage.create|
+|Delete Flow Log Logger|event_id.iaas.flowlog_logger.delete|
 |Delete Flow Log Logger Completed|event_id.iaas.flowlog_logger.delete_end|
-|Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
+|Modify Flow Log Logger|event_id.iaas.flowlog_logger.update|
 |Modify Flow Log Logger Completed|event_id.iaas.flowlog_logger.update_end|
+|Create Flow Log Storage|event_id.iaas.flowlog_storage.create|
+|Delete Flow Log Storage|event_id.iaas.flowlog_storage.delete|
 |Modify Flow Log Storage|event_id.iaas.flowlog_storage.update|
-|event_id.iaas.port_route.create|event_id.iaas.port_route.create|
-|Delete Network Interface Route|event_id.iaas.port_route.delete|
-|Change Network Interface Route|event_id.iaas.port_route.update|
+|Create Network Interface Route|event_id.iaas.port_route.create|
 |Create Network Interface Route Completed|event_id.iaas.port_route.create_end|
+|Delete Network Interface Route|event_id.iaas.port_route.delete|
 |Delete Network Interface Route Completed|event_id.iaas.port_route.delete_end|
+|Change Network Interface Route|event_id.iaas.port_route.update|
 |Change Network Interface Route Completed|event_id.iaas.port_route.update_end|
 |Create Load Balancer (DSR)|event_id.iaas.loadbalancer_dsr.create|
+|Load Balancer (DSR) Creation Completed|event_id.iaas.loadbalancer_dsr.create_end|
 |Delete Load Balancer (DSR)|event_id.iaas.loadbalancer_dsr.delete|
+|Load Balancer (DSR) Deletion Completed|event_id.iaas.loadbalancer_dsr.delete_end|
 |Change Load Balancer (DSR) Info|event_id.iaas.loadbalancer_dsr.update|
+|Load Balancer (DSR) Info Change Completed|event_id.iaas.loadbalancer_dsr.update_end|
 |Create Load Balancer (DSR) Member|event_id.iaas.loadbalancer_dsr_member.create|
 |Delete Load Balancer (DSR) Member|event_id.iaas.loadbalancer_dsr_member.delete|
 |Create Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.create|
 |Change Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.update|
 |Delete Load Balancer (DSR) Health Monitor|event_id.iaas.loadbalancer_dsr_healthmonitor.delete|
-|Load Balancer (DSR) Creation Completed|event_id.iaas.loadbalancer_dsr.create_end|
-|Load Balancer (DSR) Deletion Completed|event_id.iaas.loadbalancer_dsr.delete_end|
-|Load Balancer (DSR) Info Change Completed|event_id.iaas.loadbalancer_dsr.update_end|
 |Create Cluster Completed|event_id.iaas.cluster.create.end|
 |Create Cluster Failed|event_id.iaas.cluster.create.failed|
 |Create Cluster Started|event_id.iaas.cluster.create.start|
@@ -678,8 +699,7 @@
 |Delete NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.delete|
 |Change NAS for BigData Volume|event_id.iaas.nas_for_bigdata.volume.update|
 
-<a id="object-storage"></a>
-### Object Storage { #object-storage }
+### Object Storage
 
 | Event | Event ID |
 | --- | --- |
@@ -699,8 +719,7 @@
 |List Objects|event_id.object_storage.object.list_lookup|
 |List Containers|event_id.object_storage.container.list_lookup|
 
-<a id="rds-for-mysql"></a>
-### RDS for MySQL { #rds-for-mysql }
+### RDS for MySQL
 
 | Event | Event ID |
 | --- | --- |
@@ -774,8 +793,7 @@
 |Delete DB Security Group Rule|event_id.rds_for_mysql.deleteDbSecurityGroupRule|
 |DB Instance OS Upgrade|event_id.rds_for_mysql.instance.os.upgrade|
 
-<a id="rds-for-mariadb"></a>
-### RDS for MariaDB { #rds-for-mariadb }
+### RDS for MariaDB
 
 | Event | Event ID |
 | --- | --- |
@@ -819,8 +837,7 @@
 |Make and export a DB instance backup|event_id.rds_for_mysql.instance.backup.export|
 |Export backup to the object storage|event_id.rds_for_mysql.backup.export|
 
-<a id="secure-key-manager"></a>
-### Secure Key Manager { #secure-key-manager }
+### Secure Key Manager
 
 | Event | Event ID |
 | --- | --- |
@@ -896,9 +913,13 @@
 |Immediately Delete Symmetric Key (API)|event_id.skm.api.symmetric.delete|
 |Immediately Delete Asymmetric Key (API)|event_id.skm.api.asymmetric.delete|
 |Modify Confidential Data (API)|event_id.skm.api.secrets.modify|
+|Standard Sign with Asymmetric Key (API)|event_id.skm.api.asymmetric.sign_standard|
+|Verify Standard Signature with Asymmetric Key (API)|event_id.skm.api.asymmetric.verify_standard|
+|Create Keystore (API)|event_id.skm.api.keystore.create|
+|Change Keystore Information (API)|event_id.skm.api.keystore.update|
+|Delete Keystore (API)|event_id.skm.api.keystore.delete|
 
-<a id="deploy"></a>
-### Deploy { #deploy }
+### Deploy
 
 | Event | Event ID |
 | --- | --- |
@@ -932,8 +953,7 @@
 |Download deployment history|event_id.deploy.deploy_history_download|
 |Execute Autoscale Deployment|event_id.deploy.autoscale_deploy_execute|
 
-<a id="service-monitoring"></a>
-### Service Monitoring { #service-monitoring }
+### Service Monitoring
 
 | Event | Event ID |
 | --- | --- |
@@ -953,8 +973,7 @@
 |Migrate Failure to Anther Service|event_id.service_monitoring.send_transfer_transmission|
 |Suspend Failure Transfers|event_id.service_monitoring.send_stop_transmission|
 
-<a id="easycache"></a>
-### EasyCache { #easycache }
+### EasyCache
 
 | Event | Event ID |
 | --- | --- |
@@ -993,8 +1012,7 @@
 |Export data|event_id.easycache.group.export|
 |Restore existing replication group|event_id.easycache.backup.migrate|
 
-<a id="rds-for-ms-sql"></a>
-### RDS for MS-SQL { #rds-for-ms-sql }
+### RDS for MS-SQL
 
 | Event | Event ID |
 | --- | --- |
@@ -1042,8 +1060,7 @@
 |Modify Scheduled Task|event_id.rds_for_sqlserver.process.reserved-process.modify|
 |Delete Scheduled Task|event_id.rds_for_sqlserver.process.reserved-process.deleted|
 
-<a id="log-amp-crash-search"></a>
-### Log &amp; Crash Search { #log-amp-crash-search }
+### Log &amp; Crash Search
 
 | Event | Event ID |
 | --- | --- |
@@ -1077,8 +1094,7 @@
 |Project status changed|event_id.logncrash.project.state|
 |Log entry limit changed|event_id.logncrash.limit.save|
 
-<a id="backup"></a>
-### Backup { #backup }
+### Backup
 
 | Event | Event ID |
 | --- | --- |
@@ -1093,8 +1109,7 @@
 |Create Backup Result File|event_id.backup.result.file|
 |Change Backup Server Data|event_id.backup.client.update|
 
-<a id="dns-plus"></a>
-### DNS Plus { #dns-plus }
+### DNS Plus
 
 | Event | Event ID |
 | --- | --- |
@@ -1118,8 +1133,7 @@
 |Modify Health Checks|event_id.dnsplus.health_check.update|
 |Delete Health Checks|event_id.dnsplus.health_check.delete|
 
-<a id="cdn"></a>
-### CDN { #cdn }
+### CDN
 
 | Event | Event ID |
 | --- | --- |
@@ -1137,8 +1151,7 @@
 |Purge Cache - All|event_id.cdn.cache_purge.all_type|
 |Create an Auth Token|event_id.cdn.auth_token|
 
-<a id="system-monitoringcloudtrail"></a>
-### System Monitoring(CloudTrail) { #system-monitoringcloudtrail }
+### System Monitoring(CloudTrail)
 
 | Event | Event ID |
 | --- | --- |
@@ -1170,8 +1183,7 @@
 |알림 설정 삭제|event_id.system_monitoring.alarm_config_deletion|
 |이벤트 강제 종료|event_id.system_monitoring.event_force_close|
 
-<a id="certificate-manager"></a>
-### Certificate Manager { #certificate-manager }
+### Certificate Manager
 
 | Event | Event ID |
 | --- | --- |
@@ -1192,8 +1204,7 @@
 |Delete User Data|event_id.certificate_manager.user_data.delete|
 |Edit User Data|event_id.certificate_manager.user_data.update|
 
-<a id="face-recognition"></a>
-### Face Recognition { #face-recognition }
+### Face Recognition
 
 | Event | Event ID |
 | --- | --- |
@@ -1216,8 +1227,7 @@
 |Face verification(Spoofing detection)|event_id.face_recognition.spoofing.face.verify|
 |Search face by image(Spoofing detection)|event_id.face_recognition.spoofing.search_face.byimage|
 
-<a id="pipeline"></a>
-### Pipeline { #pipeline }
+### Pipeline
 
 | Event | Event ID |
 | --- | --- |
@@ -1242,8 +1252,7 @@
 |Modify Chart Repository|event_id.pipeline.chart_repository.update|
 |Delete Chart Repository|event_id.pipeline.chart_repository.delete|
 
-<a id="nhn-appguard"></a>
-### NHN AppGuard { #nhn-appguard }
+### NHN AppGuard
 
 | Event | Event ID |
 | --- | --- |
@@ -1258,9 +1267,18 @@
 |Unity SDK download|event_id.appguard.sdk_download_unity|
 |React Native SDK download|event_id.appguard.sdk_download_react_native|
 |Unreal SDK download|event_id.appguard.sdk_download_unreal|
+|flutter SDK download|event_id.appguard.sdk_download_flutter|
+|App Attestation application|event_id.appguard.integrity_request|
+|Blacklist batch register|event_id.appguard.blacklist_add_bulk|
+|Blacklist Batch Re-register|event_id.appguard.blacklist_re_register_bulk|
+|Blacklist Batch Remove|event_id.appguard.blacklist_delete_bulk|
+|Download Blacklist|event_id.appguard.blacklist_report_download|
+|Download Obfuscation Mapping File|event_id.appguard.protection_obfuscation_mapping_download|
+|Download Protected App|event_id.appguard.objectstorage_download|
+|Add Block-by-Condition Condition|event_id.appguard.condition_create|
+|Delete Block-by-Condition Condition|event_id.appguard.condition_delete|
 
-<a id="shorturl"></a>
-### ShortURL { #shorturl }
+### ShortURL
 
 | Event | Event ID |
 | --- | --- |
@@ -1281,8 +1299,7 @@
 |Update a certificate permission|event_id.short_url.certificate_update_role|
 |Delete a certificate|event_id.short_url.certificate_delete|
 
-<a id="ocr"></a>
-### OCR { #ocr }
+### OCR
 
 | Event | Event ID |
 | --- | --- |
@@ -1298,8 +1315,7 @@
 |Request General OCR Image Segmentation Recognition|event_id.ocr.general_ocr.cropping_analyze|
 |Request Document AI Analysis|event_id.ocr.document_ai.analyze|
 
-<a id="kakaotalk-bizmessage"></a>
-### KakaoTalk Bizmessage { #kakaotalk-bizmessage }
+### KakaoTalk Bizmessage
 
 | Event | Event ID |
 | --- | --- |
@@ -1359,8 +1375,7 @@
 |Cancel Sending Brand Message|event_id.brandmessage.message.sending-cancellation|
 |Cancel Sending Bulk Brand Messages|event_id.brandmessage.mass.message.sending-cancellation|
 
-<a id="api-gateway"></a>
-### API Gateway { #api-gateway }
+### API Gateway
 
 | Event | Event ID |
 | --- | --- |
@@ -1413,15 +1428,13 @@
 |요청 제한 정책 키 값 수정|event_id.apigw.request_policy.key.update|
 |요청 제한 정책 키 값 삭제|event_id.apigw.request_policy.key.delete|
 
-<a id="text-to-speech"></a>
-### Text to Speech { #text-to-speech }
+### Text to Speech
 
 | Event | Event ID |
 | --- | --- |
 |Request Text to Speech conversion|event_id.speech.tts.convert|
 
-<a id="gamestarter"></a>
-### GameStarter { #gamestarter }
+### GameStarter
 
 | Event | Event ID |
 | --- | --- |
@@ -1436,8 +1449,7 @@
 |Change Deployment Reservation|event_id.gamestarter.deploy.reservation_change|
 |Cancel Deployment Reservation|event_id.gamestarter.deploy.reservation_cancel|
 
-<a id="speech-to-text"></a>
-### Speech to Text { #speech-to-text }
+### Speech to Text
 
 | Event | Event ID |
 | --- | --- |
@@ -1445,24 +1457,21 @@
 |Speech to Text Websocket connected|event_id.speech.stt.websocket_connect|
 |Speech to Text Websocket disconnected|event_id.speech.stt.websocket_disconnect|
 
-<a id="cloudtrail"></a>
-### CloudTrail { #cloudtrail }
+### CloudTrail
 
 | Event | Event ID |
 | --- | --- |
 |Delete log save/download setting|event_id.cloud_trail.delete_log_save_download_config|
 |Log save/download setting|event_id.cloud_trail.set_log_save_download_config|
 
-<a id="webshell-threat-detector"></a>
-### Webshell Threat Detector { #webshell-threat-detector }
+### Webshell Threat Detector
 
 | Event | Event ID |
 | --- | --- |
 |Activate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_activated|
 |Deactivate Webshell Mail Reception|event_id.webshell_treat_detector.mail_send_deactivated|
 
-<a id="dataflow"></a>
-### DataFlow { #dataflow }
+### DataFlow
 
 | Event | Event ID |
 | --- | --- |
@@ -1485,8 +1494,7 @@
 |Save Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.save|
 |Delete Log &amp; Crash Search Save Settings|event_id.dataflow.settings.lncs.delete|
 
-<a id="dataquery"></a>
-### DataQuery { #dataquery }
+### DataQuery
 
 | Event | Event ID |
 | --- | --- |
@@ -1497,8 +1505,7 @@
 |Stop Resource Usage|event_id.dataquery.resource.pause|
 |Cluster Restart|event_id.dataquery.cluster_restart|
 
-<a id="resource-watcher"></a>
-### Resource Watcher { #resource-watcher }
+### Resource Watcher
 
 | Event | Event ID |
 | --- | --- |
@@ -1522,8 +1529,7 @@
 |Delete Resource Group Relation|event_id.resource_watcher.resource_tag_relation.delete|
 |Modify Resource Group Relation|event_id.resource_watcher.resource_tag_relation.update|
 
-<a id="ai-easymaker"></a>
-### AI EasyMaker { #ai-easymaker }
+### AI EasyMaker
 
 | Event | Event ID |
 | --- | --- |
@@ -1571,8 +1577,7 @@
 |Change Auto Scaler Settings|event_id.easymaker.endpoint_stage.update_autoscale|
 |Restart Notebook|event_id.easymaker.notebook.restart|
 
-<a id="gameanvil"></a>
-### GameAnvil { #gameanvil }
+### GameAnvil
 
 | Event | Event ID |
 | --- | --- |
@@ -1630,8 +1635,7 @@
 |SUPPORT 노드 시작|event_id.gameanvil.support_node.start_up|
 |MATCH 노드 시작|event_id.gameanvil.match_node.start_up|
 
-<a id="sms"></a>
-### SMS { #sms }
+### SMS
 
 | Event | Event ID |
 | --- | --- |
@@ -1676,8 +1680,7 @@
 |발송 설정 수정|event_id.sms.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.sms.upload_mass_message_recipient|
 
-<a id="file-crafter"></a>
-### File-Crafter { #file-crafter }
+### File-Crafter
 
 | Event | Event ID |
 | --- | --- |
@@ -1701,8 +1704,7 @@
 |유효성 검사 실패 다운로드 URL 조회|event_id.file_crafter.getValidationFailResultFileDownloadUrl|
 |AWS 외부 업로드 유효성 검사|event_id.file_crafter.validateAwsCredentials|
 
-<a id="network-firewall"></a>
-### Network Firewall { #network-firewall }
+### Network Firewall
 
 | Event | Event ID |
 | --- | --- |
@@ -1748,8 +1750,7 @@
 |Attach/Detach VPN Tunnel|event_id.network_firewall.vpn_tunnel_initiate_terminate|
 |Modify VPN Tunnel|event_id.network_firewall.vpn_tunnel_modify|
 
-<a id="rcs-bizmessage"></a>
-### RCS Bizmessage { #rcs-bizmessage }
+### RCS Bizmessage
 
 | Event | Event ID |
 | --- | --- |
@@ -1757,8 +1758,7 @@
 |RCS BizCenter 리소스 업데이트|event_id.rcs_bizmessage.update_rcs_bizcenter_resource|
 |대체 발송 설정 업데이트|event_id.rcs_bizmessage.update_fallback_setting|
 
-<a id="security-advisor"></a>
-### Security Advisor { #security-advisor }
+### Security Advisor
 
 | Event | Event ID |
 | --- | --- |
@@ -1767,8 +1767,7 @@
 |Selected Inspection Requested|event_id.security_advisor.manual_scan_request|
 |Settings Changed|event_id.security_advisor.setting_change|
 
-<a id="email"></a>
-### Email { #email }
+### Email
 
 | Event | Event ID |
 | --- | --- |
@@ -1806,8 +1805,7 @@
 |발송 설정 수정|event_id.email.update_send_config|
 |대량 발송 수신자 파일 업로드|event_id.email.upload_mass_mail_recipient|
 
-<a id="role"></a>
-### ROLE { #role }
+### ROLE
 
 | Event | Event ID |
 | --- | --- |
@@ -1846,8 +1844,7 @@
 |Create Condition Attribute Tag|event_id.role.attribute_tag.create|
 |Delete Condition Attribute Tag|event_id.role.attribute_tag.delete|
 
-<a id="gamebase"></a>
-### Gamebase { #gamebase }
+### Gamebase
 
 | Event | Event ID |
 | --- | --- |
@@ -1967,8 +1964,7 @@
 |Delete game notice|event_id.gamebase.game_notice_delete|
 |Update game notice settings|event_id.gamebase.game_notice_app_update|
 
-<a id="nhn-container-registryncr"></a>
-### NHN Container Registry(NCR) { #nhn-container-registryncr }
+### NHN Container Registry(NCR)
 
 | Event | Event ID |
 | --- | --- |
@@ -2004,8 +2000,7 @@
 |Delete Image Cache|event_id.ncr.image_cache.delete|
 |Modify Image Cache|event_id.ncr.image_cache.update|
 
-<a id="nhn-bastion"></a>
-### NHN Bastion { #nhn-bastion }
+### NHN Bastion
 
 | Event | Event ID |
 | --- | --- |
@@ -2048,8 +2043,7 @@
 |웹터미널 IP 접근제어 수정|event_id.bastion.web_terminal_sg_modify|
 |웹터미널 IP 접근제어 삭제|event_id.bastion.web_terminal_sg_delete|
 
-<a id="cloud-monitoring"></a>
-### Cloud Monitoring { #cloud-monitoring }
+### Cloud Monitoring
 
 | Event | Event ID |
 | --- | --- |
@@ -2057,6 +2051,9 @@
 |Create Notification|event_id.cloud_monitoring_project.alarm_create|
 |Delete Notification|event_id.cloud_monitoring_project.alarm_delete|
 |Modify Notification|event_id.cloud_monitoring_project.alarm_modify|
+|이상탐지 생성|event_id.cloud_monitoring_project.anomaly_create|
+|이상탐지 삭제|event_id.cloud_monitoring_project.anomaly_delete|
+|이상탐지 수정|event_id.cloud_monitoring_project.anomaly_modify|
 |Copy Dashboard|event_id.cloud_monitoring_project.dashboard_copy|
 |Create Dashboard|event_id.cloud_monitoring_project.dashboard_create|
 |Delete Dashboard|event_id.cloud_monitoring_project.dashboard_delete|
@@ -2064,8 +2061,7 @@
 |Modify Dashboard|event_id.cloud_monitoring_project.dashboard_modify|
 |Enable Metrics Collection|event_id.cloud_monitoring_project.service_management|
 
-<a id="cloud-scheduler"></a>
-### Cloud Scheduler { #cloud-scheduler }
+### Cloud Scheduler
 
 | Event | Event ID |
 | --- | --- |
@@ -2078,8 +2074,7 @@
 |Modify Template|event_id.cloud_scheduler.schedule_template.update|
 |Delete Template|event_id.cloud_scheduler.schedule_template.delete|
 
-<a id="notification-hub"></a>
-### Notification Hub { #notification-hub }
+### Notification Hub
 
 | Event | Event ID |
 | --- | --- |
@@ -2138,9 +2133,9 @@
 |그룹 수정|event_id.notification_hub.addressbook_group_modify|
 |수신 거부 번호 다건 해제|event_id.notification_hub.unsubscription_contact_delete|
 |수신 거부 번호 추가|event_id.notification_hub.unsubscription_contact_register|
+|비즈니스폼 키 발급|event_id.notification_hub.detail_configuration_BRANDMESSAGE_register_sender_key_and_biz_form_id|
 
-<a id="ddos-guard"></a>
-### DDoS Guard { #ddos-guard }
+### DDoS Guard
 
 | Event | Event ID |
 | --- | --- |
@@ -2152,8 +2147,7 @@
 |Modify Mock Training|event_id.ddos_guard.mock_training_modify|
 |Delete Mock Training|event_id.ddos_guard.mock_training_delete|
 
-<a id="easyqueue"></a>
-### EasyQueue { #easyqueue }
+### EasyQueue
 
 | Event | Event ID |
 | --- | --- |
@@ -2162,8 +2156,7 @@
 |Delete Topic|event_id.easyqueue.topic.delete|
 |Send Message|event_id.easyqueue.topic.send_messages|
 
-<a id="cloud-access"></a>
-### Cloud Access { #cloud-access }
+### Cloud Access
 
 | Event | Event ID |
 | --- | --- |
@@ -2213,8 +2206,7 @@
 |Logo Settings|event_id.cloud_access.option_logo_create|
 |Reset User Passkey|event_id.cloud_access.user_passkey_reset|
 
-<a id="cloud-functions"></a>
-### Cloud Functions { #cloud-functions }
+### Cloud Functions
 
 | Event | Event ID |
 | --- | --- |
@@ -2228,8 +2220,7 @@
 |Update Trigger|event_id.cloud_functions.trigger.update|
 |Delete Version|event_id.cloud_functions.version.delete|
 
-<a id="private-ca"></a>
-### Private CA { #private-ca }
+### Private CA
 
 | Event | Event ID |
 | --- | --- |
@@ -2253,8 +2244,7 @@
 |ACME 토큰 삭제|event_id.pca.acme.delete|
 |ACME 토큰 조회|event_id.pca.acme.get|
 
-<a id="rds-for-postgresql"></a>
-### RDS for PostgreSQL { #rds-for-postgresql }
+### RDS for PostgreSQL
 
 | Event | Event ID |
 | --- | --- |
@@ -2319,8 +2309,7 @@
 |Delete User Group|event_id.rds_for_postgresql.USER_GROUP_DELETE|
 |Modify User Group|event_id.rds_for_postgresql.USER_GROUP_MODIFY|
 
-<a id="data-lake-storage"></a>
-### Data Lake Storage { #data-lake-storage }
+### Data Lake Storage
 
 | Event | Event ID |
 | --- | --- |
@@ -2329,7 +2318,12 @@
 |Create Bucket|event_id.datalakestorage.bucket.create|
 |Delete Bucket|event_id.datalakestorage.bucket.delete|
 |Head Bucket|event_id.datalakestorage.bucket.head|
+|Delete Bucket Lifecycle|event_id.datalakestorage.bucket.lifecycle.delete|
+|Get Bucket Lifecycle|event_id.datalakestorage.bucket.lifecycle.get|
+|Put Bucket Lifecycle|event_id.datalakestorage.bucket.lifecycle.update|
 |List Buckets|event_id.datalakestorage.bucket.list|
+|Delete Bucket Policy|event_id.datalakestorage.bucket.policy.delete|
+|Edit Bucket Policy|event_id.datalakestorage.bucket.policy.update|
 |Delete Bucket Tagging|event_id.datalakestorage.bucket.tagging.delete|
 |Get Bucket Tagging|event_id.datalakestorage.bucket.tagging.get|
 |Put Bucket Tagging|event_id.datalakestorage.bucket.tagging.update|
