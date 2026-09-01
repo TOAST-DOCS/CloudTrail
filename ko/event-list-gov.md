@@ -36,6 +36,9 @@
 |키페어 삭제|event_id.iaas.keypair.delete|
 |배치 정책 생성|event_id.iaas.servergroup.create|
 |배치 정책 삭제|event_id.iaas.servergroup.delete|
+|시리얼 콘솔 접속|event_id.iaas.serial_console.connect|
+|시리얼 콘솔 접속 완료|event_id.iaas.serial_console.connect_end|
+|시리얼 콘솔 접속 종료|event_id.iaas.serial_console.disconnect_end|
 |이미지 복제|event_id.iaas.image.copy|
 |이미지 생성|event_id.iaas.image.create|
 |이미지 생성 완료|event_id.iaas.image.create_end|
@@ -545,7 +548,6 @@
 |CIFS 인증 정보 생성|event_id.iaas.nas.cifs_credential.create|
 |CIFS 인증 정보 삭제|event_id.iaas.nas.cifs_credential.delete|
 |CIFS 인증 정보 변경|event_id.iaas.nas.cifs_credential.update|
-|NAS 암호화 키 저장소 설정|event_id.iaas.nas.encryption_key_store.set|
 |NAS 볼륨 생성|event_id.iaas.nas.volume.create|
 |NAS 볼륨 생성 완료|event_id.iaas.nas.volume.create_end|
 |NAS 볼륨 삭제|event_id.iaas.nas.volume.delete|
@@ -793,6 +795,9 @@
 |기밀 데이터 수정 (API)|event_id.skm.api.secrets.modify|
 |비대칭 키를 통한 표준 서명 (API)|event_id.skm.api.asymmetric.sign_standard|
 |비대칭 키를 통한 표준 서명 검증 (API)|event_id.skm.api.asymmetric.verify_standard|
+|키 저장소 생성 (API)|event_id.skm.api.keystore.create|
+|키 저장소 정보 변경 (API)|event_id.skm.api.keystore.update|
+|키 저장소 삭제 (API)|event_id.skm.api.keystore.delete|
 
 ### Deploy
 
@@ -916,6 +921,18 @@
 |조직 역할 그룹 역할 수정|event_id.org.org_role_group.modify.roles|
 |조직 역할 그룹 멤버 추가|event_id.org.org_role_group.members.add|
 |조직 역할 그룹 멤버 삭제|event_id.org.org_role_group.members.delete|
+|조직 서비스 계정 생성|event_id.org.service_member.create|
+|조직 서비스 계정 수정|event_id.org.service_member.update|
+|조직 서비스 계정 상태 변경|event_id.org.service_member.status-update|
+|조직 서비스 계정 역할 변경|event_id.org.service_member.role-update|
+|조직 서비스 계정 삭제/초대 취소|event_id.org.service_member.delete|
+|조직에 서비스 계정 초대|event_id.org.service_member.invite|
+|프로젝트 서비스 계정 생성|event_id.project.service_member.create|
+|프로젝트 서비스 계정 수정|event_id.project.service_member.update|
+|프로젝트 서비스 계정 상태 변경|event_id.project.service_member.status-update|
+|프로젝트 서비스 계정 역할 변경|event_id.project.service_member.role-update|
+|프로젝트 서비스 계정 삭제/초대 취소|event_id.project.service_member.delete|
+|프로젝트에 서비스 계정 초대|event_id.project.service_member.invite|
 
 ### EasyCache
 
