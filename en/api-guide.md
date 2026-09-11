@@ -93,12 +93,17 @@ Read the header at Response Body for more details of the response result.
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
 | idNo | String | X | ID of the member incurring an event (uuid) |
+| member | Object | X | Member who triggered the event |
+| member.memberType | String | X | Type of the member who triggered the event (NHN Cloud, IAM) |
+| member.userCode | String | X | userCode of the member who triggered the event (for IAM members) |
+| member.emailAddress | String | X | Email address of the member who triggered the event (for NHN Cloud members) |
+| member.idNo | String | X | IdNo (UUID) of the member who triggered the event |
 | eventId | String | O | ID of an event to query |
 | startDate | Date | O | Start date of query period |
 | endDate | Date |O  | End date of query period |
 | page | Object | O | Page conditions of query result |
 | page.sortBy | String | X | Size sorting conditions of query result (ex. eventTime:desc, idNo:asc) |
-| page.limit | Integer | O | Size conditions of query result (default: 20, max: 1000)) |
+| page.limit | Integer | O | Size conditions of query result (default: 20, max: 1000) |
 | page.page | Integer | O | Page conditions to query among result pages |
 
 
@@ -245,7 +250,12 @@ Read the header at Response Body for more details of the response result.
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
-| idNo | String | X | ID of the member incurring an event (uuid) |
+| idNo | String | X | ID number of the member who triggered the event (UUID) |
+| member | Object | X | Member who triggered the event |
+| member.memberType | String | X | Type of the member who triggered the event (NHN Cloud, IAM) |
+| member.userCode | String | X | userCode of the member who triggered the event (for IAM members) |
+| member.emailAddress | String | X | Email address of the member who triggered the event (for NHN Cloud members) |
+| member.idNo | String | X | IdNo of the member who triggered the event (UUID) |
 | eventId | String | O | ID of an event to query |
 | startDate | Date | O | Start date of query period |
 | endDate | Date |O  | End date of query period |
@@ -339,3 +349,22 @@ Read the header at Response Body for more details of the response result.
 | targetMembers.name | String | Name of target member incurred with event |
 | targetMembers.userCode | Integer | ID of target member incurred with event (for IAM members) |
 | targetMembers.emailAddress | String | Email address of target member incurred with event (for NHN Cloud members) |
+| pageable.pageNumber | Integer | Current page number when querying events |
+| pageable.pageSize | Integer | Size of one page |
+| pageable.sort.empty | Boolean | Whether no sort criterion exists for events |
+| pageable.sort.sorted | Boolean | Whether events are sorted |
+| pageable.sort.unsorted | Boolean | Whether events are unsorted |
+| pageable.offset | Integer | Starting offset of the current page when querying events |
+| pageable.paged | Boolean | Whether the result is paged |
+| pageable.unpaged | Boolean | Whether the result is unpaged |
+| last | Boolean | Whether it is the last page |
+| totalElements | Integer | Total number of events retrieved |
+| totalPages | Integer | Total number of pages retrieved |
+| first | Boolean | Whether it is the first page |
+| size | Integer | Page size |
+| number | Integer | Current page number |
+| sort.emtpy | Boolean | Whether no sort criterion exists for events |
+| sort.sorted | Boolean | Whether events are sorted |
+| sort.unsorted | Boolean | Whether events are unsorted |
+| numberOfElements | Integer | Number of event logs on the current page |
+| empty | Boolean | Whether the current page has no events |
