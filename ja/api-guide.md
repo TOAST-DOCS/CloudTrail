@@ -319,3 +319,22 @@ User Access KeyとSecret Access Keyは、コンソールのAPIセキュリティ
 | targetMembers.name | String | 発生したイベントの対象会員の名前 |
 | targetMembers.userCode | Integer | 発生したイベントの対象会員のID (IAMメンバーの場合) |
 | targetMembers.emailAddress | String | 発生したイベントの対象会員のメールアドレス(NHN Cloud会員の場合) |
+| pageable.pageNumber | Integer | イベント照会時の現在のページ |
+| pageable.pageSize | Integer | 1ページのサイズ |
+| pageable.sort.empty | Boolean | イベントのソート基準が存在しないかどうか |
+| pageable.sort.sorted | Boolean | イベントがソートされているかどうか |
+| pageable.sort.unsorted | Boolean | イベントがソートされていないかどうか |
+| pageable.offset | Integer | イベント照会の現在のページ開始offset |
+| pageable.paged | Boolean | ページングされた結果かどうか |
+| pageable.unpaged | Boolean | ページングされていない結果かどうか |
+| last | Boolean | 最後のページかどうか |
+| totalElements | Integer | 照会された総イベント数 |
+| totalPages | Integer | 照会された総ページ数 |
+| first | Boolean | 最初のページかどうか |
+| size | Integer | ページサイズ |
+| number | Integer | 現在のページ番号 |
+| sort.emtpy | Boolean | イベントのソート基準が存在しないかどうか |
+| sort.sorted | Boolean | イベントがソートされているかどうか |
+| sort.unsorted | Boolean | イベントがソートされていないかどうか |
+| numberOfElements | Integer | 現在のページのイベントログ数 |
+| empty | Boolean | 現在のページのイベントが空かどうか |
