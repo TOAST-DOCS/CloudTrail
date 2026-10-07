@@ -88,7 +88,7 @@ Read the header at Response Body for more details of the response result.
 * For NHN Cloud memberType, emailAddress is required, while userCode must not exist. 
 * By contrast, for IAM memberType, userCode is required, while emailAddress must not exist. 
 * idNO, if available, is to be applied beforehand, regardless of userCode or emailAddress. 
-* Refer to the manual for more details on event IDs. : [link](/Governance%20&%20Audit/CloudTrail/en/event-list/)
+* Refer to the manual for more details on event IDs. : [link](./event-list/)
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
@@ -241,7 +241,7 @@ Read the header at Response Body for more details of the response result.
 * For NHN Cloud memberType, emailAddress is required, while userCode must not exist. 
 * By contrast, for IAM memberType, userCode is required, while emailAddress must not exist. 
 * idNO, if available, is to be applied beforehand, regardless of userCode or emailAddress. 
-* Refer to the manual for more details on event IDs. : [link](/Governance%20&%20Audit/CloudTrail/en/event-list/)
+* Refer to the manual for more details on event IDs. : [link](./event-list/)
 
 | Key | Type | Required  | Description |
 | --- | --- | --- | --- |
